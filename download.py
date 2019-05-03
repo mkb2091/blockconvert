@@ -6,7 +6,9 @@ urls = [
     'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext',
     'https://raw.githubusercontent.com/AdroitAdorKhan/EnergizedProtection/master/core/hosts',
     'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
-    'https://someonewhocares.org/hosts/hosts'
+    'https://someonewhocares.org/hosts/hosts',
+    'https://easylist.to/easylist/easylist.txt',
+    'https://easylist.to/easylist/easyprivacy.txt'
     ]
 for (i, url) in enumerate(urls):
     print('Starting %s' % i)

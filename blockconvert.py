@@ -3,7 +3,7 @@ import os
 import re
 
 class BlockList():
-    ADBLOCK_REGEX = re.compile('[a-z0-9-]+(?:[.][a-z0-9-]+)+')
+    ADBLOCK_REGEX = re.compile(r'(?:\|\|)?([a-z0-9-]+(?:[.][a-z0-9-]+)+)(?:\^)?')
     def __init__(self):
         self.blocked_hosts = set()
     def add_file(self, path):
@@ -26,8 +26,9 @@ class BlockList():
     def parse_adblock(self, data):
         for line in data.splitlines()[1:]:
             if '!' not in line:
-                if self.ADBLOCK_REGEX.fullmatch(line):
-                    self.blocked_hosts.add(line)
+                match = self.ADBLOCK_REGEX.fullmatch(line)
+                if match:
+                    self.blocked_hosts.add(match.group(1))
     def parse_hosts(self, data):
         for line in data.splitlines():
             line, *_ = line.split('#')
