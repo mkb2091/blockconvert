@@ -11,7 +11,7 @@ with open('tld_list.txt') as file:
         except KeyError:
             tld_dict[tld[0]] = [tld[1:]]
     TLD_REGEX = []
-    for first_letter in tld_dict:
+    for first_letter in sorted(tld_dict, key=lambda x:len(tld_dict[x]), reverse=True):
         now = '|'.join(['(?:%s)' % i for i in tld_dict[first_letter]])
         TLD_REGEX.append('(?:%s(?:%s))' % (first_letter, now))
     TLD_REGEX = '(?:%s)' % '|'.join(TLD_REGEX)
@@ -19,8 +19,10 @@ with open('tld_list.txt') as file:
 class BlockList():
     DOMAIN_STRING = '([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % TLD_REGEX
     ADBLOCK_STRING = rf'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?{DOMAIN_STRING}(?:\^)?(?:\$(?:[,]?(?:(?:popup)|(?:first\-party)|(?:third\-party))))?'
+    HOSTS_STRING = rf'(?:(?:0\.0\.0\.0)|(?:127\.0\.0\.1)|(?:\:\:1))\s+{DOMAIN_STRING}\s*(?:\#.*)?'
     DOMAIN_REGEX = re.compile(DOMAIN_STRING)
     ADBLOCK_REGEX = re.compile(ADBLOCK_STRING)
+    HOSTS_REGEX = re.compile(HOSTS_STRING)
     def __init__(self):
         self.blocked_hosts = set()
         self.whitelist = set()
@@ -44,18 +46,10 @@ class BlockList():
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
     def parse_hosts(self, line):
-        try:
-            line = line[:line.index('#')]
-        except ValueError:
-            pass
-        try:
-            host, domain = line.split()
-            if (host in ('0.0.0.0', '127.0.0.1', '::1')
-                and self.DOMAIN_REGEX.fullmatch(domain)):
-                    self.blocked_hosts.add(domain)
+        match = self.HOSTS_REGEX.fullmatch(line)
+        if match:
+            self.blocked_hosts.add(match.group(1))
             return True
-        except ValueError:
-            return False
     def parse_adblock(self, line):
         if '!' not in line:
             if line.startswith('@@'):
