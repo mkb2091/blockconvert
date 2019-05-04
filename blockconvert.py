@@ -19,10 +19,8 @@ with open('tld_list.txt') as file:
 class BlockList():
     DOMAIN_STRING = '([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % TLD_REGEX
     ADBLOCK_STRING = rf'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?{DOMAIN_STRING}(?:\^)?(?:\$(?:[,]?(?:(?:popup)|(?:first\-party)|(?:third\-party))))?'
-    WHITELIST_STRING = '@@' + ADBLOCK_STRING
     DOMAIN_REGEX = re.compile(DOMAIN_STRING)
     ADBLOCK_REGEX = re.compile(ADBLOCK_STRING)
-    WHITELIST_REGEX = re.compile(WHITELIST_STRING)
     def __init__(self):
         self.blocked_hosts = set()
         self.whitelist = set()
@@ -33,11 +31,10 @@ class BlockList():
             data = json.loads(data)
             if 'action_map' in data and isinstance(data['action_map'], dict):
                 self.parse_privacy_badger(data)
-                return
         except json.JSONDecodeError:
-            pass
-        self.parse_adblock(data)
-        self.parse_hosts(data)
+            for line in data.splitlines():
+                if not self.parse_hosts(line):
+                    self.parse_adblock(line)
     def parse_privacy_badger(self, data):
         for i in data['action_map']:
             if self.DOMAIN_REGEX.fullmatch(i):
@@ -46,26 +43,29 @@ class BlockList():
                         self.blocked_hosts.add(i)
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
-    def parse_adblock(self, data):
-        for line in data.splitlines():
-            if '!' not in line:
-                match = self.ADBLOCK_REGEX.fullmatch(line.lower())
+    def parse_hosts(self, line):
+        try:
+            line = line[:line.index('#')]
+        except ValueError:
+            pass
+        try:
+            host, domain = line.split()
+            if (host in ('0.0.0.0', '127.0.0.1', '::1')
+                and self.DOMAIN_REGEX.fullmatch(domain)):
+                    self.blocked_hosts.add(domain)
+            return True
+        except ValueError:
+            return False
+    def parse_adblock(self, line):
+        if '!' not in line:
+            if line.startswith('@@'):
+                match = self.ADBLOCK_REGEX.fullmatch(line[2:])
                 if match:
-                    self.blocked_hosts.add(match.group(1).lower())
-                else:
-                    match = self.WHITELIST_REGEX.fullmatch(line)
-                    if match:
-                        self.whitelist.add(match.group(1).lower())
-    def parse_hosts(self, data):
-        for line in data.splitlines():
-            line, *_ = line.split('#')
-            try:
-                host, domain = line.split()
-                if host in ('0.0.0.0', '127.0.0.1', '::1'):
-                    if self.DOMAIN_REGEX.fullmatch(domain):
-                        self.blocked_hosts.add(domain)
-            except ValueError:
-                pass
+                    self.whitelist.add(match.group(1))
+            else:
+                match = self.ADBLOCK_REGEX.fullmatch(line)
+                if match:
+                    self.blocked_hosts.add(match.group(1))
     def clean(self):
         for i in self.whitelist:
             try:
@@ -73,17 +73,14 @@ class BlockList():
             except KeyError:
                 pass
     def to_adblock(self):
-        self.clean()
-        return '\n'.join('||%s^' % i for i in sorted(self.blocked_hosts))
+        return '\n'.join(['||%s^' % i for i in sorted(self.blocked_hosts)])
     def to_hosts(self):
-        self.clean()
-        return '\n'.join('0.0.0.0 ' + i for i in sorted(self.blocked_hosts))
+        return '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blocked_hosts)])
     def to_privacy_badger(self):
-        self.clean()
         base = '{"action_map":{%s},"snitch_map":{%s}, "settings_map":{}}'
         url_string = '"%s":{"userAction":"","dnt":false,"heuristicAction":"block","nextUpdateTime":0}'
-        return base % (','.join(url_string % i for i in sorted(self.blocked_hosts)),
-                       ','.join('"%s":["1","2","3"]' % (i) for i in sorted(self.blocked_hosts)))
+        return base % (','.join([url_string % i for i in sorted(self.blocked_hosts)]),
+                       ','.join(['"%s":["1","2","3"]' % (i) for i in sorted(self.blocked_hosts)]))
 
 def main():
     blocklist = BlockList()
