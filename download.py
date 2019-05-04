@@ -1,4 +1,5 @@
 import urllib.request
+
 urls = [
         'http://winhelp2002.mvps.org/hosts.txt',
 	'https://adaway.org/hosts.txt',
@@ -27,6 +28,16 @@ urls = [
         'https://someonewhocares.org/hosts/hosts',
 	'https://www.malwaredomainlist.com/hostslist/hosts.txt'
     ]
+
+req = urllib.request.Request('https://data.iana.org/TLD/tlds-alpha-by-domain.txt',
+                             data=None,
+                             headers={'User-Agent':'BlockListConvert' + str(id(urls))})
+print('Downloading tld list')
+with urllib.request.urlopen(req) as response:
+    with open('tld_list.txt', 'wb') as file:
+        file.write(response.read())
+
+
 for (i, url) in enumerate(urls):
     print('Starting %s, url: %s' % (i, url))
     req = urllib.request.Request(url, data=None,
