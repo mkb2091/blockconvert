@@ -6,8 +6,8 @@ urls = [
 	'https://easylist-downloads.adblockplus.org/malwaredomains_full.txt',
 	'https://easylist.to/easylist/easylist.txt',
 	'https://easylist.to/easylist/easyprivacy.txt',
-        'https://easylist.to/easylist/fanboy-annoyance.txt',
-        'https://filters.adtidy.org/extension/chromium/filters/11.txt',
+	'https://easylist.to/easylist/fanboy-annoyance.txt',
+	'https://filters.adtidy.org/extension/chromium/filters/11.txt',
 	'https://filters.adtidy.org/extension/chromium/filters/14.txt',
 	'https://filters.adtidy.org/extension/chromium/filters/15.txt',
 	'https://filters.adtidy.org/extension/chromium/filters/2.txt',
@@ -18,8 +18,9 @@ urls = [
 	'https://raw.githubusercontent.com/EFForg/badger-sett/master/results.json',
 	'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',
 	'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
+	'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',
 	'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt',
-        'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',
+	'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',
 	'https://someonewhocares.org/hosts/hosts',
 	'https://www.malwaredomainlist.com/hostslist/hosts.txt'
     ]
