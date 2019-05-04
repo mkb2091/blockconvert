@@ -28,7 +28,7 @@ class BlockList():
         self.whitelist = set()
     def add_file(self, path):
         with open(path) as file:
-            data = file.read()
+            data = file.read().lower()
         try:
             data = json.loads(data)
             if 'action_map' in data and isinstance(data['action_map'], dict):
@@ -40,12 +40,12 @@ class BlockList():
         self.parse_hosts(data)
     def parse_privacy_badger(self, data):
         for i in data['action_map']:
-            if self.DOMAIN_REGEX.fullmatch(i.lower()):
-                if isinstance(data['action_map'][i], dict) and 'heuristicAction' in data['action_map'][i]:
-                    if data['action_map'][i]['heuristicAction'] == 'block':
-                        self.blocked_hosts.add(i.lower())
-                    elif data['action_map'][i]['heuristicAction'] == 'cookieblock':
-                        self.whitelist.add(i.lower())
+            if self.DOMAIN_REGEX.fullmatch(i):
+                if isinstance(data['action_map'][i], dict) and 'heuristicaction' in data['action_map'][i]:
+                    if data['action_map'][i]['heuristicaction'] == 'block':
+                        self.blocked_hosts.add(i)
+                    elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
+                        self.whitelist.add(i)
     def parse_adblock(self, data):
         for line in data.splitlines():
             if '!' not in line:
@@ -62,8 +62,8 @@ class BlockList():
             try:
                 host, domain = line.split()
                 if host in ('0.0.0.0', '127.0.0.1', '::1'):
-                    if self.DOMAIN_REGEX.fullmatch(domain.lower()):
-                        self.blocked_hosts.add(domain.lower())
+                    if self.DOMAIN_REGEX.fullmatch(domain):
+                        self.blocked_hosts.add(domain)
             except ValueError:
                 pass
     def clean(self):
