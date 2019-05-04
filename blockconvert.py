@@ -30,7 +30,7 @@ class BlockList():
                 elif data['action_map'][i]['heuristicAction'] == 'cookieblock':
                     self.whitelist.add(i)
     def parse_adblock(self, data):
-        for line in data.splitlines()[1:]:
+        for line in data.splitlines():
             if '!' not in line:
                 match = self.ADBLOCK_REGEX.fullmatch(line)
                 if match:
