@@ -1533,6 +1533,8 @@
 0.0.0.0 3.adbrite.com
 0.0.0.0 3.cennter.com
 0.0.0.0 3.hidemyass.com
+0.0.0.0 3.n.2.1.l50.js
+0.0.0.0 3.n.2.2.l30.js
 0.0.0.0 3.ptp22.com
 0.0.0.0 30-day-change.com
 0.0.0.0 30.6.87.194.dynamic.dol.ru
@@ -17169,6 +17171,7 @@
 0.0.0.0 ad1.lbn.ru
 0.0.0.0 ad1.nend.net
 0.0.0.0 ad1.nownews.com
+0.0.0.0 ad1.nspace
 0.0.0.0 ad1.pamedia.com.au
 0.0.0.0 ad1.paycount.com
 0.0.0.0 ad1.peel.com
@@ -20377,6 +20380,7 @@
 0.0.0.0 ads.crisppremium.com
 0.0.0.0 ads.crosscut.com
 0.0.0.0 ads.crossworxs.eu
+0.0.0.0 ads.css
 0.0.0.0 ads.ctasnet.com
 0.0.0.0 ads.ctvdigital.net
 0.0.0.0 ads.currantbun.com
@@ -20985,6 +20989,7 @@
 0.0.0.0 ads.ljworld.com
 0.0.0.0 ads.lmmob.com
 0.0.0.0 ads.lnkworld.com
+0.0.0.0 ads.loader-
 0.0.0.0 ads.localnow.com
 0.0.0.0 ads.localyokelmedia.com
 0.0.0.0 ads.locationforexpert.com
@@ -30141,6 +30146,7 @@
 0.0.0.0 beacon.lijit.com
 0.0.0.0 beacon.livefyre.com
 0.0.0.0 beacon.lycos.com
+0.0.0.0 beacon.min.js
 0.0.0.0 beacon.mtgx.tv
 0.0.0.0 beacon.netflix.com
 0.0.0.0 beacon.nuskin.com
@@ -34149,6 +34155,7 @@
 0.0.0.0 cdn-ssl.vidible.tv
 0.0.0.0 cdn-static-secure.liverail.com
 0.0.0.0 cdn-tags.mmondi.com
+0.0.0.0 cdn-tracking.js
 0.0.0.0 cdn-v3.conductrics.com
 0.0.0.0 cdn-www.madblast.com
 0.0.0.0 cdn-wx.rainbowtgx.com
@@ -37164,6 +37171,7 @@
 0.0.0.0 cookieanalyze.info
 0.0.0.0 cookiecontainer.blox.pl
 0.0.0.0 cookieinformation.mgr.consensu.org
+0.0.0.0 cookielaw.js
 0.0.0.0 cookielawblog.wordpress.com
 0.0.0.0 cookies-prod.onetrust.mgr.consensu.org
 0.0.0.0 cookies.cmpnet.com
@@ -37251,6 +37259,7 @@
 0.0.0.0 core.naturalmotion.com
 0.0.0.0 core.perezvoni.com
 0.0.0.0 core.royalads.net
+0.0.0.0 core.tracking-min-
 0.0.0.0 core.videoegg.com
 0.0.0.0 core.yorkvillemarketing.com
 0.0.0.0 core.zontera.com
@@ -40142,6 +40151,7 @@
 0.0.0.0 dart.chron.com
 0.0.0.0 dart.clearchannel.com
 0.0.0.0 dart.l.doubleclick.net
+0.0.0.0 dartconfig.js
 0.0.0.0 darvocet.ourtablets.com
 0.0.0.0 das33.io
 0.0.0.0 das5ku9q.com
@@ -42908,6 +42918,7 @@
 0.0.0.0 elocumjobs.com
 0.0.0.0 eloqua.122.2o7.net
 0.0.0.0 eloqua.com
+0.0.0.0 eloqua.js
 0.0.0.0 elr.sfr.fr
 0.0.0.0 elthamely.com
 0.0.0.0 eltiempocitytv.112.2o7.net
@@ -43001,6 +43012,7 @@
 0.0.0.0 emrlogistics.com
 0.0.0.0 ems2bmen.com
 0.0.0.0 emsdirect.go2cloud.org
+0.0.0.0 emsecure.min.js
 0.0.0.0 emsvr.com
 0.0.0.0 emwsz.voluumtrk.com
 0.0.0.0 en.ad-stir.com
@@ -46540,6 +46552,7 @@
 0.0.0.0 gather.us.intellitxt.com
 0.0.0.0 gator.com
 0.0.0.0 gatr.hit.gemius.pl
+0.0.0.0 gatracking.js
 0.0.0.0 gaua.hit.gemius.pl
 0.0.0.0 gavzad.keenspot.com
 0.0.0.0 gaxsumshicksa.review
@@ -47659,6 +47672,7 @@
 0.0.0.0 googleadservices.com
 0.0.0.0 googleanalytcs.com
 0.0.0.0 googleanalytics.com
+0.0.0.0 googleanalytics.js
 0.0.0.0 googleapitest.bluekai.com
 0.0.0.0 googlepositions.com
 0.0.0.0 googlesyndication.com
@@ -49765,6 +49779,7 @@
 0.0.0.0 iadfeedtest.qwapi.com
 0.0.0.0 iadnet.com
 0.0.0.0 iads.com.np
+0.0.0.0 iads.js
 0.0.0.0 iadsdk.apple.com
 0.0.0.0 iaflstore.jp
 0.0.0.0 iaheyftbsn.re
@@ -64026,6 +64041,7 @@
 0.0.0.0 popunder.com
 0.0.0.0 popunder.fpctraffic.com
 0.0.0.0 popunder.jacquieetmichel.net
+0.0.0.0 popunder.js
 0.0.0.0 popunder.loading-delivery1.com
 0.0.0.0 popunder.net
 0.0.0.0 popunder.paypopup.com
@@ -64273,6 +64289,7 @@
 0.0.0.0 preaf.jp
 0.0.0.0 prebid.adnxs.com
 0.0.0.0 prebid.districtm.ca
+0.0.0.0 prebid.js
 0.0.0.0 prebid.org
 0.0.0.0 prebidcdn.com
 0.0.0.0 precisioncounter.com
@@ -65696,6 +65713,7 @@
 0.0.0.0 r.dxurl.cn
 0.0.0.0 r.edge.inmobicdn.com
 0.0.0.0 r.edge.inmobicdn.net
+0.0.0.0 r.i.ua
 0.0.0.0 r.ibg.bg
 0.0.0.0 r.interakt.ru
 0.0.0.0 r.kelkoo.com
@@ -69967,6 +69985,7 @@
 0.0.0.0 siteanalytics.compete.com
 0.0.0.0 siteauikozph.download
 0.0.0.0 sitebeam.net
+0.0.0.0 sitecatalyst.js
 0.0.0.0 sitecdn.tvpage.com
 0.0.0.0 sitedataprocessing.com
 0.0.0.0 sitedirectory.doubleclick.net
@@ -70062,6 +70081,7 @@
 0.0.0.0 skilljam.com
 0.0.0.0 skim.clickaine.com
 0.0.0.0 skimlinks.com
+0.0.0.0 skimlinks.js
 0.0.0.0 skimlinkscom.skimlinks.com
 0.0.0.0 skimresources.com
 0.0.0.0 skin-care.1.p2l.info
@@ -83879,6 +83899,7 @@
 0.0.0.0 webmdcom.tt.omtrdc.net
 0.0.0.0 webmedia.co.il
 0.0.0.0 webmedia.pl
+0.0.0.0 webmetrics.js
 0.0.0.0 webmetrics.nintendo-europe.com
 0.0.0.0 webmetrodev.122.2o7.net
 0.0.0.0 webmine.cz
@@ -83899,6 +83920,7 @@
 0.0.0.0 weborama.com
 0.0.0.0 weborama.fr
 0.0.0.0 weborama.io
+0.0.0.0 weborama.js
 0.0.0.0 webordermanager.com
 0.0.0.0 weborg.hut1.ru
 0.0.0.0 weboxmedia.by
