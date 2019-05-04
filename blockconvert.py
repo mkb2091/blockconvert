@@ -31,18 +31,23 @@ class BlockList():
             data = file.read().lower()
         try:
             data = json.loads(data)
-            if 'action_map' in data and isinstance(data['action_map'], dict):
+            if ('action_map' in data and isinstance(data['action_map'], dict)
+                and 'snitch_map' in data and isinstance(data['snitch_map'], dict)):
                 self.parse_privacy_badger(data)
         except json.JSONDecodeError:
             for line in data.splitlines():
                 if not self.parse_hosts(line):
                     self.parse_adblock(line)
     def parse_privacy_badger(self, data):
+        temp_whitelist = set()
+        for x in data['snitch_map']:
+            temp_whitelist.update(data['snitch_map'])
         for i in data['action_map']:
             if self.DOMAIN_REGEX.fullmatch(i):
                 if isinstance(data['action_map'][i], dict) and 'heuristicaction' in data['action_map'][i]:
                     if data['action_map'][i]['heuristicaction'] == 'block':
-                        self.blocked_hosts.add(i)
+                        if i not in temp_whitelist:
+                            self.blocked_hosts.add(i)
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
     def parse_hosts(self, line):
