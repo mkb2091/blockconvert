@@ -7,6 +7,7 @@ urls = [
 	'https://easylist.to/easylist/easylist.txt',
 	'https://easylist.to/easylist/easyprivacy.txt',
         'https://easylist.to/easylist/fanboy-annoyance.txt',
+        'https://filters.adtidy.org/extension/chromium/filters/11.txt',
 	'https://filters.adtidy.org/extension/chromium/filters/14.txt',
 	'https://filters.adtidy.org/extension/chromium/filters/15.txt',
 	'https://filters.adtidy.org/extension/chromium/filters/2.txt',
