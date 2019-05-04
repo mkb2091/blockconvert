@@ -1,0 +1,3 @@
+[submodule "submodules/easylist"]
+	path = submodules/easylist
+	url = https://github.com/easylist/easylist
