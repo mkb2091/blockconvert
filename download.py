@@ -18,9 +18,10 @@ urls = [
 	'https://raw.githubusercontent.com/EFForg/badger-sett/master/results.json',
 	'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',
 	'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
+        'https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/ParsedBlacklists/Notracking-hostnames.txt',
 	'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',
 	'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt',
-	'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',    
+	'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',
         'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',
         'https://someonewhocares.org/hosts/hosts',
 	'https://www.malwaredomainlist.com/hostslist/hosts.txt'
