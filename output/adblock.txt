@@ -15,11 +15,16 @@
 ||-cookie-message.js^
 ||-doubleclick.js^
 ||-doubleclick.min.js^
+||-facebook.svg^
 ||-kameleoon.js^
 ||-kameleoon.min.js^
 ||-logging.nextmedia.com^
+||-rodo.min.js^
 ||-scroll-tracker.js^
 ||-smartad.s3.amazonaws.com^
+||-tumblr.png^
+||-twitter.js^
+||-twitter.svg^
 ||-xtcore.js^
 ||0.0.0.0^
 ||0.nextyourcontent.com^
@@ -28660,6 +28665,8 @@
 ||alerts-system00.000webhostapp.com^
 ||alerts.account.capital-one.com.secure.insidmaldesign.com^
 ||alerts.flurry.com^
+||alerts.ndtv.com^
+||alerts.thedailystar.net^
 ||alertserviciewellsfargoauth8.000webhostapp.com^
 ||aleshop.pl^
 ||alessandraleone.com^
@@ -31549,6 +31556,7 @@
 ||appclick.net^
 ||appcliente-org.umbler.net^
 ||appcloudstore.cloud^
+||appconsent.io^
 ||appcust-assistheaders.head-cratid.com^
 ||appdatum.com^
 ||appdev.addthis.com^
@@ -43832,6 +43840,7 @@
 ||cezsociales.com.ar^
 ||cf-ad.ad-stir.com^
 ||cf-ads.pinger.com^
+||cf-particle-html.eip.telegraph.co.uk^
 ||cf.ad-v.jp^
 ||cf.addthis.com^
 ||cf.ads.kontextua.com^
@@ -46279,6 +46288,8 @@
 ||cmp.112.2o7.net^
 ||cmp.adreach.co^
 ||cmp.entertainmentcrave.com^
+||cmp.network-n.com^
+||cmp.nextday.media^
 ||cmp.teads.mgr.consensu.org^
 ||cmp.us.intellitxt.com^
 ||cmp1.adreach.co^
@@ -46404,6 +46415,7 @@
 ||cnhsq.voluumtrk.com^
 ||cnhv.co^
 ||cnhv.com^
+||cnil.links-lab.fr^
 ||cninin.com^
 ||cnjkrbhtbv.com^
 ||cnn-africa.co^
@@ -47512,7 +47524,11 @@
 ||consensad.com^
 ||consensu.org^
 ||consent-st.truste.com^
+||consent.23g.io^
+||consent.cmp.oath.com^
 ||consent.prismamedia.com^
+||consent.subscriptions.archant.co.uk^
+||consent.theneweuropean.co.uk^
 ||consent.truste.com^
 ||consent.webmasterplan.com^
 ||conservational-book.000webhostapp.com^
@@ -47812,12 +47828,16 @@
 ||coocomall.com^
 ||coocopop.com^
 ||cookevegas.com^
+||cookie.aerostatonet.it^
 ||cookie.disneylandparis.com^
 ||cookie.fdih.dk^
 ||cookie.fuel451.com^
+||cookie.gazeta.pl^
 ||cookie.green-red.com^
 ||cookie.monster.com^
+||cookie.oup.com^
 ||cookie.pebblemedia.be^
+||cookie.wieni.be^
 ||cookieanalyze.info^
 ||cookieatatime.ca^
 ||cookiebyte.in^
@@ -47827,12 +47847,20 @@
 ||cookielawblog.wordpress.com^
 ||cookies-prod.onetrust.mgr.consensu.org^
 ||cookies.cmpnet.com^
+||cookies.fakt.pl^
+||cookies.forbes.pl^
+||cookies.gardena.net^
+||cookies.innershed.co.uk^
+||cookies.leadplace.fr^
 ||cookies.livepartners.com^
+||cookies.nos.nl^
 ||cookies.onetrust.mgr.consensu.org^
 ||cookies.reedbusiness.nl^
+||cookies.unidadeditorial.es^
 ||cookiescript.info^
 ||cookiescript.infos^
 ||cookiescriptcdn.pro^
+||cookiesdirective.js^
 ||cookietracker.cloudapp.net^
 ||cookiex.ngd.yahoo.com^
 ||cookingcom.112.2o7.net^
@@ -50904,6 +50932,7 @@
 ||curalate.com^
 ||curancience.com^
 ||curate.nestedmedia.com^
+||curate.venturebeat.com^
 ||curbappealdesign.biz^
 ||curbstonexxteskqxv.download^
 ||cure.cryptopools.com^
@@ -51396,6 +51425,7 @@
 ||d15cjcet1djbmv.cloudfront.net^
 ||d15gt9gwxw5wu0.cloudfront.net^
 ||d15kdpgjg3unno.cloudfront.net^
+||d15r06k2ko210l.cloudfront.net^
 ||d16.net^
 ||d160mt023h8h3d.cloudfront.net^
 ||d162nnmwf9bggr.cloudfront.net^
@@ -51494,6 +51524,7 @@
 ||d1ssbq1bwjg5ux.cloudfront.net^
 ||d1tprjo2w7krrh.cloudfront.net^
 ||d1uanozc5el74n.cloudfront.net^
+||d1uh1a7az90pt0.cloudfront.net^
 ||d1uwd25yvxu96k.cloudfront.net^
 ||d1uy7uzra011au.cloudfront.net^
 ||d1v6js7bjzmhoa.cloudfront.net^
@@ -51603,6 +51634,7 @@
 ||d2hluuq2g8gwrv.cloudfront.net^
 ||d2ho1n52p59mwv.cloudfront.net^
 ||d2i54aseqwhx68.cloudfront.net^
+||d2ip7iv1l4ergv.cloudfront.net^
 ||d2ipklohrie3lo.cloudfront.net^
 ||d2j3te7y7s8xxp.cloudfront.net^
 ||d2jn12r3o7an7z.cloudfront.net^
@@ -51641,6 +51673,7 @@
 ||d2q7mvwub8tmwf.cloudfront.net^
 ||d2qmp7jjpd79k7.cloudfront.net^
 ||d2qz7ofajpstv5.cloudfront.net^
+||d2r1yp2w7bby2u.cloudfront.net^
 ||d2r359adnh3sfn.cloudfront.net^
 ||d2ry9vue95px0b.cloudfront.net^
 ||d2s64zaa9ua7uv.cloudfront.net^
@@ -51849,6 +51882,7 @@
 ||d5e1ef2qzo-8108dl9wk1l8m59.hop.clickbank.net^
 ||d5grz.voluumtrk.com^
 ||d5i9o0tpq9sa1.cloudfront.net^
+||d5k6iufjynyu8.cloudfront.net^
 ||d5nxst8fruw4z.cloudfront.net^
 ||d5ou3dytze6uf.cloudfront.net^
 ||d5p.de17a.com^
@@ -51905,6 +51939,7 @@
 ||d9c47b2e6aec5c8dbdab.date^
 ||d9d0e0.r.axf8.net^
 ||d9e2m9e83l.com^
+||d9etzk30b05yg.cloudfront.net^
 ||d9iwc.voluumtrk.com^
 ||d9lq0o81skkdj.cloudfront.net^
 ||d9rj2sdxjer5v.cloudfront.net^
@@ -53661,6 +53696,7 @@
 ||dhnxwgxszvi.com^
 ||dhodha.com^
 ||dhomixidnkas.com^
+||dhpikd1t89arn.cloudfront.net^
 ||dhqhospitalmianwali.com^
 ||dhruvsilver.com^
 ||dhsmarthouse.122.2o7.net^
@@ -57693,6 +57729,7 @@
 ||emailct.addthis.com^
 ||emaildatabasepro.com^
 ||emailed.userprofileupdates.com^
+||emailing.rfi.fr^
 ||emailproductreview.com^
 ||emailretargeting.com^
 ||emails.outbrain.com^
@@ -60780,6 +60817,7 @@
 ||fbsecurityaccount27062018.000webhostapp.com^
 ||fbsecurityaccountcentre.000webhostapp.com^
 ||fbservice.esy.es^
+||fbshare.js^
 ||fbsniffing.com^
 ||fbstealer.com^
 ||fbsupercheats.com^
@@ -62498,6 +62536,7 @@
 ||formisimo.com^
 ||forms.earnmydegree.com^
 ||forms.ontraport.com^
+||forms.windowsitpro.com^
 ||formulaire-remboursement-ameli.com^
 ||formulaire-remboursement-amelie.eu^
 ||formulariohome.com^
@@ -65536,7 +65575,10 @@
 ||gdocs.win^
 ||gdpr.adjust.com^
 ||gdpr.algolia.com^
+||gdpr.internetbrands.com^
+||gdpr.js^
 ||gdpr.openvoice.vidible.tv^
+||gdpr.prisa.com^
 ||gdpttpyvcuvav.com^
 ||gdpuknsngvps.com^
 ||gdriiiiiivv.com^
@@ -84179,6 +84221,7 @@
 ||mailinb1.surf-town.net^
 ||mailmarketingmachine.com^
 ||mailmenrkgzquz.download^
+||mailmunch.s3.amazonaws.com^
 ||mailonline-d.openx.net^
 ||mailout1.surf-town.net^
 ||mailout2.surf-town.net^
@@ -85226,6 +85269,7 @@
 ||mds.centrport.net^
 ||mds.nipa.co.th^
 ||mdsignsbog.com^
+||mdsngpush.finanzen.net^
 ||mdstaugustine.112.2o7.net^
 ||mdt.grandtraversedesign.com^
 ||mdtemmanouil.gr^
@@ -91255,8 +91299,10 @@
 ||newsinteractive.112.2o7.net^
 ||newsinternational.122.2o7.net^
 ||newsite.ahlgrens.se^
+||newsletter.bdnews24.com^
 ||newsletter.linkshare.com^
 ||newsletter.outbrain.com^
+||newsletters.vocento.com^
 ||newsmaxfeednetwork.com^
 ||newsnet.in.ua^
 ||newsnetw.oewabox.at^
@@ -92137,9 +92183,11 @@
 ||notificationyourspage.cf^
 ||notificatiopages.cf^
 ||notificetionwem.fr.nf^
+||notifiche.secoloditalia.it^
 ||notify-bugs-fra1.rtl.de^
 ||notify-facebook-account.com^
 ||notify.bugsnag.com^
+||notify.hindustantimes.com^
 ||notify.mgid.com^
 ||notify.nuviad.com^
 ||notify1.brucelead.com^
@@ -100371,9 +100419,14 @@
 ||priusonline.us.intellitxt.com^
 ||privacy-settings.tk^
 ||privacy.adcolony.com^
+||privacy.purch.com^
+||privacy.schibsted.com^
 ||privacy.tapad.com^
+||privacy.totaaltv.nl^
 ||privacyassistant.net^
 ||privacypolicy.co.business^
+||privacypolicy.trgr.be^
+||privacyportal.fatergroup.com^
 ||privacysecurityprotection.com^
 ||prival.co^
 ||privatamateure.com^
@@ -101800,6 +101853,7 @@
 ||push-notifications.top^
 ||push.appsgeyser.com^
 ||push.cdnads.com^
+||push.cnnindonesia.com^
 ||push.headline.uodoo.com^
 ||push.maribacaberita.com^
 ||push.poptm.com^
@@ -110321,6 +110375,7 @@
 ||sharacorepoz.com^
 ||share-server.com^
 ||share.9cdn.net^
+||share.baidu.com^
 ||share.loginradius.com^
 ||share.mixpanel.com^
 ||share.pluso.ru^
@@ -110336,6 +110391,7 @@
 ||shareaza.com^
 ||sharebar.addthis.com^
 ||sharebar.addthiscdn.com^
+||sharebar.js^
 ||sharebay.net^
 ||sharecash.org^
 ||sharecast.uk.intellitxt.com^
@@ -110381,6 +110437,7 @@
 ||sharfiles.com^
 ||sharing-details.gq^
 ||sharing-is-caring.info^
+||sharing.js^
 ||sharjeasoon.ir^
 ||shark-case.com^
 ||shark-case.net^
@@ -112390,7 +112447,9 @@
 ||social-runner.net^
 ||social-sb.com^
 ||social.bidsystem.com^
+||social.dw.de^
 ||social.msgplus.net^
+||social.png^
 ||social.taptica.com^
 ||social1listnews.com^
 ||social9.com^
@@ -112889,6 +112948,7 @@
 ||sp.jconline.com^
 ||sp.jsonline.com^
 ||sp.kitsapsun.com^
+||sp.knowyourmeme.com^
 ||sp.knoxnews.com^
 ||sp.lancastereaglegazette.com^
 ||sp.lansingstatejournal.com^
@@ -115412,6 +115472,7 @@
 ||stf779.ru^
 ||stg-data-collector.playbuzz.com^
 ||stg.widget.crowdignite.com^
+||sthelensstar-gb.sthelensstar.co.uk^
 ||sthenri.com.au^
 ||sthtrtvkkt.com^
 ||stickcloth.net^
@@ -115844,6 +115905,7 @@
 ||subscribefree-fr.com^
 ||subscribersgifts.com^
 ||subscription-access.com^
+||subscriptions.cbc.ca^
 ||subscrlber.com^
 ||subsgifts.xyz^
 ||subskrypcja.tvhr.pl^
@@ -118899,6 +118961,7 @@
 ||themovs.net^
 ||themusicnetwork.co.uk^
 ||thenabler.com^
+||thenational-gb.thenational.scot^
 ||thenaturejournal.ca^
 ||thenelis.pw^
 ||thenetworkstorage.co.uk^
@@ -119646,6 +119709,7 @@
 ||tmffmrsa.com^
 ||tmfilms.net^
 ||tmfkuesmlpto.com^
+||tmform.azurewebsites.net^
 ||tmgdigital.go2cloud.org^
 ||tmgr.ccmbg.com^
 ||tmhgsorajits.com^
@@ -134094,6 +134158,7 @@
 ||woprjr.smartdevicelink.com^
 ||woprkolobrzeg.pl^
 ||wopyaricbatain.com^
+||worcesternews-gb.worcesternews.co.uk^
 ||worchids.net^
 ||word200.duckdns.org^
 ||wordbankads.com^
@@ -146859,6 +146924,7 @@
 ||zgghentqc.com^
 ||zggnhhadif.com^
 ||zgoc.com.au^
+||zgody.infor.pl^
 ||zgopxgi9uqlgoioatuuc.littlematchagirl.com.au^
 ||zgsjfo.com^
 ||zgsysz.com^
