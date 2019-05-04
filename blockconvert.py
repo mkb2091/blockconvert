@@ -39,7 +39,7 @@ class BlockList():
             except ValueError:
                 pass
     def to_adblock(self):
-        return '\n'.join(sorted(self.blocked_hosts))
+        return '\n'.join('||%s^' % i for i in sorted(self.blocked_hosts))
     def to_hosts(self):
         return '\n'.join('0.0.0.0 ' + i for i in sorted(self.blocked_hosts))
     def to_privacy_badger(self):
