@@ -1533,6 +1533,8 @@
 3.adbrite.com
 3.cennter.com
 3.hidemyass.com
+3.n.2.1.l50.js
+3.n.2.2.l30.js
 3.ptp22.com
 30-day-change.com
 30.6.87.194.dynamic.dol.ru
@@ -17169,6 +17171,7 @@ ad1.kde.cz
 ad1.lbn.ru
 ad1.nend.net
 ad1.nownews.com
+ad1.nspace
 ad1.pamedia.com.au
 ad1.paycount.com
 ad1.peel.com
@@ -20377,6 +20380,7 @@ ads.cricbuzz.com
 ads.crisppremium.com
 ads.crosscut.com
 ads.crossworxs.eu
+ads.css
 ads.ctasnet.com
 ads.ctvdigital.net
 ads.currantbun.com
@@ -20985,6 +20989,7 @@ ads.livetvcdn.net
 ads.ljworld.com
 ads.lmmob.com
 ads.lnkworld.com
+ads.loader-
 ads.localnow.com
 ads.localyokelmedia.com
 ads.locationforexpert.com
@@ -30141,6 +30146,7 @@ beacon.krxd.net
 beacon.lijit.com
 beacon.livefyre.com
 beacon.lycos.com
+beacon.min.js
 beacon.mtgx.tv
 beacon.netflix.com
 beacon.nuskin.com
@@ -34149,6 +34155,7 @@ cdn-social.janrain.com
 cdn-ssl.vidible.tv
 cdn-static-secure.liverail.com
 cdn-tags.mmondi.com
+cdn-tracking.js
 cdn-v3.conductrics.com
 cdn-www.madblast.com
 cdn-wx.rainbowtgx.com
@@ -37164,6 +37171,7 @@ cookie.pebblemedia.be
 cookieanalyze.info
 cookiecontainer.blox.pl
 cookieinformation.mgr.consensu.org
+cookielaw.js
 cookielawblog.wordpress.com
 cookies-prod.onetrust.mgr.consensu.org
 cookies.cmpnet.com
@@ -37251,6 +37259,7 @@ core.insightexpressai.com
 core.naturalmotion.com
 core.perezvoni.com
 core.royalads.net
+core.tracking-min-
 core.videoegg.com
 core.yorkvillemarketing.com
 core.zontera.com
@@ -40142,6 +40151,7 @@ darseo.popunder.ru
 dart.chron.com
 dart.clearchannel.com
 dart.l.doubleclick.net
+dartconfig.js
 darvocet.ourtablets.com
 das33.io
 das5ku9q.com
@@ -42908,6 +42918,7 @@ elmo.crsspxl.com
 elocumjobs.com
 eloqua.122.2o7.net
 eloqua.com
+eloqua.js
 elr.sfr.fr
 elthamely.com
 eltiempocitytv.112.2o7.net
@@ -43001,6 +43012,7 @@ emptyspaceads.com
 emrlogistics.com
 ems2bmen.com
 emsdirect.go2cloud.org
+emsecure.min.js
 emsvr.com
 emwsz.voluumtrk.com
 en.ad-stir.com
@@ -46540,6 +46552,7 @@ gather.hankyung.com
 gather.us.intellitxt.com
 gator.com
 gatr.hit.gemius.pl
+gatracking.js
 gaua.hit.gemius.pl
 gavzad.keenspot.com
 gaxsumshicksa.review
@@ -47659,6 +47672,7 @@ googleads4.g.doubleclick.net
 googleadservices.com
 googleanalytcs.com
 googleanalytics.com
+googleanalytics.js
 googleapitest.bluekai.com
 googlepositions.com
 googlesyndication.com
@@ -49765,6 +49779,7 @@ iadfeed.qwapi.com
 iadfeedtest.qwapi.com
 iadnet.com
 iads.com.np
+iads.js
 iadsdk.apple.com
 iaflstore.jp
 iaheyftbsn.re
@@ -64026,6 +64041,7 @@ popunder.adsrevenue.net
 popunder.com
 popunder.fpctraffic.com
 popunder.jacquieetmichel.net
+popunder.js
 popunder.loading-delivery1.com
 popunder.net
 popunder.paypopup.com
@@ -64273,6 +64289,7 @@ preaf-ad.jp
 preaf.jp
 prebid.adnxs.com
 prebid.districtm.ca
+prebid.js
 prebid.org
 prebidcdn.com
 precisioncounter.com
@@ -65696,6 +65713,7 @@ r.domob.cn
 r.dxurl.cn
 r.edge.inmobicdn.com
 r.edge.inmobicdn.net
+r.i.ua
 r.ibg.bg
 r.interakt.ru
 r.kelkoo.com
@@ -69967,6 +69985,7 @@ siteanalyser.yellgroup.com
 siteanalytics.compete.com
 siteauikozph.download
 sitebeam.net
+sitecatalyst.js
 sitecdn.tvpage.com
 sitedataprocessing.com
 sitedirectory.doubleclick.net
@@ -70062,6 +70081,7 @@ skill.skilljam.com
 skilljam.com
 skim.clickaine.com
 skimlinks.com
+skimlinks.js
 skimlinkscom.skimlinks.com
 skimresources.com
 skin-care.1.p2l.info
@@ -83879,6 +83899,7 @@ webmasters.videarn.com
 webmdcom.tt.omtrdc.net
 webmedia.co.il
 webmedia.pl
+webmetrics.js
 webmetrics.nintendo-europe.com
 webmetrodev.122.2o7.net
 webmine.cz
@@ -83899,6 +83920,7 @@ weboohost.com
 weborama.com
 weborama.fr
 weborama.io
+weborama.js
 webordermanager.com
 weborg.hut1.ru
 weboxmedia.by
