@@ -2,9 +2,25 @@ import json
 import os
 import re
 
+with open('tld_list.txt') as file:
+    tlds = [tld for tld in file.read().lower().splitlines() if '#' not in tld]
+    tld_dict = dict()
+    for tld in tlds:
+        try:
+            tld_dict[tld[0]].append(tld[1:])
+        except KeyError:
+            tld_dict[tld[0]] = [tld[1:]]
+    TLD_REGEX = []
+    for first_letter in tld_dict:
+        now = '|'.join(['(?:%s)' % i for i in tld_dict[first_letter]])
+        TLD_REGEX.append('(?:%s(?:%s))' % (first_letter, now))
+    TLD_REGEX = '(?:%s)' % '|'.join(TLD_REGEX)
+
 class BlockList():
-    ADBLOCK_STRING = r'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?([a-z0-9-]+(?:[.][a-z0-9-]+)+)(?:\^)?(?:\$(?:[,]?(?:(?:popup)|(?:first\-party)|(?:third\-party))))?'
+    DOMAIN_STRING = '([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % TLD_REGEX
+    ADBLOCK_STRING = rf'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?{DOMAIN_STRING}(?:\^)?(?:\$(?:[,]?(?:(?:popup)|(?:first\-party)|(?:third\-party))))?'
     WHITELIST_STRING = '@@' + ADBLOCK_STRING
+    DOMAIN_REGEX = re.compile(DOMAIN_STRING)
     ADBLOCK_REGEX = re.compile(ADBLOCK_STRING)
     WHITELIST_REGEX = re.compile(WHITELIST_STRING)
     def __init__(self):
@@ -24,28 +40,30 @@ class BlockList():
         self.parse_hosts(data)
     def parse_privacy_badger(self, data):
         for i in data['action_map']:
-            if isinstance(data['action_map'][i], dict) and 'heuristicAction' in data['action_map'][i]:
-                if data['action_map'][i]['heuristicAction'] == 'block':
-                    self.blocked_hosts.add(i)
-                elif data['action_map'][i]['heuristicAction'] == 'cookieblock':
-                    self.whitelist.add(i)
+            if self.DOMAIN_REGEX.fullmatch(i.lower()):
+                if isinstance(data['action_map'][i], dict) and 'heuristicAction' in data['action_map'][i]:
+                    if data['action_map'][i]['heuristicAction'] == 'block':
+                        self.blocked_hosts.add(i.lower())
+                    elif data['action_map'][i]['heuristicAction'] == 'cookieblock':
+                        self.whitelist.add(i.lower())
     def parse_adblock(self, data):
         for line in data.splitlines():
             if '!' not in line:
-                match = self.ADBLOCK_REGEX.fullmatch(line)
+                match = self.ADBLOCK_REGEX.fullmatch(line.lower())
                 if match:
-                    self.blocked_hosts.add(match.group(1))
+                    self.blocked_hosts.add(match.group(1).lower())
                 else:
                     match = self.WHITELIST_REGEX.fullmatch(line)
                     if match:
-                        self.whitelist.add(match.group(1))
+                        self.whitelist.add(match.group(1).lower())
     def parse_hosts(self, data):
         for line in data.splitlines():
             line, *_ = line.split('#')
             try:
                 host, domain = line.split()
                 if host in ('0.0.0.0', '127.0.0.1', '::1'):
-                    self.blocked_hosts.add(domain)
+                    if self.DOMAIN_REGEX.fullmatch(domain.lower()):
+                        self.blocked_hosts.add(domain.lower())
             except ValueError:
                 pass
     def clean(self):
