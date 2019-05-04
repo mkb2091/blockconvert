@@ -20,14 +20,15 @@ urls = [
 	'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
 	'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',
 	'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt',
-	'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',
-	'https://someonewhocares.org/hosts/hosts',
+	'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',    
+        'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',
+        'https://someonewhocares.org/hosts/hosts',
 	'https://www.malwaredomainlist.com/hostslist/hosts.txt'
     ]
 for (i, url) in enumerate(urls):
     print('Starting %s, url: %s' % (i, url))
     req = urllib.request.Request(url, data=None,
-                                 headers={'User-Agent':'BlockConvert'})
+                                 headers={'User-Agent':'BlockListConvert' + str(id(urls))})
     with urllib.request.urlopen(req) as response:
         with open('target/%s' % i, 'wb') as file:
             file.write(response.read())
