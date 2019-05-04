@@ -44,7 +44,7 @@ class BlockList():
             line, *_ = line.split('#')
             try:
                 host, domain = line.split()
-                if host in ('0.0.0.0', '127.0.0.1'):
+                if host in ('0.0.0.0', '127.0.0.1', '::1'):
                     self.blocked_hosts.add(domain)
             except ValueError:
                 pass
