@@ -3,9 +3,13 @@ import os
 import re
 
 class BlockList():
-    ADBLOCK_REGEX = re.compile(r'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?([a-z0-9-]+(?:[.][a-z0-9-]+)+)(?:\^)?(?:\$popup)?')
+    ADBLOCK_STRING = r'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?([a-z0-9-]+(?:[.][a-z0-9-]+)+)(?:\^)?(?:\$popup)?'
+    WHITELIST_STRING = '@@' + ADBLOCK_STRING
+    ADBLOCK_REGEX = re.compile(ADBLOCK_STRING)
+    WHITELIST_REGEX = re.compile(WHITELIST_STRING)
     def __init__(self):
         self.blocked_hosts = set()
+        self.whitelist = set()
     def add_file(self, path):
         with open(path) as file:
             data = file.read()
@@ -23,12 +27,18 @@ class BlockList():
             if isinstance(data['action_map'][i], dict) and 'heuristicAction' in data['action_map'][i]:
                 if data['action_map'][i]['heuristicAction'] == 'block':
                     self.blocked_hosts.add(i)
+                elif data['action_map'][i]['heuristicAction'] == 'cookieblock':
+                    self.whitelist.add(i)
     def parse_adblock(self, data):
         for line in data.splitlines()[1:]:
             if '!' not in line:
                 match = self.ADBLOCK_REGEX.fullmatch(line)
                 if match:
                     self.blocked_hosts.add(match.group(1))
+                else:
+                    match = self.WHITELIST_REGEX.fullmatch(line)
+                    if match:
+                        self.whitelist.add(match.group(1))
     def parse_hosts(self, data):
         for line in data.splitlines():
             line, *_ = line.split('#')
@@ -38,11 +48,20 @@ class BlockList():
                     self.blocked_hosts.add(domain)
             except ValueError:
                 pass
+    def clean(self):
+        for i in self.whitelist:
+            try:
+                self.blocked_hosts.remove(i)
+            except KeyError:
+                pass
     def to_adblock(self):
+        self.clean()
         return '\n'.join('||%s^' % i for i in sorted(self.blocked_hosts))
     def to_hosts(self):
+        self.clean()
         return '\n'.join('0.0.0.0 ' + i for i in sorted(self.blocked_hosts))
     def to_privacy_badger(self):
+        self.clean()
         base = '{"action_map":{%s},"snitch_map":{%s}, "settings_map":{}}'
         url_string = '"%s":{"userAction":"","dnt":false,"heuristicAction":"block","nextUpdateTime":0}'
         return base % (','.join(url_string % i for i in sorted(self.blocked_hosts)),
@@ -59,6 +78,7 @@ def main():
     paths.sort()
     for path in paths:
         blocklist.add_file(path)
+    blocklist.clean()
     print('Generated %s rules' % len(blocklist.blocked_hosts))
     try:
         os.makedirs('output')
