@@ -4,6 +4,7 @@ urls = [
 	'https://adaway.org/hosts.txt',
 	'https://easylist.to/easylist/easylist.txt',
 	'https://easylist.to/easylist/easyprivacy.txt',
+        'https://filters.adtidy.org/extension/chromium/filters/14.txt',
 	'https://filters.adtidy.org/extension/chromium/filters/2.txt',
 	'https://filters.adtidy.org/extension/chromium/filters/3.txt',
 	'https://github.com/EFForg/badger-sett/blob/master/results.json',

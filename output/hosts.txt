@@ -11,6 +11,8 @@
 0.0.0.0 -advert.swf
 0.0.0.0 -api.adyoulike.com
 0.0.0.0 -coin-hive.js
+0.0.0.0 -cookie-law.js
+0.0.0.0 -cookie-message.js
 0.0.0.0 -doubleclick.js
 0.0.0.0 -doubleclick.min.js
 0.0.0.0 -kameleoon.js
@@ -29146,6 +29148,7 @@
 0.0.0.0 banner.com
 0.0.0.0 banner.commissionpartner.com
 0.0.0.0 banner.congstar.de
+0.0.0.0 banner.consultant.ru
 0.0.0.0 banner.coral.co.uk
 0.0.0.0 banner.cotedazurpalace.com
 0.0.0.0 banner.coza.com
@@ -36972,6 +36975,7 @@
 0.0.0.0 consensad.com
 0.0.0.0 consensu.org
 0.0.0.0 consent-st.truste.com
+0.0.0.0 consent.prismamedia.com
 0.0.0.0 consent.truste.com
 0.0.0.0 consent.webmasterplan.com
 0.0.0.0 console.brightcove.com
@@ -50287,6 +50291,7 @@
 0.0.0.0 ilinks.industrybrains.com
 0.0.0.0 illfatedsnail.com
 0.0.0.0 illicitlyyyzmvq.download
+0.0.0.0 illicium.wmtransfer.com
 0.0.0.0 illustriousoatmeal.com
 0.0.0.0 iloopmobile.com
 0.0.0.0 ilovecheating.com
@@ -51156,6 +51161,7 @@
 0.0.0.0 informacja-dnia.com
 0.0.0.0 informacjeszok24.blogspot.com
 0.0.0.0 information.com
+0.0.0.0 informer.minfin.com.ua
 0.0.0.0 informer.yandex.ru
 0.0.0.0 informereng.com
 0.0.0.0 informers.sinoptik.ua
@@ -66994,6 +67000,7 @@
 0.0.0.0 rockyou.go2cloud.org
 0.0.0.0 rodale.d1.sc.omtrdc.net
 0.0.0.0 rodirola.com
+0.0.0.0 rodo.agora.pl
 0.0.0.0 rodrigoeberienos.com
 0.0.0.0 rogde.adocean.pl
 0.0.0.0 rogers.demdex.net
@@ -69540,6 +69547,7 @@
 0.0.0.0 sg.yimg.com
 0.0.0.0 sg12.zopim.comssl.gstatic.comstatic.getclicky.com
 0.0.0.0 sgcdn.duplomediaas.netdna-cdn.com
+0.0.0.0 sge-chat.skorpik.ru
 0.0.0.0 sgiegeexposture.review
 0.0.0.0 sgiz.mobi
 0.0.0.0 sgmedia.adspirit.net
@@ -69688,6 +69696,7 @@
 0.0.0.0 shop.hotluska.com
 0.0.0.0 shop.justguam.com
 0.0.0.0 shop.kauffes.de
+0.0.0.0 shop.kicker.de
 0.0.0.0 shop.skin-safety.com
 0.0.0.0 shop.zedo.com
 0.0.0.0 shopalliedpools.com
@@ -76158,6 +76167,7 @@
 0.0.0.0 tracker.vinsight.de
 0.0.0.0 tracker.vreveal.com
 0.0.0.0 tracker.washtimes.com
+0.0.0.0 tracker.wigzopush.com
 0.0.0.0 tracker.winload.de
 0.0.0.0 tracker.wordstream.com
 0.0.0.0 tracker.www.junbi-tracker.com
@@ -76238,6 +76248,7 @@
 0.0.0.0 tracking-29.sjc.liverail.com
 0.0.0.0 tracking-30.sjc.liverail.com
 0.0.0.0 tracking-51.iad.liverail.com
+0.0.0.0 tracking-consent.static.anwb.nl
 0.0.0.0 tracking-financial-review.net
 0.0.0.0 tracking-first.com
 0.0.0.0 tracking-i2.adsafety.net
@@ -83016,6 +83027,7 @@
 0.0.0.0 voss.collegehumor.com
 0.0.0.0 vosteran.com
 0.0.0.0 vosteransearch.com
+0.0.0.0 vote.sibnet.ru
 0.0.0.0 vote.sparklit.com
 0.0.0.0 votum-sa.pl
 0.0.0.0 voumxy.ru

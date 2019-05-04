@@ -11,6 +11,8 @@
 -advert.swf
 -api.adyoulike.com
 -coin-hive.js
+-cookie-law.js
+-cookie-message.js
 -doubleclick.js
 -doubleclick.min.js
 -kameleoon.js
@@ -29146,6 +29148,7 @@ banner.clubdicecasino.com
 banner.com
 banner.commissionpartner.com
 banner.congstar.de
+banner.consultant.ru
 banner.coral.co.uk
 banner.cotedazurpalace.com
 banner.coza.com
@@ -36972,6 +36975,7 @@ consciousdirt.com
 consensad.com
 consensu.org
 consent-st.truste.com
+consent.prismamedia.com
 consent.truste.com
 consent.webmasterplan.com
 console.brightcove.com
@@ -50287,6 +50291,7 @@ ilinan.xyz
 ilinks.industrybrains.com
 illfatedsnail.com
 illicitlyyyzmvq.download
+illicium.wmtransfer.com
 illustriousoatmeal.com
 iloopmobile.com
 ilovecheating.com
@@ -51156,6 +51161,7 @@ inforkg.jp
 informacja-dnia.com
 informacjeszok24.blogspot.com
 information.com
+informer.minfin.com.ua
 informer.yandex.ru
 informereng.com
 informers.sinoptik.ua
@@ -66994,6 +67000,7 @@ rockwall.investments
 rockyou.go2cloud.org
 rodale.d1.sc.omtrdc.net
 rodirola.com
+rodo.agora.pl
 rodrigoeberienos.com
 rogde.adocean.pl
 rogers.demdex.net
@@ -69540,6 +69547,7 @@ sg.winmobi.me
 sg.yimg.com
 sg12.zopim.comssl.gstatic.comstatic.getclicky.com
 sgcdn.duplomediaas.netdna-cdn.com
+sge-chat.skorpik.ru
 sgiegeexposture.review
 sgiz.mobi
 sgmedia.adspirit.net
@@ -69688,6 +69696,7 @@ shop.gnezdo.ru
 shop.hotluska.com
 shop.justguam.com
 shop.kauffes.de
+shop.kicker.de
 shop.skin-safety.com
 shop.zedo.com
 shopalliedpools.com
@@ -76158,6 +76167,7 @@ tracker.videoeva.com
 tracker.vinsight.de
 tracker.vreveal.com
 tracker.washtimes.com
+tracker.wigzopush.com
 tracker.winload.de
 tracker.wordstream.com
 tracker.www.junbi-tracker.com
@@ -76238,6 +76248,7 @@ tracking-29.iad.liverail.com
 tracking-29.sjc.liverail.com
 tracking-30.sjc.liverail.com
 tracking-51.iad.liverail.com
+tracking-consent.static.anwb.nl
 tracking-financial-review.net
 tracking-first.com
 tracking-i2.adsafety.net
@@ -83016,6 +83027,7 @@ vortextraffic.com
 voss.collegehumor.com
 vosteran.com
 vosteransearch.com
+vote.sibnet.ru
 vote.sparklit.com
 votum-sa.pl
 voumxy.ru
