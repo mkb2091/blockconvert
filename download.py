@@ -19,6 +19,7 @@ urls = [
 	'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',
 	'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
 	'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt',
+        'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',
 	'https://someonewhocares.org/hosts/hosts',
 	'https://www.malwaredomainlist.com/hostslist/hosts.txt'
     ]
