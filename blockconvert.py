@@ -3,7 +3,7 @@ import os
 import re
 
 class BlockList():
-    ADBLOCK_REGEX = re.compile(r'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?([a-z0-9-]+(?:[.][a-z0-9-]+)+)(?:\^)?')
+    ADBLOCK_REGEX = re.compile(r'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?([a-z0-9-]+(?:[.][a-z0-9-]+)+)(?:\^)?(?:\$popup)?')
     def __init__(self):
         self.blocked_hosts = set()
     def add_file(self, path):
