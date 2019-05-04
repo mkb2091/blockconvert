@@ -27343,6 +27343,7 @@
 ||adyoulike.com^
 ||adyoulike.omnitagjs.com^
 ||adyoz.com^
+||adywind.com^
 ||adyz.net^
 ||adz.afterdawn.net^
 ||adz.co.zw^
@@ -27928,6 +27929,7 @@
 ||afqwfxkjmgwv.com^
 ||afraidlanguage.com^
 ||afraidtoask.us.intellitxt.com^
+||afreeca-tag.ad-mapps.com^
 ||afreehome.com^
 ||afreenetflixaccount.com^
 ||africa360.com^
@@ -73599,6 +73601,7 @@
 ||imarker.com^
 ||imarker.ru^
 ||imarketservices.com^
+||imasdk.googleapis.com^
 ||imatmobile.com^
 ||imauli.cf^
 ||imax3d.info^
@@ -87938,6 +87941,7 @@
 ||mobilsube-islemlerim.com^
 ||mobilup.com^
 ||mobilure.com^
+||mobimagic.com^
 ||mobioffers.ru^
 ||mobioffertrck.com^
 ||mobipapcomercio.vl5.net2.com.br^
