@@ -15,6 +15,7 @@ urls = [
 	'https://hosts-file.net/ad_servers.txt',
 	'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext',
 	'https://raw.githubusercontent.com/AdroitAdorKhan/EnergizedProtection/master/core/hosts',
+        'https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts',
 	'https://raw.githubusercontent.com/EFForg/badger-sett/master/results.json',
 	'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',
 	'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
