@@ -3,7 +3,7 @@ import os
 import re
 
 class BlockList():
-    ADBLOCK_STRING = r'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?([a-z0-9-]+(?:[.][a-z0-9-]+)+)(?:\^)?(?:\$popup)?'
+    ADBLOCK_STRING = r'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?([a-z0-9-]+(?:[.][a-z0-9-]+)+)(?:\^)?(?:\$(?:[,]?(?:(?:popup)|(?:first\-party))))?'
     WHITELIST_STRING = '@@' + ADBLOCK_STRING
     ADBLOCK_REGEX = re.compile(ADBLOCK_STRING)
     WHITELIST_REGEX = re.compile(WHITELIST_STRING)

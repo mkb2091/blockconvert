@@ -29898,7 +29898,6 @@
 ||analytics.global-websystem.net^
 ||analytics.global.sky.com^
 ||analytics.go.com^
-||analytics.google.com^
 ||analytics.gorillanation.com^
 ||analytics.greensender.pl^
 ||analytics.groupe-seb.com^
@@ -45071,7 +45070,6 @@
 ||cixjmaxkemzknxxuyvkbzlhvvgeqmzgopppvefpfkqdraonoez.com^
 ||cixvlpbnceh.com^
 ||cizemeshbbc.com^
-||cj.com^
 ||cj.dotomi.com^
 ||cj.madeleine.de^
 ||cj.net^
@@ -45558,7 +45556,6 @@
 ||click.uamtrk.com^
 ||click.udimg.com^
 ||click.union.ucweb.com^
-||click.uol.com.br^
 ||click.vgnett.no^
 ||click.vip.dfw1.gowadogo.com^
 ||click.virt.exacttarget.com^
@@ -58595,7 +58592,6 @@
 ||esea-lounge.com^
 ||esearchvision.com^
 ||eseecmoa.com^
-||esellerate.net^
 ||esemeso.pl^
 ||esepc.com^
 ||eservicesanalytics.com.au^
@@ -81770,7 +81766,6 @@
 ||livenewsfree.com^
 ||liventernet.ml^
 ||livepass.conviva.com^
-||liveperson.net^
 ||livepoints4free.com^
 ||livepreview.adform.com^
 ||liveprivates.com^
@@ -82125,7 +82120,6 @@
 ||localmeets.club^
 ||localsearch24.co.uk^
 ||localupline.fr^
-||localytics.com^
 ||locatelli.us^
 ||locateyouricloud.com^
 ||location.fashionises.com^
