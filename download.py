@@ -10,13 +10,13 @@ urls = [
 	'https://filters.adtidy.org/extension/chromium/filters/15.txt',
 	'https://filters.adtidy.org/extension/chromium/filters/2.txt',
 	'https://filters.adtidy.org/extension/chromium/filters/3.txt',
-	'https://github.com/EFForg/badger-sett/blob/master/results.json',
-	'https://github.com/uBlockOrigin/uAssets/blob/master/filters/filters.txt',
 	'https://hosts-file.net/ad_servers.txt',
 	'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext',
 	'https://raw.githubusercontent.com/AdroitAdorKhan/EnergizedProtection/master/core/hosts',
+	'https://raw.githubusercontent.com/EFForg/badger-sett/master/results.json',
 	'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',
 	'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
+	'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt',
 	'https://someonewhocares.org/hosts/hosts',
 	'https://www.malwaredomainlist.com/hostslist/hosts.txt'
     ]
