@@ -2,8 +2,9 @@ import json
 import os
 import re
 
-with open('tld_list.txt') as file:
-    tlds = [tld for tld in file.read().lower().splitlines() if '#' not in tld]
+def generate_tld_regex():
+    with open('tld_list.txt') as file:
+        tlds = [tld for tld in file.read().lower().splitlines() if '#' not in tld]
     tld_dict = dict()
     for tld in tlds:
         try:
@@ -15,9 +16,10 @@ with open('tld_list.txt') as file:
         now = '|'.join(['(?:%s)' % i for i in tld_dict[first_letter]])
         TLD_REGEX.append('(?:%s(?:%s))' % (first_letter, now))
     TLD_REGEX = '(?:%s)' % '|'.join(TLD_REGEX)
+    return TLD_REGEX
 
 class BlockList():
-    DOMAIN_STRING = '(?:\*[.])?([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % TLD_REGEX
+    DOMAIN_STRING = '(?:\*[.])?([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % generate_tld_regex()
     ADBLOCK_STRING = rf'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?{DOMAIN_STRING}(?:\^)?(?:\$(?:[,]?(?:(?:popup)|(?:first\-party)|(?:third\-party))))?'
     HOSTS_STRING = rf'(?:(?:0\.0\.0\.0)|(?:127\.0\.0\.1)|(?:\:\:1))\s+{DOMAIN_STRING}\s*(?:\#.*)?'
     DOMAIN_REGEX = re.compile(DOMAIN_STRING)
