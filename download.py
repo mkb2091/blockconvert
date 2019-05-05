@@ -33,6 +33,14 @@ urls = [
 	'https://www.malwaredomainlist.com/hostslist/hosts.txt'
     ]
 
+hashes = [hashlib.sha256(url.encode()).hexdigest() for url in urls]
+for path in os.listdir('target'):
+    if path not in hashes:
+        os.remove(os.path.join('target', path))
+with open('whitelist.txt') as file:
+    with open('target/whitelist.txt', 'w') as outfile:
+        outfile.write(file.read())
+
 req = urllib.request.Request('https://data.iana.org/TLD/tlds-alpha-by-domain.txt',
                              data=None,
                              headers={'User-Agent':'BlockListConvert' + str(id(urls))})
