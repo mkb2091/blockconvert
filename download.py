@@ -1,4 +1,7 @@
 import urllib.request
+import hashlib
+import time
+import os
 
 urls = [
         'http://winhelp2002.mvps.org/hosts.txt',
@@ -39,9 +42,19 @@ with urllib.request.urlopen(req) as response:
 
 
 for (i, url) in enumerate(urls):
+    path = os.path.join('target', hashlib.sha256(url.encode()).hexdigest())
     print('Starting %s, url: %s' % (i, url))
     req = urllib.request.Request(url, data=None,
                                  headers={'User-Agent':'BlockListConvert' + str(id(urls))})
     with urllib.request.urlopen(req) as response:
-        with open('target/%s' % i, 'wb') as file:
+        if os.path.exists(path):
+            last_modified = response.headers['Last-Modified']
+            if last_modified is not None:
+                lm_time = time.strptime(last_modified, '%a, %d %b %Y %H:%M:%S GMT')
+                if lm_time < os.stat(path):
+                    response.close()
+                    print('Unchanged')
+                    continue
+        print('Fetching new')
+        with open(path, 'wb') as file:
             file.write(response.read())
