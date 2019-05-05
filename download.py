@@ -36,23 +36,33 @@ urls = [
         'https://someonewhocares.org/hosts/hosts',
 	'https://www.malwaredomainlist.com/hostslist/hosts.txt'
     ]
+def copy_whitelist_and_clean():
+    hashes = [hashlib.sha256(url.encode()).hexdigest() for url in urls]
+    for path in os.listdir('target'):
+        if path not in hashes:
+            os.remove(os.path.join('target', path))
+    with open('whitelist.txt') as file:
+        with open('target/whitelist.txt', 'w') as outfile:
+            outfile.write(file.read())
 
-hashes = [hashlib.sha256(url.encode()).hexdigest() for url in urls]
 for path in os.listdir('target'):
-    if path not in hashes:
-        os.remove(os.path.join('target', path))
-with open('whitelist.txt') as file:
-    with open('target/whitelist.txt', 'w') as outfile:
-        outfile.write(file.read())
 
-req = urllib.request.Request('https://data.iana.org/TLD/tlds-alpha-by-domain.txt',
-                             data=None,
-                             headers={'User-Agent':'BlockListConvert' + str(id(urls))})
-print('Downloading tld list')
-with urllib.request.urlopen(req) as response:
-    with open('tld_list.txt', 'wb') as file:
-        file.write(response.read())
+def fetch_new_tld():
+    req = urllib.request.Request('https://data.iana.org/TLD/tlds-alpha-by-domain.txt',
+                                 data=None,
+                                 headers={'User-Agent':'BlockListConvert' + str(id(urls))})
+    if os.path.exists('tld_list.txt'):
+        if (time.time() - os.stat(path).st_mtime) / (60 * 60 * 12) > 1:
+            with urllib.request.urlopen(req) as response:
+                with open('tld_list.txt', 'wb') as file:
+                    file.write(response.read())
+    else:
+        with urllib.request.urlopen(req) as response:
+                with open('tld_list.txt', 'wb') as file:
+                    file.write(response.read())
 
+copy_whitelist_and_clean()
+fetch_new_tld()
 
 for (i, url) in enumerate(urls):
     path = os.path.join('target', hashlib.sha256(url.encode()).hexdigest())
