@@ -53,13 +53,13 @@ with urllib.request.urlopen(req) as response:
 
 for (i, url) in enumerate(urls):
     path = os.path.join('target', hashlib.sha256(url.encode()).hexdigest())
-    print('Starting %s, url: %s' % (i, url))
     req = urllib.request.Request(url, data=None,
                                  headers={'User-Agent':'BlockListConvert' + str(id(urls))})
     if os.path.exists(path):
         if (time.time() - os.stat(path).st_mtime) / (60 * 60 * 12) < 1:
-            print('Hasn\'t expired')
+            print('Hasn\'t expired:', i)
             continue
+    print('Starting %s, url: %s' % (i, url))
     with urllib.request.urlopen(req) as response:
         if os.path.exists(path):
             last_modified = response.headers['Last-Modified']
