@@ -51,7 +51,7 @@ def fetch_new_tld():
                                  data=None,
                                  headers={'User-Agent':'BlockListConvert' + str(id(urls))})
     if os.path.exists('tld_list.txt'):
-        if (time.time() - os.stat(path).st_mtime) / (60 * 60 * 12) > 1:
+        if (time.time() - os.stat('tld_list.txt').st_mtime) / (60 * 60 * 12) > 1:
             with urllib.request.urlopen(req) as response:
                 with open('tld_list.txt', 'wb') as file:
                     file.write(response.read())
