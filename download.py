@@ -45,7 +45,6 @@ def copy_whitelist_and_clean():
         with open('target/whitelist.txt', 'w') as outfile:
             outfile.write(file.read())
 
-for path in os.listdir('target'):
 
 def fetch_new_tld():
     req = urllib.request.Request('https://data.iana.org/TLD/tlds-alpha-by-domain.txt',
