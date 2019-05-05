@@ -26,6 +26,7 @@ urls = [
 	'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
         'https://raw.githubusercontent.com/austinheap/sophos-xg-block-lists/master/coinblocker.txt',
         'https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt',
+        'https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt',
         'https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/ParsedBlacklists/Notracking-hostnames.txt',
         'https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt',
 	'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',
