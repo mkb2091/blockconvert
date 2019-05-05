@@ -5,6 +5,7 @@ import os
 
 urls = [
         'http://winhelp2002.mvps.org/hosts.txt',
+        'https://1hos.cf/',
 	'https://adaway.org/hosts.txt',
 	'https://easylist-downloads.adblockplus.org/adwarefilters.txt',
 	'https://easylist-downloads.adblockplus.org/malwaredomains_full.txt',
