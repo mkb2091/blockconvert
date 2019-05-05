@@ -17,7 +17,7 @@ with open('tld_list.txt') as file:
     TLD_REGEX = '(?:%s)' % '|'.join(TLD_REGEX)
 
 class BlockList():
-    DOMAIN_STRING = '([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % TLD_REGEX
+    DOMAIN_STRING = '(?:\*[.])?([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % TLD_REGEX
     ADBLOCK_STRING = rf'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?{DOMAIN_STRING}(?:\^)?(?:\$(?:[,]?(?:(?:popup)|(?:first\-party)|(?:third\-party))))?'
     HOSTS_STRING = rf'(?:(?:0\.0\.0\.0)|(?:127\.0\.0\.1)|(?:\:\:1))\s+{DOMAIN_STRING}\s*(?:\#.*)?'
     DOMAIN_REGEX = re.compile(DOMAIN_STRING)
