@@ -2,32 +2,49 @@ import json
 import os
 import re
 
-def generate_tld_regex():
-    with open('tld_list.txt') as file:
-        tlds = [tld for tld in file.read().lower().splitlines() if '#' not in tld]
-    tld_dict = dict()
-    for tld in tlds:
-        try:
-            tld_dict[tld[0]].append(tld[1:])
-        except KeyError:
-            tld_dict[tld[0]] = [tld[1:]]
-    TLD_REGEX = []
-    for first_letter in sorted(tld_dict, key=lambda x:len(tld_dict[x]), reverse=True):
-        now = '|'.join(['(?:%s)' % i for i in tld_dict[first_letter]])
-        TLD_REGEX.append('(?:%s(?:%s))' % (first_letter, now))
-    TLD_REGEX = '(?:%s)' % '|'.join(TLD_REGEX)
-    return TLD_REGEX
 
 class BlockList():
-    DOMAIN_STRING = '(?:\*[.])?([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % generate_tld_regex()
-    ADBLOCK_STRING = rf'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?{DOMAIN_STRING}/?\|?(?:\^)?(?:\$(?:[,]?(?:(?:popup)|(?:first\-party)|(?:third\-party))))?'
-    HOSTS_STRING = rf'(?:(?:0\.0\.0\.0)|(?:127\.0\.0\.1)|(?:\:\:1))\s+{DOMAIN_STRING}\s*(?:\#.*)?'
-    DOMAIN_REGEX = re.compile(DOMAIN_STRING)
-    ADBLOCK_REGEX = re.compile(ADBLOCK_STRING)
-    HOSTS_REGEX = re.compile(HOSTS_STRING)
     def __init__(self):
         self.blocked_hosts = set()
         self.whitelist = set()
+        self.generate_domain_regex()
+        self.generate_host_regex()
+        self.generate_adblock_regex()
+        self.generate_master_regex()
+
+    def generate_domain_regex(self):
+        with open('tld_list.txt') as file:
+            tlds = [tld for tld in file.read().lower().splitlines() if '#' not in tld]
+        tld_dict = dict()
+        for tld in tlds:
+            try:
+                tld_dict[tld[0]].append(tld[1:])
+            except KeyError:
+                tld_dict[tld[0]] = [tld[1:]]
+        tld_regex = []
+        for first_letter in sorted(tld_dict, key=lambda x:len(tld_dict[x]), reverse=True):
+            now = '|'.join(['(?:%s)' % i for i in tld_dict[first_letter]])
+            tld_regex.append('(?:%s(?:%s))' % (first_letter, now))
+        tld_regex = '(?:%s)' % '|'.join(tld_regex)
+        self.DOMAIN_STRING =  '(?:\*?[.])?([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % tld_regex
+        self.DOMAIN_REGEX = re.compile(self.DOMAIN_STRING)
+    def generate_host_regex(self):
+        ips = ['0.0.0.0', '127.0.0.1', '::1']
+        ip_string = '(?:%s)' % '|'.join('(?:%s)' % re.escape(ip) for ip in ips)
+        domain_string = self.DOMAIN_STRING
+        self.HOSTS_STRING = rf'{ip_string}\s+{domain_string}\s*(?:\#.*)?'
+    def generate_adblock_regex(self):
+        start = f'(?:\|\|)?(?:(?:(?:https?)?\:)?\/\/)?'
+        options = ['popup', 'first-party', 'third-party']
+        options_string = '(?:%s)' % '|'.join('(?:%s)' % re.escape(i) for i in options)
+        options_full = rf'\${options_string}(?:[,]{options_string}){{,2}}'
+        ending = rf'/?\^?(?:{options_full})?\s*(?:\!.*)?'
+        domain_string = self.DOMAIN_STRING
+        self.ADBLOCK_STRING = rf'{start}{domain_string}{ending}'
+    def generate_master_regex(self):
+        self.REGEX_STRING = '(?:%s)|(?:%s)' % (self.HOSTS_STRING, self.ADBLOCK_STRING)
+        self.REGEX = re.compile(self.REGEX_STRING)
+
     def add_file(self, path):
         with open(path) as file:
             data = file.read().lower()
@@ -38,8 +55,14 @@ class BlockList():
                 self.parse_privacy_badger(data)
         except json.JSONDecodeError:
             for line in data.splitlines():
-                if not self.parse_hosts(line):
-                    self.parse_adblock(line)
+                if line.startswith('@@'):
+                    match = self.REGEX.fullmatch(line[2:])
+                    if match:
+                        self.whitelist.add(match.group(1) if match.group(1) is not None else match.group(2))
+                else:
+                    match = self.REGEX.fullmatch(line)
+                    if match:
+                        self.blocked_hosts.add(match.group(1) if match.group(1) is not None else match.group(2))
     def parse_privacy_badger(self, data):
         temp_whitelist = set()
         for x in data['snitch_map']:
@@ -52,21 +75,6 @@ class BlockList():
                             self.blocked_hosts.add(i)
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
-    def parse_hosts(self, line):
-        match = self.HOSTS_REGEX.fullmatch(line)
-        if match:
-            self.blocked_hosts.add(match.group(1))
-            return True
-    def parse_adblock(self, line):
-        if '!' not in line:
-            if line.startswith('@@'):
-                match = self.ADBLOCK_REGEX.fullmatch(line[2:])
-                if match:
-                    self.whitelist.add(match.group(1))
-            else:
-                match = self.ADBLOCK_REGEX.fullmatch(line)
-                if match:
-                    self.blocked_hosts.add(match.group(1))
     def clean(self):
         for i in self.whitelist:
             try:
