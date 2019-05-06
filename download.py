@@ -10,19 +10,20 @@ urls = [
     'https://easylist.to/easylist/easylist.txt',#GPLv3
     'https://easylist.to/easylist/easyprivacy.txt', #GPLv3
     'https://easylist.to/easylist/fanboy-annoyance.txt',#GPLv3
+    'https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt',#GPLv3
     'https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt',#GPLv3
     'https://hostsfile.mine.nu/hosts0.txt',#GPLv3
     'https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts',#GPLv3
     'https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List',#GPLv3
     'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',#MIT
-    'https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt',#GPLv3
-    'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',#MIT
+    'https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt',#GPLv3
     'https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt',#The unlicense
-    'https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt',#Public Domain
-    'https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt',#The Unlicense
+    'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',#MIT
     'https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt',#Apache2
     'https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking.txt',#Apache2
     'https://raw.githubusercontent.com/lightswitch05/hosts/master/tracking-aggressive-extended.txt',#Apache2
+    'https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt',#Public Domain
+    'https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt',#The Unlicense
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt',#GPLv3
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt',#GPLv3
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt',#GPLv3
