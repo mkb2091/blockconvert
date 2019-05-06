@@ -30,6 +30,7 @@ urls = [
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt',#GPLv3
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt',#GPLv3
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt',#GPLv3
+    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',#GPLv3
     'https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt',#The Unlicense
     'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt',#GPLv3
     'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',#GPLv3    
