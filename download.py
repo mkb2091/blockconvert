@@ -69,7 +69,7 @@ for (i, url) in enumerate(urls):
                                  headers={'User-Agent':'BlockListConvert' + str(id(urls))})
     if os.path.exists(path):
         if (time.time() - os.stat(path).st_mtime) / (60 * 60 * 12) < 1:
-            print('Hasn\'t expired:', i)
+            print('Hasn\'t expired:%s' % i)
             continue
     print('Starting %s, url: %s' % (i, url))
     with urllib.request.urlopen(req) as response:
