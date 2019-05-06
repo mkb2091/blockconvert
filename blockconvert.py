@@ -20,7 +20,7 @@ def generate_tld_regex():
 
 class BlockList():
     DOMAIN_STRING = '(?:\*[.])?([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % generate_tld_regex()
-    ADBLOCK_STRING = rf'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?{DOMAIN_STRING}(?:\^)?(?:\$(?:[,]?(?:(?:popup)|(?:first\-party)|(?:third\-party))))?'
+    ADBLOCK_STRING = rf'(?:(?:(?:\|\|)?[.]?)|(?:(?:(?:https?)?[:])?//)?)?{DOMAIN_STRING}/?\|?(?:\^)?(?:\$(?:[,]?(?:(?:popup)|(?:first\-party)|(?:third\-party))))?'
     HOSTS_STRING = rf'(?:(?:0\.0\.0\.0)|(?:127\.0\.0\.1)|(?:\:\:1))\s+{DOMAIN_STRING}\s*(?:\#.*)?'
     DOMAIN_REGEX = re.compile(DOMAIN_STRING)
     ADBLOCK_REGEX = re.compile(ADBLOCK_STRING)
