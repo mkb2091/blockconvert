@@ -100,12 +100,11 @@ def main():
         os.makedirs('output')
     except FileExistsError:
         pass
-    with open('output/PrivacyBadger.json', 'w') as file:
-        file.write(blocklist.to_privacy_badger())
-    with open('output/adblock.txt', 'w') as file:
-        file.write(blocklist.to_adblock())
-    with open('output/hosts.txt', 'w') as file:
-        file.write(blocklist.to_hosts())
+    for (path, func) in [('adblock.txt', blocklist.to_adblock),
+                         ('hosts.txt', blocklist.to_hosts),
+                         ('PrivacyBadger.json', blocklist.to_privacy_badger)]:
+        with open(os.path.join('output', path), 'w') as file:
+            file.write(func())
 
 if __name__ == '__main__':
     main()
