@@ -81,6 +81,10 @@ for (i, url) in enumerate(urls):
                 if lm_time < os.stat(path):
                     response.close()
                     print('Unchanged')
+                    with open(path) as file:
+                        data = file.read()
+                    with open(path, 'w') as file:
+                        file.write(data)
                     continue
         print('Fetching new')
         with open(path, 'w') as file:
