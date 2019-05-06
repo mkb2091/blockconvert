@@ -37,6 +37,7 @@ urls = [
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',
     'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',
     'https://someonewhocares.org/hosts/hosts',
+    'https://www.fanboy.co.nz/enhancedstats.txt',
     'https://www.malwaredomainlist.com/hostslist/hosts.txt',
     ]
 def copy_whitelist_and_clean():
