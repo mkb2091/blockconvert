@@ -4,42 +4,35 @@ import time
 import os
 
 urls = [
-    'http://winhelp2002.mvps.org/hosts.txt',
-    'https://1hos.cf/',
-    'https://adaway.org/hosts.txt',
-    'https://easylist-downloads.adblockplus.org/adwarefilters.txt',
-    'https://easylist-downloads.adblockplus.org/malwaredomains_full.txt',
-    'https://easylist.to/easylist/easylist.txt',
-    'https://easylist.to/easylist/easyprivacy.txt',
-    'https://easylist.to/easylist/fanboy-annoyance.txt',
-    'https://filters.adtidy.org/extension/chromium/filters/11.txt',
-    'https://filters.adtidy.org/extension/chromium/filters/14.txt',
-    'https://filters.adtidy.org/extension/chromium/filters/15.txt',
-    'https://filters.adtidy.org/extension/chromium/filters/2.txt',
-    'https://filters.adtidy.org/extension/chromium/filters/3.txt',
-    'https://hosts-file.net/ad_servers.txt',
-    'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext',
-    'https://raw.githubusercontent.com/AdroitAdorKhan/EnergizedProtection/master/core/hosts',
-    'https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts',
-    'https://raw.githubusercontent.com/EFForg/badger-sett/master/results.json',
-    'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',
-    'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
-    'https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt',
-    'https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt',
-    'https://raw.githubusercontent.com/austinheap/sophos-xg-block-lists/master/coinblocker.txt',
-    'https://raw.githubusercontent.com/bjornstar/hosts/master/hosts',
-    'https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/ParsedBlacklists/Notracking-hostnames.txt',
-    'https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt',
-    'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',
-    'https://raw.githubusercontent.com/kano1/I/master/adware.txt',
-    'https://raw.githubusercontent.com/kano1/Kano/master/Spyware.txt',
-    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt',
-    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',
-    'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',
-    'https://someonewhocares.org/hosts/hosts',
-    'https://www.fanboy.co.nz/enhancedstats.txt',
-    'https://www.malwaredomainlist.com/hostslist/hosts.txt',
+    'https://blocklist.kowabit.de/fritzboxliste.txt',#Public Domain
+    'https://blocklist.kowabit.de/list.txt',#Public Domain
+    'https://easylist-downloads.adblockplus.org/adwarefilters.txt',#GPLv3
+    'https://easylist.to/easylist/easylist.txt',#GPLv3
+    'https://easylist.to/easylist/easyprivacy.txt', #GPLv3
+    'https://easylist.to/easylist/fanboy-annoyance.txt',#GPLv3
+    'https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt',#GPLv3
+    'https://hostsfile.mine.nu/hosts0.txt',#GPLv3
+    'https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts',#GPLv3
+    'https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List',#GPLv3
+    'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',#MIT
+    'https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt',#The unlicense
+    'https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt',#Public Domain
+    'https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt',#The Unlicense
+    'https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt',#Apache2
+    'https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking.txt',#Apache2
+    'https://raw.githubusercontent.com/lightswitch05/hosts/master/tracking-aggressive-extended.txt',#Apache2
+    'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt',#GPLv3
+    'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt',#GPLv3
+    'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt',#GPLv3
+    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt',#GPLv3
+    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt',#GPLv3
+    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt',#GPLv3
+    'https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt',#The Unlicense
+    'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt',#GPLv3
+    'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',#GPLv3    
+    'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt',#GPLv3
     ]
+
 def copy_whitelist_and_clean():
     hashes = [hashlib.sha256(url.encode()).hexdigest() for url in urls]
     for path in os.listdir('target'):
@@ -86,5 +79,6 @@ for (i, url) in enumerate(urls):
                     print('Unchanged')
                     continue
         print('Fetching new')
-        with open(path, 'wb') as file:
-            file.write(response.read())
+        with open(path, 'w') as file:
+            data = response.read().decode('ascii', 'ignore')
+            file.write(data)
