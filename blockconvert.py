@@ -34,11 +34,11 @@ class BlockList():
         domain_string = self.DOMAIN_STRING
         self.HOSTS_STRING = rf'{ip_string}\s+{domain_string}\s*(?:\#.*)?'
     def generate_adblock_regex(self):
-        start = f'(?:\|\|)?(?:(?:(?:https?)?\:)?\/\/)?'
+        start = f'(?:\|?\|)?(?:(?:(?:https?)?\:)?\/\/)?'
         options = ['popup', 'first-party', 'third-party']
         options_string = '(?:%s)' % '|'.join('(?:%s)' % re.escape(i) for i in options)
         options_full = rf'\${options_string}(?:[,]{options_string}){{,2}}'
-        ending = rf'/?\^?(?:{options_full})?\s*(?:\!.*)?'
+        ending = rf'/?\|?\^?(?:{options_full})?\s*(?:\!.*)?'
         domain_string = self.DOMAIN_STRING
         self.ADBLOCK_STRING = rf'{start}{domain_string}{ending}'
     def generate_master_regex(self):
