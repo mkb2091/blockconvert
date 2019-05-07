@@ -13,6 +13,7 @@ urls = [
     'https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt',#GPLv3
     'https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt',#GPLv3
     'https://hostsfile.mine.nu/hosts0.txt',#GPLv3
+    'https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt',#GPL3
     'https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts',#GPLv3
     'https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List',#GPLv3
     'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',#MIT
