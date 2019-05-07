@@ -16,7 +16,8 @@ urls = [
     'https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts',#GPLv3
     'https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List',#GPLv3
     'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',#MIT
-    'https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt',#GPLv3
+    'https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt',#MIT
+    'https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt',#MIT
     'https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt',#The unlicense
     'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',#MIT
     'https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt',#Apache2
@@ -35,7 +36,7 @@ urls = [
     'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt',#GPLv3
     'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',#GPLv3    
     'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt',#GPLv3
-    ' https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',#Permission to modify,copy and distribute 
+    'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',#Permission to modify,copy and distribute 
     ]
 
 def copy_whitelist_and_clean():
