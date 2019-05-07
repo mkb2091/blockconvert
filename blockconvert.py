@@ -91,6 +91,8 @@ class BlockList():
                 self.blocked_hosts.remove(i)
             except KeyError:
                 pass
+    def to_domain_list(self):
+        return '\n'.join(sorted(self.blocked_hosts))
     def to_adblock(self):
         return '\n'.join(['||%s^' % i for i in sorted(self.blocked_hosts)])
     def to_hosts(self):
@@ -118,7 +120,8 @@ def main():
         os.makedirs('output')
     except FileExistsError:
         pass
-    for (path, func) in [('adblock.txt', blocklist.to_adblock),
+    for (path, func) in [('domains.txt', blocklist.to_domain_list),
+                         ('adblock.txt', blocklist.to_adblock),
                          ('hosts.txt', blocklist.to_hosts),
                          ('PrivacyBadger.json', blocklist.to_privacy_badger)]:
         with open(os.path.join('output', path), 'w') as file:
