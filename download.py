@@ -19,7 +19,7 @@ urls = [
     'https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt',#MIT
     'https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt',#MIT
     'https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt',#The unlicense
-    'https://raw.githubusercontent.com/bjornstar/hosts/master/hosts',#Public Domain
+    'https://raw.githubusercontent.com/bjornstar/hosts/master/hosts',#The Unlicense
     'https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt',#MIT
     'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',#MIT
     'https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt',#Apache2
