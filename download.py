@@ -36,13 +36,13 @@ urls = [
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',#GPLv3
     'https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt',#The Unlicense
     'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt',#GPLv3
-    'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',#GPLv3    
+    'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',#GPLv3
     'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt',#GPLv3
-    'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',#Permission to modify,copy and distribute 
+    'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',#Permission to modify,copy and distribute
     ]
 
 def copy_whitelist_and_clean():
-    hashes = [hashlib.sha256(url.encode()).hexdigest() for url in urls]
+    hashes = [hashlib.sha256(url.encode()).hexdigest()+'.txt' for url in urls]
     for path in os.listdir('target'):
         if path not in hashes:
             os.remove(os.path.join('target', path))
@@ -69,7 +69,7 @@ copy_whitelist_and_clean()
 fetch_new_tld()
 
 for (i, url) in enumerate(urls):
-    path = os.path.join('target', hashlib.sha256(url.encode()).hexdigest())
+    path = os.path.join('target', hashlib.sha256(url.encode()).hexdigest()+'.txt')
     req = urllib.request.Request(url, data=None,
                                  headers={'User-Agent':'BlockListConvert' + str(id(urls))})
     if os.path.exists(path):
