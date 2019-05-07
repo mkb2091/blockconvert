@@ -2,3 +2,6 @@
 @@||d2gatte9o95jao.cloudfront.net^
 @@||cloudfront.net^
 @@||gateway.reddit.com^
+@@||code.jquery.com^
+@@||use.typekit.net^
+@@||cdnjs.cloudflare.com^
