@@ -14,7 +14,9 @@ class BlockList():
 
     def generate_domain_regex(self):
         with open('tld_list.txt') as file:
-            tlds = [tld for tld in file.read().lower().splitlines() if '#' not in tld]
+            self.TLDS = [tld for tld in file.read().lower().splitlines() if '#' not in tld]
+        tlds = self.TLDS
+        tlds.append(r'*')
         tld_dict = dict()
         for tld in tlds:
             try:
@@ -23,8 +25,8 @@ class BlockList():
                 tld_dict[tld[0]] = [tld[1:]]
         tld_regex = []
         for first_letter in sorted(tld_dict, key=lambda x:len(tld_dict[x]), reverse=True):
-            now = '|'.join(['(?:%s)' % i for i in tld_dict[first_letter]])
-            tld_regex.append('(?:%s(?:%s))' % (first_letter, now))
+            now = '|'.join(['(?:%s)' % re.escape(i) for i in tld_dict[first_letter]])
+            tld_regex.append('(?:%s(?:%s))' % (re.escape(first_letter), now))
         tld_regex = '(?:%s)' % '|'.join(tld_regex)
         self.DOMAIN_STRING =  '(?:\*?[.])?([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % tld_regex
         self.DOMAIN_REGEX = re.compile(self.DOMAIN_STRING)
@@ -34,13 +36,15 @@ class BlockList():
         domain_string = self.DOMAIN_STRING
         self.HOSTS_STRING = rf'{ip_string}\s+{domain_string}\s*(?:\#.*)?'
     def generate_adblock_regex(self):
-        start = f'(?:\|?\|)?(?:(?:(?:https?)?\:)?\/\/)?'
+        domain_string = self.DOMAIN_STRING
+        url_string = rf'(?:(?:(?:https?)?[:])\/\/)?{domain_string}\/?'
+        start = f'(?:\|?\|)?'
         options = ['popup', r'first\-party', r'\~third\-party', r'third\-party']
         options_string = '(?:%s)' % '|'.join('(?:%s)' % i for i in options)
         options_full = rf'\$(?:[a-z-]+[,])*{options_string}(?:[,][a-z-]+)*'
-        ending = rf'/?\|?\^?(?:{options_full})?\s*(?:\!.*)?'
-        domain_string = self.DOMAIN_STRING
-        self.ADBLOCK_STRING = rf'{start}{domain_string}{ending}'
+        ending = rf'\|?\^?(?:{options_full})?\s*(?:\!.*)?'
+        href_element_hiding = rf'\#\#\[href\^?\=\"{url_string}\"\]'
+        self.ADBLOCK_STRING = rf'(?:{start}{url_string}{ending})|(?:{href_element_hiding})'
     def generate_master_regex(self):
         self.REGEX_STRING = '(?:%s)|(?:%s)' % (self.HOSTS_STRING, self.ADBLOCK_STRING)
         self.REGEX = re.compile(self.REGEX_STRING)
@@ -58,11 +62,11 @@ class BlockList():
                 if line.startswith('@@'):
                     match = self.REGEX.fullmatch(line[2:])
                     if match:
-                        self.whitelist.add(match.group(1) if match.group(1) is not None else match.group(2))
+                        self.whitelist.add(sorted(match.groups(), key=bool, reverse=True)[0])
                 else:
                     match = self.REGEX.fullmatch(line)
                     if match:
-                        self.blocked_hosts.add(match.group(1) if match.group(1) is not None else match.group(2))
+                        self.blocked_hosts.add(sorted(match.groups(), key=bool, reverse=True)[0])
     def parse_privacy_badger(self, data):
         temp_whitelist = set()
         for x in data['snitch_map']:
@@ -76,6 +80,12 @@ class BlockList():
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
     def clean(self):
+        for filter_list in [self.blocked_hosts, self.whitelist]:
+            for url in list(filter_list):
+                if url.endswith('*'):
+                    filter_list.remove(url)
+                    for tld in self.TLDS:
+                        filter_list.add(url[:-1]+tld)
         for i in self.whitelist:
             try:
                 self.blocked_hosts.remove(i)
