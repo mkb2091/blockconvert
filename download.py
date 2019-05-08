@@ -69,7 +69,8 @@ def fetch_new_tld():
         with urllib.request.urlopen(req) as response:
                 with open('tld_list.txt', 'wb') as file:
                     file.write(response.read())
-
+if not os.path.exists('target'):
+    os.mkdir('target')
 copy_whitelist_and_clean()
 fetch_new_tld()
 

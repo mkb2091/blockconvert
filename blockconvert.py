@@ -36,20 +36,20 @@ class BlockList():
         ips = ['0.0.0.0', '127.0.0.1', '::1']
         ip_string = '(?:%s)' % '|'.join('(?:%s)' % re.escape(ip) for ip in ips)
         domain_string = self.DOMAIN_STRING
-        self.HOSTS_STRING = rf'{ip_string}\s+{domain_string}\s*(?:\#.*)?'
+        self.HOSTS_STRING = r'{ip_string}\s+{domain_string}\s*(?:\#.*)?'.format(**locals())
     def generate_adblock_regex(self):
         domain_string = self.DOMAIN_STRING
-        url_string = rf'(?:(?:(?:https?)?[:])\/\/)?{domain_string}\/?'
-        start = f'(?:\|?\|)?'
+        url_string = r'(?:(?:(?:https?)?[:])\/\/)?{domain_string}\/?'.format(**locals())
+        start = '(?:\|?\|)?'
         options = ['popup', r'first\-party', r'\~third\-party', r'third\-party']
         options_noop = ['important', r'domain\=\2']
         options_string = '(?:%s)' % '|'.join('(?:%s)' % i for i in options)
         options_other = '(?:%s)' % '|'.join('(?:%s)' % i for i in ['[a-z-]+'] + options_noop)
-        options_full = rf'\$(?:(?:(?:{options_other}[,])*{options_string}(?:[,]{options_other})*)|%s)'
+        options_full = r'\$(?:(?:(?:{options_other}[,])*{options_string}(?:[,]{options_other})*)|%s)'.format(**locals())
         options_full%= '|'.join('(?:%s)' % i for i in options_noop)
-        ending = rf'[*]?\|?\^?(?:{options_full})?\s*(?:\!.*)?'
-        href_element_hiding = rf'\#\#\[href\^?\=\"{url_string}\"\]'
-        self.ADBLOCK_STRING = rf'(?:{start}{url_string}{ending})|(?:{href_element_hiding})'
+        ending = r'[*]?\|?\^?(?:{options_full})?\s*(?:\!.*)?'.format(**locals())
+        href_element_hiding = r'\#\#\[href\^?\=\"{url_string}\"\]'.format(**locals())
+        self.ADBLOCK_STRING = r'(?:{start}{url_string}{ending})|(?:{href_element_hiding})'.format(**locals())
     def generate_master_regex(self):
         self.REGEX_STRING = '(?:%s)|(?:%s)' % (self.HOSTS_STRING, self.ADBLOCK_STRING)
         self.REGEX = re.compile(self.REGEX_STRING)
