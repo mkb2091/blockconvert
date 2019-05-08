@@ -41,7 +41,8 @@ class BlockList():
         domain_string = self.DOMAIN_STRING
         url_string = rf'(?:(?:(?:https?)?[:])\/\/)?{domain_string}\/?'
         start = f'(?:\|?\|)?'
-        options = ['popup', r'first\-party', r'\~third\-party', r'third\-party']
+        options = ['popup', r'first\-party', r'\~third\-party', r'third\-party',
+                   'important']
         options_string = '(?:%s)' % '|'.join('(?:%s)' % i for i in options)
         options_full = rf'\$(?:[a-z-]+[,])*{options_string}(?:[,][a-z-]+)*'
         ending = rf'\|?\^?(?:{options_full})?\s*(?:\!.*)?'
