@@ -48,8 +48,7 @@ class DNSChecker():
         self.session.headers['accept'] = 'application/dns-json'
         self.servers = ['https://dns.google.com/resolve?name=',
                         'https://cloudflare-dns.com/dns-query?type=1&name=',
-                        'https://doh.securedns.eu/dns-query?name=',
-                        'https://doh.dnswarden.com/uncensored?name=',]
+                        'https://doh.securedns.eu/dns-query?name=',]
         self.cache = dict()
         try:
             with open('dns_cache.txt') as file:
