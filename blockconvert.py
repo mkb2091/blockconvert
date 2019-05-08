@@ -1,7 +1,9 @@
+import argparse
 import json
 import os
 import re
 
+import dns_check
 
 class BlockList():
     def __init__(self):
@@ -104,6 +106,10 @@ class BlockList():
                        ','.join(['"%s":["1","2","3"]' % (i) for i in sorted(self.blocked_hosts)]))
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--no-dns-check', action='store_true')
+    parser.add_argument('--dns-check-threads', type=int, default=40)
+    args = parser.parse_args()
     blocklist = BlockList()
     try:
         paths = [os.path.join('target', f) for f in os.listdir('target')]
@@ -116,6 +122,13 @@ def main():
         blocklist.add_file(path)
     blocklist.clean()
     print('Generated %s rules' % len(blocklist.blocked_hosts))
+    if not args.no_dns_check:
+        dns = dns_check.DNSChecker()
+        result = dns.mass_check(blocklist.blocked_hosts, args.dns_check_threads)
+        for domain in result:
+            if not result[domain]:
+                blocklist.blocked_hosts.remove(domain)
+        print('Trimmed to %s rules' % len(blocklist.blocked_hosts))
     try:
         os.makedirs('output')
     except FileExistsError:
