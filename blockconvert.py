@@ -17,7 +17,7 @@ class BlockList():
     def generate_domain_regex(self):
         with open('tld_list.txt') as file:
             self.TLDS = [tld for tld in file.read().lower().splitlines() if '#' not in tld]
-        tlds = self.TLDS
+        tlds = self.TLDS.copy()
         tlds.append(r'*')
         tld_dict = dict()
         for tld in tlds:
