@@ -47,7 +47,7 @@ class BlockList():
         options_other = '(?:%s)' % '|'.join('(?:%s)' % i for i in ['[a-z-]+'] + options_noop)
         options_full = rf'\$(?:(?:(?:{options_other}[,])*{options_string}(?:[,]{options_other})*)|%s)'
         options_full%= '|'.join('(?:%s)' % i for i in options_noop)
-        ending = rf'\|?\^?(?:{options_full})?\s*(?:\!.*)?'
+        ending = rf'[*]?\|?\^?(?:{options_full})?\s*(?:\!.*)?'
         href_element_hiding = rf'\#\#\[href\^?\=\"{url_string}\"\]'
         self.ADBLOCK_STRING = rf'(?:{start}{url_string}{ending})|(?:{href_element_hiding})'
     def generate_master_regex(self):
