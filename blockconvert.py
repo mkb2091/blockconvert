@@ -27,7 +27,7 @@ class BlockList():
                 tld_dict[tld[0]] = [tld[1:]]
         tld_regex = []
         for first_letter in sorted(tld_dict, key=lambda x:len(tld_dict[x]), reverse=True):
-            now = '|'.join(['(?:%s)' % re.escape(i) for i in tld_dict[first_letter]])
+            now = '|'.join(['(?:%s)' % re.escape(i) for i in sorted(tld_dict[first_letter], key=len, reverse=True)])
             tld_regex.append('(?:%s(?:%s))' % (re.escape(first_letter), now))
         tld_regex = '(?:%s)' % '|'.join(tld_regex)
         self.DOMAIN_STRING =  '(?:\*?[.])?([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % tld_regex
@@ -42,8 +42,11 @@ class BlockList():
         url_string = rf'(?:(?:(?:https?)?[:])\/\/)?{domain_string}\/?'
         start = f'(?:\|?\|)?'
         options = ['popup', r'first\-party', r'\~third\-party', r'third\-party']
+        options_noop = ['important', r'domain\=\2']
         options_string = '(?:%s)' % '|'.join('(?:%s)' % i for i in options)
-        options_full = rf'\$(?:(?:(?:[a-z-]+[,])*{options_string}(?:[,][a-z-]+)*)|important)'
+        options_other = '(?:%s)' % '|'.join('(?:%s)' % i for i in ['[a-z-]+'] + options_noop)
+        options_full = rf'\$(?:(?:(?:{options_other}[,])*{options_string}(?:[,]{options_other})*)|%s)'
+        options_full%= '|'.join('(?:%s)' % i for i in options_noop)
         ending = rf'\|?\^?(?:{options_full})?\s*(?:\!.*)?'
         href_element_hiding = rf'\#\#\[href\^?\=\"{url_string}\"\]'
         self.ADBLOCK_STRING = rf'(?:{start}{url_string}{ending})|(?:{href_element_hiding})'
