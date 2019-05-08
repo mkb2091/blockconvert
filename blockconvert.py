@@ -102,8 +102,8 @@ class BlockList():
     def to_privacy_badger(self):
         base = '{"action_map":{%s},"snitch_map":{%s}, "settings_map":{}}'
         url_string = '"%s":{"userAction":"","dnt":false,"heuristicAction":"block","nextUpdateTime":0}'
-        return base % (','.join([url_string % i for i in sorted(self.blocked_hosts)]),
-                       ','.join(['"%s":["1","2","3"]' % (i) for i in sorted(self.blocked_hosts)]))
+        return base % (',\n'.join([url_string % i for i in sorted(self.blocked_hosts)]),
+                       ',\n'.join(['"%s":["1","2","3"]' % (i) for i in sorted(self.blocked_hosts)]))
 
 def main():
     parser = argparse.ArgumentParser()
