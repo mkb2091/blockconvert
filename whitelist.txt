@@ -5,3 +5,4 @@
 @@||code.jquery.com^
 @@||use.typekit.net^
 @@||cdnjs.cloudflare.com^
+@@||dns.google.com^
