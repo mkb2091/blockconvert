@@ -45,6 +45,7 @@ urls = [
     'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',#GPLv3
     'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt',#GPLv3
     'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',#Permission to modify,copy and distribute
+    'https://v.firebog.net/hosts/BillStearns.txt',#GPL
     ]
 
 def copy_whitelist_and_clean():
