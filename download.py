@@ -28,6 +28,7 @@ urls = [
     'https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt',#Apache2
     'https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking.txt',#Apache2
     'https://raw.githubusercontent.com/lightswitch05/hosts/master/tracking-aggressive-extended.txt',#Apache2
+    'https://raw.githubusercontent.com/ligyxy/Blocklist/master/BLOCKLIST',#MIT
     'https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt',#Public Domain
     'https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt',#The Unlicense
     'https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt',#MIT
