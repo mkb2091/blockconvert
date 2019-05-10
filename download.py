@@ -62,7 +62,7 @@ def fetch_new_tld():
                                  data=None,
                                  headers={'User-Agent':'BlockListConvert' + str(id(urls))})
     if os.path.exists('tld_list.txt'):
-        if (time.time() - os.stat('tld_list.txt').st_mtime) / (60 * 60 * 12) > 1:
+        if (time.time() - os.stat('tld_list.txt').st_mtime) / (60 * 60 * 11.5) > 1:
             with urllib.request.urlopen(req) as response:
                 with open('tld_list.txt', 'wb') as file:
                     file.write(response.read())
@@ -80,6 +80,7 @@ for (i, url) in enumerate(urls):
     req = urllib.request.Request(url, data=None,
                                  headers={'User-Agent':'BlockListConvert' + str(id(urls))})
     if os.path.exists(path):
+        if (time.time() - os.stat(path).st_mtime) / (60 * 60 * 11.5) < 1:
             print('Hasn\'t expired:%s' % i)
             continue
     print('Starting %s, url: %s' % (i, url))
