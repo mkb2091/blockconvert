@@ -4,6 +4,7 @@ import time
 import os
 
 urls = [
+    'https://better.fyi/blockerList.txt',#CCASA4.0
     'https://blocklist.kowabit.de/fritzboxliste.txt',#Public Domain
     'https://blocklist.kowabit.de/list.txt',#Public Domain
     'https://easylist-downloads.adblockplus.org/adwarefilters.txt',#GPLv3
