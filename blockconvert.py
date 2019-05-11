@@ -39,8 +39,8 @@ class BlockList():
         self.HOSTS_STRING = r'{ip_string}\s+{domain_string}\s*(?:\#.*)?'.format(**locals())
     def generate_adblock_regex(self):
         domain_string = self.DOMAIN_STRING
-        url_string = r'(?:(?:(?:https?)?[:])\/\/)?{domain_string}\/?'.format(**locals())
-        start = '(?:\|?\|)?'
+        url_string = r'(?:(?:(?:http(?:s|\*)?)?[:])(?:(?:\/\/)|\*))?{domain_string}\/?'.format(**locals())
+        start = r'(?:\|?\|)?\*?'
         options = ['popup', r'first\-party', r'\~third\-party', r'third\-party']
         options_noop = ['important', r'domain\=\2']
         options_string = '(?:%s)' % '|'.join('(?:%s)' % i for i in options)
@@ -49,7 +49,8 @@ class BlockList():
         options_full%= '|'.join('(?:%s)' % i for i in options_noop)
         ending = r'[*]?\|?\^?(?:{options_full})?\s*(?:\!.*)?'.format(**locals())
         href_element_hiding = r'\#\#\[href\^?\=\"{url_string}\"\]'.format(**locals())
-        self.ADBLOCK_STRING = r'(?:{start}{url_string}{ending})|(?:{href_element_hiding})'.format(**locals())
+        domain_blocking = r'{start}(?:http(?:s|\*)?\://{ending}\,domain\={domain_string}(?:\|{domain_string})+)'.format(**locals())
+        self.ADBLOCK_STRING = r'(?:{start}{url_string}{ending})|(?:{href_element_hiding})|{domain_blocking}'.format(**locals())
     def generate_master_regex(self):
         self.REGEX_STRING = '(?:%s)|(?:%s)' % (self.HOSTS_STRING, self.ADBLOCK_STRING)
         self.REGEX = re.compile(self.REGEX_STRING)
@@ -67,11 +68,11 @@ class BlockList():
                 if line.startswith('@@'):
                     match = self.REGEX.fullmatch(line[2:])
                     if match:
-                        self.whitelist.add(sorted(match.groups(), key=bool, reverse=True)[0])
+                        self.whitelist.update(filter(bool, match.groups()))
                 else:
                     match = self.REGEX.fullmatch(line)
                     if match:
-                        self.blocked_hosts.add(sorted(match.groups(), key=bool, reverse=True)[0])
+                        self.blocked_hosts.update(filter(bool, match.groups()))
     def parse_privacy_badger(self, data):
         temp_whitelist = set()
         for x in data['snitch_map']:
