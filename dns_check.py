@@ -50,14 +50,15 @@ class DNSChecker():
                         'https://cloudflare-dns.com/dns-query?type=1&name=',
                         'https://doh.securedns.eu/dns-query?name=',]
         self.cache = dict()
+        one_week_ago = (time.time() - 60*60*24*7)
         try:
             with open('dns_cache.txt') as file:
                 for line in file:
                     try:
                         domain, exists, last_modified = line.rstrip().split(',')
                         last_modified = int(last_modified)
-                        if last_modified > (time.time() - 60*60*24*7):
-                            self.cache[domain] = [bool(exists), int(last_modified)]
+                        if last_modified > one_week_ago:
+                            self.cache[domain] = (bool(exists), last_modified)
                     except (ValueError):
                         pass
         except FileNotFoundError:
@@ -68,11 +69,15 @@ class DNSChecker():
         request_queue = queue.Queue()
         response_queue = queue.Queue()
         results = dict()
-        for domain in sorted(domain_list):
+        all_from_cache = True
+        for domain in domain_list:
             try:
                 results[domain] = cache[domain][0]
             except KeyError:
                 request_queue.put(domain)
+                all_from_cache = False
+        if all_from_cache:
+            return results
         del domain_list
         threads = []
         for i in range(thread_count):
@@ -87,7 +92,7 @@ class DNSChecker():
                 while True:
                     domain, exists = response_queue.get(timeout=1.0)
                     results[domain] = exists
-                    cache[domain] = [exists, time.time()]
+                    cache[domain] = (exists, time.time())
                     if len(results) % 2000 == 1999:
                         print(round((len(results) - initial_length)/(time.time() - start), 2),
                               round(len(results)/domain_list_length, 5))

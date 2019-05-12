@@ -1,4 +1,5 @@
 import argparse
+import time
 import json
 import os
 import re
@@ -6,13 +7,15 @@ import re
 import dns_check
 
 class BlockList():
-    def __init__(self):
+    def __init__(self, do_dns_check=True, dns_check_threads=40):
         self.blocked_hosts = set()
         self.whitelist = set()
         self.generate_domain_regex()
         self.generate_host_regex()
         self.generate_adblock_regex()
         self.generate_master_regex()
+        self.do_dns_check = do_dns_check
+        self.dns_check_threads = dns_check_threads
 
     def generate_domain_regex(self):
         with open('tld_list.txt') as file:
@@ -86,17 +89,34 @@ class BlockList():
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
     def clean(self):
+        last = time.time()
+        print('Started with %s rules' % len(self.blocked_hosts))
         for filter_list in [self.blocked_hosts, self.whitelist]:
             for url in list(filter_list):
                 if url.endswith('*'):
                     filter_list.remove(url)
                     for tld in self.TLDS:
                         filter_list.add(url[:-1]+tld)
+        print('Expanded to %s rules(%ss)' % (len(self.blocked_hosts), time.time() - last))
+        last = time.time()
         for i in self.whitelist:
             try:
                 self.blocked_hosts.remove(i)
             except KeyError:
                 pass
+        print('Cleaned to %s rules(%ss)' % (len(self.blocked_hosts), time.time() - last))
+        last = time.time()
+        if self.do_dns_check:
+            dns = dns_check.DNSChecker()
+            print('Loaded dns cache(%ss)' % (time.time() - last))
+            last = time.time()
+            result = dns.mass_check(self.blocked_hosts, self.dns_check_threads)
+            print('Performed lookups(%ss)' % (time.time() - last))
+            last = time.time()
+            for domain in result:
+                if not result[domain]:
+                    self.blocked_hosts.remove(domain)
+            print('Trimmed to %s rules(%ss)' % (len(self.blocked_hosts), time.time() - last))
     def to_domain_list(self):
         return '\n'.join(sorted(self.blocked_hosts))
     def to_adblock(self):
@@ -114,7 +134,7 @@ def main():
     parser.add_argument('--no-dns-check', action='store_true')
     parser.add_argument('--dns-check-threads', type=int, default=40)
     args = parser.parse_args()
-    blocklist = BlockList()
+    blocklist = BlockList(not args.no_dns_check, args.dns_check_threads)
     try:
         paths = [os.path.join('target', f) for f in os.listdir('target')]
         paths = [f for f in paths if os.path.isfile(f)]
@@ -125,14 +145,6 @@ def main():
     for path in paths:
         blocklist.add_file(path)
     blocklist.clean()
-    print('Generated %s rules' % len(blocklist.blocked_hosts))
-    if not args.no_dns_check:
-        dns = dns_check.DNSChecker()
-        result = dns.mass_check(blocklist.blocked_hosts, args.dns_check_threads)
-        for domain in result:
-            if not result[domain]:
-                blocklist.blocked_hosts.remove(domain)
-        print('Trimmed to %s rules' % len(blocklist.blocked_hosts))
     try:
         os.makedirs('output')
     except FileExistsError:
