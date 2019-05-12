@@ -17,6 +17,10 @@ urls = [
     'https://hostsfile.mine.nu/hosts0.txt',#GPLv3
     'https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt',#GPL3
     'https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt',#Free for use without any limitations
+    'https://raw.githubusercontent.com/CHEF-KOCH/Audio-fingerprint-pages/master/AudioFp.txt',#MIT
+    'https://raw.githubusercontent.com/CHEF-KOCH/Canvas-Font-Fingerprinting-pages/master/Canvas.txt',#MIT
+    'https://raw.githubusercontent.com/CHEF-KOCH/Canvas-fingerprinting-pages/master/Canvas.txt',#MIT
+    'https://raw.githubusercontent.com/CHEF-KOCH/WebRTC-tracking/master/WebRTC.txt',#MIT
     'https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts',#GPLv3
     'https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json',#GPL3
     'https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List',#GPLv3
