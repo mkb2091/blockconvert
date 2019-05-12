@@ -38,6 +38,7 @@ urls = [
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt',#GPLv3
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt',#GPLv3
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt',#GPLv3
+    'https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt',#GPL3
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt',#GPLv3
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt',#GPLv3
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt',#GPLv3
