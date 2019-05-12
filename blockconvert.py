@@ -44,7 +44,7 @@ class BlockList():
         options = ['popup', r'first\-party', r'\~third\-party', r'third\-party']
         options_noop = ['important', r'domain\=\2']
         options_string = '(?:%s)' % '|'.join('(?:%s)' % i for i in options)
-        options_other = '(?:%s)' % '|'.join('(?:%s)' % i for i in ['[a-z-]+'] + options_noop)
+        options_other = '(?:%s)' % '|'.join('(?:%s)' % i for i in ['[a-z~-]+'] + options_noop)
         options_full = r'\$(?:(?:(?:{options_other}[,])*{options_string}(?:[,]{options_other})*)|%s)'.format(**locals())
         options_full%= '|'.join('(?:%s)' % i for i in options_noop)
         ending = r'[*]?\|?\^?(?:{options_full})?\s*(?:\!.*)?'.format(**locals())
