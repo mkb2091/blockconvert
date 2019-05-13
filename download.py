@@ -42,6 +42,7 @@ urls = [
     'https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list',#MIT
     'https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list',#MIT
     'https://raw.githubusercontent.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/master/wordpress-attacking-ips.txt',#MIT
+    'https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt',#MIT
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt',#GPLv3
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt',#GPLv3
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt',#GPLv3
