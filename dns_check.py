@@ -44,7 +44,7 @@ class DNSCheckerWorker(threading.Thread):
 class DNSChecker():
     def __init__(self):
         self.session = requests.Session()
-        self.session.headers['User-Agent'] = 'DNSExistsDomainChecker'
+        self.session.headers['User-Agent'] = 'DOH'
         self.session.headers['accept'] = 'application/dns-json'
         self.servers = ['https://dns.google.com/resolve?name=',
                         'https://cloudflare-dns.com/dns-query?type=1&name=',
