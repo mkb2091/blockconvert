@@ -33,7 +33,11 @@ class BlockList():
             now = '|'.join(['(?:%s)' % re.escape(i) for i in sorted(tld_dict[first_letter], key=len, reverse=True)])
             tld_regex.append('(?:%s(?:%s))' % (re.escape(first_letter), now))
         tld_regex = '(?:%s)' % '|'.join(tld_regex)
-        self.DOMAIN_STRING =  '(?:\*?[.])?([a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]%s)[.]?' % tld_regex
+        ip_v4 = '[12]?[0-9]{,2}[.][12]?[0-9]{,2}[.][12]?[0-9]{,2}[.][12]?[0-9]{,2}'
+        ip_v6 = '[0-9a-f]{,4}(?:[:][0-9a-f]{,4}){2,8}'
+        ip = '(?:{ip_v4}|{ip_v6})'.format(**locals())
+        self.IP_REGEX = re.compile(ip)
+        self.DOMAIN_STRING =  '(?:\*?[.])?((?:[a-z0-9_-]+(?:[.][a-z0-9_-]+)*[.]{tld_regex})|{ip})[.]?'.format(**locals())
         self.DOMAIN_REGEX = re.compile(self.DOMAIN_STRING)
     def generate_host_regex(self):
         ips = ['0.0.0.0', '127.0.0.1', '::1']
@@ -89,6 +93,17 @@ class BlockList():
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
     def clean(self):
+        dns = dns_check.DNSChecker()
+        last = time.time()
+        for filter_list in [self.blocked_hosts, self.whitelist]:
+            ips = []
+            for item in list(filter_list):
+                if self.IP_REGEX.fullmatch(item):
+                    ips.append(item)
+                    filter_list.remove(item)
+            found = dns.mass_reverse_lookup(ips)
+            filter_list.update(found)
+            print('Added %s rules via reverse dns(%ss)' % (len(found), time.time() - last))
         last = time.time()
         print('Started with %s rules' % len(self.blocked_hosts))
         for filter_list in [self.blocked_hosts, self.whitelist]:
@@ -107,8 +122,6 @@ class BlockList():
         print('Cleaned to %s rules(%ss)' % (len(self.blocked_hosts), time.time() - last))
         last = time.time()
         if self.do_dns_check:
-            dns = dns_check.DNSChecker()
-            print('Loaded dns cache(%ss)' % (time.time() - last))
             last = time.time()
             result = dns.mass_check(self.blocked_hosts, self.dns_check_threads)
             print('Performed lookups(%ss)' % (time.time() - last))
