@@ -1,8 +1,9 @@
-@@||facebook.com^
-@@||d2gatte9o95jao.cloudfront.net^
-@@||cloudfront.net^
-@@||gateway.reddit.com^
-@@||code.jquery.com^
-@@||use.typekit.net^
 @@||cdnjs.cloudflare.com^
+@@||cloudfront.net^
+@@||code.jquery.com^
+@@||d2gatte9o95jao.cloudfront.net^
 @@||dns.google.com^
+@@||duckduckgo.com^
+@@||facebook.com^
+@@||gateway.reddit.com^
+@@||use.typekit.net^
