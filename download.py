@@ -4,6 +4,7 @@ import time
 import os
 
 urls = [
+    'https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt',#GPL3
     'https://better.fyi/blockerList.txt',#CCASA4.0
     'https://blocklist.kowabit.de/fritzboxliste.txt',#Public Domain
     'https://blocklist.kowabit.de/list.txt',#Public Domain
@@ -15,7 +16,6 @@ urls = [
     'https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt',#GPLv3
     'https://hblock.molinero.dev/hosts',#MIT
     'https://hostsfile.mine.nu/hosts0.txt',#GPLv3
-    'https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt',#GPL3
     'https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt',#Free for use without any limitations
     'https://raw.githubusercontent.com/CHEF-KOCH/Audio-fingerprint-pages/master/AudioFp.txt',#MIT
     'https://raw.githubusercontent.com/CHEF-KOCH/Canvas-Font-Fingerprinting-pages/master/Canvas.txt',#MIT
@@ -24,6 +24,7 @@ urls = [
     'https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts',#GPLv3
     'https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json',#GPL3
     'https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List',#GPLv3
+    'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',#Permission to modify,copy and distribute
     'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',#MIT
     'https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt',#MIT
     'https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt',#MIT
@@ -39,10 +40,10 @@ urls = [
     'https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt',#Public Domain
     'https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt',#The Unlicense
     'https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt',#MIT
+    'https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt',#MIT
     'https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list',#MIT
     'https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list',#MIT
     'https://raw.githubusercontent.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/master/wordpress-attacking-ips.txt',#MIT
-    'https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt',#MIT
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt',#GPLv3
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt',#GPLv3
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt',#GPLv3
@@ -57,7 +58,6 @@ urls = [
     'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt',#GPLv3
     'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',#GPLv3
     'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt',#GPLv3
-    'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt',#Permission to modify,copy and distribute
     'https://v.firebog.net/hosts/BillStearns.txt',#GPL
     ]
 
