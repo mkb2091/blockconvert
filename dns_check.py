@@ -8,6 +8,26 @@ import os
 
 import requests
 
+RESERVED = [
+    ipaddress.IPv4Network('0.0.0.0/8'),
+    ipaddress.IPv4Network('10.0.0.0/8'),
+    ipaddress.IPv4Network('100.64.0.0/10'),
+    ipaddress.IPv4Network('127.0.0.0/8'),
+    ipaddress.IPv4Network('169.254.0.0/16'),
+    ipaddress.IPv4Network('172.16.0.0/12'),
+    ipaddress.IPv4Network('192.0.0.0/24'),
+    ipaddress.IPv4Network('192.0.2.0/24'),
+    ipaddress.IPv4Network('192.88.99.0/24'),
+    ipaddress.IPv4Network('192.168.0.0/16'),
+    ipaddress.IPv4Network('198.18.0.0/15'),
+    ipaddress.IPv4Network('198.51.100.0/24'),
+    ipaddress.IPv4Network('203.0.113.0/24'),
+    ipaddress.IPv4Network('224.0.0.0/4'),
+    ipaddress.IPv4Network('240.0.0.0/4'),
+    ipaddress.IPv4Network('255.255.255.255/32')
+    ]
+    
+
 class DNSCheckerWorker(threading.Thread):
     def __init__(self, session, servers, request_queue, response_queue,
                  request_type=1):
@@ -99,9 +119,15 @@ class DNSChecker():
         response_queue = queue.Queue()
         results = dict()
         all_from_cache = True
+        valid_count = 0
+        invalid_count = 0
         for domain in domain_list:
             try:
                 results[domain] = cache[domain][0]
+                if cache[domain][0]:
+                    valid_count += 1
+                else:
+                    invalid_count += 1
             except KeyError:
                 request_queue.put(domain)
                 all_from_cache = False
@@ -120,18 +146,32 @@ class DNSChecker():
             try:
                 while True:
                     domain, result = response_queue.get(timeout=0.1)
-                    exists = result['Status'] == 0
+                    exists = result['Status'] == 0 and 'Answer' in result
+                    if exists:
+                        for answer in result['Answer']:
+                            try:
+                                ip = ipaddress.IPv4Network('%s/32' % answer['data'])
+                                exists = exists and (not any(network.overlaps(ip) for network in RESERVED))
+                            except ipaddress.AddressValueError:
+                                pass
+                    if exists:
+                        valid_count += 1
+                    else:
+                        invalid_count += 1
                     results[domain] = exists
                     cache[domain] = (exists, time.time())
                     if len(results) % 2000 == 1999:
-                        print(round((len(results) - initial_length)/(time.time() - start), 2),
-                              round(len(results)/domain_list_length, 5))
+                        print('%s/s %s Valid: %s Invalid: %s ' % (round((len(results) - initial_length)/(time.time() - start), 2),
+                              round(len(results)/domain_list_length, 5), valid_count, invalid_count))
                         lines = [[i, '1'if cache[i][0] else '', str(int(cache[i][1]))] for i in sorted(cache)]
                         with open('temp', 'w') as file:
                             file.write('\n'.join(','.join(line) for line in lines))
                         os.replace('temp', 'dns_cache.txt')
             except queue.Empty:
                 pass
+            except Exception as error:
+                print(error)
+                print(domain, result)
         lines = [[i, '1'if cache[i][0] else '', str(int(cache[i][1]))] for i in sorted(cache)]
         with open('temp', 'w') as file:
             file.write('\n'.join(','.join(line) for line in lines))
