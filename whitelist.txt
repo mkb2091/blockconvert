@@ -7,5 +7,7 @@
 @@||facebook.com^
 @@||gateway.reddit.com^
 @@||instagram.com^
+@@||reddit.com^
 @@||use.typekit.net^
 @@||www.instagram.com^
+@@||www.reddit.com^
