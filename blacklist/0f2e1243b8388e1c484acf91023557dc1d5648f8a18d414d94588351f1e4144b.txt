@@ -1,0 +1,2625 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! Better content blocking rules.
+!
+! Generated on Wed May 15 2019 16:26:47 GMT+0000 (UTC)
+!
+! Automatically converted to EasyList format for use in uBlock Origin, etc.
+!
+! Copyright  Ind.ie.
+! Creative Commons Attribution-ShareAlike 4.0 International Public License
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!
+! Note: URLs to pages on the Better site are provided in the comments for you
+! ===== to learn more about the tracker/site listed and why it was blocked.
+!       Not all URLs will resolve (as some rules may not have their own
+!       page on the site) but most should.
+!
+
+! Block: https://better.fyi/trackers/localhost:8000
+||localhost:8000/test.js$third-party
+
+! Hide CSS. More info: https://better.fyi/sites/www.accuweather.com or https://better.fyi/trackers/www.accuweather.com
+www.accuweather.com##.fc-pinned-message-container
+
+! Hide CSS. More info: https://better.fyi/sites/www.accuweather.com or https://better.fyi/trackers/www.accuweather.com
+www.accuweather.com##div#header-davek,.panel-ad-mr
+
+! Hide CSS. More info: https://better.fyi/sites/bild.de or https://better.fyi/trackers/bild.de
+bild.de##.ad-mark
+
+! Block: https://better.fyi/trackers/mms.chip.de
+||mms.chip.de$third-party,domain=chip.de,www.chip.de
+
+! Hide CSS. More info: https://better.fyi/sites/cnet.com or https://better.fyi/trackers/cnet.com
+cnet.com##div[data-component="taboola"]
+
+! Hide CSS. More info: https://better.fyi/sites/www.cnet.com or https://better.fyi/trackers/www.cnet.com
+www.cnet.com##div[data-component="taboola"]
+
+! Hide CSS. More info: https://better.fyi/sites/cnet.com or https://better.fyi/trackers/cnet.com
+cnet.com##.ad-nav-ad-plus
+
+! Hide CSS. More info: https://better.fyi/sites/www.cnet.com or https://better.fyi/trackers/www.cnet.com
+www.cnet.com##.ad-nav-ad-plus
+
+! Hide CSS. More info: https://better.fyi/sites/www.courant.com or https://better.fyi/trackers/www.courant.com
+www.courant.com##.trb_mh_adB.trb_masthead_adBanner,sectionsection.trb_gptAd,aside.trb_brkr_nt,divdiv.trb_gptAd.trb_rBrkAd,.s2nPlayerFrame,.trb_barker.trb_brk.trb_brk_bl,.trb_gptAd.trb_footer_adBanner_combo,section.trb_outfit
+
+! Hide CSS. More info: https://better.fyi/sites/courant.com or https://better.fyi/trackers/courant.com
+courant.com##.trb_mh_adB.trb_masthead_adBanner,sectionsection.trb_gptAd,aside.trb_brkr_nt,divdiv.trb_gptAd.trb_rBrkAd,.s2nPlayerFrame,.trb_barker.trb_brk.trb_brk_bl,.trb_gptAd.trb_footer_adBanner_combo,section.trb_outfit
+
+! Hide CSS. More info: https://better.fyi/sites/www.cultofmac.com or https://better.fyi/trackers/www.cultofmac.com
+www.cultofmac.com##.ezo_ad,.adtester-container,.ad-region
+
+! Hide CSS. More info: https://better.fyi/sites/economist.com or https://better.fyi/trackers/economist.com
+economist.com##.fe-blogs__top-ad-wrapper
+
+! Hide CSS. More info: https://better.fyi/sites/www.economist.com or https://better.fyi/trackers/www.economist.com
+www.economist.com##.fe-blogs__top-ad-wrapper
+
+! Hide CSS. More info: https://better.fyi/sites/www.expressen.se or https://better.fyi/trackers/www.expressen.se
+www.expressen.se###rich-media-ads
+
+! Hide CSS. More info: https://better.fyi/sites/expressen.se or https://better.fyi/trackers/expressen.se
+expressen.se###rich-media-ads
+
+! Hide CSS. More info: https://better.fyi/sites/feber.se or https://better.fyi/trackers/feber.se
+feber.se###workey_top_container
+
+! Block: https://better.fyi/trackers/mms.focus.de
+||mms.focus.de$third-party,domain=www.focus.de
+
+! Hide CSS. More info: https://better.fyi/sites/fortune.com or https://better.fyi/trackers/fortune.com
+fortune.com##.ad-container,.ad-wrapper
+
+! Hide CSS. More info: https://better.fyi/sites/heise.de or https://better.fyi/trackers/heise.de
+heise.de##div.teaser_meldungen,.bcadv_oben,.us_ad,.akwa-ad-container,.akwa-ad-container__us-ad,.teaser_hbs,.teaser_deal_des_tages,.a-paternoster-ad
+
+! Hide CSS. More info: https://better.fyi/sites/www.heise.de/autos or https://better.fyi/trackers/www.heise.de/autos
+www.heise.de/autos##div.teaser_meldungen,.bcadv_oben,.us_ad,.akwa-ad-container,.akwa-ad-container__us-ad,.teaser_hbs,.teaser_deal_des_tages,div#mitte>div:nth-of-type(1)>img,div#mitte+div>img,div#container_content>div:nth-of-type(1)>div>img
+
+! Block: https://better.fyi/trackers/www.heise.de
+||www.heise.de/js/ho/webtrekk-v4.4.1-bundle-heise-2017-09-15.js$third-party,domain=heise.de,www.heise.de
+
+! Block: https://better.fyi/trackers/assets.sni-dat.com
+||assets.sni-dat.com/raven/raven.js$third-party,domain=hgtv.com,www.hgtv.com
+
+! Hide CSS. More info: https://better.fyi/sites/hgtv.com or https://better.fyi/trackers/hgtv.com
+hgtv.com##.o-Leaderboard
+
+! Hide CSS. More info: https://better.fyi/sites/www.hgtv.com or https://better.fyi/trackers/www.hgtv.com
+www.hgtv.com##.o-Leaderboard
+
+! Hide CSS. More info: https://better.fyi/sites/imore.com or https://better.fyi/trackers/imore.com
+imore.com##.adunit-wrap,.visor-block--taboola,.swal-overlay
+
+! Block: https://better.fyi/trackers/b0.t.kicker.de
+||b0.t.kicker.de$third-party,domain=kicker.de,www.kicker.de
+
+! Hide CSS. More info: https://better.fyi/sites/latimes.com or https://better.fyi/trackers/latimes.com
+latimes.com##.trb_masthead_adBanner,.trb_gptAd,.met-promo,.trb_ar_taboolaCmpn
+
+! Hide CSS. More info: https://better.fyi/sites/www.liverpoolecho.co.uk, liverpoolecho.co.uk or https://better.fyi/trackers/www.liverpoolecho.co.uk, liverpoolecho.co.uk
+www.liverpoolecho.co.uk,liverpoolecho.co.uk##.gpt
+
+! Hide CSS. More info: https://better.fyi/sites/macrumors.com or https://better.fyi/trackers/macrumors.com
+macrumors.com##.ad,#adTop,.foobar,#sideAd,div[id*="contentAd"]
+
+! Hide CSS. More info: https://better.fyi/sites/forums.macrumors.com or https://better.fyi/trackers/forums.macrumors.com
+forums.macrumors.com##.funbox
+
+! Block: https://better.fyi/trackers/macworld.com
+||macworld.com/www.idgcsmb.mw/js/analytics/omniture/pc-wmw-macworld/s_code.js$third-party
+
+! Block: https://better.fyi/trackers/macworld.com
+||macworld.com/www/js/ads/gpt_includes.js$third-party
+
+! Block: https://better.fyi/trackers/macworld.com
+||macworld.com/www/js/ads/narf_prebid.js$third-party
+
+! Block: https://better.fyi/trackers/macworld.com
+||macworld.com/www/js/ads/prebid_gpt_launcher.js$third-party
+
+! Block: https://better.fyi/trackers/macworld.com
+||macworld.com/www/js/ads/prebid.min.js$third-party
+
+! Block: https://better.fyi/trackers/macworld.com
+||macworld.com/www/js/ads/proximic.js$third-party
+
+! Block: https://better.fyi/trackers/macworld.com
+||macworld.com/www.idgcsmb/js/thm_post.js$third-party
+
+! Hide CSS. More info: https://better.fyi/sites/macworld.com or https://better.fyi/trackers/macworld.com
+macworld.com##.ad-container,.home-features-ad,.sponsored-links
+
+! Hide CSS. More info: https://better.fyi/sites/macworld.com or https://better.fyi/trackers/macworld.com
+macworld.com##a.prev.browse.left
+
+! Block: https://better.fyi/trackers/csmb.staticworld.net
+||csmb.staticworld.net/images/furniture/macworld/features-carousel_sprite_new-mw.png$third-party,domain=macworld.com,www.macworld.com
+
+! Block: https://better.fyi/trackers/macworld.com
+||macworld.com/www/js/analytics/idg_bk_coreapi.js$third-party
+
+! Block: https://better.fyi/trackers/macworld.com
+||macworld.com/www/js/analytics/mouse_down.js$third-party
+
+! Block: https://better.fyi/trackers/macworld.com
+||macworld.com/www/js/analytics/mouse_down.js$third-party
+
+! Block: https://better.fyi/trackers/crypto-js.googlecode.com
+||crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js$third-party
+
+! Hide CSS. More info: https://better.fyi/sites/www.main-echo.de or https://better.fyi/trackers/www.main-echo.de
+www.main-echo.de##div#OutOfPage2_main-echo_trf+div
+
+! Block: https://better.fyi/trackers/i.cdn.turner.com
+||i.cdn.turner.com/ads/adfuel/$third-party
+
+! Block: https://better.fyi/trackers/www.myfinance.com
+||www.myfinance.com$third-party
+
+! Hide CSS. More info: https://better.fyi/sites/money.cnn.com or https://better.fyi/trackers/money.cnn.com
+money.cnn.com##.headline_list.bizDev
+
+! Hide CSS. More info: https://better.fyi/sites/www.motorcyclenews.com or https://better.fyi/trackers/www.motorcyclenews.com
+www.motorcyclenews.com##.topAdvertContainer,.mpu-ad,.googleads,.google-ads
+
+! Hide CSS. More info: https://better.fyi/sites/motorcyclenews.com or https://better.fyi/trackers/motorcyclenews.com
+motorcyclenews.com##.topAdvertContainer,.mpu-ad,.googleads,.google-ads
+
+! Hide CSS. More info: https://better.fyi/sites/nu.nl or https://better.fyi/trackers/nu.nl
+nu.nl##.sacc_infobar_overlay
+
+! Hide CSS. More info: https://better.fyi/sites/nytimes.com or https://better.fyi/trackers/nytimes.com
+nytimes.com###instl_supercontainer
+
+! Hide CSS. More info: https://better.fyi/sites/nytimes.com or https://better.fyi/trackers/nytimes.com
+nytimes.com##.g-ad-wrapper,.ad.hpmiddle-ad,.ad.hp-top-ad,.ad,#top-wrapper,div[id*="story-ad"],div[class*="e12"]
+
+! Hide CSS. More info: https://better.fyi/sites/www.nytimes.com or https://better.fyi/trackers/www.nytimes.com
+www.nytimes.com##.g-ad-wrapper,.ad.hpmiddle-ad,.ad.hp-top-ad,.ad,#top-wrapper,div[id*="story-ad"],div[class*="e12"]
+
+! Hide CSS. More info: https://better.fyi/sites/observer.com or https://better.fyi/trackers/observer.com
+observer.com##div.force-appear
+
+! Block: https://better.fyi/trackers/pagefair.com
+||pagefair.com$third-party
+
+! Block: https://better.fyi/trackers/pagefair.net
+||pagefair.net$third-party
+
+! Hide CSS. More info: https://better.fyi/sites/publico.es or https://better.fyi/trackers/publico.es
+publico.es###preloader,#cookies,.ads,.ads300x100,.megabanner,.adsLigatus
+
+! Hide CSS. More info: https://better.fyi/sites/reddit.com or https://better.fyi/trackers/reddit.com
+reddit.com##.promotedlink,.promotedvideolink
+
+! Hide CSS. More info: https://better.fyi/sites/www.reddit.com or https://better.fyi/trackers/www.reddit.com
+www.reddit.com##.promotedlink,.promotedvideolink
+
+! Block: https://better.fyi/trackers/s2.reutersmedia.net
+||s2.reutersmedia.net/resources_v2/js/core-tracking.js$third-party,domain=reuters.com,www.reuters.com
+
+! Hide CSS. More info: https://better.fyi/sites/reuters.com or https://better.fyi/trackers/reuters.com
+reuters.com##div.TwoColumnLayout_column+div,.ad-horizontal,div[data-template="article_list"]>div[id*=""],div#content>div>div[id*=""]>div,#spacerElement
+
+! Hide CSS. More info: https://better.fyi/sites/www.reuters.com or https://better.fyi/trackers/www.reuters.com
+www.reuters.com##div.TwoColumnLayout_column+div,.ad-horizontal,div[data-template="article_list"]>div[id*=""],div#content>div>div[id*=""]>div,#spacerElement
+
+! Hide CSS. More info: https://better.fyi/sites/si.com or https://better.fyi/trackers/si.com
+si.com##.ad-sticky-container,.desktop-ad
+
+! Hide CSS. More info: https://better.fyi/sites/spiegel.de or https://better.fyi/trackers/spiegel.de
+spiegel.de##.spRecommendations,#spRecommendations
+
+! Block: https://better.fyi/trackers/www.spiegel.de
+||www.spiegel.de/layout/js/http/netmind-V[0-9]-[0-9][0-9]-[0-9].js$third-party,domain=spiegel.de,www.spiegel.de
+
+! Block: https://better.fyi/trackers/www.spiegel.de
+||www.spiegel.de/static/sys/pixel.gif$third-party,domain=spiegel.de,www.spiegel.de
+
+! Block: https://better.fyi/trackers/cdn2.spiegel.de
+||cdn2.spiegel.de/images/image-[0-9][0-9][0-9][0-9][0-9]-thumbbiga$third-party,domain=spiegel.de,www.spiegel.de
+
+! Hide CSS. More info: https://better.fyi/sites/www.spiegel.de or https://better.fyi/trackers/www.spiegel.de
+www.spiegel.de##div#wrapper>div:first-of-type>img[src*="cdn2"],div[data-sponlytics-area="col-right"]>div:nth-of-type(1)img,div#content-main>div:first-of-type>div:first-of-type>img[src*="cdn2"],div#content-main.spSmallScreen>div:first-of-typediv>img[src*="cdn2"],div#content-main>div:first-of-type>div:first-of-type>img[src*="cdn1"],div#wrapper>div:first-of-type>img[src*="cdn1"]
+
+! Hide CSS. More info: https://better.fyi/sites/spiegel.de or https://better.fyi/trackers/spiegel.de
+spiegel.de##div#wrapper>div:first-of-type>img[src*="cdn2"],div[data-sponlytics-area="col-right"]>div:nth-of-type(1)img,div#content-main>div:first-of-type>div:first-of-type>img[src*="cdn2"],div#content-main.spSmallScreen>div:first-of-typediv>img[src*="cdn2"],div#content-main>div:first-of-type>div:first-of-type>img[src*="cdn1"],div#wrapper>div:first-of-type>img[src*="cdn1"]
+
+! Block: https://better.fyi/trackers/spiegel-de.spiegel.de
+||spiegel-de.spiegel.de$third-party,domain=spiegel.de,www.spiegel.de
+
+! Block: https://better.fyi/trackers/
+||/static/sys/pixel.gif$third-party,domain=spiegel.de,www.spiegel.de
+
+! Block: https://better.fyi/trackers/spiegel.met.vgwort.de
+||spiegel.met.vgwort.de/na/$third-party,domain=spiegel.de,www.spiegel.de
+
+! Block: https://better.fyi/trackers/c.spiegel.de
+||c.spiegel.de/nm_trck.gif$third-party,domain=spiegel.de,www.spiegel.de
+
+! Block: https://better.fyi/trackers/d2tycn7nnoiglw.cloudfront.net
+||d2tycn7nnoiglw.cloudfront.net/ads/img/x.gif$third-party,domain=spiegel.de,www.spiegel.de
+
+! Hide CSS. More info: https://better.fyi/sites/sport1.de or https://better.fyi/trackers/sport1.de
+sport1.de##.s1-laterpay-opacity,.s1-laterpay-wrap
+
+! Block: https://better.fyi/trackers/www.startpage.com
+||www.startpage.com/adsense/search/async-ads.js$third-party
+
+! Block: https://better.fyi/trackers/sueddeutsche-de.sueddeutsche.de
+||sueddeutsche-de.sueddeutsche.de$third-party,domain=www.sueddeutsche.de
+
+! Hide CSS. More info: https://better.fyi/sites/www.sueddeutsche.de or https://better.fyi/trackers/www.sueddeutsche.de
+www.sueddeutsche.de##.ad
+
+! Hide CSS. More info: https://better.fyi/sites/www.t-online.de or https://better.fyi/trackers/www.t-online.de
+www.t-online.de##div[data-pid],.Tgbox--anz:before
+
+! Hide CSS. More info: https://better.fyi/sites/www.t-online.de or https://better.fyi/trackers/www.t-online.de
+www.t-online.de##.Tsshopsti1
+
+! Hide CSS. More info: https://better.fyi/sites/theargus.co.uk or https://better.fyi/trackers/theargus.co.uk
+theargus.co.uk###__nq__hh
+
+! Hide CSS. More info: https://better.fyi/sites/theargus.co.uk or https://better.fyi/trackers/theargus.co.uk
+theargus.co.uk###cookieWarningR
+
+! Hide CSS. More info: https://better.fyi/sites/theargus.co.uk or https://better.fyi/trackers/theargus.co.uk
+theargus.co.uk##.dfp-top-ad-container,.dfp-ad,.promoted-block
+
+! Block: https://better.fyi/trackers/cdn.theatlantic.com
+||cdn.theatlantic.com/assets/static/a/theatlantic/js/vendors.min$third-party,domain=theatlantic.com,www.theatlantic.com
+
+! Block: https://better.fyi/trackers/cdn.theatlantic.com
+||cdn.theatlantic.com/assets/static/theatlantic/img/sherlock.gif$third-party,domain=theatlantic.com,www.theatlantic.com
+
+! Block: https://better.fyi/trackers/cdn.theatlantic.com
+||cdn.theatlantic.com/assets/static/a/js/advertisement.js$third-party,domain=theatlantic.com,www.theatlantic.com
+
+! Block: https://better.fyi/trackers/cdn.theatlantic.com
+||cdn.theatlantic.com/assets/static/a/theatlantic/js/homepage.min$third-party,domain=theatlantic.com,www.theatlantic.com
+
+! Block: https://better.fyi/trackers/cdn.theatlantic.com
+||cdn.theatlantic.com/assets/static/a/js/s_code.js$third-party,domain=theatlantic.com,www.theatlantic.com
+
+! Hide CSS. More info: https://better.fyi/sites/theatlantic.com or https://better.fyi/trackers/theatlantic.com
+theatlantic.com##.video-article__next-videos
+
+! Hide CSS. More info: https://better.fyi/sites/theatlantic.com or https://better.fyi/trackers/theatlantic.com
+theatlantic.com##.liveblog__highlights__ad,.ad-boxcontent-wrapper
+
+! Hide CSS. More info: https://better.fyi/sites/theatlantic.com or https://better.fyi/trackers/theatlantic.com
+theatlantic.com##.cookie-disclaimer
+
+! Hide CSS. More info: https://better.fyi/sites/theglobeandmail.com or https://better.fyi/trackers/theglobeandmail.com
+theglobeandmail.com##.c-ad__image,.js-c-gpt-ad,.container-with-ad,.pb-f-commercial-dfp-ads,.pb-f-commercial-sticky-stack-ads,.pb-f-commercial-dianomi
+
+! Hide CSS. More info: https://better.fyi/sites/www.theglobeandmail.com or https://better.fyi/trackers/www.theglobeandmail.com
+www.theglobeandmail.com##.c-ad__image,.js-c-gpt-ad,.container-with-ad,.pb-f-commercial-dfp-ads,.pb-f-commercial-sticky-stack-ads,.pb-f-commercial-dianomi
+
+! Hide CSS. More info: https://better.fyi/sites/theguardian.com or https://better.fyi/trackers/theguardian.com
+theguardian.com##.js-ad-slot,.ad-slot,.ad-slot--dfp,.ad-slot--container-inline,.ad-slot--mostpop,.ad-slot--mpu-banner-ad,.ad-slot--right
+
+! Block: https://better.fyi/trackers/canvas.thenextweb.com
+||canvas.thenextweb.com$third-party
+
+! Hide CSS. More info: https://better.fyi/sites/thenextweb.com or https://better.fyi/trackers/thenextweb.com
+thenextweb.com##.cookieConsent,#ad-unit-top,.ad-unit,.ad-unit-top,.ad-unit-video-wrapper
+
+! Hide CSS. More info: https://better.fyi/sites/www.theverge.com or https://better.fyi/trackers/www.theverge.com
+www.theverge.com##div[data-concert-ads-name="desktop_leaderboard_variable"],.m-ad
+
+! Hide CSS. More info: https://better.fyi/sites/theverge.com or https://better.fyi/trackers/theverge.com
+theverge.com##div[data-concert-ads-name="desktop_leaderboard_variable"],.m-ad
+
+! Hide CSS. More info: https://better.fyi/sites/uk.businessinsider.com or https://better.fyi/trackers/uk.businessinsider.com
+uk.businessinsider.com##.ad-subnav-container,.ks-recommended,.rail-recommended,.right-ad,.ad,#taboola-right-rail-thumbnails,#taboola-right-rail-thumbnails-2
+
+! Block: https://better.fyi/trackers/st.wetteronline.de
+||st.wetteronline.de/wodas/static/footerbillboard_rotation.js$third-party,domain=www.wetteronline.de
+
+! Block: https://better.fyi/trackers/st.wetteronline.de
+||st.wetteronline.de/wodas/static/footerbillboard_rotation.js$third-party,domain=wetteronline.de
+
+! Block: https://better.fyi/trackers/goaz.wetteronline.de
+||goaz.wetteronline.de$third-party,domain=www.wetteronline.de
+
+! Block: https://better.fyi/trackers/goaz.wetteronline.de
+||goaz.wetteronline.de$third-party,domain=wetteronline.de
+
+! Hide CSS. More info: https://better.fyi/sites/www.wetteronline.de or https://better.fyi/trackers/www.wetteronline.de
+www.wetteronline.de##.adplace,#woLead.centeredBill,#topcontainer,#woRect,.kskdDiv,#woFooterBillboard,iframe[name*="google_ads"],div#header+div,div#adLink+div
+
+! Hide CSS. More info: https://better.fyi/sites/wetteronline.de or https://better.fyi/trackers/wetteronline.de
+wetteronline.de##.adplace,#woLead.centeredBill,#topcontainer,#woRect,.kskdDiv,#woFooterBillboard,iframe[name*="google_ads"],div#header+div,div#adLink+div
+
+! Block: https://better.fyi/trackers/wired.com
+||wired.com/assets/load$third-party
+
+! Hide CSS. More info: https://better.fyi/sites/wired.com or https://better.fyi/trackers/wired.com
+wired.com##div[data-js="leaderboard"]
+
+! Hide CSS. More info: https://better.fyi/sites/wired.com or https://better.fyi/trackers/wired.com
+wired.com##div[data-outbrain-url]
+
+! Hide CSS. More info: https://better.fyi/sites/yahoo.com or https://better.fyi/trackers/yahoo.com
+yahoo.com##div[id*=my-ads]
+
+! Hide CSS. More info: https://better.fyi/sites/youtube.com or https://better.fyi/trackers/youtube.com
+youtube.com###container.ytd-iframe-companion-renderer>*.ytd-iframe-companion-renderer:last-child:not(#google_companion_ad_div),#player-ads,.iv-promo,.overlay-ads,.youtubeSuperLeaderBoardAdHolder,.youtubeSuperLeaderOverallAdArea,#masthead-ad,.video-ads
+
+! Hide CSS. More info: https://better.fyi/sites/www.youtube.com or https://better.fyi/trackers/www.youtube.com
+www.youtube.com###container.ytd-iframe-companion-renderer>*.ytd-iframe-companion-renderer:last-child:not(#google_companion_ad_div),#player-ads,.iv-promo,.overlay-ads,.youtubeSuperLeaderBoardAdHolder,.youtubeSuperLeaderOverallAdArea,#masthead-ad
+
+!
+! Exceptions
+!
+! These are exceptions weve been forced to add to stop some sites
+! from breaking and to neutralise sites that attempt to detect and
+! block people who are trying to protect their privacy on the Web.
+!
+! Details: https://better.fyi/trackers/-ignore-previous-rules/
+!
+
+@@||youtube.com$third-party
+@@||www.youtube.com$third-party
+
+! Block: https://better.fyi/trackers/1rx.io
+||1rx.io$third-party
+
+! Block: https://better.fyi/trackers/254a.com
+||254a.com$third-party
+
+! Block: https://better.fyi/trackers/2mdn.net
+||2mdn.net$third-party
+
+! Block: https://better.fyi/trackers/2o7.net
+||2o7.net$third-party
+
+! Block: https://better.fyi/trackers/33across.com
+||33across.com$third-party
+
+! Block: https://better.fyi/trackers/360yield.com
+||360yield.com$third-party
+
+! Block: https://better.fyi/trackers/3gl.net
+||3gl.net$third-party
+
+! Block: https://better.fyi/trackers/3lift.com
+||3lift.com$third-party
+
+! Block: https://better.fyi/trackers/4finance.com
+||4finance.com$third-party
+
+! Block: https://better.fyi/trackers/a5224106a28855abbbb0825aa5e4cd9bd.profile.ams50.cloudfront.net
+||a5224106a28855abbbb0825aa5e4cd9bd.profile.ams50.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/a5eb9a4ddb8767e210bca97b2bcbf6ece.profile.fra2.cloudfront.net
+||a5eb9a4ddb8767e210bca97b2bcbf6ece.profile.fra2.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/a8723.com
+||a8723.com$third-party
+
+! Block: https://better.fyi/trackers/aaxads.com
+||aaxads.com$third-party
+
+! Block: https://better.fyi/trackers/aaxdetect.com
+||aaxdetect.com$third-party
+
+! Block: https://better.fyi/trackers/abmr.net
+||abmr.net$third-party
+
+! Block: https://better.fyi/trackers/abtasty.com
+||abtasty.com$third-party
+
+! Block: https://better.fyi/trackers/acuityplatform.com
+||acuityplatform.com$third-party
+
+! Block: https://better.fyi/trackers/ad-srv.net
+||ad-srv.net$third-party
+
+! Block: https://better.fyi/trackers/ad-stir.com
+||ad-stir.com$third-party
+
+! Block: https://better.fyi/trackers/adadvisor.net
+||adadvisor.net$third-party
+
+! Block: https://better.fyi/trackers/adalliance.io
+||adalliance.io$third-party
+
+! Block: https://better.fyi/trackers/adap.tv
+||adap.tv$third-party
+
+! Block: https://better.fyi/trackers/adblade.com
+||adblade.com$third-party
+
+! Block: https://better.fyi/trackers/adbrn.com
+||adbrn.com$third-party
+
+! Block: https://better.fyi/trackers/addthis.com
+||addthis.com$third-party
+
+! Block: https://better.fyi/trackers/addthisedge.com
+||addthisedge.com$third-party
+
+! Block: https://better.fyi/trackers/adentifi.com
+||adentifi.com$third-party
+
+! Block: https://better.fyi/trackers/adform.net
+||adform.net$third-party
+
+! Block: https://better.fyi/trackers/adformdsp.net
+||adformdsp.net$third-party
+
+! Block: https://better.fyi/trackers/adgrx.com
+||adgrx.com$third-party
+
+! Block: https://better.fyi/trackers/adhigh.net
+||adhigh.net$third-party
+
+! Block: https://better.fyi/trackers/adition.com
+||adition.com$third-party
+
+! Block: https://better.fyi/trackers/adkernel.com
+||adkernel.com$third-party
+
+! Block: https://better.fyi/trackers/adlucent.com
+||adlucent.com$third-party
+
+! Block: https://better.fyi/trackers/admantx.com
+||admantx.com$third-party
+
+! Block: https://better.fyi/trackers/admedo.com
+||admedo.com$third-party
+
+! Block: https://better.fyi/trackers/admixer.net
+||admixer.net$third-party
+
+! Block: https://better.fyi/trackers/adnxs.com
+||adnxs.com$third-party
+
+! Block: https://better.fyi/trackers/adobedtm.com
+||adobedtm.com$third-party
+
+! Block: https://better.fyi/trackers/adocean.pl
+||adocean.pl$third-party
+
+! Block: https://better.fyi/trackers/adriver.ru
+||adriver.ru$third-party
+
+! Block: https://better.fyi/trackers/adrolays.de
+||adrolays.de$third-party
+
+! Block: https://better.fyi/trackers/adroll.com
+||adroll.com$third-party
+
+! Block: https://better.fyi/trackers/adrtx.net
+||adrtx.net$third-party
+
+! Block: https://better.fyi/trackers/ads-twitter.com
+||ads-twitter.com$third-party
+
+! Block: https://better.fyi/trackers/adsafeprotected.com
+||adsafeprotected.com$third-party
+
+! Block: https://better.fyi/trackers/adscale.de
+||adscale.de$third-party
+
+! Block: https://better.fyi/trackers/adskeeper.co.uk
+||adskeeper.co.uk$third-party
+
+! Block: https://better.fyi/trackers/adsnative.com
+||adsnative.com$third-party
+
+! Block: https://better.fyi/trackers/adsrvr.org
+||adsrvr.org$third-party
+
+! Block: https://better.fyi/trackers/adsymptotic.com
+||adsymptotic.com$third-party
+
+! Block: https://better.fyi/trackers/adtech.de
+||adtech.de$third-party
+
+! Block: https://better.fyi/trackers/adtechus.com
+||adtechus.com$third-party
+
+! Block: https://better.fyi/trackers/adtng.com
+||adtng.com$third-party
+
+! Block: https://better.fyi/trackers/adup-tech.com
+||adup-tech.com$third-party
+
+! Block: https://better.fyi/trackers/adventori.com
+||adventori.com$third-party
+
+! Block: https://better.fyi/trackers/advertising.com
+||advertising.com$third-party
+
+! Block: https://better.fyi/trackers/adworx.at
+||adworx.at$third-party
+
+! Block: https://better.fyi/trackers/adx1.com
+||adx1.com$third-party
+
+! Block: https://better.fyi/trackers/adzerk.net
+||adzerk.net$third-party
+
+! Block: https://better.fyi/trackers/adziff.com
+||adziff.com$third-party
+
+! Block: https://better.fyi/trackers/afy11.net
+||afy11.net$third-party
+
+! Block: https://better.fyi/trackers/agkn.com
+||agkn.com$third-party
+
+! Block: https://better.fyi/trackers/akstat.io
+||akstat.io$third-party
+
+! Block: https://better.fyi/trackers/alcmpn.com
+||alcmpn.com$third-party
+
+! Block: https://better.fyi/trackers/alexametrics.com
+||alexametrics.com$third-party
+
+! Block: https://better.fyi/trackers/amazon-adsystem.com
+||amazon-adsystem.com$third-party
+
+! Block: https://better.fyi/trackers/amgdgt.com
+||amgdgt.com$third-party
+
+! Block: https://better.fyi/trackers/amplitude.com
+||amplitude.com$third-party
+
+! Block: https://better.fyi/trackers/amung.us
+||amung.us$third-party
+
+! Block: https://better.fyi/trackers/appier.net
+||appier.net$third-party
+
+! Block: https://better.fyi/trackers/apxlv.com
+||apxlv.com$third-party
+
+! Block: https://better.fyi/trackers/areyouahuman.com
+||areyouahuman.com$third-party
+
+! Block: https://better.fyi/trackers/ariseboundary.com
+||ariseboundary.com$third-party
+
+! Block: https://better.fyi/trackers/atdmt.com
+||atdmt.com$third-party
+
+! Block: https://better.fyi/trackers/atsfi.de
+||atsfi.de$third-party
+
+! Block: https://better.fyi/trackers/atwola.com
+||atwola.com$third-party
+
+! Block: https://better.fyi/trackers/audienceinsights.net
+||audienceinsights.net$third-party
+
+! Block: https://better.fyi/trackers/avantlink.com
+||avantlink.com$third-party
+
+! Block: https://better.fyi/trackers/avmws.com
+||avmws.com$third-party
+
+! Block: https://better.fyi/trackers/avocet.io
+||avocet.io$third-party
+
+! Block: https://better.fyi/trackers/awin1.com
+||awin1.com$third-party
+
+! Block: https://better.fyi/trackers/baidu.com
+||baidu.com$third-party
+
+! Block: https://better.fyi/trackers/bannerflow.com
+||bannerflow.com$third-party
+
+! Block: https://better.fyi/trackers/basebanner.com
+||basebanner.com$third-party
+
+! Block: https://better.fyi/trackers/basketballbelieve.com
+||basketballbelieve.com$third-party
+
+! Block: https://better.fyi/trackers/bdex.com
+||bdex.com$third-party
+
+! Block: https://better.fyi/trackers/bebi.com
+||bebi.com$third-party
+
+! Block: https://better.fyi/trackers/behavioralengine.com
+||behavioralengine.com$third-party
+
+! Block: https://better.fyi/trackers/betrad.com
+||betrad.com$third-party
+
+! Block: https://better.fyi/trackers/betweendigital.com
+||betweendigital.com$third-party
+
+! Block: https://better.fyi/trackers/bf-ad.net
+||bf-ad.net$third-party
+
+! Block: https://better.fyi/trackers/bf-tools.net
+||bf-tools.net$third-party
+
+! Block: https://better.fyi/trackers/bidr.io
+||bidr.io$third-party
+
+! Block: https://better.fyi/trackers/bidswitch.net
+||bidswitch.net$third-party
+
+! Block: https://better.fyi/trackers/bidtheatre.com
+||bidtheatre.com$third-party
+
+! Block: https://better.fyi/trackers/bildstatic.de
+||bildstatic.de$third-party
+
+! Block: https://better.fyi/trackers/bing.com
+||bing.com$third-party
+
+! Block: https://better.fyi/trackers/bizographics.com
+||bizographics.com$third-party
+
+! Block: https://better.fyi/trackers/bizrate.com
+||bizrate.com$third-party
+
+! Block: https://better.fyi/trackers/bkrtx.com
+||bkrtx.com$third-party
+
+! Block: https://better.fyi/trackers/bluecava.com
+||bluecava.com$third-party
+
+! Block: https://better.fyi/trackers/blueconic.net
+||blueconic.net$third-party
+
+! Block: https://better.fyi/trackers/bluekai.com
+||bluekai.com$third-party
+
+! Block: https://better.fyi/trackers/bnmla.com
+||bnmla.com$third-party
+
+! Block: https://better.fyi/trackers/bounceexchange.com
+||bounceexchange.com$third-party
+
+! Block: https://better.fyi/trackers/brand-display.com
+||brand-display.com$third-party
+
+! Block: https://better.fyi/trackers/brealtime.com
+||brealtime.com$third-party
+
+! Block: https://better.fyi/trackers/broadcastbed.com
+||broadcastbed.com$third-party
+
+! Block: https://better.fyi/trackers/btrll.com
+||btrll.com$third-party
+
+! Block: https://better.fyi/trackers/btstatic.com
+||btstatic.com$third-party
+
+! Block: https://better.fyi/trackers/bttrack.com
+||bttrack.com$third-party
+
+! Block: https://better.fyi/trackers/budgetedbauer.com
+||budgetedbauer.com$third-party
+
+! Block: https://better.fyi/trackers/buysellads.com
+||buysellads.com$third-party
+
+! Block: https://better.fyi/trackers/buysellads.net
+||buysellads.net$third-party
+
+! Block: https://better.fyi/trackers/c1exchange.com
+||c1exchange.com$third-party
+
+! Block: https://better.fyi/trackers/carbonads.com
+||carbonads.com$third-party
+
+! Block: https://better.fyi/trackers/carbonads.net
+||carbonads.net$third-party
+
+! Block: https://better.fyi/trackers/cardlytics.com
+||cardlytics.com$third-party
+
+! Block: https://better.fyi/trackers/casalemedia.com
+||casalemedia.com$third-party
+
+! Block: https://better.fyi/trackers/chango.com
+||chango.com$third-party
+
+! Block: https://better.fyi/trackers/chartbeat.com
+||chartbeat.com$third-party
+
+! Block: https://better.fyi/trackers/chartbeat.net
+||chartbeat.net$third-party
+
+! Block: https://better.fyi/trackers/chatango.com
+||chatango.com$third-party
+
+! Block: https://better.fyi/trackers/choicestream.com
+||choicestream.com$third-party
+
+! Block: https://better.fyi/trackers/cint.com
+||cint.com$third-party
+
+! Block: https://better.fyi/trackers/cintnetworks.com
+||cintnetworks.com$third-party
+
+! Block: https://better.fyi/trackers/circularhub.com
+||circularhub.com$third-party
+
+! Block: https://better.fyi/trackers/clarium.global.ssl.fastly.net
+||clarium.global.ssl.fastly.net$third-party
+
+! Block: https://better.fyi/trackers/clarium.io
+||clarium.io$third-party
+
+! Block: https://better.fyi/trackers/clickagy.com
+||clickagy.com$third-party
+
+! Block: https://better.fyi/trackers/clrstm.com
+||clrstm.com$third-party
+
+! Block: https://better.fyi/trackers/cnevids.com
+||cnevids.com$third-party
+
+! Block: https://better.fyi/trackers/cnzz.com
+||cnzz.com$third-party
+
+! Block: https://better.fyi/trackers/codigo.se
+||codigo.se$third-party
+
+! Block: https://better.fyi/trackers/cogocast.net
+||cogocast.net$third-party
+
+! Block: https://better.fyi/trackers/collective-media.net
+||collective-media.net$third-party
+
+! Block: https://better.fyi/trackers/commander1.com
+||commander1.com$third-party
+
+! Block: https://better.fyi/trackers/company-target.com
+||company-target.com$third-party
+
+! Block: https://better.fyi/trackers/comscore.com
+||comscore.com$third-party
+
+! Block: https://better.fyi/trackers/conative.de
+||conative.de$third-party
+
+! Block: https://better.fyi/trackers/condenastdigital.com
+||condenastdigital.com$third-party
+
+! Block: https://better.fyi/trackers/connexity.net
+||connexity.net$third-party
+
+! Block: https://better.fyi/trackers/content-ad.net
+||content-ad.net$third-party
+
+! Block: https://better.fyi/trackers/contentabc.com
+||contentabc.com$third-party
+
+! Block: https://better.fyi/trackers/contextweb.com
+||contextweb.com$third-party
+
+! Block: https://better.fyi/trackers/conversionlogic.net
+||conversionlogic.net$third-party
+
+! Block: https://better.fyi/trackers/cpx.to
+||cpx.to$third-party
+
+! Block: https://better.fyi/trackers/crazyegg.com
+||crazyegg.com$third-party
+
+! Block: https://better.fyi/trackers/creative-serving.com
+||creative-serving.com$third-party
+
+! Block: https://better.fyi/trackers/creditcards.com
+||creditcards.com$third-party
+
+! Block: https://better.fyi/trackers/crispadvertising.com
+||crispadvertising.com$third-party
+
+! Block: https://better.fyi/trackers/crisppremium.com
+||crisppremium.com$third-party
+
+! Block: https://better.fyi/trackers/criteo.com
+||criteo.com$third-party
+
+! Block: https://better.fyi/trackers/criteo.net
+||criteo.net$third-party
+
+! Block: https://better.fyi/trackers/crsspxl.com
+||crsspxl.com$third-party
+
+! Block: https://better.fyi/trackers/crwdcntrl.net
+||crwdcntrl.net$third-party
+
+! Block: https://better.fyi/trackers/webminerpool.com
+||webminerpool.com$third-party
+
+! Block: https://better.fyi/trackers/minexmr.com
+||minexmr.com$third-party
+
+! Block: https://better.fyi/trackers/coin-hive.com
+||coin-hive.com$third-party
+
+! Block: https://better.fyi/trackers/coinhive.com
+||coinhive.com$third-party
+
+! Block: https://better.fyi/trackers/cnhv.co
+||cnhv.co$third-party
+
+! Block: https://better.fyi/trackers/jsecoin.com
+||jsecoin.com$third-party
+
+! Block: https://better.fyi/trackers/minemytraffic.com
+||minemytraffic.com$third-party
+
+! Block: https://better.fyi/trackers/crypto-loot.com
+||crypto-loot.com$third-party
+
+! Block: https://better.fyi/trackers/ppoi.org
+||ppoi.org$third-party
+
+! Block: https://better.fyi/trackers/projectpoi.com
+||projectpoi.com$third-party
+
+! Block: https://better.fyi/trackers/webmine.cz
+||webmine.cz$third-party
+
+! Block: https://better.fyi/trackers/coinerra.com
+||coinerra.com$third-party
+
+! Block: https://better.fyi/trackers/mataharirama.xyz
+||mataharirama.xyz$third-party
+
+! Block: https://better.fyi/trackers/minero.pw
+||minero.pw$third-party
+
+! Block: https://better.fyi/trackers/reasedoper.pw
+||reasedoper.pw$third-party
+
+! Block: https://better.fyi/trackers/coin-have.com
+||coin-have.com$third-party
+
+! Block: https://better.fyi/trackers/monero-miner.net
+||monero-miner.net$third-party
+
+! Block: https://better.fyi/trackers/jsccnn.com
+||jsccnn.com$third-party
+
+! Block: https://better.fyi/trackers/jscdndel.com
+||jscdndel.com$third-party
+
+! Block: https://better.fyi/trackers/hatevery.info
+||hatevery.info$third-party
+
+! Block: https://better.fyi/trackers/coinhiveproxy.com
+||coinhiveproxy.com$third-party
+
+! Block: https://better.fyi/trackers/coinpot.co
+||coinpot.co$third-party
+
+! Block: https://better.fyi/trackers/noblock.pro
+||noblock.pro$third-party
+
+! Block: https://better.fyi/trackers/cryptoloot.pro
+||cryptoloot.pro$third-party
+
+! Block: https://better.fyi/trackers/csgocpu.com
+||csgocpu.com$third-party
+
+! Block: https://better.fyi/trackers/1beb2a44.space
+||1beb2a44.space$third-party
+
+! Block: https://better.fyi/trackers/300ca0d0.space
+||300ca0d0.space$third-party
+
+! Block: https://better.fyi/trackers/310ca263.space
+||310ca263.space$third-party
+
+! Block: https://better.fyi/trackers/320ca3f6.space
+||320ca3f6.space$third-party
+
+! Block: https://better.fyi/trackers/330ca589.space
+||330ca589.space$third-party
+
+! Block: https://better.fyi/trackers/340ca71c.space
+||340ca71c.space$third-party
+
+! Block: https://better.fyi/trackers/360caa42.space
+||360caa42.space$third-party
+
+! Block: https://better.fyi/trackers/370cabd5.space
+||370cabd5.space$third-party
+
+! Block: https://better.fyi/trackers/3c0cb3b4.space
+||3c0cb3b4.space$third-party
+
+! Block: https://better.fyi/trackers/3d0cb547.space
+||3d0cb547.space$third-party
+
+! Block: https://better.fyi/trackers/77.162.125.199
+||77.162.125.199$third-party
+
+! Block: https://better.fyi/trackers/ad-miner.com
+||ad-miner.com$third-party
+
+! Block: https://better.fyi/trackers/adminer.com
+||adminer.com$third-party
+
+! Block: https://better.fyi/trackers/aeros01.tk
+||aeros01.tk$third-party
+
+! Block: https://better.fyi/trackers/aeros02.tk
+||aeros02.tk$third-party
+
+! Block: https://better.fyi/trackers/aeros03.tk
+||aeros03.tk$third-party
+
+! Block: https://better.fyi/trackers/aeros04.tk
+||aeros04.tk$third-party
+
+! Block: https://better.fyi/trackers/aeros05.tk
+||aeros05.tk$third-party
+
+! Block: https://better.fyi/trackers/aeros06.tk
+||aeros06.tk$third-party
+
+! Block: https://better.fyi/trackers/aeros07.tk
+||aeros07.tk$third-party
+
+! Block: https://better.fyi/trackers/aeros08.tk
+||aeros08.tk$third-party
+
+! Block: https://better.fyi/trackers/aeros09.tk
+||aeros09.tk$third-party
+
+! Block: https://better.fyi/trackers/aeros10.tk
+||aeros10.tk$third-party
+
+! Block: https://better.fyi/trackers/aeros11.tk
+||aeros11.tk$third-party
+
+! Block: https://better.fyi/trackers/aeros12.tk
+||aeros12.tk$third-party
+
+! Block: https://better.fyi/trackers/afminer.com
+||afminer.com$third-party
+
+! Block: https://better.fyi/trackers/aleinvest.xyz
+||aleinvest.xyz$third-party
+
+! Block: https://better.fyi/trackers/alemoney.xyz
+||alemoney.xyz$third-party
+
+! Block: https://better.fyi/trackers/altpool.pro
+||altpool.pro$third-party
+
+! Block: https://better.fyi/trackers/api.inwemo.com
+||api.inwemo.com$third-party
+
+! Block: https://better.fyi/trackers/azvjudwr.info
+||azvjudwr.info$third-party
+
+! Block: https://better.fyi/trackers/baiduccdn1.com
+||baiduccdn1.com$third-party
+
+! Block: https://better.fyi/trackers/cloudcoins.co
+||cloudcoins.co$third-party
+
+! Block: https://better.fyi/trackers/coinhive-manager.com
+||coinhive-manager.com$third-party
+
+! Block: https://better.fyi/trackers/coinhive-proxy.party
+||coinhive-proxy.party$third-party
+
+! Block: https://better.fyi/trackers/coinlab.biz
+||coinlab.biz$third-party
+
+! Block: https://better.fyi/trackers/coinminerz.com
+||coinminerz.com$third-party
+
+! Block: https://better.fyi/trackers/cookiescript.info
+||cookiescript.info$third-party
+
+! Block: https://better.fyi/trackers/crypto-coins.club
+||crypto-coins.club$third-party
+
+! Block: https://better.fyi/trackers/darking01.tk
+||darking01.tk$third-party
+
+! Block: https://better.fyi/trackers/darking02.tk
+||darking02.tk$third-party
+
+! Block: https://better.fyi/trackers/darking03.tk
+||darking03.tk$third-party
+
+! Block: https://better.fyi/trackers/darking04.tk
+||darking04.tk$third-party
+
+! Block: https://better.fyi/trackers/darking05.tk
+||darking05.tk$third-party
+
+! Block: https://better.fyi/trackers/darking06.tk
+||darking06.tk$third-party
+
+! Block: https://better.fyi/trackers/darking07.tk
+||darking07.tk$third-party
+
+! Block: https://better.fyi/trackers/darking08.tk
+||darking08.tk$third-party
+
+! Block: https://better.fyi/trackers/darking09.tk
+||darking09.tk$third-party
+
+! Block: https://better.fyi/trackers/deepc.cc
+||deepc.cc$third-party
+
+! Block: https://better.fyi/trackers/go.megabanners.cf
+||go.megabanners.cf$third-party
+
+! Block: https://better.fyi/trackers/jroqvbvw.info
+||jroqvbvw.info$third-party
+
+! Block: https://better.fyi/trackers/jyhfuqoh.info
+||jyhfuqoh.info$third-party
+
+! Block: https://better.fyi/trackers/kdowqlpt.info
+||kdowqlpt.info$third-party
+
+! Block: https://better.fyi/trackers/megabanners.cf
+||megabanners.cf$third-party
+
+! Block: https://better.fyi/trackers/minecrunch.co
+||minecrunch.co$third-party
+
+! Block: https://better.fyi/trackers/miner.pr0gramm.com
+||miner.pr0gramm.com$third-party
+
+! Block: https://better.fyi/trackers/minexmr.com
+||minexmr.com$third-party
+
+! Block: https://better.fyi/trackers/mmpool.org
+||mmpool.org$third-party
+
+! Block: https://better.fyi/trackers/monerominer.rocks
+||monerominer.rocks$third-party
+
+! Block: https://better.fyi/trackers/onlinereserchstatistics.online
+||onlinereserchstatistics.online$third-party
+
+! Block: https://better.fyi/trackers/papoto.com
+||papoto.com$third-party
+
+! Block: https://better.fyi/trackers/podrltid.info
+||podrltid.info$third-party
+
+! Block: https://better.fyi/trackers/rocks.io
+||rocks.io$third-party
+
+! Block: https://better.fyi/trackers/sbhmn-miner.com
+||sbhmn-miner.com$third-party
+
+! Block: https://better.fyi/trackers/secumine.net
+||secumine.net$third-party
+
+! Block: https://better.fyi/trackers/siteverification.online
+||siteverification.online$third-party
+
+! Block: https://better.fyi/trackers/siteverification.site
+||siteverification.site$third-party
+
+! Block: https://better.fyi/trackers/subloader.cf
+||subloader.cf$third-party
+
+! Block: https://better.fyi/trackers/supportxmr.com
+||supportxmr.com$third-party
+
+! Block: https://better.fyi/trackers/xbasfbno.info
+||xbasfbno.info$third-party
+
+! Block: https://better.fyi/trackers/minr.pw
+||minr.pw$third-party
+
+! Block: https://better.fyi/trackers/cdn.jquery-uim.download
+||cdn.jquery-uim.download$third-party
+
+! Block: https://better.fyi/trackers/cndhit.xyz
+||cndhit.xyz$third-party
+
+! Block: https://better.fyi/trackers/g-content.bid
+||g-content.bid$third-party
+
+! Block: https://better.fyi/trackers/statistic.date
+||statistic.date$third-party
+
+! Block: https://better.fyi/trackers/cdnfile.xyz
+||cdnfile.xyz$third-party
+
+! Block: https://better.fyi/trackers/web.clod.pw
+||web.clod.pw$third-party
+
+! Block: https://better.fyi/trackers/static-net.nut.cc
+||static-net.nut.cc$third-party
+
+! Block: https://better.fyi/trackers/static-02.flu.cc
+||static-02.flu.cc$third-party
+
+! Block: https://better.fyi/trackers/cdn.static-cnt.bid
+||cdn.static-cnt.bid$third-party
+
+! Block: https://better.fyi/trackers/web.dle-news.pw
+||web.dle-news.pw$third-party
+
+! Block: https://better.fyi/trackers/cryptonoter.com
+||cryptonoter.com$third-party
+
+! Block: https://better.fyi/trackers/mutuza.win
+||mutuza.win$third-party
+
+! Block: https://better.fyi/trackers/crypto-webminer.com
+||crypto-webminer.com$third-party
+
+! Block: https://better.fyi/trackers/adless.io
+||adless.io$third-party
+
+! Block: https://better.fyi/trackers/nablabee.com
+||nablabee.com$third-party
+
+! Block: https://better.fyi/trackers/tulip18.com
+||tulip18.com$third-party
+
+! Block: https://better.fyi/trackers/pr0gram.org
+||pr0gram.org$third-party
+
+! Block: https://better.fyi/trackers/interestingz.pw
+||interestingz.pw$third-party
+
+! Block: https://better.fyi/trackers/datasecu.download
+||datasecu.download$third-party
+
+! Block: https://better.fyi/trackers/jquery-cdn.download
+||jquery-cdn.download$third-party
+
+! Block: https://better.fyi/trackers/gustaver.ddns.net
+||gustaver.ddns.net$third-party
+
+! Block: https://better.fyi/trackers/cryptaloot.pro
+||cryptaloot.pro$third-party
+
+! Block: https://better.fyi/trackers/eth-pocket.de
+||eth-pocket.de$third-party
+
+! Block: https://better.fyi/trackers/jqrcdn.download
+||jqrcdn.download$third-party
+
+! Block: https://better.fyi/trackers/jqwww.download
+||jqwww.download$third-party
+
+! Block: https://better.fyi/trackers/gramombird.com
+||gramombird.com$third-party
+
+! Block: https://better.fyi/trackers/verifier.live
+||verifier.live$third-party
+
+! Block: https://better.fyi/trackers/feesocrald.com
+||feesocrald.com$third-party
+
+! Block: https://better.fyi/trackers/reauthenticator.com
+||reauthenticator.com$third-party
+
+! Block: https://better.fyi/trackers/swiftmining.win
+||swiftmining.win$third-party
+
+! Block: https://better.fyi/trackers/ctnsnet.com
+||ctnsnet.com$third-party
+
+! Block: https://better.fyi/trackers/cxense.com
+||cxense.com$third-party
+
+! Block: https://better.fyi/trackers/d26t7ex48mr4bn.cloudfront.net
+||d26t7ex48mr4bn.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/d31qbv1cthcecs.cloudfront.net
+||d31qbv1cthcecs.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/d37sfqor0g25ph.cloudfront.net
+||d37sfqor0g25ph.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/d3qxwzhswv93jk.cloudfront.net
+||d3qxwzhswv93jk.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/d5nxst8fruw4z.cloudfront.net
+||d5nxst8fruw4z.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/d8rk54i4mohrb.cloudfront.net
+||d8rk54i4mohrb.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/de17a.com
+||de17a.com$third-party
+
+! Block: https://better.fyi/trackers/deepintent.com
+||deepintent.com$third-party
+
+! Block: https://better.fyi/trackers/demdex.net
+||demdex.net$third-party
+
+! Block: https://better.fyi/trackers/deployads.com
+||deployads.com$third-party
+
+! Block: https://better.fyi/trackers/df-srv.de
+||df-srv.de$third-party
+
+! Block: https://better.fyi/trackers/dff7tx5c2qbxc.cloudfront.net
+||dff7tx5c2qbxc.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/dianomi.com
+||dianomi.com$third-party
+
+! Block: https://better.fyi/trackers/digitru.st
+||digitru.st$third-party
+
+! Block: https://better.fyi/trackers/dimml.io
+||dimml.io$third-party
+
+! Block: https://better.fyi/trackers/distiltag.com
+||distiltag.com$third-party
+
+! Block: https://better.fyi/trackers/districtm.io
+||districtm.io$third-party
+
+! Block: https://better.fyi/trackers/dmtry.com
+||dmtry.com$third-party
+
+! Block: https://better.fyi/trackers/dnkzzz1hlto79.cloudfront.net
+||dnkzzz1hlto79.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/dnn506yrbagrg.cloudfront.net
+||dnn506yrbagrg.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/do-not-tracker.org
+||do-not-tracker.org$third-party
+
+! Block: https://better.fyi/trackers/domdex.com
+||domdex.com$third-party
+
+! Block: https://better.fyi/trackers/dotomi.com
+||dotomi.com$third-party
+
+! Block: https://better.fyi/trackers/doubleclick.net
+||doubleclick.net$third-party
+
+! Block: https://better.fyi/trackers/doubleclick.net
+||doubleclick.net$third-party
+
+! Block: https://better.fyi/trackers/doubleverify.com
+||doubleverify.com$third-party
+
+! Block: https://better.fyi/trackers/dp8hsntg6do36.cloudfront.net
+||dp8hsntg6do36.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/dpclk.com
+||dpclk.com$third-party
+
+! Block: https://better.fyi/trackers/dwin1.com
+||dwin1.com$third-party
+
+! Block: https://better.fyi/trackers/dwin2.com
+||dwin2.com$third-party
+
+! Block: https://better.fyi/trackers/dy48bnzanqw0v.cloudfront.net
+||dy48bnzanqw0v.cloudfront.net$third-party
+
+! Block: https://better.fyi/trackers/dynad.net
+||dynad.net$third-party
+
+! Block: https://better.fyi/trackers/dyntrk.com
+||dyntrk.com$third-party
+
+! Block: https://better.fyi/trackers/elasticad.net
+||elasticad.net$third-party
+
+! Block: https://better.fyi/trackers/em0n.com
+||em0n.com$third-party
+
+! Block: https://better.fyi/trackers/emetriq.de
+||emetriq.de$third-party
+
+! Block: https://better.fyi/trackers/emsservice.de
+||emsservice.de$third-party
+
+! Block: https://better.fyi/trackers/emxdgt.com
+||emxdgt.com$third-party
+
+! Block: https://better.fyi/trackers/ensighten.com
+||ensighten.com$third-party
+
+! Block: https://better.fyi/trackers/eqads.com
+||eqads.com$third-party
+
+! Block: https://better.fyi/trackers/erne.co
+||erne.co$third-party
+
+! Block: https://better.fyi/trackers/everesttech.net
+||everesttech.net$third-party
+
+! Block: https://better.fyi/trackers/evidon.com
+||evidon.com$third-party
+
+! Block: https://better.fyi/trackers/eviltracker.net
+||eviltracker.net$third-party
+
+! Block: https://better.fyi/trackers/exactag.com
+||exactag.com$third-party
+
+! Block: https://better.fyi/trackers/exelator.com
+||exelator.com$third-party
+
+! Block: https://better.fyi/trackers/exoclick.com
+||exoclick.com$third-party
+
+! Block: https://better.fyi/trackers/exoticads.com
+||exoticads.com$third-party
+
+! Block: https://better.fyi/trackers/exposebox.com
+||exposebox.com$third-party
+
+! Block: https://better.fyi/trackers/extend.tv
+||extend.tv$third-party
+
+! Block: https://better.fyi/trackers/eyeota.net
+||eyeota.net$third-party
+
+! Block: https://better.fyi/trackers/eyereturn.com
+||eyereturn.com$third-party
+
+! Block: https://better.fyi/trackers/eyeviewads.com
+||eyeviewads.com$third-party
+
+! Block: https://better.fyi/trackers/fallingfalcon.com
+||fallingfalcon.com$third-party
+
+! Block: https://better.fyi/trackers/fastclick.net
+||fastclick.net$third-party
+
+! Block: https://better.fyi/trackers/flashtalking.com
+||flashtalking.com$third-party
+
+! Block: https://better.fyi/trackers/flite.com
+||flite.com$third-party
+
+! Block: https://better.fyi/trackers/fout.jp
+||fout.jp$third-party
+
+! Block: https://better.fyi/trackers/fqtag.com
+||fqtag.com$third-party
+
+! Block: https://better.fyi/trackers/freegeoip.net
+||freegeoip.net$third-party
+
+! Block: https://better.fyi/trackers/fwmrm.net
+||fwmrm.net$third-party
+
+! Block: https://better.fyi/trackers/gemius.pl
+||gemius.pl$third-party
+
+! Block: https://better.fyi/trackers/getclicky.com
+||getclicky.com$third-party
+
+! Block: https://better.fyi/trackers/gigaonclick.com
+||gigaonclick.com$third-party
+
+! Block: https://better.fyi/trackers/gigya.com
+||gigya.com$third-party
+
+! Block: https://better.fyi/trackers/globalwebindex.net
+||globalwebindex.net$third-party
+
+! Block: https://better.fyi/trackers/go-mpulse.net
+||go-mpulse.net$third-party
+
+! Block: https://better.fyi/trackers/google-analytics.com
+||google-analytics.com$third-party
+
+! Block: https://better.fyi/trackers/google.co.in
+||google.co.in$third-party
+
+! Block: https://better.fyi/trackers/google.co.jp
+||google.co.jp$third-party
+
+! Block: https://better.fyi/trackers/google.com.br
+||google.com.br$third-party
+
+! Block: https://better.fyi/trackers/google.com.hk
+||google.com.hk$third-party
+
+! Block: https://better.fyi/trackers/google.com.ph
+||google.com.ph$third-party
+
+! Block: https://better.fyi/trackers/google.com.pk
+||google.com.pk$third-party
+
+! Block: https://better.fyi/trackers/google.com.tr
+||google.com.tr$third-party
+
+! Block: https://better.fyi/trackers/google.com
+||google.com/ads$third-party
+
+! Block: https://better.fyi/trackers/google.com
+||google.com/pagead$third-party
+
+! Block: https://better.fyi/trackers/google.com
+||google.com/js/gweb$third-party
+
+! Block: https://better.fyi/trackers/apis.google.com
+||apis.google.com/js/client:platform.js$third-party
+
+! Block: https://better.fyi/trackers/apis.google.com
+||apis.google.com/js/plusone.js$third-party
+
+! Block: https://better.fyi/trackers/apis.google.com
+||apis.google.com/js/client:plusone.js$third-party
+
+! Block: https://better.fyi/trackers/apis.google.com
+||apis.google.com/js/rpc:shindig_random.js$third-party
+
+! Block: https://better.fyi/trackers/apis.google.com
+||apis.google.com/_/widget$third-party
+
+! Block: https://better.fyi/trackers/apis.google.com
+||apis.google.com/se/0/_/+1/fastbutton$third-party
+
+! Block: https://better.fyi/trackers/google.com
+||google.com/images/icons/ui/gprofile_button-16.png$third-party
+
+! Block: https://better.fyi/trackers/google.com
+||google.com/images/cleardot.gif$third-party
+
+! Block: https://better.fyi/trackers/fundingchoices.google.com
+||fundingchoices.google.com$third-party
+
+! Block: https://better.fyi/trackers/maps.googleapis.com
+||maps.googleapis.com/maps/api/js/QuotaService.RecordEvent$third-party
+
+! Block: https://better.fyi/trackers/maps.googleapis.com
+||maps.googleapis.com/maps-api-v3/api/js/25/5/stats.js$third-party
+
+! Block: https://better.fyi/trackers/google.es
+||google.es$third-party
+
+! Block: https://better.fyi/trackers/google.fr
+||google.fr$third-party
+
+! Block: https://better.fyi/trackers/google.gr
+||google.gr$third-party
+
+! Block: https://better.fyi/trackers/google.ie
+||google.ie$third-party
+
+! Block: https://better.fyi/trackers/google.it
+||google.it$third-party
+
+! Block: https://better.fyi/trackers/google.pt
+||google.pt$third-party
+
+! Block: https://better.fyi/trackers/google.ru
+||google.ru$third-party
+
+! Block: https://better.fyi/trackers/google.se
+||google.se/ads$third-party
+
+! Hide CSS. More info: https://better.fyi/sites/google. or https://better.fyi/trackers/google.
+google.##div[aria-label="Ads"]
+
+! Block: https://better.fyi/trackers/google.sn
+||google.sn$third-party
+
+! Block: https://better.fyi/trackers/googleadservices.com
+||googleadservices.com$third-party
+
+! Block: https://better.fyi/trackers/
+||/adsense/search/async-ads.js$third-party,domain=startpage.com
+
+! Block: https://better.fyi/trackers/googlesyndication.com
+||googlesyndication.com$third-party
+
+! Block: https://better.fyi/trackers/googletagmanager.com
+||googletagmanager.com$third-party
+
+! Block: https://better.fyi/trackers/googletagservices.com
+||googletagservices.com$third-party
+
+! Block: https://better.fyi/trackers/gssprt.jp
+||gssprt.jp$third-party
+
+! Block: https://better.fyi/trackers/metric.gstatic.com
+||metric.gstatic.com$third-party
+
+! Block: https://better.fyi/trackers/gumgum.com
+||gumgum.com$third-party
+
+! Block: https://better.fyi/trackers/gwallet.com
+||gwallet.com$third-party
+
+! Block: https://better.fyi/trackers/heatmap.it
+||heatmap.it$third-party
+
+! Block: https://better.fyi/trackers/hlserve.com
+||hlserve.com$third-party
+
+! Block: https://better.fyi/trackers/hotjar.com
+||hotjar.com$third-party
+
+! Block: https://better.fyi/trackers/hrnorth.se
+||hrnorth.se$third-party
+
+! Block: https://better.fyi/trackers/hybrid.ai
+||hybrid.ai$third-party
+
+! Block: https://better.fyi/trackers/iasds01.com
+||iasds01.com$third-party
+
+! Block: https://better.fyi/trackers/ib-ibi.com
+||ib-ibi.com$third-party
+
+! Block: https://better.fyi/trackers/ibillboard.com
+||ibillboard.com$third-party
+
+! Block: https://better.fyi/trackers/igodigital.com
+||igodigital.com$third-party
+
+! Block: https://better.fyi/trackers/imasdk.googleapis.com
+||imasdk.googleapis.com$third-party
+
+! Block: https://better.fyi/trackers/imedia.cz
+||imedia.cz$third-party
+
+! Block: https://better.fyi/trackers/impdesk.com
+||impdesk.com$third-party
+
+! Block: https://better.fyi/trackers/imrworldwide.com
+||imrworldwide.com$third-party
+
+! Block: https://better.fyi/trackers/imshopping.com
+||imshopping.com$third-party
+
+! Block: https://better.fyi/trackers/indexww.com
+||indexww.com$third-party
+
+! Block: https://better.fyi/trackers/infolinks.com
+||infolinks.com$third-party
+
+! Block: https://better.fyi/trackers/innovid.com
+||innovid.com$third-party
+
+! Block: https://better.fyi/trackers/insightexpressai.com
+||insightexpressai.com$third-party
+
+! Block: https://better.fyi/trackers/instinctiveads.com
+||instinctiveads.com$third-party
+
+! Block: https://better.fyi/trackers/interactivemedia.net
+||interactivemedia.net$third-party
+
+! Block: https://better.fyi/trackers/interstateanalytics.com
+||interstateanalytics.com$third-party
+
+! Block: https://better.fyi/trackers/invitemedia.com
+||invitemedia.com$third-party
+
+! Block: https://better.fyi/trackers/ioam.de
+||ioam.de$third-party
+
+! Block: https://better.fyi/trackers/ipowow.com
+||ipowow.com$third-party
+
+! Block: https://better.fyi/trackers/ipredictive.com
+||ipredictive.com$third-party
+
+! Block: https://better.fyi/trackers/ixiaa.com
+||ixiaa.com$third-party
+
+! Block: https://better.fyi/trackers/jivox.com
+||jivox.com$third-party
+
+! Block: https://better.fyi/trackers/jsonip.com
+||jsonip.com$third-party
+
+! Block: https://better.fyi/trackers/jsrdn.com
+||jsrdn.com$third-party
+
+! Block: https://better.fyi/trackers/jumptap.com
+||jumptap.com$third-party
+
+! Block: https://better.fyi/trackers/justicejudo.com
+||justicejudo.com$third-party
+
+! Block: https://better.fyi/trackers/justpremium.com
+||justpremium.com$third-party
+
+! Block: https://better.fyi/trackers/ketchuponnews.com
+||ketchuponnews.com$third-party
+
+! Block: https://better.fyi/trackers/keywee.co
+||keywee.co$third-party
+
+! Block: https://better.fyi/trackers/kixer.com
+||kixer.com$third-party
+
+! Block: https://better.fyi/trackers/komoona.com
+||komoona.com$third-party
+
+! Block: https://better.fyi/trackers/krxd.net
+||krxd.net$third-party
+
+! Block: https://better.fyi/trackers/ladsp.com
+||ladsp.com$third-party
+
+! Block: https://better.fyi/trackers/ladsp.jp
+||ladsp.jp$third-party
+
+! Block: https://better.fyi/trackers/leaplunchroom.com
+||leaplunchroom.com$third-party
+
+! Block: https://better.fyi/trackers/liadm.com
+||liadm.com$third-party
+
+! Block: https://better.fyi/trackers/lifestreet.com
+||lifestreet.com$third-party
+
+! Block: https://better.fyi/trackers/ligadx.com
+||ligadx.com$third-party
+
+! Block: https://better.fyi/trackers/ligatus.com
+||ligatus.com$third-party
+
+! Block: https://better.fyi/trackers/lightboxapi1.azurewebsites.net
+||lightboxapi1.azurewebsites.net$third-party
+
+! Block: https://better.fyi/trackers/lightboxapi2.azurewebsites.net
+||lightboxapi2.azurewebsites.net$third-party
+
+! Block: https://better.fyi/trackers/lightboxcdn.com
+||lightboxcdn.com$third-party
+
+! Block: https://better.fyi/trackers/lijit.com
+||lijit.com$third-party
+
+! Block: https://better.fyi/trackers/linkedin.com
+||linkedin.com$third-party
+
+! Block: https://better.fyi/trackers/linksynergy.com
+||linksynergy.com$third-party
+
+! Block: https://better.fyi/trackers/liveperson.net
+||liveperson.net$third-party
+
+! Block: https://better.fyi/trackers/liverail.com
+||liverail.com$third-party
+
+! Block: https://better.fyi/trackers/lkqd.net
+||lkqd.net$third-party
+
+! Block: https://better.fyi/trackers/load.s3.amazonaws.com
+||load.s3.amazonaws.com$third-party
+
+! Block: https://better.fyi/trackers/lp4.io
+||lp4.io$third-party
+
+! Block: https://better.fyi/trackers/lpsnmedia.net
+||lpsnmedia.net$third-party
+
+! Block: https://better.fyi/trackers/lrcdn.net
+||lrcdn.net$third-party
+
+! Block: https://better.fyi/trackers/lytics.io
+||lytics.io$third-party
+
+! Block: https://better.fyi/trackers/m6r.eu
+||m6r.eu$third-party
+
+! Block: https://better.fyi/trackers/mail.ru
+||mail.ru$third-party
+
+! Block: https://better.fyi/trackers/marinsm.com
+||marinsm.com$third-party
+
+! Block: https://better.fyi/trackers/marketgid.com
+||marketgid.com$third-party
+
+! Block: https://better.fyi/trackers/marketo.com
+||marketo.com$third-party
+
+! Block: https://better.fyi/trackers/marketo.net
+||marketo.net$third-party
+
+! Block: https://better.fyi/trackers/matheranalytics.com
+||matheranalytics.com$third-party
+
+! Block: https://better.fyi/trackers/mathtag.com
+||mathtag.com$third-party
+
+! Block: https://better.fyi/trackers/maxymiser.net
+||maxymiser.net$third-party
+
+! Block: https://better.fyi/trackers/mbww.com
+||mbww.com$third-party
+
+! Block: https://better.fyi/trackers/mdotm.com
+||mdotm.com$third-party
+
+! Block: https://better.fyi/trackers/media.net
+||media.net$third-party
+
+! Block: https://better.fyi/trackers/media6degrees.com
+||media6degrees.com$third-party
+
+! Block: https://better.fyi/trackers/mediaplex.com
+||mediaplex.com$third-party
+
+! Block: https://better.fyi/trackers/mediarithmics.com
+||mediarithmics.com$third-party
+
+! Block: https://better.fyi/trackers/mediavoice.com
+||mediavoice.com$third-party
+
+! Block: https://better.fyi/trackers/mediawallahscript.com
+||mediawallahscript.com$third-party
+
+! Block: https://better.fyi/trackers/meetrics.net
+||meetrics.net$third-party
+
+! Block: https://better.fyi/trackers/megdexchange.com
+||megdexchange.com$third-party
+
+! Block: https://better.fyi/trackers/mentad.com
+||mentad.com$third-party
+
+! Block: https://better.fyi/trackers/metadsp.co.uk
+||metadsp.co.uk$third-party
+
+! Block: https://better.fyi/trackers/mfadsrvr.com
+||mfadsrvr.com$third-party
+
+! Block: https://better.fyi/trackers/mgid.com
+||mgid.com$third-party
+
+! Block: https://better.fyi/trackers/mixpanel.com
+||mixpanel.com$third-party
+
+! Block: https://better.fyi/trackers/mkt922.com
+||mkt922.com$third-party
+
+! Block: https://better.fyi/trackers/mkt932.com
+||mkt932.com$third-party
+
+! Block: https://better.fyi/trackers/mkt941.com
+||mkt941.com$third-party
+
+! Block: https://better.fyi/trackers/mktoresp.com
+||mktoresp.com$third-party
+
+! Block: https://better.fyi/trackers/ml314.com
+||ml314.com$third-party
+
+! Block: https://better.fyi/trackers/moatads.com
+||moatads.com$third-party
+
+! Block: https://better.fyi/trackers/moatpixel.com
+||moatpixel.com$third-party
+
+! Block: https://better.fyi/trackers/mobileadtrading.com
+||mobileadtrading.com$third-party
+
+! Block: https://better.fyi/trackers/mobilenations.com
+||mobilenations.com$third-party
+
+! Block: https://better.fyi/trackers/monsido.com
+||monsido.com$third-party
+
+! Block: https://better.fyi/trackers/mookie1.com
+||mookie1.com$third-party
+
+! Block: https://better.fyi/trackers/mouseflow.com
+||mouseflow.com$third-party
+
+! Block: https://better.fyi/trackers/msn.com
+||msn.com$third-party
+
+! Block: https://better.fyi/trackers/mxcdn.net
+||mxcdn.net$third-party
+
+! Block: https://better.fyi/trackers/mxptint.net
+||mxptint.net$third-party
+
+! Block: https://better.fyi/trackers/myvisualiq.net
+||myvisualiq.net$third-party
+
+! Block: https://better.fyi/trackers/nanigans.com
+||nanigans.com$third-party
+
+! Block: https://better.fyi/trackers/native.ai
+||native.ai$third-party
+
+! Block: https://better.fyi/trackers/nativeads.com
+||nativeads.com$third-party
+
+! Block: https://better.fyi/trackers/navdmp.com
+||navdmp.com$third-party
+
+! Block: https://better.fyi/trackers/netmng.com
+||netmng.com$third-party
+
+! Block: https://better.fyi/trackers/netseer.com
+||netseer.com$third-party
+
+! Block: https://better.fyi/trackers/newrelic.com
+||newrelic.com$third-party
+
+! Block: https://better.fyi/trackers/newsinc.com
+||newsinc.com$third-party
+
+! Block: https://better.fyi/trackers/newsmaxfeednetwork.com
+||newsmaxfeednetwork.com$third-party
+
+! Block: https://better.fyi/trackers/nexac.com
+||nexac.com$third-party
+
+! Block: https://better.fyi/trackers/npttech.com
+||npttech.com$third-party
+
+! Block: https://better.fyi/trackers/nr-data.net
+||nr-data.net$third-party
+
+! Block: https://better.fyi/trackers/nsstatic.com
+||nsstatic.com$third-party
+
+! Block: https://better.fyi/trackers/nsstatic.net
+||nsstatic.net$third-party
+
+! Block: https://better.fyi/trackers/ntv.io
+||ntv.io$third-party
+
+! Block: https://better.fyi/trackers/nuggad.net
+||nuggad.net$third-party
+
+! Block: https://better.fyi/trackers/omtrdc.net
+||omtrdc.net$third-party
+
+! Block: https://better.fyi/trackers/onaudience.com
+||onaudience.com$third-party
+
+! Block: https://better.fyi/trackers/onesignal.com
+||onesignal.com$third-party
+
+! Block: https://better.fyi/trackers/onthe.io
+||onthe.io$third-party
+
+! Block: https://better.fyi/trackers/opecloud.com
+||opecloud.com$third-party
+
+! Block: https://better.fyi/trackers/opendsp.com
+||opendsp.com$third-party
+
+! Block: https://better.fyi/trackers/openx.net
+||openx.net$third-party
+
+! Block: https://better.fyi/trackers/optimahub.com
+||optimahub.com$third-party
+
+! Block: https://better.fyi/trackers/optimizely.com
+||optimizely.com$third-party
+
+! Block: https://better.fyi/trackers/os.tc
+||os.tc$third-party
+
+! Block: https://better.fyi/trackers/outbrain.com
+||outbrain.com$third-party
+
+! Block: https://better.fyi/trackers/outbrainimg.com
+||outbrainimg.com$third-party
+
+! Block: https://better.fyi/trackers/owneriq.net
+||owneriq.net$third-party
+
+! Block: https://better.fyi/trackers/p161.net
+||p161.net$third-party
+
+! Block: https://better.fyi/trackers/pagefair.com
+||pagefair.com$third-party
+
+! Block: https://better.fyi/trackers/pagefair.net
+||pagefair.net$third-party
+
+! Block: https://better.fyi/trackers/pages02.net
+||pages02.net$third-party
+
+! Block: https://better.fyi/trackers/pages03.net
+||pages03.net$third-party
+
+! Block: https://better.fyi/trackers/pages04.net
+||pages04.net$third-party
+
+! Block: https://better.fyi/trackers/pages05.net
+||pages05.net$third-party
+
+! Block: https://better.fyi/trackers/pages06.net
+||pages06.net$third-party
+
+! Block: https://better.fyi/trackers/parsely.com
+||parsely.com$third-party
+
+! Block: https://better.fyi/trackers/pbbl.co
+||pbbl.co$third-party
+
+! Block: https://better.fyi/trackers/peer39.com
+||peer39.com$third-party
+
+! Block: https://better.fyi/trackers/perfdrive.com
+||perfdrive.com$third-party
+
+! Block: https://better.fyi/trackers/perfectmarket.com
+||perfectmarket.com$third-party
+
+! Block: https://better.fyi/trackers/permutive.com
+||permutive.com$third-party
+
+! Block: https://better.fyi/trackers/petametrics.com
+||petametrics.com$third-party
+
+! Block: https://better.fyi/trackers/petiteumbrella.com
+||petiteumbrella.com$third-party
+
+! Block: https://better.fyi/trackers/pingdom.net
+||pingdom.net$third-party
+
+! Block: https://better.fyi/trackers/assets.pinterest.com
+||assets.pinterest.com/js/pinit.js$third-party
+
+! Block: https://better.fyi/trackers/s.pinimg.com
+||s.pinimg.com/ct/$third-party
+
+! Block: https://better.fyi/trackers/ct.pinterest.com
+||ct.pinterest.com$third-party
+
+! Block: https://better.fyi/trackers/pippio.com
+||pippio.com$third-party
+
+! Block: https://better.fyi/trackers/playground.xyz
+||playground.xyz$third-party
+
+! Block: https://better.fyi/trackers/plista.com
+||plista.com$third-party
+
+! Block: https://better.fyi/trackers/polarmobile.com
+||polarmobile.com$third-party
+
+! Block: https://better.fyi/trackers/postrelease.com
+||postrelease.com$third-party
+
+! Block: https://better.fyi/trackers/powerlinks.com
+||powerlinks.com$third-party
+
+! Block: https://better.fyi/trackers/ppjol.net
+||ppjol.net$third-party
+
+! Block: https://better.fyi/trackers/prebid.org
+||prebid.org$third-party
+
+! Block: https://better.fyi/trackers/prf.hn
+||prf.hn$third-party
+
+! Block: https://better.fyi/trackers/prfct.co
+||prfct.co$third-party
+
+! Block: https://better.fyi/trackers/pricegrabber.com
+||pricegrabber.com$third-party
+
+! Block: https://better.fyi/trackers/pro-market.net
+||pro-market.net$third-party
+
+! Block: https://better.fyi/trackers/profitrumour.com
+||profitrumour.com$third-party
+
+! Block: https://better.fyi/trackers/profusesupport.com
+||profusesupport.com$third-party
+
+! Block: https://better.fyi/trackers/programattik.com
+||programattik.com$third-party
+
+! Block: https://better.fyi/trackers/propellerclick.com
+||propellerclick.com$third-party
+
+! Block: https://better.fyi/trackers/proper.io
+||proper.io$third-party
+
+! Block: https://better.fyi/trackers/pubmatic.com
+||pubmatic.com$third-party
+
+! Block: https://better.fyi/trackers/pubmine.com
+||pubmine.com$third-party
+
+! Block: https://better.fyi/trackers/pubnation.com
+||pubnation.com$third-party
+
+! Block: https://better.fyi/trackers/quantcount.com
+||quantcount.com$third-party
+
+! Block: https://better.fyi/trackers/quantserve.com
+||quantserve.com$third-party
+
+! Block: https://better.fyi/trackers/qubit.com
+||qubit.com$third-party
+
+! Block: https://better.fyi/trackers/qubitproducts.com
+||qubitproducts.com$third-party
+
+! Block: https://better.fyi/trackers/r42tag.com
+||r42tag.com$third-party
+
+! Block: https://better.fyi/trackers/raasnet.com
+||raasnet.com$third-party
+
+! Block: https://better.fyi/trackers/rampanel.com
+||rampanel.com$third-party
+
+! Block: https://better.fyi/trackers/receptivereaction.com
+||receptivereaction.com$third-party
+
+! Block: https://better.fyi/trackers/research.de.com
+||research.de.com$third-party
+
+! Block: https://better.fyi/trackers/reson8.com
+||reson8.com$third-party
+
+! Block: https://better.fyi/trackers/resonantrock.com
+||resonantrock.com$third-party
+
+! Block: https://better.fyi/trackers/revcontent.com
+||revcontent.com$third-party
+
+! Block: https://better.fyi/trackers/revrtb.com
+||revrtb.com$third-party
+
+! Block: https://better.fyi/trackers/revrtb.net
+||revrtb.net$third-party
+
+! Block: https://better.fyi/trackers/revsci.net
+||revsci.net$third-party
+
+! Block: https://better.fyi/trackers/rezync.com
+||rezync.com$third-party
+
+! Block: https://better.fyi/trackers/rfihub.com
+||rfihub.com$third-party
+
+! Block: https://better.fyi/trackers/rfihub.net
+||rfihub.net$third-party
+
+! Block: https://better.fyi/trackers/richmetrics.com
+||richmetrics.com$third-party
+
+! Block: https://better.fyi/trackers/rkdms.com
+||rkdms.com$third-party
+
+! Block: https://better.fyi/trackers/rlcdn.com
+||rlcdn.com$third-party
+
+! Block: https://better.fyi/trackers/rqtrk.eu
+||rqtrk.eu$third-party
+
+! Block: https://better.fyi/trackers/rtk.io
+||rtk.io$third-party
+
+! Block: https://better.fyi/trackers/rtmark.net
+||rtmark.net$third-party
+
+! Block: https://better.fyi/trackers/ru4.com
+||ru4.com$third-party
+
+! Block: https://better.fyi/trackers/rubiconproject.com
+||rubiconproject.com$third-party
+
+! Block: https://better.fyi/trackers/rundsp.com
+||rundsp.com$third-party
+
+! Block: https://better.fyi/trackers/rutarget.ru
+||rutarget.ru$third-party
+
+! Block: https://better.fyi/trackers/rvty.net
+||rvty.net$third-party
+
+! Block: https://better.fyi/trackers/s-onetag.com
+||s-onetag.com$third-party
+
+! Block: https://better.fyi/trackers/sail-horizon.com
+||sail-horizon.com$third-party
+
+! Block: https://better.fyi/trackers/sail-personalize.com
+||sail-personalize.com$third-party
+
+! Block: https://better.fyi/trackers/sascdn.com
+||sascdn.com$third-party
+
+! Block: https://better.fyi/trackers/sbal4kp.com
+||sbal4kp.com$third-party
+
+! Block: https://better.fyi/trackers/scanscout.com
+||scanscout.com$third-party
+
+! Block: https://better.fyi/trackers/scoota.co
+||scoota.co$third-party
+
+! Block: https://better.fyi/trackers/scorecardresearch.com
+||scorecardresearch.com$third-party
+
+! Block: https://better.fyi/trackers/scrubswim.com
+||scrubswim.com$third-party
+
+! Block: https://better.fyi/trackers/securedvisit.com
+||securedvisit.com$third-party
+
+! Block: https://better.fyi/trackers/segment.com
+||segment.com$third-party
+
+! Block: https://better.fyi/trackers/segment.io
+||segment.io$third-party
+
+! Block: https://better.fyi/trackers/sekindo.com
+||sekindo.com$third-party
+
+! Block: https://better.fyi/trackers/sele.co
+||sele.co$third-party
+
+! Block: https://better.fyi/trackers/selectablemedia.com
+||selectablemedia.com$third-party
+
+! Block: https://better.fyi/trackers/semasio.net
+||semasio.net$third-party
+
+! Block: https://better.fyi/trackers/servebom.com
+||servebom.com$third-party
+
+! Block: https://better.fyi/trackers/servedbyopenx.com
+||servedbyopenx.com$third-party
+
+! Block: https://better.fyi/trackers/serverbid.com
+||serverbid.com$third-party
+
+! Block: https://better.fyi/trackers/serving-sys.com
+||serving-sys.com$third-party
+
+! Block: https://better.fyi/trackers/sharethis.com
+||sharethis.com$third-party
+
+! Block: https://better.fyi/trackers/sharethrough.com
+||sharethrough.com$third-party
+
+! Block: https://better.fyi/trackers/sicksmash.com
+||sicksmash.com$third-party
+
+! Block: https://better.fyi/trackers/simplereach.com
+||simplereach.com$third-party
+
+! Block: https://better.fyi/trackers/simpli.fi
+||simpli.fi$third-party
+
+! Block: https://better.fyi/trackers/sitescout.com
+||sitescout.com$third-party
+
+! Block: https://better.fyi/trackers/skimresources.com
+||skimresources.com$third-party
+
+! Block: https://better.fyi/trackers/smaato.net
+||smaato.net$third-party
+
+! Block: https://better.fyi/trackers/smartadserver.com
+||smartadserver.com$third-party
+
+! Block: https://better.fyi/trackers/smartclip.net
+||smartclip.net$third-party
+
+! Block: https://better.fyi/trackers/snidigital.com
+||snidigital.com$third-party
+
+! Block: https://better.fyi/trackers/socdm.com
+||socdm.com$third-party
+
+! Block: https://better.fyi/trackers/sonobi.com
+||sonobi.com$third-party
+
+! Block: https://better.fyi/trackers/speedcurve.com
+||speedcurve.com$third-party
+
+! Block: https://better.fyi/trackers/spongecell.com
+||spongecell.com$third-party
+
+! Block: https://better.fyi/trackers/spotad.co
+||spotad.co$third-party
+
+! Block: https://better.fyi/trackers/spotxcdn.com
+||spotxcdn.com$third-party
+
+! Block: https://better.fyi/trackers/spotxchange.com
+||spotxchange.com$third-party
+
+! Block: https://better.fyi/trackers/sprinkletxt.com
+||sprinkletxt.com$third-party
+
+! Block: https://better.fyi/trackers/stackadapt.com
+||stackadapt.com$third-party
+
+! Block: https://better.fyi/trackers/steelhousemedia.com
+||steelhousemedia.com$third-party
+
+! Block: https://better.fyi/trackers/steepto.com
+||steepto.com$third-party
+
+! Block: https://better.fyi/trackers/stickyadstv.com
+||stickyadstv.com$third-party
+
+! Block: https://better.fyi/trackers/stormyachiever.com
+||stormyachiever.com$third-party
+
+! Block: https://better.fyi/trackers/storygize.net
+||storygize.net$third-party
+
+! Block: https://better.fyi/trackers/stroeerdp.de
+||stroeerdp.de$third-party
+
+! Block: https://better.fyi/trackers/summerhamster.com
+||summerhamster.com$third-party
+
+! Block: https://better.fyi/trackers/sundaysky.com
+||sundaysky.com$third-party
+
+! Block: https://better.fyi/trackers/survata.com
+||survata.com$third-party
+
+! Block: https://better.fyi/trackers/swoop.com
+||swoop.com$third-party
+
+! Block: https://better.fyi/trackers/t4ft.de
+||t4ft.de$third-party
+
+! Block: https://better.fyi/trackers/taboola.com
+||taboola.com$third-party
+
+! Block: https://better.fyi/trackers/tailsweep.com
+||tailsweep.com$third-party
+
+! Block: https://better.fyi/trackers/tailtarget.com
+||tailtarget.com$third-party
+
+! Block: https://better.fyi/trackers/tapad.com
+||tapad.com$third-party
+
+! Block: https://better.fyi/trackers/teads.tv
+||teads.tv$third-party
+
+! Block: https://better.fyi/trackers/tealiumiq.com
+||tealiumiq.com$third-party
+
+! Block: https://better.fyi/trackers/tekblue.net
+||tekblue.net$third-party
+
+! Block: https://better.fyi/trackers/theadex.com
+||theadex.com$third-party
+
+! Block: https://better.fyi/trackers/thebrighttag.com
+||thebrighttag.com$third-party
+
+! Block: https://better.fyi/trackers/thrtle.com
+||thrtle.com$third-party
+
+! Block: https://better.fyi/trackers/tidaltv.com
+||tidaltv.com$third-party
+
+! Block: https://better.fyi/trackers/tinypass.com
+||tinypass.com$third-party
+
+! Block: https://better.fyi/trackers/tiqcdn.com
+||tiqcdn.com$third-party
+
+! Block: https://better.fyi/trackers/tns-counter.ru
+||tns-counter.ru$third-party
+
+! Block: https://better.fyi/trackers/townnews..com
+||townnews..com/.*/.*ads.*$third-party
+
+! Hide CSS. More info: https://better.fyi/sites/.* or https://better.fyi/trackers/.*
+.*##.tnt-ads,.dfp-ad
+
+! Block: https://better.fyi/trackers/trackersimulator.org
+||trackersimulator.org$third-party
+
+! Block: https://better.fyi/trackers/trackjs.com
+||trackjs.com$third-party
+
+! Block: https://better.fyi/trackers/travelaudience.com
+||travelaudience.com$third-party
+
+! Block: https://better.fyi/trackers/trb.com
+||trb.com$third-party
+
+! Block: https://better.fyi/trackers/trbas.com
+||trbas.com$third-party
+
+! Block: https://better.fyi/trackers/tremorhub.com
+||tremorhub.com$third-party
+
+! Block: https://better.fyi/trackers/tribalfusion.com
+||tribalfusion.com$third-party
+
+! Block: https://better.fyi/trackers/tru.am
+||tru.am$third-party
+
+! Block: https://better.fyi/trackers/truoptik.com
+||truoptik.com$third-party
+
+! Block: https://better.fyi/trackers/tubemogul.com
+||tubemogul.com$third-party
+
+! Block: https://better.fyi/trackers/turn.com
+||turn.com$third-party
+
+! Block: https://better.fyi/trackers/tvsquared.com
+||tvsquared.com$third-party
+
+! Hide CSS. More info: https://better.fyi/sites/twitter.com or https://better.fyi/trackers/twitter.com
+twitter.com##.promoted-tweet,.pixel-promoted-tweet
+
+! Hide CSS. More info: https://better.fyi/sites/twitter.com or https://better.fyi/trackers/twitter.com
+twitter.com##.Footer-adsModule
+
+! Block: https://better.fyi/trackers/tynt.com
+||tynt.com$third-party
+
+! Block: https://better.fyi/trackers/undertone.com
+||undertone.com$third-party
+
+! Block: https://better.fyi/trackers/univide.com
+||univide.com$third-party
+
+! Block: https://better.fyi/trackers/unrulymedia.com
+||unrulymedia.com$third-party
+
+! Block: https://better.fyi/trackers/upravel.com
+||upravel.com$third-party
+
+! Block: https://better.fyi/trackers/usabilla.com
+||usabilla.com$third-party
+
+! Block: https://better.fyi/trackers/userreport.com
+||userreport.com$third-party
+
+! Block: https://better.fyi/trackers/uts-af.com
+||uts-af.com$third-party
+
+! Block: https://better.fyi/trackers/vdna-assets.com
+||vdna-assets.com$third-party
+
+! Block: https://better.fyi/trackers/venatusmedia.com
+||venatusmedia.com$third-party
+
+! Block: https://better.fyi/trackers/videoamp.com
+||videoamp.com$third-party
+
+! Block: https://better.fyi/trackers/videohub.tv
+||videohub.tv$third-party
+
+! Block: https://better.fyi/trackers/videoplaza.tv
+||videoplaza.tv$third-party
+
+! Block: https://better.fyi/trackers/viglink.com
+||viglink.com$third-party
+
+! Block: https://better.fyi/trackers/vindicosuite.com
+||vindicosuite.com$third-party
+
+! Block: https://better.fyi/trackers/visiblemeasures.com
+||visiblemeasures.com$third-party
+
+! Block: https://better.fyi/trackers/visualdna.com
+||visualdna.com$third-party
+
+! Block: https://better.fyi/trackers/visualrevenue.com
+||visualrevenue.com$third-party
+
+! Block: https://better.fyi/trackers/visualwebsiteoptimizer.com
+||visualwebsiteoptimizer.com$third-party
+
+! Block: https://better.fyi/trackers/vk.com
+||vk.com$third-party
+
+! Block: https://better.fyi/trackers/vmweb.net
+||vmweb.net$third-party
+
+! Block: https://better.fyi/trackers/vntsm.com
+||vntsm.com$third-party
+
+! Block: https://better.fyi/trackers/volvelle.tech
+||volvelle.tech$third-party
+
+! Block: https://better.fyi/trackers/w55c.net
+||w55c.net$third-party
+
+! Block: https://better.fyi/trackers/wbtrk.net
+||wbtrk.net$third-party
+
+! Block: https://better.fyi/trackers/weborama.com
+||weborama.com$third-party
+
+! Block: https://better.fyi/trackers/weborama.fr
+||weborama.fr$third-party
+
+! Block: https://better.fyi/trackers/weborama.io
+||weborama.io$third-party
+
+! Block: https://better.fyi/trackers/wfxtriggers.com
+||wfxtriggers.com$third-party
+
+! Block: https://better.fyi/trackers/widespace.com
+||widespace.com$third-party
+
+! Block: https://better.fyi/trackers/wishabi.com
+||wishabi.com$third-party
+
+! Block: https://better.fyi/trackers/wishabi.net
+||wishabi.net$third-party
+
+! Block: https://better.fyi/trackers/workey.se
+||workey.se$third-party
+
+! Block: https://better.fyi/trackers/pixel.wp.com
+||pixel.wp.com$third-party
+
+! Block: https://better.fyi/trackers/stats.wp.com
+||stats.wp.com$third-party
+
+! Block: https://better.fyi/trackers/wt-safetag.com
+||wt-safetag.com$third-party
+
+! Block: https://better.fyi/trackers/wtp101.com
+||wtp101.com$third-party
+
+! Block: https://better.fyi/trackers/xg4ken.com
+||xg4ken.com$third-party
+
+! Block: https://better.fyi/trackers/xiti.com
+||xiti.com$third-party
+
+! Block: https://better.fyi/trackers/xplosion.de
+||xplosion.de$third-party
+
+! Block: https://better.fyi/trackers/yadro.ru
+||yadro.ru$third-party
+
+! Block: https://better.fyi/trackers/yahoo.co.jp
+||yahoo.co.jp$third-party
+
+! Block: https://better.fyi/trackers/yahoo.com
+||yahoo.com$third-party
+
+! Block: https://better.fyi/trackers/yandex.ru
+||yandex.ru$third-party
+
+! Block: https://better.fyi/trackers/yieldify.com
+||yieldify.com$third-party
+
+! Block: https://better.fyi/trackers/yieldlab.net
+||yieldlab.net$third-party
+
+! Block: https://better.fyi/trackers/yieldmanager.com
+||yieldmanager.com$third-party
+
+! Block: https://better.fyi/trackers/yieldmanager.net
+||yieldmanager.net$third-party
+
+! Block: https://better.fyi/trackers/yieldmo.com
+||yieldmo.com$third-party
+
+! Block: https://better.fyi/trackers/yieldoptimizer.com
+||yieldoptimizer.com$third-party
+
+! Block: https://better.fyi/trackers/yieldpartners.com
+||yieldpartners.com$third-party
+
+! Block: https://better.fyi/trackers/yldbt.com
+||yldbt.com$third-party
+
+! Block: https://better.fyi/trackers/yume.com
+||yume.com$third-party
+
+! Block: https://better.fyi/trackers/zdbb.net
+||zdbb.net$third-party
+
+! Block: https://better.fyi/trackers/zedo.com
+||zedo.com$third-party
+
+! Block: https://better.fyi/trackers/zemanta.com
+||zemanta.com$third-party
+
+! Block: https://better.fyi/trackers/zergnet.com
+||zergnet.com$third-party
+
+! Block: https://better.fyi/trackers/ziffdavis.com
+||ziffdavis.com$third-party
+
+! Block: https://better.fyi/trackers/zqtk.net
+||zqtk.net$third-party
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$third-party,domain=rtlnieuws.nl,www.rtlnieuws.nl
+@@||tags.bluekai.com/site/30091$third-party,domain=abc7ny.com
+@@||tags.tiqcdn.com/utag/bleacherreport/main/prod/utag.js$third-party,domain=bleacherreport.com
+@@||tags.tiqcdn.com/utag/bleacherreport/main/prod/utag.44.js$third-party,domain=bleacherreport.com
+@@||fwmrm.net$third-party,domain=www.channel4.com,channel4.com
+@@||gigya.com$third-party,domain=login.vrt.be
+@@||gigya.com$third-party,domain=www.heraldo.es
+@@||www.summerhamster.com$third-party,domain=www.stern.de,stern.de
+@@||pssl.stroeerdp.de$third-party,domain=www.t-online.de
+@@||tags.tiqcdn.com/utag/marksandspencer/main/prod/utag.sync.js$third-party,domain=www.marksandspencer.com
+@@||tags.tiqcdn.com/utag/cbsi/zdnetglobalsite/prod/utag.js$third-party,domain=zdnet.com,www.zdnet.com
+@@||assets.adobedtm.com$third-party,domain=www.monoprice.com,monoprice.com
+@@||gigya.com$third-party,domain=www.liverpoolecho.co.uk,liverpoolecho.co.uk
+@@||cdns.gigya.com$third-party,domain=book.nationalexpress.com
+@@||tags.tiqcdn.com/utag/garmin/main/prod/utag.js$third-party,domain=apps.garmin.com
+@@||www.googletagmanager.com$third-party,domain=parkbee.com
+@@||cnevids.com$third-party,domain=www.wired.com,video.wired.com,arstechnica.com,video.arstechnica.com
+@@||capture.condenastdigital.com$third-party,domain=www.wired.com,video.wired.com,arstechnica.com,video.arstechnica.com
+@@||dp8hsntg6do36.cloudfront.net$third-party,domain=www.wired.com,video.wired.com,arstechnica.com,video.arstechnica.com
+@@||d26t7ex48mr4bn.cloudfront.net,arstechnica.com,video.arstechnica.com$third-party,domain=video.wired.com
+@@||ad.doubleclick.net$third-party,domain=m.facebook.com
+@@||assets.adobedtm.com$third-party,domain=www.areaclienti.agosweb.it
+@@||yandex.ru$third-party,domain=yandex.com
+@@||api-maps.yandex.ru$third-party,domain=yandex.ru
+@@||googletagmanager.com/gtm.js$third-party,domain=www.gumtree.com,gumtree.com
+@@||acdn.adnxs.com/ast$third-party,domain=www.basellandschaftlichezeitung.ch,www.aargauerzeitung.ch,www.bzbasel.ch
+@@||cdns.gigya.com$third-party,domain=ctvnews.ca,ctvnews.com,www.ctvnews.ca,www.ctvnews.com
+@@||em0n.com$third-party,domain=www.kvue.com
+@@||tdn.r42tag.com$third-party,domain=www.ns.nl
+@@||cdns.gigya.com$third-party,domain=fantasygames.nascar.com
+@@||cdns.us1.gigya.com$third-party,domain=fantasygames.nascar.com
+@@||googletagmanager.com$third-party,domain=www.demorgen.be,demorgen.be
+@@||code.bildstatic.de$third-party,domain=sportbild.bild.de
+@@||content.linkedin.com$third-party,domain=linkedin.com,learning.linkedin.com,business.linkedin.com
+@@||g0[0-9].msn.com$third-party,domain=www.msn.com,msn.com
+@@||acdn.adnxs.com$third-party,domain=sport1.de,www.sport1.de
+@@||code.bildstatic.de$third-party,domain=bild.de,www.bild.de,m.bild.de
+@@||acdn.adnxs.com$third-party,domain=bild.de,www.bild.de,m.bild.de
+@@||smartadserver.com$third-party,domain=bild.de,www.bild.de,m.bild.de
+@@||assets.adobedtm.com$third-party,domain=www.wgu.edu,wgu.edu
+@@||cdn.optimizely.com/js/$third-party,domain=www.wgu.edu,wgu.edu
+@@||www.googletagservices.com/tag/js/gpt.js$third-party,domain=www.wfae.org,wfae.org
+@@||www.googletagservices.com/tag/js/gpt.js$third-party,domain=aviationweek.com,m.aviationweek.com
+@@||cdns.gigya.com$third-party,domain=formed.org
+@@||sb.scorecardresearch.com$third-party,domain=www.motorcyclenews.com
+@@||f.wishabi.net$third-party,domain=canadiantire.ca,www.canadiantire.ca
+@@||cnevids.com$third-party,domain=arstechnica.com
+@@||addthis.com$third-party,domain=wiggle.co.uk,www.wiggle.co.uk
+@@||assets.adobedtm.com$third-party,domain=argos.co.uk,www.argos.co.uk
+@@||static2.chartbeat.com$third-party,domain=chartbeat.com
+@@||assets.adobedtm.com$third-party,domain=accounts.adobe.com
+@@||tags.bkrtx.com/js/bk-coretag.js$third-party,domain=tmz.com,m.tmz.com,www.tmz.com
+@@||scorecardresearch.com$third-party,domain=macworld.com,www.macworld.com
+@@||omtrdc.net$third-party,domain=macworld.com,www.macworld.com
+@@||googletagservices.com/tag/js/gpt.js$third-party,domain=theatlantic.com,www.theatlantic.com
+@@||bing.com/maps/embed/viewer.aspx$third-party
+@@||www.bing.com/mapspreview/sdk/mapcontrol$third-party
+@@||www.bing.com/mapspreview/sdkrelease/mapcontrol$third-party
+@@||www.bing.com/mapspreview/sdkfrozen/mapcontrol$third-party
+@@||www.bing.com/maps/sdk/mapcontrol$third-party
+@@||www.bing.com/api/maps/mapcontrol$third-party
+@@||www.bing.com/rms$third-party
+@@||www.bing.com/rb/$third-party
+@@||www.bing.com/rs/$third-party
+@@||www.bing.com/maps/geotfe/comp/$third-party
+@@||www.bing.com/sa/simg/maps_$third-party
+@@||www.bing.com/fd/ls/lsp.aspx$third-party

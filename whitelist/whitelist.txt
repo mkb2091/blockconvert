@@ -1,0 +1,13 @@
+@@||cdnjs.cloudflare.com^
+@@||cloudfront.net^
+@@||code.jquery.com^
+@@||d2gatte9o95jao.cloudfront.net^
+@@||dns.google.com^
+@@||duckduckgo.com^
+@@||facebook.com^
+@@||gateway.reddit.com^
+@@||instagram.com^
+@@||reddit.com^
+@@||use.typekit.net^
+@@||www.instagram.com^
+@@||www.reddit.com^
