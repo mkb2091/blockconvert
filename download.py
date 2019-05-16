@@ -63,6 +63,7 @@ blacklist_urls = [
     'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt',#GPLv3
     'https://sslbl.abuse.ch/blacklist/sslipblacklist.txt',#CC0
     'https://v.firebog.net/hosts/BillStearns.txt',#GPL
+    'https://www.squidblacklist.org/downloads/dg-ads.acl',#You may freely use, copy, and redistribute this blacklist in any manner you like.
     ]
 
 whitelist_urls = [
