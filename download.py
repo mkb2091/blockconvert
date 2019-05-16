@@ -69,9 +69,9 @@ blacklist_urls = [
     ]
 
 whitelist_urls = [
+    'https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list',#MIT
     'https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt',#MIT
     'https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt',#MIT
-    'https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list',#MIT
     ]
 
 def copy_whitelist_and_clean():
