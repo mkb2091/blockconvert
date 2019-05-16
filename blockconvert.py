@@ -120,6 +120,12 @@ class BlockList():
                         filter_list.add(url[:-1]+tld)
         print('Expanded to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
+        for filter_list in [self.blacklist, self.whitelist]:
+            for url in list(filter_list):
+                if url.split('.')[0] in ('m', 'www'):
+                    filter_list.add('.'.join(url.split('.')[1:]))
+        print('Expanded to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+        last = time.time()
         for i in self.whitelist:
             try:
                 self.blacklist.remove(i)
