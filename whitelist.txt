@@ -6,9 +6,11 @@
 @@||duckduckgo.com^
 @@||facebook.com^
 @@||gateway.reddit.com^
+@@||hostsfile.mine.nu^
 @@||instagram.com^
+@@||mail.google.com^
+@@||mine.nu^
 @@||reddit.com^
 @@||use.typekit.net^
-@@||mail.google.com^
 @@||www.instagram.com^
 @@||www.reddit.com^
