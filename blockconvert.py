@@ -37,7 +37,7 @@ class BlockList():
         ip_v6 = '[0-9a-f]{,4}(?:[:][0-9a-f]{,4}){2,8}'
         ip = '(?:{ip_v4}|{ip_v6})'.format(**locals())
         self.IP_REGEX = re.compile(ip)
-        segment = r'(?:[a-z0-9_](?:[a-z0-9_-]*[a-z0-9_]))'
+        segment = r'(?:[a-z0-9_](?:[a-z0-9_-]*[a-z0-9_])?)'
         self.DOMAIN_STRING =  '(?:\*?[.])?((?:{segment}(?:[.]{segment})*[.]{tld_regex})|{ip})[.]?'.format(**locals())
         self.DOMAIN_REGEX = re.compile(self.DOMAIN_STRING)
     def generate_host_regex(self):
