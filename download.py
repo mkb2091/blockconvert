@@ -13,6 +13,7 @@ blacklist_urls = [
     'https://easylist.to/easylist/easyprivacy.txt', #GPLv3
     'https://easylist.to/easylist/fanboy-annoyance.txt',#GPLv3
     'https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt',#GPLv3
+    'https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt',#CC0
     'https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt',#GPLv3
     'https://hblock.molinero.dev/hosts',#MIT
     'https://hostsfile.mine.nu/hosts0.txt',#GPLv3
