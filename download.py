@@ -17,6 +17,7 @@ blacklist_urls = [
     'https://hblock.molinero.dev/hosts',#MIT
     'https://hostsfile.mine.nu/hosts0.txt',#GPLv3
     'https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt',#Free for use without any limitations
+    'https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt',#Free for use without any limitations
     'https://raw.githubusercontent.com/CHEF-KOCH/Audio-fingerprint-pages/master/AudioFp.txt',#MIT
     'https://raw.githubusercontent.com/CHEF-KOCH/Canvas-Font-Fingerprinting-pages/master/Canvas.txt',#MIT
     'https://raw.githubusercontent.com/CHEF-KOCH/Canvas-fingerprinting-pages/master/Canvas.txt',#MIT
