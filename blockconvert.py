@@ -8,7 +8,7 @@ import dns_check
 
 class BlockList():
     def __init__(self, do_dns_check=True, dns_check_threads=40):
-        self.blocked_hosts = set()
+        self.blacklist = set()
         self.whitelist = set()
         self.generate_domain_regex()
         self.generate_host_regex()
@@ -63,7 +63,7 @@ class BlockList():
         self.REGEX_STRING = '(?:%s)|(?:%s)' % (self.HOSTS_STRING, self.ADBLOCK_STRING)
         self.REGEX = re.compile(self.REGEX_STRING)
 
-    def add_file(self, path):
+    def add_file(self, path, is_whitelist=False):
         with open(path) as file:
             data = file.read().lower()
         try:
@@ -72,15 +72,20 @@ class BlockList():
                 and 'snitch_map' in data and isinstance(data['snitch_map'], dict)):
                 self.parse_privacy_badger(data)
         except json.JSONDecodeError:
+            whitelist = self.whitelist
+            if is_whitelist:
+                blacklist = whitelist
+            else:
+                blacklist = self.blacklist
             for line in data.splitlines():
                 if line.startswith('@@'):
                     match = self.REGEX.fullmatch(line[2:])
                     if match:
-                        self.whitelist.update(filter(bool, match.groups()))
+                        whitelist.update(filter(bool, match.groups()))
                 else:
                     match = self.REGEX.fullmatch(line)
                     if match:
-                        self.blocked_hosts.update(filter(bool, match.groups()))
+                        blacklist.update(filter(bool, match.groups()))
     def parse_privacy_badger(self, data):
         temp_whitelist = set()
         for x in data['snitch_map']:
@@ -90,13 +95,13 @@ class BlockList():
                 if isinstance(data['action_map'][i], dict) and 'heuristicaction' in data['action_map'][i]:
                     if data['action_map'][i]['heuristicaction'] == 'block':
                         if i not in temp_whitelist:
-                            self.blocked_hosts.add(i)
+                            self.blacklist.add(i)
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
     def clean(self):
         dns = dns_check.DNSChecker()
         last = time.time()
-        for filter_list in [self.blocked_hosts, self.whitelist]:
+        for filter_list in [self.blacklist, self.whitelist]:
             ips = []
             for item in list(filter_list):
                 if self.IP_REGEX.fullmatch(item):
@@ -106,42 +111,42 @@ class BlockList():
             filter_list.update(found)
             print('Added %s rules via reverse dns(%ss)' % (len(found), time.time() - last))
         last = time.time()
-        print('Started with %s rules' % len(self.blocked_hosts))
-        for filter_list in [self.blocked_hosts, self.whitelist]:
+        print('Started with %s rules' % len(self.blacklist))
+        for filter_list in [self.blacklist, self.whitelist]:
             for url in list(filter_list):
                 if url.endswith('*'):
                     filter_list.remove(url)
                     for tld in self.TLDS:
                         filter_list.add(url[:-1]+tld)
-        print('Expanded to %s rules(%ss)' % (len(self.blocked_hosts), time.time() - last))
+        print('Expanded to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
         for i in self.whitelist:
             try:
-                self.blocked_hosts.remove(i)
+                self.blacklist.remove(i)
             except KeyError:
                 pass
-        print('Cleaned to %s rules(%ss)' % (len(self.blocked_hosts), time.time() - last))
+        print('Cleaned to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
         if self.do_dns_check:
             last = time.time()
-            result = dns.mass_check(self.blocked_hosts, self.dns_check_threads)
+            result = dns.mass_check(self.blacklist, self.dns_check_threads)
             print('Performed lookups(%ss)' % (time.time() - last))
             last = time.time()
             for domain in result:
                 if not result[domain]:
-                    self.blocked_hosts.remove(domain)
-            print('Trimmed to %s rules(%ss)' % (len(self.blocked_hosts), time.time() - last))
+                    self.blacklist.remove(domain)
+            print('Trimmed to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
     def to_domain_list(self):
-        return '\n'.join(sorted(self.blocked_hosts))
+        return '\n'.join(sorted(self.blacklist))
     def to_adblock(self):
-        return '\n'.join(['||%s^' % i for i in sorted(self.blocked_hosts)])
+        return '\n'.join(['||%s^' % i for i in sorted(self.blacklist)])
     def to_hosts(self):
-        return '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blocked_hosts)])
+        return '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blacklist)])
     def to_privacy_badger(self):
         base = '{"action_map":{%s},"snitch_map":{%s}, "settings_map":{}}'
         url_string = '"%s":{"heuristicAction":"block"}'
-        return base % (',\n'.join([url_string % i for i in sorted(self.blocked_hosts)]),
-                       ',\n'.join(['"%s":["1","2","3"]' % (i) for i in sorted(self.blocked_hosts)]))
+        return base % (',\n'.join([url_string % i for i in sorted(self.blacklist)]),
+                       ',\n'.join(['"%s":["1","2","3"]' % (i) for i in sorted(self.blacklist)]))
 
 def main():
     parser = argparse.ArgumentParser()
@@ -149,15 +154,18 @@ def main():
     parser.add_argument('--dns-check-threads', type=int, default=40)
     args = parser.parse_args()
     blocklist = BlockList(not args.no_dns_check, args.dns_check_threads)
-    try:
-        paths = [os.path.join('target', f) for f in os.listdir('target')]
-        paths = [f for f in paths if os.path.isfile(f)]
-    except FileNotFoundError:
-        print('Target directory does not exist')
-        return
-    paths.sort()
-    for path in paths:
-        blocklist.add_file(path)
+    for (folder, is_whitelist) in (('blacklist', False), ('whitelist', True)):
+        try:
+            paths = [os.path.join(folder, f) for f in os.listdir(folder)]
+            paths = [f for f in paths if os.path.isfile(f)]
+        except FileNotFoundError:
+            print('Target directory does not exist')
+            return
+        paths.sort()
+        for path in paths:
+            print('Added', path)
+            blocklist.add_file(path, is_whitelist)
+            print(len(blocklist.blacklist))
     blocklist.clean()
     try:
         os.makedirs('output')

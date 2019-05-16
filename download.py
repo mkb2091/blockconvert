@@ -3,7 +3,7 @@ import hashlib
 import time
 import os
 
-urls = [
+blacklist_urls = [
     'https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt',#GPL3
     'https://better.fyi/blockerList.txt',#CCASA4.0
     'https://blocklist.kowabit.de/fritzboxliste.txt',#Public Domain
@@ -61,20 +61,26 @@ urls = [
     'https://v.firebog.net/hosts/BillStearns.txt',#GPL
     ]
 
+whitelist_urls = [
+    'https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt',#MIT
+    'https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt',#MIT
+    ]
+
 def copy_whitelist_and_clean():
-    hashes = [hashlib.sha256(url.encode()).hexdigest()+'.txt' for url in urls]
-    for path in os.listdir('target'):
-        if path not in hashes:
-            os.remove(os.path.join('target', path))
+    for (folder, urls) in (('blacklist', blacklist_urls), ('whitelist', whitelist_urls)):
+        hashes = [hashlib.sha256(url.encode()).hexdigest()+'.txt' for url in urls]
+        for path in os.listdir(folder):
+            if path not in hashes:
+                os.remove(os.path.join(folder, path))
     with open('whitelist.txt') as file:
-        with open('target/whitelist.txt', 'w') as outfile:
+        with open('whitelist/whitelist.txt', 'w') as outfile:
             outfile.write(file.read())
 
 
 def fetch_new_tld():
     req = urllib.request.Request('https://data.iana.org/TLD/tlds-alpha-by-domain.txt',
                                  data=None,
-                                 headers={'User-Agent':'BlockListConvert' + str(id(urls))})
+                                 headers={'User-Agent':'BlockListConvert' + str(id(blacklist_urls))})
     if os.path.exists('tld_list.txt'):
         if (time.time() - os.stat('tld_list.txt').st_mtime) / (60 * 60 * 11.5) > 1:
             with urllib.request.urlopen(req) as response:
@@ -84,34 +90,38 @@ def fetch_new_tld():
         with urllib.request.urlopen(req) as response:
                 with open('tld_list.txt', 'wb') as file:
                     file.write(response.read())
-if not os.path.exists('target'):
-    os.mkdir('target')
+if not os.path.exists('blacklist'):
+    os.mkdir('blacklist')
+if not os.path.exists('whitelist'):
+    os.mkdir('whitelist')
 copy_whitelist_and_clean()
 fetch_new_tld()
 
-for (i, url) in enumerate(urls):
-    path = os.path.join('target', hashlib.sha256(url.encode()).hexdigest()+'.txt')
-    req = urllib.request.Request(url, data=None,
-                                 headers={'User-Agent':'BlockListConvert' + str(id(urls))})
-    if os.path.exists(path):
-        if (time.time() - os.stat(path).st_mtime) / (60 * 60 * 11.5) < 1:
-            print('Hasn\'t expired:%s' % i)
-            continue
-    print('Starting %s, url: %s' % (i, url))
-    with urllib.request.urlopen(req) as response:
+for (folder, urls) in (('blacklist', blacklist_urls), ('whitelist', whitelist_urls)):
+    for (i, url) in enumerate(urls):
+        path = os.path.join(folder, hashlib.sha256(url.encode()).hexdigest()+'.txt')
+        req = urllib.request.Request(url, data=None,
+                                     headers={'User-Agent':'BlockListConvert' + str(id(urls))})
+        print('Starting %s, url: %s' % (i, url))
+        print('Paths: %s' % path)
         if os.path.exists(path):
-            last_modified = response.headers['Last-Modified']
-            if last_modified is not None:
-                lm_time = time.strptime(last_modified, '%a, %d %b %Y %H:%M:%S GMT')
-                if lm_time < os.stat(path):
-                    response.close()
-                    print('Unchanged')
-                    with open(path) as file:
-                        data = file.read()
-                    with open(path, 'w') as file:
-                        file.write(data)
-                    continue
-        print('Fetching new')
-        with open(path, 'w') as file:
-            data = response.read().decode('ascii', 'ignore')
-            file.write(data)
+            if (time.time() - os.stat(path).st_mtime) / (60 * 60 * 11.5) < 1:
+                print('Hasn\'t expired:%s' % i)
+                continue
+        with urllib.request.urlopen(req) as response:
+            if os.path.exists(path):
+                last_modified = response.headers['Last-Modified']
+                if last_modified is not None:
+                    lm_time = time.strptime(last_modified, '%a, %d %b %Y %H:%M:%S GMT')
+                    if lm_time < os.stat(path):
+                        response.close()
+                        print('Unchanged')
+                        with open(path) as file:
+                            data = file.read()
+                        with open(path, 'w') as file:
+                            file.write(data)
+                        continue
+            print('Fetching new')
+            with open(path, 'w') as file:
+                data = response.read().decode('ascii', 'ignore')
+                file.write(data)
