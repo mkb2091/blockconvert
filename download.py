@@ -59,6 +59,7 @@ blacklist_urls = [
     'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt',#GPLv3
     'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',#GPLv3
     'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt',#GPLv3
+    'https://sslbl.abuse.ch/blacklist/sslipblacklist.txt',#CC0
     'https://v.firebog.net/hosts/BillStearns.txt',#GPL
     ]
 
