@@ -16,6 +16,8 @@ class BlockList():
         self.generate_master_regex()
         self.do_dns_check = do_dns_check
         self.dns_check_threads = dns_check_threads
+        with open('subdomain_list.txt') as file:
+            self.SUBDOMAINS = file.read().splitlines()
 
     def generate_domain_regex(self):
         with open('tld_list.txt') as file:
@@ -38,7 +40,7 @@ class BlockList():
         ip = '(?:{ip_v4}|{ip_v6})'.format(**locals())
         self.IP_REGEX = re.compile(ip)
         segment = r'(?:[a-z0-9_](?:[a-z0-9_-]*[a-z0-9_])?)'
-        self.DOMAIN_STRING =  '(?:\*?[.])?((?:{segment}(?:[.]{segment})*[.]{tld_regex})|{ip})[.]?'.format(**locals())
+        self.DOMAIN_STRING =  '[.]?((?:(?:\*[.])?{segment}(?:[.]{segment})*[.]{tld_regex})|{ip})[.]?'.format(**locals())
         self.DOMAIN_REGEX = re.compile(self.DOMAIN_STRING)
     def generate_host_regex(self):
         ips = ['0.0.0.0', '127.0.0.1', '::1']
@@ -117,13 +119,22 @@ class BlockList():
                     filter_list.remove(url)
                     for tld in self.TLDS:
                         filter_list.add(url[:-1]+tld)
-        print('Expanded to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+        print('Expanded .* TLD to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
         for filter_list in [self.blacklist, self.whitelist]:
             for url in list(filter_list):
                 if url.split('.')[0] in ('m', 'www'):
                     filter_list.add('.'.join(url.split('.')[1:]))
         print('Expanded to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+        last = time.time()
+        for filter_list in [self.blacklist, self.whitelist]:
+            for url in list(filter_list):
+                if url.startswith('*.'):
+                    filter_list.remove(url)
+                    filter_list.add(url[2:])
+                    for subdomain in self.SUBDOMAINS:
+                        filter_list.add(subdomain + '.' + url[2:])
+        print('Expanded *. subdomain to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
         for i in self.whitelist:
             try:
