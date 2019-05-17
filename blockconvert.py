@@ -90,7 +90,7 @@ class BlockList():
     def parse_privacy_badger(self, data):
         temp_whitelist = set()
         for x in data['snitch_map']:
-            temp_whitelist.update(data['snitch_map'])
+            temp_whitelist.update(data['snitch_map'][x])
         for i in data['action_map']:
             if self.DOMAIN_REGEX.fullmatch(i):
                 if isinstance(data['action_map'][i], dict) and 'heuristicaction' in data['action_map'][i]:
