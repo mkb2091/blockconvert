@@ -67,6 +67,7 @@ blacklist_urls = [
     ]
 
 whitelist_urls = [
+    'https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt',#GPLv3+
     'https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list',#MIT
     'https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt',#MIT
     'https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt',#MIT
