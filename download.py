@@ -6,8 +6,6 @@ import os
 blacklist_urls = [
     'https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt',#GPL3
     'https://better.fyi/blockerList.txt',#CCASA4.0
-    'https://blocklist.kowabit.de/fritzboxliste.txt',#Public Domain
-    'https://blocklist.kowabit.de/list.txt',#Public Domain
     'https://easylist-downloads.adblockplus.org/adwarefilters.txt',#GPLv3
     'https://easylist.to/easylist/easylist.txt',#GPLv3
     'https://easylist.to/easylist/easyprivacy.txt', #GPLv3
