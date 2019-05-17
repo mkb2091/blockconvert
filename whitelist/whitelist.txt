@@ -6,6 +6,7 @@
 @@||duckduckgo.com^
 @@||facebook.com^
 @@||gateway.reddit.com^
+@@||highcharts.com^
 @@||hostsfile.mine.nu^
 @@||instagram.com^
 @@||mail.google.com^
