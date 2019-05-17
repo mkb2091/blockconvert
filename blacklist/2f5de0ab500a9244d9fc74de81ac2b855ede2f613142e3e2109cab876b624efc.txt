@@ -1368,6 +1368,7 @@ realbooru.com,xbooru.com##+js(addEventListener-defuser.js, DOMContentLoaded, new
 rule34.xxx##+js(abort-on-property-read.js, newcontent)
 rule34.xxx##a[href*=".html"]
 rule34.xxx##[src^="https://rule34.xxx/aa/"]
+thedoujin.com##[href*=".r18"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1080
 xbooru.com##+js(abort-on-property-write.js, ads_priv)
@@ -6996,11 +6997,11 @@ hdmotori.it##body:style(background: none !important; overflow: auto !important;)
 hdmotori.it##+js(setTimeout-defuser.js, CANG, 3000)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1929
-cliver.tv##+js(abort-on-property-write.js, smrtSB)
-cliver.tv##+js(abort-on-property-write.js, Fingerprint2)
-cliver.tv##+js(abort-on-property-read.js, AaDetector)
-cliver.tv##+js(abort-on-property-read.js, open)
-cliver.tv##.btn_pub
+cliver.*##+js(abort-on-property-write.js, smrtSB)
+cliver.*##+js(abort-on-property-write.js, Fingerprint2)
+cliver.*##+js(abort-on-property-read.js, AaDetector)
+cliver.*##+js(abort-on-property-read.js, open)
+cliver.*##.btn_pub
 ||5nt1gx7o57.com^
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1931
@@ -14846,6 +14847,7 @@ fashionyip.info##+js(disable-newtab-links.js)
 ! https://www.reddit.com/r/uBlockOrigin/comments/9lom6n/help_blocking_ads_on_hulu/
 ||ads-v-darwin.hulustream.com/published/*.mp4$media,redirect=noopmp4-1s,domain=hulu.com
 @@||moatads.com/*/moatwrapper.js$script,domain=hulu.com
+||extremereach.io^$3p
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4356
 @@||adserver.iprom.net/adserver7$xmlhttprequest,domain=rtl.hr
@@ -19953,8 +19955,8 @@ scrin.org##+js(setTimeout-defuser.js, (), 0)
 ! https://github.com/NanoMeow/QuickReports/issues/1152
 viz.com##+js(set-constant.js, show_dfp_preroll, false)
 viz.com##+js(setTimeout-defuser.js, blocker)
-hulu.com##+js(addEventListener-defuser.js, load, getVPAIDAd)
 ||geo.yahoo.com/$image,redirect=1x1-transparent.gif,domain=view.yahoo.com
+@@||moatads.com/*/moatwrapper.js$script,domain=view.yahoo.com|viz.com
 
 ! https://github.com/NanoAdblocker/NanoFilters/issues/322
 dplay.com##.e-overlay--adblock
@@ -20336,3 +20338,13 @@ watch24online.cc##+js(abort-on-property-read.js, AaDetector)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5610
 ||pagead2.googlesyndication.com/pagead/show_ads.js$script,redirect=noopjs,domain=agame.com|giochi.it|jeu.fr|plinga.com|spel.nl|spielen.com
+
+! https://www.reddit.com/r/uBlockOrigin/comments/bpds6b/how_to_delete_these_pixiv_ads/
+! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-493395377
+pixiv.net##div:has(:scope > iframe:not([src]))
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=43033
+||nextclick.pl^$3p
+cda.pl##.pb-video-click
+cda.pl##.pb-ad-video-player
+||redcdn.pl/file/*/vstatic/*.mp4$media,redirect=noopmp3-0.1s,domain=cda.pl

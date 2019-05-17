@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: Press the Attack
 ! Description: Filters for ad blocking, tracking, crypto mining, and more!
-! Last modified: 2019-05-16 05:28:38
-! Version: 20190516052838
+! Last modified: 2019-05-18 00:43:03
+! Version: 20190518004303
 ! Expires: 3 hours
-! Number of filters: 15771
+! Number of filters: 15794
 ! Homepage: https://github.com/bogachenko/presstheattack/
 ! Wiki: https://github.com/bogachenko/presstheattack/wiki/
 ! Licence: https://raw.githubusercontent.com/bogachenko/presstheattack/master/LICENSE.md
@@ -2769,7 +2769,7 @@
 */sw.js$important,script,redirect=noopjs
 */visitor.js$script,redirect=noopjs
 */visitorapi.js$script,redirect=noopjs
-/(\W|\_)([a-zA-Z]{1,4})?events?(\W|\_)/$other,important,script,xmlhttprequest
+/(\W|\_)([a-zA-Z]{1,4})?events?\.js/$other,important,script,xmlhttprequest
 /(\W|\_)(player|gen|client|csi|generate|stream|logs?)(\W|\_)?204/$image,important,xmlhttprequest,other
 /(\W|\_)a(d[vs]e?|nnounceme|ds?)[rn][tev](s|ing|covers?|server?|isements?|ising|e(rs?)?|ements|ur)?/$important,popup
 /(\W|\_)fingerprint([0-9]{1,2})?(\.min)?\.js/$important,script,xmlhttprequest,image
@@ -2777,6 +2777,7 @@
 /(\W|\_)ping(\W|\_)/$important,script,image,xmlhttprequest
 /(\W|\_)pixels?(\W|\_)?/$image,important,object,xmlhttprequest,script,subdocument
 /(\W|\_)pop(unders?)?([0-9]{1,2})?\./$important,popup,script,xmlhttprequest
+/(bitly|bit)\.(com|ly)/$popup,important
 /^https:\/\/.*?\/v2\/0\/[a-zA-Z0-9_-]{30,}$/$important,script,third-party
 /^https?://[a-z0-9]+\.info/+[-a-z0-9_?&=]{9,}/$third-party,script,important
 /^https?:\/\/([0-9a-z\-]+\.)?(9anime|animeland|animenova|animeplus|animetoon|animewow|gamestorrent|goodanime|gogoanime|igg-games|kimcartoon|memecenter|readcomiconline|toonget|toonova|watchcartoononline)\.[a-z]{2,4}\/(?!([Ee]xternal|[Ii]mages|[Ss]cripts|[Uu]ploads|ac|ajax|assets|combined|content|cov|cover|(img\/bg)|(img\/icon)|inc|jwplayer|player|playlist-cat-rss|static|thumbs|wp-content|wp-includes)\/)(.*)/$important,first-party,script,domain=~animeland.hu|~memecenter.fr
@@ -2792,7 +2793,7 @@
 /^https?:\/\/(metric|csi)\.gstatic\.com/$important
 /^https?:\/\/(www\.)?(client\-event\-reporter|countess|mp|polyfill|sentinel|spade|trowel|fan)\.twitch(svc)?\.(com|net|tv)/$important
 /^https?:\/\/(www\.)?(facebookcorewwwi|facebook)\.(com|net|onion)\/tr\D/$important
-/^https?:\/\/.*(\W|\_)bann?ers?((\W|\_).*?)?\.gif/$image,important
+/^https?:\/\/.*(\W|\_)bann?ers?((\W|\_).*?)?\.gif/$image,important,subdocument
 /^https?:\/\/2ch\.(hk|pm|re|tf|wf|yt)\/(images|banners?)\//$image,important
 /^https?:\/\/[0-9a-z\-\.]+\.[a-z]{2,7}\/sw\.js\?[0-9a-zA-Z_&%]{32,}/$first-party,xmlhttprequest,important
 /^https?:\/\/[^/]+\/[a-z0-9]{15,}(\?hope=.*)?$/$important,script
@@ -3276,6 +3277,10 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 |http*:*-metrika.
 |http*:*-metrika^
 |http*:*-metrika_
+|http*:*-mistats-
+|http*:*-mistats.
+|http*:*-mistats^
+|http*:*-mistats_
 |http*:*-mtrcs-
 |http*:*-mtrcs.
 |http*:*-mtrcs^
@@ -3890,6 +3895,10 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 |http*:*.metrika.
 |http*:*.metrika^
 |http*:*.metrika_
+|http*:*.mistats-
+|http*:*.mistats.
+|http*:*.mistats^
+|http*:*.mistats_
 |http*:*.mtrcs-
 |http*:*.mtrcs.
 |http*:*.mtrcs^
@@ -4780,6 +4789,10 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 |http*:*^metrika.$domain=~metrika.yandex.ru|~webvisor.com|~metrika.yandex.com|~metrica.yandex.com|~metrica.yandex.ru
 |http*:*^metrika^$domain=~metrika.yandex.ru|~webvisor.com|~metrika.yandex.com|~metrica.yandex.com|~metrica.yandex.ru
 |http*:*^metrika_
+|http*:*^mistats-
+|http*:*^mistats.
+|http*:*^mistats^
+|http*:*^mistats_
 |http*:*^mtrcs-
 |http*:*^mtrcs.
 |http*:*^mtrcs^
@@ -5362,7 +5375,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 |http*:*_jstatphp.
 |http*:*_jstatphp^
 |http*:*_jstatphp_
-|http*:*_log-
+|http*:*_log-$domain=~zonammorpg.com
 |http*:*_log.
 |http*:*_log^$domain=~github.com
 |http*:*_log_$domain=~facebook.com|~facebookcorewwwi.onion
@@ -5394,6 +5407,10 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 |http*:*_metrika.
 |http*:*_metrika^
 |http*:*_metrika_
+|http*:*_mistats-
+|http*:*_mistats.
+|http*:*_mistats^
+|http*:*_mistats_
 |http*:*_mtrcs-
 |http*:*_mtrcs.
 |http*:*_mtrcs^
@@ -5996,6 +6013,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||aplfkrppjsutf.com^$important
 ||apmgzzaej.bid^$important
 ||apmkcdsnv.bid^$important
+||appier.net^$important
 ||apple.com-fasting.live^$important
 ||apple.com-scan.live^$important
 ||aprddnfuzc.bid^$important
@@ -10499,6 +10517,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||mament.co^$important
 ||mardjxrw.club^$important
 ||marguvpydbrr.com^$important
+||marketgid.com^$important
 ||marketing.dropbox.com^$important
 ||mascqybw.com^$important
 ||masrtwfevkqd.bid^$important
@@ -13024,6 +13043,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||ssjgkyyrqiwjol.com^$important
 ||ssjhkvwjoovf.com^$important
 ||ssl-images-amazon.com^*/ape/sf/*/dasf-$important,script
+||ssl-payp.eu^$important
 ||ssl2anyone3.com^$important
 ||ssloemwiszaz.com^$important
 ||ssmklfrn.bid^$important
@@ -13048,6 +13068,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||stkrwlodjvl.bid^$important
 ||stlbmyezzth.bid^$important
 ||stompebi.link^$important
+||stripe.com/?event=$other,important,script,xmlhttprequest
 ||stuthvygifup.com^$important
 ||stvayyokjvxnl.com^$important
 ||stwcozfiavhh.bid^$important
@@ -13467,6 +13488,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||ttulyfbkatyzp.com^$important
 ||ttwiehwr.bid^$important
 ||ttxqfeuiakgn.bid^$important
+||ttxsrl139.life^$important
 ||ttyvbqif.bid^$important
 ||tudsawhfmutb.bid^$important
 ||tudsxyhpn.com^$important
@@ -13607,6 +13629,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||ucikujit.bid^$important
 ||uclftpjqdnvvz.bid^$important
 ||uclylhzwg.com^$important
+||ucounter.ucoz.net^$important
 ||ucoz.org/?*%21*%$important,script
 ||ucozssymgw.com^$important
 ||ucptqdmerltn.com^$important

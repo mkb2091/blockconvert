@@ -2345,3 +2345,20 @@ torrentfunk.com#@#div[style*="padding:"]
 
 ! https://github.com/easylist/easylist/issues/3440
 @@||lp-cdn.lastpass.com/lporcamedia/*/dist/scripts/analyticsjs.js$script,1p
+
+! https://www.reddit.com/r/uBlockOrigin/comments/bppxao/
+@@||wikia.nocookie.net^*/dist/ads.scss$css,domain=fandom.com
+
+! https://github.com/uBlockOrigin/uBlock-issues/issues/578
+@@||gannettdigital.com/universal-web-client/master/latest/elements/partner/partner-comscore/$xhr,domain=detroitnews.com
+detroitnews.com###partner-poster-0
+
+! https://www.reddit.com/r/uBlockOrigin/comments/bps057/kimcartoon_videos_wont_play/
+/^https?:\/\/([0-9a-z\-]+\.)?(9anime|animeland|animenova|animeplus|animetoon|animewow|gamestorrent|goodanime|gogoanime|igg-games|kimcartoon|memecenter|readcomiconline|toonget|toonova|watchcartoononline)\.[a-z]{2,4}\/(?!([Ee]xternal|[Ii]mages|[Ss]cripts|[Uu]ploads|ac|ajax|assets|combined|content|cov|cover|(img\/bg)|(img\/icon)|inc|jwplayer|player|playlist-cat-rss|static|thumbs|wp-content|wp-includes)\/)(.*)/$first-party,image,domain=~animeland.hu|~memecenter.fr,badfilter
+
+! https://www.reddit.com/r/uBlockOrigin/comments/bps057/kimcartoon_videos_wont_play/
+@@||code.jquery.com^$script,domain=kimcartoon.me|kimcartoon.to
+@@||vjs.zencdn.net/*/video.js$script,domain=kimcartoon.me|kimcartoon.to
+
+! https://forums.lanik.us/viewtopic.php?p=147578#p147578
+@@||fontspring.com/analytics/hi.gif$image,1p
