@@ -168,9 +168,11 @@ def main():
             return
         paths.sort()
         for path in paths:
+            old_bl_size = len(blocklist.blacklist)
+            old_wl_size = len(blocklist.whitelist)
             print('Added', path)
             blocklist.add_file(path, is_whitelist)
-            print('Blacklist size: %s Whitelist size: %s' % (len(blocklist.blacklist), len(blocklist.whitelist)))
+            print('Blacklist size: %s Whitelist size: %s' % (len(blocklist.blacklist) - old_bl_size, len(blocklist.whitelist) - old_wl_size))
     blocklist.clean()
     try:
         os.makedirs('output')
