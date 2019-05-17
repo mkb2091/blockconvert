@@ -8,6 +8,7 @@
 @@||gateway.reddit.com^
 @@||highcharts.com^
 @@||hostsfile.mine.nu^
+@@||image.prntscr.com^
 @@||instagram.com^
 @@||mail.google.com^
 @@||mine.nu^
