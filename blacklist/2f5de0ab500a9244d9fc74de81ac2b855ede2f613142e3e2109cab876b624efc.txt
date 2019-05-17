@@ -997,6 +997,8 @@ cnn.com##.OUTBRAIN
 1337x.*##+js(abort-on-property-write.js, Fingerprint2)
 ! https://github.com/uBlockOrigin/uAssets/issues/635
 ! https://www.reddit.com/r/uBlockOrigin/comments/81hcu5/1337xto_annoying_popup/
+! https://www.reddit.com/r/uBlockOrigin/comments/bpm1l9/trying_to_download_something_from_13377x_and_keep/
+13377x.*##+js(abort-current-inline-script.js, decodeURI, decodeURIComponent)
 1337x.*,x1337x.*##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, popunder)
 1337x.*,x1337x.*##+js(setInterval-defuser.js, (), 500)
 1337x.*##+js(window.open-defuser.js)
@@ -1300,9 +1302,8 @@ quora.com##:xpath(//div[not(@class="ui_qtext_para") and contains(text(), 'promot
 quora.com##:xpath(//div[not(@class="ui_qtext_para") and contains(text(), 'Quora') and contains(text(), 'by') and contains(text(), 'Business')]/parent::a/parent::div/parent::div/parent::div[@id])
 quora.com##.FeedStory.feed_item > div > div:has-text(/by Quora for Business/i)
 quora.com##.Toggle.SimpleToggle.ToggleAnswerFooterWrapper > div:has-text(/Promoted/i)
-quora.com##.UnifiedAnswerPagedList > .paged_list_wrapper > div[id]:if(a[href][target="_blank"][rel="noopener nofollow"]:not(.external_link))
 quora.com##:xpath(//span[contains(text(), 'by')]/ancestor::*[contains(concat(' ', @class, ' '), ' external_link ')]/../../..)
-quora.com##:xpath(//span[(text()='d')]/../../../../..)
+quora.com##:xpath(//*[(text()='d')]/../../../../..)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/291
 ! https://github.com/uBlockOrigin/uAssets/issues/831
@@ -1355,8 +1356,8 @@ gelbooru.com##+js(abort-current-inline-script.js, ExoDetector)
 @@||gelbooru.com^$first-party,script
 gelbooru.com##+js(popads-dummy.js)
 gelbooru.com##a[href^="https://gelbooru.com/redirect.php"]
-gelbooru.com##a[href*="://media.r18.com/"]
-gelbooru.com##a[href*="://media.R18.com/"]
+gelbooru.com##[href*="18."]
+gelbooru.com##:xpath(//*[contains(text(),"disable")])
 gelbooru.com##a[href*="/track/"][target="_blank"]
 gelbooru.com##+js(abort-on-property-read.js, adtoniq)
 
@@ -1623,13 +1624,13 @@ wstream.video##div[onclick^="window.open"]
 ! https://www.reddit.com/r/uBlockOrigin/comments/7uro6c/accuweathercom_asking_you_to_buy_an_ad_removal/
 ! https://github.com/NanoAdblocker/NanoFilters/issues/100
 ! https://github.com/uBlockOrigin/uAssets/issues/2509
-accuweather.com,androidpolice.com,beliefnet.com,billingsgazette.com,bismarcktribune.com,businessinsider.com,champions.co,comicbook.com,eurogamer.net,givemesport.com,grubstreet.com,hotair.com,jg-tc.com,lacrossetribune.com,leaderpost.com,madison.com,magicvalley.com,missoulian.com,moviepilot.com,napavalleyregister.com,nationalpost.com,notalwaysright.com,nowloading.co,ottawacitizen.com,pantagraph.com,parkers.co.uk,patheos.com,popculture.com,poststar.com,qctimes.com,rapidcityjournal.com,rawstory.com,stltoday.com,thesouthern.com,thestarphoenix.com,thestudentroom.co.uk,townhall.com,trendblog.net,trib.com,tucson.com,tvtropes.org,twitchy.com,vancouversun.com,watoday.com.au,windsorstar.com##+js(abort-on-property-read.js, stop)
+accuweather.com,androidpolice.com,beliefnet.com,billingsgazette.com,bismarcktribune.com,businessinsider.com,champions.co,comicbook.com,eurogamer.net,givemesport.com,grubstreet.com,hotair.com,jg-tc.com,lacrossetribune.com,leaderpost.com,madison.com,magicvalley.com,missoulian.com,moviepilot.com,napavalleyregister.com,nationalpost.com,notalwaysright.com,nowloading.co,ottawacitizen.com,pantagraph.com,parkers.co.uk,patheos.com,popculture.com,poststar.com,qctimes.com,rapidcityjournal.com,rawstory.com,stltoday.com,thesouthern.com,thestarphoenix.com,thestudentroom.co.uk,townhall.com,trendblog.net,trib.com,tvtropes.org,twitchy.com,vancouversun.com,watoday.com.au,windsorstar.com##+js(abort-on-property-read.js, stop)
 ||0mme.com^$script,domain=comicbook.com|popculture.com
 ||1emn.com^$script,domain=hotair.com|lacrossetribune.com|leaderpost.com|moviepilot.com|nationalpost.com|notalwaysright.com
 ||1enm.com^$script,domain=champions.co|pantagraph.com|parkers.co.uk|windsorstar.com
 ||2enm.com^$domain=androidpolice.com|beliefnet.com|thestarphoenix.com|trib.com
 ||8d1f.com^$script,domain=napavalleyregister.com|rapidcityjournal.com|rawstory.com|tvtropes.org|vancouversun.com|watoday.com.au
-||e0mn.com^$script,domain=accuweather.com|billingsgazette.com|bismarcktribune.com|patheos.com|qctimes.com|tucson.com
+||e0mn.com^$script,domain=accuweather.com|billingsgazette.com|bismarcktribune.com|patheos.com|qctimes.com
 ||em0n.com^$domain=businessinsider.com|givemesport.com|grubstreet.com|madison.com|nowloading.co|thesouthern.com|trendblog.net|twitchy.com
 ||emn0.com^$script,domain=poststar.com|stltoday.com|thestudentroom.co.uk
 ||mdf91.com^$script,domain=townhall.com
@@ -4784,6 +4785,7 @@ win4cut.com##.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1282
 sunporno.com##+js(abort-on-property-read.js, ExoLoader.addZone)
+sunporno.com##+js(popads-dummy.js)
 sunporno.com###videoContainer_a
 sunporno.com##.atv
 sunporno.com##.a-block
@@ -16012,6 +16014,8 @@ bfst.to,vsdea.me##+js(window.open-defuser.js)
 ||cdn.globwo.online^$domain=mlbstream.tv|nbastream.tv|nhlstream.tv
 mlbstream.tv,nbastream.tv,nhlstream.tv##[href^="https://pl.allsports4free.club/"]
 ##[href^="https://qwertyuiop.stream/"]
+||dairouzy.net^$3p
+||kimsacka.net^$3p
 ||naustoch.net^$3p
 ||nittlopp.online^$3p
 ||taiphaib.net^$3p
@@ -20313,3 +20317,22 @@ naturalhealthy.xyz##.adsbygoogle
 ! https://github.com/uBlockOrigin/uAssets/issues/5607
 ! https://github.com/uBlockOrigin/uAssets/issues/5606
 muhammadyoga.me,oploverzhome.com##+js(addEventListener-defuser.js, load, onload)
+
+! https://github.com/NanoMeow/QuickReports/issues/253
+tucson.com##+js(abort-current-inline-script.js, Uint8Array, googlefcPresent)
+
+! https://github.com/NanoMeow/QuickReports/issues/1236
+beautypageants.indiatimes.com##+js(addEventListener-defuser.js, scroll, _0x)
+
+! https://github.com/NanoMeow/QuickReports/issues/1235
+@@||googletagmanager.com/gtm.js$script,domain=raiplayradio.it
+
+! https://github.com/NanoMeow/QuickReports/issues/1239
+@@||freebcc.org^$generichide
+
+! https://github.com/NanoMeow/QuickReports/issues/1240
+watch24online.cc##+js(abort-on-property-read.js, AaDetector)
+@@||watch24online.cc^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/5610
+||pagead2.googlesyndication.com/pagead/show_ads.js$script,redirect=noopjs,domain=agame.com|giochi.it|jeu.fr|plinga.com|spel.nl|spielen.com
