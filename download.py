@@ -94,14 +94,28 @@ def fetch_new_tld():
                     file.write(response.read())
     else:
         with urllib.request.urlopen(req) as response:
-                with open('tld_list.txt', 'wb') as file:
+            with open('tld_list.txt', 'wb') as file:
+                file.write(response.read())
+def fetch_new_subdomains():
+    req = urllib.request.Request('https://raw.githubusercontent.com/bitquark/dnspop/master/results/bitquark_20160227_subdomains_popular_1000',
+                                 data=None,
+                                 headers={'User-Agent':'BlockListConvert' + str(id(blacklist_urls))})
+    if os.path.exists('subdomain_list.txt'):
+        if (time.time() - os.stat('subdomain_list.txt').st_mtime) / (60 * 60 * 11.5) > 1:
+            with urllib.request.urlopen(req) as response:
+                with open('subdomain_list.txt', 'wb') as file:
                     file.write(response.read())
+    else:
+        with urllib.request.urlopen(req) as response:
+            with open('subdomain_list.txt', 'wb') as file:
+                file.write(response.read())
 if not os.path.exists('blacklist'):
     os.mkdir('blacklist')
 if not os.path.exists('whitelist'):
     os.mkdir('whitelist')
 copy_whitelist_and_clean()
 fetch_new_tld()
+fetch_new_subdomains()
 
 for (folder, urls) in (('blacklist', blacklist_urls), ('whitelist', whitelist_urls)):
     for (i, url) in enumerate(urls):
