@@ -8663,6 +8663,7 @@ cartoonporno.xxx##+js(window.open-defuser.js)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2481
 @@||solvettube.com^$script,first-party
+@@/googleads.js$domain=solvetube.site
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2472
 softgateon.herokuapp.com##+js(set-constant.js, gadb, false)
@@ -10942,7 +10943,7 @@ duellinksmeta.com##+js(noeval.js)
 ||duellinksmeta.com/*/adsbygoogle.js$script,1p,redirect=noopjs
 ||googletagmanager.com/gtag/js$script,redirect=noopjs,domain=duellinksmeta.com
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=duellinksmeta.com
-@@||duellinksmeta.com^$script,xhr,1p
+@@||duellinksmeta.com^$image,script,xhr,1p
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3202
 $popunder,domain=ah.pe
@@ -20348,3 +20349,14 @@ pixiv.net##div:has(:scope > iframe:not([src]))
 cda.pl##.pb-video-click
 cda.pl##.pb-ad-video-player
 ||redcdn.pl/file/*/vstatic/*.mp4$media,redirect=noopmp3-0.1s,domain=cda.pl
+
+! https://github.com/NanoMeow/QuickReports/issues/1243
+@@||s.nitropay.com/ads$script,domain=honeyhunterworld.com
+
+! https://github.com/NanoMeow/QuickReports/issues/1250
+@@||maalaimalar.com^$generichide
+cinema.maalaimalar.com##.in.fade.modal-backdrop
+cinema.maalaimalar.com##body:style(overflow: auto !important;)
+
+! https://github.com/uBlockOrigin/uAssets/issues/5614
+njiir.com##+js(set-constant.js, safelink.adblock, false)
