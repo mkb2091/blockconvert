@@ -18,6 +18,7 @@
 @@||quora.com^
 @@||reddit.com^
 @@||scrapinghub.com^
+@@||tecmint.com^
 @@||use.typekit.net^
 @@||wikidot.com^
 @@||www.digicert.com^
