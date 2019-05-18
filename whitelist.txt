@@ -2,6 +2,7 @@
 @@||cloudfront.net^
 @@||code.jquery.com^
 @@||d2gatte9o95jao.cloudfront.net^
+@@||digicert.com^
 @@||dns.google.com^
 @@||duckduckgo.com^
 @@||facebook.com^
