@@ -13,6 +13,7 @@
 @@||mail.google.com^
 @@||mine.nu^
 @@||reddit.com^
+@@||scrapinghub.com^
 @@||use.typekit.net^
 @@||wikidot.com^
 @@||www.instagram.com^
