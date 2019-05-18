@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: Press the Attack
 ! Description: Filters for ad blocking, tracking, crypto mining, and more!
-! Last modified: 2019-05-18 20:42:33
-! Version: 20190518204233
+! Last modified: 2019-05-19 07:33:56
+! Version: 20190519073356
 ! Expires: 3 hours
-! Number of filters: 15804
+! Number of filters: 15819
 ! Homepage: https://github.com/bogachenko/presstheattack/
 ! Wiki: https://github.com/bogachenko/presstheattack/wiki/
 ! Licence: https://raw.githubusercontent.com/bogachenko/presstheattack/master/LICENSE.md
@@ -4153,6 +4153,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 |http*:*/ADLog.ashx$image,xmlhttprequest,important
 |http*:*/ads.gif$image,important
 |http*:*/ads.png$image,important
+|http*:*/ads/track.js$important,script
 |http*:*/adsct?$image,important
 |http*:*/aff_i?offer_id=$important,script,xmlhttprequest,image
 |http*:*/akam/10/$important,script
@@ -4217,6 +4218,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 |http*:*/endscreen.js$script,domain=youtube.com
 |http*:*/entry_stats^$important,script,xmlhttprequest
 |http*:*/epubdelivery/$important
+|http*:*/error/*.gif?msg=$image,important,script,xmlhttprequest
 |http*:*/event.gif$image,important
 |http*:*/event.png$image,important
 |http*:*/flyertown_module.js$important,script
@@ -4375,6 +4377,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 |http*:*/webcoin.js$important,script
 |http*:*/webcoin.min.js$important,script
 |http*:*/webmr.js$important,script
+|http*:*/webpush.ma.js$important,script
 |http*:*/webtag.js$important,script
 |http*:*/webxmr.js$important,script
 |http*:*/worker-asmjs.min.js$important,script
@@ -5659,6 +5662,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||197c3b10bab3c1.com^$important
 ||1cb70f6b7aab4c70819a.date^$important
 ||1fbaa223d6945621f8d7.date^$important
+||1xgzu.world^$important
 ||21b666055c.com^$important
 ||280asnlnr7.com^$important
 ||28f77rd30e.ru^$important
@@ -5672,6 +5676,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||3585656d9351553f.com^$important
 ||360direct.click^$important
 ||36adb24f7c1c573a6380.date^$important
+||379bd258b1.com^$important
 ||3b9eb5ed04721bef.com^$important
 ||3da86d9fe797f228.com^$important
 ||3lift.com^$important
@@ -5680,6 +5685,9 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||43031aaaecd84428.com^$important
 ||43acc8130d31cfd61041.date^$important
 ||47f624b2e6c6072e.com^$important
+||4d2911e5a4e352.com^$important
+||4ukqzi8d7l.com^$important
+||550b3ikb9j.com^$important
 ||555dfbd5425347beab45.date^$important
 ||564d28256cddaeba.com^$important
 ||5nt1gx7o57.com^$important
@@ -5714,6 +5722,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||aaxads.com^$important
 ||aayaknbn.com^$important
 ||aazwugtom.com^$important
+||ab23e84117d41e7.com^$important
 ||abaujsqnndg.bid^$important
 ||abbahoxgss.com^$important
 ||abbowtxibib.com^$important
@@ -5811,6 +5820,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||advertising.com^$important
 ||advertnative.com^$important
 ||advertserve.com^$important
+||advg.agency^$important
 ||advideo.ru^$important
 ||advmaiotg.com^$important
 ||adwidgets.ru^$important
@@ -6641,6 +6651,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||cewegncr.com^$important
 ||cewviaslxyyr.com^$important
 ||ceywprmvjy.com^$important
+||cf933995ba2d.com^$important
 ||cfdmkifknsjt.com^$important
 ||cfhkiriics.com^$important
 ||cfnumapv.com^$important
@@ -7394,6 +7405,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||eca1d7792ad5de43.com^$important
 ||ecboxijnmh.com^$important
 ||eccsyytbe.bid^$important
+||ecd7735cffdc3.com^$important
 ||ecflhhxp.bid^$important
 ||ectbduztanog.com^$important
 ||ectxnsxezdg.com^$important
@@ -7413,6 +7425,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||edxosrcvydn.com^$important
 ||edxvyyywsxqh.com^$important
 ||edyjiqxeppjkj.com^$important
+||eead2a8e78c.com^$important
 ||eeamatyc.com^$important
 ||eebrojmn.com^$important
 ||eecetnnsdz.bid^$important
@@ -8153,6 +8166,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||gabyuyxwcubwdp.com^$important
 ||gafoswegc.com^$important
 ||gahhlbxdgw.com^$important
+||game168.com.tw^$important
 ||gamescarousel.com^$third-party,important
 ||gaqhseuqp.com^$important
 ||gaxafjlxgoqfj.bid^$important
@@ -12486,6 +12500,7 @@ yandex.by,yandex.ru,yandex.ua##^script:has-text(fingerprint)
 ||reszkzmyzceve.com^$important
 ||revcontent.com^$important
 ||reviewnotifyfriends.info^$important
+||reyden-x.com^$important
 ||rezbzvrbemeb.bid^$important
 ||rezfubngrzdet.bid^$important
 ||reztksclx.com^$important
