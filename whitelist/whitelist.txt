@@ -9,6 +9,7 @@
 @@||gateway.reddit.com^
 @@||highcharts.com^
 @@||hostsfile.mine.nu^
+@@||howtogeek.com^
 @@||image.prntscr.com^
 @@||instagram.com^
 @@||mail.google.com^
