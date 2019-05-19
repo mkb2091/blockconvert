@@ -50,7 +50,8 @@ class DNSCheckerWorker(threading.Thread):
                     try:
                         ip = ipaddress.ip_address(domain)
                     except ValueError:
-                        response_queue.put((old_domain, {})) 
+                        response_queue.put((old_domain, {}))
+                        continue
                     if isinstance(ip, ipaddress.IPv4Address):
                         domain = ip.exploded.split('.')[::-1]
                     else:

@@ -8,6 +8,10 @@ blacklist_urls = [
     'https://better.fyi/blockerList.txt',#CCASA4.0
     'https://cybercrime-tracker.net/all.php',#CC0
     'https://easylist-downloads.adblockplus.org/adwarefilters.txt',#GPLv3
+    'https://easylist-downloads.adblockplus.org/easylistchina.txt',#GPLv3
+    'https://easylist-downloads.adblockplus.org/easylistdutch.txt',#GPLv3
+    'https://easylist.to/easylistgermany/easylistgermany.txt',#GPLv3
+    'https://easylist-downloads.adblockplus.org/easylistitaly.txt',#GPLv3
     'https://easylist.to/easylist/easylist.txt',#GPLv3
     'https://easylist.to/easylist/easyprivacy.txt', #GPLv3
     'https://easylist.to/easylist/fanboy-annoyance.txt',#GPLv3
@@ -16,6 +20,7 @@ blacklist_urls = [
     'https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt',#GPLv3
     'https://hblock.molinero.dev/hosts',#MIT
     'https://hostsfile.mine.nu/hosts0.txt',#GPLv3
+    'https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt',#CC-BY-SA v4.0
     'https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt',#Free for use without any limitations
     'https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt',#Free for use without any limitations
     'https://raw.githubusercontent.com/CHEF-KOCH/Audio-fingerprint-pages/master/AudioFp.txt',#MIT
@@ -33,6 +38,8 @@ blacklist_urls = [
     'https://raw.githubusercontent.com/bjornstar/hosts/master/hosts',#The Unlicense
     'https://raw.githubusercontent.com/bogachenko/presstheattack/master/presstheattack.txt',#MIT
     'https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt',#MIT
+    'https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt',#GPLv3
+    'https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscriptions/abpindo.txt',#GPLv3
     'https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt',#MIT
     'https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt',#MIT
     'https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt',#Apache2
@@ -51,6 +58,7 @@ blacklist_urls = [
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt',#GPLv3
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt',#GPLv3
     'https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt',#GPLv3
+    'https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt',#CC-BY-SA v4.0
     'https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt',#GPL3
     'https://raw.githubusercontent.com/toshiya44/myAssets/master/hosts/hosts.txt',#GPLv3
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt',#GPLv3
