@@ -37,6 +37,7 @@ blacklist_urls = [
     'https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt',#The unlicense
     'https://raw.githubusercontent.com/bjornstar/hosts/master/hosts',#The Unlicense
     'https://raw.githubusercontent.com/bogachenko/presstheattack/master/presstheattack.txt',#MIT
+    'https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_lists/domains_only.txt',#MIT
     'https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt',#MIT
     'https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt',#GPLv3
     'https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscriptions/abpindo.txt',#GPLv3
