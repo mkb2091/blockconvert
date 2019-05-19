@@ -28,6 +28,7 @@ def main():
                     blocklist.add_file(file.read(), is_whitelist)
             except FileNotFoundError:
                 pass
+    blocklist.clean()
     for (path, func) in [('domains.txt', blocklist.to_domain_list),
                          ('adblock.txt', blocklist.to_adblock),
                          ('hosts.txt', blocklist.to_hosts),
