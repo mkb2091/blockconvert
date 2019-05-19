@@ -14148,7 +14148,9 @@ m.hellporno.com###fltd-inner
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4224
 uiz.io##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+uiz.io##+js(abort-on-property-read.js, open)
 uiz.io##+js(bab-defuser.js)
+uiz.io##+js(setTimeout-defuser.js, checkAdblockUser)
 ||uiz.io/sw.js$script,first-party
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=42257
@@ -20369,3 +20371,24 @@ topito.com##+js(abort-on-property-read.js, document.bridCanRunAds)
 
 ! https://github.com/NanoMeow/QuickReports/issues/1253
 0rechner.de##+js(set-constant.js, doads, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/5616
+healthfary.com,shortzon.com##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+@@||healthfary.com^$generichide
+@@||shortzon.com^$generichide
+healthfary.com,shortzon.com##.adsbygoogle
+
+! https://github.com/uBlockOrigin/uAssets/issues/5618
+@@||galt.hit.gemius.pl/gplayer.js$script,domain=lrt.lt
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/334
+powerclicks.xyz##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
+powerclicks.xyz##.blog-content
+
+! https://github.com/uBlockOrigin/uAssets/issues/5619
+bestbtcfaucets.com,myfaucetslist.com##+js(abort-on-property-write.js, adBlockDetected)
+@@||bestbtcfaucets.com^$generichide
+@@||myfaucetslist.com^$generichide
+bestbtcfaucets.com,myfaucetslist.com##[href*="track"]
+bestbtcfaucets.com##[href*="offer_id"]
+bestbtcfaucets.com###left-adspace
