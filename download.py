@@ -48,6 +48,7 @@ copy_whitelist_and_clean()
 fetch_new_tld()
 fetch_new_subdomains()
 
+def get_status(url):
     base = os.path.join('data', urllib.parse.urlencode({'':url})[1:])
     if os.path.exists(base):
         try:
