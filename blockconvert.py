@@ -64,9 +64,8 @@ class BlockList():
         self.REGEX_STRING = '(?:%s)|(?:%s)' % (self.HOSTS_STRING, self.ADBLOCK_STRING)
         self.REGEX = re.compile(self.REGEX_STRING)
 
-    def add_file(self, path, is_whitelist=False):
-        with open(path) as file:
-            data = file.read().lower()
+    def add_file(self, contents, is_whitelist=False):
+        data = contents.lower()
         try:
             data = json.loads(data)
             if ('action_map' in data and isinstance(data['action_map'], dict)
@@ -163,6 +162,9 @@ class BlockList():
         url_string = '"%s":{"heuristicAction":"block"}'
         return base % (',\n'.join([url_string % i for i in sorted(self.blacklist)]),
                        ',\n'.join(['"%s":["1","2","3"]' % (i) for i in sorted(self.blacklist)]))
+    def clear(self):
+        self.blacklist = set()
+        self.whitelist = set()
 
 def main():
     parser = argparse.ArgumentParser()
