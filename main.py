@@ -19,6 +19,7 @@ def main():
     manager = download.DownloadManager()
     for (whitelist, url, expires, list_license) in urls:
         manager.add_url(url, whitelist, expires)
+    print('Downloaded needed files')
     blocklist = blockconvert.BlockList()
     for path in os.listdir('data'):
         path = os.path.join('data', path)
@@ -28,7 +29,9 @@ def main():
                     blocklist.add_file(file.read(), is_whitelist)
             except FileNotFoundError:
                 pass
+    print('Consolidated lists')
     blocklist.clean()
+    print('Cleaned list')
     for (path, func) in [('domains.txt', blocklist.to_domain_list),
                          ('adblock.txt', blocklist.to_adblock),
                          ('hosts.txt', blocklist.to_hosts),
