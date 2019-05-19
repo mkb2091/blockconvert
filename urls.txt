@@ -29,6 +29,7 @@
 [false, "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt", 86400, "MIT"]
 [false, "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt", 86400, "MIT"]
 [false, "https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt", 259200, "The Unlicense"]
+[false, "https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts", 86400, "MIT"]
 [false, "https://raw.githubusercontent.com/bjornstar/hosts/master/hosts", 86400, "The Unlicense"]
 [false, "https://raw.githubusercontent.com/bogachenko/presstheattack/master/presstheattack.txt", 10800, "MIT"]
 [false, "https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_lists/domains_only.txt", 86400, "MIT"]
