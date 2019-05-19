@@ -1,6 +1,5 @@
 set -e
 git pull
-python3 download.py
-python3 blockconvert.py
+python3 main.py
 git commit -a -m "Ran Update"
 git push

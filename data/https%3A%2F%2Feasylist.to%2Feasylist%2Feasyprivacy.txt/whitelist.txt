@@ -1,0 +1,13 @@
+analytics.twitter.com
+clarity-green.hart.com
+count.ly
+cqcounter.com
+criteo.investorroom.com
+logging.apache.org
+metrics.mozilla.com
+metrics.torproject.org
+query.petametrics.com
+siteanalytics.compete.com
+track2.royalmail.com
+trackjs.com
+webtrack.dhlglobalmail.com
