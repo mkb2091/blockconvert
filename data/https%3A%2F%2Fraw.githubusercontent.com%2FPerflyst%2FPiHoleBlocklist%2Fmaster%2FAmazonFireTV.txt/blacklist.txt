@@ -1,0 +1,17 @@
+aax-eu.amazon-adsystem.com
+amazonadsi-a.akamaihd.net
+config.ioam.de
+de.ioam.de
+device-messaging-na.amazon.com
+devicemessaging.us-east-1.amazon.com
+fls-eu.amazon.com
+fls-na.amazon.com
+logs1409.xiti.com
+mads-eu.amazon.com
+mas-ext.amazon.com
+mas-sdk.amazon.com
+mobileanalytics.us-east-1.amazonaws.com
+msh.amazon.co.uk
+secure-eu.imrworldwide.com
+settings.crashlytics.com
+tracksrv.zdf.de
