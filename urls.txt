@@ -9,6 +9,7 @@
 [false, "https://easylist.to/easylist/easyprivacy.txt", 345600, "GPLv3"]
 [false, "https://easylist.to/easylist/fanboy-annoyance.txt", 345600, "GPLv3"]
 [false, "https://easylist.to/easylistgermany/easylistgermany.txt", 86400, "GPLv3"]
+[false, "https://filtri-dns.ga/filtri.txt", 86400, "GPLv3"]
 [false, "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt", 86400, "GPLv3"]
 [false, "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt", 86400, "CC0"]
 [false, "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt", 86400, "GPLv3"]
