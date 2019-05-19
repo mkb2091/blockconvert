@@ -67,6 +67,7 @@ blacklist_urls = [
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt',#GPL3
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',#GPLv3
     'https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt',#The Unlicense
+    'https://raw.githubusercontent.com/yowu/AnnoyanceMobileAdHosts/master/AnnoyanceMobileAdHosts.txt',#MIT
     'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt',#GPLv3
     'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt',#GPLv3
     'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt',#GPLv3
