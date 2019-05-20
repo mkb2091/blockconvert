@@ -318,6 +318,7 @@ app.brightinfo.com
 app.bugsnag.com
 app.clickfunnels.com
 app.intuit.launchdarkly.com
+app.pendo.io
 app.picreel.com
 app.truconversion.com
 app.whoisvisiting.com
@@ -544,6 +545,7 @@ cdn.merklesearch.com
 cdn.mxpnl.com
 cdn.native.ai
 cdn.onthe.io
+cdn.pendo.io
 cdn.permutive.com
 cdn.piwik.pro
 cdn.prod.paperg.com
@@ -611,6 +613,7 @@ cname05.cryptolootminer.com
 cnn.sdk.beemray.com
 cobrowse.mypurecloud.com
 cointraffic.io
+col.eum-appdynamics.com
 collect.adsorb.com
 collector-a.perimeterx.net
 collector-pxhyx10rg3.perimeterx.net
@@ -1385,6 +1388,7 @@ pathful.com
 pcrl.co
 pdwuengagementapiwkr.cloudapp.net
 pebed.dm-event.net
+pendo.io
 peoplegraph.firstpartyapps.oaspapps.com
 pepsico.demdex.net
 perf-optimized-by.rubiconproject.net.akadns.net

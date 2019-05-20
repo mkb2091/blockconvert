@@ -109,7 +109,11 @@ class ArgusPassiveDNS(threading.Thread):
                         time.sleep(1)
                     except TypeError:
                         print(r.json())
-                        time.sleep(1)
+                        try:
+                            time.sleep(r.json()['metaData']['millisUntilResourcesAvailable']/1000)
+                        except Exception as error:
+                            print(error)
+                            time.sleep(1)
                         break
                     except json.decoder.JSONDecodeError:
                         time.sleep(1)

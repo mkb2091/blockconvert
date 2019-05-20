@@ -151,6 +151,7 @@ api.maxmind.com
 api.olark.com
 api.pingdom.com
 api.poc.exacttarget.com
+api.providesupport.com
 api.qa-ext.livefyre.com
 api.s1.qa2.exacttarget.com
 api.s2.qa2.exacttarget.com
@@ -262,8 +263,10 @@ autodiscover.exacttarget.com
 automat.test.chatid.com
 av95.mta.exacttarget.com
 avatars.github.exacttarget.com
+aveeno-uk.ugc.bazaarvoice.com
 avon-ru.ugc.bazaarvoice.com
 avon-uk.ugc.bazaarvoice.com
+ba2.mta.exacttarget.com
 ba3.mta.exacttarget.com
 bakkerswereld.sslproxy.gigya.com
 bapi.flipboard.com
@@ -514,6 +517,8 @@ connector-hawkincentives.gomoxie.solutions
 connector-jjillecp.gomoxie.solutions
 connector-lifetimefitness.gomoxie.solutions
 connector-michaelkors.gomoxie.solutions
+connector-michaelkorseu.gomoxie.solutions
+connector-michaelkorsit.gomoxie.solutions
 connector-michaelkorsuk.gomoxie.solutions
 connector-norton.gomoxie.solutions
 connector-nutrisystem.gomoxie.solutions
@@ -538,6 +543,7 @@ containerstore.ugc.bazaarvoice.com
 content.exacttarget.com
 conversation-read.spot.im
 coopertire.ugc.bazaarvoice.com
+cortex.shs.prod.cortana.ai
 cp.spyhuman.com
 cpanel.admin.spymasterpro.com
 cpanel.iphone.spymasterpro.com
@@ -559,6 +565,7 @@ cr196.mta.exacttarget.com
 cr21.mta.exacttarget.com
 cr212.mta.exacttarget.com
 cr33.mta.exacttarget.com
+cr39.mta.exacttarget.com
 cr61.mta.exacttarget.com
 cr7.mta.exacttarget.com
 cr75.mta.exacttarget.com
@@ -692,6 +699,7 @@ data9.spyhuman.com
 datareview.maxmind.com
 davidsbridal.ugc.bazaarvoice.com
 db102.mta.exacttarget.com
+db113.mta.exacttarget.com
 db146.mta.exacttarget.com
 db152.mta.exacttarget.com
 db167.mta.exacttarget.com
@@ -706,6 +714,7 @@ de100.mta.exacttarget.com
 de119.mta.exacttarget.com
 de129.mta.exacttarget.com
 de168.mta.exacttarget.com
+de181.mta.exacttarget.com
 de184.mta.exacttarget.com
 de30.mta.exacttarget.com
 de55.mta.exacttarget.com
@@ -752,6 +761,7 @@ dg152.mta.exacttarget.com
 dg168.mta.exacttarget.com
 dg176.mta.exacttarget.com
 dg181.mta.exacttarget.com
+dg224.mta.exacttarget.com
 dg250.mta.exacttarget.com
 dg32.mta.exacttarget.com
 dg7.mta.exacttarget.com
@@ -925,6 +935,7 @@ fbchina.flipboard.com
 fbl.s50.exacttarget.com
 fbprod.flipboard.com
 fellowes.ugc.bazaarvoice.com
+fg146.mta.exacttarget.com
 fg158.mta.exacttarget.com
 fg183.mta.exacttarget.com
 fg203.mta.exacttarget.com
@@ -1185,6 +1196,7 @@ inbound-reply.s1.exacttarget.com
 inbound-reply.s4.exacttarget.com
 inbound-reply.s6.exacttarget.com
 inbound-reply.s7.exacttarget.com
+inbound.s4.exacttarget.com
 inbound.s6.exacttarget.com
 inbox.exacttarget.com
 incident-veriscommunity-net.surveygizmo.com
@@ -1335,6 +1347,7 @@ location.gomoxie.solutions
 location.uk.gomoxie.solutions
 log-bms_bms.gomoxie.solutions
 log-bms_yervoy.gomoxie.solutions
+log-boscovs.gomoxie.solutions
 log-capitagroup.uk.gomoxie.solutions
 log-cb.gomoxie.solutions
 log-chillinsurance.uk.gomoxie.solutions
@@ -1470,9 +1483,11 @@ mcbxb5x9l3891h1jz4j8hrp1gls0.login.exacttarget.com
 mcc7mbnnyjxyf9r6kjw5-3lbxr31.login.exacttarget.com
 mchlvl7-nh5pbjzs0-4wgl5wgnd1.login.exacttarget.com
 mckfsqm9tnf4jp6rz-v4p5zfkltm.login.exacttarget.com
+mcn3zwqsgd6922x1n5glsw906800.login.exacttarget.com
 mcq3v6k8917x8lg5w6s-94jck1r4.login.exacttarget.com
 mcvsb3gbtj9sn8ltvq3j4l-bw21y.login.exacttarget.com
 mcx915krlq4sx-35t6rmswbqw924.login.exacttarget.com
+mcz17jmw1yrdnf908lv4t1wmwl88.login.exacttarget.com
 me.spot.im
 media.github.exacttarget.com
 meet.exacttarget.com
@@ -1503,8 +1518,10 @@ messenger1.providesupport.com
 messenger2.providesupport.com
 messenger3.providesupport.com
 messenger4.providesupport.com
+messenger7.providesupport.com
 metrocashcarry.ugc.bazaarvoice.com
 mi.olark.com
+michaels.ugc.bazaarvoice.com
 michigan.olark.com
 microcenter.ugc.bazaarvoice.com
 microsend.hosting.exacttarget.com
@@ -1735,6 +1752,7 @@ publishers.flipboard.com
 pulse.boa.exacttarget.com
 puma.ugc.bazaarvoice.com
 pumajapan.ugc.bazaarvoice.com
+purdy.ugc.bazaarvoice.com
 pypi.livefyre.com
 python-packages.pingdom.com
 qa-assets.narvar.com
@@ -2084,6 +2102,7 @@ toppstiles.ugc.bazaarvoice.com
 toro.ugc.bazaarvoice.com
 toronto.olark.com
 toryburch.ugc.bazaarvoice.com
+toyo.ugc.bazaarvoice.com
 toyota.ugc.bazaarvoice.com
 tr-tr.about.flipboard.com
 tr.mspy.com
@@ -2140,6 +2159,7 @@ videos.olark.com
 view.boa.exacttarget.com
 view.exacttarget.com
 view.s10.exacttarget.com
+view.s11.exacttarget.com
 view.s4.exacttarget.com
 view.s50.exacttarget.com
 view.s6.exacttarget.com
@@ -2414,6 +2434,7 @@ xtinmta02-29.exacttarget.com
 xtinmta02-73.exacttarget.com
 xtinmta03-148.exacttarget.com
 xtinmta03-48.exacttarget.com
+xtinmta05-166.exacttarget.com
 z.cdn.turner.com
 zh-cn.about.flipboard.com
 zh-hk.about.flipboard.com
