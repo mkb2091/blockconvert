@@ -26,7 +26,7 @@ RESERVED = [
     ipaddress.IPv4Network('240.0.0.0/4'),
     ipaddress.IPv4Network('255.255.255.255/32')
     ]
-    
+
 
 class DNSCheckerWorker(threading.Thread):
     def __init__(self, session, servers, request_queue, response_queue,
@@ -92,7 +92,7 @@ class ArgusPassiveDNS(threading.Thread):
         try:
             while True:
                 ip = request_queue.get_nowait()
-                self.data['query'] = ip                
+                self.data['query'] = ip
                 domains = set()
                 for _ in range(3):
                     try:
@@ -122,8 +122,8 @@ class ArgusPassiveDNS(threading.Thread):
                         print('Failed 3 times')
         except queue.Empty:
             pass
-        
-    
+
+
 
 class DNSChecker():
     def __init__(self):
@@ -288,4 +288,4 @@ class DNSChecker():
             file.write('\n'.join(lines))
         os.replace('temp', 'reverse_dns_cache.txt')
         return results
-        
+
