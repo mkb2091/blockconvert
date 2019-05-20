@@ -57,7 +57,7 @@ def get_status(url):
             last_modified = metadata['last_modified']
             last_checked = metadata['last_checked']
             etag = metadata['etag']
-        except FileNotFoundError:
+        except (FileNotFoundError, json.JSONDecodeError):
             last_modified = 0
             last_checked = 0
             etag = ''
@@ -72,7 +72,7 @@ def set_status(url, last_modified, last_checked, etag):
     if not os.path.exists(base):
         os.mkdir(base)
     with open(os.path.join(base, 'metadata.json'), 'w') as file:
-        json.dump({'last_modified':last_modified, 'last_checked':last_checked, 'etag':etag}, file)
+        json.dump({'last_modified':int(last_modified), 'last_checked':int(last_checked), 'etag':etag}, file)
 
 class DownloadManager():
     def __init__(self, **kwargs):
@@ -82,7 +82,12 @@ class DownloadManager():
     def add_url(self, url, whitelist, expires):
         last_modified, last_checked, old_etag = get_status(url)
         if last_modified < (time.time() - expires) and last_checked < (time.time()  - (11.5 * 60 * 60)):
-            r = self.session.get(url, stream=True)
+            headers = {}
+            if old_etag != '':
+                headers['If-None-Match'] = old_etag
+            if last_modified != 0:
+                headers['If-Modified-Since'] = time.strftime('%a, %d %b %Y %H:%M:%S GMT', time.localtime(last_modified))
+            r = self.session.get(url, headers=headers)
             try:
                 new_etag = r.headers['ETag']
             except KeyError:
@@ -91,14 +96,18 @@ class DownloadManager():
                 lm_header = time.mktime(time.strptime(r.headers['Last-Modified'], '%a, %d %b %Y %H:%M:%S GMT'))   
             except (KeyError, ValueError):
                 lm_header = 0
-            set_status(url, (last_modified if last_modified != 0 else time.time()), time.time(), new_etag)
-            if (new_etag != '' and new_etag != old_etag) or (lm_header != 0 and lm_header > last_checked):
+            set_status(url, lm_header, time.time(), new_etag)
+            print(url)
+            if r.status_code == 200:
+                print('Changed')
                 self.bl.clear()
-                self.bl.add_file(r.content.decode('utf-8', 'ignore'), whitelist)
+                self.bl.add_file(r.text, whitelist)
                 self.bl.clean()
                 base = os.path.join('data', urllib.parse.urlencode({'':url})[1:])
                 with open(os.path.join(base, 'blacklist.txt'), 'w') as file:
                     file.write('\n'.join(sorted(self.bl.blacklist)))
                 with open(os.path.join(base, 'whitelist.txt'), 'w') as file:
                     file.write('\n'.join(sorted(self.bl.whitelist)))
+            elif r.status_code == 304:
+                print('Not modified')
             
