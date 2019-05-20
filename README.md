@@ -13,3 +13,7 @@ List of blocked domains: https://raw.githubusercontent.com/mkb2091/blockconvert/
 Blocklist for use in Privacy Badger(takes a while to import): https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/PrivacyBadger.json
 
 URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/urls.txt
+
+## Credits
+
+enemyofarsenic(Reddit): Suggested addition of whitelists, and use of passive dns services to find as many as possible of malware domains hosted on blacklisted IP address
