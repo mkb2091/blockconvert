@@ -143,10 +143,10 @@ class DNSChecker():
             with open('dns_cache.txt') as file:
                 for line in file:
                     try:
-                        domain, exists, last_modified = line.rstrip().split(',')
+                        domain, ip, last_modified = line.rstrip().split(',')
                         last_modified = int(last_modified)
                         if last_modified > one_week_ago:
-                            self.cache[domain] = (bool(exists), last_modified)
+                            self.cache[domain] = (ip, last_modified)
                     except (ValueError):
                         pass
         except FileNotFoundError:
@@ -198,6 +198,7 @@ class DNSChecker():
                 while True:
                     domain, result = response_queue.get(timeout=0.1)
                     exists = result['Status'] == 0 and 'Answer' in result
+                    ip = ''
                     if exists:
                         for answer in result['Answer']:
                             try:
@@ -205,16 +206,18 @@ class DNSChecker():
                                 exists = exists and (not any(network.overlaps(ip) for network in RESERVED))
                             except ipaddress.AddressValueError:
                                 pass
-                    if exists:
+                    if exists and isinstance(ip, ipaddress.IPv4Network):
                         valid_count += 1
+                        ip = ip.network_address.exploded
                     else:
                         invalid_count += 1
-                    results[domain] = exists
-                    cache[domain] = (exists, time.time())
+                        ip = ''
+                    results[domain] = ip
+                    cache[domain] = (ip, time.time())
                     if len(results) % 2000 == 1999:
                         print('%s/s %s Valid: %s Invalid: %s ' % (round((len(results) - initial_length)/(time.time() - start), 2),
                               round(len(results)/domain_list_length, 5), valid_count, invalid_count))
-                        lines = [[i, '1'if cache[i][0] else '', str(int(cache[i][1]))] for i in sorted(cache)]
+                        lines = [[i, cache[i][0], str(int(cache[i][1]))] for i in sorted(cache)]
                         with open('temp', 'w') as file:
                             file.write('\n'.join(','.join(line) for line in lines))
                         os.replace('temp', 'dns_cache.txt')
@@ -223,7 +226,7 @@ class DNSChecker():
             except Exception as error:
                 print(error)
                 print(domain, result)
-        lines = [[i, '1'if cache[i][0] else '', str(int(cache[i][1]))] for i in sorted(cache)]
+        lines = [[i, cache[i][0], str(int(cache[i][1]))] for i in sorted(cache)]
         with open('temp', 'w') as file:
             file.write('\n'.join(','.join(line) for line in lines))
         os.replace('temp', 'dns_cache.txt')
@@ -244,44 +247,73 @@ class DNSChecker():
                 request_queue.put(ip)
                 request_queue2.put(ip)
                 all_from_cache = False
-        if all_from_cache:
-            return results
-        del ip_list
-        threads = []
-        for i in range(thread_count):
-            thread = DNSCheckerWorker(self.session, self.servers, request_queue,
-                                      response_queue, 12)
-            thread.start()
-            threads.append(thread)
-        for i in range(10):
-            thread = ArgusPassiveDNS(self.session, request_queue2, response_queue2)
-            thread.start()
-            threads.append(thread)
-        while any(thread.is_alive() for thread in threads):
-            try:
-                while True:
-                    ip, result = response_queue.get(timeout=0.1)
-                    try:
-                        if result['Status'] == 0:
-                            domains = [answer['data'].lower().strip('.') for answer in result['Answer'] if answer['type'] == 12]
-                            reverse_cache[ip] = [time.time(), domains]
-                            results.update(domains)
-                        else:
+        if not all_from_cache:
+            threads = []
+            for i in range(thread_count):
+                thread = DNSCheckerWorker(self.session, self.servers, request_queue,
+                                          response_queue, 12)
+                thread.start()
+                threads.append(thread)
+            for i in range(10):
+                thread = ArgusPassiveDNS(self.session2, request_queue2, response_queue2)
+                thread.start()
+                threads.append(thread)
+            while any(thread.is_alive() for thread in threads):
+                try:
+                    while True:
+                        ip, result = response_queue.get(timeout=0.1)
+                        try:
+                            if result['Status'] == 0:
+                                domains = [answer['data'].lower().strip('.') for answer in result['Answer'] if answer['type'] == 12]
+                                reverse_cache[ip] = [time.time(), domains]
+                                results.update(domains)
+                            else:
+                                reverse_cache[ip] = (time.time(), [])
+                        except KeyError:
                             reverse_cache[ip] = (time.time(), [])
-                    except KeyError:
-                        reverse_cache[ip] = (time.time(), [])
-            except queue.Empty:
-                pass
+                except queue.Empty:
+                    pass
+                try:
+                    while True:
+                        ip, result = response_queue2.get(timeout=0.1)
+                        result = list(result)
+                        try:
+                            reverse_cache[ip][1].extend(result)
+                        except KeyError:
+                            reverse_cache[ip] = [time.time(), result]
+                        results.update(result)
+                except queue.Empty:
+                    pass
+        print('Fetched/Loaded from cache domains')
+        domain_to_ip = self.mass_check(results, thread_count)
+        print('Fetched/Loaded from cache ip addresses')
+        domain_to_ip_dict = {'1':set()}
+        for domain in domain_to_ip:
+            now = domain_to_ip_dict.get(domain_to_ip[domain], set())
+            now.add(domain)
+            domain_to_ip_dict[domain_to_ip[domain]] = now
+        print('Generated domain_to_ip_dict')
+        for ip in domain_to_ip_dict:
+            if ip in reverse_cache:
+                old = reverse_cache[ip][1]
+                new = set(old)
+                new.update(domain_to_ip_dict[ip])
+                keep = set()
+                keep.update(domain_to_ip_dict[ip])
+                keep.update(domain_to_ip_dict['1'])
+                new.intersection_update(keep)
+                new = list(new)
+                reverse_cache[ip][1].clear()
+                reverse_cache[ip][1].extend(new)
+        print('Started with %s rules' % len(results))
+        results.clear()
+        results.update(domain_to_ip_dict['1'])
+        for ip in ip_list:
             try:
-                while True:
-                    ip, result = response_queue2.get(timeout=0.1)
-                    try:
-                        reverse_cache[ip][1].extend(result)
-                    except KeyError:
-                        reverse_cache[ip] = [time.time(), result]
-                    results.update(result)
-            except queue.Empty:
+                results.update(domain_to_ip_dict[ip])
+            except KeyError:
                 pass
+        print('Removed domains that resolve no longer resolve to mentioned address: %s' % len(results))
         lines = [','.join((ip, str(int(reverse_cache[ip][0])), *sorted(list(set(reverse_cache[ip][1])))))
                  for ip in sorted(reverse_cache)]
         with open('temp', 'w') as file:
