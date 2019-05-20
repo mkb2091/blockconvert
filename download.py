@@ -80,8 +80,9 @@ class DownloadManager():
         self.session = requests.Session()
         self.session.headers['User-Agent'] = 'BlocklistConvert' + str(int(time.time()))
     def add_url(self, url, whitelist, expires):
+        check_frequency = min((11.5 * 60 * 60, expires))
         last_modified, last_checked, old_etag = get_status(url)
-        if last_modified < (time.time() - expires) and last_checked < (time.time()  - (11.5 * 60 * 60)):
+        if last_modified < (time.time() - expires) and last_checked < (time.time()  - check_frequency):
             headers = {}
             if old_etag != '':
                 headers['If-None-Match'] = old_etag
