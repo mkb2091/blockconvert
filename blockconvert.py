@@ -151,6 +151,12 @@ class BlockList():
                 if not result[domain]:
                     self.blacklist.remove(domain)
             print('Trimmed to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+        last = time.time()
+        for filter_list in [self.blacklist, self.whitelist]:
+            for url in list(filter_list):
+                if not self.REGEX.match(url):
+                    print('Removing', url)
+                    filter_list.remove(url)
     def to_domain_list(self):
         return '\n'.join(sorted(self.blacklist))
     def to_adblock(self):
