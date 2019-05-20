@@ -91,7 +91,7 @@ class DownloadManager():
                 lm_header = time.mktime(time.strptime(r.headers['Last-Modified'], '%a, %d %b %Y %H:%M:%S GMT'))   
             except (KeyError, ValueError):
                 lm_header = 0
-            set_status(url, last_modified, time.time(), new_etag)
+            set_status(url, (last_modified if last_modified != 0 else time.time()), time.time(), new_etag)
             if (new_etag != '' and new_etag != old_etag) or (lm_header != 0 and lm_header > last_checked):
                 self.bl.clear()
                 self.bl.add_file(r.content.decode('utf-8', 'ignore'), whitelist)
