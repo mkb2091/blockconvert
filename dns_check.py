@@ -96,7 +96,9 @@ class ArgusPassiveDNS(threading.Thread):
                 domains = set()
                 for _ in range(3):
                     try:
+                        start = time.time()
                         r = self.session.post(self.url, json=self.data)
+                        time.sleep(time.time() - start)
                         if r.status_code == 503:
                             time.sleep(5)
                             continue
@@ -110,7 +112,9 @@ class ArgusPassiveDNS(threading.Thread):
                     except TypeError:
                         print(r.json())
                         try:
-                            time.sleep(r.json()['metaData']['millisUntilResourcesAvailable']/1000)
+                            if r.json()['metaData']['millisUntilResourcesAvailable']/1000 > 30*60:
+                                return
+                            time.sleep(max(r.json()['metaData']['millisUntilResourcesAvailable']/1000, 100))
                             time.sleep(1)
                         except Exception as error:
                             print(error)
@@ -127,8 +131,6 @@ class ArgusPassiveDNS(threading.Thread):
                         print('Failed 3 times')
         except queue.Empty:
             pass
-
-
 
 class DNSChecker():
     def __init__(self):
@@ -259,10 +261,9 @@ class DNSChecker():
                                           response_queue, 12)
                 thread.start()
                 threads.append(thread)
-            for i in range(10):
-                thread = ArgusPassiveDNS(self.session2, request_queue2, response_queue2)
-                thread.start()
-                threads.append(thread)
+            thread = ArgusPassiveDNS(self.session2, request_queue2, response_queue2)
+            thread.start()
+            threads.append(thread)
             while any(thread.is_alive() for thread in threads):
                 try:
                     while True:
