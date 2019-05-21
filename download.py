@@ -79,7 +79,10 @@ class DownloadManager():
         self.bl = blockconvert.BlockList(**kwargs)
         self.session = requests.Session()
         self.session.headers['User-Agent'] = 'BlocklistConvert' + str(int(time.time()))
+        self.paths = []
     def add_url(self, url, whitelist, expires):
+        base = os.path.join('data', urllib.parse.urlencode({'':url})[1:])
+        self.paths.append(base)
         check_frequency = min((11.5 * 60 * 60, expires))
         last_modified, last_checked, old_etag = get_status(url)
         if last_modified < (time.time() - expires) and last_checked < (time.time()  - check_frequency):
@@ -104,11 +107,20 @@ class DownloadManager():
                 self.bl.clear()
                 self.bl.add_file(r.text, whitelist)
                 self.bl.clean()
-                base = os.path.join('data', urllib.parse.urlencode({'':url})[1:])
                 with open(os.path.join(base, 'blacklist.txt'), 'w') as file:
                     file.write('\n'.join(sorted(self.bl.blacklist)))
                 with open(os.path.join(base, 'whitelist.txt'), 'w') as file:
                     file.write('\n'.join(sorted(self.bl.whitelist)))
             elif r.status_code == 304:
                 print('Not modified')
+    def clean(self):
+        for path in os.listdir('data'):
+            path = os.path.join('data', path)
+            if path not in self.paths + [os.path.join('data', 'whitelist')]:
+                print('Removing: %s' % path)
+                for f in ('blacklist.txt', 'whitelist.txt', 'metadata.json'):
+                    now = os.path.join(path, f)
+                    if os.path.exists(now):
+                        os.remove(now)
+                os.rmdir(path)
             
