@@ -238,7 +238,6 @@ assets.github.exacttarget.com
 assets.hellomedian.com
 assets.juicer.io
 assets.livechatinc.com
-assets.narvar.com
 assets.olark.com
 au1a-email-mng.gigya.com
 auth.boa.exacttarget.com
@@ -275,7 +274,6 @@ beacon.flipboard.com
 beacon.livefyre.com
 beacon.t402.livefyre.com
 bebe.ugc.bazaarvoice.com
-bedbathandbeyond.narvar.com
 bell.ugc.bazaarvoice.com
 benadryl.ugc.bazaarvoice.com
 bene.flipboard.com
@@ -1755,7 +1753,6 @@ pumajapan.ugc.bazaarvoice.com
 purdy.ugc.bazaarvoice.com
 pypi.livefyre.com
 python-packages.pingdom.com
-qa-assets.narvar.com
 qa-ext.livefyre.com
 quality.livechatinc.com
 querysuggestions-int.api.cortana.ai
@@ -2108,7 +2105,6 @@ tr-tr.about.flipboard.com
 tr.mspy.com
 tracker.mspy.com
 tracker.spot.im
-tracking-assets-prod01.narvar.com
 tracking.mspy.com
 traffic.spot.im
 train.olark.com

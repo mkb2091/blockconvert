@@ -7177,6 +7177,7 @@ openapi.youbit.co.kr
 openbsd.hiveon.net
 openkatalog.com
 opennode-scanner.viaxmr.com
+openvpn.f2pool.com
 ops.hiveon.net
 ops0.hiveon.net
 ops01.nanopool.org
