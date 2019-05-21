@@ -111,10 +111,11 @@ class ArgusPassiveDNS(threading.Thread):
                         print(r.json())
                         try:
                             time.sleep(r.json()['metaData']['millisUntilResourcesAvailable']/1000)
+                            time.sleep(1)
                         except Exception as error:
                             print(error)
                             time.sleep(1)
-                        break
+                            break
                     except json.decoder.JSONDecodeError:
                         time.sleep(1)
                         break
@@ -289,13 +290,14 @@ class DNSChecker():
                 except queue.Empty:
                     pass
         print('Fetched/Loaded from cache domains')
-        domain_to_ip = self.mass_check(results, thread_count)
+        self.mass_check(results, thread_count)
         print('Fetched/Loaded from cache ip addresses')
         domain_to_ip_dict = {'1':set()}
-        for domain in domain_to_ip:
-            now = domain_to_ip_dict.get(domain_to_ip[domain], set())
-            now.add(domain)
-            domain_to_ip_dict[domain_to_ip[domain]] = now
+        for domain in self.cache:
+            if self.cache[domain][0] != '1' or domain in results:
+                now = domain_to_ip_dict.get(self.cache[domain][0], set())
+                now.add(domain)
+                domain_to_ip_dict[self.cache[domain][0]] = now
         print('Generated domain_to_ip_dict')
         for ip in domain_to_ip_dict:
             if ip in reverse_cache:
