@@ -13,6 +13,7 @@ class BlockList():
         self.generate_domain_regex()
         self.generate_host_regex()
         self.generate_adblock_regex()
+        self.generate_dns_reponse_policy_zone_regex()
         self.generate_master_regex()
         self.do_dns_check = do_dns_check
         self.dns_check_threads = dns_check_threads
@@ -60,8 +61,12 @@ class BlockList():
         ending = r'[*]?\|?\^?(?:{options_full})?(?:\s+(?:(?:\!.*)|(?:\#.*))?)?'.format(**locals())
         href_element_hiding = r'\#\#\[href\^?\=\"{url_string}\"\]'.format(**locals())
         self.ADBLOCK_STRING = r'(?:{start}{url_string}{ending})|(?:{href_element_hiding})'.format(**locals())
+    def generate_dns_reponse_policy_zone_regex(self):
+        domain_string = self.DOMAIN_STRING
+        self.RPZ_STRING = r'{domain_string}\s+cname\s+[.]\s*(?:[;].*)?'.format(**locals())
+        
     def generate_master_regex(self):
-        self.REGEX_STRING = '(?:%s)|(?:%s)' % (self.HOSTS_STRING, self.ADBLOCK_STRING)
+        self.REGEX_STRING = '(?:%s)|(?:%s)|(?:%s)' % (self.HOSTS_STRING, self.ADBLOCK_STRING, self.RPZ_STRING)
         self.REGEX = re.compile(self.REGEX_STRING)
 
     def add_file(self, contents, is_whitelist=False):
@@ -168,41 +173,9 @@ class BlockList():
         url_string = '"%s":{"heuristicAction":"block"}'
         return base % (',\n'.join([url_string % i for i in sorted(self.blacklist)]),
                        ',\n'.join(['"%s":["1","2","3"]' % (i) for i in sorted(self.blacklist)]))
+    def to_rpz(self):
+        return '\n'.join(['%s CNAME .' % i for i in sorted(self.blacklist)])
     def clear(self):
         self.blacklist = set()
         self.whitelist = set()
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--no-dns-check', action='store_true')
-    parser.add_argument('--dns-check-threads', type=int, default=40)
-    args = parser.parse_args()
-    blocklist = BlockList(not args.no_dns_check, args.dns_check_threads)
-    for (folder, is_whitelist) in (('blacklist', False), ('whitelist', True)):
-        try:
-            paths = [os.path.join(folder, f) for f in os.listdir(folder)]
-            paths = [f for f in paths if os.path.isfile(f)]
-        except FileNotFoundError:
-            print('Target directory does not exist')
-            return
-        paths.sort()
-        for path in paths:
-            old_bl_size = len(blocklist.blacklist)
-            old_wl_size = len(blocklist.whitelist)
-            print('Added', path)
-            blocklist.add_file(path, is_whitelist)
-            print('Blacklist size: %s Whitelist size: %s' % (len(blocklist.blacklist) - old_bl_size, len(blocklist.whitelist) - old_wl_size))
-    blocklist.clean()
-    try:
-        os.makedirs('output')
-    except FileExistsError:
-        pass
-    for (path, func) in [('domains.txt', blocklist.to_domain_list),
-                         ('adblock.txt', blocklist.to_adblock),
-                         ('hosts.txt', blocklist.to_hosts),
-                         ('PrivacyBadger.json', blocklist.to_privacy_badger)]:
-        with open(os.path.join('output', path), 'w') as file:
-            file.write(func())
-
-if __name__ == '__main__':
-    main()

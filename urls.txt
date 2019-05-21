@@ -80,6 +80,7 @@
 [false, "https://s3.amazonaws.com/lists.disconnect.me/simple_malware.txt", 86400, "GPLv3"]
 [false, "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt", 86400, "GPLv3"]
 [false, "https://sslbl.abuse.ch/blacklist/sslipblacklist.txt", 86400, "CC0"]
+[false, "https://urlhaus.abuse.ch/downloads/rpz/", 86400, "CC0"]
 [false, "https://v.firebog.net/hosts/BillStearns.txt", 86400, "GPLv3"]
 [false, "https://www.squidblacklist.org/downloads/dg-ads.acl", 86400, "You may freely use, copy, and redistribute this blacklist in any manner you like."]
 [false, "https://www.squidblacklist.org/downloads/dg-malicious.acl", 86400, "You may freely use, copy, and redistribute this blacklist in any manner you like."]
