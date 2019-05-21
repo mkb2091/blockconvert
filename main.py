@@ -19,6 +19,7 @@ def main():
     manager = download.DownloadManager()
     for (whitelist, url, expires, list_license) in urls:
         manager.add_url(url, whitelist, expires)
+    manager.clean()
     print('Downloaded needed files')
     blocklist = blockconvert.BlockList()
     for path in os.listdir('data'):
