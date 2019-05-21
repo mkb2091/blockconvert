@@ -46,7 +46,7 @@ class BlockList():
         ips = ['0.0.0.0', '127.0.0.1', '::1']
         ip_string = '(?:%s)' % '|'.join('(?:%s)' % re.escape(ip) for ip in ips)
         domain_string = self.DOMAIN_STRING
-        self.HOSTS_STRING = r'{ip_string}\s+{domain_string}\s*(?:\#.*)?'.format(**locals())
+        self.HOSTS_STRING = r'(?:{ip_string}\s+)?{domain_string}\s*(?:\#.*)?'.format(**locals())
     def generate_adblock_regex(self):
         domain_string = self.DOMAIN_STRING
         url_string = r'(?:(?:(?:http(?:s|\*)?)?[:])(?:(?:\/\/)|\*))?{domain_string}\/?'.format(**locals())
