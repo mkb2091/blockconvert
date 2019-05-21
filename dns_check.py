@@ -8,6 +8,8 @@ import os
 
 import requests
 
+import build_regex
+
 RESERVED = [
     ipaddress.IPv4Network('0.0.0.0/8'),
     ipaddress.IPv4Network('10.0.0.0/8'),
@@ -151,9 +153,10 @@ class DNSChecker():
                 for line in file:
                     try:
                         domain, ip, last_modified = line.rstrip().split(',')
-                        last_modified = int(last_modified)
-                        if last_modified > one_week_ago:
-                            self.cache[domain] = (ip, last_modified)
+                        if build_regex.DOMAIN_REGEX.fullmatch(domain) and (ip in '1' or build_regex.IP_REGEX.fullmatch(ip)):
+                            last_modified = int(last_modified)
+                            if last_modified > one_week_ago:
+                                self.cache[domain] = (ip, last_modified)
                     except (ValueError):
                         pass
         except FileNotFoundError:
@@ -163,9 +166,11 @@ class DNSChecker():
                 for line in file:
                     try:
                         ip_address, last_modified, *domains = line.rstrip().split(',')
-                        last_modified = int(last_modified)
-                        if last_modified > one_week_ago:
-                            self.reverse_cache[ip_address] = (last_modified, domains)
+                        if build_regex.IP_REGEX.fullmatch(ip_address):
+                            domains = [domain for domain in domains if build_regex.DOMAIN_REGEX.fullmatch(domain)]
+                            last_modified = int(last_modified)
+                            if last_modified > one_week_ago:
+                                self.reverse_cache[ip_address] = (last_modified, domains)
                     except (ValueError):
                         pass
         except FileNotFoundError:
@@ -180,59 +185,62 @@ class DNSChecker():
         valid_count = 0
         invalid_count = 0
         for domain in domain_list:
-            try:
-                results[domain] = cache[domain][0]
-                if cache[domain][0]:
-                    valid_count += 1
-                else:
-                    invalid_count += 1
-            except KeyError:
-                request_queue.put(domain)
-                all_from_cache = False
-        if all_from_cache:
-            return results
-        del domain_list
-        threads = []
-        for i in range(thread_count):
-            thread = DNSCheckerWorker(self.session, self.servers, request_queue,
-                                      response_queue, 1)
-            thread.start()
-            threads.append(thread)
-        start = time.time()
-        initial_length = len(results)
-        while any(thread.is_alive() for thread in threads):
-            try:
-                while True:
-                    domain, result = response_queue.get(timeout=0.1)
-                    exists = result['Status'] == 0 and 'Answer' in result
-                    ip = ''
-                    if exists:
-                        for answer in result['Answer']:
-                            try:
-                                ip = ipaddress.IPv4Network('%s/32' % answer['data'])
-                                exists = exists and (not any(network.overlaps(ip) for network in RESERVED))
-                            except ipaddress.AddressValueError:
-                                pass
-                    if exists and isinstance(ip, ipaddress.IPv4Network):
+            if build_regex.DOMAIN_REGEX.fullmatch(domain):
+                try:
+                    results[domain] = cache[domain][0]
+                    if cache[domain][0]:
                         valid_count += 1
-                        ip = ip.network_address.exploded
                     else:
                         invalid_count += 1
+                except KeyError:
+                    request_queue.put(domain)
+                    all_from_cache = False
+            else:
+                cache[domain] = ('', time.time())
+                results[domain] = ('', time.time())
+        if not all_from_cache:
+            del domain_list
+            threads = []
+            for i in range(thread_count):
+                thread = DNSCheckerWorker(self.session, self.servers, request_queue,
+                                          response_queue, 1)
+                thread.start()
+                threads.append(thread)
+            start = time.time()
+            initial_length = len(results)
+            while any(thread.is_alive() for thread in threads):
+                try:
+                    while True:
+                        domain, result = response_queue.get(timeout=0.1)
+                        exists = result['Status'] == 0 and 'Answer' in result
                         ip = ''
-                    results[domain] = ip
-                    cache[domain] = (ip, time.time())
-                    if len(results) % 2000 == 1999:
-                        print('%s/s %s Valid: %s Invalid: %s ' % (round((len(results) - initial_length)/(time.time() - start), 2),
-                              round(len(results)/domain_list_length, 5), valid_count, invalid_count))
-                        lines = [[i, cache[i][0], str(int(cache[i][1]))] for i in sorted(cache)]
-                        with open('temp', 'w') as file:
-                            file.write('\n'.join(','.join(line) for line in lines))
-                        os.replace('temp', 'dns_cache.txt')
-            except queue.Empty:
-                pass
-            except Exception as error:
-                print(error)
-                print(domain, result)
+                        if exists:
+                            for answer in result['Answer']:
+                                try:
+                                    ip = ipaddress.IPv4Network('%s/32' % answer['data'])
+                                    exists = exists and (not any(network.overlaps(ip) for network in RESERVED))
+                                except ipaddress.AddressValueError:
+                                    pass
+                        if exists and isinstance(ip, ipaddress.IPv4Network):
+                            valid_count += 1
+                            ip = ip.network_address.exploded
+                        else:
+                            invalid_count += 1
+                            ip = ''
+                        results[domain] = ip
+                        cache[domain] = (ip, time.time())
+                        if len(results) % 2000 == 1999:
+                            print('%s/s %s Valid: %s Invalid: %s ' % (round((len(results) - initial_length)/(time.time() - start), 2),
+                                  round(len(results)/domain_list_length, 5), valid_count, invalid_count))
+                            lines = [[i, cache[i][0], str(int(cache[i][1]))] for i in sorted(cache)]
+                            with open('temp', 'w') as file:
+                                file.write('\n'.join(','.join(line) for line in lines))
+                            os.replace('temp', 'dns_cache.txt')
+                except queue.Empty:
+                    pass
+                except Exception as error:
+                    print(error)
+                    print(domain, result)
         lines = [[i, cache[i][0], str(int(cache[i][1]))] for i in sorted(cache)]
         with open('temp', 'w') as file:
             file.write('\n'.join(','.join(line) for line in lines))
