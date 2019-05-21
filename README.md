@@ -12,6 +12,8 @@ List of blocked domains: https://raw.githubusercontent.com/mkb2091/blockconvert/
 
 Blocklist for use in Privacy Badger(takes a while to import): https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/PrivacyBadger.json
 
+DNS Response Policy Zone file: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz
+
 URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/urls.txt
 
 ## Credits
