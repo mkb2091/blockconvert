@@ -12,13 +12,13 @@ def main():
     urls = []
     with open('urls.txt') as file:
         for line in file.read().splitlines():
-            (list_type, url, expires, list_license) = json.loads(line)
-            urls.append((list_type, url, expires, list_license))
+            (list_type, is_malware, url, expires, list_license) = json.loads(line)
+            urls.append((list_type, is_malware, url, expires, list_license))
     with open('urls.txt', 'w') as file:
         file.write('\n'.join(sorted(set([json.dumps(i) for i in urls]))))
     manager = download.DownloadManager()
-    for (whitelist, url, expires, list_license) in urls:
-        manager.add_url(url, whitelist, expires)
+    for (whitelist, is_malware, url, expires, list_license) in urls:
+        manager.add_url(url, whitelist, is_malware, expires)
     manager.clean()
     print('Downloaded needed files')
     blocklist = blockconvert.BlockList()
