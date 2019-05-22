@@ -154,7 +154,7 @@ class DNSChecker():
                     try:
                         domain, ip, last_modified = line.rstrip().split(',')
                         if (build_regex.DOMAIN_REGEX.fullmatch(domain)
-                            and (not domain.startswith('*'))
+                            and ('*' not in domain)
                             and (ip in '1' or build_regex.IP_REGEX.fullmatch(ip))):
                             last_modified = int(last_modified)
                             if last_modified > one_week_ago:
@@ -169,7 +169,9 @@ class DNSChecker():
                     try:
                         ip_address, last_modified, *domains = line.rstrip().split(',')
                         if build_regex.IP_REGEX.fullmatch(ip_address):
-                            domains = [domain for domain in domains if build_regex.DOMAIN_REGEX.fullmatch(domain)]
+                            domains = [domain for domain in domains
+                                       if build_regex.DOMAIN_REGEX.fullmatch(domain)
+                                       and '*' not in domain]
                             last_modified = int(last_modified)
                             if last_modified > one_week_ago:
                                 self.reverse_cache[ip_address] = (last_modified, domains)
@@ -177,17 +179,21 @@ class DNSChecker():
                         pass
         except FileNotFoundError:
             pass
+        self.save_forward_cache()
+        self.save_reverse_cache()
     def save_forward_cache(self):
         lines = [[domain, self.cache[domain][0], str(int(self.cache[domain][1]))] for domain in sorted(self.cache)
                  if build_regex.DOMAIN_REGEX.fullmatch(domain)
-                 and (self.cache[domain][0] in '1' or build_regex.IP_REGEX.fullmatch(self.cache[domain][0]))]
+                 and (self.cache[domain][0] in '1' or build_regex.IP_REGEX.fullmatch(self.cache[domain][0]))
+                 and '*' not in domain]
         with open('temp', 'w') as file:
             file.write('\n'.join(','.join(line) for line in lines))
         os.replace('temp', 'dns_cache.txt')
     def save_reverse_cache(self):
         lines = [','.join((ip, str(int(self.reverse_cache[ip][0])),
                            *sorted([domain for domain in set(self.reverse_cache[ip][1])
-                                    if build_regex.DOMAIN_REGEX.fullmatch(domain)])))
+                                    if build_regex.DOMAIN_REGEX.fullmatch(domain)
+                                    and '*' not in domain])))
                  for ip in sorted(self.reverse_cache)
                  if build_regex.IP_REGEX.fullmatch(ip)]
         with open('temp', 'w') as file:
@@ -256,7 +262,6 @@ class DNSChecker():
                 except Exception as error:
                     print(error)
                     print(domain, result)
-        lines = [[i, cache[i][0], str(int(cache[i][1]))] for i in sorted(cache)]
         self.save_forward_cache()
         return results
     def mass_reverse_lookup(self, ip_list, thread_count=40):
