@@ -63,9 +63,10 @@ class BlockList():
                 if self.IP_REGEX.fullmatch(item):
                     ips.append(item)
                     filter_list.remove(item)
-            found = dns.mass_reverse_lookup(ips)
-            filter_list.update(found)
-            print('Added %s rules via reverse dns(%ss)' % (len(found), time.time() - last))
+            if ips:
+                found = dns.mass_reverse_lookup(ips)
+                filter_list.update(found)
+                print('Added %s rules via reverse dns(%ss)' % (len(found), time.time() - last))
         last = time.time()
         print('Started with %s rules' % len(self.blacklist))
         for filter_list in [self.blacklist, self.whitelist]:
