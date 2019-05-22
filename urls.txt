@@ -84,6 +84,8 @@
 [false, "https://v.firebog.net/hosts/BillStearns.txt", 86400, "GPLv3"]
 [false, "https://www.squidblacklist.org/downloads/dg-ads.acl", 86400, "You may freely use, copy, and redistribute this blacklist in any manner you like."]
 [false, "https://www.squidblacklist.org/downloads/dg-malicious.acl", 86400, "You may freely use, copy, and redistribute this blacklist in any manner you like."]
+[false, "https://zeustracker.abuse.ch/blocklist.php?download=baddomains", 86400, "CC0"]
+[false, "https://zeustracker.abuse.ch/blocklist.php?download=badips", 86400, "CC0"]
 [true, "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt", 86400, "GPLv3+"]
 [true, "https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list", 86400, "MIT"]
 [true, "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt", 86400, "MIT"]
