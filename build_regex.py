@@ -60,4 +60,5 @@ temp = BuildRegex()
 REGEX = temp.REGEX
 DOMAIN_REGEX = temp.DOMAIN_REGEX
 IP_REGEX = temp.IP_REGEX
+TLDS = temp.TLDS
 del temp
