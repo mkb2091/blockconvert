@@ -14,6 +14,7 @@ class BlockList():
         self.REGEX = build_regex.REGEX
         self.DOMAIN_REGEX = build_regex.DOMAIN_REGEX
         self.IP_REGEX = build_regex.IP_REGEX
+        self.TLDS = build_regex.TLDS
         self.do_dns_check = do_dns_check
         self.dns_check_threads = dns_check_threads
         with open('subdomain_list.txt') as file:
