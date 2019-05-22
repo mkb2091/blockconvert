@@ -15,7 +15,7 @@ def main():
             (list_type, url, expires, list_license) = json.loads(line)
             urls.append((list_type, url, expires, list_license))
     with open('urls.txt', 'w') as file:
-        file.write('\n'.join(sorted([json.dumps(i) for i in urls])))
+        file.write('\n'.join(sorted(set([json.dumps(i) for i in urls]))))
     manager = download.DownloadManager()
     for (whitelist, url, expires, list_license) in urls:
         manager.add_url(url, whitelist, expires)
