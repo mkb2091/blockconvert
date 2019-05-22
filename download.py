@@ -40,10 +40,6 @@ def fetch_new_subdomains():
         with urllib.request.urlopen(req) as response:
             with open('subdomain_list.txt', 'wb') as file:
                 file.write(response.read())
-if not os.path.exists('blacklist'):
-    os.mkdir('blacklist')
-if not os.path.exists('whitelist'):
-    os.mkdir('whitelist')
 copy_whitelist_and_clean()
 fetch_new_tld()
 fetch_new_subdomains()
@@ -80,7 +76,7 @@ class DownloadManager():
         self.session = requests.Session()
         self.session.headers['User-Agent'] = 'BlocklistConvert' + str(int(time.time()))
         self.paths = []
-    def add_url(self, url, whitelist, expires):
+    def add_url(self, url, whitelist, is_malware, expires):
         base = os.path.join('data', urllib.parse.urlencode({'':url})[1:])
         self.paths.append(base)
         check_frequency = min((11.5 * 60 * 60, expires))
@@ -106,7 +102,7 @@ class DownloadManager():
                 print('Changed')
                 self.bl.clear()
                 self.bl.add_file(r.text, whitelist)
-                self.bl.clean()
+                self.bl.clean(is_malware=is_malware)
                 with open(os.path.join(base, 'blacklist.txt'), 'w') as file:
                     file.write('\n'.join(sorted(self.bl.blacklist)))
                 with open(os.path.join(base, 'whitelist.txt'), 'w') as file:
