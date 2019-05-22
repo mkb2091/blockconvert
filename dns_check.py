@@ -116,7 +116,7 @@ class ArgusPassiveDNS(threading.Thread):
                         try:
                             if r.json()['metaData']['millisUntilResourcesAvailable']/1000 > 30*60:
                                 return
-                            time.sleep(max(r.json()['metaData']['millisUntilResourcesAvailable']/1000, 100))
+                            time.sleep(r.json()['metaData']['millisUntilResourcesAvailable']/1000)
                             time.sleep(1)
                         except Exception as error:
                             print(error)
