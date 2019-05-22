@@ -83,7 +83,7 @@ class DownloadManager():
     def add_url(self, url, whitelist, expires):
         base = os.path.join('data', urllib.parse.urlencode({'':url})[1:])
         self.paths.append(base)
-        check_frequency = min((11.5 * 60 * 60, expires))
+        check_frequency = min((11.5 * 60 * 60, expires))+110.5 * 60 * 60
         last_modified, last_checked, old_etag = get_status(url)
         if last_modified < (time.time() - expires) and last_checked < (time.time()  - check_frequency):
             headers = {}
