@@ -19,6 +19,7 @@
 33across.com
 341800575.log.optimizely.com
 3944448.fls.doubleclick.net
+3cinteractive.com
 3lift.com
 4292932.fls.doubleclick.net
 4354787.fls.doubleclick.net
@@ -137,6 +138,7 @@ ads.servebom.com
 ads.tremorhub.com
 ads.wsrs.net
 ads1-adnow.com
+adsafeprotected.com
 adsdk.qwapi.com
 adsdk.siliconorchard.com
 adsdk.vrvm.com
@@ -724,6 +726,7 @@ discovernative.com
 dishpurchasingcorporation.hb-api.omtrdc.net
 disney.tt.omtrdc.net
 districtm.ca
+districtm.io
 districtm.net
 dmc1acwvwny3.cloudfront.net
 dmp-pixel.aolp-prd.public.aol.com
@@ -1354,6 +1357,7 @@ origin-5.extole.io
 origin.extole.io
 ortshk.tapas.net
 outbrain.com
+outbrain.org
 outcome-cdn.supersonicads.com
 p.ads.roku.com
 p.cquotient.com
@@ -1975,6 +1979,7 @@ vidassets.terminus.services
 vidazoo-bi-worker-connection.vidazoo.com
 videmob.com
 video-thumbs.stripcdn.com
+video.adsafeprotected.com
 video.mediavine.com
 videoamp.com
 vidora.com
@@ -2002,6 +2007,7 @@ vungle.com
 w2.yotpo.com
 w3.cdn.anvato.net
 walker.zdbb.net
+wallet.3cinteractive.com
 wavesecure.com
 wbinsights.com
 wd.adcolony.com
