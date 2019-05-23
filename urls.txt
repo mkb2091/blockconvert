@@ -72,6 +72,8 @@
 [false, true, "http://vxvault.net/URL_List.php", 86400, "Copyleft 2010. No rights reserved. "]
 [false, true, "https://cybercrime-tracker.net/all.php", 86400, "CC0"]
 [false, true, "https://feodotracker.abuse.ch/downloads/ipblocklist.txt", 86400, "CC0"]
+[false, true, "https://pastebin.com/raw/BiQKjQaK", 864000, "Public Domain"]
+[false, true, "https://pastebin.com/raw/sRzfwfsa", 864000, "Public Domain"]
 [false, true, "https://ransomwaretracker.abuse.ch/downloads/LY_C2_IPBL.txt", 86400, "Free for use without any limitations"]
 [false, true, "https://ransomwaretracker.abuse.ch/downloads/LY_PS_IPBL.txt", 86400, "Free for use without any limitations"]
 [false, true, "https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt", 86400, "Free for use without any limitations"]
