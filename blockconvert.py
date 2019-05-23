@@ -59,7 +59,7 @@ class BlockList():
                             self.blacklist.add(i)
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
-    def clean(self, is_malware=False):
+    def clean(self):
         dns = self.dns
         last = time.time()
         for filter_list in [self.blacklist, self.whitelist]:
@@ -128,18 +128,6 @@ class BlockList():
                 if not self.REGEX.match(url):
                     print('Removing: %s' % url)
                     filter_list.remove(url)
-        if is_malware:
-            for filter_list in [self.blacklist, self.whitelist]:
-                ips = set()
-                result = dns.mass_check(filter_list, self.dns_check_threads)
-                for domain in result:
-                    if result[domain] not in '1':
-                        ips.add(result[domain])
-                old_len = len(filter_list)
-                found = dns.mass_reverse_lookup(ips)
-                filter_list.update(found)
-                print('Added %s rules via reverse dns of malware' % (len(filter_list) - old_len))
-                self.clean(False)
     def to_domain_list(self):
         return '\n'.join(sorted(self.blacklist))
     def to_adblock(self):
