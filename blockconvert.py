@@ -15,12 +15,13 @@ class BlockList():
         self.DOMAIN_REGEX = build_regex.DOMAIN_REGEX
         self.IP_REGEX = build_regex.IP_REGEX
         self.TLDS = build_regex.TLDS
+        self.URL_REGEX = build_regex.URL_REGEX
         self.dns_check_threads = max(1, dns_check_threads)
         with open('subdomain_list.txt') as file:
             self.SUBDOMAINS = file.read().splitlines()
         self.dns = dns_check.DNSChecker()
 
-    def add_file(self, contents, is_whitelist=False):
+    def add_file(self, contents, is_whitelist=False, is_malware=False):
         data = contents.lower()
         try:
             data = json.loads(data)
@@ -34,6 +35,10 @@ class BlockList():
             else:
                 blacklist = self.blacklist
             for line in data.splitlines():
+                if is_malware:
+                    match = self.URL_REGEX.fullmatch(line)
+                    if match:
+                        blacklist.update(filter(bool, match.groups()))
                 if line.startswith('@@'):
                     match = self.REGEX.fullmatch(line[2:])
                     if match:
