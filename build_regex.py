@@ -7,6 +7,7 @@ class BuildRegex():
         self.generate_adblock_regex()
         self.generate_dns_reponse_policy_zone_regex()
         self.generate_master_regex()
+        self.generate_url_regex()
         
     def generate_domain_regex(self):
         with open('tld_list.txt') as file:
@@ -40,6 +41,12 @@ class BuildRegex():
         segment = r'(?:[a-z0-9_](?:[a-z0-9_-]*[a-z0-9_])?)'
         self.DOMAIN_STRING =  '[.]?((?:(?:\*[.])?{segment}(?:[.]{segment})*[.]{tld_regex})|{ip})[.]?'.format(**locals())
         self.DOMAIN_REGEX = re.compile(self.DOMAIN_STRING)
+    def generate_url_regex(self):
+        domain_string = self.DOMAIN_STRING
+        protocol = r'(?:(?:(?:https?|ftps?)?[:])?//)?'
+        ending = r'(?:/[/a-zA-Z0-9_?&=.%-]*)?'
+        self.URL_STRING = r'{protocol}{domain_string}{ending}'.format(**locals())
+        self.URL_REGEX = re.compile(self.URL_STRING)
     def generate_host_regex(self):
         ips = ['0.0.0.0', '127.0.0.1', '::1']
         ip_string = '(?:%s)' % '|'.join('(?:%s)' % re.escape(ip) for ip in ips)
@@ -70,4 +77,5 @@ REGEX = temp.REGEX
 DOMAIN_REGEX = temp.DOMAIN_REGEX
 IP_REGEX = temp.IP_REGEX
 TLDS = temp.TLDS
+URL_REGEX = temp.URL_REGEX
 del temp

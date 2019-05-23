@@ -209,9 +209,15 @@ class DNSChecker():
         response_queue = queue.Queue()
         results = dict()
         all_from_cache = True
+        valid_count = 0
+        invalid_count = 0
         for domain in domain_list:
             try:
                 results[domain] = cache[domain][0]
+                if cache[domain][0]:
+                    valid_count += 1
+                else:
+                    invalid_count += 1
             except KeyError:
                 if build_regex.DOMAIN_REGEX.fullmatch(domain):
                     request_queue.put(domain)
