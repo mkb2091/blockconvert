@@ -5,6 +5,34 @@ It merges filter lists from many different sources(the list is in urls.txt), and
 
 If there are any false positives, add an issue, and I'll remove them
 
+## The Process
+
+1. Download file
+
+2. Extract domains into whitelist and blacklist
+
+3. Use passive dns and reverse dns on all of the ip addresses in the whitelist and blacklist
+
+4. For any domains which have "\*" in tld field replace it with every tld in downloaded list
+
+5. For each domain which starts with "www" or "m" add a copy of that domain without the subdomain
+
+6. For each domain with "\*" as subdomain replace it with every subdomain in top 1000 subdomains file, and add a copy without any subdomain
+
+7. For every domain in the whitelist, remove it from the blacklist
+
+8. For all remaining domains in blacklist, use dns to check if the domain is still registered, remove those that are not
+
+9. Remove all invalid domains
+
+If it is a malware list and first time through process, then
+- 1. For each domain in whitelist and blacklist get their IP address
+
+- 2. For each IP address use passive dns and reverse dns to generate more domains which share an IP address with the malware domain
+
+- 3. Repeat above process
+
+
 ## Links
 Adblock Plus style blocklist:  https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/adblock.txt
 
