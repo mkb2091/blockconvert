@@ -40,6 +40,8 @@ def fetch_new_subdomains():
         with urllib.request.urlopen(req) as response:
             with open('subdomain_list.txt', 'wb') as file:
                 file.write(response.read())
+if not os.path.exists('data'):
+    os.mkdir('data')
 copy_whitelist_and_clean()
 fetch_new_tld()
 fetch_new_subdomains()
@@ -103,7 +105,7 @@ class DownloadManager():
                 self.bl.clear()
                 self.bl.add_file(r.text, is_whitelist=is_whitelist,
                                  is_malware=is_malware)
-                self.bl.clean(is_malware=is_malware)
+                self.bl.clean()
                 with open(os.path.join(base, 'blacklist.txt'), 'w') as file:
                     file.write('\n'.join(sorted(self.bl.blacklist)))
                 with open(os.path.join(base, 'whitelist.txt'), 'w') as file:
