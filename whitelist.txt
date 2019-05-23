@@ -23,5 +23,8 @@
 @@||use.typekit.net^
 @@||wikidot.com^
 @@||www.digicert.com^
+@@||www.google.*
+@@||www.google.co.*
+@@||www.google.com.*
 @@||www.instagram.com^
 @@||www.reddit.com^
