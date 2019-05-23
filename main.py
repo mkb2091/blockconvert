@@ -1,5 +1,6 @@
 import argparse
 import json
+import time
 import os
 
 import download
@@ -16,12 +17,15 @@ def main():
             urls.append((list_type, is_malware, url, expires, list_license))
     with open('urls.txt', 'w') as file:
         file.write('\n'.join(sorted(set([json.dumps(i) for i in urls]))))
+    start = time.time()
     manager = download.DownloadManager()
     for (whitelist, is_malware, url, expires, list_license) in urls:
         manager.add_url(url, whitelist, is_malware, expires)
     manager.clean()
-    print('Downloaded needed files')
-    blocklist = blockconvert.BlockList()
+    print('Downloaded needed files(%ss)' % (time.time() - start))
+    start = time.time()
+    blocklist = manager.bl
+    blocklist.clear()
     for path in os.listdir('data'):
         path = os.path.join('data', path)
         for (f, is_whitelist) in (('blacklist.txt', False), ('whitelist.txt', True)):
@@ -30,9 +34,11 @@ def main():
                     blocklist.add_file(file.read(), is_whitelist)
             except FileNotFoundError:
                 pass
-    print('Consolidated lists')
+    print('Consolidated lists(%ss)' % (time.time() - start))
+    start = time.time()
     blocklist.clean()
-    print('Cleaned list')
+    print('Cleaned list(%ss)' % (time.time() - start))
+    start = time.time()
     for (path, func) in [('domains.txt', blocklist.to_domain_list),
                          ('adblock.txt', blocklist.to_adblock),
                          ('hosts.txt', blocklist.to_hosts),
@@ -41,6 +47,7 @@ def main():
                          ]:
         with open(os.path.join('output', path), 'w') as file:
             file.write(func())
+    print('Generated output(%ss)' % (time.time() - start))
 
 if __name__ == '__main__':
     main()
