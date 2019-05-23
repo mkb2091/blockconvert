@@ -25,12 +25,6 @@ If there are any false positives, add an issue, and I'll remove them
 
 9. Remove all invalid domains
 
-If it is a malware list and first time through process, then
-- 1. For each domain in whitelist and blacklist get their IP address
-
-- 2. For each IP address use passive dns and reverse dns to generate more domains which share an IP address with the malware domain
-
-- 3. Repeat above process
 
 
 ## Links

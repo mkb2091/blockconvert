@@ -12,7 +12,6 @@ app.pr0gramm.com
 aqjdigkqvmakz.com
 aqryyhyzjveh.com
 arawegnvvufy.com
-arfttojxv.com
 asia.miningspeed.com
 atlas.phoenixcoin.org
 auroramine.com
@@ -47,6 +46,7 @@ c7e935.netlify.com
 calc.btgpool.pro
 capodannoinversilia.com
 cdn.rocks.io
+cgjyesqhxzzm.com
 cirkev.bitcoin.cz
 ckpool.org
 coin-have.com
@@ -94,11 +94,12 @@ dmdamedia.hu
 dogepool.rf.gd
 dpallyihgtgu.com
 drbwugautcgh.com
+dxtveuux.com
+dzyqqwixizp.com
 eaidabmuxbqy.com
 electroneum.mobile-mining.com
 electroneum.ovh
 electrum.bitcoin.cz
-electrum1.wemineltc.com
 email.crypto-coins.club
 email.moneroocean.stream
 emc2.suprnova.cc
@@ -134,10 +135,8 @@ eu.multipool.us
 eu.stratum.bitcoin.cz
 eu.stratum.bravo-mining.com
 eu.stratum.slushpool.com
-eu.wemineltc.com
 eu.zec.slushpool.com
 eu1.bitminter.com
-eu2.wemineltc.com
 exp-eu.dwarfpool.com
 exp-us.dwarfpool.com
 exp.suprnova.cc
@@ -145,7 +144,6 @@ expanse.miningpoolhub.com
 explorer.bitcoin-russia.ru
 faraday.mmpool.org
 feathercoin.miningpoolhub.com
-feedback.poolmining.org
 ffhwzaenzoue.com
 flo.suprnova.cc
 fnkyyrgraizy.com
@@ -165,11 +163,8 @@ fr-db7a.suprnova.cc
 fr-db8.suprnova.cc
 fr.kano.is
 fractalcoin.miningpoolhub.com
-freedom.wemineltc.com
 friendshipcoin.miningpoolhub.com
 ftp.bitcoin.cz
-ftp.coinhive-manager.com
-ftp.coinlab.biz
 ftp.crypto-coins.club
 ftp.cryptominingpool.eu
 ftp.deltapool.net
@@ -181,12 +176,9 @@ fvwcwbdrprdt.com
 fwl.bitcoin.cz
 gamecredits.miningpoolhub.com
 gcxsbflncu.bid
-gedmodsxbebd.com
 gemius.pl
 geocoin.miningpoolhub.com
-gigahash.wemineltc.com
 givecoin.miningpoolhub.com
-global.wemineltc.com
 globalboosty.miningpoolhub.com
 gmc.suprnova.cc
 granite.miningpoolhub.com
@@ -201,11 +193,7 @@ hashgate.eu
 hexamining.io
 hgzopbyhidre.com
 hit.gemius.pl
-hk2.wemineltc.com
-hk3.wemineltc.com
-hkasic1.wemineltc.com
 hodl.suprnova.cc
-hot.wemineltc.com
 hub.miningpoolhub.com
 hubvotrpjios.com
 huiwiw.hit.gemius.pl
@@ -239,7 +227,6 @@ la01.supportxmr.com
 lbry-api.suprnova.cc
 lbry.suprnova.cc
 listat.biz
-lite.wemineltc.com
 litecoin.miningpoolhub.com
 lmodr.biz
 load.jsecoin.com
@@ -251,12 +238,10 @@ ltc.suprnova.cc
 luckpool.org
 luraclhaunxv.com
 lvrvufurxhgp.com
-lyygeitghavmm.com
 m.bitcoin.cz
 madmining.club
 map.bitcoin-russia.ru
 maxcoin.miningpoolhub.com
-megahash.wemineltc.com
 menoetius.phoenixcoin.org
 mine.ar-net.info
 mine.bitcoin.cz
@@ -288,7 +273,6 @@ mmdcibihoimt.com
 mmpool.org
 mobile-mining.com
 mobile.bitcoin.cz
-mona-api.suprnova.cc
 monacoin.miningpoolhub.com
 monero-miner.com
 monero.crypto-pool.fr
@@ -304,7 +288,6 @@ mttyfwtvyumc.com
 multipool.us
 muning.bitcoin.cz
 musicoin.miningpoolhub.com
-mvdnsrgolwgru.com
 mxsuikhqaggf.com
 myriadcoin-groestl.miningpoolhub.com
 myriadcoin-qubit.miningpoolhub.com
@@ -314,14 +297,11 @@ nbhubocsduzn.com
 ndc.bitember.com
 nelfmgxcysd.bid
 neohash.com
-nkxdyorwbt.com
 node1.xmr-tw.org
 node2.xmr-tw.org
 nodes.bitcoin-russia.ru
 ns1.cryptmonero.com
-ns1.wemineltc.com
 ns2.cryptmonero.com
-nvqsjdvgqnyk.com
 nvvdtfqboy.bid
 nxcxithvcoeh.com
 ofmuojegzbxo.com
@@ -349,7 +329,6 @@ pool.bitcoin.cz
 pool.bohemianpool.com
 pool.burstmarketplace.com
 pool.ckpool.org
-pool.cryptmonero.com
 pool.eth.pp.ua
 pool.miners.pro
 pool.moriaxmr.com
@@ -359,7 +338,6 @@ poolsupport.bitcoin.com
 pop3.cryptominingpool.eu
 popadscdn.net
 potcoin.miningpoolhub.com
-power.wemineltc.com
 ppoi.org
 pr0gramm.com
 projectpoi.com
@@ -437,7 +415,6 @@ stratum.eu.bitcoin.cz
 stratum.kano.is
 stratum.mining.eligius.st
 stratum.slushpool.com
-stratum2.wemineltc.com
 stratun.bitcoin.cz
 straum.bitcoin.cz
 sumo.poolto.be
@@ -453,7 +430,6 @@ test.eth.pp.ua
 test.miningpoolhub.com
 testnet.xmr-tw.org
 thnqemehtyfe.com
-thpsflsjw.com
 thumb.pr0gramm.com
 tmfkuesmlpto.com
 tncexvzu.com
@@ -467,7 +443,6 @@ ubiq.suprnova.cc
 ubxtoqsqusyx.com
 ucflpjvvyaww.bid
 ufocoin.miningpoolhub.com
-united.wemineltc.com
 uoarbhxfyygn.com
 uro.miningpoolhub.com
 us-east-stratum.bitcoin.cz
@@ -491,16 +466,11 @@ us.east.bitcoin.cz
 us.miningspeed.com
 us.moneroocean.stream
 us.multipool.us
-us.wemineltc.com
 us1.bitcoin.cz
 us1.bitminter.com
 us2.bitminter.com
-us3.wemineltc.com
 usa.bitcoin.cz
-usa.wemineltc.com
 usa2.bitcoin.cz
-usa2.wemineltc.com
-usa4.wemineltc.com
 usxmrpool.com
 uzwweczttqlayd.com
 validator.btgpool.pro
@@ -509,7 +479,6 @@ verge-scrypt.miningpoolhub.com
 versiliaguide.com
 vertcoin.miningpoolhub.com
 vid.pr0gramm.com
-vip48.wemineltc.com
 virtualminingcoin.miningpoolhub.com
 vlrzhoueyoxw.com
 vrewpywootyu.com
@@ -518,9 +487,7 @@ web.rocks.io
 webmail.tugae2.com
 webmine.cz
 webminerpool.com
-wemineltc.com
 whgsyczcofwf.com
-world.wemineltc.com
 wp.bitcoin.cz
 wrhpnrkdkbqi.com
 ws-ca-01.rocks.io
@@ -572,6 +539,7 @@ www.ckpool.org
 www.coinhive-manager.com
 www.crypto-coins.club
 www.cryptominingpool.eu
+www.cryptoxpool.com
 www.deltapool.net
 www.dogepool.rf.gd
 www.eth.pp.ua
@@ -592,7 +560,6 @@ www.p2pool.in
 www.p2pool.info
 www.p2pool.org
 www.papoto.com
-www.poolmining.org
 www.ppoi.org
 www.pr0gramm.com
 www.rocks.io
@@ -601,12 +568,10 @@ www.slushpool.com
 www.suprnova.cc
 www.tugae2.com
 www.webminerpool.com
-www.wemineltc.com
 www.xmr-tw.org
 www.xzpool.com
 www1.2giga.link
 www2.2giga.link
-www2.wemineltc.com
 www3.2giga.link
 www5.2giga.link
 www6.2giga.link

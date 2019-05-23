@@ -54,7 +54,6 @@ ads.o2.pl
 ads.open.pl
 ads2.ekologia.pl
 adsearch.adkontekst.pl
-adsearch.pl
 adsearch.wp.pl
 adserver.gadu-gadu.pl
 adserver.home.pl
@@ -364,7 +363,6 @@ tvn2.adocean.pl
 ua.adocean.pl
 ua.cnt.gemius.pl
 ua.hit.gemius.pl
-unblock.onaudience.com
 vbadbg.hit.gemius.pl
 vbbg.adocean.pl
 webgroundadbg.hit.gemius.pl

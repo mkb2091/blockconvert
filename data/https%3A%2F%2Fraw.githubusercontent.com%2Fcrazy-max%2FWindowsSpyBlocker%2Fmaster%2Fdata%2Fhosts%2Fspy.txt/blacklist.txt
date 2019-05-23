@@ -64,7 +64,6 @@ bs.serving-sys.com
 c.atdmt.com
 c.msn.com
 cache.datamart.windows.com
-cdn.atdmt.com
 cds10.stn.llnw.net
 cds1203.lon.llnw.net
 cds1204.lon.llnw.net
@@ -282,7 +281,6 @@ oca.telemetry.microsoft.com
 onecollector.cloudapp.aria.akadns.net
 pre.footprintpredict.com
 preview.msn.com
-rad.live.com
 redir.metaservices.microsoft.com
 reports.wes.df.telemetry.microsoft.com
 schemas.microsoft.akadns.net

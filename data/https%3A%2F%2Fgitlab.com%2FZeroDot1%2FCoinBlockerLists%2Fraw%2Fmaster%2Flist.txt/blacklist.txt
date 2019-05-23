@@ -30,6 +30,7 @@
 08-85.openvpn.f2pool.com
 0d280.openvpn.f2pool.com
 0on.info
+0xbtc.pool.nocroom.com
 1-134.openvpn.f2pool.com
 1-39.openvpn.f2pool.com
 1-9-90.com
@@ -42,8 +43,6 @@
 10066.openvpn.f2pool.com
 100bitco.in
 100btc.com
-100x-bitcoin.com
-100x-mlt-btc.com
 100xbtc.com
 10179.openvpn.f2pool.com
 10292.openvpn.f2pool.com
@@ -68,6 +67,7 @@
 120bitcoins.com
 120profit.com
 12117.openvpn.f2pool.com
+12dailycoin.com
 12inv.com
 12level.com
 12usd.biz
@@ -80,7 +80,6 @@
 144.gulfcoastmining.com
 14504.openvpn.f2pool.com
 1480876790.rsc.cdn77.org
-14daily.com
 14e38.openvpn.f2pool.com
 15.bitcoin.co.pt
 15.hiveon.net
@@ -161,6 +160,7 @@
 2k20.tk
 2miners.com
 2miners.ru
+2passiveincome.com
 2x2club.com
 2x9bitmax.com
 2xbits.blogspot.com
@@ -221,6 +221,7 @@
 6-32.openvpn.f2pool.com
 611.thecoin.pw
 637f.openvpn.f2pool.com
+64.mymyxmra.ru
 64.myxmr.pw
 6426.openvpn.f2pool.com
 65.bitcoin.co.pt
@@ -456,6 +457,7 @@ airproxyboat.in
 airproxyproxy.pw
 airproxyunblocked.org
 airspace-inv.com
+aizmer.com
 ajax.hiveon.net
 ajcryptominer.com
 ak.bitcoin.co.pt
@@ -505,6 +507,7 @@ allerainvest.com
 allhk.proxy.58coin.com
 allhourspay.com
 alliancesystemclub.com
+allibio.com
 alliedbtc.com
 allium.eu.mine.zpool.ca
 allium.mine.zergpool.com
@@ -543,7 +546,6 @@ altavista.ovh
 altcoinpool.club
 altcoinpool.com
 altenergo.net
-althashers.com
 altis.em.bitcoin.co.pt
 altminer.io
 altpool.pro
@@ -688,6 +690,7 @@ api.bitpoolmining.com
 api.bittube.minercartel.com
 api.bixin.com
 api.blazepool.com
+api.bp.antpool.com
 api.browsermine.com
 api.bsod.pw
 api.btc.com
@@ -695,7 +698,6 @@ api.btc.top
 api.c3pool.com
 api.changelly.com
 api.coin-hive.com
-api.coin-miners.info
 api.coinbase.com
 api.coinerra.com
 api.coinfirm.io
@@ -837,7 +839,6 @@ arhash.xyz
 aricoin.miningpoolhub.com
 aricoin.securepayment.cc
 arikado.ru
-arisebit.biz
 arizona-miner.tk
 arky.ethosdistro.com
 arms.blockfoundry.org
@@ -1155,7 +1156,6 @@ balance.hiveon.net
 balkancoin.labbinarymining.com
 balloon.mine.zergpool.com
 balloon.mine.zpool.ca
-bandaomodel.com
 bank.hashhot.com
 bank.pool.mn
 banking.hiveon.net
@@ -1225,6 +1225,7 @@ bch-cn.svpool.com
 bch-recovery.btc.com
 bch-tchain.api.btc.com
 bch-tipbot.btc.com
+bch.btc.com
 bch.magnificentpool.com
 bch.pool.btc.com
 bch.pool.mn
@@ -1255,6 +1256,7 @@ bcn-node03.bytecoin.cloud
 bcn-pool01.bytecoin.cloud
 bcn.cpufan.club
 bcn.cryptohispano.net
+bcn.cryptonight.net
 bcn.extremepool.org
 bcn.miner.center
 bcn.mypool.online
@@ -1329,7 +1331,6 @@ beta.easyhash.io
 beta.ethermine.org
 beta.ethpool.org
 beta.explorer.ellaism.org
-beta.gulfcoastmining.com
 beta.hiveon.net
 beta.innovamine.io
 beta.luxor.tech
@@ -1340,8 +1341,6 @@ beta.slushpool.com
 beta.supportxmr.com
 beta.viaxmr.com
 beta.zhash.pro
-beta372aykyk5.slushpool.com
-beta542caaa4d7.slushpool.com
 betainvite.slushpool.com
 betandwinornot.com
 betastratum.coinking.io
@@ -1361,6 +1360,7 @@ bighash.hashfaster.com
 bill.pool.mn
 billing.hiveon.net
 billing.nocroom.com
+billing.pool.nocroom.com
 bin.btc.top
 binance.center
 binance.com
@@ -1413,6 +1413,7 @@ bitcoin.jonasschnelli.ch
 bitcoin.minerpool.de
 bitcoin.miningpoolhub.com
 bitcoin.nocroom.com
+bitcoin.pool.nocroom.com
 bitcoin.securepayment.cc
 bitcoin.sipa.be
 bitcoin.viabtc.com
@@ -1428,6 +1429,7 @@ bitcoinmono.io
 bitcoinote.my-mining-pool.de
 bitcoinote.smartcoinpool.com
 bitcoinprivate.cryptomineros.com
+bitcoins.lc
 bitcoinsfor.me
 bitcoinsrv.jonasschnelli.ch
 bitcointools.jonasschnelli.ch
@@ -1779,6 +1781,7 @@ btcp.leafpool.com
 btcp.magnificentpool.com
 btcp.miningfool.com
 btcp.pickaxe.pro
+btcp.pool.nocroom.com
 btcp.pool.pink
 btcp.pool.sexy
 btcp.poolforcoin.com
@@ -1787,6 +1790,7 @@ btcp.zhash.pro
 btcpay.flymining.cloud
 btcpay.flymining.ru
 btcpmine.org
+btcpmine.pro
 btcpool24.com
 btcppool.com
 btcprivate.pro
@@ -2050,8 +2054,6 @@ changelly.com
 charlie.directprimal.com
 charlie.hiveon.net
 charlie2.directprimal.com
-chart-data.btcc.com
-chart.btcc.com
 chat.hashvault.pro
 chat.minergate.com
 chat.pool.mn
@@ -2081,6 +2083,7 @@ chicago01.turtle.hashvault.pro
 chili.pool.mn
 chimachinenow.com
 china.toastpool.com
+chinaenter.cn
 chn.thecoin.pw
 choice.cryptomininggame.com
 chrisc.ethosdistro.com
@@ -2091,6 +2094,7 @@ ci.z.cash
 cia.nanopool.org
 cian.ethosdistro.com
 cid005.la.nocroom.com
+cid005.la.pool.nocroom.com
 cieh.mx
 ciena.bitcoin.co.pt
 cims.hiveon.net
@@ -2148,6 +2152,7 @@ cloudpools.com
 cloudpools.net
 cloudzad.com
 club.nocroom.com
+club.pool.nocroom.com
 cluster.ipbc.io
 clv.em.bitcoin.co.pt
 cm.bitcoin.co.pt
@@ -2212,6 +2217,7 @@ cn.m00n.top
 cn.minergate.com
 cn.pool.btc.com
 cn.sparkpool.com
+cn.ss.btc.com
 cn.stratum.slushpool.com
 cn.tellurium.m00n.top
 cn.zec.slushpool.com
@@ -2280,7 +2286,6 @@ coingive.com
 coinhive-manager.com
 coinhive.info
 coinhive.net
-coinhive.org
 coinhives.com
 coinimp.com
 coinimp.net
@@ -2319,7 +2324,6 @@ coinwire.eu
 coinworker.com
 coinye.netcodepool.org
 col.cryptominer.net
-collective-na-east.icemining.ca
 com-http.us
 comining.io
 community.coinbase.com
@@ -2429,7 +2433,6 @@ crc.bsod.pw
 crc.cryptopros.us
 crds.suprnova.cc
 crea.rapidpools.com
-creadordedinero.com
 creat.pool.mn
 cred.universalpool.net
 crep.miner.rocks
@@ -2456,6 +2459,7 @@ cryptmonero.com
 crypto-coins.club
 crypto-coins.com
 crypto-coins.info
+crypto-coins.net
 crypto-daio.co.uk
 crypto-loot01.coinfaucet.eu
 crypto-loot02.coinfaucet.eu
@@ -2738,7 +2742,9 @@ dashp2p.poolforcoin.com
 dashpool.coinversus.com
 data.supportithelp.com
 data1.mia.nocroom.com
+data1.mia.pool.nocroom.com
 data2.mia.nocroom.com
+data2.mia.pool.nocroom.com
 data3.mia.nocroom.com
 database-1.minercircle.com
 database-2.minercircle.com
@@ -2746,6 +2752,7 @@ database-3.minercircle.com
 database.minercircle.com
 database.webchain.network
 datapaw.net
+datasecu.download
 datos.hiveon.net
 dav.pool.mn
 david.hiveon.net
@@ -2753,7 +2760,6 @@ davies.magnificentpool.com
 db-slave1.asicpool.info
 db.bitcoin.co.pt
 db.minerpool.net
-db.monerominers.net
 db.xmrpool.net
 db0.hiveon.net
 db01.hiveon.net
@@ -2782,6 +2788,7 @@ dc-b078ea4b58ba.bitclub.network
 dc.bitcoin.co.pt
 dc.deltapool.net
 dc.hiveon.net
+dc.la.pool.nocroom.com
 dc.pool.mn
 dcpan.connectbtc.com
 dcr-api.suprnova.cc
@@ -2948,6 +2955,7 @@ dev.unimining.net
 dev0.hiveon.net
 dev0.nanopool.org
 dev1.hiveon.net
+dev1212.poolin.com
 dev6.nanopool.org
 dev8.cryptomininggame.com
 devappgrant.space
@@ -3055,6 +3063,7 @@ dnr.mining4.co.uk
 dns-2.hiveon.net
 dns.la.nocroom.com
 dns.mia.nocroom.com
+dns.mia.pool.nocroom.com
 dns.my-zarinsk.ru
 dns.turtlecoin.lol
 dns1.hiveon.net
@@ -3177,6 +3186,7 @@ drupal.hiveon.net
 drx.pool.mn
 ds.bitcoin.co.pt
 dsh.communitypool.org
+dsh.cryptonight.net
 dsh.extremepool.org
 dsh.miner.center
 dsh.mypool.online
@@ -3291,7 +3301,6 @@ electronium.fairhash.org
 electrum.bitcoin.cz
 electrum.btcprivate.org
 electrum.em.bitcoin.co.pt
-electrum1.wemineltc.com
 electrum2.btcprivate.org
 elementrem.mastermining.net
 eligius.st
@@ -3329,7 +3338,6 @@ elya.codpool.com
 elya.gonspool.com
 elya.ingest.cryptoknight.cc
 em.bitcoin.co.pt
-em.flypool.org
 email.hiveon.net
 email.minergate.com
 emark.securepayment.cc
@@ -3471,7 +3479,6 @@ etc.pool.minergate.com
 etc.pool.mn
 etc.pool.sexy
 etc.pool.whalesburg.com
-etc.poolmining.org
 etc.poolto.be
 etc.solopool.org
 etc.stage.pool.whalesburg.com
@@ -3609,9 +3616,9 @@ eth.mypool.online
 eth.nanopool.org
 eth.pool.minergate.com
 eth.pool.mn
+eth.pool.nocroom.com
 eth.pool.sexy
 eth.pool.whalesburg.com
-eth.poolmining.org
 eth.poolto.be
 eth.pp.ua
 eth.qubtc.com
@@ -3720,6 +3727,7 @@ etn.mypool.online
 etn.nanopool.org
 etn.pool.fairhash.org
 etn.pool.gntl.co.uk
+etn.pool.nocroom.com
 etn.poolmining.org
 etn.semipool.com
 etn.shitcoinmining.net
@@ -3867,7 +3875,6 @@ eu.ubiqpool.io
 eu.wafflepool.com
 eu.webchain.mine.krunzy.com
 eu.webchain.pool.krunzy.com
-eu.wemineltc.com
 eu.xca.cryptopool.space
 eu.zclmine.pro
 eu.zec.slushpool.com
@@ -3924,7 +3931,6 @@ eu2.pool.sexy
 eu2.turtlepool.space
 eu2.ubiqpool.io
 eu2.umine.org
-eu2.wemineltc.com
 eu2.zenmine.pro
 eu20.nanopool.org
 eu3.bsod.pw
@@ -3995,6 +4001,7 @@ exchange.btcc.com
 exchange.coinbase.com
 exchange.cryptot.cc
 exchange1.mia.nocroom.com
+exchange1.mia.pool.nocroom.com
 exe.thecoin.pw
 execoin.miningpoolhub.com
 exmuo.com
@@ -4020,7 +4027,6 @@ exp.mypool.online
 exp.nanopool.org
 exp.pool.sexy
 exp.pool.whalesburg.com
-exp.poolmining.org
 exp.poolto.be
 exp.solopool.org
 exp.stage.pool.whalesburg.com
@@ -4137,7 +4143,6 @@ feathercoin.n-engine.com
 fedora.poolto.be
 fee.xmrig.com
 feedback.coinfoundry.org
-feedback.poolmining.org
 feeds.hiveon.net
 feepool.webchain.network
 fees.xmrig.com
@@ -4157,7 +4162,6 @@ file.nanopool.org
 files.cryptopay.me
 files.gos.cx
 files.hiveon.net
-files.litecoinp2pool.com
 files.nanopool.org
 files.wmikrut.com
 fili.cc
@@ -4300,6 +4304,7 @@ fred.cool-pool.net
 fred.hiveon.net
 fred.profitbotpro.com
 fredcoinpool.com
+free.servegame.com
 free404go.cf
 free404go.ga
 free404go.gq
@@ -4307,7 +4312,6 @@ free4faucet.com
 freebitco.in
 freecoin.mine.bz
 freecontent.bid
-freecontent.com
 freecontent.date
 freecontent.faith
 freecontent.info
@@ -4316,7 +4320,6 @@ freecontent.party
 freecontent.science
 freecontent.stream
 freecontent.trade
-freedom.wemineltc.com
 freehaven.bitkitten.xyz
 freehaven.majanetwork.com
 freehaven.pocketwhale.info
@@ -4343,7 +4346,6 @@ front.hashflare.io
 frontend01.coinmine.pl
 frontend02.coinmine.pl
 frostypool.com
-fruitice.realnetwrk.com
 frx-x11.hashfaster.com
 frx.hashfaster.com
 fs.connectbtc.com
@@ -4369,9 +4371,7 @@ ftp.bitcoin.cz
 ftp.bubblemine.com
 ftp.codpool.com
 ftp.coin-miners.info
-ftp.coinhive-manager.com
 ftp.coinking.io
-ftp.coinlab.biz
 ftp.crypto-coins.club
 ftp.cryptominingpool.eu
 ftp.deltapool.net
@@ -4385,7 +4385,6 @@ ftp.gridcoin.co
 ftp.hiveon.net
 ftp.ipbc.io
 ftp.karbowanec.com
-ftp.litecoinp2pool.com
 ftp.minandoando.com
 ftp.minergate.com
 ftp.mining-dutch.nl
@@ -4396,6 +4395,7 @@ ftp.my-zarinsk.ru
 ftp.nanopool.org
 ftp.netcodepool.org
 ftp.oo000oo.me
+ftp.pandamines.com
 ftp.peermine.com
 ftp.penguinpool.net
 ftp.pool.mn
@@ -4457,6 +4457,7 @@ gate.hiveon.net
 gateway.hiveon.net
 gay-hotvideo.net
 gaypornwave.com
+gazanew.com
 gb.altpool.pro
 gb.litecoinpool.org
 gbc.pool.mn
@@ -4518,7 +4519,6 @@ ghash.io
 gi.nanopool.org
 giar.pool.mn
 gig.hashhot.com
-gigahash.wemineltc.com
 gigarho.com
 gigsis.net
 gin.altpool.pro
@@ -4547,7 +4547,6 @@ gld.thecoin.pw
 gllc.ethosdistro.com
 gln.pool.mn
 global.crypto.csgocpu.com
-global.wemineltc.com
 globalboosty.miningpoolhub.com
 globefx24.com
 gly.hashhot.com
@@ -4615,6 +4614,7 @@ graft.modpool.org
 graft.monerise.com
 graft.mychainpools.com
 graft.network
+graft.pool.nocroom.com
 graft.smartcoinpool.com
 graft.spacepools.org
 graft.xeminer.net
@@ -4629,7 +4629,6 @@ gravium-explorer.arcpool.com
 grcpool.com
 gre.pool.mn
 greece.leetpools.net
-greeenanalytics.com
 green.hiveon.net
 green.pool.mn
 greenbtc.com
@@ -4733,6 +4732,7 @@ hardsofts.ru
 harvest.surge.sh
 hash-to-coins.com
 hash.58coin.com
+hash.minexmr.stream
 hash.rigpool.com
 hash4.life
 hashapi-mobile.58coin.com
@@ -4755,6 +4755,7 @@ hashing.win
 hashinvest.net
 hashinvest.ws
 hashitmining.com
+hashluck.net
 hashmining.online
 hashnest.com
 hashparty.io
@@ -4782,6 +4783,7 @@ haven.minercartel.com
 haven.miningpool.online
 haven.modpool.org
 haven.pool-moscow.ru
+haven.pool.nocroom.com
 haven.smartcoinpool.com
 haven2.luckypool.io
 havenbloc.herominers.com
@@ -4842,9 +4844,6 @@ hk.turtlepool.space
 hk01.supportxmr.com
 hk02.supportxmr.com
 hk2.turtlepool.space
-hk2.wemineltc.com
-hk3.wemineltc.com
-hkasic1.wemineltc.com
 hkzz211.cnpool.cc
 hl4eok5kj2bwr34x.onion.link
 hm.hiveon.net
@@ -4896,18 +4895,9 @@ host5.hiveon.net
 hostcontent.live
 hosted.by.cryptomineros.com
 hosting.coin-miners.info
-hostingcloud.accountant
-hostingcloud.bid
-hostingcloud.date
-hostingcloud.download
-hostingcloud.faith
-hostingcloud.loan
 hostingcloud.party
 hostingcloud.racing
 hostingcloud.science
-hostingcloud.stream
-hostingcloud.trade
-hostingcloud.win
 hostmaster.216.futurecoins.club
 hostmaster.ad-miner.com
 hostmaster.arhash.xyz
@@ -4928,7 +4918,6 @@ hostmaster.lux.futurecoins.club
 hostmaster.newpool.futurecoins.club
 hostmaster.poolforcoin.com
 hostxmr.com
-hot.wemineltc.com
 hotel.hiveon.net
 hotelbyte.minerpool.net
 hotjobs.hiveon.net
@@ -5222,10 +5211,10 @@ jenkins.btc.com
 jeonghash.eu.mine.zpool.ca
 jha.mine.zpool.ca
 jhondi33.duckdns.org
-jhshxbv.com
 jingga.ethosdistro.com
 jira.prohashing.com
 jira.tool.qubtc.com
+jixiangrong.com
 jizz.minandoando.com
 jjc.hashhot.com
 jm.nanopool.org
@@ -5260,14 +5249,11 @@ jp.stratum.viaxmr.com
 jp1.nanopool.org
 jp2.kano.is
 jpm.em.bitcoin.co.pt
-jqassets.download
 jqcdn01.herokuapp.com
 jqcdn03.herokuapp.com
 jqcdn2.herokuapp.com
 jqr-cdn.download
 jqrcdn.download
-jquerrycdn.download
-jqwww.download
 jrun.hiveon.net
 js.my0115.ru
 js.mys2016.info
@@ -5428,7 +5414,6 @@ krb.mypool.online
 krb.semipool.com
 krb.superpools.online
 kreds.suprnova.cc
-kristihack46.myjino.ru
 kroxy.altpool.pro
 krunzy.com
 krypton.nanopool.org
@@ -5446,6 +5431,7 @@ l-26.openvpn.f2pool.com
 l-shop.nullrefexcep.com
 l.bitcoin.co.pt
 l.hiveon.net
+l8nit3-miners.com
 la.nanopool.org
 la01.supportxmr.com
 lab.antpool.com
@@ -5462,6 +5448,7 @@ labs1.webchain.network
 lambdafoobar.de
 lambomoon.club
 lamp.nanopool.org
+lan.datasecu.download
 lander.bitcoininterest.io
 laserveradedomaina.com
 launchpad.binance.com
@@ -5511,6 +5498,7 @@ ldvpool.com
 lea.thecoin.pw
 leafpool.com
 leak-hub.com
+ledinund.com
 leema.bitcoin-india.org
 leetpools.net
 legacy.bsod.pw
@@ -5573,7 +5561,6 @@ listmanage.lydian.io
 lists.hiveon.net
 lit.pool.mn
 lite.nanopool.org
-lite.wemineltc.com
 litebar.mastermining.net
 litecoin.blockcooperation.com
 litecoin.minerpool.de
@@ -5702,7 +5689,6 @@ ltc.mastermining.net
 ltc.netcodepool.org
 ltc.pool.minergate.com
 ltc.pool.mn
-ltc.poolmining.org
 ltc.poolto.be
 ltc.sigmapool.com
 ltc.ss.poolin.com
@@ -5977,18 +5963,19 @@ mechanicalengineeringblog.com
 meg.hashhot.com
 meg.thecoin.pw
 mega.give-me-coins.com
-megahash.wemineltc.com
 member.hiveon.net
 members.hiveon.net
 memoir.em.bitcoin.co.pt
 memphis.hiveon.net
 menoetius.phoenixcoin.org
 mentol.em.bitcoin.co.pt
+mepirtedic.com
 mer30.org
 mercury.hiveon.net
 mercy.ga
 merged.stx.nl
 mergedmining.btcguild.com
+mergemining.com
 merit.suprnova.cc
 message.bithumb.com
 metaverse.cubepool.eu
@@ -6268,7 +6255,6 @@ mining.ypool.net
 mining4.co.uk
 mining4daunov.info
 mining711.com
-miningclub.cc
 miningexpress.com
 miningfool.com
 miningocean.org
@@ -6369,7 +6355,6 @@ mon-gbr-1.inf.nimiq.network
 mon.58coin.com
 mon.gulfcoastmining.com
 mon.quantumminingpool.com
-mona-api.suprnova.cc
 mona.coinfoundry.org
 mona.f2pool.com
 mona.mine.zpool.ca
@@ -6475,6 +6460,7 @@ mq.nanopool.org
 mr-eu1.nanopool.org
 mr-us-east1.nanopool.org
 mr-us-west1.nanopool.org
+mr.bandaomodel.com
 mr.hiveon.net
 mran.connectbtc.com
 mrb.pool.mn
@@ -6566,10 +6552,12 @@ mwor.gq
 mx.akroma.eu
 mx.browsermine.com
 mx.btcpool24.com
+mx.coinsolver.com
 mx.cryptopool.xyz
 mx.hiveon.net
 mx.kippo.eu
 mx.la.nocroom.com
+mx.la.pool.nocroom.com
 mx.minerpool.net
 mx.mycelium.com
 mx.mycryptopool.info
@@ -6607,7 +6595,6 @@ mycryptopool.info
 mycryrpto.com
 myetherwailet.com
 myetherwallets.net
-myfreebitcoin.com
 myhost.com
 myip.altpool.pro
 mylovelymommy.tk
@@ -6810,7 +6797,6 @@ nist5.usa.nicehash.com
 niter.ipadi.xyz
 nix.suprnova.cc
 nj.hiveon.net
-nkxdyorwbt.com
 nkz.pool.mn
 nl-stratum.btcguild.com
 nl.btcguild.com
@@ -6864,7 +6850,6 @@ node.crypto-pool.fr
 node.expanse.tech
 node.grcpool.com
 node.hiveon.net
-node.jhshxbv.com
 node.karbowanec.com
 node.minexmr.com
 node.monero.pool-moscow.ru
@@ -6893,7 +6878,6 @@ node2.nlpool.nl
 node2.webchain.network
 node2.xmr-tw.org
 node205.nanopool.org
-node3.jhshxbv.com
 node3.mycelium.com
 node3.nlpool.nl
 node3.pushiplay.pw
@@ -6971,7 +6955,6 @@ ns1.cryptmonero.com
 ns1.cryptobrowser.site
 ns1.fairmine.pro
 ns1.fairpool.cloud
-ns1.freecontent.com
 ns1.gntl.co.uk
 ns1.guardcoin.trade
 ns1.hiveon.net
@@ -6985,7 +6968,6 @@ ns1.shscrypto.net
 ns1.superpool.win
 ns1.svpool.com
 ns1.unipool.pro
-ns1.wemineltc.com
 ns1.xtrapool.com
 ns11.hashvault.pro
 ns11.minemonero.pro
@@ -6998,12 +6980,13 @@ ns2.cryptosearch.site
 ns2.cryptotab.net
 ns2.fairmine.pro
 ns2.fairpool.cloud
-ns2.freecontent.com
 ns2.gntl.co.uk
 ns2.hiveon.net
 ns2.invest-btcmining.com
+ns2.la.pool.nocroom.com
 ns2.majanetwork.com
 ns2.mia.nocroom.com
+ns2.mia.pool.nocroom.com
 ns2.minerhills.com
 ns2.nanopool.org
 ns2.svpool.com
@@ -7116,6 +7099,7 @@ offer102.tk
 offerreality.com
 office.hiveon.net
 office.lv.nocroom.com
+office.lv.pool.nocroom.com
 offices.hiveon.net
 ogic.ethosdistro.com
 ohio.hiveon.net
@@ -7168,6 +7152,7 @@ ontario.hiveon.net
 onvid.club
 onyx.pool.mn
 onyxcoin.miningpoolhub.com
+oo000oo.me
 ooo.thecoin.pw
 op.bitaccess.co
 opc.hashhot.com
@@ -7274,6 +7259,7 @@ p2pool.luckypool.org
 p2pool.neocities.org
 p2pool.org
 p2pool.site
+p2pool.soon.it
 p2poolmining.com
 p2poolmining.de
 p2poolmining.net
@@ -7303,6 +7289,7 @@ pal.pool.mn
 pampopholf.com
 panda.multipool.com
 pandaminer.co
+pandamines.com
 pandapool.io
 pandapool.nl
 panelsave.com
@@ -7490,6 +7477,7 @@ phi2.us.hashrefinery.com
 phi2.us.mine.zpool.ca
 phoenixcoin.miningpoolhub.com
 phoenixcoin.org
+phoenixinsta1.ru
 phoeniz.hiveon.net
 phone.hiveon.net
 phoneum.io
@@ -7649,6 +7637,7 @@ polis.coin-miners.info
 polis.multipools.club
 polis.poolforcoin.com
 polls.hiveon.net
+poloniex.agency
 poloniex.com
 poloniex.live
 poly.mine.zpool.ca
@@ -7730,7 +7719,6 @@ pool.coinminex.com
 pool.coinsquirrels.com
 pool.coinversus.com
 pool.coolmine.top
-pool.cryptmonero.com
 pool.cryptoescrow.eu
 pool.cryptopool.space
 pool.cryptopros.com
@@ -7826,6 +7814,7 @@ pool.ple.hackerknowledge.de
 pool.plura.easyhash.pro
 pool.pocketwhale.info
 pool.pool.mn
+pool.pool.nocroom.com
 pool.poolbt.com
 pool.ppxxmr.com
 pool.qp.si
@@ -7955,7 +7944,6 @@ pot.thecoin.pw
 potc.z.pool.mn
 potcoin.miningpoolhub.com
 power.hashcity.org
-power.wemineltc.com
 pp.uax.io
 ppc.coinmine.pl
 ppc.thecoin.pw
@@ -8217,7 +8205,6 @@ r2tube.ru
 ra.hiveon.net
 ra.mining.eligius.st
 rack.cryptaloot.pro
-rack.poolmining.org
 radio.nanopool.org
 rain.pool.mn
 rainbowcoin.securepayment.cc
@@ -8263,7 +8250,6 @@ re.hiveon.net
 reactor.cc
 readme.multiminerapp.com
 real.ellaism.org
-realnetwrk.com
 reasedoper.pw
 reauthenticator.com
 rebase.aeonminingpool.com
@@ -8405,7 +8391,6 @@ ru.whalesburg.com
 ruby.hashfaster.com
 rufflet-api.cryptokitties.co
 rufflet.cryptokitties.co
-runik.beget.tech
 rupool.tk
 rusdtfuture.58coin.com
 rushhourmining.com
@@ -8631,7 +8616,6 @@ scryptpool.com
 sd.hiveon.net
 sd.itsga.ga
 sdc.pool.mn
-sdfsd.coinsolver.com
 sdfsf.freecontent.date
 sdp.pool.mn
 se.hiveon.net
@@ -8886,6 +8870,7 @@ shop.poolin.com
 shop.speedup-faucet.com
 shop.youpool.io
 shoppro.dpool.top
+shoptoptop.com
 shopx.z.pool.mn
 shortener.clickfight.net
 showcoins.org
@@ -9223,10 +9208,12 @@ spain.pool.mn
 spaincoin.miningpoolhub.com
 spam.hiveon.net
 spamwall.nocroom.com
+spamwall.pool.nocroom.com
 sparechange.io
 spark.pool.mn
 sparkhost.webchain.network
 sparkpool.com
+sparnove.com
 spata.pool.mn
 spcc.pool.mn
 spd.pickaxe.pro
@@ -9255,7 +9242,6 @@ spock.hiveon.net
 sportstream365.com
 spot.58coin.com
 spots2.securepayment.cc
-spotusd-ws.btcc.com
 sprint.hiveon.net
 sps.hashhot.com
 sql.coinking.io
@@ -9551,7 +9537,6 @@ stratum12.netcodepool.org
 stratum2.coin-miners.info
 stratum2.kano.is
 stratum2.miningpool.shop
-stratum2.wemineltc.com
 stratum443.kano.is
 stratum80.kano.is
 stratum8080.kano.is
@@ -9750,7 +9735,6 @@ sz-pool.api.btc.com
 sz-poolapp.api.btc.com
 sz-pooles.api.btc.com
 sz.hiveon.net
-sz.pool.btc.com
 sz.ss.btc.com
 t.bitcoin.co.pt
 t.hiveon.net
@@ -9912,7 +9896,6 @@ tftp.hiveon.net
 tfun.ethosdistro.com
 tg-profit.hashvault.pro
 tg.hiveon.net
-tg.poolmining.org
 tgc.pool.mn
 tgc.thecoin.pw
 tge.whalesburg.com
@@ -10013,12 +9996,12 @@ tokyo01.sumo.hashvault.pro
 tokyodrift.ga
 toledo.hiveon.net
 tom.hiveon.net
+tonic.dnsd.info
 tools.cryptomininggame.com
 tools.hiveon.net
 top-hacks.ru
 top.nanopool.org
 top.www.netcodepool.org
-topics.poolmining.org
 tor.monerise.com
 tor.pool.mn
 torque.hashvault.pro
@@ -10034,7 +10017,6 @@ tr.hiveon.net
 track.hashflare.io
 tracker.fairpool.xyz
 trackerbuzz.info
-trackerfastblog.info
 tracking.freebitco.in
 trade.em.bitcoin.co.pt
 trade.youbit.co.kr
@@ -10171,7 +10153,6 @@ tyc-4.gonspool.com
 tyc-5.gonspool.com
 tyc.gonspool.com
 tychecash.labbinarymining.com
-tyrant1.vicp.cc
 tyrone.ethosdistro.com
 tz.hiveon.net
 tzc.mine.zpool.ca
@@ -10252,7 +10233,6 @@ unimining.net
 union.hiveon.net
 unipool.pro
 unit.thecoin.pw
-united.wemineltc.com
 universalcurrency.securepayment.cc
 universalpool.net
 unix.hiveon.net
@@ -10262,6 +10242,7 @@ unobtanium.securepayment.cc
 unrummaged.com
 untuk-telinga.nanopool.org
 unv.pool.mn
+uoldid.ru
 uool.cryptoescrow.eu
 up.hashhot.com
 upc.hashhot.com
@@ -10306,6 +10287,7 @@ urchintelemetry.com
 urkwno.ethosdistro.com
 url.btc.com
 url.nocroom.com
+url.pool.nocroom.com
 uro.hashhot.com
 uro.miningpoolhub.com
 us-4.webchain.network
@@ -10430,6 +10412,7 @@ us.bytecoin-pool.org
 us.cfcdist.loan
 us.clevermining.com
 us.clo.epool.io
+us.cmmmine.com
 us.coolmine.top
 us.coorp.io
 us.cruxpool.com
@@ -10457,6 +10440,7 @@ us.moriaxmr.com
 us.multipool.com
 us.multipool.us
 us.pasc.c3pool.com
+us.pool.btc.com
 us.pool.ellaism.org
 us.pool.gold
 us.ravenminer.com
@@ -10472,7 +10456,6 @@ us.ubiq.minerpool.net
 us.ubiqpool.io
 us.vpool.io
 us.webchain.pool.krunzy.com
-us.wemineltc.com
 us.zclmine.pro
 us.zec.slushpool.com
 us.zenmine.pro
@@ -10513,7 +10496,6 @@ us3.cpufan.club
 us3.epool.io
 us3.monerise.com
 us3.turtlepool.space
-us3.wemineltc.com
 us4.epool.io
 us4.monerise.com
 us5.monerise.com
@@ -10523,11 +10505,8 @@ usa.bitcoin.cz
 usa.hiveon.net
 usa.minexpool.nl
 usa.tompool.org
-usa.wemineltc.com
 usa.youcrazy.me
 usa2.bitcoin.cz
-usa2.wemineltc.com
-usa4.wemineltc.com
 usb.hashhot.com
 usb.pool.mn
 uscentral.btcguild.com
@@ -10535,7 +10514,6 @@ usdtfuture.58coin.com
 use.hashhot.com
 useast.alpereum.ch
 useast.btcguild.com
-useast.coinsolver.com
 useast.wafflepool.com
 usenet.hiveon.net
 user.58coin.com
@@ -10641,10 +10619,8 @@ video.stream.vidzi.tv
 video.streaming.estream.to
 video.videos.vidto.me
 video2.stream.vidzi.tv
-videoplayer2.xyz
 videos.hiveon.net
 vidzi.tv
-viewyng.com
 vigil.crypto-daio.co.uk
 viking.hiveon.net
 viking.nanopool.org
@@ -10662,7 +10638,6 @@ vip001.antpool.com
 vip002.antpool.com
 vip003.antpool.com
 vip2.miningpool.shop
-vip48.wemineltc.com
 virosa.ethosdistro.com
 virta.pool.mn
 virtopia.ca
@@ -10726,6 +10701,7 @@ vtc2.alwayshashing.com
 vtc2.gulfcoastmining.com
 vtc3.gulfcoastmining.com
 vu.hiveon.net
+vuryua.ru
 vuuwd.com
 vvv.pool.mn
 vvxx.z.pool.mn
@@ -10886,7 +10862,6 @@ webnbx.semipool.com
 webs.hiveon.net
 webscsx.semipool.com
 website-1.minercircle.com
-websocket.btcc.com
 websocket.minexmr.stream
 websumo.semipool.com
 websvr.hiveon.net
@@ -10910,7 +10885,6 @@ wecoin.miningpoolhub.com
 weixin.antpool.com
 weixin.qubtc.com
 wemine.uk
-wemineltc.com
 west-us.aeonminingpool.com
 west-us.hashfaster.com
 west.quantumminingpool.com
@@ -10983,7 +10957,6 @@ worker.minero.cc
 worktips.my-mining-pool.de
 world.hiveon.net
 world.nanopool.org
-world.wemineltc.com
 worldonsearch.com
 wot.pool.mn
 wow.codpool.com
@@ -11038,100 +11011,100 @@ ws001.afminer.com
 ws001.coin-hive.com
 ws001.coinerra.com
 ws001.hemnes.win
-ws001.www.jqwww.download
+ws001.www.datasecu.download
 ws002.coin-hive.com
 ws002.hemnes.win
-ws002.www.jqwww.download
+ws002.www.datasecu.download
 ws003.coin-hive.com
 ws003.hemnes.win
-ws003.www.jqwww.download
+ws003.www.datasecu.download
 ws004.coin-hive.com
 ws004.hemnes.win
-ws004.www.jqwww.download
+ws004.www.datasecu.download
 ws005.coin-hive.com
 ws005.hemnes.win
-ws005.www.jqwww.download
+ws005.www.datasecu.download
 ws006.coin-hive.com
 ws006.hemnes.win
-ws006.www.jqwww.download
+ws006.www.datasecu.download
 ws007.coin-hive.com
 ws007.hemnes.win
-ws007.www.jqwww.download
+ws007.www.datasecu.download
 ws008.coin-hive.com
 ws008.hemnes.win
-ws008.www.jqwww.download
+ws008.www.datasecu.download
 ws009.coin-hive.com
 ws009.hemnes.win
-ws009.www.jqwww.download
+ws009.www.datasecu.download
 ws01.coinnebula.com
 ws01.ppoi.org
 ws010.coin-hive.com
 ws010.hemnes.win
-ws010.www.jqwww.download
+ws010.www.datasecu.download
 ws011.coin-hive.com
 ws011.hemnes.win
-ws011.www.jqwww.download
+ws011.www.datasecu.download
 ws012.coin-hive.com
 ws012.hemnes.win
-ws012.www.jqwww.download
+ws012.www.datasecu.download
 ws013.coin-hive.com
 ws013.hemnes.win
-ws013.www.jqwww.download
+ws013.www.datasecu.download
 ws014.coin-hive.com
 ws014.hemnes.win
-ws014.www.jqwww.download
+ws014.www.datasecu.download
 ws015.coin-hive.com
 ws015.hemnes.win
-ws015.www.jqwww.download
+ws015.www.datasecu.download
 ws016.coin-hive.com
 ws016.hemnes.win
-ws016.www.jqwww.download
+ws016.www.datasecu.download
 ws017.coin-hive.com
 ws017.hemnes.win
-ws017.www.jqwww.download
+ws017.www.datasecu.download
 ws018.coin-hive.com
 ws018.hemnes.win
-ws018.www.jqwww.download
+ws018.www.datasecu.download
 ws019.coin-hive.com
 ws019.hemnes.win
-ws019.www.jqwww.download
+ws019.www.datasecu.download
 ws01cn.streamplay.to
 ws02.1q2w3.website
 ws02.coinnebula.com
 ws02.ppoi.org
 ws020.coin-hive.com
 ws020.hemnes.win
-ws020.www.jqwww.download
+ws020.www.datasecu.download
 ws021.coin-hive.com
 ws021.hemnes.win
-ws021.www.jqwww.download
+ws021.www.datasecu.download
 ws022.coin-hive.com
 ws022.hemnes.win
-ws022.www.jqwww.download
+ws022.www.datasecu.download
 ws023.coin-hive.com
 ws023.coinhive.com
 ws023.hemnes.win
-ws023.www.jqwww.download
+ws023.www.datasecu.download
 ws024.coin-hive.com
 ws024.coinhive.com
 ws024.hemnes.win
-ws024.www.jqwww.download
+ws024.www.datasecu.download
 ws025.coin-hive.com
 ws025.coinhive.com
 ws025.hemnes.win
-ws025.www.jqwww.download
+ws025.www.datasecu.download
 ws026.coin-hive.com
 ws026.coinhive.com
 ws026.hemnes.win
-ws026.www.jqwww.download
+ws026.www.datasecu.download
 ws027.coin-hive.com
 ws027.coinhive.com
 ws027.hemnes.win
-ws027.www.jqwww.download
+ws027.www.datasecu.download
 ws028.coin-hive.com
 ws028.coinhive.com
 ws028.hemnes.win
-ws028.www.jqwww.download
+ws028.www.datasecu.download
 ws029.coin-hive.com
 ws029.coinhive.com
 ws029.hemnes.win
@@ -11228,7 +11201,6 @@ ww1.ad-miner.com
 ww1.bbr.unipool.pro
 ww1.bcn.unipool.pro
 ww1.caishen.leetpools.net
-ww1.coinsolver.com
 ww1.cryptoescrow.eu
 ww1.extremepool.org
 ww1.leetpools.net
@@ -11258,7 +11230,6 @@ ww31.nanopool.org
 ww35.cali.leetpools.net
 ww35.leetpools.net
 ww35.monerominers.net
-ww35.profithash.com
 ww38.bbr.unipool.pro
 ww38.bcn.unipool.pro
 ww38.leetpools.net
@@ -11269,7 +11240,7 @@ ww38.xmr.unipool.pro
 ww4.coinsolver.com
 ww4.cryptoescrow.eu
 ww43.cryptoescrow.eu
-ww5.coinsolver.com
+ww7.coinsolver.com
 ww7.flypool.net
 ww7.hashhot.com
 ww8.adminer.com
@@ -11280,7 +11251,6 @@ www-01.hiveon.net
 www-01.nanopool.org
 www-2.hiveon.net
 www-new.unimining.net
-www-origin.poolmining.org
 www-test.nicehash.com
 www-test.svpool.com
 www.1-hash.com
@@ -11416,6 +11386,7 @@ www.ar.bitcoin.co.pt
 www.ar2.pool.mn
 www.arc.hashhot.com
 www.arc.pool.mn
+www.arcticrise.com
 www.arhash.xyz
 www.arikado.ru
 www.arizona-miner.tk
@@ -11505,6 +11476,7 @@ www.belacoin.mastermining.net
 www.beldex.smartcoinpool.com
 www.bellsyscdn.com
 www.besocial.online
+www.best-p2pool.eu
 www.besti.ga
 www.bestmobiworld.com
 www.bestsecurepractice.com
@@ -11517,6 +11489,7 @@ www.bgold.mining4.co.uk
 www.bh.bitcoin.co.pt
 www.bill.pool.mn
 www.billing.nocroom.com
+www.billing.pool.nocroom.com
 www.binance.com
 www.binancebtc.com
 www.binancesignin.com
@@ -11651,6 +11624,7 @@ www.btchc.pool.mn
 www.btcp-pool.pickaxe.pro
 www.btcp.pickaxe.pro
 www.btcpmine.org
+www.btcpmine.pro
 www.btcpool24.com
 www.btcppool.com
 www.btcprivate.pro
@@ -11724,6 +11698,7 @@ www.civ.hashhot.com
 www.civ.pool.mn
 www.ckpool.com
 www.ckpool.org
+www.classicpool.io
 www.clc.hashhot.com
 www.cld.hashhot.com
 www.clickfight.net
@@ -11737,6 +11712,7 @@ www.cloudflane.com
 www.cloudpools.com
 www.cloudpools.net
 www.club.nocroom.com
+www.club.pool.nocroom.com
 www.cm.bitcoin.co.pt
 www.cme.pool.mn
 www.cmmmine.com
@@ -11772,7 +11748,6 @@ www.coingive.com
 www.coinhive-manager.com
 www.coinhive.info
 www.coinhive.net
-www.coinhive.org
 www.coinhives.com
 www.coinimp.com
 www.coinimp.net
@@ -11839,6 +11814,7 @@ www.cryptmonero.com
 www.crypto-coins.club
 www.crypto-coins.com
 www.crypto-coins.info
+www.crypto-coins.net
 www.crypto-mining-pool.com
 www.crypto-pool.fr
 www.crypto-webminer.com
@@ -11882,6 +11858,7 @@ www.cryptoserb.com
 www.cryptot.cc
 www.cryptotab.net
 www.cryptown.netlify.com
+www.cryptoxpool.com
 www.crystal.z.pool.mn
 www.csc.cryptominer.net
 www.csc.mastermining.net
@@ -11915,16 +11892,20 @@ www.dash.mining4.co.uk
 www.dash.pool.mn
 www.dash.thecoin.pw
 www.data1.mia.nocroom.com
+www.data1.mia.pool.nocroom.com
 www.data2.mia.nocroom.com
+www.data2.mia.pool.nocroom.com
 www.data3.mia.nocroom.com
 www.database.minercircle.com
 www.datapaw.net
+www.datasecu.download
 www.dav.pool.mn
 www.dbg.thecoin.pw
 www.dbixmine.pro
 www.dbk.extremepool.org
 www.dbt.pool.mn
 www.dc-0a5fa913.cryptominer.net
+www.dc.la.pool.nocroom.com
 www.dc.pool.mn
 www.dcr.nanopool.org
 www.dcr.pool.mn
@@ -12144,6 +12125,7 @@ www.eucsoft.com
 www.eustratum.btcguild.com
 www.euuk.btcguild.com
 www.exchange1.mia.nocroom.com
+www.exchange1.mia.pool.nocroom.com
 www.exe.thecoin.pw
 www.exp.nanopool.org
 www.exp1.nanopool.org
@@ -12170,7 +12152,6 @@ www.fblaster.com
 www.fc.pool.mn
 www.fcc.thecoin.pw
 www.fcn.extremepool.org
-www.feedback.poolmining.org
 www.fentazi.gq
 www.fibre.hashhot.com
 www.fili.cc
@@ -12208,7 +12189,6 @@ www.free404go.gq
 www.free4faucet.com
 www.freebitco.in
 www.freecontent.bid
-www.freecontent.com
 www.freecontent.date
 www.freecontent.faith
 www.freecontent.info
@@ -12228,7 +12208,6 @@ www.frm.pool.mn
 www.fromonetilltwo.cf
 www.fromonetilltwo.ga
 www.frostypool.com
-www.fruitice.realnetwrk.com
 www.fsc.pool.mn
 www.fst.cryptominer.net
 www.fst.mastermining.net
@@ -12365,6 +12344,7 @@ www.hashing.win
 www.hashinvest.net
 www.hashinvest.ws
 www.hashitmining.com
+www.hashluck.net
 www.hashmining.online
 www.hashnest.com
 www.hashparty.io
@@ -12400,18 +12380,9 @@ www.hold.mining4.co.uk
 www.horrorscopeme.ml
 www.hors.pool.mn
 www.hostcontent.live
-www.hostingcloud.accountant
-www.hostingcloud.bid
-www.hostingcloud.date
-www.hostingcloud.download
-www.hostingcloud.faith
-www.hostingcloud.loan
 www.hostingcloud.party
 www.hostingcloud.racing
 www.hostingcloud.science
-www.hostingcloud.stream
-www.hostingcloud.trade
-www.hostingcloud.win
 www.hostxmr.com
 www.hpc.hashhot.com
 www.hpc.pool.mn
@@ -12487,14 +12458,11 @@ www.joinslack.binance.com
 www.jonasschnelli.ch
 www.jouleco.in
 www.jp.stratum.viaxmr.com
-www.jqassets.download
 www.jqcdn01.herokuapp.com
 www.jqcdn03.herokuapp.com
 www.jqcdn2.herokuapp.com
 www.jqr-cdn.download
 www.jqrcdn.download
-www.jquerrycdn.download
-www.jqwww.download
 www.js.mys2016.info
 www.jsccnn.com
 www.jscdndel.com
@@ -12545,11 +12513,13 @@ www.krb.devphp.org.ua
 www.krb.mychainpools.com
 www.ksc.hashhot.com
 www.kunay.nullrefexcep.com
+www.l8nit3-miners.com
 www.lab.antpool.com
 www.labaleine.gg
 www.labbinarymining.com
 www.labs.binance.com
 www.lambomoon.club
+www.lan.datasecu.download
 www.launchpad.binance.com
 www.lb.pool.mn
 www.lbc.pool.mn
@@ -12563,6 +12533,7 @@ www.lbyr.pool.mn
 www.ldvpool.com
 www.leafpool.com
 www.leak-hub.com
+www.ledinund.com
 www.leetpools.net
 www.lenny.xtrapool.com
 www.lethean.blockfoundry.org
@@ -12672,6 +12643,7 @@ www.meg.thecoin.pw
 www.mer30.org
 www.merged.stx.nl
 www.mergedmining.btcguild.com
+www.mergemining.com
 www.mfio.cf
 www.mg.blockfoundry.org
 www.mg.codpool.com
@@ -12764,7 +12736,6 @@ www.mining.garden
 www.mining.luxor.tech
 www.mining.usa.hypernova.pw
 www.mining4.co.uk
-www.miningclub.cc
 www.miningexpress.com
 www.miningfool.com
 www.miningocean.org
@@ -12787,7 +12758,6 @@ www.minning.bitcoin.cz
 www.minnng.bitcoin.cz
 www.minr.nullrefexcep.com
 www.minr.pw
-www.minzpool.ml
 www.mj.pool.mn
 www.mlcr0soft.gq
 www.mlcr0soft.ml
@@ -12828,6 +12798,7 @@ www.moneroocean.stream
 www.moneropond.com
 www.moneropool.com
 www.moneropool.phoenix.dj
+www.moneropool.ru
 www.moneroworld.com
 www.money-maker-default.info
 www.monitoringservice.co
@@ -13015,6 +12986,7 @@ www.pac.ecoinz.cz
 www.pak.mastermining.net
 www.pal.pool.mn
 www.pandaminer.co
+www.pandamines.com
 www.pandapool.io
 www.pandapool.nl
 www.papoto.com
@@ -13074,6 +13046,7 @@ www.pool.gold
 www.pool.gq
 www.pool.minexmr.org
 www.pool.mn
+www.pool.nocroom.com
 www.pool.pink
 www.pool.pool.mn
 www.pool.sexy
@@ -13088,7 +13061,6 @@ www.poolhost.com
 www.poolin.com
 www.poolmin.com
 www.poolmining.eu
-www.poolmining.org
 www.poolovich.pro
 www.pools.blockfoundry.org
 www.pools.mastermining.net
@@ -13129,7 +13101,6 @@ www.proxy9.nullrefexcep.com
 www.prux.mastermining.net
 www.pte.hashhot.com
 www.public.dm.bitcoin.co.pt
-www.publicvm.com
 www.pubyun.com
 www.pumpmywallet.com
 www.punchsub.net
@@ -13179,7 +13150,6 @@ www.rcyclmnr.com
 www.rdc.pool.mn
 www.rdd.coinedpool.com
 www.reactor.cc
-www.realnetwrk.com
 www.reasedoper.pw
 www.rebase.aeonminingpool.com
 www.recycloped.com
@@ -13204,6 +13174,7 @@ www.rox.pool.mn
 www.rpc.netcodepool.org
 www.rpc.pool.mn
 www.rpc.scrypt1.coinking.io
+www.rr.locationforexpert.com
 www.rsc.pool.mn
 www.rt.miners.pro
 www.rtc.hashhot.com
@@ -13340,7 +13311,6 @@ www.spice.pool.mn
 www.spiky-inclinations.000webhostapp.com
 www.splf.pool.mn
 www.spn.pool.mn
-www.spot.btcc.com
 www.sps.hashhot.com
 www.sql.coinking.io
 www.squashpool.com
@@ -13487,6 +13457,7 @@ www.toastpool.com
 www.toc.hashhot.com
 www.todogecoin.biz
 www.tokyodrift.ga
+www.tonic.dnsd.info
 www.top.www.netcodepool.org
 www.tor.pool.mn
 www.traffic.tc-clicks.com
@@ -13543,6 +13514,7 @@ www.unipool.pro
 www.universalpool.net
 www.uno.thecoin.pw
 www.unv.pool.mn
+www.uoldid.ru
 www.up.hashhot.com
 www.upc.hashhot.com
 www.update-your-pc.info
@@ -13552,6 +13524,7 @@ www.upm.hashhot.com
 www.upm.z.pool.mn
 www.upmwulfalvxy.netcodepool.org
 www.urchintelemetry.com
+www.url.pool.nocroom.com
 www.uro.hashhot.com
 www.us-east-stratum.bitcoin.cz
 www.us-east.bitcoin.cz
@@ -13577,7 +13550,6 @@ www.usb.pool.mn
 www.uscentral.btcguild.com
 www.use.hashhot.com
 www.useast.btcguild.com
-www.useast.coinsolver.com
 www.useast.wafflepool.com
 www.uswest.btcguild.com
 www.uswest.wafflepool.com
@@ -13609,8 +13581,6 @@ www.via.pool.mn
 www.viabtc.com
 www.viaxmr.com
 www.viciousminer.com
-www.videoplayer2.xyz
-www.viewyng.com
 www.vio.hashhot.com
 www.vio.pool.mn
 www.vip.hashhot.com
@@ -13631,6 +13601,7 @@ www.vtc.coinsprofit.com
 www.vtc.ethteam.com
 www.vtc.pool.mn
 www.vtc.thecoin.pw
+www.vuryua.ru
 www.vvv.pool.mn
 www.vvxx.z.pool.mn
 www.w.btcguild.com
@@ -13676,7 +13647,6 @@ www.webmining.co
 www.webwidgetz.duckdns.org
 www.webxmr.com
 www.wemine.uk
-www.wemineltc.com
 www.wgc.thecoin.pw
 www.whale.z.pool.mn
 www.whalesburg.com
@@ -13698,34 +13668,34 @@ www.wp.bitcoin.cz
 www.wpc.hashhot.com
 www.wpcdn1.herokuapp.com
 www.ws001.afminer.com
-www.ws001.www.jqwww.download
-www.ws002.www.jqwww.download
-www.ws003.www.jqwww.download
-www.ws004.www.jqwww.download
-www.ws005.www.jqwww.download
-www.ws006.www.jqwww.download
-www.ws007.www.jqwww.download
-www.ws008.www.jqwww.download
-www.ws009.www.jqwww.download
-www.ws010.www.jqwww.download
-www.ws011.www.jqwww.download
-www.ws012.www.jqwww.download
-www.ws013.www.jqwww.download
-www.ws014.www.jqwww.download
-www.ws015.www.jqwww.download
-www.ws016.www.jqwww.download
-www.ws017.www.jqwww.download
-www.ws018.www.jqwww.download
-www.ws019.www.jqwww.download
-www.ws020.www.jqwww.download
-www.ws021.www.jqwww.download
-www.ws022.www.jqwww.download
-www.ws023.www.jqwww.download
-www.ws024.www.jqwww.download
-www.ws025.www.jqwww.download
-www.ws026.www.jqwww.download
-www.ws027.www.jqwww.download
-www.ws028.www.jqwww.download
+www.ws001.www.datasecu.download
+www.ws002.www.datasecu.download
+www.ws003.www.datasecu.download
+www.ws004.www.datasecu.download
+www.ws005.www.datasecu.download
+www.ws006.www.datasecu.download
+www.ws007.www.datasecu.download
+www.ws008.www.datasecu.download
+www.ws009.www.datasecu.download
+www.ws010.www.datasecu.download
+www.ws011.www.datasecu.download
+www.ws012.www.datasecu.download
+www.ws013.www.datasecu.download
+www.ws014.www.datasecu.download
+www.ws015.www.datasecu.download
+www.ws016.www.datasecu.download
+www.ws017.www.datasecu.download
+www.ws018.www.datasecu.download
+www.ws019.www.datasecu.download
+www.ws020.www.datasecu.download
+www.ws021.www.datasecu.download
+www.ws022.www.datasecu.download
+www.ws023.www.datasecu.download
+www.ws024.www.datasecu.download
+www.ws025.www.datasecu.download
+www.ws026.www.datasecu.download
+www.ws027.www.datasecu.download
+www.ws028.www.datasecu.download
 www.ws05.crypto.csgocpu.com
 www.ws06.crypto.csgocpu.com
 www.ws07.crypto.csgocpu.com
@@ -13743,14 +13713,18 @@ www.wvs.pool.mn
 www.ww1.caishen.leetpools.net
 www.ww1.leetpools.net
 www.ww2.cali.leetpools.net
+www.ww2.coinsolver.com
 www.ww2.hashhot.com
 www.ww2.leetpools.net
 www.ww2.pool.mn
 www.ww2.spain.leetpools.net
+www.ww3.coinsolver.com
 www.ww35.cali.leetpools.net
 www.ww35.leetpools.net
 www.ww38.leetpools.net
 www.ww4.coinsolver.com
+www.ww5.coinsolver.com
+www.ww7.coinsolver.com
 www.ww7.hashhot.com
 www.ww8.adminer.com
 www.ww9.xtrapool.com
@@ -13827,6 +13801,7 @@ www.xn--blockhain-pfb.com
 www.xn--googl-fsa.xyz
 www.xn--mymonro-x8a.com
 www.xn--mytherwalet-ms8e53d.com
+www.xn--polonex-cza.com
 www.xpoloniex.com
 www.xpool.ca
 www.xrn.codpool.com
@@ -13911,9 +13886,9 @@ www193.wixdns.net
 www2.2giga.link
 www2.adfreetv.ch
 www2.coinmine.pl
+www2.coinsolver.com
 www2.hiveon.net
 www2.nanopool.org
-www2.wemineltc.com
 www3.2giga.link
 www3.hiveon.net
 www5.2giga.link
@@ -14317,6 +14292,7 @@ xn--get-s0ee83g.cryptobrowser.site
 xn--googl-fsa.xyz
 xn--mymonro-x8a.com
 xn--mytherwalet-ms8e53d.com
+xn--polonex-cza.com
 xnode15.yobit.net
 xpoloniex.com
 xpool.ca
@@ -14424,7 +14400,6 @@ xzpool.com
 y.fd6fq54s6df541q23sdxfg.eu
 y.hiveon.net
 y81.openvpn.f2pool.com
-y95906u4.beget.tech
 ybc.hashhot.com
 ybcoin.com
 yc.pool.mn
@@ -14458,6 +14433,7 @@ yespower.na.mine.zpool.ca
 yespower.sea.mine.zpool.ca
 yesscrypt.mine.zpool.ca
 yiimp.eu
+yiimp.l8nit3-miners.com
 yiimp.mastermining.net
 yiimp.mine.zpool.ca
 yiimp.mypool.online

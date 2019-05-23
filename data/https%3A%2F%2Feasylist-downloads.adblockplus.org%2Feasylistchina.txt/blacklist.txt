@@ -100,6 +100,7 @@
 175bar.com
 176um.com
 177o.com
+17zheng.cn
 188.198.198.104.bc.googleusercontent.com
 1999019.com
 1999sg.com
@@ -185,6 +186,7 @@
 51gugu.com
 51gxqm.com
 51jumintong.com
+51posuiji.org.cn
 51xumei.com
 51yhzp.com
 525cm.com
@@ -274,6 +276,7 @@
 8jkx.com
 8le8le.com
 8mfty.com
+8tgp.com
 90370.com
 9100300.com
 910weixin.com
@@ -507,7 +510,6 @@ aomde.com
 aomeng.net
 aoparking.com
 appier.net
-apple.www.letv.com
 aqgyju.cn
 archrug.com
 as1.m.hao123.com
@@ -793,8 +795,10 @@ cs.37see.com
 csad.cc
 csaimall.com
 csbew.com
+csbthyhh.com
 csqiulong.com
 css.juqingba.cn
+cstoa.com
 csxjys.com
 ctrhfd.top
 cuoas.com
@@ -1247,6 +1251,7 @@ hpzyl.com
 hqsjc.com
 hqygz.com
 hr41.cn
+hrcmzp.cn
 hrjg.com.cn
 hsbkr.com
 hskj.net
@@ -1315,6 +1320,7 @@ img2.titan007.com
 img80.net
 imgadsame.liba.com
 immedlinkum.info
+import.kufuhao.com
 inccnd.com
 increased.cn
 index8.cn
@@ -1512,6 +1518,7 @@ legozu.com
 letaoxiaochi.com
 leturich.org
 leztc.com
+lfdydk.com
 lfhnkp.com
 lhafy.com
 lhusy.com
@@ -1985,6 +1992,7 @@ static.ichehome.com
 static.jiaquyi.com
 steadfastsystem.com
 stn88.com
+stunninglover.com
 sub.powerapple.com
 sucodb.com
 sums.suning.com
@@ -2127,7 +2135,6 @@ ukeiae.com
 ulink.cc
 um29.com
 un1.takefoto.cn
-unassigned.psychz.net
 undm.qibulo.com
 unimhk.com
 union.china.com.cn

@@ -130,7 +130,6 @@ a.wishabi.com
 a.xnimg.cn
 a.yesadsrv.com
 a.zdbb.net
-a1.cdnprk.com
 a1.vdna-assets.com
 a135.net
 a2pub.com
@@ -243,7 +242,6 @@ ad.uk.doubleclick.net
 ad.userporn.com
 ad.velmedia.net
 ad.wsod.com
-ad.xtendmedia.com
 ad.yieldmanager.com
 ad.z5x.net
 ad.zanox.com
@@ -263,7 +261,6 @@ ad47.feeldmc.com
 ad73.doubleadx.com
 ad9.bannerbank.ru
 adadvisor.net
-adan.xtendmedia.com
 adb.fling.com
 adbard.net
 adbidgo.com
@@ -435,7 +432,6 @@ ads.redtube.com
 ads.reelhd.com
 ads.reelvidz.com
 ads.rubiconproject.com
-ads.saymedia.com
 ads.servebom.com
 ads.smowtion.com
 ads.socialreach.com
@@ -519,6 +515,7 @@ adultaccessnow.com
 adultblogtoplist.com
 adultfriendfinder.com
 adv-adserver.com
+adv.9ccc.co
 adv.imadrep.co.kr
 adv.letitbit.net
 advconversion.com
@@ -560,7 +557,6 @@ affiliatewindow.com
 afftrck.com
 afgr4.com
 africabeauties.anastasiasaffiliate.com
-afs.opap.co.kr
 afterdownload.com
 ageofwushu.com
 aggregateknowledge.com
@@ -689,7 +685,6 @@ app.link
 app.pendo.io
 app.scanscout.com
 app.trackinstaller.com
-app.validclick.com
 app.wgtbaseball.com
 app2.downloadmacsoft.world
 apparede.com
@@ -731,6 +726,7 @@ asiandate.com
 asiappc.com
 asinartisationy.info
 asmassets.mtvnservices.com
+asocials.com
 asp03.ssimg.jp
 aspen.ngtv.io
 asset.f-tra.com
@@ -860,7 +856,6 @@ bea4.v.fwmrm.net
 beacon.gu-web.net
 beacon.krxd.net
 beacon.lijit.com
-beacon.saymedia.com
 beacon.scorecardresearch.com
 beacon.securestudies.com
 beacon.sina.com.cn
@@ -1417,6 +1412,7 @@ cnzz.com
 cnzz.mmstat.com
 co.cc
 code.37cs.com
+code.i-qianming.cn
 code.poptm.com
 code.rtbsystem.com
 code.theads.me
@@ -1753,6 +1749,7 @@ dw.cbsi.com
 dw.cbsimg.net
 dw.com.com
 dwebresources.com
+dxfqs.com
 dylasklmlxige.cloudfront.net
 dynamic.rakuten.co.jp
 dynamic1.anandtech.com
@@ -1777,6 +1774,7 @@ e2e-static.zdcommerce.io
 e2ertt.com
 e97527f0.se
 eaeacom.112.2o7.net
+eagerse.com
 eagle.bnamericas.com
 easycounter.com
 easypdfcombine.com
@@ -1849,6 +1847,7 @@ etc.dt07.net
 ethikuma.link
 ethn.io
 etrevro.com
+ettoday.travelrich.com
 eurogrand.com
 europerty.pro
 event.api.drift.com
@@ -1879,6 +1878,7 @@ f.chtah.com
 f.domdex.com
 f.wishabi.net
 f2network.112.2o7.net
+f3.ku63.com
 f5v1x3kgv5.com
 facash.streamplay.to
 facebook.mafiawars.com
@@ -2116,7 +2116,6 @@ graphics.pop6.com
 graphics.streamray.com
 graphics2.asiafriendfinder.com
 graucoay.net
-greview.pro
 groupeurs.com
 growfoodsmart.com
 gs1.wac.edgecastcdn.net
@@ -2160,7 +2159,6 @@ hd100546b.com
 healthline-d.openx.net
 healthreportz.com
 hello.myfonts.net
-hello.northernprofit.com
 helple.pro
 herdailyvideos.com
 hexagon-analytics.com
@@ -2171,7 +2169,9 @@ hicpm10.com
 hicpm5.com
 hiiir.com
 hilltopads.net
+himselvet.info
 hintonsfeetred.info
+hints.netflame.cc
 hipersushiads.com
 hippo.adultadworld.com
 histock.info
@@ -2183,7 +2183,6 @@ hitfreegames.com
 hits3.truehits.net
 hitwebcounter.com
 hitx.statistics.ro
-hj.flxpxl.com
 hjlas.com
 hk.effectivemeasure.net
 hkoxlirf.com
@@ -2286,7 +2285,6 @@ iframes.wildfireapp.com
 ifriends.net
 ifrype.com
 ignitna.info
-ihowed.info
 ii-sex.com
 ilivid.kayako.com
 illumenix.com
@@ -2342,6 +2340,7 @@ img.dt00.net
 img.gsspat.jp
 img.hotwords.com
 img.iacstatic.co.kr
+img.ku63.com
 img.macromill.com
 img.mediad2.jp
 img.revcontent.com
@@ -2387,7 +2386,6 @@ inadequal.com
 incapsula.evyy.net
 incisive.com
 inclk.com
-include.reinvigorate.net
 industrybrains.com
 inffa.com
 infinityads.com
@@ -2422,7 +2420,6 @@ ioredi.com
 ip.casalemedia.com
 ip.nuggad.net
 ipcounter.de
-ipreparty.info
 iproblet.com
 ir-jp.amazon-adsystem.com
 ir-na.amazon-adsystem.com
@@ -2484,7 +2481,6 @@ js.juicyads.com
 js.kau.li
 js.medi-8.net
 js.moatads.com
-js.nrcdn.com
 js.nster.net
 js.nyt.com
 js.omks.valuecommerce.com
@@ -2530,7 +2526,6 @@ kedsicatanoft.info
 keywords.fmpub.net
 kf.265g.com
 khebkaro.info
-khzbeucrltin.com
 king.connectioncdn.com
 kinja-debug.firebaseio.com
 kissmetrics.com
@@ -3035,7 +3030,6 @@ p.univide.com
 p111357.adskape.ru
 p2.adhitzads.com
 p2.hyz86.com
-p2.mdotlabs.com
 p200.cpm360.com
 p216157.clksite.com
 p220333.clksite.com
@@ -3081,7 +3075,6 @@ pdfsviewer.club
 pearlypapulesremoval.com
 pebadu.com
 pebed.dm.gg
-peelawayads.com
 pegodoaltar.com.sapo.pt
 peiyou.com
 penilesecrets.com
@@ -3226,7 +3219,6 @@ poweradcash.net
 pp.anastasiadate.com
 pp.vidcr.com
 ppc-direct.com
-pptchecker.club
 pr-bh.ybp.yahoo.com
 pr.prchecker.info
 pr.ybp.yahoo.com
@@ -3288,7 +3280,6 @@ ptp22.com
 pttsite.com
 pu.plugrush.com
 pu.trafficshop.com
-pub.adpnut.com
 pub.clicksor.net
 pub.pgssl.com
 pub.sitetag.us
@@ -3665,7 +3656,6 @@ secure.vxsbill.com
 secure.zombaio.com
 secure2.segpay.com
 securepaths.com
-secursors.com
 sedatorsinted.info
 seemygf.com
 seen-on-screen.thewhizmarketing.com
@@ -3674,6 +3664,7 @@ seg.sharethis.com
 segapi.quantserve.com
 segment-data.zqtk.net
 segment-pixel.invitemedia.com
+segments.adap.tv
 sekindo-d.openx.net
 send.microad.jp
 sender.clevernt.com
@@ -4010,7 +4001,6 @@ surveymonkey.122.2o7.net
 surveys.cnet.com
 surveys.relevantid.com
 surveyspaid.com
-surveyvalue.mobi
 suspents.info
 suxiu121.com
 sv.monkeybroker.net
@@ -4018,11 +4008,11 @@ sw.interpolls.com
 swiftype.com
 switch.atdmt.com
 switch.rtbsystem.com
+sy.at918.com
 synad2.nuffnang.com.ph
 synad2.nuffnang.com.sg
 sync-tm.everesttech.net
 sync.1rx.io
-sync.adap.tv
 sync.adkernel.com
 sync.adotmob.com
 sync.fout.jp
@@ -4161,7 +4151,6 @@ tlx.3lift.com
 tm.adk2x.com
 tmbvid.engine.adglare.net
 tmserver-1.com
-tmserver-2.net
 tns-counter.ru
 tofretonlepa.info
 tofu.dmcdn.net
@@ -4209,9 +4198,7 @@ track.freemmo2017.com
 track.gawker.com
 track.hooligapps.com
 track.hubspot.com
-track.link-w3b5.com
 track.mvhop.com
-track.netshelter.net
 track.preferrencemedia.com
 track.reinvigorate.net
 track.salesmai.com
@@ -4230,7 +4217,6 @@ tracker.stats.in.th
 tracki112.com
 tracking-asi01.omnitagjs.com
 tracking-opi.fonpit.de
-tracking.blamads.com
 tracking.bloomberg.com
 tracking.lifestylejournal.com
 tracking.marketing
@@ -4305,7 +4291,6 @@ u.xcy8.com
 u1.tbjfw.com
 u11.seoparts.net
 u1hw38x0.com
-u5.8ox.cn
 ua.badongo.com
 uac.advertising.com
 uadpost.com
@@ -4328,7 +4313,6 @@ ultimate-downloads.com
 ulust.com
 um.lkjh.jsyxgb.com
 um.simpli.fi
-umekana.ru
 ums.adtechus.com
 uncpm_270.anzhuocpm.com
 unijfkajh554.co.cc
@@ -4370,7 +4354,6 @@ usuarios-online.com
 usweb.dotomi.com
 utclient.utorrent.com
 utilities.tagsweekly.com
-uytestion.info
 v.6dvip.com
 v.admaster.com.cn
 v.lkqd.net
@@ -4524,9 +4507,11 @@ windowslive.tt.omtrdc.net
 wink.in.th
 wirenth.com
 witalfieldt.com
+withbinaryoptions.com
 withdromnit.pro
 witlee-main.firebaseapp.com
 wixi.com
+wlp.mycomputermechanics.com
 wlpinnacle.adsrv.eacdn.com
 wms-na.amazon-adsystem.com
 woom.ws
@@ -4660,6 +4645,7 @@ www.clickpapa.com
 www.clicksgear.com
 www.clicksor.com
 www.clickvalidator.net
+www.clubsexdating.nl
 www.cnzz.com
 www.co.cc
 www.collective.com
@@ -4714,6 +4700,7 @@ www.evri.com
 www.exoclick.com
 www.fallingfalcon.com
 www.fastdownloadarchive.com
+www.feisearch.com
 www.ferrolad.com
 www.ffhwzaenzoue.com
 www.fhserve.com
@@ -4769,7 +4756,6 @@ www.iamned.com
 www.idownloadfast.com
 www.ifriends.net
 www.ii-sex.com
-www.ilivid.com
 www.imglnkb.com
 www.impressionperformance.biz
 www.impressionsmedia.biz
@@ -4815,7 +4801,6 @@ www.lunarpages.com
 www.lyuoaxruaqdo.com
 www.mabosbet.com
 www.maebtjn.com
-www.mai3721.com
 www.makemoneyww.com
 www.marketgid.com
 www.matomymarket.com
@@ -4850,7 +4835,6 @@ www.niceratios.com
 www.njpj.com
 www.nowfreedownloads.com
 www.npttech.com
-www.nzbmovieseeker.com
 www.odnoklassniki.ru
 www.offline.pt
 www.omniture.com
@@ -4916,7 +4900,6 @@ www.searchmaid.com
 www.seemygf.com
 www.seethisinaction.com
 www.sexblogsdir.com
-www.sexysocials.com
 www.shagaholic.com
 www.shareasale.com
 www.shglegle.com
@@ -5054,6 +5037,7 @@ www7.cbox.ws
 www7.watchmygf.to
 www8.watchmygf.to
 www9.watchmygf.to
+wwwins.1to1crm.com.cn
 wx1.sinaimg.cn
 wx2.sinaimg.cn
 wx3.sinaimg.cn
@@ -5062,6 +5046,7 @@ x.bidswitch.net
 x.refban.com
 x3v66zlz.com
 x5.kaginawa.jp
+xadnetwork.com
 xads.zedo.com
 xaogi.com
 xapi.juicyads.com
@@ -5188,7 +5173,6 @@ zs13.cnzz.com
 zs8.cnzz.com
 zt1.quebec-bin.com
 zukxd6fkxqn.com
-zurgerya.ru
 zw1.november-lax.com
 zy.down.91.com
 zy4-444.s3.amazonaws.com

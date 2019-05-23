@@ -101,6 +101,7 @@ ads.fotoable.com
 ads.glispa.com
 ads.jianchiapp.com
 ads.mobilityware.com
+ads.mobvertising.net
 ads.mopub.com
 ads.pdbarea.com
 ads.pinger.com
@@ -129,7 +130,6 @@ adsniper.ru
 adspirit.de
 adspynet.com
 adsrvmedia.net
-adsrvr.io
 adsrvr.org
 adsx.greystripe.com
 adsymptotic.com
@@ -326,7 +326,6 @@ etcodes.com
 eu-ad.sam4m.com
 eu-ma.sam4m.com
 euadsapi.manhuaren.com
-exe.bid
 exp.glispa.com
 exponential.com
 fastmap33.com
@@ -574,6 +573,7 @@ pub1.co
 pubmatic.com
 pubnative.net
 puhtml.com
+putin.gold
 qgss8.com
 qservz.com
 r7mediar.com
@@ -588,7 +588,6 @@ relap.io
 reporo.net
 retarget.ssl-services.com
 revcontent.com
-revmob.com
 rg.yottos.com
 richpays.com
 rotaban.ru
@@ -709,6 +708,7 @@ underclick.ru
 unicume.com
 upsight-api.com
 upsight.com
+us.3zs0.date
 usekahuna.com
 usp1.baidu.com
 utarget.ru
@@ -753,3 +753,4 @@ yuhuads.com
 zedo.com
 zhfosenghtr.com
 ziffdavis.com
+zzhengre.com

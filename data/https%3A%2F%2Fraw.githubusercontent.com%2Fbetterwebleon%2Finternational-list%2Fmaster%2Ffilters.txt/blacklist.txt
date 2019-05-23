@@ -1,4 +1,5 @@
 api.groupon.com
+api.starsmp.com
 browser-update.org
 contentexchange.me
 e.reddit.com

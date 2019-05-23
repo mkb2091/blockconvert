@@ -104,7 +104,6 @@ ad.keenspace.com
 ad.leadbolt.net
 ad.liveinternet.ru
 ad.lupa.cz
-ad.mediastorm.hu
 ad.mgd.de
 ad.musicmatch.com
 ad.nachtagenten.de
@@ -174,7 +173,6 @@ adcell.de
 adcenter.mdf.se
 adcenter.net
 adcentriconline.com
-adcept.net
 adcito.com
 adclick.com
 adclient.uimserv.net
@@ -291,7 +289,6 @@ adpia.vn
 adplus.co.id
 adplxmd.com
 adprimemedia.com
-adprofile.net
 adrazzi.com
 adreactor.com
 adremedy.com
@@ -462,7 +459,6 @@ ads.kinobox.cz
 ads.kinxxx.com
 ads.kompass.com
 ads.krawall.de
-ads.lesbianpersonals.com
 ads.linuxfoundation.org
 ads.livenation.com
 ads.mariuana.it
@@ -523,7 +519,6 @@ ads.resoom.de
 ads.rottentomatoes.com
 ads.rpgdot.com
 ads.satyamonline.com
-ads.saymedia.com
 ads.scifi.com
 ads.seniorfriendfinder.com
 ads.sexinyourcity.com
@@ -555,7 +550,6 @@ ads.ultimate-guitar.com
 ads.uncrate.com
 ads.undertone.com
 ads.usatoday.com
-ads.v3.com
 ads.verticalresponse.com
 ads.vgchartz.com
 ads.videosz.com
@@ -586,7 +580,6 @@ ads1.canoe.ca
 ads1.mediacapital.pt
 ads1.msn.com
 ads1.rne.com
-ads1.virtual-nights.com
 ads10.speedbit.com
 ads180.com
 ads2.brazzers.com
@@ -670,6 +663,7 @@ adserver01.de
 adserver1-images.backbeatmedia.com
 adserver1.backbeatmedia.com
 adserver1.mindshare.de
+adserver1.ogilvy-interactive.de
 adserver2.mindshare.de
 adserverplus.com
 adserversolutions.com
@@ -735,7 +729,6 @@ adv.yo.cz
 advariant.com
 adventory.com
 advert.bayarea.com
-advert.dyna.ultraweb.hu
 adverticum.com
 adverticum.net
 adverticus.de
@@ -849,7 +842,6 @@ apptera.com
 appular.com
 apsalar.com
 apture.com
-arc1.msn.com
 ard.xxxblackbook.com
 are-ter.com
 as.webmd.com
@@ -866,7 +858,6 @@ audience2media.com
 audit.median.hu
 audit.webinform.hu
 auto-bannertausch.de
-autohits.dk
 avenuea.com
 avpa.javalobby.org
 avres.net
@@ -902,6 +893,7 @@ banner.mindshare.de
 banner.nixnet.cz
 banner.noblepoker.com
 banner.northsky.com
+banner.orb.net
 banner.penguin.cz
 banner.rbc.ru
 banner.relcom.ru
@@ -909,7 +901,6 @@ banner.tanto.de
 banner.titan-dsl.de
 banner.vadian.net
 banner.webmersion.com
-banner.wirenode.com
 bannerads.de
 bannerboxes.com
 bannercommunity.de
@@ -1049,6 +1040,7 @@ casinotraffic.com
 casinotreasure.com
 cbanners.virtuagirlhd.com
 cben1.net
+cdn.freefacti.com
 cecash.com
 celltick.com
 celtra.com
@@ -1075,7 +1067,6 @@ cjlog.com
 claria.com
 clashmobile.com
 class-act-clicks.com
-click.absoluteagency.com
 click.fool.com
 click.kmindex.ru
 click2freemoney.com
@@ -1106,8 +1097,8 @@ clicktracks.com
 clicktrade.com
 clickxchange.com
 clickz.com
+clickzxc.com
 clicmanager.fr
-clixgalore.com
 clkads.com
 clkrev.com
 cls.vrvm.com
@@ -1226,8 +1217,6 @@ drumcash.com
 dynamic.fmpub.net
 e-adimages.scrippsnetworks.com
 e-bannerx.com
-e-debtconsolidation.com
-e-m.fr
 e-n-t-e-r-n-e-x.com
 e-planning.net
 e.kde.cz
@@ -1441,7 +1430,6 @@ iloopmobile.com
 imageads.canoe.ca
 imagecash.net
 images-pw.secureserver.net
-images.v3.com
 imarketservices.com
 imatmobile.com
 img.prohardver.hu
@@ -1565,11 +1553,9 @@ m4n.nl
 madadsmedia.com
 madclient.uimserv.net
 mads.cnet.com
-madserve.org
 madvertise.de
 magnetic.com
 malware-check.disconnect.me
-malware-scan.com
 manage.com
 maplefarmmedia.com
 marchex.com
@@ -1695,8 +1681,6 @@ navigator.io
 navrcholu.cz
 nbjmp.com
 ndparking.com
-nedstat.com
-nedstat.nl
 nedstatbasic.net
 nend.net
 neocounter.neoworx-blog-tools.net
@@ -1938,7 +1922,6 @@ rev2pub.com
 revcontent.com
 revenue.net
 revenuedirect.com
-revmob.com
 revsci.net
 revstats.com
 rhythmnewmedia.com
@@ -1995,6 +1978,7 @@ sexystat.com
 sezwho.com
 shareadspace.com
 shareasale.com
+sharepointads.com
 sher.index.hu
 shinystat.com
 shinystat.it
@@ -2004,7 +1988,6 @@ simpletexting.com
 simplycast.com
 sinoa.com
 sitemeter.com
-sitestat.com
 sixsigmatraffic.com
 skylink.vn
 slickaffiliate.com
@@ -2082,6 +2065,7 @@ superstats.com
 supertop.ru
 supertop100.com
 surfmusik-adserver.de
+switchads.com
 swordfishdc.com
 t.insigit.com
 taboola.com
@@ -2242,7 +2226,6 @@ visistat.com
 visit.webhosting.yahoo.com
 visitbox.de
 visual-pagerank.fr
-visualrevenue.com
 voicefive.com
 vrs.cz
 vs.tucows.com
@@ -2315,7 +2298,9 @@ xiti.com
 xius.com
 xplusone.com
 xponsor.com
+xq1.net
 xrea.com
+xtendmedia.com
 xtremetop100.com
 xxxcounter.com
 xy7elite.com

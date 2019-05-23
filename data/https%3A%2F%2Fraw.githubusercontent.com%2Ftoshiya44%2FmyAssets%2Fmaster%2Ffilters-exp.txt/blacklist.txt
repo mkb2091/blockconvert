@@ -48,7 +48,6 @@
 2d.net.co
 2f5a1f1fab21a56.com
 2mdnsys.com
-2p9fyvx.com
 2znp09oa.com
 304c40d20085e.com
 31a5610ce3a8a2.com
@@ -109,7 +108,6 @@
 65xps.com
 66ce98158e4f402.com
 67126e4413a.com
-688de7b3822de.com
 6b5c418918ebb008cc6.com
 6bd9a2ea1a1801e55.com
 6c37f8a12dede103bf7.com
@@ -121,6 +119,7 @@
 71a30cae934e.com
 71bcab8994dbe2.com
 71d7511a4861068.com
+71dfd978db603cea92a.com
 739c49a8c68917.com
 743e6b34be13fb105e0.com
 757a51ce62f.com
@@ -140,6 +139,7 @@
 7db0b2a0ee95f557904.com
 7dee28afeb8c939d8.com
 7e625f490775b155.com
+7edc0b1cdcb8.com
 7f19b1713b43f7db.com
 7f8e91975bdc9c5f1c.com
 7xc4n.com
@@ -193,7 +193,6 @@ a8c37822e110e3.com
 a911a1ed6c0.com
 a940db0846408b2.com
 a9d7c19f0282.com
-aanqylta.com
 ab8ce655c175b0d.com
 ab913aa797e78b3.com
 about.com
@@ -204,6 +203,7 @@ actuallysheep.com
 acunetix.com
 ad-maven.com
 ad.kissanime.ac
+ad.kissanime.app
 ad.kissanime.be
 ad.kissanime.ca
 ad.kissanime.cc
@@ -219,7 +219,6 @@ ad.kissanime.download
 ad.kissanime.ec
 ad.kissanime.es
 ad.kissanime.eu
-ad.kissanime.faith
 ad.kissanime.fm
 ad.kissanime.fun
 ad.kissanime.gq
@@ -238,6 +237,7 @@ ad.kissanime.org
 ad.kissanime.pw
 ad.kissanime.re
 ad.kissanime.ro
+ad.kissanime.run
 ad.kissanime.se
 ad.kissanime.sh
 ad.kissanime.si
@@ -376,7 +376,6 @@ bb475d71fa0b1b2.com
 be2anywhere.com
 beacon.wikia-services.com
 beamincrease.com
-beamkite.com
 bebi.com
 beeftransmission.com
 belwrite.com
@@ -425,11 +424,11 @@ c75b9ac5103e5d125b8.com
 c810b4e386a121f20.com
 ca4ec6874a33a13.com
 cacfbf85ad2005e4c31.com
-calmfoot.com
 canada.com
 carambo.la
 carbonads.com
 casalemedia.com
+cb5864239d752.com
 cbsi.com
 ccbill.com
 ce69817852420b7fea.com
@@ -487,10 +486,7 @@ coinnebula.com
 coinzilla.io
 com.com
 comfortablecheese.com
-commandwalk.com
-commoncannon.com
 concernrain.com
-consciouscabbage.com
 consciouschairs.com
 content.ad
 contentabc.com
@@ -513,7 +509,6 @@ cricbuzz.com
 criteo.com
 critictruck.com
 crowdtwist.com
-crownclam.com
 crunchyroll.com
 crwdcntrl.net
 cs6hm.com
@@ -531,7 +526,6 @@ cxense.com
 czechose.com
 d04b7831b4690.com
 d0eda50bf4f7d172c06.com
-d0efb7d9aeb478d.com
 d10psrq44igbex.cloudfront.net
 d1p7elpjrt6qav.cloudfront.net
 d1z2jf7jlzjs58.cloudfront.net
@@ -566,7 +560,6 @@ decisivedrawer.com
 decisiveducks.com
 defpush.com
 delegatediscussion.com
-delightdriving.com
 delivery.2d.net.co
 deployads.com
 detectdiscovery.com
@@ -574,7 +567,6 @@ dewsburg.info
 df63de4ef399b.com
 dh956.com
 dianomi.com
-differentdesk.com
 digitru.st
 dk4ywix.com
 dlyads.com
@@ -731,7 +723,6 @@ f5080f5cee5a00.com
 f54b0c9d6893bda7b9a.com
 f9918c3545cc7b.com
 fa00c331ceacc.com
-familiarfloor.com
 fanaticalfly.com
 fancybar.net
 faultyfowl.com
@@ -792,6 +783,7 @@ fullstory.nl
 fullstory.org
 fullstory.ph
 fullstory.pro
+fullstory.rocks
 fullstory.ru
 fullstory.tk
 fullstory.tv
@@ -801,7 +793,6 @@ fullstory.ws
 fullstory.xn--fiqs8s
 fullstory.xn--fiqz9s
 fullstory.xn--node
-functionalclam.com
 futuristicfairies.com
 fuzzyflavor.com
 g1hmcmp.com
@@ -843,7 +834,6 @@ google-analytics.de
 google-analytics.eu
 google-analytics.fi
 google-analytics.fm
-google-analytics.gdn
 google-analytics.hu
 google-analytics.ie
 google-analytics.is
@@ -879,7 +869,6 @@ googleanalytics.co
 googleanalytics.com
 googleanalytics.company
 googleanalytics.fm
-googleanalytics.gdn
 googleanalytics.guru
 googleanalytics.hu
 googleanalytics.ie
@@ -917,7 +906,6 @@ gravatar.com
 greetzebra.com
 greyinstrument.com
 gri98.com
-guardedgovernor.com
 guardwork.info
 gumgum.com
 gus.host
@@ -961,7 +949,6 @@ intercom.io
 ip226.ip-5-39-27.eu
 ipbunsan-server.net
 ipify.org
-iplogger.com
 iplogger.info
 iplogger.org
 iplogger.ru
@@ -1022,6 +1009,7 @@ kissanime.ro
 kissasian.xyz
 kisscartoon.so
 kissmanga.io
+kissmanga.pro
 kissmanga.ru
 kissmanga.us
 kissmetrics.com
@@ -1029,9 +1017,9 @@ kj2hy.com
 klickthru.com
 kniverto.com
 komoona.com
+kqtu1a03.top
 l9tdhe6.com
 large-format.net
-lc0pyfn.com
 leanplum.com
 lepinsar.com
 lettucelimit.com
@@ -1041,7 +1029,6 @@ lie2anyone.com
 lie4anyone.com
 lijit.com
 limbik.io
-limpingline.com
 linkbucks.com
 linkedin.com
 linkpaid.net
@@ -1053,7 +1040,6 @@ lizardslaugh.com
 lld2q.com
 lmodr.biz
 looksmartppc.com
-lopsidedspoon.com
 loudloss.com
 loudlunch.com
 lp3tdqle.com
@@ -1073,6 +1059,7 @@ marketo.az
 marketo.biz
 marketo.blog
 marketo.ca
+marketo.cf
 marketo.cn
 marketo.com
 marketo.community
@@ -1258,11 +1245,9 @@ piguiqproxy.xn--fiqz9s
 piguiqproxy.xn--node
 pinterest.com
 pitchfork.com
-pixel.archive.is
 pixel.facebook.com
 pixel.watch
 pixel.wp.com
-planniver.com
 platform.linkedin.com
 platform.vine.co
 play-asia.com
@@ -1294,7 +1279,6 @@ profitrumour.com
 profitshare.bg
 projectpoi.com
 proper.io
-provideplant.com
 ptarepjx.com
 pub2srv.com
 pubnub.com
@@ -1312,6 +1296,7 @@ pussl2.com
 pussl20.com
 pussl21.com
 pussl22.com
+pussl23.com
 pussl26.com
 pussl3.com
 pussl4.com
@@ -1329,7 +1314,6 @@ putrr5.com
 putrr7.com
 putrr8.com
 putrr9.com
-puzzlingfall.com
 pweaatek.com
 px.gfycat.com
 px1alsry.com
@@ -1363,7 +1347,6 @@ rlcdn.com
 rocks.io
 rtbterra.com
 rubiconproject.com
-rulerabbit.com
 rvnc72k.com
 ry1wnld.com
 s.imgur.com
@@ -1374,7 +1357,6 @@ safebrowsing.google.com
 saysidewalk.com
 scam.com
 scarcesign.com
-scarcestream.com
 scintillatingspace.com
 scorecardresearch.com
 scrubsky.com
@@ -1402,7 +1384,6 @@ shapeshifth.xn--fiqz9s
 shapeshifth.xn--node
 sharethis.com
 sharethrough.com
-shelterstraw.com
 shiapeshift.fm
 shiapeshift.la
 shiapeshift.ph
@@ -1412,11 +1393,9 @@ shiapeshift.xn--fiqs8s
 shiapeshift.xn--fiqz9s
 shiapeshift.xn--node
 shiek1ph.com
-shiveringsail.com
 siftscience.com
 signavatar.com
 signoredom.com
-simplisticnose.com
 sitelock.com
 siteprice.org
 skimresources.com
@@ -1442,13 +1421,11 @@ smcheck.ws
 smcheck.xn--fiqs8s
 smcheck.xn--fiqz9s
 smcheck.xn--node
-snakesort.com
 sneakystamp.com
 solvemedia.com
 sonobi.com
 sophang8.com
 sourceforge.net
-spectacularsnail.com
 speed.wikia.net
 spider.ad
 sportsinteraction.com
@@ -1456,7 +1433,6 @@ spot.im
 spottysense.com
 spoutable.com
 springboardplatform.com
-squeamishscarecrow.com
 ssiapawz.com
 ssl2anyone2.com
 ssl2anyone3.com
@@ -1474,7 +1450,6 @@ strivesidewalk.com
 succeedscene.com
 suddership.com
 sugarcurtain.com
-superficialsink.com
 superjobs.xyz
 surveygizmobeacon.s3.amazonaws.com
 suspents.info
@@ -1511,9 +1486,9 @@ trellian.com
 tremember.info
 tribdss.com
 trickycelery.com
-tritetongue.com
 tru.am
 truckstomatoes.com
+true2file.com
 truefilen32.com
 truste.com
 trustedpubs.com

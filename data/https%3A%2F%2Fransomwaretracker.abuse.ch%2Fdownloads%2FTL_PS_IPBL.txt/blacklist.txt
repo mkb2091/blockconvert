@@ -1478,7 +1478,6 @@ mancave.eu
 mands.at
 mapserver.nl
 marchant.eu
-market.domainname.de
 market1.domainname.de
 marketingonline.be
 massage-tantra.nl
@@ -2208,6 +2207,7 @@ sunnypower.nl
 superferienhaus.de
 superwings.eu
 supplementshop.at
+sutrarita.eu
 svab.nl
 svn.abbys.nl
 svn.algol.nl

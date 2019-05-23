@@ -77,6 +77,7 @@ cdns.ws
 cfcdist.gdn
 cfceu.duckdns.org
 cfcs1.duckdns.org
+cgjyesqhxzzm.com
 chicago01.electroneum.hashvault.pro
 clod.pw
 cloudcdn.gdn
@@ -92,7 +93,6 @@ coingive.com
 coinhive-manager.com
 coinhive.info
 coinhive.net
-coinhive.org
 coinhives.com
 coinimp.com
 coinive.com
@@ -170,19 +170,14 @@ fr.cookiescript.info
 frankfurt-1.xmrpool.net
 freebitco.in
 freecontent.bid
-freecontent.com
 freecontent.info
 freecontent.net
 freecontent.stream
-freedom.wemineltc.com
 freshrefresher.com
-ftp.coinhive-manager.com
-ftp.coinlab.biz
 full.pr0gramm.com
 fvwcwbdrprdt.com
 g-content.bid
 gcxsbflncu.bid
-gedmodsxbebd.com
 gemius.pl
 getcryptotab.com
 global.crypto.csgocpu.com
@@ -242,6 +237,7 @@ krb.devphp.org.ua
 kunay.nullrefexcep.com
 l-shop.nullrefexcep.com
 la01.supportxmr.com
+ledinund.com
 lewd.ninja
 light.browsermine.com
 lightminer.co
@@ -327,7 +323,6 @@ npcdn1.now.sh
 ns2.cryptosearch.site
 ns2.cryptotab.net
 nullrefexcep.com
-nvqsjdvgqnyk.com
 nvvdtfqboy.bid
 nxcxithvcoeh.com
 oc.monerise.com
@@ -404,6 +399,7 @@ smurf.crypto.csgocpu.com
 soibuuqqhuyo.com
 spacepools.org
 sparechange.io
+sparnove.com
 sr.cookiescript.info
 srppykbedhqp.com
 srv01.bitcoiner.win

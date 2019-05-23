@@ -25,6 +25,7 @@ apester.com
 api.branch.io
 api.flattr.com
 api.groupon.com
+api.starsmp.com
 api.traq.li
 app.e2ma.net
 app.livemarketshoppers.com
@@ -92,6 +93,7 @@ consent.truste.com
 contentexchange.me
 contextly.com
 conversionsbox.com
+convertsocial.com
 cookie-accept.com
 cookie-script.com
 cookie.aerostatonet.it
@@ -116,7 +118,6 @@ cookies.nos.nl
 cookies.unidadeditorial.es
 cookiescript.info
 crowdynews.com
-curiyo.com
 cursors-4u.net
 d15r06k2ko210l.cloudfront.net
 d2ip7iv1l4ergv.cloudfront.net
@@ -462,8 +463,8 @@ surveygizmo.com
 swishu.com
 taboola.com
 taboolasyndication.com
+tarteaucitron.ml
 technorati.com
-theechosystem.com
 thelovebucks.com
 thenational-gb.thenational.scot
 theoutplay.com
@@ -546,6 +547,7 @@ wpush.biz
 xing-share.com
 xtremepush.com
 yottos.com
+yourlocalguardian-gb.yourlocalguardian.co.uk
 zaparena.com
 zeddit.com
 zergnet.com
