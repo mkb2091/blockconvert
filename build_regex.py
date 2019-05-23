@@ -12,18 +12,27 @@ class BuildRegex():
         with open('tld_list.txt') as file:
             self.TLDS = [tld for tld in file.read().lower().splitlines() if '#' not in tld]
         tlds = self.TLDS.copy()
-        tlds.append(r'*')
         tld_dict = dict()
         for tld in tlds:
-            try:
-                tld_dict[tld[0]].append(tld[1:])
-            except KeyError:
-                tld_dict[tld[0]] = [tld[1:]]
+            if tld[0] in tld_dict:
+                if tld[1] in tld_dict[tld[0]]:
+                    tld_dict[tld[0]][tld[1]].append(tld[2:])
+                else:
+                    tld_dict[tld[0]][tld[1]] = [tld[2:]]
+            else:
+                tld_dict[tld[0]] = {tld[1]: [tld[2:]]}
         tld_regex = []
-        for first_letter in sorted(tld_dict, key=lambda x:len(tld_dict[x]), reverse=True):
-            now = '|'.join(['(?:%s)' % re.escape(i) for i in sorted(tld_dict[first_letter], key=len, reverse=True)])
+        for first_letter in sorted(tld_dict, reverse=True):
+            now = []
+            for second_letter in sorted(tld_dict[first_letter],
+                                        key=lambda x: len(tld_dict[first_letter][x]),
+                                        reverse=True):
+                current = '|'.join([re.escape(i) for i in sorted(tld_dict[first_letter][second_letter], key=len,
+                                                                 reverse=True)])
+                now.append('(?:%s(?:%s))' % (second_letter, current))
+            now = '|'.join(now)
             tld_regex.append('(?:%s(?:%s))' % (re.escape(first_letter), now))
-        tld_regex = '(?:%s)' % '|'.join(tld_regex)
+        tld_regex = r'(?:%s|\*)' % '|'.join(tld_regex)
         ip_v4 = '[12]?[0-9]{,2}[.][12]?[0-9]{,2}[.][12]?[0-9]{,2}[.][12]?[0-9]{,2}'
         ip_v6 = '[0-9a-f]{,4}(?:[:][0-9a-f]{,4}){2,8}'
         ip = '(?:{ip_v4}|{ip_v6})'.format(**locals())
