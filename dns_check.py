@@ -152,7 +152,11 @@ class DNSChecker():
             with open('dns_cache.txt') as file:
                 for line in file:
                     try:
-                        domain, ip, last_modified = line.rstrip().split(',')
+                        domain, *ip, last_modified = line.rstrip().split(',')
+                        if ip:
+                            ip = ip[0]
+                        else:
+                            ip = ''
                         last_modified = int(last_modified)
                         if last_modified > one_week_ago:
                             self.cache[domain] = (ip, last_modified)
@@ -189,7 +193,10 @@ class DNSChecker():
         self.clean_forward_cache()
         with open('temp', 'w') as file:
             for domain in sorted(self.cache):
-                file.write('%s,%s,%s\n' % (domain, self.cache[domain][0], int(self.cache[domain][1])))
+                if self.cache[domain][0]:
+                    file.write('%s,%s,%s\n' % (domain, self.cache[domain][0], int(self.cache[domain][1])))
+                else:
+                    file.write('%s,%s\n' % (domain, int(self.cache[domain][1])))
         os.replace('temp', 'dns_cache.txt')
     def save_reverse_cache(self):
         lines = (','.join((ip, str(int(self.reverse_cache[ip][0])),
