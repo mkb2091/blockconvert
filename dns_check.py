@@ -153,12 +153,9 @@ class DNSChecker():
                 for line in file:
                     try:
                         domain, ip, last_modified = line.rstrip().split(',')
-                        if (build_regex.DOMAIN_REGEX.fullmatch(domain)
-                            and ('*' not in domain)
-                            and (ip in '1' or build_regex.IP_REGEX.fullmatch(ip))):
-                            last_modified = int(last_modified)
-                            if last_modified > one_week_ago:
-                                self.cache[domain] = (ip, last_modified)
+                        last_modified = int(last_modified)
+                        if last_modified > one_week_ago:
+                            self.cache[domain] = (ip, last_modified)
                     except (ValueError):
                         pass
         except FileNotFoundError:
@@ -168,27 +165,31 @@ class DNSChecker():
                 for line in file:
                     try:
                         ip_address, last_modified, *domains = line.rstrip().split(',')
-                        if build_regex.IP_REGEX.fullmatch(ip_address):
-                            domains = [domain for domain in domains
-                                       if build_regex.DOMAIN_REGEX.fullmatch(domain)
-                                       and '*' not in domain]
-                            last_modified = int(last_modified)
-                            if last_modified > one_week_ago:
-                                self.reverse_cache[ip_address] = (last_modified, domains)
+                        domains = [domain for domain in domains
+                                   if build_regex.DOMAIN_REGEX.fullmatch(domain)
+                                   and '*' not in domain]
+                        last_modified = int(last_modified)
+                        if last_modified > one_week_ago:
+                            self.reverse_cache[ip_address] = (last_modified, domains)
                     except (ValueError):
                         pass
         except FileNotFoundError:
             pass
         self.save_forward_cache()
         self.save_reverse_cache()
+    def clean_forward_cache(self):
+        cache = self.cache
+        for domain in list(cache):
+            now = cache[domain]
+            if not ('*' not in domain
+                and build_regex.DOMAIN_REGEX.fullmatch(domain)
+                and (now[0] in '1' or build_regex.IP_REGEX.fullmatch(now[0]))):
+                del cache[domain]
     def save_forward_cache(self):
-        lines = ([domain, self.cache[domain][0], str(int(self.cache[domain][1]))] for domain in sorted(self.cache)
-                 if build_regex.DOMAIN_REGEX.fullmatch(domain)
-                 and (self.cache[domain][0] in '1' or build_regex.IP_REGEX.fullmatch(self.cache[domain][0]))
-                 and '*' not in domain)
+        self.clean_forward_cache()
         with open('temp', 'w') as file:
-            for line in lines:
-                file.write(','.join(line) + '\n')
+            for domain in sorted(self.cache):
+                file.write('%s,%s,%s\n' % (domain, self.cache[domain][0], int(self.cache[domain][1])))
         os.replace('temp', 'dns_cache.txt')
     def save_reverse_cache(self):
         lines = (','.join((ip, str(int(self.reverse_cache[ip][0])),
@@ -208,22 +209,15 @@ class DNSChecker():
         response_queue = queue.Queue()
         results = dict()
         all_from_cache = True
-        valid_count = 0
-        invalid_count = 0
         for domain in domain_list:
-            if build_regex.DOMAIN_REGEX.fullmatch(domain):
-                try:
-                    results[domain] = cache[domain][0]
-                    if cache[domain][0]:
-                        valid_count += 1
-                    else:
-                        invalid_count += 1
-                except KeyError:
+            try:
+                results[domain] = cache[domain][0]
+            except KeyError:
+                if build_regex.DOMAIN_REGEX.fullmatch(domain):
                     request_queue.put(domain)
                     all_from_cache = False
-            else:
-                cache[domain] = ('', time.time())
-                results[domain] = ('', time.time())
+                else:
+                    results[domain] = ('', time.time())
         if all_from_cache:
             return results
         del domain_list
