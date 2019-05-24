@@ -21,7 +21,7 @@ class BlockList():
             self.SUBDOMAINS = file.read().splitlines()
         self.dns = dns_check.DNSChecker()
 
-    def add_file(self, contents, is_whitelist=False, is_malware=False):
+    def add_file(self, contents, is_whitelist=False, match_url=False):
         data = contents.lower()
         try:
             data = json.loads(data)
@@ -35,7 +35,7 @@ class BlockList():
             else:
                 blacklist = self.blacklist
             for line in data.splitlines():
-                if is_malware:
+                if match_url:
                     match = self.URL_REGEX.fullmatch(line)
                     if match:
                         blacklist.update(filter(bool, match.groups()))
