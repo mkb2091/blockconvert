@@ -8,7 +8,7 @@ class BuildRegex():
         self.generate_dns_reponse_policy_zone_regex()
         self.generate_master_regex()
         self.generate_url_regex()
-        
+
     def generate_domain_regex(self):
         with open('tld_list.txt') as file:
             self.TLDS = [tld for tld in file.read().lower().splitlines() if '#' not in tld]
@@ -68,7 +68,7 @@ class BuildRegex():
     def generate_dns_reponse_policy_zone_regex(self):
         domain_string = self.DOMAIN_STRING
         self.RPZ_STRING = r'{domain_string}\s+cname\s+[.]\s*(?:[;].*)?'.format(**locals())
-        
+
     def generate_master_regex(self):
         self.REGEX_STRING = '(?:%s)|(?:%s)|(?:%s)' % (self.HOSTS_STRING, self.ADBLOCK_STRING, self.RPZ_STRING)
         self.REGEX = re.compile(self.REGEX_STRING)
