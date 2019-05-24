@@ -13,14 +13,18 @@ def main():
     urls = []
     with open('urls.txt') as file:
         for line in file.read().splitlines():
-            (list_type, is_malware, url, expires, list_license) = json.loads(line)
-            urls.append((list_type, is_malware, url, expires, list_license))
+            (list_type, is_malware, *do_reverse_dns, url, expires, list_license) = json.loads(line)
+            if do_reverse_dns == []:
+                do_reverse_dns = is_malware
+            else:
+                do_reverse_dns = do_reverse_dns[0]
+            urls.append((list_type, is_malware, do_reverse_dns, url, expires, list_license))
     with open('urls.txt', 'w') as file:
         file.write('\n'.join(sorted(set([json.dumps(i) for i in urls]))))
     start = time.time()
     manager = download.DownloadManager()
-    for (whitelist, is_malware, url, expires, list_license) in urls:
-        manager.add_url(url, whitelist, is_malware, expires)
+    for (whitelist, is_malware, do_reverse_dns, url, expires, list_license) in urls:
+        manager.add_url(url, whitelist, is_malware, do_reverse_dns, expires)
     manager.clean()
     print('Downloaded needed files(%ss)' % (time.time() - start))
     start = time.time()
