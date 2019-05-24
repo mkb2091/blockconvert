@@ -9,9 +9,12 @@ import blockconvert
 def copy_whitelist_and_clean():
     if not os.path.exists(os.path.join('data', 'whitelist')):
         os.mkdir(os.path.join('data', 'whitelist'))
-    with open('whitelist.txt') as file1:
-        with open(os.path.join('data', 'whitelist', 'whitelist.txt'), 'w') as file2:
-            file2.write(file1.read())
+    with open('whitelist.txt') as file:
+        data = '\n'.join(sorted(file.read().split()))
+    with open('whitelist.txt', 'w') as file:
+        file.write(data)
+    with open(os.path.join('data', 'whitelist', 'whitelist.txt'), 'w') as file:
+        file.write(data)
 
 
 def fetch_new_tld():
