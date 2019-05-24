@@ -28,3 +28,4 @@
 @@||www.google.com.*
 @@||www.instagram.com^
 @@||www.reddit.com^
+@@||www.webmd.com^
