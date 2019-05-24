@@ -5,7 +5,8 @@ import os
 
 import download
 import blockconvert
-    
+import generate_readme
+
 
 def main():
     if not os.path.exists('data'):
@@ -60,6 +61,7 @@ def main():
                          ]:
         with open(os.path.join('output', path), 'w') as file:
             file.write(func())
+    generate_readme.generate_readme(urls, len(blocklist.blacklist))
     print('Generated output(%ss)' % (time.time() - start))
 
 if __name__ == '__main__':
