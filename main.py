@@ -14,11 +14,7 @@ def main():
     urls = []
     with open('urls.txt') as file:
         for line in file.read().splitlines():
-            (list_type, match_url, *do_reverse_dns, url, expires, list_license) = json.loads(line)
-            if do_reverse_dns == []:
-                do_reverse_dns = match_url
-            else:
-                do_reverse_dns = do_reverse_dns[0]
+            (list_type, match_url, do_reverse_dns, url, expires, list_license) = json.loads(line)
             urls.append((list_type, match_url, do_reverse_dns, url, expires, list_license))
     with open('urls.txt', 'w') as file:
         file.write('\n'.join(sorted(set([json.dumps(i) for i in urls]))))
