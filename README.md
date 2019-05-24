@@ -42,7 +42,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 678663 blocked domains in each of the generated filter lists
+Theres are 678724 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -73,6 +73,7 @@ https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt|1.0
 https://hblock.molinero.dev/hosts|1.0 days|Blacklist|MIT
 https://hostsfile.mine.nu/hosts0.txt|1.0 days|Blacklist|GPLv3
 https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt|1.0 days|Blacklist|CC-BY-SA-4.0
+https://pastebin.com/raw/0vSxs719|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/5WWQUxEH|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/BiQKjQaK|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/ZzZutnXE|100.0 days|Blacklist|Public Domain
