@@ -81,7 +81,7 @@ class DownloadManager():
         self.session = requests.Session()
         self.session.headers['User-Agent'] = 'BlocklistConvert' + str(int(time.time()))
         self.paths = []
-    def add_url(self, url, is_whitelist, is_malware, do_reverse_dns, expires):
+    def add_url(self, url, is_whitelist, match_url, do_reverse_dns, expires):
         base = os.path.join('data', urllib.parse.urlencode({'':url})[1:])
         self.paths.append(base)
         check_frequency = min((11.5 * 60 * 60, expires))
@@ -107,7 +107,7 @@ class DownloadManager():
                 print('Changed')
                 self.bl.clear()
                 self.bl.add_file(r.text, is_whitelist=is_whitelist,
-                                 is_malware=is_malware)
+                                 match_url=match_url)
                 self.bl.clean(do_reverse_dns)
                 with open(os.path.join(base, 'blacklist.txt'), 'w') as file:
                     file.write('\n'.join(sorted(self.bl.blacklist)))
