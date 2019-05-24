@@ -322,6 +322,7 @@ app.clickfunnels.com
 app.intuit.launchdarkly.com
 app.pendo.io
 app.picreel.com
+app.skol-to.com
 app.truconversion.com
 app.whoisvisiting.com
 appboy.com
@@ -577,6 +578,8 @@ celebrus.com
 celeritascdn.com
 cem.hotelsapi.io
 certify-js.alexametrics.com
+cfg.skol-apps.com
+cfg.skollabs.com
 chartboost.com
 ciq.dmpxs.com
 cis.silverpop.com
@@ -797,6 +800,7 @@ euw.adserver.snapads.com
 ev.surveywall-api.survata.com
 event.spotxchange.com
 event.wbinsights.com
+eventbus.intuit.com
 events.browsiprod.com
 events.crazyclickstats.com
 events.fgol.mobi
@@ -941,6 +945,7 @@ htlbid.com
 hulu.sc.omtrdc.net
 hyatt.demdex.net
 hyattcorporation.tt.omtrdc.net
+hz57.online
 i.ads.roku.com
 i.clean.gg
 i.lsimg.net
@@ -1418,6 +1423,7 @@ pixel.affcamp.co.in
 pixel.app-cast.com
 pixel.app.returnpath.net
 pixel.carambo.la
+pixel.care.com
 pixel.collosteam.com
 pixel.geotex.uk.com
 pixel.getchute.com
@@ -1805,7 +1811,6 @@ syndication.twitter.com
 system.picreel.com
 t.ambra.com
 t.appsflyer.com
-t.update.adsrvr.org
 t.visto1.net
 t1.re
 tabmo.io

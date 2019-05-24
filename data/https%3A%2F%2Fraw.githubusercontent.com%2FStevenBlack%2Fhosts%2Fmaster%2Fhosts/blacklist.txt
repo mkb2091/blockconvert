@@ -934,8 +934,6 @@ a.predictvideo.com
 a.prisacom.com
 a.proxy4.nullrefexcep.com
 a.proxy5.nullrefexcep.com
-a.rad.live.com
-a.rad.msn.com
 a.remarketstats.com
 a.rfihub.com
 a.rmgserving.com
@@ -5879,8 +5877,6 @@ b.nex.bg
 b.oix.com
 b.oix.net
 b.proxy4.nullrefexcep.com
-b.rad.live.com
-b.rad.msn.com
 b.recwwcc5.info
 b.resad.mediaid.click
 b.rmgserving.com
@@ -7046,6 +7042,7 @@ c.admob.com
 c.adsco.re
 c.adskeeper.co.uk
 c.af.moshimo.com
+c.am11.ru
 c.amazon-adsystem.com
 c.anytrx.com
 c.ar.msn.com
@@ -7089,7 +7086,6 @@ c.hk.msn.com
 c.id.msn.com
 c.ie.msn.com
 c.il.msn.com
-c.imedia.cz
 c.in.msn.com
 c.it.msn.com
 c.jp.msn.com
@@ -7133,6 +7129,7 @@ c.supert.ag
 c.t4ft.de
 c.th.msn.com
 c.thanksearch.com
+c.thecounter.de
 c.thestat.net
 c.tr.msn.com
 c.tw.msn.com
@@ -10881,6 +10878,7 @@ everestclick.com
 everestjs.net
 everesttech.net
 evergage.com
+everifymatch.com
 evertherenous.info
 every-day.net
 everydaygays.com
@@ -12188,6 +12186,7 @@ glossom.jp
 glossysense.com
 glssp.jp
 glssp.net
+glxgroup.com
 gm.demdex.net
 gm.mmstat.com
 gm.touchclarity.com
@@ -14867,6 +14866,7 @@ l.yieldmanager.net
 l1.cdn.qnsr.com
 l1.qsstats.com
 l1.zedo.com
+l2.l.qq.com
 l2.zedo.com
 l3.zedo.com
 l4.zedo.com
@@ -15551,6 +15551,7 @@ m-99.co.uk
 m-arata.com
 m-barati.de
 m.2mdn.net
+m.adbridge.de
 m.addthis.com
 m.addthisedge.com
 m.admedia.com
@@ -17128,7 +17129,6 @@ n.betus.com
 n.bodybuilding.com
 n.mplxtms.com
 n.pc1ads.com
-n.pcads.ru
 n.targetctracker.com
 n01d05.cumulus-cloud.com
 n149adserv.com
@@ -20011,7 +20011,6 @@ r.adserver01.de
 r.advg.jp
 r.bid4keywords.com
 r.casalemedia.com
-r.chitika.net
 r.clickdensity.com
 r.clube62.date
 r.dir.bg
@@ -20807,7 +20806,6 @@ s.bl-1.com
 s.boom.ro
 s.btstatic.com
 s.clickability.com
-s.clicktale.net
 s.cxt.ms
 s.di.com.pl
 s.domob.cn
@@ -20817,7 +20815,6 @@ s.effectivemeasure.net
 s.ero-advertising.com
 s.estat.com
 s.f1.impact-ad.jp
-s.gravatar.com
 s.idio.co
 s.innovid.com
 s.ivillage.us.intellitxt.com
@@ -20841,7 +20838,6 @@ s.tcimg.com
 s.thebrighttag.com
 s.tribalfusion.com
 s.tyxo.com
-s.uadx.com
 s.visilabs.com
 s.visilabs.net
 s.webtrends.com
@@ -23169,6 +23165,7 @@ stimg.thench.net
 stimgc.iand2ch.net
 stimgc.thench.net
 stir.semilo.com
+stl.p.a1.traceworks.com
 stocker.bonnint.net
 stockgroup.us.intellitxt.com
 stoiximan.gr
@@ -23514,7 +23511,6 @@ t.mdn2015x3.com
 t.mookie1.com
 t.mplxtms.com
 t.neodatagroup.com
-t.newlimitedoffer.com
 t.nrelate.com
 t.omkt.co
 t.otherprofit.com
@@ -30309,7 +30305,6 @@ xq1.net
 xr.h4ck.la
 xr.shinobi.jp
 xruletka.pl
-xsedu.zj.cn
 xseed-digital.jp
 xstat.pl
 xstatic.nk-net.pl
@@ -30712,6 +30707,7 @@ zymerget.win
 zyrdu.cruisingsmallship.com
 zyski-z-innowacji.pl
 zytpirwai.net
+zyxyfy.com
 zz.cqcounter.com
 zzbroya.com.ua
 zzhc.vnet.cn
