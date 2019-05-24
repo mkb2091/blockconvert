@@ -391,7 +391,6 @@ a.pr-cy.ru
 a.proxy4.nullrefexcep.com
 a.proxy5.nullrefexcep.com
 a.ria.ru
-a.spankbang.com
 a.svtrd.com
 a.tovarro.com
 a.wyzmob.com
@@ -3416,7 +3415,6 @@ c.bing.com
 c.gazetevatan.com
 c.go-mpulse.net
 c.hit.ua
-c.imedia.cz
 c.img001.com
 c.index.ru
 c.ipaddress.com
@@ -5626,7 +5624,6 @@ e-referrer.com
 e-telecharger.com
 e-webtrack.net
 e-zeeinternet.com
-e.funnymel.com
 e.reddit.com
 e.tw.cx
 e5019.e2.akamaiedge.net
@@ -10497,7 +10494,6 @@ mta83.a.hashgains.com
 mta84.a.hashgains.com
 mta86.a.hashgains.com
 mta87.a.hashgains.com
-mta88.a.hashgains.com
 mta89.a.hashgains.com
 mta90.a.hashgains.com
 mtagmonetizationb.com
