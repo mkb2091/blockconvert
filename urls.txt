@@ -1,3 +1,4 @@
+[false, false, false, "https://adaway.org/hosts.txt", 86400, "CC-BY-3"]
 [false, false, false, "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt", 86400, "GPLv3"]
 [false, false, false, "https://better.fyi/blockerList.txt", 86400, "CC-A-SA-4.0"]
 [false, false, false, "https://easylist-downloads.adblockplus.org/adwarefilters.txt", 86400, "GPLv3"]
