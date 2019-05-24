@@ -39,11 +39,13 @@ s3.amazonaws.com
 scrapinghub.com
 sls.update.microsoft.com.akadns.net
 sslbl.abuse.ch
+static-dot-virustotalcloud.appspot.com
 statsfe2.update.microsoft.com.akadns.net
 tecmint.com
 urlhaus.abuse.ch
 use.typekit.net
 v.firebog.net
+virustotalcloud.appspot.com
 vxvault.net
 wikidot.com
 www.digicert.com
