@@ -59,7 +59,7 @@ class BlockList():
                             self.blacklist.add(i)
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
-    def clean(self):
+    def clean(self, do_reverse_dns=False):
         dns = self.dns
         last = time.time()
         for filter_list in [self.blacklist, self.whitelist]:
@@ -70,9 +70,10 @@ class BlockList():
             if ips:
                 for ip in ips:
                     filter_list.remove(ip)
-                found = dns.mass_reverse_lookup(ips)
-                filter_list.update(found)
-                print('Added %s rules via reverse dns' % len(found))
+                if do_reverse_dns:
+                    found = dns.mass_reverse_lookup(ips)
+                    filter_list.update(found)
+                    print('Added %s rules via reverse dns' % len(found))
         print('Checked for IP addresses(%ss)' % (time.time() - last))
         last = time.time()
         print('Started with %s rules' % len(self.blacklist))
