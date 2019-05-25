@@ -97,23 +97,35 @@ class BlockList():
                 filter_list.add('.'.join(url.split('.')[1:]))
         print('Expanded to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
-        for filter_list in [self.blacklist, self.whitelist]:
-            star_subdomain = []
-            for url in filter_list:
-                if url.startswith('*.'):
-                    star_subdomain.append(url)
-            for url in star_subdomain:
-                filter_list.remove(url)
-                filter_list.add(url[2:])
-                for subdomain in self.SUBDOMAINS:
-                    filter_list.add(subdomain + '.' + url[2:])
+        star_subdomain = []
+        for url in self.blacklist:
+            if url.startswith('*.'):
+                star_subdomain.append(url)
+        for url in star_subdomain:
+            self.blacklist.remove(url)
+            self.blacklist.add(url[2:])
+            for subdomain in self.SUBDOMAINS:
+                self.blacklist.add(subdomain + '.' + url[2:])
         print('Expanded *. subdomain to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
         for i in self.whitelist:
-            try:
-                self.blacklist.remove(i)
-            except KeyError:
-                pass
+            if i.startswith('*.'):
+                try:
+                    self.blacklist.remove(i[2:])
+                except KeyError:
+                    pass
+                now = i[1:]
+                to_remove = []
+                for domain in self.blacklist:
+                    if domain.endswith(now):
+                        to_remove.append(domain)
+                for domain in to_remove:
+                    self.blacklist.remove(domain)
+            else:
+                try:
+                    self.blacklist.remove(i)
+                except KeyError:
+                    pass
         print('Cleaned to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
         result = dns.mass_check(self.blacklist, self.dns_check_threads)
