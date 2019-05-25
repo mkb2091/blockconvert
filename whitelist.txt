@@ -187,6 +187,7 @@ wikidot.com
 wildcard.twimg.com
 windowsupdate.com
 wns.windows.com
+www.answers.com
 www.bing.com
 www.digicert.com
 www.google.*
