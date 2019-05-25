@@ -243,6 +243,7 @@
 67.ip-137-74-175.eu
 6f.3c.24ae.ip4.static.sl-reverse.com
 7.24.3da9.ip4.static.sl-reverse.com
+7.ip-51-254-217.eu
 70-218-104-185.static.servebyte.com
 70-90-165-236-sfba.hfc.comcastbusiness.net
 72-119.nat.mks-chel.ru
@@ -323,6 +324,7 @@ adultsmart.com.au
 aliv_cl1.starlink.ru
 athedsl-4389434.home.otenet.gr
 avisbudget-reunion.com
+azerc.rhewtu.com
 azimut.fun
 b-internet.87.103.242.29.snt.ru
 b29bf9cd.rev.stofanet.dk
@@ -394,7 +396,6 @@ dojo.census.shodan.io
 dropty.com
 ds7978.dedicated.turbodns.co.uk
 dsl-217-155-203-116.zen.co.uk
-dynamic-ip-adsl.viettel.vn
 ec2-107-23-89-231.compute-1.amazonaws.com
 ec2-13-124-141-10.ap-northeast-2.compute.amazonaws.com
 ec2-13-231-248-85.ap-northeast-1.compute.amazonaws.com
@@ -747,6 +748,7 @@ ns529397.ip-198-245-61.net
 ns537083.ip-139-99-130.net
 o.kabukis.fr
 odedi16749.mywhc.ca
+omundodatecnologia.com
 ool-addccea2.static.optonline.net
 p2e5d6b41.dip0.t-ipconnect.de
 p4fc68b9d.dip0.t-ipconnect.de
