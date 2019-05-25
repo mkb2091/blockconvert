@@ -108,16 +108,17 @@ class BlockList():
                 self.blacklist.add(subdomain + '.' + url[2:])
         print('Expanded *. subdomain to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
-        whitelist_star = []
+        whitelist_star = {}
         for i in self.whitelist:
             if i.startswith('*.'):
                 try:
                     self.blacklist.remove(i[2:])
                 except KeyError:
                     pass
-                for _ in range(max(0, (len(i) - len(whitelist_star) + 1))):
-                    whitelist_star.append([])
-                whitelist_star[len(i)].append(i[1:])
+                try:
+                    whitelist_star[i[-1]].append(i[1:])
+                except KeyError:
+                    whitelist_star[i[-1]] = [i[1:]]
             else:
                 try:
                     self.blacklist.remove(i)
@@ -127,12 +128,11 @@ class BlockList():
             to_remove = []
             for domain in self.blacklist:
                 try:
-                    for l in range(min(len(domain), len(whitelist_star))):
-                        for d2 in whitelist_star[l]:
-                            if domain.endswith(d2):
-                                to_remove.append(domain)
-                                raise InterruptedError
-                except InterruptedError:
+                    for d2 in whitelist_star[domain[-1]]:
+                        if domain.endswith(d2):
+                            to_remove.append(domain)
+                            break
+                except KeyError:
                     pass
             self.blacklist.difference_update(to_remove)
         print('Cleaned to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
@@ -147,9 +147,9 @@ class BlockList():
         last = time.time()
         for filter_list in [self.blacklist, self.whitelist]:
             for url in list(filter_list):
-                if not self.REGEX.match(url):
-                    print('Removing: %s' % url)
+                if not self.DOMAIN_REGEX.match(url):
                     filter_list.remove(url)
+        print('Removed invalid domains(%ss)' % (time.time() - last))
     def to_domain_list(self):
         return '\n'.join(sorted(self.blacklist))
     def to_adblock(self):
