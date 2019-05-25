@@ -107,6 +107,7 @@ maps.windows.com
 md.mp.microsoft.com.*
 mediaredirect.microsoft.com
 mine.nu
+mobile.twitter.com
 modern.watson.data.microsoft.com.akadns.net
 mp.microsoft.com
 mscrl.microsoft.com
