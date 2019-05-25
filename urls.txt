@@ -46,6 +46,7 @@
 [false, false, false, "https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt", 7200, "MIT"]
 [false, false, false, "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt", 86400, "MIT"]
 [false, false, false, "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt", 86400, "MIT"]
+[false, false, false, "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt", 86400, "GPL-3.0"]
 [false, false, false, "https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt", 172800, "Apache2"]
 [false, false, false, "https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking.txt", 172800, "Apache2"]
 [false, false, false, "https://raw.githubusercontent.com/lightswitch05/hosts/master/tracking-aggressive-extended.txt", 172800, "Apache2"]
