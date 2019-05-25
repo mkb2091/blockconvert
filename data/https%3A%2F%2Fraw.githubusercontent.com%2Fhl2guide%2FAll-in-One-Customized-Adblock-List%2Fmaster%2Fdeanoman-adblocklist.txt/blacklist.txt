@@ -2349,6 +2349,7 @@ app.comagic.ru
 app.crossengage.io
 app.e2ma.net
 app.getsentry.com
+app.link
 app.livemarketshoppers.com
 app.popuparchitect.com
 app.pr0gramm.com
@@ -5897,6 +5898,7 @@ es.m.bithumb.com
 es.puritan.com
 esavefile.com
 esbc.bithumb.com
+escalated.io
 escobar.pr0gramm.com
 esea-drop.com
 esearchvision.com
@@ -15514,6 +15516,7 @@ trackingclick.net
 trackingzen.com
 trackkas.com
 trackla.stackla.com
+trackmethod.com
 trackmytarget.com
 trackmyusers.com
 trackmyweb.net

@@ -261,7 +261,6 @@
 1.frankclick.pay.clickbank.net
 1.getloads.pay.clickbank.net
 1.googleearn.pay.clickbank.net
-1.im.cz
 1.imoneybank.pay.clickbank.net
 1.internetst.pay.clickbank.net
 1.jinterview.pay.clickbank.net
@@ -400,6 +399,7 @@
 117la.cn
 118.6.87.194.dynamic.dol.ru
 119.29.196.104.bc.googleusercontent.com
+119.6.87.194.dynamic.dol.ru
 119.network
 11alivenews.com
 11asdf1.cz.cc
@@ -700,7 +700,6 @@
 1md.de
 1news.07x.net
 1nl.cqcounter.com
-1oisd4c7x.co.be
 1online.wtcsites.com
 1onlinebuy.exactpages.com
 1orderbuy.greatnow.com
@@ -1121,6 +1120,7 @@
 247search.com
 247sexcams.com
 247support.adtech.fr
+247supportexperts.com
 247techcenter.us
 247wsr.com
 24log.com
@@ -1762,7 +1762,6 @@ a.adultentertainmentexpo.com
 a.answers.com
 a.autoblog.com
 a.beliefnet.com
-a.bestmanage.org
 a.bf-ad.net
 a.carmax.com
 a.cba.pl
@@ -1772,7 +1771,6 @@ a.consumer.net
 a.coza.com
 a.csmonitor.com
 a.digg.com
-a.dmreview.com
 a.dpmsrv.com
 a.faireagle.com
 a.fandango.com
@@ -1806,7 +1804,6 @@ a.postrelease.com
 a.proxy4.nullrefexcep.com
 a.proxy5.nullrefexcep.com
 a.quora.com
-a.rad.msn.com
 a.republer.com
 a.rfihub.com
 a.rmgserving.com
@@ -7316,6 +7313,7 @@ adverity.com
 adverlead.com
 adverline.com
 adverline.fr
+advernet.co.il
 adversa.com
 adversalservers.com
 advert.bayarea.com
@@ -7961,6 +7959,7 @@ affiliates.worldhot.com
 affiliatesafeadlist.ourtoolbar.com
 affiliatesensor.com
 affiliateshop.com
+affiliateshowcase.com
 affiliatesuccess.net
 affiliatetalk.net
 affiliatetracking.com
@@ -9852,6 +9851,7 @@ audit.webinform.hu
 audit1.median.hu
 audit2.median.hu
 audit3.median.hu
+auditing.org
 auditmypc.us.intellitxt.com
 audittrack.com
 audiworld.us.intellitxt.com
@@ -10168,13 +10168,10 @@ b.kavanga.ru
 b.megatasks.com
 b.myspace.com
 b.ns.marchex.com
-b.ns.mximg.com
 b.ns.openlist.com
 b.ns.trafficdashboard.com
 b.ns.trafficleader.com
-b.porncity.org
 b.proxy4.nullrefexcep.com
-b.rad.msn.com
 b.rmgserving.com
 b.scorecardresearch.com
 b.securevox.com
@@ -10291,6 +10288,7 @@ bal.ad.dotandad.com
 balagana.com
 balancebreath.com
 balestrinilockie.blogspot.com
+bali-hotels-resorts.com
 bali-paradise.com
 balikesirspor.mystoretoolbar.com
 balliefm.myradiotoolbar.com
@@ -13442,7 +13440,6 @@ c.go-mpulse.net
 c.hit.ua
 c.hk.msn.com
 c.ilike.com
-c.imedia.cz
 c.it.msn.com
 c.itunes.apple.com
 c.jp.msn.com
@@ -13480,7 +13477,6 @@ c.ns1p.net
 c.nz.msn.com
 c.porngraph.com
 c.qckjmp.com
-c.rad.msn.com
 c.rmgserving.com
 c.ru.msn.com
 c.sc.msn.com
@@ -13488,6 +13484,7 @@ c.sexcounter.com
 c.spaces.msn.com
 c.statcounter.com
 c.telemetry.intel.com
+c.thecounter.de
 c.uarating.com
 c.uk.msn.com
 c.usatoday.com
@@ -15273,6 +15270,7 @@ clito57.com
 clitty.com
 clix.superclix.de
 cliximages.com
+clixogamer.cjb.net
 clixsense.com
 clk.atdmt.com
 clk.madisonlogic.com
@@ -15612,6 +15610,7 @@ collegefootballnews.us.intellitxt.com
 collegefriends.com
 collegeoftherapistsandclinicians.mycollegetoolbar.com
 collegepokerchampionship.com
+collegesucks.com
 colombiatours.com
 colonize.com
 coloradoavalance.com
@@ -23634,6 +23633,7 @@ feethouse.com
 feethunters.com
 feetmate.com
 feigele.com
+feisearch.com
 fejubilead929.blogspot.com
 feldhausizetta.blogspot.com
 feldman.ourtoolbar.com
@@ -24579,6 +24579,7 @@ freelogs.com
 freelotto.com
 freemacbookpro.com
 freemerchant.com
+freemilfs.com
 freeminimacs.com
 freemobilefunclub.ourtoolbar.com
 freemodding.media-toolbar.com
@@ -25526,6 +25527,7 @@ generex.de
 generic-tramadol.com
 genericpills.us
 genesis-mining.com
+genesis-offers.com
 genesis2000.com
 genetree.112.2o7.net
 genforumgenealogy.com
@@ -25591,7 +25593,6 @@ get-data.net
 get-design.com
 get-faster.com
 get-ipod-music.com
-get-paid-for-surveys.com
 get-paid-to.com
 get-result.com
 get-spybot.com
@@ -25812,7 +25813,6 @@ globalboosty.miningpoolhub.com
 globalconnects.mystoretoolbar.com
 globaldatabase.info
 globaldialer.net
-globaldipgaming.com
 globalfreecalling.com
 globalfundforeducation.org
 globalgreyhounds.ourtoolbar.com
@@ -25865,7 +25865,6 @@ gm3.iwon.com
 gmacmortgage.112.2o7.net
 gmail-customer-service.com
 gmail-help.com
-gmail-not-working.com
 gmail-tech-support.com
 gmail-technical-support.com
 gmailcustomerservice.com
@@ -26397,6 +26396,7 @@ grandteamwarez.forumtoolbar.com
 granite.miningpoolhub.com
 granniesmovies.com
 granny-post.com
+grannyfreesex.com
 grannyfuck.com
 grannypicture.com
 grannypictures.com
@@ -26660,7 +26660,6 @@ gw-acc.miva.com
 gw.datagram.com
 gwams.mycitytoolbar.com
 gware.virtualave.net
-gwbs.org
 gwebspace.de
 gwike.com
 gwiqcdn.globalwebindex.net
@@ -27750,6 +27749,7 @@ howdoiwin.com
 howdr.com
 howtogetsavvy.net
 howtogurus.com
+howtolisten.kr
 howudodat.com
 howvod.com
 hoymail.com
@@ -28345,6 +28345,7 @@ ih8mud.us.intellitxt.com
 ihackr.com
 ihaircf.122.2o7.net
 ihaozhe.com
+ihatepopups.com
 ihcephoncology.122.2o7.net
 iheartroxy.com
 ihhepsera.122.2o7.net
@@ -29314,8 +29315,6 @@ intwined.com
 invalidxmlfix.com
 invender.nl
 inventormuseum.com
-inventory.es.overture.com
-inventory.fr.overture.com
 inventory.overture.com-3.com
 inventtech.com
 inverdigm.com
@@ -29512,7 +29511,6 @@ istitutomicoterapico.it
 isulibrary.mylibrarytoolbar.com
 isupport365.com
 isupportapple.com
-isupporthelp.com
 isupportmart.com
 isupportteam.com
 isur.com
@@ -29963,7 +29961,6 @@ jiwtmj.122.2o7.net
 jixian.net
 jizzboat.com
 jizzcatcher.com
-jizzhut.com
 jizzonline.com
 jizzshower.com
 jj120.com
@@ -30085,6 +30082,7 @@ jointheporn.com
 jointome.com
 jointventure.ourtoolbar.com
 jointventureforprofit.com
+jointventuremarketing.com
 joinus.coinfirm.io
 jokadai.myblogtoolbar.com
 jokedollars.com
@@ -31008,7 +31006,6 @@ ktrcom.com
 ktu.sv2.biz
 ktva.112.2o7.net
 kuailao.com
-kubtelecom.ru
 kuda.com.ua
 kudd.com
 kudzu.com.102.112.2o7.net
@@ -31417,7 +31414,6 @@ lesboarchives.com
 lesbofever.com
 lesbofuck.com
 lesbos.allowednet.com
-lesbzilla.com
 lesechos.media-toolbar.com
 lesleepoloni-featherston.blogspot.com
 leslickers.com
@@ -31652,6 +31648,7 @@ linkfiles.com
 linkforme.tk
 linkhut.com
 linkive.com
+linklister.de
 linklog.blogflux.com
 linklover.com
 linkmash.com
@@ -31737,6 +31734,7 @@ listen.myblogtoolbar.com
 listen.real.com
 listmanage.lydian.io
 listmgr.miva.com
+listopt.com
 lists.openx.org
 lists.rivertown.net
 listsender.com
@@ -32159,7 +32157,6 @@ lookout-nt-snat.hitbox.com
 lookout-out.hitbox.com
 lookout-snat.hitbox.com
 looksa.com
-looksmart.co.nz
 looksmart.com
 lookup12-ext.hitbox.com
 lookup12.hitbox.com
@@ -33523,6 +33520,7 @@ memberservicesincvehiclesonlinecom.122.2o7.net
 membersplugin.com
 memberstripod.com
 membres.jexiste.org
+memedia.com
 memetricsdfx.hitbox.com
 memnon.myfoolmoon.com
 memoryoptimizer.com
@@ -33998,6 +33996,7 @@ microsoftwlmessengermkt.112.2o7.net
 microsoit.com
 microspft.com
 microstatic.pl
+microsys.cjb.net
 microticker.com
 microwings.com
 mid.ourtoolbar.com
@@ -35799,6 +35798,7 @@ naughtycats.com
 naughtygirlthumbs.com
 naughtylinks.net
 naughtypops.com
+naughtythoughts.com
 naupoint.com
 naushniki.com
 nav.hitq.com
@@ -36078,6 +36078,7 @@ netster.com
 netster.xmlsearch.findwhat.com
 netster.xmlsearch.miva.com
 netstrat.com
+netta.pl
 nettime.ru
 nettklikk.no
 nettohoffnung.de
@@ -36106,6 +36107,7 @@ networkwestvirginia.com
 networkwestvirginia.net
 networldmap.com
 networx.com.au
+netxboy.com
 netyellowpages.info
 netzero.com
 netzip.com
@@ -37394,7 +37396,6 @@ ohac.github.io
 ohbx.com
 ohgizmo.us.intellitxt.com
 ohgood.com
-ohio-usa.com
 ohiomm.com
 ohjuicy.com
 ohmyflash.com
@@ -38936,7 +38937,6 @@ pentyhouse.com
 penwithian.co.uk
 people.freenet.de
 peoplebankfeed2.hitbox.com
-peoplechoice.net
 peoplecity.com
 peopleindian.com
 peoplelookup.info
@@ -38957,6 +38957,7 @@ perceivequarter.com
 pereulok.net
 perez.lighthost.com
 perf.overture.com
+perfect-babes.net
 perfect-beauty.at
 perfect-cleaner.com
 perfect-cuties.com
@@ -40446,6 +40447,7 @@ promos.mcafee.com
 promos.newsok.com
 promos.vugames.com
 promosearch.atomz.com
+promosoftware.com
 promote.opera.com
 promote.pair.com
 promote.titanhousing.com
@@ -41080,7 +41082,6 @@ r.adrta.com
 r.aol.com
 r.bbci.co.uk
 r.casalemedia.com
-r.chitika.net
 r.clickdensity.com
 r.draeger.com
 r.i.ua
@@ -41356,6 +41357,7 @@ rd00.com
 rd1.hitbox.com
 rd1.surfernetwork.com
 rdcis.sail.com
+rdcp.cjb.net
 rdd.coinedpool.com
 rdjd.net
 re-partners.biz
@@ -41468,7 +41470,6 @@ realtrackernl.com
 realtv.ourtoolbar.com
 realty-odessa.com
 realtybestus.com
-realxworld.com
 realxz.com
 reaperscurve.com
 reasedoper.pw
@@ -41959,6 +41960,7 @@ ringsrecord.com
 ringtoneking.co.uk
 ringtonesanddownloadscoolbar.media-toolbar.com
 ringtonespage.com
+ringtoneten.com
 rinty.real.com
 riodot.com
 ripp-it.fr.intellitxt.com
@@ -42407,7 +42409,6 @@ s.ayola.net
 s.bit.ly
 s.btstatic.com
 s.clickability.com
-s.clicktale.net
 s.cpx.to
 s.d.adup-tech.com
 s.dpmsrv.com
@@ -42955,6 +42956,7 @@ screensaverfree.com
 screensaverheaven.com
 screensaverpit.com
 screensavers-themes.com
+screensavers-wallpaper.com
 screensavers.com
 screensavers.funutilities.com
 screensavers.us.intellitxt.com
@@ -44247,6 +44249,7 @@ shareware.webacclaim.com
 shareware4all.com
 shareware4web.com
 sharewaredepo.com
+sharewareking.com
 sharewareonline.com
 sharewarepile.com
 shareyourworld.com
@@ -44812,7 +44815,6 @@ smartsearch.com
 smartsearch.com.au
 smartsearch.ws
 smartsex.org
-smartsites.com
 smartsurfer.web.de
 smarttargetting.net
 smarttrack.info
@@ -45900,6 +45902,7 @@ starmediatuner.media-toolbar.com
 starnetinteractive.com
 starpay.de
 starpin.de
+starpoker.com
 starpulse.p.findology.com
 starpulse.us.intellitxt.com
 starrishabh.mycollegetoolbar.com
@@ -46282,6 +46285,7 @@ stirlingtisi.blogspot.com
 stivensigal.pornzonehost.com
 stj.msn.com
 stjohnsdryden.org
+stl.p.a1.traceworks.com
 stmpy2.skimlinks.com
 stockadvisor.ws
 stockbanners.com
@@ -47036,7 +47040,6 @@ t-bus.nu
 t-online.de
 t-online.hu
 t-sb.net
-t.api.visualdna.com
 t.atdmt.com
 t.chickclick.com
 t.contentinsights.com
@@ -47174,7 +47177,6 @@ taiwa.com
 taiwan-content.search.com
 taiwanlife.org
 taiwantr.112.2o7.net
-takas.biz
 take5-br.real.com
 take5-cn.real.com
 take5-de.real.com
@@ -48696,6 +48698,7 @@ toplista.mw.hu
 toplisted.in
 toplisten.ws
 topmango.com
+topmatureporn.org
 topmeds10.com
 topmobile.fr.intellitxt.com
 topmoviezone.com
@@ -48951,7 +48954,6 @@ tracker.u-link.me
 trackerapi.truste.com
 trackerbot.com
 trackerbuzz.info
-trackerscript.com
 trackertracker.com
 trackhost.com
 tracking-snv.cj.com
@@ -49074,6 +49076,7 @@ trafficmarketplace.com
 trafficmasterz.net
 trafficmaxx.de
 trafficmonetizer.com
+trafficmonster.com
 trafficneeds.com
 trafficoasis.com
 trafficoverdrive.com
@@ -51888,6 +51891,7 @@ webcelerator.com
 webcelona.ourtoolbar.com
 webcg.jp.intellitxt.com
 webclever.ru
+webclick.no
 webclients.com
 webclients.net
 webcoin.me
@@ -52043,6 +52047,7 @@ webpark.co.uk
 webpath.com
 webpharm.net
 webpl.myblogtoolbar.com
+webpo.com
 webpoll.sparklit.com
 webporns.com
 webpornsite.net
@@ -52525,7 +52530,6 @@ winxpcentral.us.intellitxt.com
 winzip-9.baixar.ws
 winzip.122.2o7.net
 winzix.com
-wipd.com
 wipika.com
 wippit.com
 wipub.com
@@ -52743,6 +52747,7 @@ wown.com
 wowpapers.com
 wowpills.com
 wowtw.com
+wowweb.cjb.net
 wowzio.com
 wp-content.infamylists.com
 wp-monero-miner.de
@@ -54601,6 +54606,7 @@ www.azoogleads.com
 www.azswingers.com
 www.azxucoawam189.blogspot.com
 www.azzcardfile.com
+www.b.porncity.org
 www.b2byellowpages.com
 www.b3d.com
 www.baalee.com
@@ -67094,7 +67100,6 @@ xrzu.com
 xs8g.com
 xscanner.malware-scan.com
 xsecrets.com
-xsedu.zj.cn
 xserv.net
 xsetup.com
 xsex.ws
@@ -67232,7 +67237,6 @@ xxxxx.schoolfees.hop.clickbank.net
 xxxxx.smudge41.hop.clickbank.net
 xxxxx.surveys2.hop.clickbank.net
 xxxxx.tdk31c2s.hop.clickbank.net
-xxxxx.tv
 xxxxx.vpstudio.hop.clickbank.net
 xxxxx.wingcube.hop.clickbank.net
 xy.nullrefexcep.com
@@ -67807,7 +67811,6 @@ zipstats.com
 zirve100.com
 zisick.ourtoolbar.com
 zistpooya.ourtoolbar.com
-zivilschutz.de
 zj.com
 zkd520.cn
 zkic.com
@@ -67915,8 +67918,10 @@ zwjate.ourtoolbar.com
 zxad.net
 zxcvbnmas.i989.net
 zxlinks.com
+zy.to
 zyonline.com
 zyworld.com
+zyxyfy.com
 zz.cqcounter.com
 zzap.us.intellitxt.com
 zzdnet.com
