@@ -108,24 +108,33 @@ class BlockList():
                 self.blacklist.add(subdomain + '.' + url[2:])
         print('Expanded *. subdomain to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
+        whitelist_star = []
         for i in self.whitelist:
             if i.startswith('*.'):
                 try:
                     self.blacklist.remove(i[2:])
                 except KeyError:
                     pass
-                now = i[1:]
-                to_remove = []
-                for domain in self.blacklist:
-                    if domain.endswith(now):
-                        to_remove.append(domain)
-                for domain in to_remove:
-                    self.blacklist.remove(domain)
+                for _ in range(max(0, (len(i) - len(whitelist_star) + 1))):
+                    whitelist_star.append([])
+                whitelist_star[len(i)].append(i[1:])
             else:
                 try:
                     self.blacklist.remove(i)
                 except KeyError:
                     pass
+        if whitelist_star:
+            to_remove = []
+            for domain in self.blacklist:
+                try:
+                    for l in range(min(len(domain), len(whitelist_star))):
+                        for d2 in whitelist_star[l]:
+                            if domain.endswith(d2):
+                                to_remove.append(domain)
+                                raise InterruptedError
+                except InterruptedError:
+                    pass
+            self.blacklist.difference_update(to_remove)
         print('Cleaned to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
         result = dns.mass_check(self.blacklist, self.dns_check_threads)
