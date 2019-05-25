@@ -152,10 +152,11 @@ class DNSChecker():
             with open('dns_cache.txt') as file:
                 for line in file:
                     try:
-                        domain, *ip, last_modified = line.rstrip().split(',')
-                        if ip:
-                            ip = ip[0]
+                        split = line.rstrip().split(',')
+                        if len(split) == 3:
+                            domain, ip, last_modified = split
                         else:
+                            domain, last_modified = split
                             ip = ''
                         last_modified = int(last_modified)
                         if last_modified > one_week_ago:
