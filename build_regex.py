@@ -55,7 +55,7 @@ class BuildRegex():
     def generate_adblock_regex(self):
         domain_string = self.DOMAIN_STRING
         url_string = r'(?:(?:(?:http(?:s|\*)?)?[:])(?:(?:\/\/)|\*))?{domain_string}\/?'.format(**locals())
-        start = r'(?:\|?\|)?\*?'
+        start = r'(?:\|?\|)?'
         options = ['popup', r'first\-party', r'\~third\-party', r'third\-party']
         options_noop = ['important', r'domain\=\2']
         options_string = '(?:%s)' % '|'.join('(?:%s)' % i for i in options)
