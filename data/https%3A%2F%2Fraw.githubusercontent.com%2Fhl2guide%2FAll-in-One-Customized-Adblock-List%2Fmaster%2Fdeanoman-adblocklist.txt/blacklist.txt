@@ -2764,6 +2764,7 @@ analytics.staticiv.com
 analytics.stg.springboardvideo.com
 analytics.strangeloopnetworks.com
 analytics.styria.hr
+analytics.suggestv.io
 analytics.supplyframe.com
 analytics.teespring.com
 analytics.themarketiq.com
@@ -16221,6 +16222,7 @@ steamwalletcodes.com
 steamwalletgift.com
 steamwalletgiftcards.com
 steelhousemedia.com
+steepsquirrel.com
 stelfarm.top
 stellest.com
 stellite.crypto-webminer.com
