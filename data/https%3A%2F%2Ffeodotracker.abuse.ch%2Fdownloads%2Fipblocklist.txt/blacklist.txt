@@ -423,6 +423,7 @@ cms.towntalk.co.uk
 cnsit81948.wrexham.towntalk.co.uk
 coastalcarpetsofmarske87157.redcar.towntalk.co.uk
 coastalfineartframing.redcar.towntalk.co.uk
+codingsecurity.club
 coeandcoe.scunthorpe.towntalk.co.uk
 colchester.towntalk.co.uk
 coleraine.towntalk.co.uk
@@ -507,9 +508,7 @@ cvs.theescapers.com
 cvs.towntalk.co.uk
 cyprusactive.kyrenia.towntalk.net
 cysticfibrosistrust79116.bromley.towntalk.co.uk
-d-207-255-210-196.mdde.cpe.atlanticbb.net
 d192-186-96-125.static.comm.cgocable.net
-d24-150-44-53.home.cgocable.net
 dahliahairandbeautyltd92927.catford.towntalk.co.uk
 daintybeads94407.penge.towntalk.co.uk
 danescamp.northampton.towntalk.co.uk
@@ -725,7 +724,6 @@ fit4lesswellingborough87787.northampton.towntalk.co.uk
 fitnessfirstkeighley30512.keighley.towntalk.co.uk
 fitonegym90376.folkestone.towntalk.co.uk
 fixed-187-188-166-192.totalplay.net
-fixed-187-188-83-52.totalplay.net
 fixed-187-189-195-208.totalplay.net
 fixed-187-189-210-143.totalplay.net
 fixed-187-190-237-104.totalplay.net
@@ -885,7 +883,6 @@ host-181-39-51-243.telconet.net
 host-186-3-188-74.netlife.ec
 host-186-4-167-166.netlife.ec
 host-186-4-234-27.netlife.ec
-host-78-149-210-116.as13285.net
 host-94-103-94-49.hosted-by-vdsina.ru
 host-94-103-94-87.hosted-by-vdsina.ru
 host.raehse.org
@@ -894,6 +891,7 @@ host.towntalk.co.uk
 host100.181-15-177.telecom.net.ar
 host109-154-221-151.range109-154.btcentralplus.com
 host109-158-205-99.range109-158.btcentralplus.com
+host140.181-15-180.telecom.net.ar
 host22.181-15-243.telecom.net.ar
 host50.201-253-238.telecom.net.ar
 host81-143-213-156.in-addr.btopenworld.com
@@ -1101,7 +1099,6 @@ li206-209.members.linode.com
 li260-241.members.linode.com
 li326-129.members.linode.com
 li57-170.members.linode.com
-li583-90.members.linode.com
 li985-103.members.linode.com
 libertyflights.orpington1st.co.uk
 librarytheatre13248.luton.towntalk.co.uk
@@ -1125,6 +1122,7 @@ llantwitmajor.towntalk.co.uk
 llanvalleynaturalproducts82295.wrexham.towntalk.co.uk
 lloydsbank.woodgreen.towntalk.co.uk
 lloydstsb.elephantandcastle.towntalk.co.uk
+lneuilly-657-1-47-139.w80-11.abo.wanadoo.fr
 local.raehse.org
 local.theescapers.com
 local.towntalk.co.uk
@@ -1142,6 +1140,7 @@ loughborough.towntalk.co.uk
 loughboroughmarket.loughborough.towntalk.co.uk
 loveuxbridge.co.uk
 lowerhousejuniorfootballclub82737.burnley.towntalk.co.uk
+lputeaux-656-1-76-154.w92-154.abo.wanadoo.fr
 lrcentreltd.liverpool.towntalk.co.uk
 lsbrickwork81889.redcar.towntalk.co.uk
 lsbu.elephantandcastle.towntalk.co.uk
@@ -1290,7 +1289,6 @@ mta.raehse.org
 mta.theescapers.com
 mta.towntalk.co.uk
 mtccurtainsblinds78403.loveuxbridge.co.uk
-mtrlpq2314w-lp140-01-50-101-180-172.dsl.bell.ca
 mudpie.folkestone.towntalk.co.uk
 murrays.elephantandcastle.towntalk.co.uk
 muzing.ru
@@ -1611,7 +1609,6 @@ secure.theescapers.com
 secure.towntalk.co.uk
 secure.vps7100.alfahosting-vps.de
 seedlancashire85735.preston.towntalk.co.uk
-segfault.in
 select.barnsley.towntalk.co.uk
 selwynhedgleyestateagents.redcar.towntalk.co.uk
 sermondrop.com
@@ -1692,7 +1689,6 @@ sql.towntalk.co.uk
 squid.theescapers.com
 squid.towntalk.co.uk
 ssafaforceshepclevelandbranch.redcar.towntalk.co.uk
-ssagencies.co.za
 ssh.theescapers.com
 ssh.towntalk.co.uk
 ssl.theescapers.com
@@ -3044,7 +3040,6 @@ www.spoiltforchoice.sheffield.towntalk.co.uk
 www.sprucehandywoman.sheffield.towntalk.co.uk
 www.spssecurity84754.leeds.towntalk.co.uk
 www.ssafaforceshepclevelandbranch.redcar.towntalk.co.uk
-www.ssagencies.co.za
 www.stafford.towntalk.co.uk
 www.stagecoacheastkent.folkestone.towntalk.co.uk
 www.stainesdatarecovery82147.frome.towntalk.co.uk
