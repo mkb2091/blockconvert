@@ -76,6 +76,7 @@ annonsportalen.norran.se
 anonymousdemographics.com
 api.deep.bi
 api.getlevelten.com
+api.innomdc.com
 app.yieldify.com
 apps.shareaholic.com
 apsislead.com
