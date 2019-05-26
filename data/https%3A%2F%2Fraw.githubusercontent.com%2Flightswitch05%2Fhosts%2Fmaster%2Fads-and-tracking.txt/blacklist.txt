@@ -62,6 +62,7 @@ a1899.casalemedia.com
 a248.e.akamai.net
 a2892.casalemedia.com
 a6529002483.cdn.optimizely.com
+aa.agkn.com
 aa.online-metrix.net
 aax.amazon-adsystem.amazon.com
 ab10.mktossl.com
@@ -77,6 +78,7 @@ abtesting.intuit.com
 acashatusa.com
 access-prod.apis.anvato.net
 accessiblemetrics.com
+accountkit.avidly.com
 accounts.doubleclick.net
 acdn.adnxs.com
 acquisition-tracker.wix.com
@@ -88,6 +90,7 @@ ad.doubleclick.net
 ad.downloadyee.com
 ad.foodlion.com
 ad.gt
+adadvisor.net
 adapt.io
 adasiaholdings.com
 adbiq.com
@@ -125,6 +128,7 @@ adroll.com
 ads-api.ft.com
 ads-bid.l.doubleclick.net
 ads-cloud.rovio.com
+ads-sdk.upltv.com
 ads.addragon.com
 ads.adzoka.com
 ads.altitude-arena.com
@@ -319,6 +323,7 @@ app.ascend.ai
 app.brightinfo.com
 app.bugsnag.com
 app.clickfunnels.com
+app.convertkit.com
 app.intuit.launchdarkly.com
 app.pendo.io
 app.picreel.com
@@ -366,6 +371,7 @@ auth.avs.io
 automatad.com
 autopilothq.com
 avd.innity.net
+avidly.com
 aweber.com
 az690879.vo.msecnd.net
 b-code.liadm.com
@@ -480,6 +486,7 @@ c.la1-c2-phx.salesforceliveagent.com
 c.lytics.io
 c.optvdo.com
 c.sharethis.mgr.consensu.org
+c.sta.haloapps.com
 c2.taboola.com
 c3tag.com
 c4d-cdn.adcolony.com
@@ -725,6 +732,7 @@ digdug.logs.roku.com
 digitalremedy.com
 diply-d.openx.net
 director.adcolony.com
+dis.criteo.com
 discovernative.com
 dishpurchasingcorporation.hb-api.omtrdc.net
 disney.tt.omtrdc.net
@@ -915,6 +923,7 @@ h-visa2.online-metrix.net
 h-walmart.online-metrix.net
 h30-deploy.hiconversion.com
 h38c.adj.st
+haloapps.com
 hasoffers.disqus.com
 havas.demdex.net
 hb-api.omnitagjs.com
@@ -948,6 +957,7 @@ hyattcorporation.tt.omtrdc.net
 hz57.online
 i.ads.roku.com
 i.clean.gg
+i.haloapps.com
 i.lsimg.net
 i.w.inmobi.com
 iad-usadmm.dotomi.com
@@ -1110,6 +1120,7 @@ lpweb.altervista.org
 ls.webmd.com
 lsimg.net
 lytics.io
+m.adnxs.com
 m.servedby-buysellads.com
 m1.torrenti.al
 ma.tune.com
@@ -1369,6 +1380,7 @@ p.cquotient.com
 p.d.e0mn.com
 p.midasplayer.com
 p.placed.com
+p.rfihub.com
 p.tvpixel.com
 p.yotpo.com
 p0.stripcdn.com
@@ -1867,6 +1879,7 @@ tr.blismedia.com
 tr.iadsdk.apple.com
 tracfone.demdex.net
 track-west.mobileadtrading.com
+track.adthrive.com
 track.aniview.com
 track.pricespider.com
 track.sr.roku.com
@@ -1937,6 +1950,7 @@ undertone.com
 unityads.unity3d.com
 unrulymedia.com
 upload.bugsnag.com
+upltv.com
 urbanairship.com
 urbaninsight.com
 us-central1-narvar-data-lake.cloudfunctions.net

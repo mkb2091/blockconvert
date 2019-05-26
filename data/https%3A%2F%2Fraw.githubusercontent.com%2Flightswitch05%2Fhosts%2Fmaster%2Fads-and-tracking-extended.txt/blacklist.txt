@@ -4227,6 +4227,8 @@ a-sjo.1rx.io
 a-sl011.insnw.net
 a-sl014.insnw.net
 a-sl015.insnw.net
+a-sta-cn.upltv.com
+a-sta.haloapps.com
 a-stage1-dsa.tribalfusion.com
 a-us-east.rfihub.com.akadns.net
 a-us-lvg.netmng.com
@@ -4267,6 +4269,7 @@ a.innovid.com
 a.intentmedia.net
 a.jsrdn.com
 a.localytics.com
+a.m.adnxs.com
 a.mailmunch.co
 a.moatads.com
 a.monetate.net
@@ -4284,10 +4287,12 @@ a.pub.network
 a.quora.com
 a.r10.mopub.com
 a.rad.atdmt.com
+a.rfihub.com
 a.rfihub.com.akadns.net
 a.scorecardresearch.com
 a.sharethis.com
 a.ssets-auto.rbl.ms
+a.sta.haloapps.com
 a.stage.ad.gt
 a.tribalfusion.com
 a.vidora.com
@@ -6625,6 +6630,7 @@ aax-vx-us-us-east-1.amazon-adsystem.com
 aax-vx-us-us-west-2.amazon-adsystem.com
 aax.amazon-adsystem.amazon.com
 aax.amazon-adsystem.com
+ab.adadvisor.net
 ab.mopub.com
 ab02.mktossl.com
 ab04.mktossl.com
@@ -6745,6 +6751,7 @@ account.evidon.com
 account.fyber.com
 account.newrelic.com
 account.shareasale.com
+accountkit.avidly.com
 accounts-api.appdynamics.com
 accounts.appdynamics.com
 accounts.backtrace.io
@@ -6855,6 +6862,7 @@ adacollection.leadpages.co
 adacus-cdn-staging.placelocal.com
 adacus-cdn.placelocal.com
 adacus.placelocal.com
+adadvisor.net
 adaji.wmadv.com
 adalert.hop.clickbank.net
 adam.assets.ispot.tv
@@ -7063,6 +7071,8 @@ adr-g3-1-ash2.vindicosuite.com
 adr-g3-1.vindicosuite.com
 adr-g3-2.vindicosuite.com
 adr-g3-3.vindicosuite.com
+adr-sdk-cn.avidly.com
+adr-sdk.avidly.com
 adr-sugr-1.vindicosuite.com
 adr-sugr-android-1.vindicosuite.com
 adready.com
@@ -7086,6 +7096,10 @@ ads-sc2-lb10.adsymptotic.com
 ads-sc2-lb11.adsymptotic.com
 ads-sc2-lb12.adsymptotic.com
 ads-sc2-lb9.adsymptotic.com
+ads-sdk-cn.avidly.com
+ads-sdk-cn.upltv.com
+ads-sdk.avidly.com
+ads-sdk.upltv.com
 ads-staging.clrstm.com
 ads-stats-limiter-shadow.snapads.com
 ads.ad.gt
@@ -7640,6 +7654,12 @@ allegis.112.2o7.net
 allenergysolar.getambassador.com
 allermediamobse.nuggad.net
 allermediase.nuggad.net
+allfail-all.adadvisor.net
+allfail-east.adadvisor.net
+allfail-west.adadvisor.net
+allfail-www.all.adadvisor.net
+allfail-www.east.adadvisor.net
+allfail-www.west.adadvisor.net
 alliancebernstein.demdex.net
 alliancedatahr.co1.qualtrics.com
 allianz.eu.qualtrics.com
@@ -7997,6 +8017,7 @@ aniview.com
 anixterinc.demdex.net
 anixterinc.sc.omtrdc.net
 anj.adnxs.com
+ann-sta.haloapps.com
 annanewelljones.leadpages.co
 annefrank.containers.piwik.pro
 annefrank.piwik.pro
@@ -8067,6 +8088,7 @@ ap-northeast-1.bid.bidr.io
 ap-northeast-1.event.prod.bidr.io
 ap-northeast.load.exelator.com
 ap-southeast.load.exelator.com
+ap.adadvisor.net
 ap.bksn.se
 ap.cdn.survey.medallia.com
 ap.event.cmp.advertising.com
@@ -8195,6 +8217,7 @@ api.appsflyer.com
 api.ascend.ai
 api.atdmt.com
 api.autopilothq.com
+api.avidly.com
 api.aweber.com
 api.b2c.com
 api.backtrace.io
@@ -9255,6 +9278,7 @@ averydennison.containers.piwik.pro
 avf-tm.everesttech.net
 avgtechnologies.d1.sc.omtrdc.net
 aviancaadobe.demdex.net
+avidly.com
 avidtechnologyinc.mktoweb.com
 avios.d3.sc.omtrdc.net
 avisbudgetglobal.112.2o7.net
@@ -9388,6 +9412,7 @@ b.sharethis.com
 b.sharethrough.com
 b.skimresources.com
 b.ssacdn.com
+b.upltv.com
 b.videoamp.com
 b001.goodyear.inscname.net
 b1-apac1.zemanta.com
@@ -10269,6 +10294,8 @@ c-evt.moatads.com
 c-lt2.go-mpulse.net
 c-lt3.go-mpulse.net
 c-service.innovid.com
+c-sta-cn.upltv.com
+c-sta.haloapps.com
 c-us1.stripcdn.com
 c-us2.stripcdn.com
 c-us3.stripcdn.com
@@ -10316,6 +10343,7 @@ c.sharethis.mgr.consensu.org
 c.skimresources.com
 c.socialannex.com
 c.ssacdn.com
+c.sta.haloapps.com
 c.stripcdn.com
 c.tracking.instantcheckmate.com
 c.tvpixel.com
@@ -10947,6 +10975,7 @@ cdn0.selectablemedia.com
 cdn01.adsafeprotected.com
 cdn01.mzbcdn.net
 cdn1-creatives.adswizz.com
+cdn1.adadvisor.net
 cdn1.aniview.com
 cdn1.selectablemedia.com
 cdn1.socialannex.com
@@ -11578,6 +11607,7 @@ cn-tags.vizury.com
 cn.adserver.yahoo.com
 cn.adtouchlabs.com
 cn.adx1.com
+cn.avidly.com
 cn.criteo.com
 cn.taboola.com
 cn5.mta.exacttarget.com
@@ -12608,6 +12638,7 @@ d.criteo.com
 d.eu.criteo.com
 d.gcp.msas.media.net
 d.go-mpulse.net
+d.haloapps.com
 d.ina.media.net
 d.la1-c2-phx.salesforceliveagent.com
 d.liadm.com
@@ -12837,6 +12868,7 @@ dbshkprod.112.2o7.net
 dc-5629058.fls.doubleclick.net
 dc.applicationinsights.microsoft.com
 dc.arrivalist.com
+dc.haloapps.com
 dc.presage.io
 dc2-wdc.netmng.com
 dca-v4.pops.fastly-insights.com
@@ -12936,6 +12968,7 @@ deco-relief.piwik.pro
 decoratordesignerguide.com.pathful.com
 deepakshukla.leadpages.co
 deepdive.exponential.com
+deeplink.haloapps.com
 deeplink.mobileapptracking.com
 deere-nonprod.saas.appdynamics.com
 deere.com.ssl.sc.omtrdc.net
@@ -13248,6 +13281,7 @@ dg7.mta.exacttarget.com
 dg92.mta.exacttarget.com
 dga.org.102.112.2o7.net
 dgglobal.112.207.net
+dh.haloapps.com
 dhlcom.d3.sc.omtrdc.net
 dhlexpressprod.112.2o7.net
 dhs7.adj.st
@@ -13859,6 +13893,7 @@ economist.gscontxt.net
 ecosystem.demdex.net
 ecowatchroar-img.rbl.ms
 ecpaaaa.netmng.com
+ecs-hk-01.haloapps.com
 ecto.flurry.com
 ecu.az1.qualtrics.com
 ecuau.qualtrics.com
@@ -14386,6 +14421,7 @@ eqv-390.eqv-rtb1.rfihub.net
 eqv-394.eqv-rtb1.rfihub.net
 eqv-398.eqv-rtb1.rfihub.net
 eqv-399.eqv-rtb1.rfihub.net
+eqv-400.eqv-rtb1.rfihub.com
 eqv-400.eqv-rtb1.rfihub.net
 eqv-419.eqv-rtb1.rfihub.net
 eqv-421.eqv-rtb1.rfihub.net
@@ -15889,6 +15925,8 @@ gallery.vicedata.com
 gallupinc.co1.qualtrics.com
 gam.adnxs.com
 gamail.com
+game-ad-sdk.haloapps.com
+gameday-api.haloapps.com
 gamehero.thewhizmarketing.com
 gamehouse.insnw.net
 gameon.thewhizmarketing.com
@@ -16630,6 +16668,7 @@ hallmarkcom.112.2o7.net
 hallmarkcom.demdex.net
 hallmarkcom.sc.omtrdc.net
 hallmarkibmcom.112.2o7.net
+haloapps.com
 hammacher.112.2o7.net
 handler.fiksu.com
 handm.demdex.net
@@ -17223,6 +17262,7 @@ i.chartboost.com
 i.clean.gg
 i.dev.jwpltx.com
 i.ds.ad.gt
+i.haloapps.com
 i.jsrdn.com
 i.liadm.com
 i.lsimg.net
@@ -17634,6 +17674,7 @@ imces.inmobi.com
 imces.vip.dfw1.inmobi.com
 imdb.amazon-adsystem.com
 imercer.az1.qualtrics.com
+img-ann-sta.haloapps.com
 img-as.stripcdn.com
 img-cdn-1.heyzap.com
 img-cdn-2.heyzap.com
@@ -18510,6 +18551,7 @@ jrkl5-q1lay.ads.tremorhub.com
 jrs204b0a.clickfunnels.com
 js-agent.newrelic.com
 js-cdn.dynatrace.com
+js-sdk-cdn.upltv.com
 js-sec.casalemedia.com
 js-staging.ad-score.com
 js.ad-score.com
@@ -20867,6 +20909,8 @@ mngirockymtnnews.112.2o7.net
 mngislctrib.112.2o7.net
 mni.adready.com
 mnpae-app.quantummetric.com
+mo.haloapps.com
+mo.test.haloapps.com
 moat.bfmio.com
 moatads.com
 moattest.contextweb.com
@@ -22244,6 +22288,7 @@ o-video-ads-apex.qa.rubiconproject.com
 o-video-ads.qa.rubiconproject.com
 o.agentanalytics.com
 o.cmp.advertising.com
+o.haloapps.com
 o.ibotta.com
 o.shareaholic.com
 o.skimresources.com
@@ -22252,6 +22297,7 @@ o.webmd.com.ssl.d2.sc.omtrdc.net
 o1.alerts.flurry.com
 o1.corpout.returnpath.com
 o1.em.fanbread.com
+o1.email.avidly.com
 o1.email.heyzap.com
 o1.email.kampyle.com
 o1.email.keen.io
@@ -22269,6 +22315,7 @@ o17.ck.n.convertkit.com
 o18.ck.n.convertkit.com
 o19.ck.n.convertkit.com
 o1r0ew0h-android-5-1-4.mobile-sdk-api.intercom.io
+o2.haloapps.com
 o20.ck.n.convertkit.com
 o22.ck.n.convertkit.com
 o2tv.cz.ssl.sc.omtrdc.net
@@ -22861,6 +22908,7 @@ p.msas.media.net
 p.optvdo.com
 p.placed.com
 p.presage.io
+p.rfihub.com
 p.silverpush.co
 p.skimresources.com
 p.tvpixel.com
@@ -23572,6 +23620,7 @@ pixel-us-west.rubiconproject.com
 pixel-useast.adsymptotic.com
 pixel.33across.com
 pixel.absum.ru
+pixel.adadvisor.net
 pixel.adasiaholdings.com
 pixel.adbiq.com
 pixel.adcrowd.com
@@ -23771,6 +23820,7 @@ play.aniview.com
 play.fullstory.com
 play.syndicaster.tv
 play1.aniview.com
+playable-api.avidly.com
 playable.tapjoy.com
 playables-debug.lfstmedia.com
 playbuzz.com
@@ -24415,6 +24465,7 @@ purestorage.sc.omtrdc.net
 purestorage.tt.omtrdc.net
 purple.getambassador.com
 pursuantgroupinc.tt.omtrdc.net
+push-api.avidly.com
 push-manage.api.kochava.com
 push-next.dev.pardot.com
 push-next.pardot.com
@@ -25257,6 +25308,8 @@ reply.github.exacttarget.com
 reply.s10.exacttarget.com
 reply.s50.exacttarget.com
 repo-public.instana.io
+report-ads-sdk.avidly.com
+report-ads-sdk.upltv.com
 report-adyoulike.api.omnitagjs.com
 report-as.jivox.com
 report-clickcdn.shareaholic.com
@@ -26591,6 +26644,7 @@ sdk.ad.smaato.net
 sdk.adkmob.com
 sdk.adotmob.com
 sdk.appsflyer.com
+sdk.avidly.com
 sdk.bucksense.com
 sdk.casalemedia.com
 sdk.consoliads.com
@@ -27359,7 +27413,9 @@ sjc-226.sjc-rtb1.rfihub.net
 sjc-227.sjc-rtb1.rfihub.net
 sjc-229.sjc-rtb1.rfihub.net
 sjc-230.sjc-rtb1.rfihub.net
+sjc-232.sjc-rtb1.rfihub.com
 sjc-232.sjc-rtb1.rfihub.net
+sjc-234.sjc-rtb1.rfihub.com
 sjc-234.sjc-rtb1.rfihub.net
 sjc-236.sjc-rtb1.rfihub.net
 sjc-240.sjc-rtb1.rfihub.net
@@ -28129,6 +28185,7 @@ ssl.vizury.com
 ssl.vungle.com
 ssl.xml.adx1.com
 ssl001.insnw.net
+ssl08.haloapps.com
 ssl2.pathful.com
 sslads.vizury.com
 sslparking.traffic.club
@@ -28385,6 +28442,7 @@ stas.outbrain.com
 stash.api.kochava.com
 stash.office.yext.com
 stash.revcontent.com
+stat.haloapps.com
 statdynamic.com
 stateauto.az1.qualtrics.com
 statefarmmutualautomobileinsurancecompany.demdex.net
@@ -29323,6 +29381,7 @@ tearsheet.onevideo.advertising.com
 tearsheetstg.v.fwmrm.net
 tebt.adj.st
 tecdoc.containers.piwik.pro
+tech-support.upltv.com
 tech.adroll.com
 tech.atom.adjust.com
 tech.forter.com
@@ -30016,6 +30075,7 @@ tracfonewireless.tt.omtrdc.net
 track-east.mobileadtrading.com
 track-east2.mobileadtrading.com
 track-er.marinsm.com
+track-jx.upltv.com
 track-sjc.mobileadtrading.com
 track-west.mobileadtrading.com
 track.adbiq.com
@@ -30418,6 +30478,7 @@ two-ply-dev.gw.localytics.com
 two-ply.gw.localytics.com
 twsc57349362us3.cobrowse.oraclecloud.com
 tx2p130c-android.mobile-sdk-api.intercom.io
+txa-rtb1.rfihub.com
 txdot.tt.omtrdc.net
 txu.az1.qualtrics.com
 txu.sc.omtrdc.net
@@ -30482,6 +30543,7 @@ ubcu.ca.102.112.2o7.net
 uber.co1.qualtrics.com
 uber.demdex.net
 uber.mktoweb.com
+ubertags.rfihub.com
 ubh-d.openx.net
 ubisoftinternational.demdex.net
 ubm.demdex.net
@@ -30565,6 +30627,7 @@ ujjwaltest.qa.campaign.adobe.com
 uk-ads.openx.net
 uk-audi.netmng.com
 uk-suzuki.netmng.com
+uk.adadvisor.net
 uk.adserver.yahoo.com
 uk.advertising.com
 uk.at.atwola.com
@@ -30719,6 +30782,7 @@ uploader.syndicaster.tv
 uploads-cdn.intercomcdn.com
 uploads.github.exacttarget.com
 uploads.intercomcdn.com
+upltv.com
 uplynk.adaptv.advertising.com
 upmcnew.112.2o7.net
 upratihun.fra-01.braze.eu
@@ -30742,6 +30806,7 @@ urbaninsight.com
 urbanmedia-d.openx.net
 urbn-live-stream-feeds.dynamicyield.com
 ure.adnxs.com
+url.haloapps.com
 url3080.braze.com
 url6864.yext.com
 url8670.dynamicyield.com
@@ -30809,6 +30874,7 @@ us-west.bidswitch.net
 us-west.bidswitch.rtb.quantserve.com
 us-west.load.exelator.com
 us-west.pulsepoint.rtb.quantserve.com
+us.adadvisor.net
 us.adserver.yahoo.com
 us.audience.newscgp.com
 us.bksn.se
@@ -31083,6 +31149,7 @@ v.myvisualiq.net
 v.optvdo.com
 v.rtb.admedia.com
 v.ssacdn.com
+v.upltv.com
 v.vungle.com
 v1-tr.ams.contextweb.com
 v1-tr.lga.contextweb.com
@@ -32007,6 +32074,7 @@ wessim.fhealthyou.hop.clickbank.net
 wessim.specforce.hop.clickbank.net
 west-pool.a.company-target.com
 west-pool.d.company-target.com
+west.adadvisor.net
 west.aod.extremereach.com
 west.aspera.extremereach.com
 west.cloud.ftp.extremereach.com
@@ -32452,6 +32520,7 @@ www.actionnow.leadpages.co
 www.actorgameplan.leadpages.co
 www.ad-score.com
 www.ad.gt
+www.adadvisor.net
 www.adapt.io
 www.adasiaholdings.com
 www.adbemdigitalmediarebootprod2.112.2o7.net
@@ -32582,6 +32651,7 @@ www.autoconfig.gmial.com
 www.autodiscover.gmial.com
 www.automatad.com
 www.autopilothq.com
+www.avidly.com
 www.aweber.com
 www.awltovhc.com
 www.b.adx1.com
@@ -32919,6 +32989,7 @@ www.gumgum.com
 www.gvtsolutions.leadpages.co
 www.gz7.adx1.com
 www.h-bid.com
+www.haloapps.com
 www.hankchin.leadpages.co
 www.hb.adx1.com
 www.heatmap.it
@@ -33052,6 +33123,7 @@ www.lyncdiscoverinternal.gmial.com
 www.lyncext.adx1.com
 www.lytics.io
 www.m-freeway.com
+www.m.adnxs.com
 www.m.adx1.com
 www.m.wavesecure.com
 www.m.xhamser.com
@@ -33519,6 +33591,7 @@ www.uncustomary.leadpages.co
 www.undertone.com
 www.unityads.unity3d.com
 www.unrulymedia.com
+www.upltv.com
 www.urbanairship.com
 www.urbaninsight.com
 www.us-central1-narvar-data-lake.cloudfunctions.net

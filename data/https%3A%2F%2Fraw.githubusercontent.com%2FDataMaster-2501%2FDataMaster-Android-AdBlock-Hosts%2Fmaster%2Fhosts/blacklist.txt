@@ -5,6 +5,7 @@
 005.free-counter.co.uk
 006.free-adult-counters.x-xtra.com
 006.free-counter.co.uk
+006397ce-6710-4dbb-b4fd-9b17c8be40e2.eu.u.fastly-insights.com
 007.free-counter.co.uk
 008.free-counter.co.uk
 008.free-counters.co.uk
@@ -17,7 +18,6 @@
 01.webproxy.fra1.appnexus.com
 011707160008.c.mystat-in.net
 0123moviesuk.imageshack.host
-01543134-448f-446d-a408-c7949a31f6e0.us.u.fastly-insights.com
 01ae00c8227b8051f1e798013def9c5120268ef3.abc.appcelerator.com
 01bspwdyjc.s.ad6media.fr
 02.dntrax.com
@@ -231,6 +231,7 @@
 094fo.ads.tremorhub.com
 096f24msm7ioogvi369t6jp6tuc5l8fr.edns.ip-api.com
 0998b50b30d1ca2635c99b18eca53f41.ulink.adjust.com
+0999b986-172d-4329-8349-caa808268abb.eu.u.fastly-insights.com
 0a2a38219b2f582c8efef251c695caab.ulink.adjust.com
 0ane3a8i0w-1.algolia.io
 0b18b3eea68c73130d743e324bf07c5c.ulink.adjust.com
@@ -240,7 +241,6 @@
 0c3-a.tlnk.io
 0ca2fa3c-86ef-41a9-9705-9c5d8016b6d3.us.u.fastly-insights.com
 0d7292.r.axf8.net
-0dce14f6-5a43-4e75-a835-4be4910b9a98.us.u.fastly-insights.com
 0eawa.voluumtrk.com
 0f21c37ef5fc5b12f51752f68b45b3cb.s.adsco.re
 0f2b56f8-21f0-4847-adbf-08756f196502.eu.u.fastly-insights.com
@@ -279,13 +279,13 @@
 1.db.adjust.io
 1.firewall.a.statcounter.com
 1.firewall.b.statcounter.com
-1.im.cz
 1.map.pop6.com
 1.my.a.statcounter.com
 1.my.b.statcounter.com
 1.pdu.a.statcounter.com
 1.pdu.b.statcounter.com
 1.proxy.adjust.com
+1.ptp22.com
 1.redis.adjust.com
 1.redis.adjust.io
 1.rsa.adjust.io
@@ -528,6 +528,7 @@
 1188lv.adocean.pl
 1189.adnxs.com
 119.41.54.45.rdns.adjust.com
+119.6.87.194.dynamic.dol.ru
 119.teracreative.com
 11903448362---0---globalcommerce---0---210-141-112-34.cfspx.digitalriver.com
 1191717.sedoparking.com
@@ -655,6 +656,7 @@
 1295336.fls.doubleclick.net
 12980.engine.mobileapptracking.com
 12997119061---0---globalcommerce---0---210-141-112-34.cfspx.digitalriver.com
+12bfab7b-8bf8-4b43-a75e-5deb8758b3d1.eu.u.fastly-insights.com
 12n-p.tlnk.io
 12news.com.ssl.sc.omtrdc.net
 13.41.54.45.rdns.adjust.com
@@ -1550,6 +1552,7 @@
 206.6.87.194.dynamic.dol.ru
 20660.engine.mobileapptracking.com
 206ads.com
+206b49cc-3d21-41d7-b5fa-4d73f6612fa3.us.u.fastly-insights.com
 206solutions.com
 207-46-87-1.servicebus.windows.net
 207-46-87-4.servicebus.windows.net
@@ -1983,6 +1986,7 @@
 233.bitterstrawberry.com
 23315.hittail.com
 23332.engine.mobileapptracking.com
+23350942-7ac6-41e1-8a67-d5dca89ef1ed.us.u.fastly-insights.com
 2336.bitterstrawberry.com
 23362.deeplink.mobileapptracking.com
 23362.engine.mobileapptracking.com
@@ -2278,6 +2282,7 @@
 3.rsa.adjust.io
 3.switch.a.statcounter.com
 3.switch.b.statcounter.com
+3.vlogexpert.com
 30.41.54.45.rdns.adjust.com
 30.6.87.194.dynamic.dol.ru
 30.adnxs.com
@@ -2326,6 +2331,7 @@
 31870.hittail.com
 3193.api.swrve.com
 31990.30338.filter.geoads.com
+31e8bee0-cab6-4a09-b1b1-6c485810fc57.us.u.fastly-insights.com
 32.41.54.45.rdns.adjust.com
 32.6.87.194.dynamic.dol.ru
 320028339731.homepage.t-online.de
@@ -2399,6 +2405,7 @@
 3489.api.swrve.com
 3492781.fls.doubleclick.net
 349a9c862960132a1d96760b1a1a9e9e.ulink.adjust.com
+34d77ba6-619a-40aa-a5ad-adca00473b89.eu.u.fastly-insights.com
 35.41.54.45.rdns.adjust.com
 35.6.87.194.dynamic.dol.ru
 350-dot-pgdragonsong.appspot.com
@@ -2475,7 +2482,6 @@
 38.6.87.194.dynamic.dol.ru
 38.teracreative.com
 380-ct.c3tag.com
-38058639-deee-4b2a-98a4-c2ade6bd9732.us.u.fastly-insights.com
 3810.api.swrve.com
 3810.content.swrve.com
 3820988798.pub.ezanga.com
@@ -2528,7 +2534,6 @@
 3d82200b806398cd020374624da69d7e.adpdx.com
 3daf2eda-db21-4e2b-9c2d-13538a22ecc2.us.u.fastly-insights.com
 3deepspace.com
-3defb3a8-28e9-4175-b3d9-d3c693bf73be.us.u.fastly-insights.com
 3dfitness.clickfunnels.com
 3dlivestats.com
 3dots.co.il
@@ -2598,7 +2603,6 @@
 404.online.net
 404.xxxymovies.com
 404727787.keywordblocks.com
-404cd563-05c7-4b9f-a6d8-9f1092c4e96d.us.u.fastly-insights.com
 4053441006.pub.ezanga.com
 4053494.fls.doubleclick.net
 4054.engine.mobileapptracking.com
@@ -2901,6 +2905,7 @@
 4dinzqwoxfoo31kwwr8qiii5gplyu1505290857.nuid.imrworldwide.com
 4dogmedia.go2cloud.org
 4dsply.com
+4e49dfec-d21c-49d0-8864-6606ca75cfea.us.u.fastly-insights.com
 4e8ik.trackvoluum.com
 4fqli.ads.tremorhub.com
 4girlsfingerpaint.com
@@ -2975,8 +2980,8 @@
 517.adnxs.com
 517135972d1a6f199a58f5f80a50e6de.s.adsco.re
 5178.engine.mobileapptracking.com
-5198e0be-0d34-42be-b921-acbffd827a80.us.u.fastly-insights.com
 51af72.r.axf8.net
+51b51811-4a07-4477-929f-958ee4f65bcf.us.u.fastly-insights.com
 51yes.com
 52.41.54.45.rdns.adjust.com
 52.6.87.194.dynamic.dol.ru
@@ -3014,7 +3019,6 @@
 55.teracreative.com
 554-ct.c3tag.com
 5542.engine.mobileapptracking.com
-5552bed3-af4b-43f4-b834-d8109a9e414d.us.u.fastly-insights.com
 555fe0fa.qqc.co
 556bb77f-d241-4207-984a-07963cd2e5a3.eu.u.fastly-insights.com
 557.adnxs.com
@@ -3076,6 +3080,7 @@
 5766.deeplink.mobileapptracking.com
 5775287f838b7e12005d7d7b.tracker.adotmob.com
 577543db5c47e31200f530c0.tracker.adotmob.com
+57832f5c-11b7-4aff-9a3c-a0f343d6a5b8.eu.u.fastly-insights.com
 57935.sedoparking.com
 57c983901e045b0012673938.tracker.adotmob.com
 57d9149556b95e00110c981b.tracker.adotmob.com
@@ -3153,6 +3158,7 @@
 5d56a.v.fwmrm.net
 5dimes.com
 5e124.v.fwmrm.net
+5e1b77db-6b38-464e-97a7-92877b4a6929.eu.u.fastly-insights.com
 5e5ff159.linkbucks.com
 5e69718e1950606bb2396fb52e9aa9c7.s.adsco.re
 5ebec5.r.axf8.net
@@ -3206,6 +3212,8 @@
 6067.bapi.adsafeprotected.com
 607.adnxs.com
 6077.eu-api.swrve.com
+609a119b-e015-4856-864d-417d5a6091c6.us.u.fastly-insights.com
+609e4007-7655-496b-9cc2-d6003197546f.us.u.fastly-insights.com
 61.41.54.45.rdns.adjust.com
 61.6.87.194.dynamic.dol.ru
 61.teracreative.com
@@ -3396,6 +3404,7 @@
 718unlimited.com
 7194.bapi.adsafeprotected.com
 7198.bapi.adsafeprotected.com
+71a63ccf-a814-4d90-9c68-ba2415e315a8.us.u.fastly-insights.com
 71i.nuggad.net
 72.41.54.45.rdns.adjust.com
 72.6.87.194.dynamic.dol.ru
@@ -3503,6 +3512,7 @@
 786125974.keywordblocks.com
 7882.bapi.adsafeprotected.com
 78843.hittail.com
+78b0a9e8-decf-49a0-aaa0-3c2abc281e7d.us.u.fastly-insights.com
 78cc571ae97.net
 79.41.54.45.rdns.adjust.com
 79.6.87.194.dynamic.dol.ru
@@ -3615,6 +3625,7 @@
 8200.6639.asklots.com
 82202.api-05.com
 8228.engine.mobileapptracking.com
+822cddaa-ce52-4e47-b82c-9b2828049ef0.us.u.fastly-insights.com
 825-ct.c3tag.com
 8260.hittail.com
 827256465.keywordblocks.com
@@ -3874,6 +3885,7 @@
 99.41.54.45.rdns.adjust.com
 99.6.87.194.dynamic.dol.ru
 99.adnxs.com
+9902215b-a6bd-4560-b371-144fca11ac40.eu.u.fastly-insights.com
 992.adnxs.com
 993-62c8bb3c9ddc-dot-chromiumcodereview-hr.appspot.com
 9933cb64418101f59bd34cdd388388c5.ulink.adjust.com
@@ -3894,12 +3906,14 @@
 99widgets.com
 99x.com
 9a0c08dfdea83eff8b976b8b1f4db2fa.s.adsco.re
+9acc17d9-9353-4380-94db-a32b14b905ed.us.u.fastly-insights.com
 9af28196-d6f5-4ae6-b7b6-c5f14f5ea200.eu.u.fastly-insights.com
 9am.2cnt.net
 9ata.ero-advertising.com
 9bd9d909-1169-408a-a51e-c44ad4a1a096.eu.u.fastly-insights.com
 9bgix070jjqwwippg82sqso60mek4v5q.edns.ip-api.com
 9bwls.redirectvoluum.com
+9cd0c1ae-3921-4182-9f32-db13f76a3dbc.us.u.fastly-insights.com
 9d060c.r.axf8.net
 9d1a9742.qqc.co
 9d2a1456c4a921d94f6575078e3a2f38.ulink.adjust.com
@@ -4016,6 +4030,7 @@ a.consumer.net
 a.consumerreports.org
 a.ctasnet.com
 a.custompc.co.uk
+a.datacardbar.info
 a.dpmsrv.com
 a.environmentaldefense.org
 a.ero-advertising.com
@@ -4038,7 +4053,6 @@ a.hspvst.com
 a.huluad.com
 a.ia1.scorecardresearch.com
 a.iad.lpsnmedia.net
-a.img.static.youmi.net
 a.imonomy.com
 a.impactradius-go.com
 a.imprvdosrv.com
@@ -4079,7 +4093,6 @@ a.pokerplayermagazine.co.uk
 a.popupsmart.com
 a.postrelease.com
 a.raasnet.com
-a.rad.msn.com
 a.remarketstats.com
 a.rfihub.com
 a.rmgserving.com
@@ -4271,6 +4284,7 @@ a096.casalemedia.com
 a097.casalemedia.com
 a098.casalemedia.com
 a099.casalemedia.com
+a0a4a504-1c5e-4758-89c3-6a9b51236048.eu.u.fastly-insights.com
 a0ef2haqr0-1.algolia.io
 a0ef2haqr0-2.algolia.io
 a0ef2haqr0-3.algolia.io
@@ -4400,7 +4414,6 @@ a353.casalemedia.com
 a370.casalemedia.com
 a39.ac-images.myspacecdn.com
 a3934-q69jb.ads.tremorhub.com
-a3d8ac12-a4bb-4ff9-84c2-9b32d5d88837.us.u.fastly-insights.com
 a4.adzs.nl
 a4.suntimes.com
 a40.suntimes.com
@@ -4414,7 +4427,6 @@ a5.suntimes.com
 a50.suntimes.com
 a51.suntimes.com
 a510.casalemedia.com
-a51bd471-862b-49d7-b9bd-81a2db257451.us.u.fastly-insights.com
 a52.suntimes.com
 a53.suntimes.com
 a54.suntimes.com
@@ -9445,6 +9457,7 @@ adver.com
 adverity.com
 adverline.com
 adverline.fr
+advernet.co.il
 adversal.com
 adversaldisplay.com
 adversalservers.com
@@ -9971,6 +9984,7 @@ affiliates.worldhot.com
 affiliates.yourapprovaltracker.com
 affiliatesensor.com
 affiliateshop.com
+affiliateshowcase.com
 affiliatetalk.net
 affiliatetracking.com
 affiliatetracking.net
@@ -12544,7 +12558,6 @@ b.misslk.com
 b.mmnetwork.mobi
 b.monetate.net
 b.nex.bg
-b.rad.msn.com
 b.rmgserving.com
 b.sc.omtrdc.net
 b.scorecardresearch.com
@@ -12554,7 +12567,6 @@ b.siftscience.com
 b.skimresources.com
 b.skinstore.com
 b.t.tailtarget.com
-b.techcrunch.com
 b.thanksearch.com
 b.trackcdn.com
 b.turbo.az
@@ -12566,7 +12578,7 @@ b.yu0123456.com
 b.zedo.com
 b.zeroredirect1.com
 b00r.adultfriendfinder.com
-b08306fc-efb1-4afd-93fe-b5f6dc9bdbeb.us.u.fastly-insights.com
+b0bc6d21-54b3-42b7-a909-58c29b167d85.us.u.fastly-insights.com
 b1.2cnt.net
 b1.boards2go.com
 b1.kadira.io
@@ -12587,7 +12599,6 @@ b2.boards2go.com
 b2.cloudapp.net
 b223ef51950a9c677c75132f5677870e.adpdx.com
 b23.ru
-b241cb77-c7cb-437b-bdc7-ca8e079b7bb7.us.u.fastly-insights.com
 b26a432353d80441b43f494d91d943a5.l.adsco.re
 b2b.ziffdavis.com
 b2c-mlm.marketo.com
@@ -12601,9 +12612,9 @@ b3by504l6zkvptjqf1tf38ahbvf80v33.edns.ip-api.com
 b3d.com
 b3kw4qjqabguk5fpioevdtdmojdxn2af.edns.ip-api.com
 b43108c070cb09d6caba2b9dba10d2a6.ulink.adjust.com
-b49bdc9c-062b-4f66-b41e-087b4ebdd730.us.u.fastly-insights.com
 b4ws1.trackvoluum.com
 b5057c.r.axf8.net
+b57efbdf-87f1-47be-99b9-9d120834ac89.us.u.fastly-insights.com
 b5c3cd05645e38884a6207c125a572c1.ulink.adjust.com
 b5media.us.intellitxt.com
 b5oyl.trackvoluum.com
@@ -13813,6 +13824,7 @@ be2.maropost.com
 be21.maropost.com
 be3.maropost.com
 be4.maropost.com
+be4015fc-a02a-44d0-a348-dd94b4b9df62.us.u.fastly-insights.com
 be5.maropost.com
 be6.maropost.com
 be6b.v.fwmrm.net
@@ -15939,6 +15951,7 @@ c.adsco.re
 c.adskeeper.co.uk
 c.adsymptotic.com
 c.algovid.com
+c.am11.ru
 c.am15.net
 c.amazon-adsystem.com
 c.amobee.com
@@ -16037,6 +16050,7 @@ c00685362b8bbaafeb2afbd4aebc965d.appboy.com
 c02qds.2cnt.net
 c03.adsummos.net
 c04.adsummos.net
+c0829f8a-3da9-43ab-a5e6-86fade59a994.eu.u.fastly-insights.com
 c0ha7be44sntxszpvxbjiqkgddomu1505192189.nuid.imrworldwide.com
 c1-de-2.algolia.io
 c1-eu-6.algolia.io
@@ -16366,7 +16380,6 @@ ca.cqcounter.com
 ca.livestat.com
 ca.myway.com
 ca.statcounter.com
-ca872c00-253a-45f1-a773-5ae66411603d.us.u.fastly-insights.com
 caami-hziv.adnxs.com
 caami.adnxs.com
 caartoonnetwork.com
@@ -16828,6 +16841,7 @@ cc.myway.com
 cc.sedoparking.com
 cc.sex-explorer.com
 cc.simplereach.com
+cc1177bb-40fd-4c61-95fe-1af7e48310e2.us.u.fastly-insights.com
 cc12797.counter.hackers.lv
 cc2.i2i.jp
 cc2122.dotomi.com
@@ -21383,6 +21397,7 @@ d1z2jf7jlzjs58.cloudfront.net
 d1zgderxoe1a.cloudfront.net
 d2.sc.omtrdc.net
 d2.zedo.com
+d2069376-a339-4f3e-8a77-a3f74bd79cd2.eu.u.fastly-insights.com
 d20b1f1a666e6c4d2f7d9ab5cfae096466d93759.cloudapp-enterprise.appcelerator.com
 d20je219bs8hnq.cloudfront.net
 d2222t5nvb13ei.cloudfront.net
@@ -21437,6 +21452,7 @@ d3.prod.ad.adxcore.com
 d3.sc.omtrdc.net
 d3.zedo.com
 d30.prod.ad.adxcore.com
+d30f1cc9-9c68-409c-b31f-8aecb06c2058.eu.u.fastly-insights.com
 d31.prod.ad.adxcore.com
 d31qbv1cthcecs.cloudfront.net
 d32.prod.ad.adxcore.com
@@ -21461,8 +21477,8 @@ d3aq14vri881or.cloudfront.net
 d3b16342cf283be86ab26ebd90de5464.ulink.adjust.com
 d3c3cq33003psk.cloudfront.net
 d3cxv97fi8q177.cloudfront.net
+d3daa4cb-f92e-4732-a978-4069b6eb9fe0.eu.u.fastly-insights.com
 d3emsmln8xfj03.cloudfront.net
-d3f7943c-7baa-46bf-8721-b145e2a66243.us.u.fastly-insights.com
 d3fd89.r.axf8.net
 d3iz6lralvg77g.cloudfront.net
 d3k68ig7ckr3r6.cloudfront.net
@@ -21494,6 +21510,7 @@ d47.prod.ad.adxcore.com
 d48.prod.ad.adxcore.com
 d49.prod.ad.adxcore.com
 d4bsxdtgtmhxt.cloudfront.net
+d4ce9691-a82a-45d5-af22-16f3b7d113a4.eu.u.fastly-insights.com
 d5.zedo.com
 d50.prod.ad.adxcore.com
 d51.prod.ad.adxcore.com
@@ -21935,6 +21952,7 @@ db3.sitestats.com
 db4.advertstream.com
 db4.net-filter.com
 db4.sitestats.com
+db405674-f773-4386-9d73-8fb9e338cb2b.us.u.fastly-insights.com
 db5.net-filter.com
 db5.sitestats.com
 db6.net-filter.com
@@ -24331,6 +24349,7 @@ e31.am2.en25.com
 e31.sy3.en25.com
 e32.am2.en25.com
 e32.sy3.en25.com
+e3589ccb-5a6c-4429-b4d0-decdae3d39c8.us.u.fastly-insights.com
 e35fbf.t.axf8.net
 e3a.adnxs.com
 e3e85fbda0b93c236cc70b01a5c0a393.ulink.adjust.com
@@ -26094,6 +26113,7 @@ f0okj.redirectvoluum.com
 f101.smaato.net
 f12-de.adhigh.net
 f13-de.adhigh.net
+f1d62c18-63c1-4139-aeaa-5198fc1d6f2b.eu.u.fastly-insights.com
 f1organizer.com
 f2-de.adhigh.net
 f2.wishabi.com
@@ -26126,6 +26146,7 @@ f3xlo.trackvoluum.com
 f4-de.adhigh.net
 f4.ec.adkontekst.pl
 f4a976f85912bb1032f6cf898c5a088f.ulink.adjust.com
+f4aa0f92-e574-4140-bef5-adc2b1849593.eu.u.fastly-insights.com
 f4df0833a1352ef193633d85356e6e80ffcdcdb7.cloudapp-enterprise.appcelerator.com
 f4zzj-xsjuk.ads.tremorhub.com
 f5biz.com
@@ -26138,6 +26159,7 @@ f6b3f5b8b507fcfb7da3162007fa7dd0.ulink.adjust.com
 f6b84402031989f196e423d2670ace57.adpdx.com
 f6lv5kzkwcb9.pflexads.com
 f6oz66226e3b.pflexads.com
+f79cfd64-9c4c-4128-b25d-9b670eb2d57f.eu.u.fastly-insights.com
 f8-de.adhigh.net
 f92btzkt33f3.pflexads.com
 f9s655tad3cz.pflexads.com
@@ -26404,7 +26426,6 @@ fc-lb1.iad2.adsymptotic.com
 fc-lb2.iad2.adsymptotic.com
 fc.webmasterpro.de
 fc0.supercounters.com
-fcaad9ba-afae-415f-9468-c6106f125eb3.us.u.fastly-insights.com
 fcb4you.xtgem.com
 fccinteractive.com
 fcds.affiliatetracking.net
@@ -26489,6 +26510,7 @@ feeds.ziffdavis.com
 feedsweep.us.intellitxt.com
 feelgoodcontactlenses.ojrq.net
 fei.pro-market.net
+feisearch.com
 felixflow.com
 femalefirst.uk.intellitxt.com
 femeedia.com
@@ -26861,6 +26883,7 @@ fleshcash.com
 fleshlight.com
 fleshlightcash.com
 fleshlightgirls.com
+fleshlightreviews.net
 flexbanner.com
 flexbeta.us.intellitxt.com
 flexterkita.com
@@ -26944,6 +26967,7 @@ focusworks.com
 folica.sslproxy.gigya.com
 folkd.put.omnimon.de
 followerscounter.com
+followsite.com
 followup.adlandpro.com
 folloyu.com
 fonction-publique.adnxs.com
@@ -28822,6 +28846,7 @@ glopro.com
 gloria.eshop.t-online.de
 glossier-bmkewiklyu.xid.segment.com
 glowdot.com
+glxgroup.com
 gm.bidpro.io
 gm.demdex.net
 gm.eu1.gigya.com
@@ -29459,6 +29484,7 @@ gzwkq.trackvoluum.com
 h.admagnet.net
 h.adscale.de
 h.atdmt.com
+h.datacardbar.info
 h.hollywood.com
 h.live.com
 h.nexac.com
@@ -29467,7 +29493,6 @@ h.openx.net
 h.ophan.co.uk
 h.scorecardresearch.com
 h.spill.com
-h.urtig.net
 h.verticalscope.com
 h.waudit.cz
 h.zedo.com
@@ -30875,6 +30900,7 @@ i.cdnpark.com
 i.chartboost.com
 i.connatix.com
 i.ctnsnet.com
+i.datacardbar.info
 i.euniverse.com
 i.exclusivegiftcards.com
 i.guim.co.uk
@@ -31289,6 +31315,7 @@ ifsmarketing.com
 ifunny-d.openx.net
 ig-fb-cdn.101xp.com
 ig-fr-fb.101xp.com
+igain-mail.co.uk
 igameunion.com
 iggroup.tt.omtrdc.net
 igmarauders.isotx.com
@@ -34462,6 +34489,7 @@ leads.mmtracking.com
 leads.ohecampus.com
 leadserve.opt-intelligence.com
 leadtrackgo.com
+leadxml.com
 leadzupc.com
 leaffilter.evergage.com
 leahkalamakis.iljmp.com
@@ -37770,6 +37798,7 @@ monitorsdk.appsflyer.com
 monkey-broker-d.openx.net
 monkeybroker.net
 monkeyquest.ojrq.net
+monliveshow.com
 mono.vizu.com
 monroecollege.actonsoftware.com
 monsoonads.com
@@ -38467,7 +38496,6 @@ n.ladycash.ru
 n.mplxtms.com
 n.pay-click.ru
 n.pc1ads.com
-n.pcads.ru
 n.zeroredirect1.com
 n.zeroredirect2.com
 n0-r2d2.piguiqproxy.com
@@ -43115,7 +43143,6 @@ postfach.adnxs.com
 posthq.app.incisivemedia.com
 postit.app.incisivemedia.com
 postitial.iqzone.com
-postmaster.m.getadmiral.com
 postmasterbannernet.com
 postmedia.celtra.com
 postmedia.demdex.net
@@ -46102,7 +46129,6 @@ s.btstatic.com
 s.click.taobao.com
 s.clickability.com
 s.clickiocdn.com
-s.clicktale.net
 s.cpx.to
 s.cxt.ms
 s.datacardbar.info
@@ -46150,7 +46176,6 @@ s.tctm.co
 s.thebrighttag.com
 s.tribalfusion.com
 s.triggit.com
-s.uadx.com
 s.update.adsrvr.org
 s.update.altitude-arena.com
 s.update.chartbeat.com
@@ -47889,6 +47914,7 @@ sfmc.urbanairship.com
 sfmusictech.appstores.com
 sfn.adnxs.com
 sfo-goog.applovin.com
+sfondatanale.com
 sfoprod-rtbwin.applovin.com
 sfostage-rtb.applovin.com
 sfostage-rtbwin.applovin.com
@@ -50587,6 +50613,7 @@ stiriprotv.2cnt.net
 stis.adnxs.com
 stitching.ooyala.com
 stjx2ijaz00j2td8qlz14jrdu5iqgre4.edns.ip-api.com
+stl.p.a1.traceworks.com
 stl.p.a2.traceworks.com
 stl.p.a3.traceworks.com
 stl.p.a4.traceworks.com
@@ -51295,13 +51322,6 @@ t.teads.tv
 t.thetrafficstat.net
 t.trackalyzer.com
 t.trackedlink.net
-t.update.chartbeat.com
-t.update.condenastdigital.com
-t.update.rubiconproject.com
-t.update.spotxchange.com
-t.update.tidaltv.com
-t.update.tremorvideo.com
-t.update.truex.com
 t.viprsp.nl
 t.wowanalytics.co.uk
 t.wowtrk.com
@@ -51470,6 +51490,7 @@ tampabay.sslproxy.gigya.com
 tanga.ojrq.net
 tangerine.nexage.com
 tangerinenet.biz
+tangibledownload.com
 tango.admeta.com
 tangomedia.112.2o7.net
 tankapp.sgsrv.com
@@ -53234,6 +53255,7 @@ traffboost.net
 traffic-exchange.com
 traffic-offers.com
 traffic-supremacy.com
+traffic-trades.com
 traffic.acwebconnecting.com
 traffic.ad4game.com
 traffic.adxprtz.com
@@ -53289,6 +53311,7 @@ trafficmanagers.nl
 trafficmasterz.net
 trafficmaxx.de
 trafficmonsoon.com
+trafficmonster.com
 trafficneeds.directtrack.com
 trafficoasis.com
 trafficpace.com
@@ -54718,7 +54741,6 @@ v.effectivemeasure.net
 v.extreme-dm.com
 v.imprvdosrv.com
 v.landingzone.se
-v.legolas-media.com
 v.movad.de
 v.vidazoo.com
 v.visitweb.com
