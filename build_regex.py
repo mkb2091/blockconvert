@@ -54,7 +54,8 @@ class BuildRegex():
         self.HOSTS_STRING = r'{ip_string}\s+{domain_string}\s*(?:\#.*)?'.format(**locals())
     def generate_adblock_regex(self):
         domain_string = self.DOMAIN_STRING
-        url_string = r'(?:(?:(?:http(?:s|\*)?)?[:])(?:(?:\/\/)|\*))?{domain_string}\/?'.format(**locals())
+        protocol = '(?:(?:http(?:s|[*])?)|(?:[*]))?'
+        url_string = r'(?:(?:{protocol}?[:])(?:(?:\/\/)|\*))?{domain_string}\/?'.format(**locals())
         start = r'(?:\|?\|)?'
         options = ['popup', r'first\-party', r'\~third\-party', r'third\-party']
         options_noop = ['important', r'domain\=\2']

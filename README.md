@@ -42,7 +42,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 624562 blocked domains in each of the generated filter lists
+Theres are 624975 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -144,6 +144,7 @@ https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.tx
 https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt|4.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt|4.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt|4.0 days|Blacklist|GPLv3
+https://raw.githubusercontent.com/xd4rker/MinerBlock/master/assets/filters.txt|1.0 days|Blacklist|MIT
 https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt|1.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/yowu/AnnoyanceMobileAdHosts/master/AnnoyanceMobileAdHosts.txt|1.0 days|Blacklist|The Unlicense
 https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt|1.0 days|Blacklist|GPLv3
