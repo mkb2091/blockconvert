@@ -67,6 +67,7 @@
 [false, false, false, "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt", 345600, "GPLv3"]
 [false, false, false, "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt", 345600, "GPLv3"]
 [false, false, false, "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt", 345600, "GPLv3"]
+[false, false, false, "https://raw.githubusercontent.com/xd4rker/MinerBlock/master/assets/filters.txt", 86400, "MIT"]
 [false, false, false, "https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt", 86400, "GPLv3"]
 [false, false, false, "https://raw.githubusercontent.com/yowu/AnnoyanceMobileAdHosts/master/AnnoyanceMobileAdHosts.txt", 86400, "The Unlicense"]
 [false, false, false, "https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt", 86400, "GPLv3"]
