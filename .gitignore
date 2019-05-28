@@ -114,3 +114,4 @@ dmypy.json
 .pyre/
 dns_cache.txt
 sync.sh
+reverse_dns_cache.txt
