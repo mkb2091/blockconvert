@@ -642,6 +642,7 @@ ctriteo.ipinfo.io
 cts3.dsr.t402.livefyre.com
 cts5.dsr.t402.livefyre.com
 cvp1.cdn.turner.com
+cvspharmacydrugs.ugc.bazaarvoice.com
 cw112.mta.exacttarget.com
 cw181.mta.exacttarget.com
 cw1c1b.providesupport.com
@@ -719,6 +720,7 @@ de100.mta.exacttarget.com
 de119.mta.exacttarget.com
 de129.mta.exacttarget.com
 de168.mta.exacttarget.com
+de176.mta.exacttarget.com
 de181.mta.exacttarget.com
 de184.mta.exacttarget.com
 de30.mta.exacttarget.com
@@ -749,6 +751,7 @@ dewww2.mspy.com
 df101.mta.exacttarget.com
 df102.mta.exacttarget.com
 df111.mta.exacttarget.com
+df119.mta.exacttarget.com
 df12.mta.exacttarget.com
 df129.mta.exacttarget.com
 df157.mta.exacttarget.com
@@ -834,6 +837,7 @@ el68.mta.exacttarget.com
 el69.mta.exacttarget.com
 el70.mta.exacttarget.com
 el73.mta.exacttarget.com
+el75.mta.exacttarget.com
 eleague-static.cdn.turner.com
 electrolux.ugc.bazaarvoice.com
 em.pingdom.com
@@ -1001,6 +1005,7 @@ gamestop.ugc.bazaarvoice.com
 garnieruk.ugc.bazaarvoice.com
 gateway-socket.livechatinc.com
 gateway.livechatinc.com
+gc157.mta.exacttarget.com
 gc194.mta.exacttarget.com
 gc78.mta.exacttarget.com
 gc87.mta.exacttarget.com
@@ -1049,6 +1054,8 @@ go.gigya.com
 go.livechatinc.com
 go.pingdom.com
 golfnow.ugc.bazaarvoice.com
+gp65.mta.exacttarget.com
+gp68.mta.exacttarget.com
 grafana-test.maxmind.com
 grafana.maxmind.com
 grainger.ugc.bazaarvoice.com
@@ -1077,6 +1084,7 @@ help.surveygizmo.com
 helpdesk.gigya.com
 helpdesk.simpleanalytics.io
 helpers.livechatinc.com
+helzberg.ugc.bazaarvoice.com
 hema.ugc.bazaarvoice.com
 heroku.pingdom.com
 hfhytfykjlikhreswste.spyhuman.com
@@ -1363,6 +1371,7 @@ log-ctfstest.gomoxie.solutions
 log-essex.gomoxie.solutions
 log-flowers.gomoxie.solutions
 log-hawkincentives.gomoxie.solutions
+log-highstreetvouchers.uk.gomoxie.solutions
 log-hofmann.uk.gomoxie.solutions
 log-jjillecp.gomoxie.solutions
 log-lifetimefitness.gomoxie.solutions
@@ -1598,6 +1607,7 @@ nordstrom.ugc.bazaarvoice.com
 noritake.ugc.bazaarvoice.com
 northerntool.ugc.bazaarvoice.com
 northerntrust-com.surveygizmo.com
+northface.ugc.bazaarvoice.com
 notifications.content.glympse.com
 notifications.spot.im
 notify.simpleanalytics.io
@@ -1668,6 +1678,8 @@ owa13.exacttarget.com
 p-s0-core-image-legacy.glympse.com
 p-s0-core-image-service.glympse.com
 p-s0-images.content.glympse.com
+p-s1-core-image-service.glympse.com
+p-s1-images.content.glympse.com
 paas-san1.exacttarget.com
 pages.boa.exacttarget.com
 pages.exacttarget.com
@@ -2437,6 +2449,7 @@ xtinmta02-73.exacttarget.com
 xtinmta03-148.exacttarget.com
 xtinmta03-48.exacttarget.com
 xtinmta05-166.exacttarget.com
+yvesrocher.ugc.bazaarvoice.com
 z.cdn.turner.com
 zh-cn.about.flipboard.com
 zh-hk.about.flipboard.com

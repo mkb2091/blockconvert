@@ -15,8 +15,6 @@
 1to1.bbva.com
 200summit.com
 206solutions.com
-233.26.194.35.bc.googleusercontent.com
-233.57.239.35.bc.googleusercontent.com
 247-inc.com
 247ilabs.com
 24businessnews.com
@@ -40,7 +38,6 @@
 3rdeye.spankbang.com
 3wnp9.ru
 40nuggets.com
-46.97.e443.ip4.static.sl-reverse.com
 4oney.com
 4spoonyexperiment.com
 4stats.de
@@ -402,6 +399,7 @@ analytics.sitewit.com
 analytics.skyscanner.net
 analytics.slashdotmedia.com
 analytics.snidigital.com
+analytics.socialblade.com
 analytics.solidbau.at
 analytics.spankbang.com
 analytics.sportybet.com
@@ -410,6 +408,7 @@ analytics.staticiv.com
 analytics.stg.springboardvideo.com
 analytics.strangeloopnetworks.com
 analytics.styria.hr
+analytics.suggestv.io
 analytics.supplyframe.com
 analytics.teespring.com
 analytics.themarketiq.com
@@ -476,6 +475,7 @@ api.wipmania.com
 apicit.net
 apkonline.ru
 apollofind.com
+app.link
 appboycdn.com
 appier.net
 appn.center
@@ -633,6 +633,8 @@ beemray.com
 beemrdwn.com
 beencounter.com
 befirstcdn.com
+behave.noen.at
+behave.sn.at
 behavioralengine.com
 bekannt-im-web.de
 belboon.de
@@ -775,7 +777,6 @@ c-rings.net
 c.bigmir.net
 c.gazetevatan.com
 c.hit.ua
-c.imedia.cz
 c.ipaddress.com
 c.live.com
 c.mgid.com
@@ -1075,6 +1076,7 @@ cookietracker.cloudapp.net
 cookiex.ngd.yahoo.com
 cooladata.com
 coolertracks.emailroi.com
+coordinatedcub.com
 copacast.net
 copperegg.com
 copycarpenter.com
@@ -1488,7 +1490,6 @@ e-pagerank.net
 e-referrer.com
 e-webtrack.net
 e-zeeinternet.com
-e.funnymel.com
 ea.celio.com
 ea.lexpress.fr
 earnitup.com
@@ -1575,6 +1576,7 @@ erotop.lv
 error.videonow.ru
 errors.snackly.co
 es.puritan.com
+escalated.io
 esearchvision.com
 esm1.net
 esomniture.com
@@ -2014,7 +2016,6 @@ hashvault.pro
 hashzone.io
 haveamint.com
 hawkeye-data-production.sciencemag.org.s3-website-us-east-1.amazonaws.com
-haymarket.com
 hbx.df-srv.de
 heals.msgfocus.com
 healte.de
@@ -2251,7 +2252,6 @@ ip.pichunter.com
 ip2location.com
 ip2map.com
 ip2phrase.com
-ip4da27dc7.direct-adsl.nl
 ipapi.co
 ipcatch.com
 ipcounter.de
@@ -2294,6 +2294,7 @@ ixiaa.com
 iyi.net
 izea.com
 izearanks.com
+jadeitite.com
 javascriptcounter.appspot.com
 jcm.jd.com
 jiankongbao.com
@@ -2587,7 +2588,6 @@ magiq.com
 magnetmail1.net
 magnify360-cdn.s3.amazonaws.com
 magnify360.com
-mail.mrocrib.com
 mailstat.us
 mairdumont.com
 malictuiar.com
@@ -3529,6 +3529,7 @@ rumanalytics.com
 rumpelstiltskinhead.com
 runtnc.net
 rutarget.ru
+rv.modanisa.com
 rva.outbrain.com
 s-vop.sundaysky.com
 s.360.cn
@@ -3594,6 +3595,7 @@ scripts.psyma.com
 scripts21.com
 scriptshead.com
 scroll.com
+scrubswim.com
 sddan.com
 sdrive.skoda-auto.com
 sea-nov-1.com
@@ -3919,6 +3921,7 @@ st.tmgrup.com.tr
 stack-sonar.com
 stadig.ifeng.com
 stadsvc.com
+stan.xing.com
 star-cntr-5.com
 startstat.ru
 stat-well.com
@@ -4159,6 +4162,7 @@ stbt.coupons.com
 stcounter.com
 stealth.nl
 steelhousemedia.com
+steepsquirrel.com
 stellaservice.com
 stetic.com
 stg-data-collector.playbuzz.com
@@ -4236,6 +4240,7 @@ t.eharmony.com
 t.etraveli.com
 t.flux.com
 t.hypers.com.cn
+t.indeed.com
 t.kck.st
 t.leady.com
 t.leady.cz
@@ -4317,6 +4322,7 @@ telize.com
 teljari.is
 tellapart.com
 temnos.com
+tempo.inc.com
 tendatta.com
 tenmax.io
 tenping.kr
@@ -4662,6 +4668,7 @@ tracking202.com
 trackingapi.cloudapp.net
 trackkas.com
 trackla.stackla.com
+trackmethod.com
 trackmytarget.com
 trackmyusers.com
 trackmyweb.net

@@ -1090,6 +1090,7 @@ listrakbi.com
 littlefield.logs.roku.com
 live.chartboost.com
 liveapi.yext.com
+lkqd.net
 load.sumo.com
 loadr.exelator.com
 localytics.com
@@ -1754,6 +1755,7 @@ ssl.google-analytics.com
 ssl.o.webmd.com
 ssl.pathful.com
 ssp.api.tappx.com
+ssp.lkqd.net
 sstats.kroger.com
 st-a.props.id
 st-n.ads1-adnow.com
