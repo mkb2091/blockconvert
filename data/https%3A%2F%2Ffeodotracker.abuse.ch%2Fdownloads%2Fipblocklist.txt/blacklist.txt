@@ -4,7 +4,6 @@
 13.red-88-21-212.staticip.rima-tde.net
 1411179.woodgreen.towntalk.co.uk
 160-3-238-131.cpe.cableone.net
-164.ip-51-255-50.eu
 187-178-9-19.dynamic.axtel.net
 189-209-217-49.static.axtel.net
 189-213-62-223.static.axtel.net
@@ -603,7 +602,6 @@ dragon-castle.elephantandcastle.towntalk.co.uk
 dreamretro90454.walthamstow.towntalk.co.uk
 drivelodge.keighley.towntalk.co.uk
 dronfield.towntalk.co.uk
-drseeberger.com
 drumraghparishchurch80949.omagh.towntalk.co.uk
 ds.redcar.towntalk.co.uk
 dsl51b7d524.fixip.t-online.hu
@@ -787,7 +785,6 @@ glowtanningbeauty81708.bedford.towntalk.co.uk
 glyf.technomagie.de
 gmaster.elephantandcastle.towntalk.co.uk
 gmglogosembroideryprint79515.omagh.towntalk.co.uk
-go.primebird.com
 goalounge82031.redcar.towntalk.co.uk
 goldersgreen.towntalk.co.uk
 goodiesdropoff82511.middlesbrough.towntalk.co.uk
@@ -873,8 +870,8 @@ hospicefurniture.barnsley.towntalk.co.uk
 host-181-39-51-243.telconet.net
 host-185-251-39-162.hosted-by-vdsina.ru
 host-186-3-188-74.netlife.ec
+host-186-4-167-166.netlife.ec
 host-186-4-234-27.netlife.ec
-host-94-103-94-87.hosted-by-vdsina.ru
 host.raehse.org
 host.theescapers.com
 host.towntalk.co.uk
@@ -915,7 +912,6 @@ ihatethemarinecorps.com
 ilford.towntalk.co.uk
 ilkley.towntalk.co.uk
 ilovethatcarcouk.redcar.towntalk.co.uk
-im8.io
 images.theescapers.com
 images.towntalk.co.uk
 imaginationgroupforeverlivingproducts81073.sheffield.towntalk.co.uk
@@ -962,7 +958,6 @@ ip141.ip-164-132-138.eu
 ip160.50-31-0.static.steadfastdns.net
 ip173.ip-5-39-119.eu
 ip18.ip-51-255-58.eu
-ip52-83-15-186.ct.co.cr
 ip57.ip-164-132-216.eu
 ip68-229-130-39.lf.br.cox.net
 ipswich.towntalk.co.uk
@@ -1111,7 +1106,6 @@ llantwitmajor.towntalk.co.uk
 llanvalleynaturalproducts82295.wrexham.towntalk.co.uk
 lloydsbank.woodgreen.towntalk.co.uk
 lloydstsb.elephantandcastle.towntalk.co.uk
-lneuilly-657-1-47-139.w80-11.abo.wanadoo.fr
 local.raehse.org
 local.theescapers.com
 local.towntalk.co.uk
@@ -1482,7 +1476,6 @@ preston.towntalk.co.uk
 prestonyouththeatre88430.preston.towntalk.co.uk
 pricelessshoes.redcar.towntalk.co.uk
 primark.loughborough.towntalk.co.uk
-primebird.com
 professionalmanandvanheston94863.hayes.towntalk.co.uk
 prontopizza.burnley.towntalk.co.uk
 propavinglandscapingservices91213.coleraine.towntalk.co.uk
@@ -1543,6 +1536,7 @@ roundabout91111.sheffield.towntalk.co.uk
 route59cafe87009.ilkley.towntalk.co.uk
 royaldragoncantoneserestaurant26921.doncaster.towntalk.co.uk
 royaloakinn.keighley.towntalk.co.uk
+rrcs-71-43-69-2.se.biz.rr.com
 rrcs-71-43-73-58.se.biz.rr.com
 rrcs-71-78-158-190.sw.biz.rr.com
 rswatches82009.preston.towntalk.co.uk
@@ -1737,6 +1731,7 @@ symphony-solution.com
 syslog.raehse.org
 syslog.theescapers.com
 syslog.towntalk.co.uk
+takavesch2f.ddns.mobi
 tankpr91302.nottingham.towntalk.co.uk
 tanningstation.keighley.towntalk.co.uk
 tanshop.redcar.towntalk.co.uk
@@ -2569,7 +2564,6 @@ www.ihatethemarinecorps.com
 www.ilford.towntalk.co.uk
 www.ilkley.towntalk.co.uk
 www.ilovethatcarcouk.redcar.towntalk.co.uk
-www.im8.io
 www.imaginationgroupforeverlivingproducts81073.sheffield.towntalk.co.uk
 www.imaginationhairbytony80731.barnsley.towntalk.co.uk
 www.imperialarms88383.chislehurst.towntalk.co.uk
