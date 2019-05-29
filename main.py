@@ -42,8 +42,6 @@ def main():
                     blocklist.add_file(file.read(), is_whitelist)
             except FileNotFoundError:
                 pass
-    blocklist.add_file('\n'.join(url for (_, _, _, url, _, _) in urls),
-                       is_whitelist=True, match_url=True)
     print('Consolidated lists(%ss)' % (time.time() - start))
     start = time.time()
     blocklist.clean()
