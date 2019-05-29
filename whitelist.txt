@@ -21,6 +21,7 @@
 *.wns.windows.com
 a-msedge.net
 adaway.org
+addons.mozilla.org
 adguard.com
 adguardteam.github.io
 answers.com
