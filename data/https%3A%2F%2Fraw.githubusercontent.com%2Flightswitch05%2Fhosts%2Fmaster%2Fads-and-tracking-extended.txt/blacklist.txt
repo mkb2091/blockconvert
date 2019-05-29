@@ -7590,6 +7590,7 @@ aleteia-d.openx.net
 alex7175.ophrases.hop.clickbank.net
 alexametrics.com
 alexanderhartmann.leadpages.co
+alexandria.marfeelcdn.com
 alexhewko.leadpages.co
 alexs2015.fxautopips.hop.clickbank.net
 alfiobardolla.clickfunnels.com
@@ -7694,6 +7695,8 @@ alphonso.us-east-1.stinger-ad.bidr.io
 alquimistadigitalec.clickfunnels.com
 alt.cdn.scarabresearch.com
 alt.impresionesweb.com
+altb.marfeelcache.com
+altbc.marfeelcache.com
 altdigbidder-east.extend.tv
 altdigeventsbidder-east.extend.tv
 alterra.demdex.net
@@ -7813,6 +7816,8 @@ amplify.outbrain.com
 amplifypixel.outbrain.com
 amplitude.com
 ampm.outbrain.com
+ampproject-b.marfeelrev.com
+ampproject.marfeelrev.com
 amprtc.media.net
 ams-1-apex.go.sonobi.com
 ams-1-sync.go.sonobi.com
@@ -9400,6 +9405,8 @@ b.criteo.com
 b.de.inmobi.com
 b.fiksu.com
 b.hlserve.com
+b.marfeelcache.com
+b.marfeelcdn.com
 b.measuread.com
 b.mmnetwork.mobi
 b.monetate.net
@@ -9602,6 +9609,8 @@ bbvabancomer.demdex.net
 bbvacompassbank.demdex.net
 bbvave.demdex.net
 bbvawibedev.112.2o7.net
+bc.marfeelcache.com
+bc.marfeelcdn.com
 bc9m.adj.st
 bcaukprod.112.2o7.net
 bcaukust.112.2o7.net
@@ -15289,6 +15298,7 @@ feel.privy.com
 felix.data.tm-awx.com
 fempreneurstyledstocklibrary.leadpages.co
 fencesadvisor.com.pathful.com
+feo.marfeelcdn.com
 fergusonenterprisesi.tt.omtrdc.net
 fernwoodarmory.privy.com
 ff-new.streamrail.net
@@ -16593,6 +16603,7 @@ gumtree.demdex.net
 gumtreeuk-d.openx.net
 gurgle.zdbb.net
 gurunavi.d1.sc.omtrdc.net
+gutenbergtest.marfeelcdn.com
 gutesbrot.hop.clickbank.net
 guyslike17.hop.clickbank.net
 gvcwesterneurope.demdex.net
@@ -20284,6 +20295,7 @@ mb9eo-ye9fz.ads.tremorhub.com
 mbe-cdn-staging.fyber.com
 mbe-cdn.fyber.com
 mbe-monitoring.fyber.com
+mbid.marfeelrev.com
 mboxedge17.tt.omtrdc.net
 mboxedge18.tt.omtrdc.net
 mboxedge21.tt.omtrdc.net
@@ -23320,6 +23332,7 @@ pca.admarketplace.net
 pcconnection.hosting.exacttarget.com
 pcconnectioncom.112.2o7.net
 pce.adj.st
+pceu.marfeelrev.com
 pcf.demdex.net
 pch.tt.omtrdc.net
 pci.pacsun-ingress.inscname.net
@@ -23339,6 +23352,8 @@ pciins-048.inscname.net
 pcl.demdex.net
 pcomprod.112.2o7.net
 pcrl.co
+pcus.marfeelrev.com
+pcusw.marfeelrev.com
 pcworld.share.ntv.io
 pd-v1.presage.io
 pd.ispot.tv
@@ -28188,6 +28203,7 @@ ssl.google-analytics.com
 ssl.google-analytics.comstatic.xx.fbcdn.nett.skimresources.com
 ssl.hb.adx1.com
 ssl.hiconversion.com
+ssl.marfeelcdn.com
 ssl.o.webmd.com
 ssl.pathful.com
 ssl.placelocal.com
@@ -33004,6 +33020,7 @@ www.gosphero.com.pathful.com
 www.greenpage.leadpages.co
 www.gttlj.adx1.com
 www.gumgum.com
+www.gutenbergtest.marfeelcdn.com
 www.gvtsolutions.leadpages.co
 www.gz7.adx1.com
 www.h-bid.com

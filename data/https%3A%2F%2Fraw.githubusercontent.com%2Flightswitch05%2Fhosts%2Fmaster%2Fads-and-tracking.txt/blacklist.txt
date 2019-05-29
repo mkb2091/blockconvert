@@ -223,6 +223,7 @@ ak-is.net
 alb-prod-invenio-1916515004.us-west-2.elb.amazonaws.com
 alb.reddit.com
 alexametrics.com
+alexandria.marfeelcdn.com
 alldcs.outbrain.org
 allinviews.com
 amarillo.logs.roku.com
@@ -382,6 +383,7 @@ b-eu5.stripcdn.com
 b-eu6.stripcdn.com
 b-eu8.stripcdn.com
 b-eu9.stripcdn.com
+b.marfeelcache.com
 b.measuread.com
 b.videoamp.com
 backstage.funnelenvy.com
@@ -1150,6 +1152,7 @@ mattel.tt.omtrdc.net
 maxpoint.com
 maxymiser.net
 mb.moatads.com
+mbid.marfeelrev.com
 mcclatchy.demdex.net
 mcclatchy.sc.omtrdc.net
 md-i-s.apptimize.com
