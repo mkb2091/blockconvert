@@ -188,7 +188,7 @@ class DNSChecker():
             now = cache[domain]
             if not ('*' not in domain
                 and build_regex.DOMAIN_REGEX.fullmatch(domain)
-                and (now[0] in '1' or build_regex.IP_REGEX.fullmatch(now[0]))):
+                and (now[0] == '' or build_regex.IP_REGEX.fullmatch(now[0]))):
                 del cache[domain]
     def save_forward_cache(self):
         self.clean_forward_cache()
