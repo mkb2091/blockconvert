@@ -42,7 +42,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 933667 blocked domains in each of the generated filter lists
+Theres are 859554 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -82,13 +82,9 @@ https://pastebin.com/raw/g8bhsb4G|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/mU2XkjmV|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/mU7abvT9|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/sRzfwfsa|100.0 days|Blacklist|Public Domain
-https://ransomwaretracker.abuse.ch/downloads/LY_C2_IPBL.txt|1.0 days|Blacklist|Free for use without any limitations
-https://ransomwaretracker.abuse.ch/downloads/LY_PS_IPBL.txt|1.0 days|Blacklist|Free for use without any limitations
 https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt|1.0 days|Blacklist|Free for use without any limitations
 https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt|1.0 days|Blacklist|Free for use without any limitations
-https://ransomwaretracker.abuse.ch/downloads/TC_PS_IPBL.txt|1.0 days|Blacklist|Free for use without any limitations
-https://ransomwaretracker.abuse.ch/downloads/TL_C2_IPBL.txt|1.0 days|Blacklist|Free for use without any limitations
-https://ransomwaretracker.abuse.ch/downloads/TL_PS_IPBL.txt|1.0 days|Blacklist|Free for use without any limitations
+https://ransomwaretracker.abuse.ch/downloads/RW_URLBL.txt|1.0 days|Blacklist|Free for use without any limitations
 https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts|1.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json|1.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt|1.0 days|Whitelist|GPLv3+
