@@ -61,6 +61,7 @@ productads.cz
 productads.sk
 recycle-static.zoznam.sk
 reklama.warforum.cz
+reklamy.s3.amazonaws.com
 rival.cz
 salesmanago.pl
 sda.online-systemy.cz
