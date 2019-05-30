@@ -128,6 +128,7 @@ officeclient.microsoft.com
 oneclient.sfx.ms
 outlook.office365.com
 pastebin.com
+pbs.twimg.com
 pornhub.com
 prod.do.dsp.mp.microsoft.com
 pti.store.microsoft.com
@@ -200,6 +201,7 @@ www.alexa.com
 www.answers.com
 www.bing.com
 www.digicert.com
+www.freedownloadmanager.org
 www.google.*
 www.google.co.*
 www.google.com.*
