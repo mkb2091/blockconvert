@@ -42,7 +42,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 861385 blocked domains in each of the generated filter lists
+Theres are 861504 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -78,7 +78,11 @@ https://pastebin.com/raw/5WWQUxEH|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/BiQKjQaK|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/ZzZutnXE|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/a1TPEPfP|100.0 days|Blacklist|Public Domain
+https://pastebin.com/raw/aAcp1cNs|100.0 days|Blacklist|Public Domain
+https://pastebin.com/raw/eJHNbf4W|100.0 days|Blacklist|Public Domain
+https://pastebin.com/raw/f2dd77fR|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/g8bhsb4G|100.0 days|Blacklist|Public Domain
+https://pastebin.com/raw/iGCZ1Vq4|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/jarnEpx5|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/mU2XkjmV|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/mU7abvT9|100.0 days|Blacklist|Public Domain
