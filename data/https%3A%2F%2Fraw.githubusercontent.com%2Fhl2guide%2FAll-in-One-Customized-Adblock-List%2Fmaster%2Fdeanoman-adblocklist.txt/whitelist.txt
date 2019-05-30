@@ -36,6 +36,7 @@ aolcdn.com
 ap.org
 api-cdn.embed.ly
 api.embed.ly
+api.map.baidu.com
 api.ooyala.com
 api.razorpay.com
 api.twisto.cz
@@ -2002,6 +2003,7 @@ optimizely.com
 oregonlive.com
 outlook.com
 p.jwpcdn.com
+paddle.com
 pandacommerce.net
 parastorage.com
 passets-cdn.pinterest.com
@@ -2079,6 +2081,7 @@ s3.amazonaws.com
 s3.graphiq.com
 salesforce.com
 salsalabs.com
+sapi.map.baidu.com
 sbnation.com
 schd.ws
 sched.org
