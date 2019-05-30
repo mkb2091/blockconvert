@@ -79,6 +79,7 @@
 [false, true, false, "https://pastebin.com/raw/5WWQUxEH", 8640000, "Public Domain"]
 [false, true, false, "https://pastebin.com/raw/ZzZutnXE", 8640000, "Public Domain"]
 [false, true, false, "https://pastebin.com/raw/g8bhsb4G", 8640000, "Public Domain"]
+[false, true, false, "https://pastebin.com/raw/jarnEpx5", 8640000, "Public Domain"]
 [false, true, false, "https://pastebin.com/raw/mU7abvT9", 8640000, "Public Domain"]
 [false, true, true, "http://vxvault.net/URL_List.php", 86400, "Copyleft 2010. No rights reserved. "]
 [false, true, true, "https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt", 864000, "Public Domain"]
