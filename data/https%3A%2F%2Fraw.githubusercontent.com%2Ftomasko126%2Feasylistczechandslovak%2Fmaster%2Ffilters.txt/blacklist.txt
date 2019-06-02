@@ -23,6 +23,7 @@ bannersector.sector.sk
 bannery.ccb.cz
 betclick.com
 bidmax.cz
+c.imedia.cz
 campaigns.caroda.io
 chartbeat.com
 chartbeat.net
@@ -67,6 +68,7 @@ salesmanago.pl
 sda.online-systemy.cz
 stat.novinky.cz
 stat.sport.cz
+stat.super.cz
 supersouteze.best4man.cz
 sys.starnets.io
 trackad.cz

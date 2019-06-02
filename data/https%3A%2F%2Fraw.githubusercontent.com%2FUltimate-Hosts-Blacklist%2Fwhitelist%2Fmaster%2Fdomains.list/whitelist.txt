@@ -349,6 +349,7 @@ howtoforge.com
 hulkshare.com
 hulu.com
 i.imgur.com
+i.pinimg.com
 i.s-microsoft.com
 i0.wp.com
 i1.wp.com
@@ -647,6 +648,7 @@ rzeszow.tvp.pl
 s-passets-cache-ak0.pinimg.com
 s-static.ak.facebook.com
 s.gateway.messenger.live.com
+s.pinimg.com
 s.yimg.com
 s.ytimg.com
 s1.symcb.com
@@ -798,6 +800,7 @@ userscloud.com
 userscripts-mirror.org
 userstream.twitter.com
 v.firebog.net
+v.pinimg.com
 variety.com
 vc.yahoo.com
 verisign.com

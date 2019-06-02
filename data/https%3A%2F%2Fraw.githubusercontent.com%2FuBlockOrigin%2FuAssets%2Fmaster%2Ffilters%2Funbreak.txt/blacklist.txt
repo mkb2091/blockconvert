@@ -19,6 +19,7 @@ optimizely.com
 outbrain.com
 pagefair.com
 quantcast.com
+scroll.com
 smartlook.com
 smartsuppchat.com
 statcounter.com

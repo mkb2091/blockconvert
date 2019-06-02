@@ -521,6 +521,7 @@ cdn-105.statdynamic.com
 cdn-2.convertexperiments.com
 cdn-3.convertexperiments.com
 cdn-highwinds.unityads.unity3d.com
+cdn-magiclinks.trackonomics.net
 cdn-media.brightline.tv
 cdn-s-optional.optimizely.com
 cdn-usent.kampyle.com
@@ -956,7 +957,6 @@ htlbid.com
 hulu.sc.omtrdc.net
 hyatt.demdex.net
 hyattcorporation.tt.omtrdc.net
-hz57.online
 i.ads.roku.com
 i.clean.gg
 i.haloapps.com
@@ -1063,7 +1063,6 @@ keywordblocks.com
 kidswithfoodallergies.cdn.adglare.net
 kidswithfoodallergies.engine.adglare.net
 kochava.com
-krk.kargo.com
 kroger.sc.omtrdc.net
 kroger.tt.omtrdc.net
 kvinit-prod.api.kochava.com
@@ -1343,7 +1342,6 @@ ns2.stripcdn.com
 ns3.stripcdn.com
 ns4.stripcdn.com
 ntellicast.com
-nuggad.net
 null.cdn4.forter.com
 nym1-ib.adnxs.com
 o.ibotta.com
@@ -1377,7 +1375,6 @@ origin-5.extole.io
 origin.extole.io
 ortshk.tapas.net
 outbrain.com
-outbrain.org
 outcome-cdn.supersonicads.com
 p.ads.roku.com
 p.cquotient.com
@@ -1826,8 +1823,10 @@ syndicaster.wpengine.com
 syndication.site.yahoo.net
 syndication.twitter.com
 system.picreel.com
+t.agentanalytics.com
 t.ambra.com
 t.appsflyer.com
+t.update.adsrvr.org
 t.visto1.net
 t1.re
 tabmo.io
@@ -1913,6 +1912,7 @@ tracking.weiboniu.com
 tracking.wpnetwork.eu
 tracking.yeehbuy.com
 trackjs.com
+trackonomics.net
 trackverify.com
 traffic.adxprtz.com
 traffic.club
@@ -1965,6 +1965,7 @@ us-east-tlx.3lift.com
 us-u.openx.net
 us.tags.newscgp.com
 us5.campaign-archive.com
+usabilla.com
 usasync01.admantx.com
 usatodaysports-d.openx.net
 usc.adserver.snapads.com
@@ -1995,7 +1996,6 @@ verizonwireless.112.2o7.net
 verizonwireless.demdex.net
 vice-useast.gscontxt.net
 vice-web-statics-cdn.vice.com
-vicedata.com
 vicinity-marketing.com
 vid-io.springserve.com
 vid.springserve.com
@@ -2029,6 +2029,7 @@ vpc-prod-adsdk-lb-0-564898962.us-east-1.elb.amazonaws.com
 vt.myvisualiq.net
 vuble.tv
 vungle.com
+w.usabilla.com
 w2.yotpo.com
 w3.cdn.anvato.net
 walker.zdbb.net

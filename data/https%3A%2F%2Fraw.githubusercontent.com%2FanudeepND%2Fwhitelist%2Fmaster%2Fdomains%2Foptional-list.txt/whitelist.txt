@@ -19,6 +19,7 @@ assets.adobedtm.com
 bit.ly
 cdn-mobile.api.pluto.tv
 cdn.fbsbx.com
+cdn.refersion.com
 cdn.samsungcloudsolution.com
 cdn1.smartadserver.com
 cdns.gigya.com
@@ -72,6 +73,7 @@ lotustalk.com
 m.weeklyad.target.com
 manifest.auditude.com
 media.sbs.com.au
+openload.co
 ota-downloads.nvidia.com
 ow.ly
 pgl.yoyo.org
@@ -81,6 +83,7 @@ pmd.cdn.turner.com
 prod.telemetry.ros.rockstargames.com
 raw.githubusercontent.com
 redirector.googlevideo.com
+refersion.com
 resources.sbs.com.au
 s.cdn.turner.com
 s.zkcdn.net
@@ -96,6 +99,7 @@ siloh.pluto.tv
 someonewhocares.org
 sqs.us-east-1.amazonaws.com
 ssl.google-analytics.com
+stats.streamelements.com
 stitcher.pluto.tv
 sysctl.org
 time.samsungcloudsolution.com
@@ -109,7 +113,9 @@ www.adf.ly
 www.bit.ly
 www.google-analytics.com
 www.lotustalk.com
+www.openload.co
 www.ow.ly
+www.refersion.com
 www.sbs.com.au
 z.cdn.turner.com
 zeustracker.abuse.ch
