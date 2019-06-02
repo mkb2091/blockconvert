@@ -42,7 +42,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 887347 blocked domains in each of the generated filter lists
+Theres are 887376 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -75,17 +75,20 @@ https://hostsfile.mine.nu/hosts0.txt|1.0 days|Blacklist|GPLv3
 https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt|1.0 days|Blacklist|CC-BY-SA-4.0
 https://pastebin.com/raw/0vSxs719|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/5WWQUxEH|100.0 days|Blacklist|Public Domain
+https://pastebin.com/raw/9QAxNkaS|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/BiQKjQaK|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/ZzZutnXE|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/a1TPEPfP|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/aAcp1cNs|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/eJHNbf4W|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/f2dd77fR|100.0 days|Blacklist|Public Domain
+https://pastebin.com/raw/ffDu8u46|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/g8bhsb4G|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/iGCZ1Vq4|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/jarnEpx5|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/mU2XkjmV|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/mU7abvT9|100.0 days|Blacklist|Public Domain
+https://pastebin.com/raw/pkZ0TBnc|100.0 days|Blacklist|Public Domain
 https://pastebin.com/raw/sRzfwfsa|100.0 days|Blacklist|Public Domain
 https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt|1.0 days|Blacklist|Free for use without any limitations
 https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt|1.0 days|Blacklist|Free for use without any limitations
