@@ -1216,7 +1216,6 @@ adserver.mx
 adserver.name
 adserver.network
 adserver.news
-adserver.ng
 adserver.nl
 adserver.no
 adserver.one
@@ -6354,8 +6353,6 @@ ffrsfowwxtlbu.com
 fglwxjklf.com
 fgvjjulaegidb.com
 fhqornueunf.com
-fhyl02.com
-fhyl04.com
 fichierload.fr
 fieejwanbrv.com
 fifa14-hack-players.biz
@@ -10532,11 +10529,9 @@ mstat.acestream.net
 mstrlytcs.com
 msxblpointscodes.com
 mta82.a.hashgains.com
-mta83.a.hashgains.com
-mta84.a.hashgains.com
+mta85.a.hashgains.com
 mta86.a.hashgains.com
 mta87.a.hashgains.com
-mta88.a.hashgains.com
 mta89.a.hashgains.com
 mta90.a.hashgains.com
 mta91.a.hashgains.com
@@ -10687,7 +10682,6 @@ mywebstats.org
 mznijqwjkqadk.com
 n.cur.lv
 n.mailfire.io
-n.yunshipei.com
 n121adserv.com
 n123loi.com
 n156adserv.com
@@ -11318,7 +11312,6 @@ ozkwhjzmboti.com
 ozogame.com
 ozssctuyet.com
 p-td.com
-p.aty.sohu.com
 p.delivery.net
 p.estream.to
 p.gazeta.pl
