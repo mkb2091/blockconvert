@@ -141,6 +141,7 @@ quora.com
 ransomwaretracker.abuse.ch
 raw.githubusercontent.com
 reddit.com
+returnpath.com
 ris-prod-atm.trafficmanager.net
 ris.api.iris.microsoft.com
 ris.api.iris.microsoft.com.akadns.net
