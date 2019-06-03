@@ -224,6 +224,7 @@ ebayrtm.com
 ebaystatic.com
 ec-ns.sascdn.com
 echo.edge.messenger.live.com
+ecx.images-amazon.com
 edgesuite.net
 eds.xboxlive.com
 embed.flowplayer.org
@@ -364,6 +365,10 @@ ifmo.ru
 ikea.com
 image.ibb.co
 imagebam.com
+images-cn.ssl-images-amazon.com
+images-eu.ssl-images-amazon.com
+images-fe.ssl-images-amazon.com
+images-na.ssl-images-amazon.com
 images.google.com
 images2.imgbox.com
 imasdk.googleapis.com
@@ -868,6 +873,7 @@ yt3.ggpht.com
 ytimg.com
 ytimg.l.google.com
 yunfile.com
+z-ecx.images-amazon.com
 zajefajna.com
 zeustracker.abuse.ch
 zippyshare.com
