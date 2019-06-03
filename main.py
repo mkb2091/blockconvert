@@ -50,7 +50,6 @@ def main():
     for (path, func) in [('domains.txt', blocklist.to_domain_list),
                          ('adblock.txt', blocklist.to_adblock),
                          ('hosts.txt', blocklist.to_hosts),
-                         ('PrivacyBadger.json', blocklist.to_privacy_badger),
                          ('domains.rpz', blocklist.to_rpz),
                          ]:
         with open(os.path.join('output', path), 'w') as file:

@@ -155,11 +155,6 @@ class BlockList():
         return '\n'.join(['||%s^' % i for i in sorted(self.blacklist)])
     def to_hosts(self):
         return '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blacklist)])
-    def to_privacy_badger(self):
-        base = '{"action_map":{%s},"snitch_map":{%s}, "settings_map":{}}'
-        url_string = '"%s":{"heuristicAction":"block"}'
-        return base % (',\n'.join([url_string % i for i in sorted(self.blacklist)]),
-                       ',\n'.join(['"%s":[1,2,3]' % (i) for i in sorted(self.blacklist)]))
     def to_rpz(self):
         return '\n'.join(['%s CNAME .' % i for i in sorted(self.blacklist)])
     def clear(self):
