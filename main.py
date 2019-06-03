@@ -14,9 +14,13 @@ def main():
     urls = []
     with open('urls.txt') as file:
         for line in file.read().splitlines():
-            (list_type, match_url, do_reverse_dns, url, expires, list_license) = json.loads(line)
-            urls.append((list_type, match_url, do_reverse_dns, url, expires, list_license))
+            try:
+                (list_type, match_url, do_reverse_dns, url, expires, list_license) = json.loads(line)
+                urls.append((list_type, match_url, do_reverse_dns, url, expires, list_license))
+            except json.JSONDecodeError:
+                pass
     with open('urls.txt', 'w') as file:
+        file.write('Is Whitelist|match url|do reverse_dns|url|expires|license\n')
         file.write('\n'.join(sorted(set([json.dumps(i) for i in urls]))))
     start = time.time()
     manager = download.DownloadManager()
