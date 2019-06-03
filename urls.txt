@@ -31,6 +31,7 @@
 [false, false, false, "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt", 86400, "MIT"]
 [false, false, false, "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt", 86400, "CC-BY-SA-4"]
 [false, false, false, "https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List", 172800, "GPLv3"]
+[false, false, false, "https://raw.githubusercontent.com/SlashArash/adblockfa/master/adblockfa.txt", 432000, "The Beer-Ware License"]
 [false, false, false, "https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt", 172800, "Permission to modify, copy and distribute"]
 [false, false, false, "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts", 86400, "MIT"]
 [false, false, false, "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt", 86400, "MIT"]

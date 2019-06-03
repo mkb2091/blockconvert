@@ -40,7 +40,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 887380 blocked domains in each of the generated filter lists
+Theres are 887437 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -101,6 +101,7 @@ https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt|1.
 https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt|1.0 days|Blacklist|MIT
 https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt|1.0 days|Blacklist|CC-BY-SA-4
 https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List|2.0 days|Blacklist|GPLv3
+https://raw.githubusercontent.com/SlashArash/adblockfa/master/adblockfa.txt|5.0 days|Blacklist|The Beer-Ware License
 https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt|2.0 days|Blacklist|Permission to modify, copy and distribute
 https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts|1.0 days|Blacklist|MIT
 https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list|1.0 days|Whitelist|MIT
