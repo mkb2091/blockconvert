@@ -40,7 +40,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 886522 blocked domains in each of the generated filter lists
+Theres are 886562 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -117,6 +117,7 @@ https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_
 https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt|1.0 days|Blacklist|MIT
 https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt|1.0 days|Blacklist|MIT
 https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt|1.0 days|Blacklist|GPLv3
+https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt|5.0 days|Blacklist|The Unlicense
 https://raw.githubusercontent.com/greatis/Anti-WebMiner/master/blacklist.txt|1.0 days|Blacklist|Apache2
 https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscriptions/abpindo.txt|1.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt|2.0 hours|Blacklist|MIT
