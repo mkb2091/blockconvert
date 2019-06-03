@@ -1,8 +1,7 @@
 TITLE = '# BlockConvert'
 DESCRIPTION = (
     'Tool for generating blacklists in domain list format/host file format/'
-    ' adblockplus style format/privacy badger style format(not really advised since it'
-    ' is far larger than the files it expects to use)/DNS Response Policy Zone format.'
+    ' adblockplus style format/DNS Response Policy Zone format.'
     '\n\nIt merges filter lists from many different sources(the list is in urls.txt and below),'
     ' and tries to convert it into a list of blockable domains.'
     ' It then uses dns to lookup all of those domains to check if they actually exist,'
@@ -34,7 +33,6 @@ LINKS = '\n\n'.join((
     'Adblock Plus style blocklist:  https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/adblock.txt',
     'Hosts file style blocklist: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/hosts.txt',
     'List of blocked domains: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.txt',
-    'Blocklist for use in Privacy Badger(takes a while to import): https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/PrivacyBadger.json',
     'DNS Response Policy Zone file: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz',
     'URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/urls.txt',
     ))
