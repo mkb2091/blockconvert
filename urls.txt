@@ -1,3 +1,4 @@
+Is Whitelist|match url|do reverse_dns|url|expires|license
 [false, false, false, "https://adaway.org/hosts.txt", 86400, "CC-BY-3"]
 [false, false, false, "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt", 86400, "GPLv3"]
 [false, false, false, "https://better.fyi/blockerList.txt", 86400, "CC-BY-SA-4.0"]
