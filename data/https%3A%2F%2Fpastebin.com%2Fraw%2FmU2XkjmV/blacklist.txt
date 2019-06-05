@@ -109,6 +109,7 @@ ad.keenspace.com
 ad.leadbolt.net
 ad.liveinternet.ru
 ad.lupa.cz
+ad.mediastorm.hu
 ad.mgd.de
 ad.musicmatch.com
 ad.nachtagenten.de
@@ -180,6 +181,7 @@ adcell.de
 adcenter.mdf.se
 adcenter.net
 adcentriconline.com
+adcept.net
 adclick.com
 adclient.uimserv.net
 adclient1.tucows.com
@@ -288,6 +290,7 @@ adperium.com
 adpia.vn
 adplus.co.id
 adplxmd.com
+adprofile.net
 adrazzi.com
 adreactor.com
 adreclaim.com
@@ -463,6 +466,7 @@ ads.kinobox.cz
 ads.kinxxx.com
 ads.kompass.com
 ads.krawall.de
+ads.lesbianpersonals.com
 ads.linkedin.com
 ads.linuxfoundation.org
 ads.livenation.com
@@ -517,7 +521,6 @@ ads.psd2html.com
 ads.pushplay.com
 ads.quoka.de
 ads.rcs.it
-ads.recoletos.es
 ads.rediff.com
 ads.redlightcenter.com
 ads.redtube.com
@@ -589,6 +592,7 @@ ads1.canoe.ca
 ads1.mediacapital.pt
 ads1.msn.com
 ads1.rne.com
+ads1.virtual-nights.com
 ads10.speedbit.com
 ads180.com
 ads2-adnow.com
@@ -633,7 +637,6 @@ adserv.gamezone.de
 adserve.ams.rhythmxchange.com
 adserver.71i.de
 adserver.adultfriendfinder.com
-adserver.aidameter.com
 adserver.aol.fr
 adserver.beggarspromo.com
 adserver.betandwin.de
@@ -691,6 +694,7 @@ adsfac.net
 adsfac.us
 adshost1.com
 adside.com
+adsk2.co
 adskape.ru
 adsklick.de
 adsmarket.com
@@ -743,6 +747,7 @@ adv.yo.cz
 advariant.com
 adventory.com
 advert.bayarea.com
+advert.dyna.ultraweb.hu
 adverticum.com
 adverticum.net
 adverticus.de
@@ -863,6 +868,7 @@ audienceinsights.com
 audit.median.hu
 audit.webinform.hu
 auto-bannertausch.de
+autohits.dk
 avenuea.com
 avocet.io
 avpa.javalobby.org
@@ -939,7 +945,6 @@ banners.isoftmarketing.com
 banners.linkbuddies.com
 banners.passion.com
 banners.resultonline.com
-banners.sexsearch.com
 banners.sys-con.com
 banners.thomsonlocal.com
 banners.videosz.com
@@ -1073,7 +1078,6 @@ checkm8.com
 checkstat.nl
 chestionar.ro
 chiefcurrent.com
-chitika.net
 chocoslim.pro
 christingel.com
 chungcuvinhomes.org
@@ -1085,6 +1089,7 @@ cjlog.com
 claria.com
 class-act-clicks.com
 clearbid.uberads.com
+click.absoluteagency.com
 click.fool.com
 click.kmindex.ru
 click2freemoney.com
@@ -1109,6 +1114,7 @@ clicks.equantum.com
 clicks.mods.de
 clickserve.cc-dt.com
 clicksor.com
+clicktag.de
 clickthruserver.com
 clickthrutraffic.com
 clicktrace.info
@@ -1122,6 +1128,7 @@ clicmanager.fr
 clientmetrics-pa.googleapis.com
 clikerz.net
 cliksolution.com
+clixgalore.com
 clk.konflab.com
 clkads.com
 clkrev.com
@@ -1142,6 +1149,7 @@ commissionmonster.com
 compactbanner.com
 comprabanner.it
 concernrain.com
+confirmed-profits.com
 connatix.com
 connextra.com
 contaxe.de
@@ -1255,10 +1263,13 @@ doublepimp.com
 doubtfulrainstorm.com
 dragzebra.com
 drumcash.com
+dxtrack22.info
 dxtrack55.info
 dynamic.fmpub.net
 e-adimages.scrippsnetworks.com
 e-bannerx.com
+e-debtconsolidation.com
+e-m.fr
 e-n-t-e-r-n-e-x.com
 e-planning.net
 e.kde.cz
@@ -1348,6 +1359,7 @@ firstlightera.com
 fitospray.me
 flashtalking.com
 flavordecision.com
+flekosteel.me
 fleshlightcash.com
 flexbanner.com
 floodprincipal.com
@@ -1383,7 +1395,6 @@ gamesites100.net
 gamesites200.com
 gamesitestop100.com
 gator.com
-gbanners.hornymatches.com
 gemius.pl
 geo.digitalpoint.com
 geobanner.adultfriendfinder.com
@@ -1517,6 +1528,7 @@ intelliads.com
 intellitxt.com
 internetfuel.com
 interreklame.de
+interstat.hu
 ip.ro
 ip193.cn
 iperceptions.com
@@ -1549,9 +1561,9 @@ keymedia.hu
 kindads.com
 kissmetrics.com
 kliks.nl
-kniverto.com
 komoona.com
 kontera.com
+kt-g.de
 ktu.sv2.biz
 lacerta.space
 lakequincy.com
@@ -1614,7 +1626,6 @@ marketing.hearstmagazines.nl
 marketing.nyi.net
 marketing.osijek031.com
 marketingsolutions.yahoo.com
-maroonspider.com
 mas.sector.sk
 mastermind.com
 matchcraft.com
@@ -1672,6 +1683,7 @@ ml314.com
 mlm.de
 mmtro.com
 moatads.com
+mob.system-onlline.com
 mobclix.com
 moggattice.com
 money4exit.de
@@ -1736,7 +1748,6 @@ ng3.ads.warnerbros.com
 nitroclicks.com
 novem.pl
 nowths.info
-nuggad.net
 numax.nu-1.com
 nuseek.com
 oas.benchmark.fr
@@ -1841,7 +1852,6 @@ playmobileads.com
 plista.com
 plugrush.com
 pointroll.com
-pop-under.ru
 popads.net
 popflawlessads.com
 popub.com
@@ -2003,12 +2013,12 @@ scrubswim.com
 sdad.guru
 sdk.persona.ly
 searchmarketing.com
+searchramp.com
 secure.webconnect.net
 sedoparking.com
 sedotracker.com
 sendmepixel.com
 sensismediasmart.com.au
-seo4india.com
 separatesilver.com
 serv0.com
 servedbyadbutler.com
@@ -2149,7 +2159,6 @@ textad.sexsearch.com
 textlinks.com
 tfag.de
 theadhost.com
-theads.me
 thebugs.ws
 thecounter.com
 therapistla.com

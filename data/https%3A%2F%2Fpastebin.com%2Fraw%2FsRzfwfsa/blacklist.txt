@@ -2,6 +2,7 @@
 api.blogdns.com
 b.cortanazone.com
 background.ristians.com
+beta.officopedia.com
 blog.artinhauvin.com
 bluesky2018man.com
 cdn.eworldship-news.com
@@ -13,7 +14,7 @@ enum.arkoorr.com
 eworldship-news.com
 kingsoftcdn.com
 mappingpotentials.com
-online.stienollmache.xyz
+open.betaoffice.net
 p12.alerentice.com
 pong.dynathome.net
 rio.imbandaad.com
