@@ -24,7 +24,6 @@ alflying.win
 alpha.nimiqpool.com
 altavista.ovh
 analytics.blue
-andlache.com
 anybest.host
 anybest.pw
 anybest.site
@@ -81,6 +80,7 @@ de-mi-nis-ner2.info
 de1.eu.nimiqpool.com
 dexim.space
 djfhwosjck.bid
+dl.browsermine.com
 dubester.pw
 dubester.site
 dubester.space
@@ -172,25 +172,6 @@ mine.nahnoji.cz
 mine.terorie.com
 mine.torrent.pw
 minemytraffic.com
-miner-1.team.nimiq.agency
-miner-10.team.nimiq.agency
-miner-11.team.nimiq.agency
-miner-12.team.nimiq.agency
-miner-13.team.nimiq.agency
-miner-14.team.nimiq.agency
-miner-15.team.nimiq.agency
-miner-16.team.nimiq.agency
-miner-17.team.nimiq.agency
-miner-18.team.nimiq.agency
-miner-19.team.nimiq.agency
-miner-2.team.nimiq.agency
-miner-3.team.nimiq.agency
-miner-4.team.nimiq.agency
-miner-5.team.nimiq.agency
-miner-6.team.nimiq.agency
-miner-7.team.nimiq.agency
-miner-8.team.nimiq.agency
-miner-9.team.nimiq.agency
 miner-deu-1.inf.nimiq.network
 miner-deu-2.inf.nimiq.network
 miner-deu-3.inf.nimiq.network
@@ -253,6 +234,7 @@ p.estream.to
 panelsave.com
 papoto.com
 party-vqgdyvoycc.now.sh
+pdheuryopd.loan
 pertholin.com
 play.besstahete.info
 play.cc.gofile.io
@@ -414,8 +396,8 @@ silimbompom.com
 site.flashx.cc
 smartoffer.site
 sparechange.io
-sparnove.com
 statdynamic.com
+static.browsermine.com
 static.sparechange.io
 staticsfs.host
 stone2.authcaptcha.com
@@ -447,6 +429,7 @@ tulip18.com
 unrummaged.com
 uoldid.ru
 us.cfcdist.loan
+vcfs6ip5h6.bid
 verifier.live
 verresof.com
 video.streaming.estream.to
@@ -465,6 +448,7 @@ wm.yololike.space
 wordc.ga
 wp-monero-miner.de
 wpcdn1.herokuapp.com
+ws.browsermine.com
 wss.nablabee.com
 wss.rand.com.ru
 wtm.monitoringservice.co

@@ -197,6 +197,7 @@ easyresearch.se
 edge.quantserve.com
 elasticad.net
 eteppy.com
+eu.npario-inc.net
 eu2.madsone.com
 europe-west1-bonnier-big-data.cloudfunctions.net
 exitintel.com
@@ -299,7 +300,6 @@ newstats.blogg.se
 nexus.ensighten.com
 nichehuset.dk
 nompakru.click
-nordicfynd.se
 norranstats.azurewebsites.net
 norrteljetidning.ecsanalytics.com
 norstatsurveys.com
@@ -480,6 +480,7 @@ www.curemedia.se
 www.hmads.se
 www.nichehuset.dk
 www.npttech.com
+www.resultify.com
 www.statcounter.com
 www.tourn.se
 www8.smartadserver.com

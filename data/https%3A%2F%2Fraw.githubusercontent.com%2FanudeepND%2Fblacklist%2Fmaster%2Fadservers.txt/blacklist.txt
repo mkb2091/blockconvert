@@ -16,7 +16,6 @@
 01-dc-den2.ad.corp.appnexus.com
 01-dc-nym1.test.corp.appnexus.com
 01-ddpe-fe-nym2.corp.appnexus.com
-01-ddpe-nym2.ad.corp.appnexus.com
 01-exch-den2.ad.corp.appnexus.com
 01-exch-lax1.ad.corp.appnexus.com
 01-exchange.test.corp.appnexus.com
@@ -5978,6 +5977,7 @@ aftonbladet.se.d1.sc.omtrdc.net
 aftonbladet.se.ssl.d1.sc.omtrdc.net
 ag.innovid.com
 ag.tags.crwdcntrl.net
+ag2hqdyt.site
 agaadex.adk2x.com
 agattout.inq.com
 agattout.touchcommerce.com
@@ -8285,6 +8285,7 @@ car-newcarscom.t.domdex.com
 carambo.la
 carambola-d.openx.net
 caravaning.de.intellitxt.com
+carbonads.com
 carbonmedia-d.openx.net
 carbuzz.t.domdex.com
 cardiff.qualtrics.com
@@ -8585,6 +8586,7 @@ cdn.bizible.com
 cdn.branch.io
 cdn.bss.wshareit.com
 cdn.c.smartclick.net
+cdn.carbonads.com
 cdn.chuknu.sokrati.com
 cdn.clck-01.online
 cdn.clicktale.net
@@ -9814,7 +9816,6 @@ d-toys.t.domdex.com
 d-tvnetwork.t.domdex.com
 d-vitamins.t.domdex.com
 d-watercraft.t.domdex.com
-d.aa.online-metrix.net
 d.adgear.com
 d.adroll.com
 d.adx.io
@@ -11179,6 +11180,7 @@ engagebdr.sync.go.sonobi.com
 engine-dsa.fyber.com
 engine.4dsply.com
 engine.addroplet.com
+engine.carbonads.com
 engine.fyber.com
 engine.mobileapptracking.com
 engine.spotscenered.info
@@ -11687,6 +11689,7 @@ fairway.qualtrics.com
 fairwaysolitaire.tlnk.io
 fakecell.sys.miui.com
 falabella.demdex.net
+fallbacks.carbonads.com
 fallingfalcon.com
 famecastlive3.112.2o7.net
 famedigitalasiapteltd.hb.omtrdc.net
@@ -13944,6 +13947,7 @@ idash.appier.net
 idc.az1.qualtrics.com
 idcourts.qualtrics.com
 ideahack.unbounce.com
+ideas.viglink.com
 idec.actonsoftware.com
 identity.zedo.com
 identiv.actonsoftware.com
@@ -14453,7 +14457,6 @@ ipd.videoplaza.tv
 iphone-magazine.de.intellitxt.com
 iphonefaq.us.intellitxt.com
 iphoneteam.de.intellitxt.com
-iplua.o.xoxknct.com
 ipruc.co1.qualtrics.com
 iptools.su
 ipwdx.voluumtrk.com
@@ -15448,7 +15451,6 @@ libs.outbrain.com
 libtax.actonsoftware.com
 lidea-today.b.appier.net
 lie2anyone.com
-liebao.us-uplive.ks-cdn.com
 lieferheldde.widget.criteo.com
 lifed.media.net
 lifelock.co1.qualtrics.com
@@ -17339,7 +17341,6 @@ nl-sbs.a.videoplaza.tv
 nl-sbs.cdn.videoplaza.tv
 nl-sbs.videoplaza.tv
 nl.act-on.com
-nl.clickability.com
 nl.exoclick.com
 nl2.clickability.com
 nlcu.on.ca.102.112.2o7.net
@@ -22902,6 +22903,7 @@ stedwards.qualtrics.com
 steelcase.co1.qualtrics.com
 steepto.com
 stefanini2.actonsoftware.com
+stencef.com
 stepstone.d1.sc.omtrdc.net
 stepstoneb2bbe.widget.criteo.com
 stepstonede.widget.criteo.com
@@ -26057,7 +26059,6 @@ www.4dsply.com
 www.9apps.com
 www.9dot9.in
 www.a-ads.com
-www.a.shifen.com
 www.a8.net
 www.aarth.com
 www.accountkit.com
@@ -26173,6 +26174,7 @@ www.buysellads.com
 www.buzzadnetwork.com
 www.buzzclicks.com
 www.carambo.la
+www.carbonads.com
 www.catalina.com
 www.cdn.reporo.net
 www.cert.br
@@ -26250,6 +26252,7 @@ www.forum.admitad.com
 www.fqtag.com
 www.free-counters.co.uk
 www.freedomrewardz.com
+www.frefxzrmcdxdmi.com
 www.friendlyduck.com.prx.proxywebsite.co.uk
 www.fwmrm.net
 www.fyber.com
@@ -26404,6 +26407,7 @@ www.sc.pages03.net
 www.scorecardresearch.com
 www.segment.com
 www.segment.io
+www.sfmzbrdtse.com
 www.sheshine.com
 www.shoelace.com
 www.siliconanalytics.com
@@ -26503,6 +26507,7 @@ www.zapr.in
 www.zedo.com
 www.zeotap.com
 www.ziffdavis697674298673.moatads.com
+www.zukxd6fkxqn.com
 www02.clicktale.net
 www03.clicktale.net
 www04.clicktale.net
