@@ -4259,6 +4259,7 @@ a.ia1.scorecardresearch.com
 a.innovid.com
 a.intentmedia.net
 a.jsrdn.com
+a.klaviyo.com
 a.localytics.com
 a.m.adnxs.com
 a.mailmunch.co
@@ -7304,6 +7305,7 @@ adsr-lx.vindicosuite.com
 adsrv3.midasplayer.com
 adsrvr.org
 adssl-dc2.adtech.de
+adssyscom.com
 adstats-shadow.snapads.com
 adstats.snapads.com
 adstxt.adnxs.com
@@ -8618,6 +8620,7 @@ app.instartlogic.com
 app.intercom.io
 app.intuit.launchdarkly.com
 app.jivox.com
+app.keywee.co
 app.lfstmedia.com
 app.lisnr.com
 app.marchex.io
@@ -8669,6 +8672,7 @@ app.whoisvisiting.com
 app.wootric.com
 app2.mopub.com
 app2.shopkick.com
+app3.keywee.co
 appapi.adsafeprotected.com
 apparound.count.ly
 appassets.clickfunnels.com
@@ -9940,6 +9944,7 @@ bload.sumo.com
 blobs.omnitagjs.com
 blockchain.metaps.com
 blockshopper-d.openx.net
+blog-elb.fast.klaviyo.com
 blog-hanger.autopilothq.com
 blogde.taboola.com
 blogdevalor.leadpages.co
@@ -10891,6 +10896,7 @@ cdn.installfarm.com
 cdn.iubenda.com
 cdn.jivox.com
 cdn.kampyle.com
+cdn.keywee.co
 cdn.krxd.net
 cdn.levelaccess.net
 cdn.lfstmedia.com
@@ -12646,7 +12652,6 @@ cz40.mta.exacttarget.com
 cz44.mta.exacttarget.com
 czgta.adx1.com
 czilladx.com
-d.aa.online-metrix.net
 d.admp.io
 d.adroll.com
 d.agkn.com
@@ -14117,6 +14122,7 @@ email.iubenda.com
 email.jivox.com
 email.kampyle.com
 email.keen.io
+email.keywee.co
 email.kochava.com
 email.mail.engagio.com
 email.mail.rollbar.com
@@ -15162,6 +15168,7 @@ farmers.yext.com
 farmjournal.mktoweb.com
 farmkingqa.midasplayer.com
 farmrs.glancecdn.net
+fast.a.klaviyo.com
 fast.aaas.demdex.net
 fast.adobe.demdex.net
 fast.aexp.demdex.net
@@ -16162,6 +16169,7 @@ gigamon.mktoweb.com
 gigamon.sc.omtrdc.net
 gigamon.tt.omtrdc.net
 gilbert.logs.roku.com
+gilda.keywee.co
 gillette-on-demand.extole.io
 giorgioarmanigroup-mkt-prod1-lb.campaign.adobe.com
 giorgiotavazza.clickfunnels.com
@@ -17467,6 +17475,7 @@ idds.ad.gt
 ideacellularlimited.sc.omtrdc.net
 idealindustries.campaign.adobe.com
 ideas.bronto.com
+ideas.engagio.com
 ideas.pardot.com
 idempty.manimir.hop.clickbank.net
 identify.api.drift.com
@@ -18077,6 +18086,7 @@ integration.newrelic.com
 integration.sharethrough.com
 integrations-api.service.newrelic.com
 integrations.atom.adjust.com
+integrations.klaviyo.com
 integriscu.ca.102.112.2o7.net
 intel.az1.qualtrics.com
 intel.tt.omtrdc.net
@@ -18106,6 +18116,7 @@ interlinebrands.tt.omtrdc.net
 intermarket.grapeshot.co.uk
 intermedia.qualtrics.com
 internal.fullstory.com
+internal.klaviyo.com
 internal.pushspring.com
 internal.revcontent.com
 internal.sizmek.com
@@ -18805,6 +18816,7 @@ keymaker.go.sonobi.com
 keynotesystemsinc.mktoweb.com
 keyrusbelgiumnvpartnersandbox.d3.sc.omtrdc.net
 keys.gmial.com
+keywee.co
 keywordblocks.com
 kfforsikring.containers.piwik.pro
 kfforsikring.piwik.pro
@@ -18844,6 +18856,7 @@ kiwicollection.com.pathful.com
 kkbd.adj.st
 kkeu.122.207.net
 klausjanschuetz.leadpages.co
+klaviyo.com
 kleinanzeigen-d.openx.net
 kleyntrucks.containers.piwik.pro
 kleyntrucks.piwik.pro
@@ -19571,6 +19584,7 @@ logger-prod-us-east-1-vpc-alb-1251201355.us-east-1.elb.amazonaws.com
 logger.adotmob.com
 logger.adthrive.com
 logger.kargo.com
+logger.keywee.co
 logger.krxd.net
 logger.snackly.co
 loggerhead.omnitagjs.com
@@ -21698,7 +21712,6 @@ netpromoter.getambassador.com
 netseer-d.openx.net
 netseer.com
 netshoes.demdex.net
-netsprintgroup.mgr.consensu.org
 netstorage.taboola.com
 netstoragetest.media.net
 netsuite.d1.sc.omtrdc.net
@@ -22956,6 +22969,7 @@ p1.zemanta.com
 p13n-results-api.optimizely.com
 p13nlog.dz.optimizely.com
 p2.chartboost.com
+p2.keywee.co
 p2.placed.com
 p24-buy.itunes.apple.complay.itunes.apple.comrtb.vindicosuite.com
 p3.chartboost.com
@@ -23024,6 +23038,7 @@ pages.getambassador.com
 pages.github.exacttarget.com
 pages.instartlogic.com
 pages.kampyle.com
+pages.keywee.co
 pages.localytics.com
 pages.optimizely.com
 pages.pd1.s1.qa2.exacttarget.com
@@ -23143,6 +23158,7 @@ partners.chartboost.com
 partners.drawbrid.ge
 partners.fullstory.com
 partners.getambassador.com
+partners.klaviyo.com
 partners.marketolive.com
 partners.pardot.com
 partners.piwik.pro
@@ -23685,6 +23701,7 @@ pixel.impresionesweb.com
 pixel.inbox.et.returnpath.net
 pixel.inbox.exacttarget.com
 pixel.intelsad.com
+pixel.keywee.co
 pixel.kiitties.com
 pixel.leadnationmedia.com
 pixel.marketing
@@ -24188,6 +24205,7 @@ proceed.aweber.com
 prod-adidas.instana.io
 prod-api-dns-lb.airfind.com
 prod-aso-lb-v1.us-east-1d.kube.fiksu.com
+prod-blog-cache.klaviyo.com
 prod-cluster-ingress.quantummetric.com
 prod-do-dns-lb.airfind.com
 prod-hzeu-rtb-anthill-app-1.datamind.ru
@@ -24503,6 +24521,7 @@ push.ad-pixel.com
 push.content-ad.net
 push.demo.pardot.com
 push.dev.pardot.com
+push.klaviyo.com
 push.pardot.com
 push.revcontent.com
 push.vizury.com
@@ -25371,6 +25390,7 @@ reports.doubleclick.com
 reports.fgl.com
 reports.inmobi.com
 reports.internal.outbrain.com
+reports.keywee.co
 reports.leadnationmedia.com
 reports.outbrain.com
 reports.sizmek.com
@@ -27847,6 +27867,7 @@ sonar.adswizz.com
 sonarqube.pubocean.com
 sondheim.appboy.com
 sonet.demdex.net
+sonic.klaviyo.com
 sonic.rubiconproject.com
 sonja.clickfunnels.com
 sonoa.aweber.com
@@ -28552,6 +28573,7 @@ static.innovid.com
 static.installfarm.com
 static.intercomcdn.com
 static.jp.as.criteo.net
+static.klaviyo.com
 static.kochava.com
 static.lakana.com
 static.lytics.io
@@ -28663,6 +28685,7 @@ status.fullstory.com
 status.intercom.io
 status.internal.outbrain.com
 status.keen.io
+status.klaviyo.com
 status.localytics.com
 status.marketo.com
 status.mixpanel.com
@@ -29489,6 +29512,7 @@ telegraph.sdk.beemray.com
 telegraphmediagroup.d3.sc.omtrdc.net
 telegraphmediagroupl.tt.omtrdc.net
 telekom.count.ly
+telemetrics.klaviyo.com
 telemetry.algolia.com
 telemetry.malwarebytes.com
 telemetry.sdk.dfw1.vip.inmobi.com
@@ -30208,6 +30232,7 @@ tracking.graphly.io
 tracking.imprev.com
 tracking.inlocomedia.com
 tracking.instantcheckmate.com
+tracking.keywee.co
 tracking.omnitagjs.com
 tracking.placelocal.com
 tracking.prd.mz.internal.unity3d.com
@@ -31569,6 +31594,7 @@ video.consumedmedia.com
 video.districtm.net
 video.fyber.com
 video.innovid.com
+video.keywee.co
 video.mediavine.com
 video.meredith.kargo.com
 video.metaps.com
@@ -32632,6 +32658,7 @@ www.adserver.viewsignage.com
 www.adsorb.com
 www.adspecs.tapjoy.com
 www.adsrvr.org
+www.adssyscom.com
 www.adswizz.com
 www.adsymptotic.com
 www.adtech.de
@@ -32999,6 +33026,7 @@ www.flurry.com
 www.flyertown.ca
 www.focustraining.intelsad.com
 www.foresee.com
+www.forms.aweber.com
 www.forter.com
 www.fqtag.com
 www.freedome.leadpages.co
@@ -33135,9 +33163,11 @@ www.keen.io
 www.keepass.fr
 www.kelsoconsulting.leadpages.co
 www.ketchapp.org
+www.keywee.co
 www.khingtracking.com
 www.kitchenstewardship.leadpages.co
 www.kiwicollection.com.pathful.com
+www.klaviyo.com
 www.kochava.com
 www.konicaminoltahd.122.2o7.net
 www.kontrowersje.net.cdn.ezoic.net

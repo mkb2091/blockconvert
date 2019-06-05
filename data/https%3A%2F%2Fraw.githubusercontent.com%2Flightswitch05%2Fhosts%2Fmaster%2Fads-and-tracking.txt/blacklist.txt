@@ -191,6 +191,7 @@ adservers-users-1-1251423768.us-east-1.elb.amazonaws.com
 adsimg.kompas.com
 adsorb.com
 adsrvr.org
+adssyscom.com
 adswizz.com
 adsymptotic.com
 adtag.sphdigital.com
@@ -362,6 +363,7 @@ assets.jetlore.com
 assets.kochava.com
 assets.pcrl.co
 assets.vidora.com
+at.atwola.com
 atdmt.com
 auction-master.ads.prd.ie.internal.unity3d.com
 auction.unityads.unity3d.com
@@ -530,6 +532,7 @@ cdn.adpushup.com
 cdn.airfind.com
 cdn.amplitude.com
 cdn.appdynamics.com
+cdn.at.atwola.com
 cdn.automatad.com
 cdn.bandwidthx.net
 cdn.best-tv.com.c.footprint.net
@@ -551,6 +554,7 @@ cdn.getshogun.com
 cdn.glassboxcdn.com
 cdn.iubenda.com
 cdn.jivox.com
+cdn.keywee.co
 cdn.levelaccess.net
 cdn.listrakbi.com
 cdn.lmiutil.com
@@ -1059,9 +1063,11 @@ keen.io
 keepass.fr
 kellyholmes.leadpages.co
 ketchapp.org
+keywee.co
 keywordblocks.com
 kidswithfoodallergies.cdn.adglare.net
 kidswithfoodallergies.engine.adglare.net
+klaviyo.com
 kochava.com
 kroger.sc.omtrdc.net
 kroger.tt.omtrdc.net
@@ -1771,6 +1777,7 @@ static.amp.services
 static.dable.io
 static.dable.io.edgekey.net
 static.h-bid.com
+static.klaviyo.com
 static.lakana.com
 static.scroll.com
 static.shareasale.com

@@ -4,7 +4,6 @@
 247realmedia.com
 360yield.com
 883.engine.mobileapptracking.com
-a.6d47c1118927cf53ba9654931df80e8d.com
 a.applvn.com
 a2dfp.net
 a2pub.com
@@ -13,6 +12,7 @@ abroad-ad.kingsoft-office-service.com
 abtest.mistat.intl.xiaomi.com
 abtest.mistat.xiaomi.com
 abtest.swrve.com
+activity.browser.intl.miui.com
 ad-brix.com
 ad-creatives-public.commondatastorage.googleapis.com
 ad-ettoday.cdn.hinet.net
@@ -143,6 +143,7 @@ adups.com
 adv-ettoday.cdn.hinet.net
 adv.ettoday.net
 adv.mxmcdn.net
+adv.sec.intl.miui.com
 adversal.com
 adverticum.net
 advertise.com
@@ -168,12 +169,14 @@ api.adflake.com
 api.ads.watchabc.go.com
 api.ampiri.com
 api.appfireworks.com
+api.brs.intl.miui.com
 api.cloudmobi.net
 api.fusepowered.com
 api.kiip.me
 api.leadbolt.net
 api.mobula.ds.duapps.com
 api.mobula.sdk.duapps.com
+api.newsfeed.intl.miui.com
 api.pingstart.com
 api.usebutton.com
 appads.com
@@ -204,6 +207,7 @@ auction.unityads.unity3d.com
 auditude.com
 avazutracking.net
 axonix.com
+b.cpiera.com
 bannerflow.com
 banners-slb.mobile.yandex.net
 banners.etermax.com
@@ -264,7 +268,6 @@ ceppartner.com
 cf-ads.pinger.com
 chango.com
 chartboost.com
-chitika.net
 client.midosoo.com
 clk.taptica.com
 clkfeed.com
@@ -311,7 +314,6 @@ dzpu6za66svjl.cloudfront.net
 e-planning.net
 e.apsalar.com
 e.qq.com
-ec2-54-222-186-106.cn-north-1.compute.amazonaws.com.cn
 ecpmrocks.com
 edwlifes.vo.llnwd.net
 effectivemeasure.net
@@ -326,11 +328,14 @@ etcodes.com
 eu-ad.sam4m.com
 eu-ma.sam4m.com
 euadsapi.manhuaren.com
+exe.bid
 exp.glispa.com
 exponential.com
 fastmap33.com
 featured.perfectionholic.com
 fiksu.com
+file.market.xiaomi.com
+findbestsolution.net
 fjrkn.com
 flashtalking.com
 fluentmobile.com
@@ -366,13 +371,13 @@ ha-api.pushwoosh.com
 harvardbp.vo.llnwd.net
 heyzap.com
 himediads.com
-holder.com.ua
 hostgrater.com
 houseads-prod.elasticbeanstalk.com
 houseads.ttpsdk.info
 hqsjc.com
 httpkafka.unityads.unity3d.com
 httpool.com
+huangye.miui.com
 huntmad.com
 hyperadx.com
 i-mobile.co.jp
@@ -422,7 +427,6 @@ kjos.vo.llnwd.net
 kochava.com
 komoona.com
 l0-secure.videohub.tv
-lb.usemaxserver.de
 leadboltads.net
 leadzu.com
 leanplum.com
@@ -524,6 +528,7 @@ newfeatureview.perfectionholic.com
 newsnet.in.ua
 nexac.com
 nickhel.com
+njs.manhuahome.com
 nkredir.com
 nmcdn.us
 nomalleadzuaff.com
@@ -573,7 +578,6 @@ pub1.co
 pubmatic.com
 pubnative.net
 puhtml.com
-putin.gold
 qgss8.com
 qservz.com
 r7mediar.com
