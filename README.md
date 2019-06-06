@@ -40,7 +40,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 841343 blocked domains in each of the generated filter lists
+Theres are 806991 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -65,6 +65,7 @@ https://easylist.to/easylistgermany/easylistgermany.txt|1.0 days|Blacklist|GPLv3
 https://feodotracker.abuse.ch/downloads/ipblocklist.txt|1.0 days|Blacklist|CC0
 https://filtri-dns.ga/filtri.txt|1.0 days|Blacklist|GPLv3
 https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt|1.0 days|Blacklist|GPLv3
+https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt|1.0 days|Blacklist|GPLv3
 https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt|1.0 days|Blacklist|CC0
 https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt|1.0 days|Blacklist|GPLv3
 https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt|1.0 days|Blacklist|GPLv3

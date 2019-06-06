@@ -306,6 +306,7 @@ giphy.com
 gist.github.com
 git.io
 git.teknik.io
+gitcdn.xyz
 github.com
 gitlab.com
 gitter.im
