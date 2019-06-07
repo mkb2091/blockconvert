@@ -59,6 +59,7 @@ d2gatte9o95jao.cloudfront.net
 delivery.mp.microsoft.com
 digicert.com
 displaycatalog.mp.microsoft.com
+disq.us
 dl.delivery.mp.microsoft.com
 dm3p.wns.notify.windows.com.akadns.net
 dmd.metaservices.microsoft.com
