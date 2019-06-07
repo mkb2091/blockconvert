@@ -843,7 +843,6 @@ email.pingdom.com
 email.surveygizmo.com
 emailink.olark.com
 embed.tawk.to
-emedco.ugc.bazaarvoice.com
 employee.pingdom.com
 employeepulsecheck.surveygizmo.com
 en.ipinfo.io

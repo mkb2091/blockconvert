@@ -9,11 +9,11 @@
 187-163-222-244.static.axtel.net
 187-178-9-19.dynamic.axtel.net
 189-209-217-49.static.axtel.net
-189-213-62-223.static.axtel.net
 190-72-136-214.dyn.dsl.cantv.net
 200-127-0-8.cab.prima.net.ar
 200-28-131-215.baf.movistar.cl
 201-212-24-6.cab.prima.net.ar
+205585.simplecloud.ru
 208-78-100-202.slicehost.net
 212-5-159-61.ip.btc-net.bg
 213-32-46-142.ip.sflex.net
@@ -440,7 +440,6 @@ coventrytoymuseum75501.coventry.towntalk.co.uk
 cowbridge.towntalk.co.uk
 cozycarverygrill76865.colchester.towntalk.co.uk
 cozydigital.edinburgh.towntalk.co.uk
-cpc110099-haye27-2-0-cust185.17-4.cable.virginm.net
 cpc140304-wisb2-2-0-cust82.4-4.cable.virginm.net
 cpe-67-248-56-82.nycap.res.rr.com
 cpe-76-168-149-66.socal.res.rr.com
@@ -831,10 +830,9 @@ honoroak.towntalk.co.uk
 hopeofniles.sermondrop.com
 hopewells89675.nottingham.towntalk.co.uk
 hospicefurniture.barnsley.towntalk.co.uk
+host-181-198-203-150.netlife.ec
 host-181-39-51-243.telconet.net
 host-185-251-39-162.hosted-by-vdsina.ru
-host-186-3-188-74.netlife.ec
-host-186-4-167-166.netlife.ec
 host-186-4-234-27.netlife.ec
 host-94-103-94-154.hosted-by-vdsina.ru
 host.raehse.org
@@ -921,6 +919,7 @@ ip173.ip-5-39-119.eu
 ip18.ip-51-255-58.eu
 ip183.ip-94-23-174.eu
 ip196.ip-94-23-172.eu
+ip238.ip-176-31-213.eu
 ip52-83-15-186.ct.co.cr
 ip57.ip-164-132-216.eu
 ipswich.towntalk.co.uk
@@ -1063,6 +1062,7 @@ llantwitmajor.towntalk.co.uk
 llanvalleynaturalproducts82295.wrexham.towntalk.co.uk
 lloydsbank.woodgreen.towntalk.co.uk
 lloydstsb.elephantandcastle.towntalk.co.uk
+lneuilly-657-1-47-139.w80-11.abo.wanadoo.fr
 local.raehse.org
 local.theescapers.com
 local.towntalk.co.uk
@@ -1080,6 +1080,7 @@ loughborough.towntalk.co.uk
 loughboroughmarket.loughborough.towntalk.co.uk
 loveuxbridge.co.uk
 lowerhousejuniorfootballclub82737.burnley.towntalk.co.uk
+lputeaux-656-1-76-154.w92-154.abo.wanadoo.fr
 lrcentreltd.liverpool.towntalk.co.uk
 lsbrickwork81889.redcar.towntalk.co.uk
 lsbu.elephantandcastle.towntalk.co.uk
@@ -1629,7 +1630,9 @@ standishstreetdentalpractice.burnley.towntalk.co.uk
 standleyspetcentre.redcar.towntalk.co.uk
 stanwaygarnett.redcar.towntalk.co.uk
 static-186-121-223-131.acelerate.net
+static-190-25-255-98.static.etb.net.co
 static-ip-62-75-141-51.inaddr.ip-pool.com
+static-ip-cablemodem-190.186.203.55.cotas.com.bo
 static.128.2.69.159.clients.your-server.de
 static.140.35.130.94.clients.your-server.de
 static.247.117.76.144.clients.your-server.de

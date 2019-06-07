@@ -27,6 +27,7 @@
 4514783.fls.doubleclick.net
 4645336.fls.doubleclick.net
 4735610.fls.doubleclick.net
+4954221.fls.doubleclick.net
 5322221.fls.doubleclick.net
 5362399.fls.doubleclick.net
 5605209.fls.doubleclick.net
@@ -202,6 +203,7 @@ adthrive.com
 adtilt.com
 adtouchlabs.com
 adtz.com
+advertisercommunity.com
 advertising.com
 advertisingbeacon.co.uk
 advertisingbox.com
@@ -365,7 +367,6 @@ assets.pcrl.co
 assets.vidora.com
 at.atwola.com
 atdmt.com
-auction-master.ads.prd.ie.internal.unity3d.com
 auction.unityads.unity3d.com
 audienceinsights.net
 audiensis.com
@@ -463,11 +464,10 @@ btf-analytics.s3.amazonaws.com
 btstatic.com
 bucket1.mm-syringe.com
 bucksense.com
+bugherd.com
 bugly.qq.com
 bung.com
-buypixelads.com
 buysellads.com
-buzzdeck.com
 bws3.midasplayer.com
 c-eu1.stripcdn.com
 c-eu2.stripcdn.com
@@ -789,6 +789,7 @@ el2.convertkit.com
 eloqua.com
 emailmarketingguide.wix.com
 embed.playbuzz.com
+en.advertisercommunity.com
 en25.com
 engagio.com
 engine.mobileapptracking.com
@@ -1018,6 +1019,7 @@ intercom.io
 invenio.sgn.com
 ioms.bfmio.com
 iosads24.adcolony.com
+ipa.elev.io
 ipapi.tmbi.com
 iplookup.adready.com
 iptrack.io
@@ -1464,6 +1466,7 @@ pixel.tagdelivery.com
 pixel.tree.com
 pixel2.realclever.com
 pj.l.admedo.com
+pl-pubimgs.placester.net
 placed.com
 placelocal.com
 placements.tapjoy.com
@@ -2079,9 +2082,11 @@ www.5rocks.io
 www.acashatusa.com
 www.adtilt.com
 www.beeftransmission.com
+www.bugherd.com
 www.digitalremedy.com
 www.drift.com
 www.dynamicyield.com
+www.en.advertisercommunity.com
 www.fullstory.com
 www.fyber.com
 www.glancecdn.net

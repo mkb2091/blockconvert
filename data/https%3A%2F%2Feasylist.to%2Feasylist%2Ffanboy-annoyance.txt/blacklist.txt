@@ -95,6 +95,7 @@ consent.truste.com
 contentexchange.me
 contextly.com
 conversionsbox.com
+convertsocial.com
 cookie-accept.com
 cookie-script.com
 cookie.aerostatonet.it
@@ -174,6 +175,7 @@ gazette-news-gb.gazette-news.co.uk
 gdpr.internetbrands.com
 gdpr.prisa.com
 georiot.com
+get8bit.com
 getdrip.com
 getglue.com
 getmailcounter.com
@@ -230,7 +232,6 @@ ligatus.com
 likebtn.com
 linker.hr
 linksalpha.com
-linkwelove.com
 linkwithin.com
 live4sport.net
 liveintent.com
@@ -537,6 +538,7 @@ widgets.itunes.apple.com
 widgets.outbrain.com
 widgets.seekitlocal.com
 widgets.sprinkletxt.com
+widgets.tapcdn.com
 widgets.trustedshops.com
 widgets.twimg.com
 widgetsplus.com
