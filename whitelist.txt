@@ -45,6 +45,7 @@ c-msedge.net
 candycrushsoda.king.com
 cdn.onenote.net
 cdnjs.cloudflare.com
+christianpost.com
 client-office365-tas.msedge.net
 client-s.gateway.messenger.live.com
 cloudfront.net
