@@ -128,6 +128,7 @@ ocsp.digicert.com
 oem.twimg.com
 officeclient.microsoft.com
 oneclient.sfx.ms
+onion.to
 outlook.office365.com
 pastebin.com
 pbs.twimg.com
