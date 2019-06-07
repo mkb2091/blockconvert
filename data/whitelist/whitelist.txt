@@ -87,6 +87,7 @@ g.akamai.net
 g.akamaiedge.net
 g.live.com
 g.msn.com.nsatc.net
+gamespot.com
 gateway.reddit.com
 geo-prod.do.dsp.mp.microsoft.com
 geo-prod.dodsp.mp.microsoft.com.nsatc.net
