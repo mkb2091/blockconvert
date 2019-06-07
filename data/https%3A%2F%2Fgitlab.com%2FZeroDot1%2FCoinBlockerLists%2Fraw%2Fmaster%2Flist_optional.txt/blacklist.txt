@@ -46,10 +46,6 @@ bitmain.com
 bitmaintech.com
 bixin.im
 blocked.mymonero.com
-blog.a-ads.com
-blog.cryptopia.co.nz
-blog.jaxx.io
-blog.trezor.io
 btc-alpha.com
 btc-bitcore1.trezor.io
 btc-bitcore3.trezor.io
@@ -137,7 +133,6 @@ faucethub.io
 feedback.coinmama.com
 files.a-ads.com
 files.cointraffic.io
-forum.uclick.in
 foundry.electrum.org
 ftp.antminer-store.com
 ftp.binance.com
@@ -145,6 +140,7 @@ ftp.coinmama.com
 ftp.gameofbitcoins.com
 ftp.inwemo.com
 ftp.mellowads.com
+ftp.oracolxor.io
 ftp.uclick.in
 gameofbitcoins.com
 getbitcoin.nz
@@ -192,11 +188,6 @@ lyncdiscover.btcturk.com
 lyncdiscover.cryptopia.co.nz
 lyncdiscover.hashgains.com
 m.bithumb.com
-mail.antminer-store.com
-mail.bithumb.com
-mail.coinadnet.com
-mail.cur.lv
-mail.uclick.in
 masternode-agent.com
 masternodes4everyone.com
 me.cur.lv
@@ -229,7 +220,6 @@ name.cur.lv
 next.btc-alpha.com
 node.jwallet.network
 o1.em.quadrigacx.com
-o1.mail.coinmama.com
 o2.em.quadrigacx.com
 o3.em.quadrigacx.com
 o4.em.quadrigacx.com
@@ -238,6 +228,7 @@ o6.em.quadrigacx.com
 offers.cryptopia.co.nz
 old-wallet.trezor.io
 old.coinad.com
+oracolxor.io
 orders.whattomine.com
 overflow.mycrypto.com
 p2pool.in
@@ -300,6 +291,7 @@ test.ledgerwallet.com
 test.rockwall.investments
 test.simplemining.net
 to.cur.lv
+tradewin.online
 transactions.evergreencoin.org
 trezor.io
 uclick.in
@@ -317,8 +309,6 @@ web6.hashgains.com
 webdisk.antminer-store.com
 webdisk.cryptoguiminer.com
 webdisk.uclick.in
-webmail.antminer-store.com
-webmail.uclick.in
 whattomine.com
 whm.gameofbitcoins.com
 wiki.evergreencoin.org
@@ -406,6 +396,7 @@ www.multipoolminer.io
 www.mycrypto.com
 www.myetherwallet.com
 www.mymonero.com
+www.oracolxor.io
 www.p2pool.in
 www.pandaminer.co
 www.peerhash.com
@@ -423,8 +414,10 @@ www.stream.binance.com
 www.stream2.binance.com
 www.superbitcoiner.com
 www.support.binance.com
+www.tradewin.online
 www.trezor.io
 www.uclick.in
 www.upcoin.com
 www.us.binance.com
 www.whattomine.com
+www1.bithumb.com
