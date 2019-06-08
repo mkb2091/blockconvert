@@ -168,6 +168,7 @@ auth.towntalk.co.uk
 autodiscover.raehse.org
 autodiscover.theescapers.com
 autodiscover.towntalk.co.uk
+avanas3.myqnapcloud.com
 awbcharlesworthsolicitors89282.bingley.towntalk.co.uk
 aweswim81869.goldersgreen.towntalk.co.uk
 ayubendodontics.wimbledon.towntalk.co.uk
@@ -444,6 +445,7 @@ cpc140304-wisb2-2-0-cust82.4-4.cable.virginm.net
 cpe-67-248-56-82.nycap.res.rr.com
 cpe-76-168-149-66.socal.res.rr.com
 cpe-76-86-20-103.socal.res.rr.com
+cpe-98-144-73-193.wi.res.rr.com
 crackthecode87626.sheffield.towntalk.co.uk
 craftden81077.sheffield.towntalk.co.uk
 craftedwithloveyorkshire78661.barnsley.towntalk.co.uk
@@ -685,7 +687,6 @@ fit4lesswellingborough87787.northampton.towntalk.co.uk
 fitnessfirstkeighley30512.keighley.towntalk.co.uk
 fitonegym90376.folkestone.towntalk.co.uk
 fixed-187-188-166-192.totalplay.net
-fixed-187-188-83-52.totalplay.net
 fixed-187-189-195-208.totalplay.net
 fixed-187-190-237-104.totalplay.net
 flatcreekchurch.sermondrop.com
@@ -728,6 +729,7 @@ funkyfriends78349.wrexham.towntalk.co.uk
 funkymonkeypenarthltd89806.penarth.towntalk.co.uk
 furinncattery82368.coventry.towntalk.co.uk
 furry.org.uk
+furseal.phantioch.com
 fyldefm.blackpool.towntalk.co.uk
 gainsborough.towntalk.co.uk
 galabingoantelopepark92904.eastleigh.towntalk.co.uk
@@ -830,7 +832,6 @@ honoroak.towntalk.co.uk
 hopeofniles.sermondrop.com
 hopewells89675.nottingham.towntalk.co.uk
 hospicefurniture.barnsley.towntalk.co.uk
-host-181-198-203-150.netlife.ec
 host-181-39-51-243.telconet.net
 host-185-251-39-162.hosted-by-vdsina.ru
 host-186-4-234-27.netlife.ec
@@ -857,7 +858,6 @@ hull.towntalk.co.uk
 hulluniversitysportsfitnesscentre80642.hull.towntalk.co.uk
 human89466.rotherham.towntalk.co.uk
 hurstcommunitycentre91506.welling.towntalk.co.uk
-husinghome.com
 hypedance91899.sheffield.towntalk.co.uk
 hytheimperial.folkestone.towntalk.co.uk
 iautouksolihull81969.solihull.towntalk.co.uk
@@ -920,7 +920,6 @@ ip18.ip-51-255-58.eu
 ip183.ip-94-23-174.eu
 ip196.ip-94-23-172.eu
 ip238.ip-176-31-213.eu
-ip52-83-15-186.ct.co.cr
 ip57.ip-164-132-216.eu
 ipswich.towntalk.co.uk
 ipv4.theescapers.com
@@ -1039,7 +1038,6 @@ leytonstone.towntalk.co.uk
 li206-209.members.linode.com
 li326-129.members.linode.com
 li583-90.members.linode.com
-li985-103.members.linode.com
 libertyflights.orpington1st.co.uk
 librarytheatre13248.luton.towntalk.co.uk
 lifeandmobilitysolutions.frome.towntalk.co.uk
@@ -1280,7 +1278,6 @@ norwood.towntalk.co.uk
 nottingham.towntalk.co.uk
 nr.net
 ns.nr.net
-ns.nrnet.com
 ns.raehse.org
 ns.theescapers.com
 ns.towntalk.co.uk
@@ -1536,6 +1533,7 @@ seedlancashire85735.preston.towntalk.co.uk
 segfault.in
 select.barnsley.towntalk.co.uk
 selwynhedgleyestateagents.redcar.towntalk.co.uk
+sendmyfiles.ru
 seomana.com
 sermondrop.com
 server.inno-green.com
@@ -1630,7 +1628,6 @@ standishstreetdentalpractice.burnley.towntalk.co.uk
 standleyspetcentre.redcar.towntalk.co.uk
 stanwaygarnett.redcar.towntalk.co.uk
 static-186-121-223-131.acelerate.net
-static-190-25-255-98.static.etb.net.co
 static-ip-62-75-141-51.inaddr.ip-pool.com
 static-ip-cablemodem-190.186.203.55.cotas.com.bo
 static.128.2.69.159.clients.your-server.de
@@ -2308,6 +2305,7 @@ www.dennisbray.barnsley.towntalk.co.uk
 www.deptford.towntalk.co.uk
 www.derby.towntalk.co.uk
 www.designerdrapes.penge.towntalk.co.uk
+www.devicesfordignity.org.uk
 www.devizes.towntalk.co.uk
 www.dfwinteriors87757.sheffield.towntalk.co.uk
 www.diamondheaven.manchester.towntalk.co.uk
@@ -2495,7 +2493,6 @@ www.hull.towntalk.co.uk
 www.hulluniversitysportsfitnesscentre80642.hull.towntalk.co.uk
 www.human89466.rotherham.towntalk.co.uk
 www.hurstcommunitycentre91506.welling.towntalk.co.uk
-www.husinghome.com
 www.hypedance91899.sheffield.towntalk.co.uk
 www.hytheimperial.folkestone.towntalk.co.uk
 www.iautouksolihull81969.solihull.towntalk.co.uk
@@ -2544,6 +2541,7 @@ www.jnf.elephantandcastle.towntalk.co.uk
 www.joanneeaglepilates91019.sidcup.towntalk.co.uk
 www.joegraham.luton.towntalk.co.uk
 www.joehawcroft.com
+www.johnlinhart.com
 www.johnselectricallimited.scunthorpe.towntalk.co.uk
 www.johnsonsdrycleaning.kingslynn.towntalk.co.uk
 www.johnwilsonroofingpropertyservices79836.southport.towntalk.co.uk
@@ -2899,6 +2897,7 @@ www.secretgarden.barry.towntalk.co.uk
 www.seedlancashire85735.preston.towntalk.co.uk
 www.select.barnsley.towntalk.co.uk
 www.selwynhedgleyestateagents.redcar.towntalk.co.uk
+www.sendmyfiles.ru
 www.sermondrop.com
 www.seymoursofdarlington.darlington.towntalk.co.uk
 www.shangthai-bar-and-restaurant.huddersfield.towntalk.co.uk

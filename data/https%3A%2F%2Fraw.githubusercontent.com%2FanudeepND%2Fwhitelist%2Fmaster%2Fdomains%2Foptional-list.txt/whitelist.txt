@@ -15,7 +15,9 @@ api-global.netflix.com
 api.pluto.tv
 api.sbs.com.au
 appboot.netflix.com
+apresolve.spotify.com
 assets.adobedtm.com
+audio-ake.spotify.com.edgesuite.ne
 bit.ly
 cdn-mobile.api.pluto.tv
 cdn.fbsbx.com
@@ -60,6 +62,7 @@ gfwsl.geforce.com
 goo.gl
 google-analytics.com
 graph.facebook.com
+graph.instagram.com
 hosts-file.net
 hostsfile.mine.nu
 hostsfile.org
@@ -72,7 +75,9 @@ livepassdl.conviva.com
 lotustalk.com
 m.weeklyad.target.com
 manifest.auditude.com
+market.spotify.com
 media.sbs.com.au
+mobile-ap.spotify.com
 openload.co
 ota-downloads.nvidia.com
 ow.ly
@@ -97,6 +102,7 @@ shareaholic.com
 silo.pluto.tv
 siloh.pluto.tv
 someonewhocares.org
+spclient.wg.spotify.com
 sqs.us-east-1.amazonaws.com
 ssl.google-analytics.com
 stats.streamelements.com
@@ -104,6 +110,7 @@ stitcher.pluto.tv
 sysctl.org
 time.samsungcloudsolution.com
 track.ucas.com
+upgrade.scdn.com
 v.firebog.net
 videocdn-sbs.akamaized.net
 weeklyad.target.com

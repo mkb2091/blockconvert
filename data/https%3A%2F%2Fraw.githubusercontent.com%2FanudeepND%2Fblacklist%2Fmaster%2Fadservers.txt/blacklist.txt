@@ -362,6 +362,7 @@
 133256241.keywordblocks.com
 13340.engine.mobileapptracking.com
 133706282.keywordblocks.com
+1339402.collect.igodigital.com
 133a-bd2f-a68d-1b27.reporo.net
 134-dpm-370.mktoresp.com
 134237470.keywordblocks.com
@@ -2516,6 +2517,7 @@
 5181768.fls.doubleclick.net
 5183245.fls.doubleclick.net
 519-cwv-131.mktoresp.com
+519-jvy-663.mktoresp.com
 5192cnkxrctikciqjjlop9woiuhao1509504150.nuid.imrworldwide.com
 5193100.fls.doubleclick.net
 519679091.keywordblocks.com
@@ -5667,6 +5669,7 @@ aax-us-pdx.amazon-adsystem.com
 aax-us-west-rtb.amazon-adsystem.com
 aax-us-west.amazon-adsystem.com
 aax-us.amazon-adsystem.com
+aax.amazon-adsystem.com
 ab-ee-api.marketo.com
 ab-mknodepub.marketo.com
 ab.batmobi.net
@@ -5757,6 +5760,7 @@ accscdn.m.taobao.com
 accstandardbank.d1.sc.omtrdc.net
 accuen.optout.agkn.com
 accuenmedia.com
+acdn.adnxs.com
 acds-a.prod.ap-southeast-1.vidible.tv
 acds-a.prod.eu-west-1.vidible.tv
 acds-b.prod.eu-west-1.vidible.tv
@@ -6007,6 +6011,7 @@ adimg.smi2.ru
 adimpression.startappservice.com
 adinfo.aol.com
 adintegration.lijit.com
+adipolo.tagcombiner.com
 adiquity.com
 aditmedia.go2affise.com
 adk2.com
@@ -6122,6 +6127,7 @@ ads-adaptv.vidible.tv
 ads-ap.adaptv.advertising.com
 ads-b.vidible.tv
 ads-bid.l.doubleclick.net
+ads-bidder-api.twitter.com
 ads-east-aws.adsymptotic.com
 ads-ec.adaptv.advertising.com
 ads-eu.adaptv.advertising.com
@@ -6258,6 +6264,7 @@ ads19-us-east.stickyadstv.com
 ads19.vertamedia.com
 ads2-us-east.stickyadstv.com
 ads2.dyn.perfectaudience.com
+ads2.servebom.com
 ads2.uptobox.com
 ads20.adcolony.com
 ads20.stickyadstv.com
@@ -6346,6 +6353,7 @@ adserver-qcmtc.adtechus.com
 adserver-qcscd.adtechus.com
 adserver-reporting.fyber.com
 adserver-toy.adtechjp.com
+adserver-us.adtech.advertising.com
 adserver-west.adtechus.com
 adserver.adotmob.com
 adserver.adtech.advertising.com
@@ -6365,6 +6373,7 @@ adserverwc.adtechus.com
 adservetx.media.net
 adservex-demo.media.net
 adservex.media.net
+adservice.google.ca
 adservice.google.co.in
 adservice.google.com
 adservice.google.com.ua
@@ -6615,6 +6624,7 @@ al05.casalemedia.com
 alarabeyes.ae.intellitxt.com
 alaskaair.btttag.com
 alaskaair.com.ssl.d1.sc.omtrdc.net
+alb.reddit.com
 alchemedia.d1.sc.omtrdc.net
 alcoa.co1.qualtrics.com
 aldec.actonsoftware.com
@@ -6753,6 +6763,7 @@ ampa3eolu38u.c.richmetrics.com
 amped.t.domdex.com
 amplify-imp.outbrain.com
 amplify.amplitude.com
+amplify.outbrain.com
 amplifypixel.outbrain.com
 amplitude.com
 ampmetrics.engadget.com
@@ -6843,6 +6854,7 @@ analytics.mobile.webvisor.com
 analytics.mopub.com
 analytics.myfinance.com
 analytics.mytvzion.pro
+analytics.ovh.com
 analytics.permutive.com
 analytics.phando.com
 analytics.picsart.com
@@ -7136,6 +7148,8 @@ api.recorder.duapps.com
 api.recotap.com
 api.retargetly.com
 api.ril.com
+api.rlcdn.com
+api.rqmob.com
 api.safedk.com
 api.safegraph.com
 api.sandbox53.localytics.com
@@ -7144,6 +7158,7 @@ api.sec.miui.com
 api.segment.io
 api.setting.intl.miui.com
 api.share.mob.com
+api.shareitgames.com
 api.shuzilm.cn
 api.smaato.com
 api.sms.intl.miui.com
@@ -7206,6 +7221,7 @@ apioplus.cnzz.com
 apips.pubmatic.com
 apis.adsymptotic.com
 apis.appnxt.net
+apis.kostprice.com
 apiv2.moengage.com
 apiv2mumbai.moengage.com
 apiv3.moengage.com
@@ -7232,6 +7248,7 @@ apnxrtb-eu.tribalfusion.com
 apodiscounterde.widget.criteo.com
 apolloprogram.com
 apolloprogram.io
+app-09.engage.jio.com
 app-a.marketo.com
 app-ab01.marketo.com
 app-ab02.marketo.com
@@ -7267,6 +7284,7 @@ app-abj.marketo.com
 app-abk.marketo.com
 app-abm.marketo.com
 app-abq.marketo.com
+app-analytics.huami.com
 app-analytics.snapchat.com
 app-b.marketo.com
 app-c.marketo.com
@@ -7345,6 +7363,7 @@ app.cointraffic.in
 app.crazyegg.com
 app.crittercism.com
 app.demandbase.com
+app.engage.jio.com
 app.eu.crittercism.com
 app.getsentry.com
 app.kissmetrics.com
@@ -7462,6 +7481,7 @@ arcomobi.go2affise.com
 ardinalhealth.co1.qualtrics.com
 area51.unity.amobee.com
 areamobile.de.intellitxt.com
+arescadon.com
 arg.atomex.net
 argos.co.uk.d1.sc.omtrdc.net
 argumenti.mirtesen.ru
@@ -7835,6 +7855,7 @@ b.rad.atdmt.com
 b.sc.omtrdc.net
 b.scorecardresearch.com
 b.skimresources.com
+b.stats.paypal.com
 b.zog.link
 b0a9-9395-9712-0b2c.reporo.net
 b0g-r.tlnk.io
@@ -8449,6 +8470,7 @@ broadcastbed.com
 broaddoor.com
 brookdale.demdex.net
 brown.co1.qualtrics.com
+browser.sentry-cdn.com
 browsergames2018.com
 browsers.support
 brp.apolloprogram.com
@@ -8571,6 +8593,7 @@ c.adexchangemachine.com
 c.adsco.re
 c.adskeeper.co.uk
 c.adsymptotic.com
+c.amazon-adsystem.com
 c.betrad.com
 c.c.appier.net
 c.chartboost.com
@@ -8597,6 +8620,7 @@ c.singular.net
 c.skimresources.com
 c.smartclick.net
 c.t.dps-reach.com
+c.union.ucweb.com
 c.w.inmobi.com
 c.waplog.net
 c.webengage.com
@@ -9094,6 +9118,7 @@ cdn-dynamic.optimonk.com
 cdn-eu-vid1.statserv.net
 cdn-eu.mouseflow.com
 cdn-fb.vizury.com
+cdn-gl.imrworldwide.com
 cdn-img1.statserv.net
 cdn-jp.gsecondscreen.com
 cdn-lb.vungle.com
@@ -9154,6 +9179,7 @@ cdn.chuknu.sokrati.com
 cdn.clck-01.online
 cdn.clicktale.net
 cdn.cmdelivery.pw
+cdn.connatix.com
 cdn.connectad.io
 cdn.crwdcntrl.net
 cdn.districtm.io
@@ -9195,6 +9221,7 @@ cdn.permutive.com
 cdn.pubmatic.com
 cdn.pubnative.net
 cdn.pushassist.com
+cdn.pushnami.com
 cdn.qgr.ph
 cdn.qgraph.io
 cdn.refersion.com
@@ -9284,6 +9311,7 @@ cdn2.inspsearchapi.com
 cdn2.media.net
 cdn2.mouseflow.com
 cdn2.reporo.net
+cdn2.shareitgames.com
 cdn2.smartadserver.com
 cdn2.stickyadstv.com
 cdn2.teads.tv
@@ -9324,6 +9352,7 @@ cdnjs.tvpage.com
 cdnk.stickyadstv.com
 cdnorig.smartadserver.com
 cdnpoc.clicktale.net
+cdns.connatix.com
 cdns.eu1.gigya.com
 cdns.gigya.com
 cdnssl.clicktale.net
@@ -9376,6 +9405,7 @@ cf.addthis.com
 cf.c.msas.media.net
 cf.cdn.inmobi.com
 cf.d.msas.media.net
+cf.hermes.wshareit.com
 cf.p.msas.media.net
 cf.ushareit.com
 cf7f797e-ae82-4c7b-ac59-7e2ad0d08610.nuid.imrworldwide.com
@@ -9625,6 +9655,7 @@ cj.dotomi.com
 cj.news-subscribe.com
 cjol.d1.sc.omtrdc.net
 ck.brandreachsys.com
+ck.connatix.com
 ck.juicyads.com
 ck.solocpm.com
 ckdgarn74zwmggwkiv0cnf5lesj2h1516338190.nuid.imrworldwide.com
@@ -9787,6 +9818,7 @@ cm1.topcontentss.com
 cm2.adform.net
 cm3.adform.net
 cmci-d.openx.net
+cmd.hermes.wshareit.com
 cmeg.co1.qualtrics.com
 cmfgroup.com.102.112.2o7.net
 cml.ksmobile.com

@@ -233,7 +233,6 @@ ads.digital-digest.com
 ads.digitalpoint.com
 ads.dofunapps.com
 ads.eagletribune.com
-ads.einmedia.com
 ads.factorymedia.com
 ads.filmup.com
 ads.financialcontent.com
@@ -370,6 +369,7 @@ adtaily.com
 adtaily.pl
 adtecc.com
 adtechus.com
+adteractive.com
 adtheorent.com
 adtoma.com
 adtrade.net
@@ -728,6 +728,7 @@ fast2earn.com
 faxo.com
 fb-plus.com
 fbgdc.com
+featence.com
 feedjit.com
 fenixm.com
 filadmir.site
@@ -844,7 +845,6 @@ javacript.ga
 javacript.gq
 javacript.tk
 jeetyetmedia.com
-jettags.rocks
 jinkads.de
 jiwire.com
 juiceadv.net
@@ -875,6 +875,7 @@ letsgoshopping.tk
 lfstmedia.com
 ligatus.com
 lightspeedcash.com
+lilil.bid
 linkbuddies.com
 linkexchangers.net
 linkoffers.net
@@ -1208,7 +1209,6 @@ sunmedia.net
 superinterstitial.com
 superstats.com
 supertop.ru
-switchads.com
 t3q7af0z.com
 tags-cdn.deployads.com
 tailsweep.com

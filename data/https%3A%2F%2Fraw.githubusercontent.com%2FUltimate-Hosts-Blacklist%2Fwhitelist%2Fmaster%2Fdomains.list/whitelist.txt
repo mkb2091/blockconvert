@@ -353,10 +353,15 @@ hulu.com
 i.imgur.com
 i.pinimg.com
 i.s-microsoft.com
+i.ytimg.com
 i0.wp.com
 i1.wp.com
+i1.ytimg.com
 i2.wp.com
+i2.ytimg.com
 i3.wp.com
+i3.ytimg.com
+i4.ytimg.com
 icanhazip.com
 ichnaea.netflix.com
 icloud.com
