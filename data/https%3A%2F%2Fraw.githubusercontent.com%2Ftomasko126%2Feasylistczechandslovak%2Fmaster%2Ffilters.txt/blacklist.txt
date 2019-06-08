@@ -23,7 +23,6 @@ bannersector.sector.sk
 bannery.ccb.cz
 betclick.com
 bidmax.cz
-c.imedia.cz
 campaigns.caroda.io
 chartbeat.com
 chartbeat.net
@@ -39,7 +38,6 @@ fastshare.cz
 gjc.mall.tv
 heureka.cz
 heureka.sk
-i.imedia.cz
 ibillboard.com
 idvert.cz
 imr.sk

@@ -207,6 +207,7 @@ wns.windows.com
 www.alexa.com
 www.answers.com
 www.bing.com
+www.cnet.com
 www.digicert.com
 www.freedownloadmanager.org
 www.getmonero.org
