@@ -938,7 +938,6 @@ kisscartoon.homegoods
 kisscartoon.homes
 kisscartoon.homesense
 kisscartoon.honda
-kisscartoon.honeywell
 kisscartoon.horse
 kisscartoon.hospital
 kisscartoon.host
