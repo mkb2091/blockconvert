@@ -219,6 +219,7 @@ www.msftconnecttest.com
 www.ranker.com
 www.reddit.com
 www.squidblacklist.org
+www.vanityfair.com
 www.webmd.com
 yahoo.co.jp
 zeustracker.abuse.ch
