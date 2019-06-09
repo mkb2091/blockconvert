@@ -40,7 +40,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 902910 blocked domains in each of the generated filter lists
+Theres are 903068 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -141,6 +141,7 @@ https://raw.githubusercontent.com/nabble/semalt-blocker/master/domains/blocked|1
 https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt|1.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt|1.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt|1.0 days|Blacklist|GPLv3
+https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt|1.0 days|Blacklist|CC-BY-SA-4.0
 https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt|4.0 hours|Blacklist|CC-BY-SA-4.0
 https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt|4.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/toshiya44/myAssets/master/hosts/hosts.txt|1.0 days|Blacklist|GPLv3
