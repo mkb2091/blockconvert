@@ -40,7 +40,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 903068 blocked domains in each of the generated filter lists
+Theres are 903071 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -124,6 +124,7 @@ https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscri
 https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt|2.0 hours|Blacklist|MIT
 https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt|1.0 days|Blacklist|MIT
 https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt|1.0 days|Blacklist|MIT
+https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf_3rd_party_sns.txt|6.0 hours|Blacklist|GPLv3
 https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt|1.0 days|Blacklist|GPL-3.0
 https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt|2.0 days|Blacklist|Apache2
 https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking.txt|2.0 days|Blacklist|Apache2
