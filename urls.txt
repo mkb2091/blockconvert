@@ -54,6 +54,7 @@ Is Whitelist|match url|do reverse_dns|url|expires|license
 [false, false, false, "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt", 86400, "MIT"]
 [false, false, false, "https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf.txt", 21600, "GPLv3"]
 [false, false, false, "https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf_3rd_party_sns.txt", 21600, "GPLv3"]
+[false, false, false, "https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf_paranoid.txt", 21600, "GPLv3"]
 [false, false, false, "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt", 86400, "GPL-3.0"]
 [false, false, false, "https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt", 172800, "Apache2"]
 [false, false, false, "https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking.txt", 172800, "Apache2"]
