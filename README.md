@@ -40,7 +40,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 904133 blocked domains in each of the generated filter lists
+Theres are 904161 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -107,6 +107,7 @@ https://raw.githubusercontent.com/SlashArash/adblockfa/master/adblockfa.txt|5.0 
 https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt|2.0 days|Blacklist|Permission to modify, copy and distribute
 https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts|1.0 days|Blacklist|MIT
 https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list|1.0 days|Whitelist|MIT
+https://raw.githubusercontent.com/adblockpolska/Adblock_PL_List/master/adblock_polska.txt|2.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt|1.0 days|Blacklist|MIT
 https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt|1.0 days|Blacklist|MIT
 https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt|1.0 days|Whitelist|MIT
