@@ -37,6 +37,7 @@ Is Whitelist|match url|do reverse_dns|url|expires|license
 [false, false, false, "https://raw.githubusercontent.com/SlashArash/adblockfa/master/adblockfa.txt", 432000, "The Beer-Ware License"]
 [false, false, false, "https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt", 172800, "Permission to modify, copy and distribute"]
 [false, false, false, "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts", 86400, "MIT"]
+[false, false, false, "https://raw.githubusercontent.com/adblockpolska/Adblock_PL_List/master/adblock_polska.txt", 172800, "GPLv3"]
 [false, false, false, "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt", 86400, "MIT"]
 [false, false, false, "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt", 86400, "MIT"]
 [false, false, false, "https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt", 259200, "The Unlicense"]
