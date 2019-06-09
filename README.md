@@ -40,7 +40,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 904130 blocked domains in each of the generated filter lists
+Theres are 904133 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -92,6 +92,7 @@ https://pastebin.com/raw/sRzfwfsa|100.0 days|Blacklist|Public Domain
 https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt|1.0 days|Blacklist|Free for use without any limitations
 https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt|1.0 days|Blacklist|Free for use without any limitations
 https://ransomwaretracker.abuse.ch/downloads/RW_URLBL.txt|1.0 days|Blacklist|Free for use without any limitations
+https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt|4.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts|1.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json|1.0 days|Blacklist|GPLv3
 https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt|1.0 days|Whitelist|GPLv3+

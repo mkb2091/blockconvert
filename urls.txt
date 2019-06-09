@@ -24,6 +24,7 @@ Is Whitelist|match url|do reverse_dns|url|expires|license
 [false, false, false, "https://pastebin.com/raw/a1TPEPfP", 8640000, "Public Domain"]
 [false, false, false, "https://pastebin.com/raw/ffDu8u46", 8640000, "Public Domain"]
 [false, false, false, "https://pastebin.com/raw/mU2XkjmV", 8640000, "Public Domain"]
+[false, false, false, "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt", 345600, "GPLv3"]
 [false, false, false, "https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts", 86400, "GPLv3"]
 [false, false, false, "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json", 86400, "GPLv3"]
 [false, false, false, "https://raw.githubusercontent.com/Marfjeh/coinhive-block/master/domains", 86400, "MIT"]
