@@ -5,8 +5,6 @@
 13.red-88-21-212.staticip.rima-tde.net
 1411179.woodgreen.towntalk.co.uk
 160-3-238-131.cpe.cableone.net
-164.ip-51-255-50.eu
-187-163-222-244.static.axtel.net
 187-178-9-19.dynamic.axtel.net
 189-209-217-49.static.axtel.net
 190-72-136-214.dyn.dsl.cantv.net
@@ -17,7 +15,6 @@
 208-78-100-202.slicehost.net
 212-5-159-61.ip.btc-net.bg
 213-32-46-142.ip.sflex.net
-218-161-88-253.hinet-ip.hinet.net
 23rdbromleyscoutgroup85270.bromley.towntalk.co.uk
 2k.bigginhill.towntalk.co.uk
 2ndcreationhairsaloninsydenham86096.catford.towntalk.co.uk
@@ -38,7 +35,6 @@ a2zdirectltd82029.preston.towntalk.co.uk
 aawristbands.loughborough.towntalk.co.uk
 abbbeytechitltd87931.maghull.towntalk.co.uk
 abbey.elephantandcastle.towntalk.co.uk
-abcd.seniorscouncil.net
 abdheatingplumbing80019.blackpool.towntalk.co.uk
 abelglass81129.blackpool.towntalk.co.uk
 abellrentals78743.queenstown.towntalk.net
@@ -572,7 +568,6 @@ dragon-castle.elephantandcastle.towntalk.co.uk
 dreamretro90454.walthamstow.towntalk.co.uk
 drivelodge.keighley.towntalk.co.uk
 dronfield.towntalk.co.uk
-drseeberger.com
 drumraghparishchurch80949.omagh.towntalk.co.uk
 ds.redcar.towntalk.co.uk
 dsl51b7d524.fixip.t-online.hu
@@ -621,7 +616,6 @@ en.theescapers.com
 en.towntalk.co.uk
 energieliscombepark84416.leightonbuzzard.towntalk.co.uk
 englishheritagebrodsworthhall93419.doncaster.towntalk.co.uk
-enterprise.hellokrd.net
 erith.towntalk.co.uk
 ernestjones.woodgreen.towntalk.co.uk
 erodatools78114.sheffield.towntalk.co.uk
@@ -659,7 +653,6 @@ faithbfc.sermondrop.com
 faithstarllp94191.sheffield.towntalk.co.uk
 fantasyradio.devizes.towntalk.co.uk
 faranijavidtaylorsolicitors79935.ilford.towntalk.co.uk
-fasdchildwelfare.ca
 fbccisco.sermondrop.com
 fbcds.sermondrop.com
 fbcfamily.sermondrop.com
@@ -752,7 +745,6 @@ gloucester.towntalk.co.uk
 glowtanningbeauty81708.bedford.towntalk.co.uk
 gmaster.elephantandcastle.towntalk.co.uk
 gmglogosembroideryprint79515.omagh.towntalk.co.uk
-go.primebird.com
 goalounge82031.redcar.towntalk.co.uk
 goldersgreen.towntalk.co.uk
 goodiesdropoff82511.middlesbrough.towntalk.co.uk
@@ -845,7 +837,6 @@ host22.181-15-243.telecom.net.ar
 host50.201-253-238.telecom.net.ar
 host81-143-213-156.in-addr.btopenworld.com
 host86-155-233-74.range86-155.btcentralplus.com
-host96.200-45-57.telecom.net.ar
 hostdub.net
 housecleaninglondon91649.camberwell.towntalk.co.uk
 hpvathena.com.hk
@@ -869,7 +860,6 @@ iglesiabautistaelcalvario.sermondrop.com
 ilford.towntalk.co.uk
 ilkley.towntalk.co.uk
 ilovethatcarcouk.redcar.towntalk.co.uk
-im8.io
 images.theescapers.com
 images.towntalk.co.uk
 imaginationgroupforeverlivingproducts81073.sheffield.towntalk.co.uk
@@ -915,6 +905,7 @@ ip136.ip-164-132-138.eu
 ip141.ip-164-132-138.eu
 ip142.ip-164-132-138.eu
 ip160.50-31-0.static.steadfastdns.net
+ip162.ip-149-202-225.eu
 ip173.ip-5-39-119.eu
 ip18.ip-51-255-58.eu
 ip183.ip-94-23-174.eu
@@ -1078,7 +1069,6 @@ loughborough.towntalk.co.uk
 loughboroughmarket.loughborough.towntalk.co.uk
 loveuxbridge.co.uk
 lowerhousejuniorfootballclub82737.burnley.towntalk.co.uk
-lputeaux-656-1-76-154.w92-154.abo.wanadoo.fr
 lrcentreltd.liverpool.towntalk.co.uk
 lsbrickwork81889.redcar.towntalk.co.uk
 lsbu.elephantandcastle.towntalk.co.uk
@@ -1423,7 +1413,6 @@ preston.towntalk.co.uk
 prestonyouththeatre88430.preston.towntalk.co.uk
 pricelessshoes.redcar.towntalk.co.uk
 primark.loughborough.towntalk.co.uk
-primebird.com
 professionalmanandvanheston94863.hayes.towntalk.co.uk
 prontopizza.burnley.towntalk.co.uk
 propavinglandscapingservices91213.coleraine.towntalk.co.uk
@@ -1539,7 +1528,6 @@ sermondrop.com
 server.inno-green.com
 server.theescapers.com
 server.towntalk.co.uk
-server1.ossii.com.tw
 sevomag1f.xxxy.info
 seymoursofdarlington.darlington.towntalk.co.uk
 shangthai-bar-and-restaurant.huddersfield.towntalk.co.uk
@@ -1776,7 +1764,6 @@ thewestonemanorhotel78950.northampton.towntalk.co.uk
 thewhitehart.orpington1st.co.uk
 thewonkyteapotcompany87609.loveuxbridge.co.uk
 theworkscafe81971.ashford.towntalk.co.uk
-theworldtrip.ca
 thirsk.towntalk.co.uk
 thomascook82378.atherton.towntalk.co.uk
 thornburrows.orpington1st.co.uk
@@ -2373,7 +2360,6 @@ www.fairbundle.com
 www.faithstarllp94191.sheffield.towntalk.co.uk
 www.fantasyradio.devizes.towntalk.co.uk
 www.faranijavidtaylorsolicitors79935.ilford.towntalk.co.uk
-www.fasdchildwelfare.ca
 www.fdclaw33383.frome.towntalk.co.uk
 www.fdclawsolicitors.frome.towntalk.co.uk
 www.feedflux.com
@@ -2500,7 +2486,6 @@ www.icpropertymaintenance78408.chesterfield.towntalk.co.uk
 www.ilford.towntalk.co.uk
 www.ilkley.towntalk.co.uk
 www.ilovethatcarcouk.redcar.towntalk.co.uk
-www.im8.io
 www.imaginationgroupforeverlivingproducts81073.sheffield.towntalk.co.uk
 www.imaginationhairbytony80731.barnsley.towntalk.co.uk
 www.imperialarms88383.chislehurst.towntalk.co.uk
