@@ -350,6 +350,7 @@ houston.cbslocal.com
 howtoforge.com
 hulkshare.com
 hulu.com
+i.ebayimg.com
 i.imgur.com
 i.pinimg.com
 i.s-microsoft.com
@@ -387,6 +388,7 @@ instagram.com
 investorplace.com
 ipinfo.io
 ipla.tv
+ir.ebaystatic.com
 is.gd
 istockphoto.com
 itunes.apple.com
@@ -586,6 +588,7 @@ outlook.com
 outlook.live.com
 outlook.office365.com
 ow.ly
+p.ebaystatic.com
 p.imgur.com
 p.jwpcdn.com
 packages.linuxmint.com
@@ -685,6 +688,7 @@ secure.dshield.org
 secure.logmein.com
 secure.netflix.com
 secure.surveymonkey.com
+secureir.ebaystatic.com
 securemecca.com
 sendspace.com
 services.sonarr.tv
