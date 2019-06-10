@@ -1,10 +1,17 @@
 # BlockConvert
 
-Tool for generating blacklists in domain list format/host file format/ adblockplus style format/DNS Response Policy Zone format.
 
-It merges filter lists from many different sources(the list is in urls.txt and below), and tries to convert it into a list of blockable domains. It then uses dns to lookup all of those domains to check if they actually exist, and removes the ones which don't to reduce space and hopefully improve speed for blocking tools. It uses DNS-over-https for the dns lookup to avoid being flagged as accessing lots of malware websites, and to stop local dns blocking from effecting results. It also performs reverse dns on any ip addresses in any of the blocklists to add them to the list of blocked domains to improve the blocklist. For malware domains it also finds all other domains hosted on the same IP address, to try and ensure as much malware as possible is blocked, this does result in the chance of some false positives for websites using shared IP addresses.
+Generated blocklist in a variety of formats.
 
-If there are any false positives, make an issue/contact me and I'll whitelist them
+Advantages of using this list:
+- Conversion of list types. As well as supporting many common filter list formats, it also supports Privacy Badger data file, which uses algorithms to detect trackers allowing newly created trackers to be quickly detected and added to this blocklist without a human needing to spot the tracker.
+
+- Reverse DNS and passive DNS on malware IP addresses. This allows finding all the domains which a malware IP blacklist suggests could be dangerous to be found and blocked. This allows blocking of malware domains that haven't yet been added to other malware domain lists.
+
+- Use of a whitelist. Using a hosts file doesn't allow whitelisting, and many DNS-based blockers don't have great support of whitelists. This list has it's own whitelist, as well as using a few others to try to reduce false positives. This list supports "*" in subdomain and tld to aid in easily fixing many false positives at once. (If you do find a false positive(domain that shouldn't be blocked), then please make an issue and I will remove it)
+
+- Use of DNS to check if domains still exist. Many lists contain domains that have expired and no longer exist. This makes those lists larger than needed which wastes bandwidth, space and can slow blocking.
+
 
 ## The Process
 
