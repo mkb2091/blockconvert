@@ -17,7 +17,9 @@ class BlockList():
         self.TLDS = build_regex.TLDS
         self.URL_REGEX = build_regex.URL_REGEX
         self.dns_check_threads = max(1, dns_check_threads)
-        self.SUBDOMAINS = ('www', 'm', 'analytics', 'telemetry')
+        with open('subdomain_list.txt') as file:
+            self.SUBDOMAINS = set(file.read().splitlines())
+        self.SUBDOMAINS.update(('www', 'm', 'analytics', 'telemetry'))
         self.dns = dns_check.DNSChecker()
 
     def add_file(self, contents, is_whitelist=False, match_url=False):
