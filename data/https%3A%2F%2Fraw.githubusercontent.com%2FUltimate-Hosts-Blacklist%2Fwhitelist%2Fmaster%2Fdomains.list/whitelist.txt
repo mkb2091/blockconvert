@@ -290,6 +290,7 @@ fr.osdn.net
 freebsd.org
 freenet.de
 frys.com
+ftp.chocolatey.org
 ftp.heanet.ie
 funnyordie.com
 g.co
@@ -354,6 +355,7 @@ i.ebayimg.com
 i.imgur.com
 i.pinimg.com
 i.s-microsoft.com
+i.vgy.me
 i.ytimg.com
 i0.wp.com
 i1.wp.com
@@ -591,6 +593,7 @@ ow.ly
 p.ebaystatic.com
 p.imgur.com
 p.jwpcdn.com
+packages.chocolatey.org
 packages.linuxmint.com
 pando.com
 paper.li
@@ -722,6 +725,7 @@ ssl.p.jwpcdn.com
 ssl.reddit.com
 st.mycdn.me
 stackexchange.com
+stackpath.bootstrapcdn.com
 staging.plex.tv
 stanev.org
 star.c10r.facebook.com
@@ -819,6 +823,7 @@ v.pinimg.com
 variety.com
 vc.yahoo.com
 verisign.com
+vgy.me
 vice.com
 video.google.com
 videocopilot.net
