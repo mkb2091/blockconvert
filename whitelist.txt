@@ -150,6 +150,7 @@ ris-prod-atm.trafficmanager.net
 ris.api.iris.microsoft.com
 ris.api.iris.microsoft.com.akadns.net
 s-msedge.net
+s.imgur.com
 s3.amazonaws.com
 scrapinghub.com
 search.msn.com
