@@ -21,6 +21,7 @@
 3944448.fls.doubleclick.net
 3cinteractive.com
 3lift.com
+4191263.fls.doubleclick.net
 4292932.fls.doubleclick.net
 4354787.fls.doubleclick.net
 4449091.fls.doubleclick.net
@@ -284,6 +285,7 @@ api.bugsnag.com
 api.content-ad.net
 api.curalate.com
 api.freshaddress.biz
+api.headlinerlabs.com
 api.intellimize.co
 api.iterable.com
 api.keen.io
@@ -422,6 +424,7 @@ beeftransmission.com
 beemray.com
 beeviewd.com
 bestadbid.com
+bestbackorder.com
 bestbuy.demdex.net
 bestcontentonline.com
 beyond-api.shopkick.com
@@ -494,7 +497,6 @@ c.sta.haloapps.com
 c2.taboola.com
 c3tag.com
 c4d-cdn.adcolony.com
-cabelas.ugc.bazaarvoice.com
 cafemedia-d.openx.net
 camden.logs.roku.com
 campaign-archive.com
@@ -506,7 +508,6 @@ capitaloneservices.tt.omtrdc.net
 capture.trackjs.com
 carambo.la
 carbonads.net
-carters.ugc.bazaarvoice.com
 casalemedia.com
 cbi.boldchat.com
 cbsi.com.ssl.d2.sc.omtrdc.net
@@ -548,6 +549,7 @@ cdn.districtm.io
 cdn.evgnet.com
 cdn.feeds.ibt.com
 cdn.filteringlist.com
+cdn.firstpromoter.com
 cdn.freshmarketer.com
 cdn.getambassador.com
 cdn.getshogun.com
@@ -562,6 +564,7 @@ cdn.merklesearch.com
 cdn.mxpnl.com
 cdn.native.ai
 cdn.onthe.io
+cdn.oribi.io
 cdn.pendo.io
 cdn.permutive.com
 cdn.piwik.pro
@@ -713,6 +716,7 @@ d.la1-c2-phx.salesforceliveagent.com
 d1spgg7psata7d.cloudfront.net
 d21j0tl4id6lf2.cloudfront.net
 d2leoy3k16s14d.cloudfront.net
+d341nzm64j0k1x.cloudfront.net
 d3kkw-6ch3c.ads.tremorhub.com
 d3rxu0fywkpi6t.cloudfront.net
 d4pz26d5itt3n.cloudfront.net
@@ -728,6 +732,7 @@ dc.arrivalist.com
 dcs-edge-va6-802167536.us-east-1.elb.amazonaws.com
 dcs-vod.apis.anvato.net
 dctk.expedia.com
+ddzuuyx7zj81k.cloudfront.net
 delta.celebrus.com
 demandbase.com
 den01.sync.search.spotxchange.com
@@ -778,6 +783,7 @@ e.crashlytics.com
 e.redbox.com
 e.serverbid.com
 e8999.b.akamaiedge.net
+easydomain.net
 eazybiz.ng
 eb.trbas.com
 eb2.3lift.com
@@ -845,10 +851,12 @@ fastlane-adv.rubiconproject.com
 fastlane.rubiconproject.com
 fc.yahoo.com
 fedex.com.ssl.d2.sc.omtrdc.net
+fedex.tt.omtrdc.net
 felix.data.tm-awx.com
 fgl.com
 fiksu.com
 financialprovider-logos.platform.intuit.com
+firstpromoter.com
 fl.adpxl.co
 fls-na.amazon-adsystem.com
 fls.doubleclick.net
@@ -946,6 +954,7 @@ hbogo.com.102.122.2o7.net
 hbonow.com.ssl.sc.omtrdc.net
 hbopenbid.pubmatic.com
 hbopenbid88000nf.pubmatic.com
+headlinerlabs.com
 heatmap.it
 hereford.logs.roku.com
 heyzap.com
@@ -959,6 +968,8 @@ honcode.ch
 hop.clickbank.net
 hrum.hotelsapi.io
 htlbid.com
+hull.io
+hullapp.io
 hulu.sc.omtrdc.net
 hyatt.demdex.net
 hyattcorporation.tt.omtrdc.net
@@ -977,9 +988,11 @@ iadsdk.apple.com
 iadsdk.apple.com.edgekey.net
 ib.adnxs.com
 ib.anycast.adnxs.com
+ibrahimjabbari.com
 identity.mparticle.com
 idsync.rlcdn.com
 idx.imprev.net
+iesnare.com
 ima3vpaid.appspot.com
 image.tx.redbox.com
 images.taboola.com
@@ -1048,6 +1061,7 @@ js.hsadspixel.net
 js.hscta.net
 js.hsforms.net
 js.hsleadflows.net
+js.hull.io
 js.intercomcdn.com
 js.iodo.com
 js.moatads.com
@@ -1080,6 +1094,7 @@ lagrange.logs.roku.com
 lb-delivery.us-east-1.applifier.info
 leadnationmedia.com
 leadpages.co
+leadsbridge.com
 lfstmedia.com
 lga-bid-bgp.contextweb.com
 lib.browserhawk.com
@@ -1308,6 +1323,7 @@ mopub.com
 mparticle.com
 mparticle.containers.piwik.pro
 mpd.mxptint.net
+mpsnare.iesnare.com
 msg-media.valueclick.akadns.net
 mssl.fwmrm.net
 munchkin.brightfunnel.com
@@ -1377,6 +1393,8 @@ optmnstr.com
 optmstr.com
 optnmstr.com
 opttracker.com
+order.easydomain.net
+oribi.io
 origin-2.extole.io
 origin-4.extole.io
 origin-5.extole.io
@@ -1484,6 +1502,7 @@ playercdn.jivox.com
 playhaven.com
 playlist.ma.tune.com
 playtime-tm.everesttech.net
+plugin.headlinerlabs.com
 pool1.moatads.com
 pool3.moatads.com
 pool4.moatads.com
@@ -1568,9 +1587,11 @@ returnpath.net
 revcontent.com
 reveal.clearbit.com
 richmond.logs.roku.com
+rightmessage.com
 ris.res-x.com
 rkdms.com
 rlcdn.com
+rmbutterfly.com
 rock-you-d.openx.net
 rocketadt.com
 rocketadv.com
@@ -1651,6 +1672,7 @@ scripts.mediavine.com
 scysvr03.r.us-east-1.awstrack.me
 sdk-analytics.inlocomedia.com
 sdk.consoliads.com
+sdk.iad-08.braze.com
 sdk.ibm.xtify.com
 sdk.privacy-center.org
 sdk3.ibm.xtify.com
@@ -1735,6 +1757,7 @@ smy.iheart.com
 sn.moatads.com
 socialannex.com
 socialapi.digitalremedy.com
+socialize.us1.gigya.com
 soda1.midasplayer.com
 solarwinds.tt.omtrdc.net
 soma-assets.smaato.net
@@ -1785,6 +1808,7 @@ static.lakana.com
 static.scroll.com
 static.shareasale.com
 static.shoofle.tv
+static.tapfiliate.com
 static.vidazoo.com
 static.vilynx.com
 static.yieldmo.com
@@ -1807,6 +1831,7 @@ stocks-analytics-events.news.apple-dns.net
 streamrail.net
 sugarland.logs.roku.com
 sumo.com
+super.hullapp.io
 superonclick.com
 supersonic.com
 supersonicads.com
@@ -1833,11 +1858,8 @@ syndicaster.wpengine.com
 syndication.site.yahoo.net
 syndication.twitter.com
 system.picreel.com
-t.agentanalytics.com
 t.ambra.com
 t.appsflyer.com
-t.update.adsrvr.org
-t.visto1.net
 t1.re
 tabmo.io
 taboola.com
@@ -1847,6 +1869,7 @@ tag.1rx.io
 tag.clrstm.com
 tag.demandbase.com
 tag.getdrip.com
+tag.rightmessage.com
 tag.yieldoptimizer.com
 tagan.adlightning.com
 tagcommander.com
@@ -1859,6 +1882,7 @@ tags.toyota.com
 talkingpointsmemo-d.openx.net
 tap-secure.rubiconproject.com
 tapad.com
+tapfiliate.com
 tapjoy-com-lb-vpc-332546193.us-east-1.elb.amazonaws.com
 tapjoy.com
 tapjoyads.com

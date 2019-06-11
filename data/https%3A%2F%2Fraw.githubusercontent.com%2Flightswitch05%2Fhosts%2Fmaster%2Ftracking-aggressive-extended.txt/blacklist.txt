@@ -126,6 +126,7 @@ animaxtaiwan.sslproxy.gigya.com
 announcements.livefyre.com
 anonymous.s50.exacttarget.com
 answers.livefyre.com
+api-2-0.spot.im
 api-china.flipboard.com
 api-launcher.spot.im
 api-v4.maxmind.com
@@ -1126,6 +1127,7 @@ identity-michaelkorseu.gomoxie.solutions
 identity-michaelkorsfr.gomoxie.solutions
 identity-michaelkorsit.gomoxie.solutions
 identity-michaelkorsuk.gomoxie.solutions
+identity-moxiecom.gomoxie.solutions
 identity-newcote.uk.gomoxie.solutions
 identity-norton.gomoxie.solutions
 identity-nortontest.gomoxie.solutions
@@ -1496,6 +1498,7 @@ mcq3v6k8917x8lg5w6s-94jck1r4.login.exacttarget.com
 mcvsb3gbtj9sn8ltvq3j4l-bw21y.login.exacttarget.com
 mcx915krlq4sx-35t6rmswbqw924.login.exacttarget.com
 mcz17jmw1yrdnf908lv4t1wmwl88.login.exacttarget.com
+mczngp8zk1hybgx-x-9wtwh28wm0.login.exacttarget.com
 me.spot.im
 media.github.exacttarget.com
 meet.exacttarget.com
@@ -1620,6 +1623,7 @@ ns1.exacttarget.com
 ns1.providesupport.com
 ns2.exacttarget.com
 ns2.providesupport.com
+ns2lo-jp.providesupport.com
 ns3.exacttarget.com
 ns3.providesupport.com
 ns4.exacttarget.com
@@ -1628,6 +1632,10 @@ ny.ipinfo.io
 ny2.ipinfo.io
 o1.email.maxmind.com
 o1.email.pingdom.com
+o10.ptr9351.email.flipboard.com
+o11.ptr6302.email.flipboard.com
+o15.ptr8133.email.flipboard.com
+o16.ptr3525.email.flipboard.com
 o2.email.flipboard.com
 o2.email.pingdom.com
 o3.email.flipboard.com
@@ -1689,6 +1697,7 @@ pages.s4.exacttarget.com
 pages.s50.exacttarget.com
 pages.s6.exacttarget.com
 pages.s7.exacttarget.com
+pages.tawk.to
 pages.virt.boa.exacttarget.com
 pages.virt.s6.exacttarget.com
 panel.livechatinc.com
@@ -1831,6 +1840,7 @@ s-enroute.glympse.com
 s.cdn.turner.com
 s.flipboard.com
 s.spot.im
+s11.login.exacttarget.com
 s2.login-qa2.exacttarget.com
 s4001.pingdom.com
 s4002.pingdom.com
@@ -2019,6 +2029,7 @@ stagingv2.spot.im
 starbucks.flipboard.com
 startups.livechatinc.com
 static-a.tawk.to
+static-cdn.spot.im
 static-fra.livechatinc.com
 static-v.tawk.to
 static.juicer.io
@@ -2158,6 +2169,7 @@ us1a-email-mng.gigya.com
 v6.ipinfo.io
 va.tawk.to
 vandenborre.ugc.bazaarvoice.com
+vegascom.ugc.bazaarvoice.com
 vehicleservicepros.sslproxy.gigya.com
 vendorlist.consensu.org
 verizonwireless.ugc.bazaarvoice.com
