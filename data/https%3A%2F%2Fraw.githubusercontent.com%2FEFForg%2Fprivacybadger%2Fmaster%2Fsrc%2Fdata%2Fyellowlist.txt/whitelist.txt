@@ -47,6 +47,7 @@ art19.com
 aspnetcdn.com
 assetfiles.com
 assets-cdk.com
+assets.adobedtm.com
 assets.nflxext.com
 assets.ubuntu.com
 attachment.fbsbx.com
@@ -609,6 +610,7 @@ ts.w.org
 ttvnw.net
 tumblr.com
 turner.com
+turnto.com
 twimg.com
 twitch.tv
 twitter.com

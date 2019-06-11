@@ -5931,6 +5931,7 @@ ad2one-n-d.openx.net
 ad3.adriver.ru
 ad4-9.tlnk.io
 ad4.adriver.ru
+ad4game.com
 ad5.adriver.ru
 ad73-d0c7-f35a-d4ae.reporo.net
 ad8.adriver.ru
@@ -6153,6 +6154,7 @@ ads-trk.vidible.tv
 ads-wc.adaptv.advertising.com
 ads.2mdnsys.com
 ads.54646.co
+ads.ad4game.com
 ads.adaptv.advertising.com
 ads.adk2x.com
 ads.adsrvmedia.net.adk2x.com
@@ -9146,6 +9148,7 @@ cdn.3lift.com
 cdn.9appswin.com
 cdn.accelerator.arsdev.net
 cdn.ad.xiaomi.com
+cdn.ad4game.com
 cdn.adaptv.advertising.com
 cdn.adbrau.com
 cdn.adgear.com
@@ -10288,6 +10291,8 @@ cs.gssprt.jp
 cs.media.net
 cs.voot.com
 cs1.wpc.v0cdn.net
+cs11.wpc.v0cdn.net
+cs1137.wpc.gammacdn.net
 cs9hjajhfwpfgbjgyyspeg6z6jd8x1508207690.nuid.imrworldwide.com
 csbsutah.co1.qualtrics.com
 cse.connexity.net
@@ -10910,6 +10915,11 @@ delivery.supersonicads.com
 delivery.swid.switchads.com
 delivery.trafficjunky.net
 delivery.zidtech.com
+delivery01.ad4game.com
+delivery02.ad4game.com
+delivery03.ad4game.com
+delivery04.ad4game.com
+delivery05.ad4game.com
 delivery1.trafficjunky.net
 delivery11.trafficjunky.net
 delivery2.trafficjunky.net
@@ -11031,6 +11041,7 @@ dev.taplytics.com
 dev.ui.mobile.ensighten.com
 dev.umeng.com
 dev.visualwebsiteoptimizer.com
+dev01.ad4game.com
 dev1.flurry.com
 dev2.flurry.com
 dev3.flurry.com
@@ -13938,6 +13949,8 @@ happypancake-d.openx.net
 happysizechde.widget.criteo.com
 happysizede.widget.criteo.com
 happytrips.com
+haproxy1.ad4game.com
+haproxy2.ad4game.com
 hardtofindmilk.com
 hardware-mag.de.intellitxt.com
 hardwareecke-de.intellitxt.com
@@ -15098,6 +15111,7 @@ ir-na.amazon-adsystem.com
 ir-uk.amazon-adsystem.com
 ir.criteo.com
 ir.doubleclick.net
+iriscoremetadataprod.blob.core.windows.net
 irjndsmrnax3qldycwnttdposagxj1510283190.nuid.imrworldwide.com
 irl1.demdex.net
 irland.de.intellitxt.com
@@ -17265,6 +17279,7 @@ mongo1a.brandreachsys.com
 mongo1x.brandreachsys.com
 mongo2.brandreachsys.com
 mongo2x.brandreachsys.com
+monitor.ad4game.com
 monitor.outbrain.com
 monitor.tercept.com
 monitor.ws.adacts.com
@@ -17328,6 +17343,7 @@ mp3menu.org
 mp4.appnext.com
 mparticle.com
 mpcs.inq.com
+mpe.ad4game.com
 mpg.taboola.com
 mpjri.voluumtrk.com
 mplxtest.mediaplex.com
@@ -20685,6 +20701,7 @@ report-geo.moatads.com
 report-partners.appmetrica.webvisor.com
 report-static.bapi.adsafeprotected.com
 report-zt.1rx.io
+report.ad4game.com
 report.appmetrica.webvisor.com
 report.appmetrica.yandex.net
 report.webclicks24.com
@@ -24611,6 +24628,8 @@ tracking.taboola.com
 tracking.trafficjunky.net
 tracking.vcommission.com
 tracking.zeotap.com
+tracking01.ad4game.com
+tracking02.ad4game.com
 tracking1.firstimpression.io
 tracking2.firstimpression.io
 trackmedia101.com
@@ -24628,6 +24647,7 @@ traefik-dsp-in.ws.adacts.com
 traefik-dsp-us.ws.adacts.com
 traefik-main.ws.adacts.com
 traffective-d.openx.net
+traffic.ad4game.com
 traffic.broker.to
 traffic.outbrain.com
 traffic.trafficposse.com
@@ -25973,6 +25993,7 @@ villa.alphonso.tv
 villanova.qualtrics.com
 vinfdv6b4j.com
 vinted-de-d.openx.net
+vip5.afdorigin-prod-am02.afdogw.com
 vipapi.wps.cn
 vipmak.com
 vipplaza-co-id.b.appier.net
@@ -26724,6 +26745,7 @@ www.acuityads.com
 www.ad.admitad.com
 www.ad.adriver.ru
 www.ad.smartclick.net
+www.ad4game.com
 www.adacts.com
 www.adadvisor.net
 www.adara.com
