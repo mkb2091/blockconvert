@@ -72,6 +72,7 @@ class BlockList():
                 for ip in ips:
                     filter_list.remove(ip)
                 if do_reverse_dns:
+                    print('Found %s IP addresses' % len(ips))
                     found = dns.mass_reverse_lookup(ips)
                     filter_list.update(found)
                     print('Added %s rules via reverse dns' % len(found))
