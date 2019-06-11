@@ -143,8 +143,7 @@ class DNSChecker():
         self.session2.headers['User-Agent'] = 'DOH'
         self.session2.headers['Accept'] = '*/*'
         self.servers = ['https://dns.google.com/resolve?',
-                        'https://cloudflare-dns.com/dns-query?',
-                        'https://doh.securedns.eu/dns-query?',]
+                        'https://cloudflare-dns.com/dns-query?',]
         self.cache = dict()
         self.reverse_cache = dict()
         one_week_ago = (time.time() - 60*60*24*7)
