@@ -22,7 +22,6 @@
 7bpeople.com
 7search.com
 82o9v830.com
-99count.com
 a-ads.com
 a-counter.kiev.ua
 a.aproductmsg.com
@@ -367,7 +366,6 @@ ads.com.com
 ads.contactmusic.com
 ads.contentabc.com
 ads.contextweb.com
-ads.crakmedia.com
 ads.creative-serving.com
 ads.creativematch.com
 ads.cricbuzz.com
@@ -476,7 +474,6 @@ ads.mcafee.com
 ads.mediaodyssey.com
 ads.medienhaus.de
 ads.mgnetwork.com
-ads.mmania.com
 ads.motor-forum.nl
 ads.motormedia.nl
 ads.msn.com
@@ -521,6 +518,7 @@ ads.psd2html.com
 ads.pushplay.com
 ads.quoka.de
 ads.rcs.it
+ads.recoletos.es
 ads.rediff.com
 ads.redlightcenter.com
 ads.redtube.com
@@ -582,7 +580,6 @@ ads.y-0.net
 ads.yahoo.com
 ads.yimg.com
 ads.yldmgrimg.net
-ads.yourfreedvds.com
 ads.youtube.com
 ads.zdnet.com
 ads.ztod.com
@@ -703,7 +700,6 @@ adsmart.com
 adsmart.net
 adsmogo.com
 adsnative.com
-adsoftware.com
 adsoldier.com
 adspeed.net
 adspirit.de
@@ -781,7 +777,6 @@ adx.allstar.cz
 adx.atnext.com
 adxpansion.com
 adxpose.com
-adxvalue.com
 adyea.com
 adz2you.com
 adzbazar.com
@@ -929,7 +924,6 @@ bannerpower.com
 banners.adultfriendfinder.com
 banners.amigos.com
 banners.asiafriendfinder.com
-banners.babylon-x.com
 banners.bol.com.br
 banners.cams.com
 banners.clubseventeen.com
@@ -1089,9 +1083,7 @@ cjlog.com
 claria.com
 class-act-clicks.com
 clearbid.uberads.com
-click.absoluteagency.com
 click.fool.com
-click.kmindex.ru
 click2freemoney.com
 click2paid.com
 clickability.com
@@ -1180,7 +1172,6 @@ counter.snackly.co
 counter.sparklit.com
 counter.yadro.ru
 counters.honesty.com
-counting.kmindex.ru
 counts.tucows.com
 coupling-media.de
 couponcode.today
@@ -1262,7 +1253,6 @@ doubleclick.net
 doublepimp.com
 doubtfulrainstorm.com
 dragzebra.com
-drumcash.com
 dxtrack22.info
 dxtrack55.info
 dynamic.fmpub.net
@@ -1288,7 +1278,6 @@ effectivemeasure.com
 effectivemeasure.net
 efghh.pro
 efghi.pro
-eiv.baidu.com
 elasticchange.com
 elephantqueue.com
 elitedollars.com
@@ -1420,6 +1409,7 @@ googlesyndication.com
 gorgeousground.com
 gostats.com
 gp.dejanews.com
+gpr.hu
 grafstat.ro
 grapeshot.co.uk
 green-coffee.me
@@ -1442,6 +1432,7 @@ heyos.com
 hfc195b.com
 hgads.com
 hidden.gogoceleb.com
+hideisp.com
 hightrafficads.com
 hilariouszinc.com
 histats.com
@@ -1535,7 +1526,6 @@ iperceptions.com
 ipro.com
 ireklama.cz
 itfarm.com
-itop.cz
 its-that-easy.com
 itsptp.com
 ivykiosk.com
@@ -1561,6 +1551,7 @@ keymedia.hu
 kindads.com
 kissmetrics.com
 kliks.nl
+kniverto.com
 komoona.com
 kontera.com
 kt-g.de
@@ -1626,6 +1617,7 @@ marketing.hearstmagazines.nl
 marketing.nyi.net
 marketing.osijek031.com
 marketingsolutions.yahoo.com
+maroonspider.com
 mas.sector.sk
 mastermind.com
 matchcraft.com
@@ -1713,6 +1705,7 @@ n69.com
 naj.sk
 namimedia.com
 nastydollars.com
+nat.emule.org.cn
 navigator.io
 navrcholu.cz
 nbjmp.com
@@ -1736,7 +1729,6 @@ new-power-life.com
 newads.bangbros.com
 newbie.com
 newenergysaver.pro
-newnet.qsrch.com
 newnudecash.com
 newopenx.detik.com
 newstarads.com
@@ -2016,7 +2008,6 @@ searchmarketing.com
 searchramp.com
 secure.webconnect.net
 sedoparking.com
-sedotracker.com
 sendmepixel.com
 sensismediasmart.com.au
 separatesilver.com
@@ -2121,7 +2112,6 @@ steelhousemedia.com
 stickyadstv.com
 storesurprise.com
 stormyachiever.com
-stormyshock.com
 stormysponge.com
 straightnest.com
 strivesidewalk.com
@@ -2156,6 +2146,7 @@ teenrevenue.com
 teliad.de
 text-link-ads.com
 textad.sexsearch.com
+textads.biz
 textlinks.com
 tfag.de
 theadhost.com
@@ -2320,7 +2311,6 @@ webmaster-partnerprogramme24.de
 webmasterplan.com
 webmasterplan.de
 weborama.fr
-webpower.com
 webreseau.com
 webseoanalytics.com
 websponsors.com

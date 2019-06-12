@@ -3249,6 +3249,7 @@ azera-s014.com
 azhacks.com
 azointel.com
 b.bedop.com
+b.hatena.ne.jp
 b.imwx.com
 b.livetex.ru
 b.myspace.com
@@ -5844,6 +5845,7 @@ d2cpw6kwpff7n5.cloudfront.net
 d2d8qsxiai9qwj.cloudfront.net
 d2flex.com
 d2ghscazvn398x.cloudfront.net
+d2ibu2ug0mt5qp.cloudfront.net
 d2ip7iv1l4ergv.cloudfront.net
 d2j3te7y7s8xxp.cloudfront.net
 d2lv4zbk7v5f93.cloudfront.net
@@ -6553,6 +6555,7 @@ dynatrace.com
 dynbeacon.global.ssl.fastly.net
 dz-cheat.com
 dz2fz0bgyq9tn.cloudfront.net
+dzloxwupyxw.com
 dzmxze7hxwn6b.cloudfront.net
 dzy2017.pw
 dzyqqwixizp.com
@@ -6939,6 +6942,7 @@ ethikuma.link
 ethnio.com
 ethofficial.net
 ethtrader.de
+etihenbteb.com
 etn.cpufan.club
 etn.spacepools.org
 etoads.net
@@ -7565,6 +7569,7 @@ foodbabe.com
 footballgamespot.com
 footprint.anetwork.ir
 footprintlive.com
+foqzposfvmk.com
 for-ward.jp
 force24.co.uk
 forcebets.com
@@ -9945,7 +9950,6 @@ interstateanalytics.com
 intervigil.com
 intext.nav-links.com
 intilery-analytics.com
-intimglobus.ru
 intimlife.net
 intournament.com
 intra.livetex.ru
@@ -10126,6 +10130,7 @@ iwbwvowdidkuo.com
 iwebtrack.com
 iwstats.com
 ixiaa.com
+ixkbavqbpsm.com
 ixsgoqeklwsjw.com
 ixtkiofaoudis.com
 iyfnzgb.com
@@ -10193,7 +10198,6 @@ jeuxpirate.fr
 jeuxtricheur.com
 jf71qh5v14.com
 jfkfojgkrk.com
-jfvjtudp.com
 jgqcraids.com
 jguhktakkykrsb.com
 jheplryxvzvx.com
@@ -10493,6 +10497,7 @@ kunay.nullrefexcep.com
 kupona.de
 kurlipush.com
 kurwadrop.life
+kuwlmrggxrznky.com
 kvinit-prod.api.kochava.com
 kxldvncqrkv.com
 kxpkadaivbm.com
@@ -10555,7 +10560,6 @@ ldap.virtualspirits.com
 lddt.de
 ldigvkkjquvyn.com
 ldqxdxtkepveg.com
-ldxdpitoeox.com
 lead-123.com
 lead-analytics.biz
 lead-converter.com
@@ -11403,6 +11407,7 @@ mdn2015x2.com
 mdn2015x4.com
 mdotlabs.com
 mdownzone.com
+mdpmgoitzaotk.com
 mdsngpush.finanzen.net
 me.cur.lv
 meapk.com
@@ -11938,6 +11943,7 @@ msg-2.me
 msg.71.am
 msgapp.com
 msgfocus.com
+msgs.jp
 msgtag.com
 mskeysale.com
 msmetrics.ws.sonos.com
@@ -12148,7 +12154,6 @@ myvoicenation.com
 myway.com
 mywebstats.com.au
 mywebstats.org
-mzjotkigwu.com
 n.cur.lv
 n.livetex.ru
 n.mailfire.io
@@ -12411,6 +12416,7 @@ nintendobro.com
 nitrogensports.eu
 nivsrtqdurhjz.com
 nkjssnadxejm.com
+nkyafqufx.com
 nl.cookiescript.info
 nl.livetex.ru
 nl.virtualspirits.com
@@ -13595,6 +13601,7 @@ preview.virtualspirits.com
 previousplayground.com
 previouspotato.com
 prf.hn
+prfxrfkrvzroz.com
 prg.smartadserver.com
 priceblink.com
 pricecsgo.net
@@ -13925,10 +13932,10 @@ pvptwhhkfmog.com
 pvstat.china.cn
 pvtag.yahoo.co.jp
 pvx.xcar.com.cn
+pw.gigazine.net
 pwa.telephoneannuaire.fr
 pwkzakhq.com
 pwrdon.com
-pwrjjvjtvmr.com
 pwwysydh.com
 px.dynamicyield.com
 px.excitedigitalmedia.com
@@ -14460,6 +14467,7 @@ retargettracker.com
 retentionscience.com
 retiremely.com
 retrack.q-divisioncdn.de
+retreatoftheretreat.site
 rettica.com
 return.bithumb.com
 reussissonsensemble.fr
@@ -14521,6 +14529,7 @@ ritzykey.com
 ritzysponge.com
 rivalsseasonpass.dlcodes.com
 rivrai.com
+riwjpbpvkl.com
 rixpjpjl.com
 rizedrop.com
 rkcemktaasoxew.com
@@ -14576,6 +14585,7 @@ rolldagames.com
 rollingcounters.com
 ron.si
 roneum.crypto-webminer.com
+roofrelation.com
 roqweslqqlyklb.com
 rosenberg.appmetrica.yandex.net
 rotator.trafficstars.com
@@ -14902,7 +14912,6 @@ sd.virtualspirits.com
 sdad.guru
 sddan.com
 sdfsf.freecontent.date
-sdgvzdksjbl.com
 sdk-cdn.beeketing.com
 sdk.appsflyer.com
 sdk.apptentive.com
@@ -17132,7 +17141,6 @@ tm.jsuol.com.br
 tm.tradetracker.net
 tm.uol.com.br
 tm.zedo.com
-tmblaeivephb.com
 tmfkuesmlpto.com
 tmgr.ccmbg.com
 tmkcofbjv.com
@@ -17810,7 +17818,6 @@ turbodrop.life
 turn.com
 turnsocial.com
 turnsocial.now.sh
-turnto.com
 turtlecoin.crypto-webminer.com
 tusfzbkirabi.com
 tuxdipdej.com
@@ -18175,6 +18182,7 @@ vdc.zoomph.com
 vdi.livetex.ru
 vdi.virtualspirits.com
 vdoing.com
+vdrpwkycbla.com
 vebadu.com
 vederefilm.net
 veduy.com
@@ -18495,6 +18503,7 @@ way2traffic.com
 wayhacks.com
 waystohack.com
 wb.whatsbroadcast.com
+wbbzegmupyl.com
 wbdds.allocine.fr
 wbidder.online
 wbvwcyssssh.com
@@ -19756,6 +19765,7 @@ wysistat.com
 wywy.com
 wz7a23kicq.online
 wzafekkdp.com
+wzfoygianhe.com
 wzrkt.com
 wzurl.me
 x-codes.com

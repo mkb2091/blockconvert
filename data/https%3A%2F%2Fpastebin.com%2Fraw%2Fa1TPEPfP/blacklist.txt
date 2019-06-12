@@ -62,7 +62,6 @@ aacr.create4stem.org
 abalight.nl
 absamc.co.uk
 academy.freedom.tm
-academy.grshs.com
 academyofexperts.org
 acci.arkansas.gov
 acelarate.com
@@ -85,7 +84,6 @@ akaritech.com
 aldoimoveis.com.br
 aleksandramebel.ru
 alepuniv.edu.sy
-alhidaya.net
 all-radios.in
 alltite.com
 alphametal.fr
@@ -169,7 +167,6 @@ biomassapp.it
 bitofme.com
 blich.co.il
 bluediamondcement.com
-bordur.tv
 bostoncatholicappeal.org
 bostondesignguide.com
 boutiquehomes.com.au
@@ -750,6 +747,7 @@ independencecounty.com
 indiantelevision.com
 indigo.lv
 infoappexchange.com
+infoportal.kz
 infragard-ct.org
 infs.co.in
 ingenierojorgejuan.com
@@ -765,7 +763,6 @@ interns.org.ua
 inurf.com
 investinguatemala.org
 investors.evocagroup.com
-inyene.com
 iohanes.balamand.edu.lb
 ip-107-180-0-158.ip.secureserver.net
 ip-160-153-82-40.ip.secureserver.net
@@ -828,7 +825,6 @@ jdamirkabir.ac.ir
 jeanettehawes.com
 jesuisjeune.ma
 jgschool.org
-jiit.ac.in
 jiveaddiction.com
 jobappsgov.com
 jobaps.com
@@ -1004,6 +1000,7 @@ na-148-243-161-249.static.avantel.net.mx
 naitalart.com
 nandossawebelb-1650238876.eu-west-1.elb.amazonaws.com
 naverex.net
+ndiop.kiev.ua
 netappbenefits-hio.netapp.com
 netappbenefits.com
 netcomics.com
@@ -1074,7 +1071,6 @@ orbusneich.com
 orthodoxy.ru
 oshermaps.org
 oss-request.cc.uic.edu
-osssme.org
 ottosuenson.dk
 ovs.igp.gob.pe
 pacificnwcfc.org
@@ -1299,6 +1295,7 @@ static.174.138.130.94.clients.your-server.de
 static.204.27.130.94.clients.your-server.de
 static.208.48.4.46.clients.your-server.de
 static.34.110.4.46.clients.your-server.de
+static.4.190.179.185.ip.webhost1.net
 static.45.228.76.144.clients.your-server.de
 static.74.159.47.78.clients.your-server.de
 static.88-198-208-211.clients.your-server.de
@@ -1358,6 +1355,7 @@ timwistrom.com
 tk2-263-41488.vs.sakura.ne.jp
 tmtg.org.uk
 tndisability.org
+todosobresaliente.com
 tomir.ac.upc.es
 topbrainds.com
 topomath.asu.edu
@@ -1382,6 +1380,7 @@ tuse-guro.com
 tvnews.ntu.edu.tw
 u-tc.ru
 uat01.tripifini.com
+ub.edu.ph
 udaytonpublishing.com
 ufrpe.br
 ugelsanmiguel.gob.pe
@@ -1485,6 +1484,7 @@ www.ardc.ru
 www.arutmin.com
 www.ascame.org
 www.ashonplafa.com
+www.assurancesami.com
 www.atmos.ucla.edu
 www.autocreditcanada.ca
 www.avidity.com
@@ -1518,7 +1518,6 @@ www.degeroyachts.fi
 www.deipowersports.com
 www.delegacionbenitojuarez.gob.mx
 www.diabeteswellness.net
-www.dianqizazhi.com
 www.digitalungdom.no
 www.dlink.com.br
 www.drcellphone.com
@@ -1564,7 +1563,6 @@ www.igbcolombia.com
 www.innovativemddevices.com
 www.innovbase.net
 www.investinguatemala.org
-www.inyene.com
 www.iridiumsuite.com
 www.isabelleauto.com
 www.ismonaco.org
@@ -1675,7 +1673,6 @@ www.welfurn.com
 www.westchestergear.com
 www.wood-mode.com
 www.workforcedqc.org
-www10.pmu.ro
 www3.zipangcasino.com
 xcdtp.com
 xn--kbogsalg-54a.com

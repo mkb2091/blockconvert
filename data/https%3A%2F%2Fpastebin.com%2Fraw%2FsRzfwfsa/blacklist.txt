@@ -1,7 +1,6 @@
 163mailservice.com
 api.blogdns.com
 b.cortanazone.com
-background.ristians.com
 beta.officopedia.com
 blog.artinhauvin.com
 bluesky2018man.com
@@ -16,6 +15,7 @@ kingsoftcdn.com
 mappingpotentials.com
 open.betaoffice.net
 p12.alerentice.com
+plan.evillese.com
 pong.dynathome.net
 rio.imbandaad.com
 style.fontstaticloader.com

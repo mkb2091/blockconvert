@@ -1,4 +1,4 @@
-apple1store.serveftp.com
+apple.stelllar-account-viewer.xyz
 appleid.apple.accysukntla.dynv6.net
 appleid.apple.mslubnrdahif.dynv6.net
 appleid.apple.unchiskamuhe.dynv6.net
@@ -34,7 +34,6 @@ report-account-membership-suscription.mrface.com
 request-membershiptermination-connect.duckdns.org
 request-membershiptermination-connect.reviews-support.com
 restoreaccount-identityverification-appsid.isasecret.com
-secure2apple1store.serveirc.com
 secured-appsconnect-contactmembership.duckdns.org
 secured-appsconnect-contract.mailing-notifications.com
 secured-appsconnect-contract.mysecondarydns.com

@@ -1,6 +1,5 @@
 antioxidants.cf
 archcannabis.com
-bansonlook.hopto.org
 bestbudlabs.com
 bookilik.zapto.org
 brocroppics.net
@@ -19,7 +18,6 @@ jhonesmarcos.com
 jogeasera.dns-cloud.net
 juyt10.tk
 juyt7.tk
-kickmantrosa.com
 lokianavrata.dns-cloud.net
 mimiolistic.sytes.net
 msnd.duckdns.org
@@ -37,4 +35,3 @@ tradingf.hopto.org
 ttydb.duckdns.org
 veramla.dns-cloud.net
 ywws.duckdns.org
-zbebamltot.com
