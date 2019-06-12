@@ -51,6 +51,7 @@ client-s.gateway.messenger.live.com
 cloudfront.net
 code.jquery.com
 config.edge.skype.com
+content.invisioncic.com
 ctldl.windowsupdate.com
 cy2.displaycatalog.md.mp.microsoft.com.akadns.net
 cy2.licensing.md.mp.microsoft.com.akadns.net
