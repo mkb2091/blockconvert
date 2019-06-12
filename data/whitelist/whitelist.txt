@@ -85,6 +85,7 @@ feodotracker.abuse.ch
 files.freedownloadmanager.org
 files2.freedownloadmanager.org
 filtri-dns.ga
+forms.office.com
 fs.microsoft.com
 g.akamai.net
 g.akamaiedge.net
