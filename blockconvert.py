@@ -118,9 +118,9 @@ class BlockList():
                 except KeyError:
                     pass
                 try:
-                    whitelist_star[i[-1]].append(i[1:])
+                    whitelist_star[i[-3:]].append(i[1:])
                 except KeyError:
-                    whitelist_star[i[-1]] = [i[1:]]
+                    whitelist_star[i[-3:]] = [i[1:]]
             else:
                 try:
                     self.blacklist.remove(i)
@@ -130,7 +130,7 @@ class BlockList():
             to_remove = []
             for domain in self.blacklist:
                 try:
-                    for d2 in whitelist_star[domain[-1]]:
+                    for d2 in whitelist_star[domain[-3:]]:
                         if domain.endswith(d2):
                             to_remove.append(domain)
                             break
