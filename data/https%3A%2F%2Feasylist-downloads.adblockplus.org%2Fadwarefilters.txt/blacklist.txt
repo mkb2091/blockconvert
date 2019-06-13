@@ -8,7 +8,6 @@ apiskywebbercom-a.akamaihd.net
 baixaki.com.br
 bestpriceninja.com
 bigfineads.com
-browserutility1.net
 cbapp.com
 cdnbd.com
 charmsavings.com
@@ -16,11 +15,11 @@ ciuvo.com
 couponbuddy.s3.amazonaws.com
 couponcp-a.akamaihd.net
 couponsvc.com
+crbfjs.info
 crbsjs.info
 datafastguru.info
 dealply.com
 deals-way.com
-donation-tools.org
 easyinline.com
 engageya.com
 etoro.com

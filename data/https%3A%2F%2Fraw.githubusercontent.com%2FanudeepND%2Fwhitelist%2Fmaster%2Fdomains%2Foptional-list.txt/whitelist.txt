@@ -112,6 +112,8 @@ time.samsungcloudsolution.com
 track.ucas.com
 upgrade.scdn.com
 v.firebog.net
+v10.events.data.microsoft.com
+v20.events.data.microsoft.com
 videocdn-sbs.akamaized.net
 weeklyad.target.com
 weeklyad.target.com.edgesuite.net
