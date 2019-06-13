@@ -2,6 +2,7 @@
 112-tzm-766.mktoresp.com
 13146.engine.mobileapptracking.com
 15.taboola.com
+163.com
 173c5b06.akstat.io
 1817628.fls.doubleclick.net
 191661.engine.mobileapptracking.com
@@ -42,7 +43,6 @@
 7xdj.adj.st
 8222151.fls.doubleclick.net
 a-lb.tribalfusion.com.akadns.net
-a-scl1.tribalfusion.com.akadns.net
 a-sg01sl03.insnw.net
 a-sg01sl07.insnw.net
 a-sg02sl07.insnw.net
@@ -165,7 +165,6 @@ adserver.bestcontentonline.com
 adserver.densitymedia.com
 adserver.directworksmedia.com
 adserver.ezwebsitetraffic.com
-adserver.game-focus.net
 adserver.goodnuze.com
 adserver.gtcmovies.com
 adserver.iminent.com
@@ -498,6 +497,7 @@ c2.taboola.com
 c3tag.com
 c4d-cdn.adcolony.com
 cafemedia-d.openx.net
+calq.io
 camden.logs.roku.com
 campaign-archive.com
 campaign-tracking-service.placelocal.com
@@ -554,6 +554,7 @@ cdn.freshmarketer.com
 cdn.getambassador.com
 cdn.getshogun.com
 cdn.glassboxcdn.com
+cdn.granify.com
 cdn.iubenda.com
 cdn.jivox.com
 cdn.keywee.co
@@ -616,6 +617,7 @@ clickstream-producer.hd-personalization-prod.gcp.homedepot.com
 client-api.essads.com
 client.a.pxi.pub
 client.perimeterx.net
+clientcdn.pushengage.com
 clientstream.intuit.launchdarkly.com
 clinch.co
 clk.track.tappx.com
@@ -751,6 +753,7 @@ disney.tt.omtrdc.net
 districtm.ca
 districtm.io
 districtm.net
+dm.mail.163.com
 dmc1acwvwny3.cloudfront.net
 dmp-pixel.aolp-prd.public.aol.com
 dmp.tidaltv.com
@@ -920,6 +923,7 @@ goodyield.com
 google-analytics.com
 googlesyndication.com
 gov.aniview.com
+granify.com
 grapeshot.co.uk
 graph.m-freeway.com
 graphly.io
@@ -1030,6 +1034,7 @@ intelcorp.demdex.net
 intelsad.com
 intercom.io
 invenio.sgn.com
+invitation.cantonfair.org.cn
 ioms.bfmio.com
 iosads24.adcolony.com
 ipa.elev.io
@@ -1046,7 +1051,6 @@ j.6sc.co
 jadserve.postrelease.com.akadns.net
 jamexistence.com
 jelly.mdhv.io
-jetlore.com
 jivox.com
 jps.evolok.net
 jpush.io
@@ -1141,6 +1145,7 @@ logs.roku.com
 logs.supersonic.com
 longview.logs.roku.com
 lowescompaniesinc.demdex.net
+loxodo-ct.ext.nile.works
 lpweb.altervista.org
 ls.webmd.com
 lsimg.net
@@ -1262,6 +1267,7 @@ mkto-ab310019.com
 mkto-ab310065.com
 mkto-aba0380.com
 mkto-abm0208.com
+mkto-e0185.com
 mkto-i0026.com
 mkto-lon020055.com
 mkto-lon020292.com
@@ -1547,6 +1553,7 @@ pubocean.com
 pubs2-asia.creativecdn.com
 pug44000nf.pubmatic.com
 pulsepoint-platform.rtb.adx1.com
+pushengage.com
 pushmejs.com
 pushspring.com
 px-conf.perimeterx.net
@@ -1860,6 +1867,7 @@ syndication.twitter.com
 system.picreel.com
 t.ambra.com
 t.appsflyer.com
+t.tbe.host
 t1.re
 tabmo.io
 taboola.com
@@ -2050,6 +2058,7 @@ view.paradym.com
 viewbix.com
 viewsignage.com
 vilynx.com
+vip.126.com
 virginiatour.112.2o7.net
 visibleconsumerinsight.com
 visualwebsiteoptimizer.com
