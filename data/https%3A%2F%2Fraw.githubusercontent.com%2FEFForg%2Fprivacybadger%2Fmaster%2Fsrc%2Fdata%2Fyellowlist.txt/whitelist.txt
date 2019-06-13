@@ -69,7 +69,6 @@ bbci.co.uk
 bcbits.com
 betterttv.net
 bigcommerce.com
-bing.com
 bit.ly
 bizrate.com
 blogblog.com
@@ -196,7 +195,6 @@ estara.com
 et4.de
 ethn.io
 evcdn.com
-facebook.com
 fansonly.com
 fastly.net
 fbcdn.net
@@ -249,7 +247,6 @@ go.com
 godaddy.com
 godatafeed.com
 gogousenet.com
-google.com
 googleapis.com
 googlecode.com
 googlecommerce.com
@@ -296,7 +293,6 @@ imageshack.us
 imagesrv.adition.com
 imagetwist.com
 imagevenue.com
-img-bahn.de
 img.purch.com
 imgchili.com
 imgfarm.com
@@ -323,7 +319,6 @@ jtvnw.net
 justin.tv
 jwpcdn.com
 jwpltx.com
-kaltura.com
 kampyle.com
 kataweb.it
 kh.google.com
@@ -433,6 +428,7 @@ ocsn.com
 officeapps.live.com
 olark.com
 omroep.nl
+onedrive.live.com
 onswipe.com
 openlayers.org
 openlibrary.org
@@ -627,6 +623,7 @@ uploads.disquscdn.com
 uploads.tapatalk-cdn.com
 uplynk.com
 usa.gov
+verify.monzo.com
 viafoura.net
 viddler.com
 video.google.com

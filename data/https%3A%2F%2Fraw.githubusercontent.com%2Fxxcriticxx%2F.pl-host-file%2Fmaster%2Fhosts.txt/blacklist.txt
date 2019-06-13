@@ -1,5 +1,11 @@
+1.googlenews.xorg.pl
 15minadlt.hit.gemius.pl
+15minlt.adocean.pl
+2.googlenews.xorg.pl
 24ratownik.hit.gemius.pl
+3.googlenews.xorg.pl
+4.googlenews.xorg.pl
+5.googlenews.xorg.pl
 activeby.hit.gemius.pl
 ad.adocean.pl
 ad.adview.pl
@@ -13,7 +19,9 @@ ad.hosting.pl
 ad.pl.doubleclick.net
 ad.prv.pl
 ad.stat.4u.pl
+ad.yoyo.pl
 ad2.pl
+ad2.pl.mediainter.net
 adactiongapl.hit.gemius.pl
 adafi.hit.gemius.pl
 adbg.hit.gemius.pl
@@ -53,7 +61,9 @@ ads.novem.pl
 ads.o2.pl
 ads.open.pl
 ads2.ekologia.pl
+ads2.rp.pl
 adsearch.adkontekst.pl
+adsearch.pl
 adsearch.wp.pl
 adserver.gadu-gadu.pl
 adserver.home.pl
@@ -65,7 +75,9 @@ adserver.swiatobrazu.pl
 adserver.yanosik.pl
 adserver2.atman.pl
 adserwer.afilo.pl
+adserwer.intercon.pl
 adseu.novem.pl
+adspiro.pl
 adsrv.lua.pl
 adstat.4u.pl
 adtaily.pl
@@ -81,6 +93,7 @@ advicead.hit.gemius.pl
 adview.pl
 afi.adocean.pl
 afilo.pl
+afilv.adocean.pl
 allegro.hit.gemius.pl
 analytics.gazeta.pl
 ankieta-online.pl
@@ -116,6 +129,7 @@ blogvertising.pl
 boksy.dir.onet.pl
 boksy.onet.pl
 by.adocean.pl
+c.allegrostatic.pl
 c1.gostats.pl
 c2.gostats.pl
 c3.gostats.pl
@@ -124,6 +138,7 @@ c5.gostats.pl
 centrumcz.hit.gemius.pl
 chip.pl.intellitxt.com
 clickad.eo.pl
+code.new.smartcontext.pl
 contextad.pl
 cookiecontainer.blox.pl
 corm.hit.gemius.pl
@@ -137,8 +152,12 @@ darikspaceadbg.hit.gemius.pl
 delfiadee.hit.gemius.pl
 delfiadlt.hit.gemius.pl
 delfiadlv.hit.gemius.pl
+delfiee.adocean.pl
+delfilt.adocean.pl
+delfilv.adocean.pl
 delfilv.hit.gemius.pl
 delivery.clickonometrics.pl
+diginet.adocean.pl
 diginetlt.hit.gemius.pl
 digital4adro.hit.gemius.pl
 digital4ro.adocean.pl
@@ -183,6 +202,7 @@ gatr.hit.gemius.pl
 gaua.hit.gemius.pl
 gazeta.hit.gemius.pl
 gde-default.hit.gemius.pl
+gde.adocean.pl
 gdebg.hit.gemius.pl
 gdecz.hit.gemius.pl
 gdeee.hit.gemius.pl
@@ -197,6 +217,7 @@ gemadhu.hit.gemius.pl
 gemius.pl
 generalmediaadhu.hit.gemius.pl
 geo.interia.pl
+gg.adocean.pl
 gg.hit.gemius.pl
 gg.mob.vendimob.pl
 ghmbg.hit.gemius.pl
@@ -207,7 +228,9 @@ ghmtr.hit.gemius.pl
 go.pl.bbelements.com
 go2.hit.gemius.pl
 goldbach.hit.gemius.pl
+googlenews.xorg.pl
 gostats.pl
+gratkapl.adocean.pl
 gspro.adocean.pl
 gspro.hit.gemius.pl
 gtlt.hit.gemius.pl
@@ -235,6 +258,8 @@ intactro.adocean.pl
 interia.adsearch.adkontekst.pl
 interia.hit.gemius.pl
 intrack.pl
+investoradbg.hit.gemius.pl
+investorbg.adocean.pl
 ipla.hit.gemius.pl
 ipla.hit.stat24.com
 iwa.hit.interia.pl
@@ -244,6 +269,7 @@ kon.hit.gemius.pl
 kropka.onet.pl
 leadmy.pl
 lrytasadlt.hit.gemius.pl
+lrytaslt.adocean.pl
 ls.hit.gemius.pl
 lt.adocean.pl
 lt.hit.gemius.pl
@@ -261,7 +287,6 @@ mobi.yanosik.pl
 mreg.hit.gemius.pl
 my.adocean.pl
 myao.adocean.pl
-mystat.pl
 negadbg.hit.gemius.pl
 neogenadro.hit.gemius.pl
 netsprint.hit.gemius.pl
@@ -269,14 +294,17 @@ new.smartcontext.pl
 novem.onet.pl
 o2.hit.gemius.pl
 o2adpl.hit.gemius.pl
+obozua.adocean.pl
 oglasnikadhr.hit.gemius.pl
 ohtulehtadee.hit.gemius.pl
+ohtulehtee.adocean.pl
 olx.hit.gemius.pl
 onet.hit.gemius.pl
 onet.hit.stat.pl
 openx.cda.pl
 openx.kokoma.pl
 openx.tai.pl
+openx.xenium.pl
 opt.hit.gemius.pl
 panel.adtify.pl
 partner-ts.groupon.pl
@@ -284,7 +312,6 @@ partner.ceneo.pl
 partner.pobieraczek.pl
 partner.wapacz.pl
 partner.wapster.pl
-pl.pornzone.tv
 pl.spanel.gem.pl
 playlink.pl
 pracuj.adocean.pl
@@ -293,6 +320,7 @@ prefix.hit.gemius.pl
 pro.hit.gemius.pl
 rbcgaru.hit.gemius.pl
 realitateadro.hit.gemius.pl
+realitatero.adocean.pl
 rec.quartic.pl
 rek.adtotal.pl
 rek.www.wp.pl
@@ -314,7 +342,10 @@ rsgde.adocean.pl
 s.di.com.pl
 s1.cz.adocean.pl
 s1.czgde.adocean.pl
+s1.delfilt.adocean.pl
 s1.edipresse.adocean.pl
+s1.gojobsru.adocean.pl
+s1.gratkapl.adocean.pl
 s1.hit.stat.pl
 s1.my.adocean.pl
 s1.myao.adocean.pl
@@ -336,6 +367,7 @@ sk.adocean.pl
 sk.hit.gemius.pl
 skgde.adocean.pl
 slovakia.hit.gemius.pl
+spanel.gem.pl
 spir.hit.gemius.pl
 spl.hit.gemius.pl
 sportaladbg.hit.gemius.pl
@@ -356,6 +388,7 @@ tags.grajteraz.pl
 thinkdigitaladro.hit.gemius.pl
 thinkdigitalro.adocean.pl
 tr.hit.gemius.pl
+tracking.novem.pl
 trgde.adocean.pl
 tvn.adocean.pl
 tvn.hit.gemius.pl
@@ -363,6 +396,7 @@ tvn2.adocean.pl
 ua.adocean.pl
 ua.cnt.gemius.pl
 ua.hit.gemius.pl
+unblock.onaudience.com
 vbadbg.hit.gemius.pl
 vbbg.adocean.pl
 webgroundadbg.hit.gemius.pl

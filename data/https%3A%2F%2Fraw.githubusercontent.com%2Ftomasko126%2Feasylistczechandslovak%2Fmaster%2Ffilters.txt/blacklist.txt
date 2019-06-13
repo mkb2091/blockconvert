@@ -2,6 +2,7 @@
 10.im.cz
 a.csfd.cz
 a.denik.cz
+a.stats.cz
 ad.autobazar.cz
 ad.citynet.cz
 ad.czechia.com
@@ -11,6 +12,7 @@ ad.surtep.cz
 ad1.kde.cz
 adb.azet.sk
 adexpert.cz
+adform.net
 ads.cars.cz
 ads.esports.cz
 adverts.cz
@@ -40,8 +42,10 @@ heureka.cz
 heureka.sk
 ibillboard.com
 idvert.cz
+imedia.cz
 imr.sk
 inclick.sk
+intext.billboard.cz
 intext.lookit.cz
 intext.wdt.cz
 kamery.praha.eu

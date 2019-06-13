@@ -1,4 +1,5 @@
 1681.engine.mobileapptracking.com
+a-graph.facebook.com
 a.applvn.com
 ad.doubleclick.net
 adc3-launch.adcolony.com
@@ -31,10 +32,12 @@ crashlogs.whatsapp.net
 d.applvn.com
 data.flurry.com
 dev.appboy.com
+device.zhiliaoapp.com
 e.crashlytics.com
 edge-mqtt.facebook.com
 engine.fyber.com
 engine.mobileapptracking.com
+euc.adserver.snapads.com
 euw.adserver.snapads.com
 events.appsflyer.com
 events3.adcolony.com
@@ -42,7 +45,6 @@ events3alt.adcolony.com
 gate.hockeyapp.net
 gcs.sc-cdn.net
 googleads.g.doubleclick.net
-googleadservices.com
 graph.accountkit.com
 graph.facebook.com
 graph.instagram.com
@@ -50,12 +52,14 @@ i.w.inmobi.com
 iadsdk.apple.com
 id.google.de
 leanplum.com
+live.direct.ly
+log.musical.ly
 logs.locarta.co
 m.quantcount.com
 med.heyzap.com
+mobileapptracking.com
 mqtt-mini.facebook.com
 postback.pointwise.co
-quantcount.com
 reports.crashlytics.com
 rt.applovin.com
 sc-analytics.appspot.com
@@ -71,7 +75,9 @@ supersonicads-a.akamaihd.net
 t.appsflyer.com
 tr.snapchat.com
 trk.pinterest.com
+uop.umeng.com
 usc.adserver.snapads.com
+utraffic.engine.adglare.net
 wd.adcolony.com
 ws.tapjoyads.com
 www.googleadservices.com

@@ -22,7 +22,6 @@ auth.adobe.com
 auth.voxmedia.com
 bbb.org
 betadailytelegraphatnewscorpau.files.wordpress.com
-bing.com
 bizrate.com
 blznav.akamaized.net
 boldchat.com
@@ -57,7 +56,6 @@ dqtfbkxg6w911.cloudfront.net
 drive.google.com
 ebay.com
 epnt.ebay.com
-facebook.com
 fast.wistia.com
 feedburner.google.com
 feedproxy.google.com
@@ -68,7 +66,6 @@ fontawesome.com
 fusiontables.google.com
 geetest.com
 go.com
-google.com
 groups.google.com
 heraldsunnewscorpau.files.wordpress.com
 img.purch.com
