@@ -38,17 +38,19 @@ def main():
     start = time.time()
     blocklist = manager.bl
     blocklist.clear()
-    for path in os.listdir('data'):
-        path = os.path.join('data', path)
+    for (whitelist, match_url, do_reverse_dns, url, expires, list_license) in urls:
+        path = download.url_to_path(url)
         for (f, is_whitelist) in (('blacklist.txt', False), ('whitelist.txt', True)):
             try:
                 with open(os.path.join(path, f)) as file:
                     blocklist.add_file(file.read(), is_whitelist)
             except FileNotFoundError:
                 pass
+    with open('whitelist.txt') as file:
+        blocklist.add_file(file.read(), True)
     print('Consolidated lists(%ss)' % (time.time() - start))
     start = time.time()
-    blocklist.clean()
+    blocklist.clean(True)
     print('Cleaned list(%ss)' % (time.time() - start))
     start = time.time()
     for (path, func) in [('domains.txt', blocklist.to_domain_list),

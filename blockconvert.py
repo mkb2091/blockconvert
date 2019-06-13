@@ -60,6 +60,15 @@ class BlockList():
                             self.blacklist.add(i)
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
+    def basic_clean(self, keep_ip=True):
+        if not keep_ip:
+            for filter_list in [self.blacklist, self.whitelist]:
+                ips = []
+                for item in filter_list:
+                    if self.IP_REGEX.fullmatch(item):
+                        ips.append(item)
+                for ip in ips:
+                    filter_list.remove(ip)
     def clean(self, do_reverse_dns=False):
         dns = self.dns
         last = time.time()
