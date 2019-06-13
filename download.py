@@ -6,14 +6,13 @@ import os
 
 import blockconvert
 
+def url_to_path(url):
+    return os.path.join('data', urllib.parse.urlencode({'':url})[1:])
+
 def copy_whitelist_and_clean():
-    if not os.path.exists(os.path.join('data', 'whitelist')):
-        os.mkdir(os.path.join('data', 'whitelist'))
     with open('whitelist.txt') as file:
         data = '\n'.join(sorted(file.read().split()))
     with open('whitelist.txt', 'w') as file:
-        file.write(data)
-    with open(os.path.join('data', 'whitelist', 'whitelist.txt'), 'w') as file:
         file.write(data)
 
 
@@ -50,7 +49,7 @@ fetch_new_tld()
 fetch_new_subdomains()
 
 def get_status(url):
-    base = os.path.join('data', urllib.parse.urlencode({'':url})[1:])
+    base = url_to_path(url)
     if os.path.exists(base):
         try:
             with open(os.path.join(base, 'metadata.json')) as file:
@@ -69,7 +68,7 @@ def get_status(url):
     return last_modified, last_checked, etag
 
 def set_status(url, last_modified, last_checked, etag):
-    base = os.path.join('data', urllib.parse.urlencode({'':url})[1:])
+    base = url_to_path(url)
     if not os.path.exists(base):
         os.mkdir(base)
     with open(os.path.join(base, 'metadata.json'), 'w') as file:
@@ -82,9 +81,9 @@ class DownloadManager():
         self.session.headers['User-Agent'] = 'BlocklistConvert' + str(int(time.time()))
         self.paths = []
     def add_url(self, url, is_whitelist, match_url, do_reverse_dns, expires):
-        base = os.path.join('data', urllib.parse.urlencode({'':url})[1:])
+        base = url_to_path(url)
         self.paths.append(base)
-        check_frequency = max(min(expires, 7 * 24 * 60 * 60), 12 * 60 * 60)
+        check_frequency = max(expires, 12 * 60 * 60)
         last_modified, last_checked, old_etag = get_status(url)
         if last_modified < (time.time() - expires) and last_checked < (time.time()  - check_frequency):
             headers = {}
@@ -108,7 +107,7 @@ class DownloadManager():
                 self.bl.clear()
                 self.bl.add_file(r.text, is_whitelist=is_whitelist,
                                  match_url=match_url)
-                self.bl.clean(do_reverse_dns)
+                self.bl.basic_clean(do_reverse_dns)
                 with open(os.path.join(base, 'blacklist.txt'), 'w') as file:
                     file.write('\n'.join(sorted(self.bl.blacklist)))
                 with open(os.path.join(base, 'whitelist.txt'), 'w') as file:
@@ -118,7 +117,7 @@ class DownloadManager():
     def clean(self):
         for path in os.listdir('data'):
             path = os.path.join('data', path)
-            if path not in self.paths + [os.path.join('data', 'whitelist')]:
+            if path not in self.paths:
                 print('Removing: %s' % path)
                 for f in ('blacklist.txt', 'whitelist.txt', 'metadata.json'):
                     now = os.path.join(path, f)
