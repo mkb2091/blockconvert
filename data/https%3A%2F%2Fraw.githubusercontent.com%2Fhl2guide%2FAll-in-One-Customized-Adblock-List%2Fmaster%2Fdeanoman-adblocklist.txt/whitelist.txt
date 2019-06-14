@@ -475,6 +475,7 @@ pandacommerce.net
 parastorage.com
 passets-cdn.pinterest.com
 passwordbox.com
+pay.google.com
 payments-amazon.com
 paypal.com
 paypalobjects.com
@@ -514,6 +515,7 @@ psswrdbx.com
 public.slidesharecdn.com
 public.tableausoftware.com
 publiekeomroep.nl
+pwc.chase.com
 qualtrics.com
 query.petametrics.com
 quotemedia.com
@@ -666,6 +668,7 @@ uploads.disquscdn.com
 uploads.tapatalk-cdn.com
 uplynk.com
 usa.gov
+verify.monzo.com
 viafoura.net
 viddler.com
 video.google.com
