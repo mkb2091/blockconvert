@@ -168,6 +168,7 @@ sls.update.microsoft.com.akadns.net
 smartscreen-sn3p.smartscreen.microsoft.com
 smartscreen.microsoft.com
 sohu.com
+sourceforge.net
 sslbl.abuse.ch
 star-mini.c10r.facebook.com
 static-dot-virustotalcloud.appspot.com
