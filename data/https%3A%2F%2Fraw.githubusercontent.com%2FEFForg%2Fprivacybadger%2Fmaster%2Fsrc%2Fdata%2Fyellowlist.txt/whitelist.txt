@@ -442,6 +442,7 @@ paddle.com
 pandacommerce.net
 parastorage.com
 passwordbox.com
+pay.google.com
 payments-amazon.com
 paypal.com
 paypalobjects.com
@@ -480,6 +481,7 @@ psswrdbx.com
 public.slidesharecdn.com
 public.tableausoftware.com
 publiekeomroep.nl
+pwc.chase.com
 qualtrics.com
 quotemedia.com
 rackcdn.com
