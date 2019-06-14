@@ -47,7 +47,11 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
+<<<<<<< HEAD
 Theres are 899832 blocked domains in each of the generated filter lists
+=======
+Theres are 899926 blocked domains in each of the generated filter lists
+>>>>>>> 1f5bb5564ef029723fd11362cf0e44238ce0dba4
 
 ## Sources
 
