@@ -53,7 +53,9 @@ Theres are {rule_count} blocked domains in each of the generated filter lists
 
 ## Sources
 
-For static sources 100 days is put, and for sources with unknown expires, 1 days is put
+For static sources 100 days is put, and for sources with unknown expires, 1 days is put.
+
+The files in data/ are all modified versions generated from the below sources:
 
 {url_table}
 
@@ -66,9 +68,9 @@ enemyofarsenic(Reddit): Many very useful suggestions such as whitelist, passive 
 FORMAT = '\n\n'.join([TITLE, DESCRIPTION, PROCESS, LINKS, ENDING])
 
 def generate_readme(urls, rule_count):
-    url_table = [['URL', 'Expires', 'Type', 'License'],
-                 [':---:', ':---:', ':---:', ':---:']]
-    for (is_whitelist, match_url, do_reverse_dns, url, expires, list_license) in sorted(urls, key=lambda x:x[3]):
+    url_table = [['Title', 'URL', 'Author', 'Expires', 'Type', 'License'],
+                 [':---:',':---:', ':---:', ':---:', ':---:', ':---:']]
+    for (title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns) in urls:
         if expires >= 24 * 60 * 60:
             expires = '%s days' % (round(expires / 24 / 60 / 60, 1))
         elif expires >= 60 * 60:
@@ -77,7 +79,7 @@ def generate_readme(urls, rule_count):
             expires = '%s minute' % (round(expires / 60, 1))
         else:
             expires = '%s seconds' % expires
-        url_table.append([url, expires, ('Whitelist' if is_whitelist else 'Blacklist'), list_license])
+        url_table.append([title, url, author, expires, list_license, ('Whitelist' if is_whitelist else 'Blacklist')])
     url_table = '\n'.join('|'.join(line) for line in url_table)
     with open('README.md', 'w') as file:
         file.write(FORMAT.format(**locals()))
