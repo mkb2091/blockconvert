@@ -96,6 +96,7 @@ gamespot.com
 gateway.reddit.com
 geo-prod.do.dsp.mp.microsoft.com
 geo-prod.dodsp.mp.microsoft.com.nsatc.net
+github.com
 gitlab.com
 go.microsoft.com
 hblock.molinero.dev
