@@ -164,6 +164,7 @@ class DNSChecker():
                         pass
         except FileNotFoundError:
             pass
+        one_half_week_ago = (time.time() - 60*60*24*7*1.5)
         try:
             with open('reverse_dns_cache.txt') as file:
                 for line in file:
@@ -173,7 +174,7 @@ class DNSChecker():
                                    if build_regex.DOMAIN_REGEX.fullmatch(domain)
                                    and '*' not in domain]
                         last_modified = int(last_modified)
-                        if last_modified > one_week_ago:
+                        if last_modified > one_half_week_ago:
                             self.reverse_cache[ip_address] = (last_modified, domains)
                     except (ValueError):
                         pass
