@@ -35,6 +35,7 @@ def main():
         manager.add_url(url, whitelist, match_url, do_reverse_dns, expires)
     manager.clean()
     print('Downloaded needed files(%ss)' % (time.time() - start))
+    print()
     start = time.time()
     blocklist = manager.bl
     blocklist.clear()
@@ -49,6 +50,7 @@ def main():
     with open('whitelist.txt') as file:
         blocklist.add_file(file.read(), True)
     print('Consolidated lists(%ss)' % (time.time() - start))
+    print()
     start = time.time()
     blocklist.clean(True)
     print('Cleaned list(%ss)' % (time.time() - start))
