@@ -19,7 +19,7 @@ def main():
                 urls.append((title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns))
             except json.JSONDecodeError:
                 pass
-    urls.sort(key=json.dumps)
+    urls.sort(key=json.dumps, reverse=True)
     with open('urls.txt', 'w') as file:
         file.write('Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns\n')
         file.write('\n'.join([json.dumps(i) for i in urls]))
