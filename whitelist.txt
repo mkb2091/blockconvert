@@ -232,4 +232,5 @@ www.squidblacklist.org
 www.vanityfair.com
 www.webmd.com
 yahoo.co.jp
+yoast.com
 zeustracker.abuse.ch
