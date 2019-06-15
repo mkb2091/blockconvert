@@ -86,6 +86,7 @@ class BlockList():
                     filter_list.update(found)
                     print('Added %s rules via reverse dns' % len(found))
         print('Checked for IP addresses(%ss)' % (time.time() - last))
+        print()
         last = time.time()
         print('Started with %s rules' % len(self.blacklist))
         for filter_list in [self.blacklist, self.whitelist]:
@@ -146,15 +147,16 @@ class BlockList():
                 except KeyError:
                     pass
             self.blacklist.difference_update(to_remove)
-        print('Cleaned to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+        print('Applied whitelist, now at %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+        print()
         last = time.time()
         result = dns.mass_check(self.blacklist, self.dns_check_threads)
-        print('Performed lookups(%ss)' % (time.time() - last))
+        print('Checked DNS(%ss)' % (time.time() - last))
         last = time.time()
         for domain in result:
             if not result[domain]:
                 self.blacklist.remove(domain)
-        print('Trimmed to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+        print('Removed expired domains, now at %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
         for filter_list in [self.blacklist, self.whitelist]:
             for url in list(filter_list):

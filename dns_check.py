@@ -326,9 +326,9 @@ class DNSChecker():
                         results.update(result)
                 except queue.Empty:
                     pass
-        print('Fetched/Loaded from cache domains')
+        print('Performed reverse DNS, and passive DNS lookup')
         self.mass_check(results, thread_count)
-        print('Fetched/Loaded from cache ip addresses')
+        print('Checked IP addresses')
         domain_to_ip_dict = {'1':set()}
         for domain in self.cache:
             if self.cache[domain][0] != '1' or domain in results:
@@ -348,7 +348,6 @@ class DNSChecker():
                 new = list(new)
                 reverse_cache[ip][1].clear()
                 reverse_cache[ip][1].extend(new)
-        print('Started with %s rules' % len(results))
         results.clear()
         results.update(domain_to_ip_dict['1'])
         for ip in ip_list:
@@ -356,7 +355,7 @@ class DNSChecker():
                 results.update(domain_to_ip_dict[ip])
             except KeyError:
                 pass
-        print('Removed domains that resolve no longer resolve to mentioned address: %s' % len(results))
+        print('Added domains which resolve to malware IP addresses: %s' % len(results))
         self.save_reverse_cache()
         return results
 
