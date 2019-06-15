@@ -503,6 +503,7 @@ analytics.myfinance.com
 analytics.newscred.com
 analytics.newsinc.com
 analytics.nextmedia.com
+analytics.ngfiles.com
 analytics.onlyonlinemarketing.com
 analytics.ooyala.com
 analytics.optilead.co.uk
@@ -3466,7 +3467,6 @@ maploco.com
 mapmyuser.com
 mar.vip.com
 marcycoin.org
-marfeelcache.com
 marinsm.com
 market015.com
 market2lead.com
@@ -4050,6 +4050,7 @@ optreadetrus.info
 oranges88.com
 orcapia.com
 org-dot-com.com
+organicfruitapps.com
 oribi.io
 origin-tracking.trulia.com
 origin.chron.com
@@ -4293,6 +4294,7 @@ pizzaandads.com
 pjatr.com
 pjtra.com
 placemypixel.com
+pladform.ru
 platform.communicatorcorp.com
 platformpanda.com
 play.estream.nu
@@ -4981,6 +4983,7 @@ smarterhq.io
 smarterremarketer.net
 smartlook.com
 smartnews-ads.com
+smartocto.com
 smartoffer.site
 smartology.co
 smartracker.net
@@ -5999,6 +6002,7 @@ tracker.bt.uol.com.br
 tracker.calameo.com
 tracker.cds-tracking.com
 tracker.cpapath.com
+tracker.data-vp.com
 tracker.downdetector.com
 tracker.euroweb.net
 tracker.everestnutrition.com

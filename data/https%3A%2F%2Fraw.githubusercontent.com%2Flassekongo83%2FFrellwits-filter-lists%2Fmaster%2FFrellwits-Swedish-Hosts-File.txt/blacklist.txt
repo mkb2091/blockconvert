@@ -503,6 +503,7 @@ tracking.adviralmedia.com
 tracking.eurosport.com
 tracking.omniture.nt.se
 trafikstyrelsen.com
+trckr.nordiskemedier.dk
 trn.ninja
 trugaze.io
 try.abtasty.com
@@ -533,6 +534,7 @@ widgets.getsitecontrol.com
 widgets.spklw.com
 widgets.sprinklecontent.com
 woomio.com
+wrap.tradedoubler.com
 ws.sharethis.com
 www.adpeepshosted.com
 www.adsettings.com
