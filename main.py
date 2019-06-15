@@ -15,31 +15,32 @@ def main():
     with open('urls.txt') as file:
         for line in file.read().splitlines():
             try:
-                (list_type, match_url, do_reverse_dns, url, expires, list_license) = json.loads(line)
-                urls.append((list_type, match_url, do_reverse_dns, url, expires, list_license))
+                (title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns) = json.loads(line)
+                urls.append((title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns))
             except json.JSONDecodeError:
                 pass
+    urls.sort(key=json.dumps)
     with open('urls.txt', 'w') as file:
-        file.write('Is Whitelist|match url|do reverse_dns|url|expires|license\n')
-        file.write('\n'.join(sorted(set([json.dumps(i) for i in urls]))))
+        file.write('Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns\n')
+        file.write('\n'.join([json.dumps(i) for i in urls]))
     start = time.time()
     manager = download.DownloadManager()
-    manager.bl.add_file('\n'.join(url for (_, _, _, url, _, _) in urls),
+    manager.bl.add_file('\n'.join(url for (_, url, _, _, _, _, _, _) in urls),
                        is_whitelist=True, match_url=True)
     with open('whitelist.txt') as file:
         manager.bl.add_file(file.read(), is_whitelist=True, match_url=True)
     with open('whitelist.txt', 'w') as file:
         file.write('\n'.join(sorted(manager.bl.whitelist)))
     download.copy_whitelist_and_clean()
-    for (whitelist, match_url, do_reverse_dns, url, expires, list_license) in urls:
-        manager.add_url(url, whitelist, match_url, do_reverse_dns, expires)
+    for (title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns) in urls:
+        manager.add_url(url, is_whitelist, match_url, do_reverse_dns, expires)
     manager.clean()
     print('Downloaded needed files(%ss)' % (time.time() - start))
     print()
     start = time.time()
     blocklist = manager.bl
     blocklist.clear()
-    for (whitelist, match_url, do_reverse_dns, url, expires, list_license) in urls:
+    for (title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns) in urls:
         path = download.url_to_path(url)
         for (f, is_whitelist) in (('blacklist.txt', False), ('whitelist.txt', True)):
             try:
