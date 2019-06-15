@@ -112,6 +112,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
 dns_cache.txt
-sync.sh
 reverse_dns_cache.txt
+data/https%3A%2F%2Fgithub.com%2Fookangzheng%2Fblahdns%2Fblob%2Fmaster%2Fhosts%2Fwhitelist.txt/
+
