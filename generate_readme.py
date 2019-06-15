@@ -79,6 +79,10 @@ def generate_readme(urls, rule_count):
             expires = '%s minute' % (round(expires / 60, 1))
         else:
             expires = '%s seconds' % expires
+        if title == '':
+            title = '-'
+        if author == '':
+            author = '-'
         url_table.append([title, url, author, expires, list_license, ('Whitelist' if is_whitelist else 'Blacklist')])
     url_table = '\n'.join('|'.join(line) for line in url_table)
     with open('README.md', 'w') as file:
