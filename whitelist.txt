@@ -234,6 +234,6 @@ www.reddit.com
 www.squidblacklist.org
 www.vanityfair.com
 www.webmd.com
+www.yoast.com
 yahoo.co.jp
-yoast.com
 zeustracker.abuse.ch
