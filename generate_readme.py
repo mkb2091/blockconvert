@@ -35,7 +35,7 @@ in-browser adblocker such as uBlock Origin is recommended as well as relying on 
 hosts/dns blocking.
 
 - Trackers: Many tracking domains are extracted from the lists used, including \
-Privacy Badger date files which automatically identify trackers.
+Privacy Badger data files which automatically identify trackers.
 
 - Coin mining: A few coin mining blocklists are used to block browser-based \
 coin mining from using cpu.
