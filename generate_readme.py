@@ -45,7 +45,7 @@ coin mining from using cpu.
 url(Pi-hole supports hosts and domain lists, and domain list is a smaller file) \
 from below in the links section, and paste it in the textbox. Click Save.
 
-- Blokada: Open Blokada. Click shield with black middle which says "{{number}} in \
+- Blokada: Open Blokada. Click shield with black middle which says "{number} in \
 blacklist". Click plus in circle at bottom of screen. Copy and paste hosts file \
 from link sections. Click save
 
@@ -76,7 +76,7 @@ LINKS = '\n\n'.join((
     'URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/urls.txt',
     ))
 
-ENDING = '''## Last Commit Infomation
+SOURCES = '''## Last Commit Infomation
 
 Theres are {rule_count} blocked domains in each of the generated filter lists
 
@@ -94,7 +94,10 @@ enemyofarsenic(Reddit): Many very useful suggestions such as whitelist, passive 
 
 '''
 
-FORMAT = '\n\n'.join([TITLE, DESCRIPTION, LINKS, PROCESS, ENDING])
+FORMAT = '\n\n'.join([TITLE, DESCRIPTION, LINKS, PROCESS])
+
+with open('README.md', 'w') as file:
+    file.write(FORMAT)
 
 def generate_readme(urls, rule_count):
     url_table = [['Link', 'Author', 'Expires', 'License', 'Type'],
@@ -115,5 +118,5 @@ def generate_readme(urls, rule_count):
         link = '[%s](%s)' % (title, url)
         url_table.append([link, author, expires, list_license, ('Whitelist' if is_whitelist else 'Blacklist')])
     url_table = '\n'.join('|'.join(line) for line in url_table)
-    with open('README.md', 'w') as file:
+    with open('sources.md', 'w') as file:
         file.write(FORMAT.format(**locals()))
