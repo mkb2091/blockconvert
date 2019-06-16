@@ -25,7 +25,7 @@ blocked), then please make an issue and I will remove it)
 have expired and no longer exist. This makes those lists larger than needed \
 which wastes bandwidth, space and can slow blocking.
 
-##What this blocks:
+## What this blocks:
 - Malware/Phishing: Many malware lists are used in building this list, including \
 multiple malware IP lists, which are used to find many more malware domains.
 
@@ -40,7 +40,7 @@ Privacy Badger date files which automatically identify trackers.
 - Coin mining: A few coin mining blocklists are used to block browser-based \
 coin mining from using cpu.
 
-##How to use:
+## How to use:
 - Pi-hole: Go to web interface. Log in. Settings -> Blocklists. Copy domain list \
 url(Pi-hole supports hosts and domain lists, and domain list is a smaller file) \
 from below in the links section, and paste it in the textbox. Click Save.
