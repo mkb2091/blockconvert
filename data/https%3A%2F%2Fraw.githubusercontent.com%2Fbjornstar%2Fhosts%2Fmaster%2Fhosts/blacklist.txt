@@ -835,6 +835,7 @@ api.cloudsponge.com
 api.conduit.com
 api.content-ad.net
 api.content.ad
+api.demandbase.com
 api.dimestore.com
 api.ero-advertising.com
 api.eroadvertising.com
@@ -969,6 +970,7 @@ assets.purch.com
 assets.zendesk.com
 assets0.fusionads.net
 assets2.superrewards-images.com
+assetscdn-wchat.freshchat.com
 assetscdn.paytm.com
 assetscdn1.paytm.com
 assist.infospace.com.edgesuite.net
@@ -1270,6 +1272,7 @@ c.hqq.tv
 c.icq.com
 c.iogous.com
 c.jsrdn.com
+c.la4-c1cs-dfw.salesforceliveagent.com
 c.live.com
 c.lytics.io
 c.mgid.com
@@ -1637,6 +1640,7 @@ cfcdn.fhserve.com
 cfiles.5min.com
 cfnewsads.thomasnet.com
 cfqpxzx.com
+cfts1tifqr.com
 cfvod.kaltura.com
 cgi.pub.qq.com
 cgm.adbureau.net
@@ -2302,6 +2306,7 @@ ethikuma.link
 ethn.io
 etrevro.com
 ettoday.travelrich.com
+eu.dspmulti.com
 europerty.pro
 ev.visualdna.com
 event.api.drift.com
@@ -3661,6 +3666,7 @@ noyapps.com
 nrpc.olark.com
 ns.zdbb.net
 nsclick.baidu.com
+nsg.symantec.com
 ntracking.optimatic.com
 nutlekuainya.com
 nwemnmwe.blogspot.ca
@@ -4186,6 +4192,7 @@ rakuten.112.2o7.net
 randomfaster.club
 randomvideo.co
 rapid-downloads.com
+rapid-web-services.webpush.freshchat.com
 rapidgator.net
 rapistory.info
 rasius.pro
@@ -4467,6 +4474,7 @@ safetorrents.com
 sakuralive.com
 salaure.pro
 sales.liveperson.net
+salesforceliveagent.com
 sam.msn.com
 sammix.adsame.com
 sana.newsinc.com
@@ -4505,6 +4513,7 @@ se.monetate.net
 sea-u.openx.net
 sea.waveview.info
 seal-akron.bbb.org
+seal.digicert.com
 seal.godaddy.com
 seal.verisign.com
 seal.websecurity.norton.com
@@ -4690,6 +4699,7 @@ smrtrdrct.top
 sms-mmm.com
 snap.licdn.com
 snapwidget.com
+snippets.freshchat.com
 sns.qzone.qq.com
 social-proxy.mtvnservices.com
 social.skylikes.com
@@ -4943,6 +4953,7 @@ stats6.unionleader.com
 statse.webtrendslive.com
 statsmobi.com
 statsweb.proxad.net
+statsy.net
 stc.fx.fastcontentdelivery.com
 stds1go.mutedownload.com
 stealthlockers.com
@@ -5316,6 +5327,7 @@ trrkk.com
 trust.zone
 trustaffs.com
 trusted-web-seal.cybertrust.ne.jp
+trustsealinfo.websecurity.norton.com
 trw12.com
 try.abtasty.com
 trzi30ic.com
@@ -5551,6 +5563,7 @@ vpc.altitude-arena.com
 vpn.cpva.cc
 vq91811.com
 vrewpywootyu.com
+vs.symantec.com
 vs64.tawk.to
 vt.myvisualiq.net
 vts.dfgut.party
@@ -5583,6 +5596,7 @@ waudist.tynt.com
 waust.at
 wavo.me
 wboewdhesyfgsk.bid
+wchat.freshchat.com
 wct.click
 wct.link
 wd.sharethis.com
@@ -6337,6 +6351,7 @@ www.waethaifxuhbe.com
 www.wboewdhesyfgsk.bid
 www.wdcxuezpxivqgmecukeirnsyhjpjoqdqfdtchquwyqatlwxtgq.com
 www.wearefreeuynik.com
+www.webglearth.com
 www.website-hit-counters.com
 www.webspeedlink.com
 www.webtrackerplus.com

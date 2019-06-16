@@ -63,7 +63,7 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 
 ## Last Commit Infomation
 
-Theres are 904473 blocked domains in each of the generated filter lists
+Theres are 1001830 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -71,7 +71,7 @@ For static sources 100 days is put, and for sources with unknown expires, 1 days
 
 The files in data/ are all modified versions generated from the below sources:
 
-Link|Author|Expires|Type|License
+Link|Author|Expires|License|Type
 :---:|:---:|:---:|:---:|:---:
 [uBlock filters](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt)|-|4.0 days|GPLv3|Blacklist
 [uBlock filters – Resource abuse](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt)|-|4.0 days|GPLv3|Blacklist

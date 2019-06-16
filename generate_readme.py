@@ -97,7 +97,7 @@ enemyofarsenic(Reddit): Many very useful suggestions such as whitelist, passive 
 FORMAT = '\n\n'.join([TITLE, DESCRIPTION, LINKS, PROCESS, ENDING])
 
 def generate_readme(urls, rule_count):
-    url_table = [['Link', 'Author', 'Expires', 'Type', 'License'],
+    url_table = [['Link', 'Author', 'Expires', 'License', 'Type'],
                  [':---:', ':---:', ':---:', ':---:', ':---:']]
     for (title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns) in urls:
         if expires >= 24 * 60 * 60:
