@@ -60,3 +60,5 @@ URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/ur
 8. For all remaining domains in blacklist, use dns to check if the domain is still registered, remove those that are not
 
 9. Remove all invalid domains
+
+Sources: [Sources](https://github.com/mkb2091/blockconvert/blob/master/sources.md)
