@@ -31,15 +31,13 @@ Advantages of using this list:
 
 ## Links
 
-Adblock Plus style blocklist:  https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/adblock.txt
+Adblock Plus format:  https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/adblock.txt
 
-Hosts file style blocklist: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/hosts.txt
+Hosts file format: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/hosts.txt
 
-List of blocked domains: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.txt
+Domain list: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.txt
 
-DNS Response Policy Zone file: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz
-
-URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/urls.txt
+DNS Response Policy Zone(RPZ) format: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz
 
 ## The Process
 
