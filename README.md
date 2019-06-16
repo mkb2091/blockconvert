@@ -29,6 +29,18 @@ Advantages of using this list:
 - uBlock Origin: Click uBlock Origin logo. Click open dashboard(3 horizontal lines, under disable uBlock Origin button, on the right). Click Filter lists. Scroll to bottom, and click Import(in custom section). Copy and paste either adblock style blocklist or domain blocklist from the link section below.
 
 
+## Links
+
+Adblock Plus style blocklist:  https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/adblock.txt
+
+Hosts file style blocklist: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/hosts.txt
+
+List of blocked domains: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.txt
+
+DNS Response Policy Zone file: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz
+
+URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/urls.txt
+
 ## The Process
 
 1. Download file
@@ -48,18 +60,6 @@ Advantages of using this list:
 8. For all remaining domains in blacklist, use dns to check if the domain is still registered, remove those that are not
 
 9. Remove all invalid domains
-
-## Links
-
-Adblock Plus style blocklist:  https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/adblock.txt
-
-Hosts file style blocklist: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/hosts.txt
-
-List of blocked domains: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.txt
-
-DNS Response Policy Zone file: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz
-
-URLs used to build lists: https://github.com/mkb2091/blockconvert/blob/master/urls.txt
 
 ## Last Commit Infomation
 

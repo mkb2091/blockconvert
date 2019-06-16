@@ -94,7 +94,7 @@ enemyofarsenic(Reddit): Many very useful suggestions such as whitelist, passive 
 
 '''
 
-FORMAT = '\n\n'.join([TITLE, DESCRIPTION, PROCESS, LINKS, ENDING])
+FORMAT = '\n\n'.join([TITLE, DESCRIPTION, LINKS, PROCESS, ENDING])
 
 def generate_readme(urls, rule_count):
     url_table = [['Link', 'Author', 'Expires', 'Type', 'License'],
