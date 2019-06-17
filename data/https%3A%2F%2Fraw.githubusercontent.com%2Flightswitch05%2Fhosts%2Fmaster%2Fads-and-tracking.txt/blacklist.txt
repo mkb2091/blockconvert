@@ -60,8 +60,10 @@ a.algovid.com
 a.et.nytimes.com
 a.fiksu.com
 a.mailmunch.co
+a.opmnstr.com
 a.optmnstr.com
 a.optmstr.com
+a.optnmnstr.com
 a.optnmstr.com
 a.pub.network
 a.quora.com
@@ -270,6 +272,7 @@ alldcs.outbrain.org
 allinviews.com
 altitude-arena.com
 amarillo.logs.roku.com
+amazin.com
 amazon-adsystem.amazon.com
 amazon-adsystem.com
 amazoncustomerservice.d2.sc.omtrdc.net
@@ -1099,6 +1102,7 @@ i.ads.roku.com
 i.clean.gg
 i.haloapps.com
 i.lsimg.net
+i.singular.net
 i.w.inmobi.com
 iad-apple.com
 iad-apple.com.akadns.net
@@ -1222,6 +1226,7 @@ kidswithfoodallergies.cdn.adglare.net
 kidswithfoodallergies.engine.adglare.net
 klaviyo.com
 kochava.com
+kohls.tt.omtrdc.net
 kompasads.com
 krk.kargo.com
 kroger.sc.omtrdc.net
@@ -1593,12 +1598,14 @@ open-api.spot.im
 openx.co.za
 openx.net
 openx2-match.dotomi.com
+opmnstr.com
 optimeze.com
 optimezer.com
 optimizely.com
 optmnstr.awesomemotive.netdna-cdn.com
 optmnstr.com
 optmstr.com
+optnmnstr.com
 optnmstr.com
 opttracker.com
 optvdo.com
@@ -1984,6 +1991,7 @@ siliconorchard.com
 silverpop.com
 silverpush.co
 simage2.pubmatic.com
+singular.net
 sis.jpush.io
 siteintercept.qualtrics.com
 sizmek.com
@@ -2413,6 +2421,7 @@ www-cbssports-com.cdn.ampproject.org
 www.5rocks.io
 www.acashatusa.com
 www.adtilt.com
+www.amazin.com
 www.beeftransmission.com
 www.bugherd.com
 www.checkdealgoldliteflash.icu

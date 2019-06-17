@@ -4808,8 +4808,10 @@ a.ns.campaign.adobe.com
 a.ns.ish.atdmt.com
 a.ns.rkdms.com
 a.ntv.io
+a.opmnstr.com
 a.optmnstr.com
 a.optmstr.com
+a.optnmnstr.com
 a.optnmstr.com
 a.optvdo.com
 a.perimeterx.net
@@ -7553,6 +7555,7 @@ ad.netseer.com
 ad.nl.doubleclick.net
 ad.qwapi.com
 ad.sharethis.com
+ad.singular.net
 ad.smaato.net
 ad.targeting.snapads.com
 ad.uk.doubleclick.net
@@ -8506,6 +8509,7 @@ akamai-san7.exacttarget.com
 akamai-san8.exacttarget.com
 akamai-san9.exacttarget.com
 akamai-sannestle.exacttarget.com
+akamai.attribution.singular.net
 akamai.cdneval.adnxs.com
 akamai.mathtag.com
 akamai.tags.tiqcdn.com
@@ -8735,6 +8739,7 @@ amazdimxprod.112.2o7.net
 amazditemplate.112.2o7.net
 amazdiusprod.112.2o7.net
 amazeyou2.hop.clickbank.net
+amazin.com
 amazon-adsystem.amazon.com
 amazon-adsystem.com
 amazon-affiliate-prod.perso.nile.works
@@ -9515,9 +9520,11 @@ api.nonewlines.env.sandbox53.localytics.com
 api.nuggad.net
 api.omnitagjs.com
 api.opinion.inmobi.com
+api.opmnstr.com
 api.optimizely.com
 api.optmnstr.com
 api.optmstr.com
+api.optnmnstr.com
 api.optnmstr.com
 api.outbrain.com
 api.pardot.com
@@ -9587,6 +9594,7 @@ api.shared.env.sandbox53.localytics.com
 api.sharethis.com
 api.sibboventures.mgr.consensu.org
 api.silverpush.co
+api.singular.net
 api.sizmek.com
 api.skimlinks.mgr.consensu.org
 api.socialannex.com
@@ -9903,6 +9911,7 @@ app.mopub.com
 app.mparticle.com
 app.native.ai
 app.onlinesucces.nl
+app.opmnstr.com
 app.optimizely.com
 app.optmnstr.com
 app.optmstr.com
@@ -9935,6 +9944,7 @@ app.scorecardresearch.com
 app.serverbid.com
 app.shopkick.com
 app.silverpush.co
+app.singular.net
 app.skol-to.com
 app.spotxchange.com
 app.stage.driftt.com
@@ -10506,6 +10516,8 @@ attdcmtest.dev.paperg.com
 attr.appsflyer.com
 attractioncenter.aweber.com
 attributer.service.newrelic.com
+attribution-gate.singular.net
+attribution.singular.net
 attribution.snapads.com
 attservicesinc.tt.omtrdc.net
 atuan.rkdms.com
@@ -12132,6 +12144,7 @@ c.quantserve.com
 c.r10.mopub.com
 c.scorecardresearch.com
 c.sharethis.mgr.consensu.org
+c.singular.net
 c.skimresources.com
 c.socialannex.com
 c.ssacdn.com
@@ -12871,6 +12884,7 @@ cdn.shareaholic.com
 cdn.sharethis.com
 cdn.shoofle.tv
 cdn.silverpush.co
+cdn.singular.net
 cdn.skimresources.com
 cdn.socialannex.com
 cdn.speedcurve.com
@@ -13473,6 +13487,7 @@ click.exct.net
 click.google-analytics.com
 click.iubenda.com
 click.khingtracking.com
+click.singular.net
 click.updates.braze.com
 clickam.taboola.com
 clickcdn.shareaholic.com
@@ -15743,6 +15758,7 @@ dev4.nanorep.com
 dev8.supersonicads.com
 devapp.extremereach.com
 devconnexity.snowflakeproxy.connexity.net
+devdevdev.singular.net
 devdocs.drift.com
 devel.adswizz.com
 develop.adx1.com
@@ -17467,6 +17483,7 @@ eu-api.swrve.com
 eu-audi.netmng.com
 eu-bidder.dyntrk.com
 eu-blizzard.netmng.com
+eu-central-1-prod-t.singular.net
 eu-cloudapi.imrworldwide.com
 eu-col-lbg.eum-appdynamics.com
 eu-content.swrve.com
@@ -17519,12 +17536,16 @@ eu-tools.247realmedia.com
 eu-tracking.dyntrk.com
 eu-u.openx.net
 eu-uaid-linkage.imrworldwide.com
+eu-west-1-prod-attribution-gate.attribution.singular.net
+eu-west-1-prod-t.singular.net
+eu-west-1-prodfb-t.singular.net
 eu-west-1.awstrack.me
 eu-west-1.banner-server.fyber.com
 eu-west-1.bid.bidr.io
 eu-west-1.event.prod.bidr.io
 eu-west-1.lb.infinity.blismedia.com
 eu-west-1.prod.curalate.com
+eu-west-1.prod.e.singular.net
 eu-west-1.prod.internal.curalate.com
 eu-west-1.stinger-ad.bidr.io
 eu-west.load.exelator.com
@@ -17975,6 +17996,7 @@ exapi-us-west.rubiconproject.com
 excas03.tf-net.tribalfusion.com
 excas04.tf-net.tribalfusion.com
 excelcampus.leadpages.co
+exceptions.singular.net
 exch-e.atdmt.com
 exch-eu.atdmt.com
 exch-us-east.quantserve.com
@@ -18020,6 +18042,7 @@ experts.yext.com
 explore.coremetrics.com
 explore.de.coremetrics.com
 explore.mixpanel.com
+explore.singular.net
 explorer-staging.flurry.com
 exploriaresorts.mktoweb.com
 expn.agkn.com
@@ -18029,6 +18052,7 @@ exponento.truconversion.com
 export-service.foresee.com
 export.swrve.com
 exportdata.appsflyer.com
+exports.singular.net
 expotask-dev.pcl.exponential.com
 expotask.exponential.com
 express-p.shopcurbside.com
@@ -18309,8 +18333,11 @@ faye.crashlytics.com
 faz.demdex.net
 fb-nym.adnxs.com
 fb.adsrvr.org
+fb.singular.net
 fbapp1.theappgrader.com
 fbb.oribi.io
+fbc.attribution.singular.net
+fbclick.singular.net
 fbdev.midasplayer.com
 fbfix.hop.clickbank.net
 fbkmnr.112.2o7.net
@@ -18324,6 +18351,7 @@ fbl-yandex.app.returnpath.net
 fbl.returnpath.net
 fbl.s50.exacttarget.com
 fbsuperaff.hop.clickbank.net
+fbt.singular.net
 fc-eu.adsymptotic.com
 fc-lb1.iad2.adsymptotic.com
 fc-lb2-vip0.eu.adsymptotic.com
@@ -19184,6 +19212,7 @@ g9rc5-orybe.ads.tremorhub.com
 g9rc5-q78v4.ads.tremorhub.com
 ga.clearbit.com
 ga.mmstat.com
+ga.opmnstr.com
 ga.optmnstr.com
 gacha.163.com
 gad.impresionesweb.com
@@ -19704,6 +19733,7 @@ go.shareaholic.com
 go.sharethis.com
 go.sharethrough.com
 go.shopkick.com
+go.singular.net
 go.sizmek.com
 go.skimresources.com
 go.socialannex.com
@@ -20821,6 +20851,7 @@ i.play.163.com
 i.prod.ping-origin-prd.jwpltx.com
 i.rkdms.com
 i.shareasale.com
+i.singular.net
 i.skimresources.com
 i.w.dfw1.vip.inmobi.com
 i.w.inmobi.com
@@ -23771,6 +23802,7 @@ logs.api.vungle.com
 logs.getsitecontrol.com
 logs.palebrook.wbinsights.com
 logs.roku.com
+logs.singular.net
 logs.supersonic.com
 logs.t.altitude-arena.com
 logs.videmob.com
@@ -24616,6 +24648,7 @@ mauricesincorporatedadelewarecorporation.demdex.net
 maven.instana.io
 maven.localytics.com
 maven.optimizely.com
+maven.singular.net
 mavericks.marketo.com
 maw.bronto.com
 max-kelley.fanbread.com
@@ -27570,6 +27603,7 @@ operations.curalate.com
 opinion.inmobi.com
 opinionlabcc.122.2o7.net
 opinionresearch.co1.qualtrics.com
+opmnstr.com
 opointop2015.112.2o7.net
 oppo.analytics.glance.inmobi.com
 oppo.mediabong.net
@@ -27624,6 +27658,7 @@ options.bucksense.com
 optmnstr.awesomemotive.netdna-cdn.com
 optmnstr.com
 optmstr.com
+optnmnstr.com
 optnmstr.com
 optout-service.unrulymedia.com
 optoutapi.evidon.com
@@ -29469,6 +29504,7 @@ prod-hzeu-rtb-dsp-core-3.datamind.ru
 prod-hzeu-rtb-infra-ops-1.datamind.ru
 prod-hzeu-tj-2.datamind.ru
 prod-infra-vpn01.rxthdr.com
+prod-t.singular.net
 prod-vast.videoamp.com
 prod.adlightning.com
 prod.airfind.com
@@ -29481,6 +29517,7 @@ prod.curalate.com
 prod.cyclone.aws.fwmrm.net
 prod.data.native.ai
 prod.docker.adsrvr.org
+prod.e.singular.net
 prod.internal.curalate.com
 prod.kargo.com
 prod.lijit.com
@@ -29504,6 +29541,7 @@ prod1.autopilothq.com
 prod2.autopilothq.com
 prod3.autopilothq.com
 prodege-d.openx.net
+prodfb-t.singular.net
 product-team.pendo.io
 product.adrelevantis.com
 product.atom.adjust.com
@@ -32099,12 +32137,14 @@ s2s.adpushup.com
 s2s.ae1.mparticle.com
 s2s.aniview.com
 s2s.appsflyer.com
+s2s.attribution.singular.net
 s2s.eu1.mparticle.com
 s2s.lfstmedia.com
 s2s.mparticle.com
 s2s.msas.media.net
 s2s.prebid.org
 s2s.rtk.io
+s2s.singular.net
 s2s.ssp.advertising.com
 s2sa.scorecardresearch.com
 s2t3y-2bzbg.ads.tremorhub.com
@@ -32616,6 +32656,7 @@ sdk-analytics.inlocomedia.com
 sdk-analytics.metaps.com
 sdk-android.ad.smaato.net
 sdk-api-ssl.playhaven.com
+sdk-api-v1.singular.net
 sdk-assets.localytics.com
 sdk-bridge.metaps.com
 sdk-cl.privacy-center.org
@@ -32652,6 +32693,7 @@ sdk.placed.com
 sdk.privacy-center.org
 sdk.rubiconproject.com
 sdk.shopkick.com
+sdk.singular.net
 sdk.streaming.adswizz.com
 sdk.streamrail.net
 sdk.taboola.com
@@ -33494,6 +33536,7 @@ singtaolimited.sc.omtrdc.net
 singtaonewscorp.demdex.net
 singtel.wavesecure.com
 singular-d.openx.net
+singular.net
 singuser42c67df9.co1.qualtrics.com
 singuserae9d46d6.az1.qualtrics.com
 sinvideo.adsrvr.org
@@ -34856,6 +34899,7 @@ staging.sam.snapads.com
 staging.services-fr.adx1.com
 staging.sh.msas.media.net
 staging.shareaholic.com
+staging.singular.net
 staging.sizmek.com
 staging.status.usabilla.com
 staging.sumo.com
@@ -35708,6 +35752,7 @@ systeme-u.demdex.net
 systemeu.tt.omtrdc.net
 szk.netmng.com
 t-ams5.mplxtms.com
+t-api.singular.net
 t-metaps-biz.control.kochava.com
 t-sj2.mplxtms.com
 t-v2.presage.io
@@ -35741,6 +35786,7 @@ t.privy.com
 t.rec.g.163.com
 t.sf14g.com
 t.sharethis.com
+t.singular.net
 t.skimresources.com
 t.tbe.host
 t.trackalyzer.com
@@ -38095,6 +38141,8 @@ us-u.openx.net
 us-usersync.dyntrk.com
 us-verabradley.vergic.com
 us-west-1.rtb.districtm.io
+us-west-2-prod-t.singular.net
+us-west-2-prodfb-t.singular.net
 us-west-2.awstrack.me
 us-west-2.bid.bidr.io
 us-west-2.event.prod.bidr.io
@@ -38957,6 +39005,7 @@ vidyorouter.rubiconproject.com
 vidyorouter2.rubiconproject.com
 vidyorouterldn.rubiconproject.com
 view-dev.paradym.com
+view-prod.ad.singular.net
 view.adjust.com
 view.adsrvr.org
 view.atdmt.com
@@ -39483,6 +39532,7 @@ webanalytics.engagio.com
 webanalytics.localytics.com
 webapi.game.163.com
 webapi.vip.126.com
+webapp-cdn.singular.net
 webapp.163.com
 webapp.lootsie.com
 webassets.demandbase.com
@@ -39623,6 +39673,7 @@ webshotcdn-eu.dynamicyield.com
 webshotcdn.dynamicyield.com
 website-beta.adotmob.com
 website.backtrace.io
+websitecdn.singular.net
 websiteorigin.media.net
 websitev2prodcdn.jivox.com
 websked.ext.nile.works
@@ -40334,6 +40385,7 @@ www.am-display.hb.adx1.com
 www.am-native.hb.adx1.com
 www.am-pops.xml.adx1.com
 www.am1-h-api.online-metrix.net
+www.amazin.com
 www.amazoncustomerservice.d2.sc.omtrdc.net
 www.amazonwebservices.d2.sc.omtrdc.net
 www.amberen.com.pathful.com
@@ -40533,6 +40585,7 @@ www.buzzdeck.com
 www.bw.bidder.inmobi.com
 www.c.bksn.se
 www.c.jsrdn.com
+www.c.singular.net
 www.c3tag.com
 www.c4d-cdn.adcolony.com
 www.ca.cdn.survey.medallia.com
@@ -40911,6 +40964,7 @@ www.excelcampus.leadpages.co
 www.exct.net
 www.exelator.com
 www.exp.mxptint.net
+www.explore.singular.net
 www.exponential.com
 www.express.maxpoint.com
 www.ext.dynamicyield.com
@@ -41500,6 +41554,7 @@ www.optimizely.com
 www.optionstradingiq.leadpages.co
 www.optmnstr.com
 www.optmstr.com
+www.optnmnstr.com
 www.optnmstr.com
 www.opttracker.com
 www.oracle.112.2o7.net
@@ -41793,6 +41848,7 @@ www.scorecardresearch.com
 www.sdk-orion.appboy.com
 www.sdk.iad-03.appboy.com
 www.sdk.iad-03.braze.com
+www.sdk.singular.net
 www.sdk.taboola.com
 www.sdkm.inmobi.com
 www.sea-dc01.marketo.net
@@ -41868,6 +41924,7 @@ www.silverpop.com
 www.silverpush.co
 www.simplek12.leadpages.co
 www.singlegrain.leadpages.co
+www.singular.net
 www.sip.foresee.com
 www.sip.gmial.com
 www.sip.revcontent.com
@@ -42345,6 +42402,7 @@ www2.pardot.com
 www2.pendo.io
 www2.profitwell.com
 www2.samplicio.us
+www2.singular.net
 www2.survata.com
 www2.vilynx.com
 www2.windowinstalldealaflash.icu
@@ -42356,8 +42414,11 @@ www3.mopub.com
 www3.netseer.com
 www3.outbrain.com
 www3.pendo.io
+www4.singular.net
 www5.jivox.com
+www7.singular.net
 www7.socialannex.com
+www8.singular.net
 wwwdev01.backtrace.io
 wwwlinks.undertone.com
 wwww.gmial.com
@@ -42870,6 +42931,7 @@ z-na.amazon-adsystem.com
 z.adbiq.com
 z.analytics.yahoo.com
 z.moatads.com
+z.opmnstr.com
 z.optmnstr.com
 z.optmstr.com
 z.rkdms.com

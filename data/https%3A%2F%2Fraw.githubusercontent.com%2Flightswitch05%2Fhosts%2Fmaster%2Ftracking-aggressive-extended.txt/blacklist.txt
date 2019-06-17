@@ -135,6 +135,7 @@ akamai-san42.exacttarget.com
 akamai-san43.exacttarget.com
 akamai-san44.exacttarget.com
 akamai-san45.exacttarget.com
+akamai-san47.exacttarget.com
 akamai-san5.exacttarget.com
 akamai-san6.exacttarget.com
 akamai-san7.exacttarget.com
@@ -329,6 +330,7 @@ assets.livechatinc.com
 assets.olark.com
 au1-st1.gigya.com
 au1-st2.gigya.com
+au1-st4.gigya.com
 au1.gigya.com
 au1a-email-mng.gigya.com
 auth-san.exacttarget.com
@@ -406,6 +408,7 @@ bloomingdales.ugc.bazaarvoice.com
 bmo.hosting.exacttarget.com
 boa.exacttarget.com
 bol.ugc.bazaarvoice.com
+bonmarche.ugc.bazaarvoice.com
 boomerang-images.cdn.turner.com
 bootlegger.ugc.bazaarvoice.com
 bootstrap.livefyre.com
@@ -644,6 +647,7 @@ connector-norton.gomoxie.solutions
 connector-nutrisystem.gomoxie.solutions
 connector-peoples.gomoxie.solutions
 connector-permanenttsb.uk.gomoxie.solutions
+connector-rbc.gomoxie.solutions
 connector-rcn.gomoxie.solutions
 connector-sandals.gomoxie.solutions
 connector-shareacoke.gomoxie.solutions
@@ -1069,8 +1073,10 @@ etinteractive.exacttarget.com
 etweb.exacttarget.com
 eu1-st1.gigya.com
 eu1-st2.gigya.com
+eu1-st4.gigya.com
 eu1.gigya.com
 eu1a-email-mng.gigya.com
+euii.cortana.ai
 evans.ugc.bazaarvoice.com
 evanscycles-uk.ugc.bazaarvoice.com
 events-bms_bms.gomoxie.solutions
@@ -1155,6 +1161,7 @@ fg92.mta.exacttarget.com
 fidelity-ssl.ugc.bazaarvoice.com
 fidm.au1.gigya.com
 fidm.eu1.gigya.com
+fidm.gigya.com
 fidm.us1.gigya.com
 figis.ugc.bazaarvoice.com
 file.spyhuman.com
@@ -1693,6 +1700,7 @@ log-southbeachdiet.gomoxie.solutions
 log-synchrony.gomoxie.solutions
 log-synnex.uk.gomoxie.solutions
 log-usaa.gomoxie.solutions
+log-usaaauto.gomoxie.solutions
 log-usaaeligibility.gomoxie.solutions
 log-usaahomeowners.gomoxie.solutions
 log-usaaumbrella.gomoxie.solutions
@@ -2119,6 +2127,7 @@ product.glympse.com
 prometheus-test.maxmind.com
 prometheus.maxmind.com
 providesupport.com
+proxy.tawk.to
 pt-br.about.flipboard.com
 pub.s1.exacttarget.com
 pub.s10.exacttarget.com
@@ -2314,6 +2323,7 @@ sb.olark.com
 sbx-ecom.flexispy.com
 sbx-ecomapi.flexispy.com
 sbx-magpieadmin.flexispy.com
+sc2metrics.exacttarget.com
 scan.ugc.bazaarvoice.com
 scanme.ipinfo.io
 sccden.spot.im
@@ -2475,6 +2485,7 @@ stagingdemo.gigya.com
 stagingv2.spot.im
 starbucks.flipboard.com
 startups.livechatinc.com
+starwood.ugc.bazaarvoice.com
 static-a.tawk.to
 static-cdn.spot.im
 static-fra.livechatinc.com
@@ -2534,6 +2545,7 @@ surveys-kccbrands-com.surveygizmo.com
 surveys-voice-of-customers-com.surveygizmo.com
 surveys-zipcar-com.surveygizmo.com
 suunto.ugc.bazaarvoice.com
+sweetbaysupermarket.ugc.bazaarvoice.com
 switch.olark.com
 t-mobile.ugc.bazaarvoice.com
 t1-spoxy.spot.im
