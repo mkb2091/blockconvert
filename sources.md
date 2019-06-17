@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 1001783 blocked domains in each of the generated filter lists
+Theres are 1001826 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -30,6 +30,7 @@ Link|Author|Expires|License|Type
 [The Hosts File Project](https://hblock.molinero.dev/hosts)|Héctor Molinero Fernández <hector@molinero.dev>|1.0 days|MIT|Blacklist
 [Spam404](https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt)|-|2.0 days|Permission to modify, copy and distribute|Blacklist
 [Skeletal Blocker](https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List)|SkeletalDemise|2.0 days|GPLv3|Blacklist
+[Sidewinder Campain](https://pastebin.com/raw/rccqdjNB)|-|100.0 days|Public Domain|Blacklist
 [Ransomware URL Blocklist ](https://ransomwaretracker.abuse.ch/downloads/RW_URLBL.txt)|-|1.0 days|Free for use without any limitations|Blacklist
 [Ransomware IP Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt)|-|1.0 days|Free for use without any limitations|Blacklist
 [Ransomware Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)|-|1.0 days|Free for use without any limitations|Blacklist

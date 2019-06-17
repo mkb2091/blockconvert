@@ -19,6 +19,7 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["The Hosts File Project", "https://hblock.molinero.dev/hosts", "H\u00e9ctor Molinero Fern\u00e1ndez <hector@molinero.dev>", 86400, "MIT", false, false, false]
 ["Spam404", "https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt", "", 172800, "Permission to modify, copy and distribute", false, false, false]
 ["Skeletal Blocker", "https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List", "SkeletalDemise", 172800, "GPLv3", false, false, false]
+["Sidewinder Campain", "https://pastebin.com/raw/rccqdjNB", "", 8640000, "Public Domain", false, false, true]
 ["Ransomware URL Blocklist ", "https://ransomwaretracker.abuse.ch/downloads/RW_URLBL.txt", "", 86400, "Free for use without any limitations", false, true, true]
 ["Ransomware IP Blocklist", "https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt", "", 86400, "Free for use without any limitations", false, true, true]
 ["Ransomware Domain Blocklist", "https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt", "", 86400, "Free for use without any limitations", false, true, true]
