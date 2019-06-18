@@ -95,6 +95,7 @@ api.deep.bi
 api.getlevelten.com
 api.innomdc.com
 app.yieldify.com
+apps-cdn.relevant-digital.com
 apps.shareaholic.com
 apsislead.com
 aquaplatform.com

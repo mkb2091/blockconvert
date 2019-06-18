@@ -455,7 +455,6 @@ alphacreatesend1.com
 alphacreatesend2.com
 alphacreatesend3.com
 altabold1.com
-amazon-adsystem.com
 amessagewithabottle.com
 amgdgt.com
 amobee.com
@@ -468,7 +467,6 @@ ampmetrics.techcrunch.com
 amung.us
 analyse.email
 analysing.email
-analytics-collector-28944298.us-east-1.elb.amazonaws.com
 analytics-egain.com
 analytics-static.ugc.bazaarvoice.com
 analytics.amakings.com
@@ -622,6 +620,7 @@ azdx.net
 azera-s014.com
 babebrkrflow.com
 bae5tracker.com
+bam-x.com
 bandelcot.com
 bannerflow.com
 bannermeter.com
@@ -648,6 +647,7 @@ behavior.com
 behavioralengine.com
 behavioralmailing.com
 berg-6-82.com
+beriacroft.com
 best-dental-implants-tracking.com
 bestdealmedia.click
 bestdealonearth.click
@@ -898,6 +898,7 @@ cilidaquan.com
 circulate.com
 citypaketet.se
 cj.com
+clarium.io
 clear-reports.com
 clearcode.cc
 clevernt.com
@@ -1564,6 +1565,7 @@ ffftgrf.com
 ffftrfg.com
 ffftrgf.com
 fidelity-media.com
+fiftyt.com
 filebulldog.com
 fileserve.xyz
 fimserve.com
@@ -1794,6 +1796,7 @@ hlserve.com
 hobmobrevms.com
 hochmoor.com
 hockeyapp.net
+holedusejecdo.info
 honeytracks.com
 hotjar.com
 hqcampaign.com
@@ -12590,6 +12593,20 @@ oileddaintiessunset.info
 ojrq.net
 om.au
 omessage.com
+ometria.com
+omgde.com
+omgeu.com
+omgpl.com
+omgsv.com
+omgt1.com
+omgt2.com
+omgt3.com
+omgt4.com
+omgt5.com
+omgt6.com
+omgt7.com
+omgt8.com
+omguk.com
 omnitagjs.com
 omniture.com
 omniture.groceries.asda.com
