@@ -264,7 +264,7 @@ class DNSChecker():
                         ip = ''
                     results[domain] = ip
                     cache[domain] = (ip, time.time())
-                    if len(results) % 5000 == 4999:
+                    if len(results) % 20000 == 19999:
                         print('%s/s %s Valid: %s Invalid: %s ' % (round((len(results) - initial_length)/(time.time() - start), 2),
                               round(len(results)/domain_list_length, 5), valid_count, invalid_count))
                         self.save_forward_cache()

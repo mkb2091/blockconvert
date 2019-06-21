@@ -1,5 +1,4 @@
 Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
-["", "https://pastebin.org/raw/Jfp9Wkcz", "", 8640000, "Public Domain", false, false, false]
 ["uBlock filters", "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt", "", 345600, "GPLv3", false, false, false]
 ["uBlock filters \u2013 Resource abuse", "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt", "", 345600, "GPLv3", false, false, false]
 ["uBlock filters \u2013 Privacy", "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt", "", 345600, "GPLv3", false, false, false]
@@ -112,6 +111,7 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["", "https://pastebin.com/raw/aAcp1cNs", "", 8640000, "Public Domain", false, true, true]
 ["", "https://pastebin.com/raw/a1TPEPfP", "", 8640000, "Public Domain", false, false, false]
 ["", "https://pastebin.com/raw/ZzZutnXE", "", 8640000, "Public Domain", false, true, false]
+["", "https://pastebin.com/raw/Jfp9Wkcz", "", 8640000, "Public Domain", false, false, false]
 ["", "https://pastebin.com/raw/JEtG4aG0", "", 8640000, "Public Domain", false, false, true]
 ["", "https://pastebin.com/raw/BiQKjQaK", "", 8640000, "Public Domain", false, true, true]
 ["", "https://pastebin.com/raw/9QAxNkaS", "", 8640000, "Public Domain", false, false, false]

@@ -1168,6 +1168,7 @@ file.spyhuman.com
 filmstruck-images.cdn.turner.com
 fingerhut.ugc.bazaarvoice.com
 finishline.ugc.bazaarvoice.com
+firefly-071591.s3.amazonaws.com
 fladmin01.int.prod.flipboard.com
 flapi.flipboard.com
 fldwnl.spyhuman.com
@@ -1729,6 +1730,7 @@ logs.maxmind.com
 logx.flexispy.com
 lowes.ugc.bazaarvoice.com
 lp.labs.livechatinc.com
+lptag.liveperson.net
 ls.chatid.com
 ls1x.chatid.com
 luascript.surveygizmo.com
@@ -2346,6 +2348,7 @@ screwfix.ugc.bazaarvoice.com
 script.surveygizmo.com
 sdcard.spyfone.com
 sdf.cortana.ai
+seal.websecurity.norton.com
 search.livefyre.com
 sec.olark.com
 secure-dir.livechatinc.com
@@ -2933,6 +2936,7 @@ www.edu.surveygizmo.com
 www.email.surveygizmo.com
 www.eu1a-email-mng.gigya.com
 www.exacttarget.com
+www.firefly-071591.s3.amazonaws.com
 www.flexispy.com
 www.flipboard.com
 www.geoip.solarleadfactory.com

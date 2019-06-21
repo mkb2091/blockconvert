@@ -25,7 +25,6 @@ amazon.com
 amazonaws.com
 amazoncustomerservice.d2.sc.omtrdc.net
 americanhomecomings.com
-analytics.twitter.com
 ancestry.com
 angularjs.org
 anonymto.me
@@ -75,6 +74,7 @@ betterttv.net
 bigcommerce.com
 bit.ly
 bizrate.com
+blizzard.com
 blogblog.com
 blogger.com
 blogher.org
@@ -132,7 +132,6 @@ charter.com
 checkout.google.com
 checkout.razorpay.com
 civicscience.com
-clarity-green.hart.com
 cleanprint.net
 cleveland.com
 clients1.google.com
@@ -160,7 +159,6 @@ coupons.com
 cqcounter.com
 craveonline.com
 creativecommons.org
-criteo.investorroom.com
 crowdynews.com
 cse.google.com
 cstv.com
@@ -399,7 +397,6 @@ mediaworks.co.nz
 meebocdn.net
 members.internetdefenseleague.org
 messenger.live.com
-metrics.mozilla.com
 metrics.torproject.org
 mfstatic.cz
 microsoft.com
@@ -409,6 +406,7 @@ mlive.com
 mobify.com
 mozilla.net
 mozilla.org
+mozillazine.org
 mozu.com
 mpsnare.iesnare.com
 mqcdn.com
@@ -515,7 +513,6 @@ public.tableausoftware.com
 publiekeomroep.nl
 pwc.chase.com
 qualtrics.com
-query.petametrics.com
 quotemedia.com
 rackcdn.com
 rackspacecloud.com

@@ -1072,6 +1072,7 @@ cache.fm
 cache2.delvenetworks.com
 cadreon.com
 cadreon.s3.amazonaws.com
+call-tracking.by
 call-tracking.co.uk
 callingjustified.com
 callisto.fm
@@ -1124,9 +1125,7 @@ cdn-analytics.pl
 cdn-code.host
 cdn-jquery.host
 cdn-net.com
-cdn.cloudcoins.co
 cdn.hiido.cn
-cdn.static-cnt.bid
 cdn.trafficexchangelist.com
 cdn1.pebx.pl
 cdnanalytics.xyz
@@ -1194,6 +1193,7 @@ clarium.global.ssl.fastly.net
 clarivoy.com
 clc.stackoverflow.com
 clck.yandex.com
+clck.yandex.ru
 cleananalytics.com
 clearsale.com.br
 clearviewstats.com
@@ -1631,7 +1631,6 @@ crypto-coins.info
 crypto-loot.com
 crypto-pool.fr
 crypto-webminer.com
-crypto.csgocpu.com
 cryptobara.com
 cryptoloot.pro
 cryptomine.pro
@@ -1972,6 +1971,7 @@ dsparking.com
 dsply.com
 dstrack2.info
 dt.sellpoint.net
+dt1pxsve3tgas.cloudfront.net
 dtc-v6t.com
 dti-ranker.com
 dtscout.com
@@ -2427,7 +2427,6 @@ friends.totallynsfw.com
 frog.wix.com
 frosmo.com
 fruitflan.com
-fruitice.realnetwrk.com
 fsd2.digital
 fshka.com
 fstrk.net
@@ -2584,7 +2583,6 @@ go-mpulse.net
 go-stats.dlinkddns.com
 go.bestmobiworld.com
 go.bluewin.ch
-go.megabanners.cf
 go.optifuze.com
 go.toutapp.com
 goadservices.com
@@ -4032,7 +4030,6 @@ openstat.net
 opentracker.net
 openvenue.com
 openxtracker.com
-ophan.guardian.co.uk
 ophan.theguardian.com
 oproi.com
 optify.net
@@ -4488,6 +4485,7 @@ quaintcan.com
 quantcount.com
 quantserve.com
 quantummetric.com
+quartic.pl
 qubitanalytics.appspot.com
 qubitproducts.com
 questionpro.com
@@ -6159,6 +6157,7 @@ tracking.statravel.de
 tracking.synthasite.net
 tracking.target2sell.com
 tracking.tchibo.de
+tracking.teamskeet.com
 tracking.theeword.co.uk
 tracking.thehut.net
 tracking.tidalhifi.com
@@ -6555,7 +6554,6 @@ w3counter.com
 w55c.net
 w88.espn.com
 w88.go.com
-w88.m.espn.go.com
 wa.metro.co.uk
 wa.ui-portal.de
 waframedia9.com
@@ -6578,6 +6576,7 @@ wbtrk.net
 wcfbc.net
 wcs.naver.com
 wdm.map24.com
+we-stats.com
 web-boosting.net
 web-controlling.org
 web-counter.net
@@ -6586,7 +6585,6 @@ web-stat.net
 web-t.9gag.com
 web-track.telekom-dienste.de
 web-visor.com
-web.dle-news.pw
 web1.51.la
 webalytics.pw
 webassembly.stream

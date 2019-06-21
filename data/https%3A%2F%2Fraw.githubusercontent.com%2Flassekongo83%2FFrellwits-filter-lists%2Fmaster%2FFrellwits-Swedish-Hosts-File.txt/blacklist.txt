@@ -91,9 +91,11 @@ annons.turist.se
 annonsera.kyrkanstidning.se
 annonsportalen.norran.se
 anonymousdemographics.com
+apccdn.apsis1.com
 api.deep.bi
 api.getlevelten.com
 api.innomdc.com
+app.converdiant.com
 app.yieldify.com
 apps-cdn.relevant-digital.com
 apps.shareaholic.com
@@ -148,6 +150,7 @@ cdn.brandmetrics.com
 cdn.cxense.com
 cdn.dep-x.com
 cdn.foxpush.net
+cdn.maaw.io
 cdn.onthe.io
 cdn.oribi.io
 cdn.permutive.com

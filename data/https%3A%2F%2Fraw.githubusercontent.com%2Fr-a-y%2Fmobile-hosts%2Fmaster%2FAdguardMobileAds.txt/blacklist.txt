@@ -25,6 +25,7 @@ ad.adapter.kaffnet.com
 ad.api.kaffnet.com
 ad.apps.fm
 ad.apsalar.com
+ad.auditude.com
 ad.cauly.co.kr
 ad.daum.net
 ad.doubleclick.net
@@ -61,6 +62,7 @@ adcolony.com
 addapptr.com
 ade.clmbtech.com
 adextent.com
+adfiles.auditude.com
 adflake.com
 adforgames.com
 adform.com
@@ -246,7 +248,6 @@ atkins.vo.llnwd.net
 ato.mx
 atti.com
 auction.unityads.unity3d.com
-auditude.com
 avazunativeads.com
 avazutracking.net
 awltovhc.com
@@ -305,11 +306,13 @@ cdn-highwinds.unityads.unity3d.com
 cdn-image.com
 cdn.adbert.info
 cdn.ads.fotoable.net
+cdn.auditude.com
 cdn.batmobi.net
 cdn.cpiera.com
 cdn.hdat.xyz
 cdn.unityads.unity3d.com
 cdn1.ettoday.net
+cdn2.auditude.com
 cdn7.rocks
 cdns.lodeo.io
 cell.zhybzp.cn
@@ -662,6 +665,7 @@ opr.formulas.jp
 opt8.co
 optimatic.com
 os.scmpacdn.com
+otcdn2.auditude.com
 owap.su
 p-behacdn.ksmobile.net
 pagead46.l.doubleclick.net
@@ -694,6 +698,7 @@ postitial.com
 postrelease.com
 presage.io
 projectwonderful.com
+promoted.soundcloud.com
 prosperent.com
 prre.ru
 pssvc.iqzone.com
@@ -887,6 +892,7 @@ wmhlch.com
 wordego.com
 wtraff.com
 www.adbert.com.tw
+www.auditude.com
 x.appbaqend.com
 xdrig.com
 ximad.com
