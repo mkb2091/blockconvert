@@ -91,7 +91,11 @@ class DownloadManager():
                 headers['If-None-Match'] = old_etag
             if last_modified != 0:
                 headers['If-Modified-Since'] = time.strftime('%a, %d %b %Y %H:%M:%S GMT', time.localtime(last_modified))
-            r = self.session.get(url, headers=headers)
+            try:
+                r = self.session.get(url, headers=headers)
+            except Exception as error:
+                print('Encountered error: "%s" for url: "%s"' % (error, url))
+                return
             try:
                 new_etag = r.headers['ETag']
             except KeyError:
