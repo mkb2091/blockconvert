@@ -141,6 +141,7 @@ oneclient.sfx.ms
 onion.to
 outlook.office365.com
 pastebin.com
+pastebin.org
 pbs.twimg.com
 pornhub.com
 prod.do.dsp.mp.microsoft.com
