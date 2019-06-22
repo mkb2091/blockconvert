@@ -30,7 +30,6 @@ Link|Author|Expires|License|Type
 [The Hosts File Project](https://hblock.molinero.dev/hosts)|Héctor Molinero Fernández <hector@molinero.dev>|1.0 days|MIT|Blacklist
 [Spam404](https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt)|-|2.0 days|Permission to modify, copy and distribute|Blacklist
 [Skeletal Blocker](https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List)|SkeletalDemise|2.0 days|GPLv3|Blacklist
-[Sidewinder Campain](https://pastebin.com/raw/rccqdjNB)|-|100.0 days|Public Domain|Blacklist
 [Ransomware URL Blocklist ](https://ransomwaretracker.abuse.ch/downloads/RW_URLBL.txt)|-|1.0 days|Free for use without any limitations|Blacklist
 [Ransomware IP Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt)|-|1.0 days|Free for use without any limitations|Blacklist
 [Ransomware Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)|-|1.0 days|Free for use without any limitations|Blacklist
@@ -109,25 +108,6 @@ Link|Author|Expires|License|Type
 [https://raw.githubusercontent.com/Marfjeh/coinhive-block/master/domains](https://raw.githubusercontent.com/Marfjeh/coinhive-block/master/domains)|-|1.0 days|MIT|Blacklist
 [https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt](https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt)|-|1.0 days|GPLv3+|Whitelist
 [https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json](https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json)|-|1.0 days|GPLv3|Blacklist
-[https://pastebin.com/raw/sRzfwfsa](https://pastebin.com/raw/sRzfwfsa)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/pkZ0TBnc](https://pastebin.com/raw/pkZ0TBnc)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/mU7abvT9](https://pastebin.com/raw/mU7abvT9)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/mU2XkjmV](https://pastebin.com/raw/mU2XkjmV)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/jarnEpx5](https://pastebin.com/raw/jarnEpx5)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/iGCZ1Vq4](https://pastebin.com/raw/iGCZ1Vq4)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/g8bhsb4G](https://pastebin.com/raw/g8bhsb4G)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/ffDu8u46](https://pastebin.com/raw/ffDu8u46)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/f2dd77fR](https://pastebin.com/raw/f2dd77fR)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/eJHNbf4W](https://pastebin.com/raw/eJHNbf4W)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/aAcp1cNs](https://pastebin.com/raw/aAcp1cNs)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/a1TPEPfP](https://pastebin.com/raw/a1TPEPfP)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/ZzZutnXE](https://pastebin.com/raw/ZzZutnXE)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/Jfp9Wkcz](https://pastebin.com/raw/Jfp9Wkcz)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/JEtG4aG0](https://pastebin.com/raw/JEtG4aG0)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/BiQKjQaK](https://pastebin.com/raw/BiQKjQaK)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/9QAxNkaS](https://pastebin.com/raw/9QAxNkaS)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/5WWQUxEH](https://pastebin.com/raw/5WWQUxEH)|-|100.0 days|Public Domain|Blacklist
-[https://pastebin.com/raw/0vSxs719](https://pastebin.com/raw/0vSxs719)|-|100.0 days|Public Domain|Blacklist
 [https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt](https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt)|-|1.0 days|CC-BY-SA-4.0|Blacklist
 [https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt](https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt)|-|1.0 days|CC0|Blacklist
 [https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt)|-|1.0 days|GPLv3|Blacklist
