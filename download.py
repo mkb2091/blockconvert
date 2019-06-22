@@ -11,8 +11,12 @@ def url_to_path(url):
 
 def copy_whitelist_and_clean():
     with open('whitelist.txt') as file:
-        data = '\n'.join(sorted(file.read().split()))
+        data = '\n'.join(sorted(set(file.read().split())))
     with open('whitelist.txt', 'w') as file:
+        file.write(data)
+    with open('blacklist.txt') as file:
+        data = '\n'.join(sorted(set(file.read().split())))
+    with open('blacklist.txt', 'w') as file:
         file.write(data)
 
 
