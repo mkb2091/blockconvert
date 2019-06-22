@@ -50,6 +50,8 @@ def main():
                 pass
     with open('whitelist.txt') as file:
         blocklist.add_file(file.read(), True)
+    with open('blacklist.txt') as file:
+        blocklist.add_file(file.read())
     print('Consolidated lists(%ss)' % (time.time() - start))
     print()
     start = time.time()
