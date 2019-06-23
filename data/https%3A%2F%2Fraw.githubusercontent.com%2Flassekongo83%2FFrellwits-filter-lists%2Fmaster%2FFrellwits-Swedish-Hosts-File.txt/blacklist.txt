@@ -389,6 +389,7 @@ push-notifications.top
 pushcrew.com
 pushnice.com
 pushwhy.com
+pxl.host
 r.existenz.se
 rabattcoop.com
 rabattkoder.ifragasatt.se

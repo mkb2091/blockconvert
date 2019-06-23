@@ -124,6 +124,7 @@ cdn.jsdelivr.net
 cdn.jwplayer.com
 cdn.radiantmediatechs.com
 cdn.rawgit.com
+cdn.staticaly.com
 cdn.viblast.com
 cdninstagram.com
 cdnjs.cloudflare.com
@@ -308,6 +309,7 @@ gist.github.com
 git.io
 git.teknik.io
 gitcdn.xyz
+gitee.com
 github.com
 gitlab.com
 gitter.im
@@ -442,7 +444,9 @@ losangeles.cbslocal.com
 lowes.com
 lublin.tvp.pl
 lwn.net
+m.gitee.com
 m.hotmail.com
+m.media-amazon.com
 m.weeklyad.target.com
 m.youtube.com
 macys.com
