@@ -121,6 +121,7 @@ adcrowd.com
 add1.aniview.com
 addevent.com
 addragon.com
+addthis.com
 addtoany.com
 ade.googlesyndication.com
 adenabler.com
@@ -253,6 +254,7 @@ adxprtz.com
 adxtrem.com
 adyoulike.com
 adzoka.com
+ae.alcmpn.com
 aetn.com.ssl.d1.sc.omtrdc.net
 aexp.demdex.net
 afd.adsttc.com
@@ -268,11 +270,13 @@ ak-is.net
 akstat.io
 alb-prod-invenio-1916515004.us-west-2.elb.amazonaws.com
 alb.reddit.com
+alcmpn.com
 alexametrics.com
 alexandria.marfeelcdn.com
 algovid.com
 alldcs.outbrain.org
 allinviews.com
+alocdn.com
 altitude-arena.com
 amarillo.logs.roku.com
 amazin.com
@@ -346,6 +350,7 @@ api.freshaddress.biz
 api.funnelenvy.com
 api.headlinerlabs.com
 api.intellimize.co
+api.intentiq.com
 api.ios.tenjin.com
 api.iterable.com
 api.keen.io
@@ -891,6 +896,7 @@ dz1vmszs6rjp8.cloudfront.net
 dzc-metrics.mzstatic.com
 e.cquotient.com
 e.crashlytics.com
+e.dlx.addthis.com
 e.redbox.com
 e.serverbid.com
 e.zg-api.com
@@ -1100,6 +1106,7 @@ hls.stripcdn.com
 hlserve.com
 hm-content.vergic.com
 hop.clickbank.net
+hotjar.com
 hrum.hotelsapi.io
 hs-scripts.com
 hsadspixel.net
@@ -1173,6 +1180,7 @@ instartlogic.com
 intelcorp.demdex.net
 intellimize.co
 intelsad.com
+intentiq.com
 intentmedia.net
 intercom.io
 intercomcdn.com
@@ -1640,6 +1648,7 @@ outcome-cdn.supersonicads.com
 p-eu4.stripcdn.com
 p-us1.stripcdn.com
 p.ads.roku.com
+p.alocdn.com
 p.cquotient.com
 p.d.e0mn.com
 p.midasplayer.com
@@ -1880,6 +1889,7 @@ rtb.gumgum.com
 rtd-tm.everesttech.net
 rtk.io
 rtr.innovid.com
+rtx.alcmpn.com
 ru.wix.com
 rubiconproject.com
 rubiconproject.dyns.net
@@ -1942,6 +1952,7 @@ scorecardresearch.com.edgekey.net
 scout-cdn.salesloft.com
 scout.salesloft.netdna-cdn.com
 scribe.logs.roku.com
+script.hotjar.com
 scripts.demandbase.com
 scripts.mediavine.com
 scysvr03.r.us-east-1.awstrack.me
@@ -2142,6 +2153,7 @@ swrve.com
 sync-tm.everesttech.net
 sync-unosync-com.geodns.me
 sync.adotmob.com
+sync.alcmpn.com
 sync.colossusssp.com
 sync.extend.tv
 sync.jivox.com
@@ -2425,6 +2437,7 @@ whenupgrade.yourbestsiteforlinksitenew.xyz
 whisk.com
 whizzco.com
 whoisvisiting.com
+widget.criteo.com
 widget.intercom.io
 widget.privy.com
 widgets.getsitecontrol.com
