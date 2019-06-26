@@ -487,6 +487,7 @@ beacon-17-537698933.us-east-1.elb.amazonaws.com
 beacon-all.walmart.com.akadns.net
 beacon-streamer.saymedia.com
 beacon-us-iad3.rubiconproject.com
+beacon-v2.helpscout.net
 beacon.aimtell.com
 beacon.campaigndeputy.com
 beacon.geo.netflix.com
@@ -498,6 +499,7 @@ beacon.tru.am
 beacon.us-west-2.prodaa.netflix.com
 beacon.vicinity-marketing.com
 beacon.walmart.com
+beaconapi.helpscout.net
 beacons.extremereach.io
 beam.koddi.com
 beap1.cb.g01.yahoodns.net
@@ -571,6 +573,7 @@ c-us4.stripcdn.com
 c-us5.stripcdn.com
 c-us8.stripcdn.com
 c.aaxads.com
+c.adsymptotic.com
 c.algovid.com
 c.cintnetworks.com
 c.evidon.com
@@ -598,6 +601,7 @@ carbonads.net
 carters.sp1.convertro.com
 casalemedia.com
 cashext.com
+cashrequestonline.com
 cbi.boldchat.com
 cbsi.com.ssl.d2.sc.omtrdc.net
 cbsi.com.ssl.sc.omtrdc.net
@@ -739,6 +743,7 @@ col.eum-appdynamics.com
 collect.adsorb.com
 collect.igodigital.com
 collector-a.perimeterx.net
+collector-px3vk96i6i.perimeterx.net
 collector-pxhyx10rg3.perimeterx.net
 collector-pxpmp8ilui.perimeterx.net
 collector-pxuarm9b04.perimeterx.net
@@ -772,6 +777,7 @@ content.swrve.com
 content.tapjoy.com
 contentz.mkt81.net
 contentz.mkt8668.com
+contentz.mkt932.com
 contextweb.com
 contextweb.map.fastlylb.net
 contributor.google.com
@@ -1229,6 +1235,7 @@ js.sentry-cdn.com
 jsrdn.com
 jss.trumeasure.com
 jssdkcdns.mparticle.com
+jssdks.mparticle.com
 jt.ms
 juicemobile.com
 jwpltx.com
@@ -1440,6 +1447,8 @@ mixmaintenancegreatliteflash.icu
 mixpanel.com
 mkt81.net
 mkt8668.com
+mkt932.com
+mktg.helpscout.net
 mkto-ab040164.com
 mkto-ab060029.com
 mkto-ab090106.com
@@ -1815,6 +1824,7 @@ pubocean.com
 pubs2-asia.creativecdn.com
 pug44000nf.pubmatic.com
 pulsepoint-platform.rtb.adx1.com
+pursuanthealth.com
 pushengage.com
 pushmejs.com
 pushspring.com
@@ -1928,6 +1938,7 @@ s1516.t.eloqua.com
 s1516.t.en25.com
 s2.go-mpulse.net
 s22.socialannex.com
+s2s.adjust.com
 saa.cbsi.com
 samplicio.us
 samsungelectronicsamericainc.demdex.net
@@ -2195,6 +2206,7 @@ tags.creditkarma.com
 tags.expo9.exponential.com
 tags.tiqcdn.com
 tags.toyota.com
+tags.w55c.net
 talkingpointsmemo-d.openx.net
 tap-secure.rubiconproject.com
 tapad.com
@@ -2289,6 +2301,7 @@ trinity.platform.intuit.com
 trinitymirror.grapeshot.co.uk
 trk-sp.sele.co
 trk.clinch.co
+trk.pursuanthealth.com
 trkn.us
 trkpnt.ongage.net
 tru.am
@@ -2333,6 +2346,7 @@ us.np.adproxy.ndmdhs.com
 us.tags.newscgp.com
 us5.campaign-archive.com
 usabilla.com
+usage.trackjs.com
 usasync01.admantx.com
 usatodaysports-d.openx.net
 usc.adserver.snapads.com
@@ -2417,6 +2431,7 @@ vungle.com
 w.usabilla.com
 w2.yotpo.com
 w3.cdn.anvato.net
+w55c.net
 walker.zdbb.net
 wallet.3cinteractive.com
 wavesecure.com

@@ -1149,9 +1149,11 @@ adru.net
 ads-a.juicyads.com
 ads-bid.l.doubleclick.net
 ads-bidder-api.twitter.com
+ads-cdn.tenmax.io
 ads-click.com
 ads-d.viber.com
 ads-fa.spotify.com
+ads-media-cdn.tenmax.io
 ads-target.coccoc.com
 ads-trk.vidible.tv
 ads-twitter.com
@@ -1495,6 +1497,7 @@ ads.quoka.de
 ads.rcs.it
 ads.rd.linksynergy.com
 ads.recoletos.es
+ads.reddit.com
 ads.rediff.com
 ads.redlightcenter.com
 ads.redtube.com
@@ -1539,6 +1542,7 @@ ads.tahono.com
 ads.techtv.com
 ads.techweb.com
 ads.telegraph.co.uk
+ads.tenmax.io
 ads.theglobeandmail.com
 ads.themovienation.com
 ads.thestar.com
@@ -1860,6 +1864,7 @@ adstat.4u.pl
 adstest.reklamstore.com
 adstest.weather.com
 adstextview.qq.com
+adstudio.blueseed.tv
 adstune.com
 adstxt.adnxs.com
 adsupply.com
@@ -2173,6 +2178,7 @@ akuaba.chez.com
 al-gb.adskeeper.co.uk
 al1.sharethis.com
 alav.propellerads.com
+alb.reddit.com
 alchemy-staging.conversantmedia.com
 alchenomy.com
 alclick.com
@@ -3297,8 +3303,12 @@ bestboundary.com
 bestbuy.demdex.net
 bestpons.net
 bestsearch.net
+beta-ads-media-cdn.tenmax.io
 beta-adserver.adtech.de
+beta-c.tenmax.io
 beta-imageserver.adtech.de
+beta-rtb-public.tenmax.io
+beta-s.tenmax.io
 beta.accountkit.com
 beta.admicro.vn
 beta.ads.cc
@@ -3436,6 +3446,7 @@ bluecava.com
 blueconic.net
 bluekai.com
 bluelithium.com
+blueseed.tv
 blueserving.com
 bluewhaleweb.com
 blushing.findgutterhelmet.com
@@ -3633,26 +3644,32 @@ c.rigelink.com
 c.sharethis.mgr.consensu.org
 c.snnd.co
 c.split.cnzz.com
+c.tenmax.io
 c.trazk.com
 c.vserv.mobi
 c.w.inmobi.com
 c.webengage.com
 c.webtrends.com
 c1.atdmt.com
+c1.blueseed.tv
 c1.hadarone.com
 c1.nend.net
 c1.nowlinux.com
 c1.popads.net
 c17c.v.fwmrm.net
 c1exchange.com
+c2.blueseed.tv
 c2.hadarone.com
 c2.l.qq.com
 c2.popads.net
 c2.taboola.com
 c2i-cdn.startappnetwork.com
+c3.blueseed.tv
 c3.hadarone.com
+c4.blueseed.tv
 c4.hadarone.com
 c4d-cdn.adcolony.com
+c5.blueseed.tv
 c5.hadarone.com
 c7a54a18ef10e6b744d6f367a3313cfc.api.appsee.com
 ca-cdn.effectivemeasure.net
@@ -3836,6 +3853,7 @@ cdn.betrad.com
 cdn.bidadx.com
 cdn.bizible.com
 cdn.blueconic.net
+cdn.blueseed.tv
 cdn.branch.io
 cdn.celtra.com
 cdn.comedia.coccoc.com
@@ -3906,6 +3924,7 @@ cdn.syndication.twitter.com
 cdn.taboola.com
 cdn.taplytics.com
 cdn.teads.tv
+cdn.tenmax.io
 cdn.thumbs.glispa.com
 cdn.tinypass.com
 cdn.trackjs.com
@@ -3920,6 +3939,7 @@ cdn.zarget.com
 cdn0.fyber.com
 cdn01.adsafeprotected.com
 cdn1-marketplace.vntsm.com
+cdn1.blueseed.tv
 cdn1.ettoday.net
 cdn1.fyber.com
 cdn1.gigya.com
@@ -4710,15 +4730,20 @@ d.ligatus.com
 d.pub.network
 d.shareaholic.com
 d.skimresources.com
+d1.blueseed.tv
 d1.hadarone.com
+d2.blueseed.tv
 d2.hadarone.com
 d2.ligatus.com
 d2cmedia.ca
+d3.blueseed.tv
 d3.condenast.servedbyopenx.com
 d3.demo.servedbyopenx.com
 d3.hadarone.com
+d4.blueseed.tv
 d4.hadarone.com
 d4n.platformd.com
+d5.blueseed.tv
 d5.hadarone.com
 d5935-1dea9.api.pushwoosh.com
 d9.flashtalking.com
@@ -5127,6 +5152,7 @@ dmp.aerserv.com
 dmp.eclick.vn
 dmp.knowlead.io
 dmp.mgid.com
+dmp.tenmax.io
 dmp.urekamedia.com
 dmp.v.fwmrm.net
 dmpdemo.urekamedia.com
@@ -5261,8 +5287,10 @@ dsf.10eurosbonheur.org
 dsg.affaireenligne.org
 dsnrmg.go2affise.com
 dsp-d.ants.vn
+dsp-media-cdn.tenmax.io
 dsp-pixel.contextweb.com
 dsp-token.aws.rubiconproject.com
+dsp-video-cdn.tenmax.io
 dsp.batmobi.net
 dsp.blueserving.com
 dsp.fout.jp
@@ -6201,6 +6229,7 @@ giddycoat.com
 gifsandbox.ssl2.duapps.com
 gillingscamps.co.uk
 gimg.baidu.com
+git.blueseed.tv
 git.dev.kochava.com
 git.pubmatic.com
 github.tinypass.com
@@ -6512,6 +6541,7 @@ help.propellerads.com
 help.segment.com
 help.sharethis.com
 help.taboola.com
+helpdesk.blueseed.tv
 helpdesk.leanplum.com
 hentaicounter.com
 hentelpower.com
@@ -6567,6 +6597,7 @@ hitslink.com
 hittail.com
 hive-d.openx.net
 hk-cdn.effectivemeasure.net
+hk-pvmax.tenmax.io
 hk.adserver.yahoo.com
 hk.aip.insightexpressai.com
 hk.effectivemeasure.net
@@ -6806,6 +6837,7 @@ iframe.fyber.com
 iframe.sharethrough.com
 ifwe-d.openx.net
 igin.startappservice.com
+ignaik.tenmax.io
 iid-d.openx.net
 ikcode.baidu.com
 il-vpn.taboola.com
@@ -6992,6 +7024,7 @@ inapp.nixozz.com
 inboard-shop-02.kochava.com
 inboard-shop-05-ams.kochava.com
 inboard.kochava.com
+inbound.tenmax.io
 inboxdollars.com
 inboxretargeting.bounceexchange.com
 incentaclick.com
@@ -7432,9 +7465,11 @@ k8s-dashboard.propellerads.com
 kabam-d.openx.net
 kadokawa-d.openx.net
 kaffnet.com
+kaingi.tenmax.io
 kairosglobal.ca1.qualtrics.com
 kakakucom-d.openx.net
 kalibrium.ru
+kanban.blueseed.tv
 kanoodle.com
 kargo.com
 karisimbi.net
@@ -7451,6 +7486,7 @@ keymedia.hu
 keynotedeviceanywhere.com
 keyword.daumdn.com
 khachhang.fff.com.vn
+kiangi.tenmax.io
 kibana.prd.fyber.com
 kibana.sonic-us.supersonicads.com
 kibana.tracker.fyber.com
@@ -7495,6 +7531,8 @@ kt-g.de
 ktoooo.com
 ktu.sv2.biz
 kuaiyan.com.cn
+kuasa-api.tenmax.io
+kuasa.tenmax.io
 kubana.vungle.com
 kukuplay.com
 kumykoz.com
@@ -8044,6 +8082,7 @@ man1234.com
 manage-test.juicyads.com
 manage.com
 manage.juicyads.com
+manage.problem.securedashfuyiersa.com
 manage.sharethrough.com
 mandarin.aquamarineku.com
 mangarock-alternate.app.link
@@ -8621,6 +8660,7 @@ mx.yandex.ru
 mxpnl.com
 mxyyth.com
 my-cdn.effectivemeasure.net
+my-pvmax.tenmax.io
 my-ssl.effectivemeasure.net
 my.ad4screen.com
 my.adserver.yahoo.com
@@ -8654,6 +8694,7 @@ mypagerank.ru
 mypowermall.com
 myscreen.com
 mysimash.info
+mysp.ac
 mystat-in.net
 mystat.pl
 mysteriousmonth.com
@@ -8766,6 +8807,7 @@ netzwelt-gmbh-d.openx.net
 neudesicmediagroup.com
 new-adm.hotjar.com
 new-bannertest.adtech.de
+new-cdn.blueseed.tv
 new-iq.adtech.de
 new.api.ad.xiaomi.com
 new.cnzz.com
@@ -9604,6 +9646,7 @@ pixel.mtrcs.samba.tv
 pixel.nc0.co
 pixel.personagraph.com
 pixel.quantserve.com
+pixel.reddit.com
 pixel.redditmedia.com
 pixel.reklamstore.com
 pixel.rubiconproject.com
@@ -9629,6 +9672,7 @@ plank.apptimize.com
 platform-api.segment.com
 platform-api.sharethis.com
 platform.bidgear.com
+platform.blueseed.tv
 platform.engageya.com
 platform.glispa.com
 platform.ifc.inmobi.com
@@ -9821,6 +9865,7 @@ prod.lijit.com
 prod.millennialmedia.com
 prod.sonobi-go.map.fastly.net
 product.braze.com
+product.tenmax.io
 productanalyticsplaybook.amplitude.com
 production-bidding-agent.fyber.com
 production.segment.com
@@ -9967,6 +10012,7 @@ purifydigital.go2affise.com
 push-manage.api.kochava.com
 push-notifications.top
 push.docker.adsrvr.org
+push.tenmax.io
 push1.dev.accengage.com
 pushapi.batmobi.net
 pushapi.localytics.com
@@ -9977,6 +10023,7 @@ pushwoosh.com
 put.qostore.daumkakao.io
 puzzles.segment.com
 puzzlingfall.com
+pvmax.tenmax.io
 pw.cnzz.com
 pwc.qualtrics.com
 pwoem.cnzz.com
@@ -10094,6 +10141,7 @@ r.pubnative.net
 r.skimresources.com
 r.staging.fullstory.com
 r.teads.tv
+r.tenmax.io
 r.w.inmobi.com
 r1-ads.ace.advertising.com
 r1.snnd.co
@@ -10166,6 +10214,7 @@ readingguilt.com
 readingopera.com
 readserver.net
 readymoon.com
+real-native.tenmax.io
 real.qualtrics.com
 real.sp.analytics.yahoo.com
 realcastmedia.com
@@ -10378,6 +10427,7 @@ rm2.adtilt.com
 rma.adcolony.com
 rmads.eu.msn.com
 rmads.msn.com
+rmax.tenmax.io
 rmcdn.2mdn.net
 rmcdn.f.2mdn.net
 rmd.atdmt.com
@@ -10429,7 +10479,10 @@ rt.applovin.com
 rt.applvn.com
 rta.dailymail.co.uk
 rta2.metro.co.uk
+rtb-asiamax.tenmax.io
+rtb-bidswitch.tenmax.io
 rtb-ca.openx.net
+rtb-doubleclick.tenmax.io
 rtb-fe-us-e1.content.ad
 rtb-fe-us-e2.content.ad
 rtb-fe-us-e3.content.ad
@@ -10439,6 +10492,7 @@ rtb-fe-us-e6.content.ad
 rtb-fe-us-w1.content.ad
 rtb-fe-us-w2.content.ad
 rtb-lc.openx.net
+rtb-mobfox.tenmax.io
 rtb-px.content.ad
 rtb-trk.adcolony.com
 rtb-useast.vidoomy.com
@@ -10554,6 +10608,7 @@ s.sharethis.com
 s.skimresources.com
 s.soha.vn
 s.supersonicads.com
+s.tenmax.io
 s.tuoitre.vn
 s.update.3lift.com
 s.update.adsrvr.org
@@ -10786,6 +10841,7 @@ secure.postrelease.com
 secure.quantserve.com
 secure.webconnect.net
 secure0.adswizz.com
+securedashfuyiersa.com
 securepubads.g.doubleclick.net
 securesoft.info
 securev4vcapi.adcolony.com
@@ -11004,6 +11060,7 @@ show.re.taobao.com
 showads.pubmatic.com
 showadsak.pubmatic.com
 showbiz.owndata.network
+showcase.blueseed.tv
 showcase.exponential.com
 showcase.ionicframework.com
 shuangfeidyw.com
@@ -11351,6 +11408,7 @@ ssp.content.ad
 ssp.deployads.com
 ssp.hadarone.com
 ssp.lkqd.net
+ssp.tenmax.io
 ssp.urekamedia.com
 sspapi.admicro.vn
 sstatic1.histats.com
@@ -11481,6 +11539,7 @@ static-ads.adtarget.me
 static-ads.akamaized.net
 static-ads.zaloapp.com
 static-dashboard.subiz.com
+static-org.blueseed.tv
 static-shareaholic.s3.amazonaws.com
 static-sio.hotjar.com
 static-staging.hotjar.com
@@ -11509,6 +11568,7 @@ static.amplitude.com
 static.api.useinsider.com
 static.applifier.com
 static.bapi.adsafeprotected.com
+static.blueseed.tv
 static.chartbeat.com
 static.chartboost.com
 static.clevertap.com
@@ -11658,7 +11718,6 @@ statxpress.com
 stc-nas.nixcdn.com
 stc.adtima.vn
 stc.gammaplatform.com
-stc.sp.zdn.vn
 steadfastsound.com
 steadfastsystem.com
 steelhouse.com
@@ -11915,6 +11974,7 @@ t.pusk.ru
 t.sharethis.com
 t.skimresources.com
 t.teads.tv
+t.tenmax.io
 t.update.3lift.com
 t.update.adsrvr.org
 t.update.ap.lijit.com
@@ -12074,6 +12134,7 @@ temelio.com
 tempest.services.disqus.com
 templates.sharethrough.com
 tendertest.com
+tenmax.io
 terriblethumb.com
 terribleturkey.com
 terry.qualtrics.com
@@ -12278,6 +12339,11 @@ toyota.vo.llnwd.net
 tpa-d.openx.net
 tpc.googlesyndication.com
 tpcnc.googlesyndication.com
+tpe-ads-cdn.tenmax.io
+tpe-ads-media-cdn.tenmax.io
+tpe-dmp.tenmax.io
+tpe-pvmax.tenmax.io
+tpe-ssp.tenmax.io
 tpnads.com
 tps.doubleverify.com
 tps10216.doubleverify.com
@@ -12524,10 +12590,12 @@ tvads.alphonso.tv
 tvas-a.pw
 tvas-c.pw
 tvmtracker.com
+tw-pvmax.tenmax.io
 tw.adserver.yahoo.com
 tw.aip.insightexpressai.com
 tw.c.appier.net
 tw2.adserver.yahoo.com
+twa-pvmax.tenmax.io
 twentyfourhourcampfire-d.openx.net
 twittad.com
 two-ply-dev.gw.localytics.com
@@ -13000,6 +13068,7 @@ vmware.co1.qualtrics.com
 vmweb.net
 vn-gmtdmp.mookie1.com
 vn-platform.bidgear.com
+vn-pvmax.tenmax.io
 vn.adserver.yahoo.com
 vn.alexajstrack.com
 vn.innity.com
@@ -13304,6 +13373,7 @@ wpm.mgr.consensu.org
 wpm.neustar.biz
 wpnrtnmrewunrtok.xyz
 wqmobile.com
+wrapper.blueseed.tv
 wryfinger.com
 ws-0.subiz.com
 ws-api.adtech.de
@@ -13469,6 +13539,7 @@ www.bizible.com
 www.bkrtx.com
 www.blog.appsee.com
 www.blog.fyber.com
+www.blueseed.tv
 www.bounceexchange.com
 www.braze.com
 www.c4d-cdn.adcolony.com
@@ -13729,6 +13800,7 @@ www.talk99.cn
 www.tapjoy.com
 www.taplytics.com
 www.teads.tv
+www.tenmax.io
 www.test.tapjoyads.com
 www.testns.instartlogic.com
 www.thoosje.com

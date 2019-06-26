@@ -135,6 +135,7 @@ akamai-san42.exacttarget.com
 akamai-san43.exacttarget.com
 akamai-san44.exacttarget.com
 akamai-san45.exacttarget.com
+akamai-san46.exacttarget.com
 akamai-san47.exacttarget.com
 akamai-san5.exacttarget.com
 akamai-san6.exacttarget.com
@@ -629,6 +630,7 @@ community.surveygizmo.com
 compliantcd.cortana.ai
 conforama.ugc.bazaarvoice.com
 connector-bms_orencia.gomoxie.solutions
+connector-boscovs.gomoxie.solutions
 connector-capitagroup.uk.gomoxie.solutions
 connector-cb.gomoxie.solutions
 connector-coned.gomoxie.solutions
@@ -1340,6 +1342,7 @@ horizonhobby.ugc.bazaarvoice.com
 hosting.exacttarget.com
 hp.ugc.bazaarvoice.com
 hpemea-de.ugc.bazaarvoice.com
+hpemea-en.ugc.bazaarvoice.com
 hpemea-it.ugc.bazaarvoice.com
 hr-cv.gigya.com
 hsamuel.ugc.bazaarvoice.com
@@ -1372,6 +1375,7 @@ identity-hawkincentives.gomoxie.solutions
 identity-hofmann.uk.gomoxie.solutions
 identity-lifetimefitness.gomoxie.solutions
 identity-love2shop.uk.gomoxie.solutions
+identity-mercer.gomoxie.solutions
 identity-michaelkors.gomoxie.solutions
 identity-michaelkorsca.gomoxie.solutions
 identity-michaelkorsde.gomoxie.solutions
@@ -2015,8 +2019,14 @@ orange.ugc.bazaarvoice.com
 orchardbrands.ugc.bazaarvoice.com
 orientaltrading.ugc.bazaarvoice.com
 oriflame.ugc.bazaarvoice.com
+origin-akamai-auth.s1.qa1.exacttarget.com
+origin-akamai-auth.s2.qa1.exacttarget.com
 origin-akamai-members.s50.exacttarget.com
 origin-auth.s1.exacttarget.com
+origin-auth.s1.qa1.exacttarget.com
+origin-auth.s1.qa3.exacttarget.com
+origin-auth.s2.qa1.exacttarget.com
+origin-auth.s2.qa3.exacttarget.com
 origin-auth.s7.exacttarget.com
 origin-click.virt.s7.exacttarget.com
 origin-mc.s50.exacttarget.com
@@ -2219,6 +2229,7 @@ ru-ru.about.flipboard.com
 ru1-direct.gigya.com
 ru1-st1.gigya.com
 ru1-st2.gigya.com
+ru1-st4.gigya.com
 ru1.gigya.com
 ru1a-email-mng.gigya.com
 s-06143d-i.edu.surveygizmo.com
@@ -2399,6 +2410,7 @@ sgn.exacttarget.com
 share.flipboard.com
 share.microsoft.com
 share.pingdom.com
+sharp.ugc.bazaarvoice.com
 shs-dev.cortana.ai
 shs-prod.cortana.ai
 signup.pingdom.com
@@ -2647,6 +2659,7 @@ uploads.github.exacttarget.com
 uploads.www.gigya.com
 ur.spyfone.com
 urbandecay.ugc.bazaarvoice.com
+url5285.livechatinc.com
 us.ipinfo.io
 us1-direct.gigya.com
 us1-email-mng.gigya.com

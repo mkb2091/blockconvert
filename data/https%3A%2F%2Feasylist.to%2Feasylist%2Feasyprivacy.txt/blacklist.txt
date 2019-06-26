@@ -1386,8 +1386,6 @@ collector.sspinc.io
 collector.statowl.com
 collector.tescocompare.com
 collector.trendmd.com
-collector.xhamster.com
-collector1.xhamster.com
 collserve.com
 colossusssp.com
 com.econa.com
@@ -1711,6 +1709,7 @@ d1rgnfh960lz2b.cloudfront.net
 d1rnw04e6mc22h.cloudfront.net
 d1ros97qkrwjf5.cloudfront.net
 d1ssbq1bwjg5ux.cloudfront.net
+d1t9uctetvi0tu.cloudfront.net
 d1uanozc5el74n.cloudfront.net
 d1wscoizcbxzhp.cloudfront.net
 d1xfq2052q7thw.cloudfront.net
@@ -1860,6 +1859,7 @@ depttake.ga
 deqwas.net
 desa.fkapi.net
 desb.fkapi.net
+desiredirt.com
 desr.fkapi.net
 detect.ergebnis-dienst.de
 detectdiscovery.com
@@ -2357,6 +2357,7 @@ footprint.anetwork.ir
 footprintdns.com
 footprintlive.com
 force24.co.uk
+forecasttiger.com
 forensics1000.com
 foreseeresults.com
 forkcdn.com
@@ -3141,6 +3142,7 @@ kieden.com
 kiks.auto.ru
 kiks.yandex
 killerwebstats.com
+kilometrix.de
 kinesisproxy.hearstlabs.com
 kinoprofi.org
 kippbeak.cf
@@ -4275,6 +4277,7 @@ pixel.usrsync.com
 pixel.vmm-satellite2.com
 pixel.watch
 pixel.wp.com
+pixel.wp.pl
 pixel.xmladfeed.com
 pixel.yabidos.com
 pixel.yola.com
@@ -4294,9 +4297,7 @@ placemypixel.com
 pladform.ru
 platform.communicatorcorp.com
 platformpanda.com
-play.estream.nu
 play.estream.to
-play.estream.xyz
 play.mix.kinostuff.com
 play.vidzi.tv
 playerassets.info
@@ -4628,7 +4629,6 @@ research.de.com
 researchintel.com
 researchnow.co.uk
 reseau-pub.com
-reservedoffers.club
 reshin.de
 reson8.com
 response.pure360.com
@@ -5161,6 +5161,7 @@ splurgi.com
 splyt.com
 spn-twr-14.com
 spn.ee
+spolecznosci.net
 sponsorcounter.de
 sponsored.com
 spoods.rce.veeseo.com
@@ -5789,6 +5790,7 @@ tl813.com
 tm.jsuol.com.br
 tm.tradetracker.net
 tm.uol.com.br
+tm.vendemore.com
 tm1-001.com
 tmgr.ccmbg.com
 tmmp.io
@@ -5797,6 +5799,7 @@ tms-st.cdn.ngenix.net
 tmvtp.com
 tnative.ru
 tnctrx.com
+tnla.thenewslens.com
 tns-counter.ru
 tns-cs.net
 tns-gallup.dk
@@ -5805,7 +5808,6 @@ tns.simba.taobao.com
 tnsinternet.be
 toc.io
 toftofcal.com
-tokyodrift.ga
 tomonline-inc.com
 tongji.mafengwo.cn
 tools.ranker.com
@@ -5932,7 +5934,6 @@ track.omgpl.com
 track.parse.ly
 track.prezna.com
 track.pricespider.com
-track.promptfile.com
 track.propelplus.com
 track.pushbullet.com
 track.qcri.org

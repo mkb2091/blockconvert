@@ -39,6 +39,7 @@ autolinkmaker.itunes.apple.com
 avis-verifies.com
 axept.io
 axeptio.eu
+ayc0zsm69431gfebd.xyz
 b.hatena.ne.jp
 b2c-wsinsight.crowdfactory.com
 badge.facebook.com
@@ -102,7 +103,6 @@ consent.cmp.oath.com
 consent.subscriptions.archant.co.uk
 consent.theneweuropean.co.uk
 consent.truste.com
-content-recommendation.net
 contentexchange.me
 contextly.com
 conversionsbox.com
@@ -257,6 +257,7 @@ jobs.thejobnetwork.com
 jobthread.com
 js.brow.si
 jugglu.com
+klaviyo.com
 knowd.com
 kodcad.kr
 leadacity.net
@@ -328,6 +329,7 @@ opinary.com
 opiniac.com
 opinionbar.com
 opinionstage.com
+optanon.blob.core.windows.net
 optimonk.com
 optinmonster.com
 optkit.com
@@ -477,6 +479,7 @@ sharethis.mgr.consensu.org
 sharexy.com
 shpg.org
 sidelinesapp.com
+signaly.co
 signatu.com
 simplesharebuttons.com
 siteswithcontent.com
