@@ -64,12 +64,14 @@ digicert.com
 displaycatalog.mp.microsoft.com
 disq.us
 dl.delivery.mp.microsoft.com
+dlsrc.getmonero.org
 dm3p.wns.notify.windows.com.akadns.net
 dmd.metaservices.microsoft.com
 dmd.metaservices.microsoft.com.akadns.net
 dns.google.com
 do.co
 download.windowsupdate.com
+downloads.getmonero.org
 dsx.mp.microsoft.com
 duckduckgo.com
 e-msedge.net
