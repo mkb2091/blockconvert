@@ -17,7 +17,7 @@ api.sbs.com.au
 appboot.netflix.com
 apresolve.spotify.com
 assets.adobedtm.com
-audio-ake.spotify.com.edgesuite.ne
+audio-ake.spotify.com.edgesuite.net
 bit.ly
 cdn-mobile.api.pluto.tv
 cdn.fbsbx.com

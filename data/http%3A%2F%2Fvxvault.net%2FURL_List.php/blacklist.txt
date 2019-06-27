@@ -1,7 +1,6 @@
 185.22.152.200
 193.32.161.77
 195.123.234.12
-209.141.32.210
 217.8.117.24
 31.44.184.33
 5.188.60.157
@@ -10,7 +9,6 @@
 a-7763.com
 absoluteoutdoorliving.com
 autokaskoosiguranje.rs.ba
-avans24.ru
 bbuseruploads.s3.amazonaws.com
 bidaut.com
 bienquangcaotnt.vn
