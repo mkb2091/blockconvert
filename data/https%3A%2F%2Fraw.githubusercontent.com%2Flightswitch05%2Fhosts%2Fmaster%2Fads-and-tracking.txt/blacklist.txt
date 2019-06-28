@@ -90,6 +90,7 @@ ab13.mktossl.com
 ab14.mktossl.com
 ab15.mktossl.com
 ab16.mktossl.com
+abmr.net
 abrtp1-cdn.marketo.com
 absum.ru
 abtesting.intuit.com
@@ -267,6 +268,7 @@ airpr.com
 airvertiseme.com
 ak-cdn.placelocal.com
 ak-is.net
+ak1s.abmr.net
 akstat.io
 alb-prod-invenio-1916515004.us-west-2.elb.amazonaws.com
 alb.reddit.com
@@ -325,6 +327,7 @@ anvato-api-config.s3.amazonaws.com
 anycast.adnxs.com
 ap.lijit.com
 api-54-190-136-221.b2c.com
+api-cbc-v3.conductrics.com
 api-dfw-b.bandwidthx.net
 api-logger.curejoy.com
 api-ntv-elb-1185445618.us-east-1.elb.amazonaws.com
@@ -438,6 +441,7 @@ assets.jetlore.com
 assets.kochava.com
 assets.pcrl.co
 assets.vidora.com
+assets1.adroll.com
 at.atwola.com
 atdmt.com
 atwola.com
@@ -547,6 +551,7 @@ bronto.com
 browser.sentry-cdn.com
 browserhawk.com
 browsiprod.com
+brsrvr.com
 bryan.logs.roku.com
 btf-analytics.s3.amazonaws.com
 btstatic.com
@@ -602,6 +607,7 @@ carters.sp1.convertro.com
 casalemedia.com
 cashext.com
 cashrequestonline.com
+cbcca.demdex.net
 cbi.boldchat.com
 cbsi.com.ssl.d2.sc.omtrdc.net
 cbsi.com.ssl.sc.omtrdc.net
@@ -688,6 +694,7 @@ cdn2.funnelenvy.com
 cdn25.vizury.com
 cdn6.vizury.com
 cdneast2-xch.media.net
+cdns.brsrvr.com
 cdnstatic.detik.com
 celebrus.com
 celeritascdn.com
@@ -757,6 +764,7 @@ comms-telemetry-service.us-east-1.amazonaws.com
 company-target.com
 comscoreresearch.com
 concertads-configs.vox-cdn.com
+conductrics.com
 config.dfw1.vip.inmobi.com
 config.inmobi.com
 config.uca.cloud.unity3d.com
@@ -767,6 +775,7 @@ connect.tapjoy.com
 connexity.net
 consensu.org
 consent.cookiebot.com
+console-cbc-v3.conductrics.com
 consoliads.com
 consumedmedia.com
 consumer.krxd.net
@@ -921,6 +930,7 @@ el2.convertkit.com
 eloqua.com
 emailmarketingguide.wix.com
 embed.playbuzz.com
+emxdgt.com
 en25.com
 engagio.com
 engine.mobileapptracking.com
@@ -972,7 +982,6 @@ extole.io
 extremereach.com
 ezoic.net
 ezwebsitetraffic.com
-f1.media.brightcove.com
 faithit-d.openx.net
 fanbread.com
 fandangollc.demdex.net
@@ -1095,6 +1104,7 @@ hb.sekindo.com
 hb.undertone.com
 hb.vntsm.com
 hbevents.1rx.io
+hbint.emxdgt.com
 hbogo.com.102.122.2o7.net
 hbonow.com.ssl.sc.omtrdc.net
 hbopenbid.pubmatic.com
@@ -1129,6 +1139,7 @@ i.clean.gg
 i.haloapps.com
 i.lsimg.net
 i.singular.net
+i.viafoura.co
 i.w.inmobi.com
 iad-apple.com
 iad-apple.com.akadns.net
@@ -1173,11 +1184,13 @@ ins2.track.tappx.com
 inscname.net
 insideintercom.wpengine.com
 insight-760077375.us-east-1.elb.amazonaws.com
+insights-canary.viafoura.co
 insights.algolia.io
 insights.celebrus.com
 insights.creativeallies.com
 insights.integralads.com
 insights.sustainablebrands.com
+insights.viafoura.co
 insights.vip.aetnd.com
 insnw.net
 installfarm.com
@@ -1188,6 +1201,7 @@ intellimize.co
 intelsad.com
 intentiq.com
 intentmedia.net
+interaction.viafoura.co
 intercom.io
 intercomcdn.com
 invenio.sgn.com
@@ -1434,6 +1448,7 @@ metrics.yellowpages.com
 metricscollector.lp.xcal.tv
 mgr.consensu.org
 mi.edgekey.net
+microservice.hapyak.com
 mid.rkdms.com
 midasplayer.com
 midgreatdlliteflash.icu
@@ -1593,6 +1608,7 @@ nile.works
 nir.regmedia.co.uk
 njadxrtb.lfstmedia.com
 nn8g.adj.st
+notifications.viafoura.co
 notify.bugsnag.appstore.a2z.com
 notify.bugsnag.com
 np.adproxy.ndmdhs.com
@@ -2051,6 +2067,7 @@ smetrics.aetn.com
 smetrics.babycenter.com
 smetrics.boston.com
 smetrics.capitalone.com
+smetrics.cbc.ca
 smetrics.cnn.com
 smetrics.consumerreports.org
 smetrics.fedex.com
@@ -2071,6 +2088,7 @@ socialize.us1.gigya.com
 soda1.midasplayer.com
 solarwinds.tt.omtrdc.net
 soma-assets.smaato.net
+sombersurprise.com
 somoreq-track-west-1951866777.us-west-1.elb.amazonaws.com
 sonobi-go.map.fastly.net
 sonobi.com
