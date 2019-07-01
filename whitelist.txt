@@ -76,6 +76,7 @@ do.co
 download.windowsupdate.com
 downloads.getmonero.org
 dsx.mp.microsoft.com
+duckdns.org
 duckduckgo.com
 e-msedge.net
 easylist-downloads.adblockplus.org
