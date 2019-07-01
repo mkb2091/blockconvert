@@ -47,6 +47,8 @@ candycrushsoda.king.com
 cdn.onenote.net
 cdnjs.cloudflare.com
 christianpost.com
+ci4.googleusercontent.com
+ci5.googleusercontent.com
 client-office365-tas.msedge.net
 client-s.gateway.messenger.live.com
 cloudfront.net
@@ -141,8 +143,10 @@ ocsp.digicert.com
 od.lk
 oem.twimg.com
 officeclient.microsoft.com
+ogs.google.com
 oneclient.sfx.ms
 onion.to
+online.jimmyjohns.com
 outlook.office365.com
 pastebin.com
 pastebin.org
@@ -166,6 +170,7 @@ s.imgur.com
 s3.amazonaws.com
 scrapinghub.com
 search.msn.com
+searchenginejournal.com
 settings-win.data.microsoft.com
 settings.data.microsoft.com
 sina.com.cn
@@ -204,6 +209,7 @@ v20.events.data.microsoft.com
 vip5.afdorigin-prod-am02.afdogw.com
 vip5.afdorigin-prod-ch02.afdogw.com
 virustotalcloud.appspot.com
+vortex.accuweather.com
 vxvault.net
 wac.phicdn.net
 wallet.microsoft.com
@@ -224,6 +230,7 @@ www.answers.com
 www.bing.com
 www.cnet.com
 www.digicert.com
+www.distilnetworks.com
 www.entireweb.com
 www.freedownloadmanager.org
 www.getmonero.org
@@ -233,10 +240,13 @@ www.google.com.*
 www.ign.com
 www.instagram.com
 www.msftconnecttest.com
+www.orbitz.com
 www.privateinternetaccess.com
 www.ranker.com
 www.reddit.com
+www.similarweb.com
 www.squidblacklist.org
+www.travelocity.com
 www.vanityfair.com
 www.webmd.com
 www.yoast.com
