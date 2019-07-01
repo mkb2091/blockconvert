@@ -190,6 +190,7 @@ store-images.microsoft.com
 store-images.s-microsoft.com
 storecatalogrevocation.storequality.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
+support.microsoft.com
 tecmint.com
 telecommand.telemetry.microsoft.com.akadns.net
 tile-service.weather.microsoft.com
