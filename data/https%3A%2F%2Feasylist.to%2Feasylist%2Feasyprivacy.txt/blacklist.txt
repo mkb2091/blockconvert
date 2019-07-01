@@ -767,6 +767,7 @@ b.bedop.com
 b.huffingtonpost.com
 b.imwx.com
 b.myspace.com
+b0e8.com
 b1img.com
 b1js.com
 b2c.com
@@ -960,6 +961,7 @@ blogtw.net
 blogverzeichnis.eu
 bluecava.com
 blueconic.net
+bluecore.com
 bluecounter.de
 bluekai.com
 blvdstatus.com
@@ -3569,6 +3571,7 @@ metrics.apartments.com
 metrics.api.drift.com
 metrics.aviasales.ru
 metrics.aws.sitepoint.com
+metrics.bangbros.com
 metrics.brightcove.com
 metrics.cbn.com
 metrics.cbslocal.com
@@ -3855,6 +3858,7 @@ ner-de-mi-nis-6.info
 nerfherdersolo.com
 nero.live
 nerohut.com
+nervoussummer.com
 nestedmedia.com
 net-filter.com
 net.haier.com
@@ -4296,6 +4300,7 @@ pjtra.com
 placemypixel.com
 pladform.ru
 platform.communicatorcorp.com
+platform.iteratehq.com
 platformpanda.com
 play.estream.to
 play.mix.kinostuff.com
@@ -4602,6 +4607,7 @@ rencohep.com
 renhertfo.com
 rentracks.jp
 rep0pkgr.com
+repixel.co
 report-uri.io
 report-zt.allmusic.com
 report.downloastar.com
@@ -5097,6 +5103,7 @@ sp.poughkeepsiejournal.com
 sp.press-citizen.com
 sp.pressconnects.com
 sp.publicopiniononline.com
+sp.pushsquare.com
 sp.redding.com
 sp.reporternews.com
 sp.rgj.com
@@ -5882,6 +5889,7 @@ tracer.jp
 tracer.perezhilton.com
 tracetracking.net
 traceworks.com
+track-re01.com
 track-server-100.com
 track-web.net
 track.24heures.ch
@@ -6714,6 +6722,7 @@ winter.metacafe.com
 wipe.de
 wiredminds.de
 wisetrack.net
+wishabi.net
 wishloop.com
 wisteria-js.excite.co.jp
 witthethim.com

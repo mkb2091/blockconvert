@@ -26,6 +26,7 @@ adguard.com
 adguardteam.github.io
 aliexpress.com
 answers.com
+answers.microsoft.com
 api.facebook.com
 appspot-preview.l.google.com
 arc.msn.com

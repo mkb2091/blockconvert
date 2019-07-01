@@ -600,6 +600,7 @@ campaign.adobe.com
 campaigns.bugsnag.com
 canwestgolbal.sc.omtrdc.net
 capitaloneservices.tt.omtrdc.net
+capitolone.com
 capture.trackjs.com
 carambo.la
 carbonads.net
@@ -2497,6 +2498,7 @@ www.adtilt.com
 www.amazin.com
 www.beeftransmission.com
 www.bugherd.com
+www.capitolone.com
 www.checkdealgoldliteflash.icu
 www.criteo.net
 www.digitalremedy.com
