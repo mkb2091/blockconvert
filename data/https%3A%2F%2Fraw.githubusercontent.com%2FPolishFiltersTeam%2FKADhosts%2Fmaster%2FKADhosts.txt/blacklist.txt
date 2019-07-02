@@ -1,4 +1,3 @@
-1050-sklep.com
 10gb.6ka.info
 15b37.skroc.pl
 1freesoftwareonline.com
@@ -242,6 +241,7 @@ cpbldi.com
 cpm10.com
 crediko.pl
 cristianlay.com
+crocsoutletpolska.pl
 cs.nailrr.com
 cs.shiporama.com
 cs.spotlessweb.com
@@ -254,7 +254,6 @@ d8x.pl
 dagcoin.org
 daily-jokes.net
 dailyadultnews.com
-dampozyczke.pl
 dark-forum.net
 darmowe-doladowania.net.pl
 darmowe-doladowanie.pl
@@ -518,7 +517,6 @@ gayza.net
 gazeta-pl.site
 gazetainfo.pl
 gbptest.net
-gdb-finance.pl
 gemverify.com
 generatorkodow.hpu.pl
 gerotel.com
@@ -975,6 +973,7 @@ pl.dailyoffer.top
 pl.fmworld.com
 pl.fohow.eu
 pl.gamemine.com
+pl.gvgmall.com
 pl.health-line.me
 pl.lider.pl
 pl.longup.co
@@ -1037,7 +1036,6 @@ pol.boobs-xl.com
 polakuleczsiesam.pl
 poland.calivita.com
 poland.fizzyslim.biz
-pole-henny.com
 polsatboxingnight-transmisjahd.ujm.pl
 polska-tv.pl
 polskieinfo365.wordpress.com
@@ -1150,6 +1148,7 @@ ruletkasystem.eu
 runshoes.pl
 rzeczyzadarmo.pl
 rzetelna-pozyczka.pl
+s-pay24.com
 s9kkremkr0.com
 sales-express.eu
 samsung-win-1k.com
@@ -1163,6 +1162,7 @@ seans24.com.pl
 seanse24.pl
 searchrapid.pl
 secure-eplatnosc.com
+secure.s-pay24.com
 secure4app.com
 sendgrid.net
 sendspace.pl
@@ -1440,7 +1440,6 @@ wtmtrack.com
 ww7.openwrt.com
 wwebsservice.info
 www-apple-com-virus-removal-systems.fixingit.solutions
-www.1050-sklep.com
 www.10gb.6ka.info
 www.15b37.skroc.pl
 www.1freesoftwareonline.com
@@ -1718,6 +1717,7 @@ www.cpm10.com
 www.crediko.pl
 www.credy.pl
 www.cristianlay.com
+www.crocsoutletpolska.pl
 www.cs-podhale.pl
 www.cs.nailrr.com
 www.cs.shiporama.com
@@ -1731,7 +1731,6 @@ www.d8x.pl
 www.dagcoin.org
 www.daily-jokes.net
 www.dailyadultnews.com
-www.dampozyczke.pl
 www.dark-forum.net
 www.darmowe-doladowania.net.pl
 www.darmowe-doladowanie.pl
@@ -1842,7 +1841,6 @@ www.ekstrafilmy24.pl
 www.elavepene.us
 www.electrocity24.pl
 www.elektro24h.pl
-www.elektrostar.com.pl
 www.elememory.com
 www.elepta.pl
 www.elite-crack.ml
@@ -2027,7 +2025,6 @@ www.gayza.net
 www.gazeta-pl.site
 www.gazetainfo.pl
 www.gbptest.net
-www.gdb-finance.pl
 www.gelkayano.pl
 www.gemverify.com
 www.generatorkodow.hpu.pl
@@ -2604,7 +2601,6 @@ www.pol.boobs-xl.com
 www.polakuleczsiesam.pl
 www.poland.calivita.com
 www.poland.fizzyslim.biz
-www.pole-henny.com
 www.polsatboxingnight-transmisjahd.ujm.pl
 www.polska-tv.pl
 www.polskieinfo365.wordpress.com
@@ -2737,6 +2733,7 @@ www.runshoes.pl
 www.rushpay.pl
 www.rzeczyzadarmo.pl
 www.rzetelna-pozyczka.pl
+www.s-pay24.com
 www.s9kkremkr0.com
 www.sales-express.eu
 www.salomonsklep.online
@@ -2753,6 +2750,7 @@ www.seanse24.pl
 www.seansobox.pl
 www.searchrapid.pl
 www.secure-eplatnosc.com
+www.secure.s-pay24.com
 www.secure4app.com
 www.sendgrid.net
 www.sendspace.pl
@@ -2815,7 +2813,6 @@ www.solucjegier.pl
 www.solvusoft.com
 www.something-wrong5.agency
 www.something-wrong9.agency
-www.sos-info-migrator.pl
 www.souvre.pl
 www.spaceforyou.cc
 www.spatiumdg.pl
@@ -3089,7 +3086,6 @@ www.wygrywa.pl
 www.wyjazd24.pl
 www.wykreslanka.com.pl
 www.wyleczpc.pl
-www.wylogujsiezmatrixa.pl
 www.wypad3k0.blogspot.com
 www.wyspaofert.com
 www.wytypowany-zwyciezca.com
@@ -3126,7 +3122,6 @@ www.zalukaj-online.pl
 www.zalukajfilmy.pl
 www.zamiana-koloru.blogspot.com
 www.zamowienia-priorytetowe.pl
-www.zantech.pl
 www.zapraszamybowarto.pl
 www.zaprojektujiwybuduj.pl
 www.zarabativaisazartom.net
@@ -3207,7 +3202,6 @@ zalukaj-online.pl
 zalukajfilmy.pl
 zamiana-koloru.blogspot.com
 zamowienia-priorytetowe.pl
-zantech.pl
 zapraszamybowarto.pl
 zaprojektujiwybuduj.pl
 zarabativaisazartom.net
