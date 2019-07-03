@@ -48,6 +48,7 @@
 76g3.adj.st
 7xdj.adj.st
 8222151.fls.doubleclick.net
+8705596.fls.doubleclick.net
 a-lb.tribalfusion.com
 a-lb.tribalfusion.com.akadns.net
 a-scl1.tribalfusion.com.akadns.net
@@ -151,6 +152,7 @@ adpxl.co
 adpxljs.adpxl.co
 adready.com
 adrelevantis.com
+adrise.tv
 adrizer.com
 adroll.com
 ads-api.ft.com
@@ -293,6 +295,7 @@ amp.services
 ampcid.google.com
 amplitude.com
 ams1-ib.adnxs.com
+analytics-ingestion.staging-public.tubi.io
 analytics-ingress-global.bitmovin.com
 analytics-service.us-east-1.prod.public.atl-paas.net
 analytics-tx.tdameritrade.com
@@ -307,8 +310,10 @@ analytics.edgekey.net
 analytics.foresee.com
 analytics.getpostman.com
 analytics.ihgip.net
+analytics.jaggedpeak.com
 analytics.justuno.com
 analytics.levelaccess.net
+analytics.leviton.com
 analytics.narvar.com
 analytics.newsinc.com
 analytics.paddle.com
@@ -368,6 +373,7 @@ api.pushspring.com
 api.radar.io
 api.segment.io
 api.sele.co
+api.st-av.net
 api.swrve.com
 api.traq.li
 api.vungle.akadns.net
@@ -631,6 +637,7 @@ cdn-s-optional.optimizely.com
 cdn-usent.kampyle.com
 cdn.accelerator.arsdev.net
 cdn.adpushup.com
+cdn.adrise.tv
 cdn.airfind.com
 cdn.amplitude.com
 cdn.appdynamics.com
@@ -759,6 +766,8 @@ collector.a.pxi.pub
 collector.prod.expedia.com
 collector.staging.pxi.pub
 colossusssp.com
+colrep.sitelabweb.com
+colres.sitelabweb.com
 commerce-api.sprinklr.com
 commercialvalue.org
 comms-telemetry-service.us-east-1.amazonaws.com
@@ -804,6 +813,7 @@ core.vntsm.com
 coremetrics.com
 cosmicshovel-d.openx.net
 count.ly
+coveo.com
 cquotient.com
 crackle.demdex.net
 crackle.hb.omtrdc.net
@@ -865,6 +875,7 @@ demdex.net
 den01.sync.search.spotxchange.com
 device-api.urbanairship.com
 device-fingerprintdb-v1.s3.amazonaws.com
+dfapvmql-q.global.ssl.fastly.net
 dhs7.adj.st
 digdug-g2.logs.roku.com
 digdug.logs.roku.com
@@ -1008,6 +1019,7 @@ fl.adpxl.co
 fls-na.amazon-adsystem.com
 fls.doubleclick.net
 flurry.com
+fluxloop.com
 flyertown.ca
 fo-api.omnitagjs.com
 footprintdns.com
@@ -1724,6 +1736,7 @@ pi.ispot.tv
 picreel.com
 pics.avs.io
 pillager.inverse.com
+pinch.no
 ping.getadblock.com
 pingdom.net
 pinterest.adsymptotic.com
@@ -2037,6 +2050,7 @@ session.timecommerce.net
 sessions.bugsnag.com
 settings.crashlytics.com
 sf14g.com
+sgphctileh-a.akamaihd.net
 shareaholic.com
 shareasale.com
 shared.iad.appboy.com
@@ -2054,6 +2068,7 @@ simage2.pubmatic.com
 singular.net
 sis.jpush.io
 siteintercept.qualtrics.com
+sitelabweb.com
 sizmek.com
 sjrtp5-cdn.marketo.com
 skimresources.com
@@ -2124,6 +2139,7 @@ ssp.lkqd.net
 sstats.bbt.com
 sstats.kroger.com
 st-a.props.id
+st-av.net
 st-n.ads1-adnow.com
 st.stripcdn.com
 stack-sonar.com
@@ -2134,6 +2150,7 @@ statdynamic.com
 static-uk.plista.com
 static.addtoany.com
 static.amp.services
+static.cloud.coveo.com
 static.dable.io
 static.dable.io.edgekey.net
 static.ecorebates.com
@@ -2270,6 +2287,7 @@ toyota.tt.omtrdc.net
 tr.blismedia.com
 tr.iadsdk.apple.com
 tr.snapchat.com
+traces.sr.roku.com
 tracfone.demdex.net
 track-west.mobileadtrading.com
 track.adthrive.com
@@ -2331,14 +2349,17 @@ trust.extremereach.io
 tt.omtrdc.net
 tt.onthe.io
 ttflb.com
+tubi.io
 tune.com
 tvadsync.com
 tvpixel.com
 twci.112.2o7.net
 tyler.logs.roku.com
 u.openx.net
+uapi.adrise.tv
 uat-net.technoratimedia.com
 ubisoftinternational.demdex.net
+uc-eu2.pinch.no
 ucc.wix.com
 uciservice.com
 ugdturner.com
@@ -2481,6 +2502,7 @@ wildcard.measuread.com.edgekey.net
 wildcard.moatads.com.edgekey.net
 windowinstalldealaflash.icu
 wixed.wix.com
+wkxppshj-qx.global.ssl.fastly.net
 wmadv.com
 wootric.com
 workingversion.theperfectupdate4everyone.xyz

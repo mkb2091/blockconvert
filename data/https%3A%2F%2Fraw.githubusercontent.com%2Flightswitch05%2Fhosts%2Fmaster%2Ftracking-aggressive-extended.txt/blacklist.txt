@@ -7,6 +7,7 @@
 164-events.olark.com
 18-events.olark.com
 199-events.olark.com
+1win88.comm100.com
 20-events.olark.com
 250-events.olark.com
 270-events.olark.com
@@ -154,6 +155,7 @@ ally-mc-dr.exacttarget.com
 ally-mc.exacttarget.com
 ally-members-dr.exacttarget.com
 ally-members.exacttarget.com
+alpha-w.chatlio.com
 ambt.spyhuman.com
 ambt2.spyhuman.com
 ambtfnl.spyhuman.com
@@ -178,13 +180,17 @@ anonymous.s50.exacttarget.com
 answers.livefyre.com
 apc.ugc.bazaarvoice.com
 api-2-0.spot.im
+api-cdn.chatlio.com
+api-cdn2.chatlio.com
 api-china.flipboard.com
+api-fra.livechatinc.com
 api-launcher.spot.im
 api-v4.maxmind.com
 api-website.livechatinc.com
 api.aimmatic.com
 api.boa.exacttarget.com
 api.chatid.com
+api.chatlio.com
 api.cortana.ai
 api.dc1.exacttarget.com
 api.dc2.exacttarget.com
@@ -222,6 +228,7 @@ api.test.exacttarget.com
 api1.flexispy.com
 api2.flexispy.com
 apihelp.surveygizmo.com
+apirouting.comm100.com
 apiv3.spyhuman.com
 app-cache.hellomedian.com
 app-cdn.spot.im
@@ -243,6 +250,7 @@ appaws.surveygizmo.com
 appca.surveygizmo.com
 appexchange.exacttarget.com
 apple-secure.cdn.turner.com
+appmax1.comm100.com
 approvals.s50.exacttarget.com
 appsitemsuggest-pa.googleapis.com
 appstatic1.livechatinc.com
@@ -349,6 +357,7 @@ auth.s1.qa2.exacttarget.com
 auth.s1.qa3.exacttarget.com
 auth.s1.qa5.exacttarget.com
 auth.s100.exacttarget.com
+auth.s11.exacttarget.com
 auth.s2.qa1.exacttarget.com
 auth.s2.qa2.exacttarget.com
 auth.s2.qa3.exacttarget.com
@@ -358,6 +367,7 @@ auth.s50.exacttarget.com
 auth.s6.exacttarget.com
 auth.s7.exacttarget.com
 auth.s8.exacttarget.com
+autodiscover.comm100.com
 autodiscover.exacttarget.com
 automat.test.chatid.com
 av95.mta.exacttarget.com
@@ -365,6 +375,7 @@ avatars.github.exacttarget.com
 aveeno-uk.ugc.bazaarvoice.com
 avon-ru.ugc.bazaarvoice.com
 avon-uk.ugc.bazaarvoice.com
+b-w.chatlio.com
 ba2.mta.exacttarget.com
 ba3.mta.exacttarget.com
 bakkerswereld.sslproxy.gigya.com
@@ -381,9 +392,12 @@ benadryl.ugc.bazaarvoice.com
 bene.flipboard.com
 bestbuy.ugc.bazaarvoice.com
 beta-users.glympse.com
+beta-w.chatlio.com
+beta.comm100.com
 beta.flipboard.com
 beta.livechatinc.com
 beta.portal.flexispy.com
+beta1.comm100.com
 bettaelectrical.ugc.bazaarvoice.com
 bigcommerce.livechatinc.com
 bigfishgames.ugc.bazaarvoice.com
@@ -511,6 +525,7 @@ champssports.ugc.bazaarvoice.com
 changelog.olark.com
 chat.api.chatid.com
 chat.au1.gigya.com
+chat.chatlio.com
 chat.eu1.gigya.com
 chat.gigya.com
 chat.olark.com
@@ -547,6 +562,9 @@ chat56d.livechatinc.com
 chat56f.livechatinc.com
 chatapi.providesupport.com
 chatid.com
+chatlio.com
+chatserver.comm100.com
+chatserver5.comm100.com
 cheapcaribbean.ugc.bazaarvoice.com
 checkout.mspy.com
 checkout2.mspy.com
@@ -619,6 +637,7 @@ coaststores.ugc.bazaarvoice.com
 code.exacttarget.com
 codeload.github.exacttarget.com
 columbiasportswear.ugc.bazaarvoice.com
+comm100.com
 comments.au1.gigya.com
 comments.eu1.gigya.com
 comments.gigya.com
@@ -896,6 +915,7 @@ debugtestec4-portal.flexispy.com
 debugtestec4-push.flexispy.com
 deloitte.my.console.gigya.com
 demo.chatid.com
+demo.comm100.com
 demo.flexispy.com
 demo.flipboard.com
 demo.gigya.com
@@ -1011,6 +1031,7 @@ dynaimage.cdn.turner.com
 dynamic-cdn.spot.im
 dyson.ugc.bazaarvoice.com
 ea-atl.exacttarget.com
+ea-dfw.exacttarget.com
 ea-dfw5.exacttarget.com
 ea-ind.exacttarget.com
 ea-las.exacttarget.com
@@ -1033,8 +1054,10 @@ el75.mta.exacttarget.com
 elcorteingles.ugc.bazaarvoice.com
 eleague-static.cdn.turner.com
 electrolux.ugc.bazaarvoice.com
+em.comm100.com
 em.pingdom.com
 email-connect.spot.im
+email.chatlio.com
 email.exacttarget.com
 email.flipboard.com
 email.livefyre.com
@@ -1043,16 +1066,24 @@ email.mg.ipinfo.io
 email.pingdom.com
 email.surveygizmo.com
 emailink.olark.com
+emailmarketing.comm100.com
 embed.spot.im
 embed.tawk.to
 emedco.ugc.bazaarvoice.com
+emmastyle.comm100.com
 employee.pingdom.com
 employeepulsecheck.surveygizmo.com
 en.ipinfo.io
 engineering.flipboard.com
 enroute.glympse.com
 ensure.ugc.bazaarvoice.com
+ent.comm100.com
+ent7.comm100.com
+entchatserver.comm100.com
+entchatserver7.comm100.com
+enterprise.comm100.com
 enterprise.glympse.com
+entmax.comm100.com
 ep.livefyre.com
 ep.t402.livefyre.com
 epson-store.ugc.bazaarvoice.com
@@ -1063,6 +1094,7 @@ error.spyhuman.com
 errorreport.providesupport.com
 es-es.about.flipboard.com
 es.about.flipboard.com
+es.chatlio.com
 escentual.ugc.bazaarvoice.com
 esolutions-zurichna-com.surveygizmo.com
 etappx.exacttarget.com
@@ -1073,12 +1105,14 @@ etappx.test.exacttarget.com
 etinswdem01.exacttarget.com
 etinteractive.exacttarget.com
 etweb.exacttarget.com
+eu.comm100.com
 eu1-st1.gigya.com
 eu1-st2.gigya.com
 eu1-st4.gigya.com
 eu1.gigya.com
 eu1a-email-mng.gigya.com
 euii.cortana.ai
+eumax.comm100.com
 evans.ugc.bazaarvoice.com
 evanscycles-uk.ugc.bazaarvoice.com
 events-bms_bms.gomoxie.solutions
@@ -1103,6 +1137,7 @@ events-michaelkors.gomoxie.solutions
 events-michaelkorsca.gomoxie.solutions
 events-michaelkorsde.gomoxie.solutions
 events-michaelkorseu.gomoxie.solutions
+events-michaelkorsfr.gomoxie.solutions
 events-michaelkorsit.gomoxie.solutions
 events-michaelkorstest.gomoxie.solutions
 events-michaelkorsuk.gomoxie.solutions
@@ -1123,6 +1158,7 @@ events-synchrony.gomoxie.solutions
 events-synnex.uk.gomoxie.solutions
 events-usaa.gomoxie.solutions
 events-usaaeligibility.gomoxie.solutions
+events-usaahomeowners.gomoxie.solutions
 events-usaaumbrella.gomoxie.solutions
 events-vitacost.gomoxie.solutions
 events-wolseley.uk.gomoxie.solutions
@@ -1284,6 +1320,7 @@ gm.au1.gigya.com
 gm.eu1.gigya.com
 gm.gigya.com
 gm.us1.gigya.com
+go.comm100.com
 go.gigya.com
 go.livechatinc.com
 go.pingdom.com
@@ -1313,6 +1350,7 @@ gscounters.us1.gigya.com
 gtm01.exacttarget.com
 gtm02.exacttarget.com
 gumby.flipboard.com
+gvc.comm100.com
 hackathon.glympse.com
 halfords.ugc.bazaarvoice.com
 hammer.flipboard.com
@@ -1336,9 +1374,12 @@ heroku.pingdom.com
 hfhytfykjlikhreswste.spyhuman.com
 hobbs.ugc.bazaarvoice.com
 hobbycraft.ugc.bazaarvoice.com
+hobbyking.comm100.com
 homedepot.ugc.bazaarvoice.com
 hongkong.ugc.bazaarvoice.com
 horizonhobby.ugc.bazaarvoice.com
+hosted.comm100.com
+hostedmax.comm100.com
 hosting.exacttarget.com
 hp.ugc.bazaarvoice.com
 hpemea-de.ugc.bazaarvoice.com
@@ -1509,6 +1550,7 @@ jcrewfactory.ugc.bazaarvoice.com
 jira.demo.flipboard.com
 jira.dev.flipboard.com
 jira.flipboard.com
+jitsi.chatlio.com
 jmbruneau.ugc.bazaarvoice.com
 joesjeansreviews.ugc.bazaarvoice.com
 johndeere.ugc.bazaarvoice.com
@@ -1516,6 +1558,7 @@ johnfrieda.ugc.bazaarvoice.com
 johnlewis.ugc.bazaarvoice.com
 js-cdn.hellomedian.com
 js-dev.hellomedian.com
+js.comm100.com
 js.hellomedian.com
 js.maxmind.com
 json.ipinfo.io
@@ -1568,6 +1611,7 @@ kibana.s1.sandbox.proxy.glympse.com
 kidsfootlocker.ugc.bazaarvoice.com
 kiehls-us.ugc.bazaarvoice.com
 kik.glympse.com
+king4d.comm100.com
 kirklands.ugc.bazaarvoice.com
 knowledge.gigya.com
 knrpc.olark.com
@@ -1637,6 +1681,7 @@ ldap01-test.service.flipboard.com
 ldap01.host.flipboard.com
 ldap01.service.flipboard.com
 ldap02.host.flipboard.com
+learning.comm100.com
 leave.exacttarget.com
 legal.livefyre.com
 lego.ugc.bazaarvoice.com
@@ -1651,7 +1696,9 @@ link.aimmatic.com
 link4.livechatinc.com
 lists.flipboard.com
 liveblogeditor.livefyre.com
+livechat.comm100.com
 livechat.gigya.com
+livechat1688.comm100.com
 livechatinc.com
 livefyre.com
 livemap-backend.pingdom.com
@@ -1715,6 +1762,7 @@ log-yankeecandle.gomoxie.solutions
 log.flexispy.com
 log.olark.com
 logging.glympse.com
+logicmonitor.comm100.com
 login-qa1.exacttarget.com
 login-qa2.exacttarget.com
 login-qa3.exacttarget.com
@@ -1766,7 +1814,10 @@ mail.phdev.tawk.to
 mail.senseye.spymasterpro.com
 mail.spyfone.com
 mail.spymasterpro.com
+mail11.comm100.com
 mailer1.pingdom.com
+makemechic.comm100.com
+malpasbets.comm100.com
 manage-api.s50.exacttarget.com
 manage.ext.s50.exacttarget.com
 manage.gigya.com
@@ -1837,6 +1888,7 @@ mcz17jmw1yrdnf908lv4t1wmwl88.login.exacttarget.com
 mczngp8zk1hybgx-x-9wtwh28wm0.login.exacttarget.com
 me.spot.im
 media.github.exacttarget.com
+meet.chatlio.com
 meet.exacttarget.com
 meeting.hellomedian.com
 members.11.exacttarget.com
@@ -1904,6 +1956,7 @@ ms.test.exacttarget.com
 ms.ws.test.exacttarget.com
 mspy.com
 mt.olark.com
+mta.tawk.to
 mx1.mta.tawk.to
 mx2.providesupport.com
 my.console.gigya.com
@@ -1923,6 +1976,7 @@ nbalp-hls-i.cdn.turner.com
 nbalp-hls-vod.cdn.turner.com
 nbalp-hls.cdn.turner.com
 nbalp.cdn.turner.com
+nchan.chatlio.com
 ncl.ugc.bazaarvoice.com
 nestle-br.sslproxy.gigya.com
 nestle-ca.sslproxy.gigya.com
@@ -1970,6 +2024,7 @@ ns-i.providesupport.com
 ns-o.providesupport.com
 ns1.exacttarget.com
 ns1.providesupport.com
+ns2.comm100.com
 ns2.exacttarget.com
 ns2.providesupport.com
 ns2lo-jp.providesupport.com
@@ -1999,12 +2054,14 @@ officedesigns.ugc.bazaarvoice.com
 officeworks.ugc.bazaarvoice.com
 og.olark.com
 ogio.ugc.bazaarvoice.com
+oia.comm100.com
 olark.com
 old.livechatinc.com
 on.exacttarget.com
 on.qa.exacttarget.com
 on.test.exacttarget.com
 online.spyhuman.com
+ontariotravel.comm100.com
 open-api.spot.im
 open.ipinfo.io
 opencart1-main.phdev.tawk.to
@@ -2019,15 +2076,24 @@ orange.ugc.bazaarvoice.com
 orchardbrands.ugc.bazaarvoice.com
 orientaltrading.ugc.bazaarvoice.com
 oriflame.ugc.bazaarvoice.com
+origin-akamai-auth.s1.exacttarget.com
 origin-akamai-auth.s1.qa1.exacttarget.com
+origin-akamai-auth.s11.exacttarget.com
 origin-akamai-auth.s2.qa1.exacttarget.com
+origin-akamai-auth.s4.exacttarget.com
+origin-akamai-auth.s6.exacttarget.com
+origin-akamai-auth.s7.exacttarget.com
+origin-akamai-auth.s8.exacttarget.com
 origin-akamai-members.s50.exacttarget.com
 origin-auth.s1.exacttarget.com
 origin-auth.s1.qa1.exacttarget.com
 origin-auth.s1.qa3.exacttarget.com
 origin-auth.s2.qa1.exacttarget.com
 origin-auth.s2.qa3.exacttarget.com
+origin-auth.s4.exacttarget.com
+origin-auth.s6.exacttarget.com
 origin-auth.s7.exacttarget.com
+origin-auth.s8.exacttarget.com
 origin-click.virt.s7.exacttarget.com
 origin-mc.s50.exacttarget.com
 origin-members.s50.exacttarget.com
@@ -2065,6 +2131,7 @@ papajohns.webservices.exacttarget.com
 paris.ugc.bazaarvoice.com
 parkerpen.ugc.bazaarvoice.com
 partner-api.enterprise.glympse.com
+partnerapidemo.comm100.com
 partners.labs.livechatinc.com
 partners.livechatinc.com
 partners.olark.com
@@ -2074,6 +2141,7 @@ pc.spyfone.com
 pc1.olark.com
 pc14.olark.com
 pcconnection.hosting.exacttarget.com
+pciform.comm100.com
 pd1.s1.qa1.exacttarget.com
 pda.olark.com
 pediasure.ugc.bazaarvoice.com
@@ -2093,6 +2161,7 @@ pingdom.com
 pix.spot.im
 pixel.inbox.exacttarget.com
 pixel.spot.im
+platform.comm100.com
 platform.gigya.com
 play.spyhuman.com
 plugins.tawk.to
@@ -2102,6 +2171,7 @@ pmd.cdn.turner.com
 pn.olark.com
 poc.exacttarget.com
 poetryfashion.ugc.bazaarvoice.com
+porsche.comm100.com
 portal.flexispy.com
 portal.flipboard.com
 postales.olark.com
@@ -2220,7 +2290,10 @@ rickis.ugc.bazaarvoice.com
 ridgid.ugc.bazaarvoice.com
 rocket.gigya.com
 rogaine.ugc.bazaarvoice.com
+romwe.comm100.com
 rosssimonsinc.ugc.bazaarvoice.com
+route.comm100.com
+route1.comm100.com
 royal.pingdom.com
 rp.demo.gigya.com
 rpc.olark.com
@@ -2237,6 +2310,7 @@ s-c07a1c-i.edu.surveygizmo.com
 s-cd6b81-i.edu.surveygizmo.com
 s-dc5c1e-i.edu.surveygizmo.com
 s-enroute.glympse.com
+s-w.chatlio.com
 s.cdn.turner.com
 s.flipboard.com
 s.spot.im
@@ -2366,6 +2440,7 @@ secure-dir.livechatinc.com
 secure-fra.livechatinc.com
 secure-lc.livechatinc.com
 secure-stats.pingdom.com
+secure.comm100.com
 secure.consumer.entitlement.skype.com
 secure.livechatinc.com
 secure.maxmind.com
@@ -2411,6 +2486,7 @@ share.flipboard.com
 share.microsoft.com
 share.pingdom.com
 sharp.ugc.bazaarvoice.com
+shein.comm100.com
 shs-dev.cortana.ai
 shs-prod.cortana.ai
 signup.pingdom.com
@@ -2439,6 +2515,7 @@ sock.s50.exacttarget.com
 socket-az.hellomedian.com
 socket-rtc.hellomedian.com
 socket.hellomedian.com
+socketr.hellomedian.com
 soma.ugc.bazaarvoice.com
 son-video.ugc.bazaarvoice.com
 soporte.olark.com
@@ -2478,6 +2555,7 @@ st-secure-stats.pingdom.com
 st-share.pingdom.com
 st-tms-tester-eu.pingdom.com
 st-tms-tester-us-east.pingdom.com
+stable-w.chatlio.com
 stage-ls.api.chatid.com
 stage.gomoxie.solutions
 stage2app.surveygizmo.com
@@ -2515,6 +2593,7 @@ static2.mspy.com
 stats.mspy.com
 stats.olark.com
 stats.pingdom.com
+status.chatlio.com
 status.hellomedian.com
 status.livechatinc.com
 status.livefyre.com
@@ -2525,6 +2604,7 @@ status.spot.im
 stenaline.ugc.bazaarvoice.com
 sterilite.ugc.bazaarvoice.com
 stihl.ugc.bazaarvoice.com
+stoiximan.comm100.com
 store.exacttarget.com
 store.mspy.com
 store.spyfone.com
@@ -2655,6 +2735,7 @@ updates.eu1.gigya.com
 updates.maxmind.com
 upload.glympse.com
 upload.tawk.to
+uploads-cdn.chatlio.com
 uploads.github.exacttarget.com
 uploads.www.gigya.com
 ur.spyfone.com
@@ -2724,7 +2805,12 @@ vs102.tawk.to
 vs103.tawk.to
 vs104.tawk.to
 vs105.tawk.to
+vs106.tawk.to
+vs107.tawk.to
+vs108.tawk.to
+vs109.tawk.to
 vs11.tawk.to
+vs110.tawk.to
 vs12.tawk.to
 vs13.tawk.to
 vs14.tawk.to
@@ -2821,8 +2907,12 @@ vs96.tawk.to
 vs97.tawk.to
 vs98.tawk.to
 vs99.tawk.to
+w.chatlio.com
 w.ipinfo.io
 w1.olark.com
+w2.chatlio.com
+w3.chatlio.com
+w77.chatlio.com
 wallis.ugc.bazaarvoice.com
 walmart.ugc.bazaarvoice.com
 weather.wapp.wii.com
@@ -2884,6 +2974,7 @@ winnt.olark.com
 winphone.flipboard.com
 winprod.flipboard.com
 wix.livechatinc.com
+wls.comm100.com
 wonderbox.ugc.bazaarvoice.com
 wordpress48.phdev.tawk.to
 work.olark.com
@@ -2900,6 +2991,7 @@ ws.s2.qa2.exacttarget.com
 ws.s4.exacttarget.com
 ws.spot.im
 ws.test.exacttarget.com
+wtest2.chatlio.com
 wusthof.ugc.bazaarvoice.com
 ww.ipinfo.io
 ww2.surveygizmo.com
@@ -2931,10 +3023,13 @@ www.chat.eu1.gigya.com
 www.chat.gigya.com
 www.chat.us1.gigya.com
 www.chatid.com
+www.chatlio.com
 www.chromecontentsuggestions-pa.googleapis.com
+www.comm100.com
 www.community.spot.im
 www.cortana.ai
 www.ct100-test.maxmind.com
+www.demo.comm100.com
 www.demo.gigya.com
 www.demo.mspy.com
 www.dev.demo.gigya.com
@@ -3034,6 +3129,7 @@ www.webhooktest-irtw.gigya.com
 www.welcome.olark.com
 www.wordpress48.phdev.tawk.to
 www02.olark.com
+www2.comm100.com
 www2.maxmind.com
 www2.mspy.com
 wwwdev.olark.com
