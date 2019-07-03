@@ -244,6 +244,7 @@ www.google.com.*
 www.ign.com
 www.instagram.com
 www.msftconnecttest.com
+www.namecheap.com
 www.orbitz.com
 www.privateinternetaccess.com
 www.ranker.com
