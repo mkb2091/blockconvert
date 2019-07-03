@@ -93,6 +93,7 @@ files.freedownloadmanager.org
 files2.freedownloadmanager.org
 filtri-dns.ga
 forms.office.com
+fossbytes.com
 fs.microsoft.com
 g.akamai.net
 g.akamaiedge.net
@@ -192,6 +193,7 @@ store-images.s-microsoft.com
 storecatalogrevocation.storequality.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 support.microsoft.com
+techradar.com
 tecmint.com
 telecommand.telemetry.microsoft.com.akadns.net
 tile-service.weather.microsoft.com
