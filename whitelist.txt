@@ -196,6 +196,7 @@ support.microsoft.com
 techradar.com
 tecmint.com
 telecommand.telemetry.microsoft.com.akadns.net
+thebot.net
 tile-service.weather.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 to-do.microsoft.com
