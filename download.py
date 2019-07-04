@@ -96,7 +96,7 @@ class DownloadManager():
             if last_modified != 0:
                 headers['If-Modified-Since'] = time.strftime('%a, %d %b %Y %H:%M:%S GMT', time.localtime(last_modified))
             try:
-                r = self.session.get(url, headers=headers)
+                r = self.session.get(url, headers=headers, timeout=5)
             except Exception as error:
                 print('Encountered error: "%s" for url: "%s"' % (error, url))
                 return
