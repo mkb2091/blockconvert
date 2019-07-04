@@ -21,6 +21,7 @@ api.bing.com
 api.onedrive.com
 appex-rf.msn.com
 apps.skype.com
+arc.msn.com
 arc.msn.com.nsatc.net
 ars.smartscreen.microsoft.com
 auth.gfx.ms

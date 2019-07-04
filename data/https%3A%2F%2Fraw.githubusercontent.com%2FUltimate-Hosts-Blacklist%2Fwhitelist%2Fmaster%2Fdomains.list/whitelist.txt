@@ -640,6 +640,7 @@ proxy.novafusion.ea.com
 proxy.plex.bz
 proxy.plex.tv
 proxy02.pop.ord.plex.bz
+public-api.wordpress.com
 publicsuffix.org
 publix.com
 pubsub.plex.bz
@@ -778,6 +779,7 @@ thepiratebay.org
 theregister.co.uk
 thetvdb.com
 theverge.com
+thumbs.videopress.com
 thumbs2.imgbox.com
 time.com
 tinypic.com
@@ -825,6 +827,7 @@ userscripts-mirror.org
 userstream.twitter.com
 v.firebog.net
 v.pinimg.com
+v0.wordpress.com
 variety.com
 vc.yahoo.com
 verisign.com
@@ -833,6 +836,8 @@ vice.com
 video.google.com
 videocopilot.net
 videolan.org
+videopress.com
+videos.files.wordpress.com
 vidto.me
 vimeo.com
 vitalia.pl
