@@ -241,6 +241,7 @@ www.faucethub.io
 www.freedownloadmanager.org
 www.gameofbitcoins.com
 www.getmonero.org
+www.github.developerdan.com
 www.google.*
 www.google.co.*
 www.google.com.*

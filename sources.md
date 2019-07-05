@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 1129668 blocked domains in each of the generated filter lists
+Theres are 1124135 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -39,9 +39,8 @@ Link|Author|Expires|License|Type
 [NoTrack Malware Blocklist](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt)|QuidsUp|1.0 days|GPLv3|Blacklist
 [NoCoin Filter List](https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt)|-|1.0 days|MIT|Blacklist
 [MinerBlock Filters](https://raw.githubusercontent.com/xd4rker/MinerBlock/master/assets/filters.txt)|-|1.0 days|MIT|Blacklist
-[Lightswitch05's tracking-aggressive-extended.txt](https://raw.githubusercontent.com/lightswitch05/hosts/master/tracking-aggressive-extended.txt)|Daniel White|2.0 days|Apache2|Blacklist
-[Lightswitch05's ads-and-tracking.txt](https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking.txt)|Daniel White|2.0 days|Apache2|Blacklist
-[Lightswitch05's ads-and-tracking-extended.txt](https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt)|Daniel White|2.0 days|Apache2|Blacklist
+[Lightswitch05's Tracking Aggressive](https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt)|Daniel White|2.0 days|Apache2|Blacklist
+[Lightswitch05's Ads & Tracking](https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt)|Daniel White|2.0 days|Apache2|Blacklist
 [Latvian List](https://hostsfile.mine.nu/hosts0.txt)|-|1.0 days|GPLv3|Blacklist
 [KADhosts](https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt)|-|1.0 days|CC-BY-SA-4|Blacklist
 [International List](https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt)|-|3.0 days|The Unlicense|Blacklist
