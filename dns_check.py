@@ -180,8 +180,6 @@ class DNSChecker():
                         pass
         except FileNotFoundError:
             pass
-        self.save_forward_cache()
-        self.save_reverse_cache()
     def clean_forward_cache(self):
         cache = self.cache
         for domain in list(cache):
@@ -190,8 +188,9 @@ class DNSChecker():
                 and build_regex.DOMAIN_REGEX.fullmatch(domain)
                 and (now[0] == '' or build_regex.IP_REGEX.fullmatch(now[0]))):
                 del cache[domain]
-    def save_forward_cache(self):
-        self.clean_forward_cache()
+    def save_forward_cache(self, clean=True):
+        if clean:
+            self.clean_forward_cache()
         with open('temp', 'w') as file:
             for domain in sorted(self.cache):
                 if self.cache[domain][0]:
@@ -267,7 +266,7 @@ class DNSChecker():
                     if len(results) % 20000 == 19999:
                         print('%s/s %s Valid: %s Invalid: %s ' % (round((len(results) - initial_length)/(time.time() - start), 2),
                               round(len(results)/domain_list_length, 5), valid_count, invalid_count))
-                        self.save_forward_cache()
+                        self.save_forward_cache(clean=False)
             except queue.Empty:
                 pass
             except Exception as error:
@@ -291,42 +290,43 @@ class DNSChecker():
                 request_queue.put(ip)
                 request_queue2.put(ip)
                 all_from_cache = False
-        if not all_from_cache:
-            threads = []
-            for i in range(thread_count):
-                thread = DNSCheckerWorker(self.session, self.servers, request_queue,
-                                          response_queue, 12)
-                thread.start()
-                threads.append(thread)
-            thread = ArgusPassiveDNS(self.session2, request_queue2, response_queue2)
+        if all_from_cache:
+            return results
+        threads = []
+        for i in range(thread_count):
+            thread = DNSCheckerWorker(self.session, self.servers, request_queue,
+                                      response_queue, 12)
             thread.start()
             threads.append(thread)
-            while any(thread.is_alive() for thread in threads):
-                try:
-                    while True:
-                        ip, result = response_queue.get(timeout=0.1)
-                        try:
-                            if result['Status'] == 0:
-                                domains = [answer['data'].lower().strip('.') for answer in result['Answer'] if answer['type'] == 12]
-                                reverse_cache[ip] = [time.time(), domains]
-                                results.update(domains)
-                            else:
-                                reverse_cache[ip] = (time.time(), [])
-                        except KeyError:
+        thread = ArgusPassiveDNS(self.session2, request_queue2, response_queue2)
+        thread.start()
+        threads.append(thread)
+        while any(thread.is_alive() for thread in threads):
+            try:
+                while True:
+                    ip, result = response_queue.get(timeout=0.1)
+                    try:
+                        if result['Status'] == 0:
+                            domains = [answer['data'].lower().strip('.') for answer in result['Answer'] if answer['type'] == 12]
+                            reverse_cache[ip] = [time.time(), domains]
+                            results.update(domains)
+                        else:
                             reverse_cache[ip] = (time.time(), [])
-                except queue.Empty:
-                    pass
-                try:
-                    while True:
-                        ip, result = response_queue2.get(timeout=0.1)
-                        result = list(result)
-                        try:
-                            reverse_cache[ip][1].extend(result)
-                        except KeyError:
-                            reverse_cache[ip] = [time.time(), result]
-                        results.update(result)
-                except queue.Empty:
-                    pass
+                    except KeyError:
+                        reverse_cache[ip] = (time.time(), [])
+            except queue.Empty:
+                pass
+            try:
+                while True:
+                    ip, result = response_queue2.get(timeout=0.1)
+                    result = list(result)
+                    try:
+                        reverse_cache[ip][1].extend(result)
+                    except KeyError:
+                        reverse_cache[ip] = [time.time(), result]
+                    results.update(result)
+            except queue.Empty:
+                pass
         print('Performed reverse DNS, and passive DNS lookup')
         self.mass_check(results, thread_count)
         print('Checked IP addresses')
