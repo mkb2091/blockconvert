@@ -10,9 +10,13 @@ def get_subdomains(dns_checker, domains):
             ip_set.add(ip_results[domain])
     reverse_lookup_results = dns_checker.mass_reverse_lookup(ip_set)
     results = set()
+    targets = []
+    for target in domains:
+        targets.append('.' + target)
     for domain in dns_checker.cache:
         if dns_checker.cache[domain]:
-            for target in domains:
-                if domain.endswith('.' + target):
+            for target in targets:
+                if domain.endswith(target):
                     results.add(domain)
+                    break
     return results
