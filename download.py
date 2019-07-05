@@ -33,24 +33,10 @@ def fetch_new_tld():
              with urllib.request.urlopen(req) as response:
                 with open('tld_list.txt', 'wb') as file:
                     file.write(response.read())
-def fetch_new_subdomains():
-    req = urllib.request.Request('https://raw.githubusercontent.com/bitquark/dnspop/master/results/bitquark_20160227_subdomains_popular_1000',
-                                 data=None,
-                                 headers={'User-Agent':'BlockListConvert'})
-    if os.path.exists('subdomain_list.txt'):
-        if (time.time() - os.stat('subdomain_list.txt').st_mtime) / (60 * 60 * 11.5) > 1:
-            with urllib.request.urlopen(req) as response:
-                with open('subdomain_list.txt', 'wb') as file:
-                    file.write(response.read())
-    else:
-        with urllib.request.urlopen(req) as response:
-            with open('subdomain_list.txt', 'wb') as file:
-                file.write(response.read())
 if not os.path.exists('data'):
     os.mkdir('data')
 copy_whitelist_and_clean()
 fetch_new_tld()
-fetch_new_subdomains()
 
 def get_status(url):
     base = url_to_path(url)
