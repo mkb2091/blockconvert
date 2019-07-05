@@ -6,6 +6,7 @@ import re
 
 import dns_check
 import build_regex
+import get_subdomains
 
 class BlockList():
     def __init__(self, dns_check_threads=40):
@@ -17,9 +18,6 @@ class BlockList():
         self.TLDS = build_regex.TLDS
         self.URL_REGEX = build_regex.URL_REGEX
         self.dns_check_threads = max(1, dns_check_threads)
-        with open('subdomain_list.txt') as file:
-            self.SUBDOMAINS = set(file.read().splitlines())
-        self.SUBDOMAINS.update(('www', 'm', 'analytics', 'telemetry'))
         self.dns = dns_check.DNSChecker()
 
     def add_file(self, contents, is_whitelist=False, match_url=False):
@@ -116,8 +114,7 @@ class BlockList():
         for url in star_subdomain:
             self.blacklist.remove(url)
             self.blacklist.add(url[2:])
-            for subdomain in self.SUBDOMAINS:
-                self.blacklist.add(subdomain + '.' + url[2:])
+        self.blacklist.update(get_subdomains.get_subdomains(self.dns, star_subdomain))
         print('Expanded *. subdomain to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
         whitelist_star = {}

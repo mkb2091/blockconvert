@@ -56,6 +56,7 @@ adfs.gigya.com
 adidas.ugc.bazaarvoice.com
 adidasjp.ugc.bazaarvoice.com
 admin.aimmatic.com
+admin.cs7777.vk.com
 admin.enterprise.glympse.com
 admin.eu1.gigya.com
 admin.flexispy.com
@@ -66,6 +67,7 @@ admin.providesupport.com
 admin.spot.im
 admin.spyhuman.com
 admin.spymasterpro.com
+admin.tau.vk.com
 admin.us1.gigya.com
 admin1.cdn.providesupport.com
 admin1.providesupport.com
@@ -192,6 +194,7 @@ api.boa.exacttarget.com
 api.chatid.com
 api.chatlio.com
 api.cortana.ai
+api.cs7777.vk.com
 api.dc1.exacttarget.com
 api.dc2.exacttarget.com
 api.dev.glympse.com
@@ -224,7 +227,9 @@ api.spyhuman.com
 api.spymasterpro.com
 api.staging.livechatinc.com
 api.t402.livefyre.com
+api.tau.vk.com
 api.test.exacttarget.com
+api.vk.com
 api1.flexispy.com
 api2.flexispy.com
 apihelp.surveygizmo.com
@@ -368,13 +373,17 @@ auth.s6.exacttarget.com
 auth.s7.exacttarget.com
 auth.s8.exacttarget.com
 autodiscover.comm100.com
+autodiscover.corp.vk.com
 autodiscover.exacttarget.com
+autodiscover.team.vk.com
 automat.test.chatid.com
 av95.mta.exacttarget.com
 avatars.github.exacttarget.com
 aveeno-uk.ugc.bazaarvoice.com
 avon-ru.ugc.bazaarvoice.com
 avon-uk.ugc.bazaarvoice.com
+away.cs7777.vk.com
+away.tau.vk.com
 b-w.chatlio.com
 ba2.mta.exacttarget.com
 ba3.mta.exacttarget.com
@@ -403,6 +412,7 @@ bigcommerce.livechatinc.com
 bigfishgames.ugc.bazaarvoice.com
 bishulim.sslproxy.gigya.com
 bk190.mta.exacttarget.com
+block-test.developerdan.com
 blog.chatid.com
 blog.exacttarget.com
 blog.flexispy.com
@@ -443,6 +453,7 @@ br33.mta.exacttarget.com
 brandcdn.exacttarget.com
 brands.flipboard.com
 brother-emea.ugc.bazaarvoice.com
+browser.vk.com
 buff.ly
 bugbot.flipboard.com
 build.livefyre.com
@@ -732,6 +743,7 @@ crm.livechatinc.com
 crucible.dev.flipboard.com
 crystal.flipboard.com
 cs200.mta.exacttarget.com
+cs7777.vk.com
 csapi.flexispy.com
 ct1-test.maxmind.com
 ct10-test.maxmind.com
@@ -802,6 +814,7 @@ cts3.dsr.t402.livefyre.com
 cts5.dsr.t402.livefyre.com
 cubesmart.ugc.bazaarvoice.com
 cust.exacttarget.com
+cvc.vk.com
 cvp.cdn.turner.com
 cvp1.cdn.turner.com
 cvspharmacydrugs.ugc.bazaarvoice.com
@@ -1768,6 +1781,7 @@ login-qa2.exacttarget.com
 login-qa3.exacttarget.com
 login-test.exacttarget.com
 login.console.gigya.com
+login.cs7777.vk.com
 login.exacttarget.com
 login.flexispy.com
 login.poc.exacttarget.com
@@ -1777,6 +1791,7 @@ login.s2.qa2.exacttarget.com
 login.s4.exacttarget.com
 login.s5.exacttarget.com
 login.spyfone.com
+login.tau.vk.com
 login.test.exacttarget.com
 logs.maxmind.com
 logx.flexispy.com
@@ -1793,10 +1808,12 @@ lumens.ugc.bazaarvoice.com
 lyncdiscover.exacttarget.com
 lyncdiscoverinternal.exacttarget.com
 lyncpoolwebext.america.exacttarget.com
+m.cs7777.vk.com
 m.glympse.com
 m.mc.exacttarget.com
 m.mspy.com
 m.retinax.com
+m.tau.vk.com
 macys.ugc.bazaarvoice.com
 madewell.ugc.bazaarvoice.com
 magazines.flipboard.com
@@ -2046,6 +2063,8 @@ o3.email.flipboard.com
 o6.email.flipboard.com
 o7.email.flipboard.com
 o8.email.flipboard.com
+oauth.cs7777.vk.com
+oauth.tau.vk.com
 ob.ugc.bazaarvoice.com
 octopus.livechatinc.com
 odysseygolf.ugc.bazaarvoice.com
@@ -2211,6 +2230,7 @@ prometheus.maxmind.com
 providesupport.com
 proxy.tawk.to
 pt-br.about.flipboard.com
+pt.vk.com
 pub.s1.exacttarget.com
 pub.s10.exacttarget.com
 pub.s4.exacttarget.com
@@ -2225,6 +2245,7 @@ puma.ugc.bazaarvoice.com
 pumajapan.ugc.bazaarvoice.com
 purdy.ugc.bazaarvoice.com
 push.flexispy.com
+push.vk.com
 pushtest-admin.flexispy.com
 pushtest-api.flexispy.com
 pushtest-portal.flexispy.com
@@ -2435,6 +2456,7 @@ sdcard.spyfone.com
 sdf.cortana.ai
 seal.websecurity.norton.com
 search.livefyre.com
+search.vk.com
 sec.olark.com
 secure-dir.livechatinc.com
 secure-fra.livechatinc.com
@@ -2648,9 +2670,11 @@ t402.livefyre.com
 tableau.chatid.com
 targetaustralia.ugc.bazaarvoice.com
 tassimo-eu.ugc.bazaarvoice.com
+tau.vk.com
 tawk.to
 tbsila.cdn.turner.com
 tc.maxmind.com
+team.vk.com
 telesightsurveys-com.surveygizmo.com
 temp-api.dc1.exacttarget.com
 tena.ugc.bazaarvoice.com
@@ -2667,6 +2691,7 @@ test.flipboard.com
 test.simpleanalytics.io
 test93f9h93hf39fjka93.simpleanalytics.io
 testcdn.olark.com
+testers.corp.vk.com
 testing.simpleanalytics.io
 testtimeout.exacttarget.com
 testtimeout1.exacttarget.com
@@ -2726,6 +2751,8 @@ ue-test.flipboard.com
 ue.flipboard.com
 ue.spyfone.com
 ugc.bazaarvoice.com
+ui.cs7777.vk.com
+ui.tau.vk.com
 uk.gomoxie.solutions
 underarmour.ugc.bazaarvoice.com
 uniqloenus.ugc.bazaarvoice.com
@@ -2788,6 +2815,8 @@ virt.boa.exacttarget.com
 virt.s4.exacttarget.com
 vitacost.ugc.bazaarvoice.com
 vitaminworld.ugc.bazaarvoice.com
+vk.com
+vkadmin.vk.com
 vm.providesupport.com
 vodafone.ugc.bazaarvoice.com
 vpn-indy.exacttarget.com
@@ -3011,6 +3040,7 @@ www.appsitemsuggest-pa.googleapis.com
 www.ar.mspy.com
 www.au1a-email-mng.gigya.com
 www.beta.portal.flexispy.com
+www.block-test.developerdan.com
 www.blog.chatid.com
 www.blog.hellomedian.com
 www.blog.ipinfo.io

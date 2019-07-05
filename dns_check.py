@@ -66,7 +66,7 @@ class DNSCheckerWorker(threading.Thread):
                     server = servers[pos]
                     try:
                         r = session.get(server + urllib.parse.urlencode(
-                            {'name':domain, 'type':self.request_type}))
+                            {'name':domain.lstrip('.'), 'type':self.request_type}))
                         response_queue.put((old_domain, r.json()))
                         if retry > 0:
                             print('Fixed\n', end='')

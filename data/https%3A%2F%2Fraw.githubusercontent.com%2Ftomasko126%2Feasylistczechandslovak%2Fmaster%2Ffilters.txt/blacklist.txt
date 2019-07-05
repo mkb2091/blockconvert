@@ -29,6 +29,7 @@ bidmax.cz
 campaigns.caroda.io
 chartbeat.com
 chartbeat.net
+chrek.stdout.cz
 cryweb.github.io
 d.vvbox.cz
 d.wedosas.net
@@ -63,6 +64,7 @@ pizzamodena.cz
 potenza.cz
 productads.cz
 productads.sk
+r.i0.cz
 recycle-static.zoznam.sk
 reklama.warforum.cz
 reklamy.s3.amazonaws.com

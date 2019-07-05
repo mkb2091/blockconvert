@@ -4,6 +4,7 @@ ad.kazakinfo.com
 ad.ourgame.com
 adcdn.pingan.com
 adnet.qq.com
+ads.tiktok.com
 adsense.woso.cn
 advert.kf5.com
 api.ads.tvb.com
@@ -14,5 +15,4 @@ img.ads.tvb.com
 league-funny.com
 newad.mail.wo.cn
 pingjs.qq.com
-rjno1.com
 xianzhenyuan.cn

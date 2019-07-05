@@ -112,6 +112,7 @@ ad.downloadyee.com
 ad.foodlion.com
 ad.gt
 adadvisor.net
+adapex.io
 adapt.io
 adasiaholdings.com
 adbiq.com
@@ -128,6 +129,8 @@ addtoany.com
 ade.googlesyndication.com
 adenabler.com
 adeventtracker.spotify.com
+adf.ly
+adfly.eu
 adglare.net
 adj.st
 adjust.com
@@ -171,6 +174,7 @@ ads.internal.unity3d.com
 ads.mopub.com
 ads.nexage.akadns.net
 ads.nexage.com
+ads.pinterest.com
 ads.playbuzz.com
 ads.prd.ie.internal.unity3d.com
 ads.pro-market.net
@@ -322,6 +326,7 @@ analytics.rayjump.com
 analytics.spongecell.com
 analytics.ssbbartgroup.com
 analytics.thebump.com
+analytics.tresensa.com
 analytics.us.algolia.com
 analytics.xcal.tv
 analytics.yahoo.com
@@ -417,6 +422,8 @@ apple.comscoreresearch.com
 applicationinsights.microsoft.com
 applicationinsights.us-east-1.amazonaws.com
 applifier.info
+applovin.com
+applvn.com
 apppersonalization.api.intuit.com
 apps.epom.com
 apps.shareaholic.com
@@ -440,6 +447,7 @@ ascend.ai
 asset.tabloidbintang.com
 assets-auto.rbl.ms.cdn.cloudflare.net
 assets.adsttc.com
+assets.applovin.com
 assets.consumedmedia.com
 assets.context.ly
 assets.customerio.netdna-cdn.com
@@ -539,6 +547,7 @@ bizible.com
 bksn.se
 bling2.midasplayer.com
 blismedia.com
+block-test.developerdan.com
 blog.intercom.com
 bnc.lt
 boldchat.com
@@ -636,6 +645,7 @@ cdn-media.brightline.tv
 cdn-s-optional.optimizely.com
 cdn-usent.kampyle.com
 cdn.accelerator.arsdev.net
+cdn.adapex.io
 cdn.adpushup.com
 cdn.adrise.tv
 cdn.airfind.com
@@ -650,6 +660,7 @@ cdn.bibblio.org
 cdn.branch.io
 cdn.brandmetrics.com
 cdn.bronto.com
+cdn.concert.io
 cdn.convertkit.com
 cdn.cquotient.com
 cdn.districtm.ca
@@ -773,6 +784,7 @@ commercialvalue.org
 comms-telemetry-service.us-east-1.amazonaws.com
 company-target.com
 comscoreresearch.com
+concert.io
 concertads-configs.vox-cdn.com
 conductrics.com
 config.dfw1.vip.inmobi.com
@@ -869,6 +881,7 @@ dcs-vod.apis.anvato.net
 dctk.expedia.com
 ddzuuyx7zj81k.cloudfront.net
 deadlinefunnel.com
+deloplen.com
 delta.celebrus.com
 demandbase.com
 demdex.net
@@ -985,6 +998,7 @@ evgnet.com
 evidon.com
 evs.jivox.com
 exacttarget.com
+excess.duolingo.com
 exct.net
 exelator.com
 experience.tinypass.com
@@ -1126,6 +1140,7 @@ headlinerlabs.com
 heatmap.it
 hereford.logs.roku.com
 heyzap.com
+hfc195b.com
 hiconversion.com
 hit-log.viva.co.id
 hits-i.iubenda.com
@@ -1175,6 +1190,7 @@ ima3vpaid.appspot.com
 image.tx.redbox.com
 images.taboola.com
 img-eu.stripcdn.com
+img.applovin.com
 img.stripcdn.com
 img04.en25.com
 img1.blogblog.com
@@ -1274,6 +1290,7 @@ kaxsdc.com
 keen.io
 keepass.fr
 kellyholmes.leadpages.co
+kenvam.online
 ketchapp.org
 keystone.zillow.com
 keywee.co
@@ -1284,6 +1301,7 @@ kidswithfoodallergies.engine.adglare.net
 klaviyo.com
 kochava.com
 kohls.tt.omtrdc.net
+koindut.com
 kompasads.com
 krk.kargo.com
 kroger.sc.omtrdc.net
@@ -1347,6 +1365,7 @@ logo-core.clearbit.com
 logo.clearbit.com
 logs.roku.com
 logs.supersonic.com
+logs1.smithsonian.museum
 longview.logs.roku.com
 lootsie.com
 lowes.ecorebates.com
@@ -1580,6 +1599,8 @@ mparticle.containers.piwik.pro
 mpd.mxptint.net
 mplxtms.com
 mpsnare.iesnare.com
+ms.applovin.com
+ms.applvn.com
 msg-media.valueclick.akadns.net
 mssl.fwmrm.net
 munchkin.brightfunnel.com
@@ -1702,6 +1723,7 @@ p1.stripcdn.com
 pa.rxthdr.com
 pages-stats.rbl.ms
 pages.exacttarget.com
+pages03.net
 panadvert.com
 pandoramedia-mkt-prod1-lb.campaign.adobe.com
 pandoramedia-mkt-prod1-t.campaign.adobe.com
@@ -1718,6 +1740,7 @@ participant.ascend.ai
 partners-1732315393.us-east-1.elb.amazonaws.com
 pathful.com
 pcrl.co
+pdn.applovin.com
 pdwuengagementapiwkr.cloudapp.net
 pebed.dm-event.net
 pendo.io
@@ -1801,6 +1824,7 @@ playhaven.com
 playlist.ma.tune.com
 playtime-tm.everesttech.net
 plugin.headlinerlabs.com
+po.st
 pool1.moatads.com
 pool3.moatads.com
 pool4.moatads.com
@@ -1895,6 +1919,7 @@ reddit.co
 remote-data.urbanairship.com
 reports.crashlytics.com
 res-x.com
+res1.applovin.com
 retargeting.bksn.se
 returnpath.com
 returnpath.net
@@ -1963,6 +1988,7 @@ s.ml-attr.com
 s.mopub.com
 s.ntv.io
 s.pixsrvcs.com
+s.po.st
 s.skimresources.com
 s1516.t.eloqua.com
 s1516.t.en25.com
@@ -2278,6 +2304,7 @@ tkbo.com
 tkx.apis.anvato.net
 tl813.com
 tmathtag.com
+tmobile.demdex.net
 toad.wix.com
 tofu-ssl.dmcdn.net
 topfuturetypeaflash.icu
@@ -2369,6 +2396,7 @@ uid1.vindicosuite.com
 um.videmob.com
 um2.eqads.com
 undertone.com
+unitedparcelservice.sc.omtrdc.net
 unityads.unity3d.com
 unrulymedia.com
 upgradebestfinishtheclicks.icu
@@ -2415,6 +2443,7 @@ vanguard.d2.sc.omtrdc.net
 vanguard.demdex.net
 vap.lijit.com
 vast.streamrail.net
+vastpixel2.adsafeprotected.com
 vcsa.vmware.com
 veeplay.com
 veeso.co
@@ -2516,6 +2545,8 @@ ww9.ntellicast.com
 www-cbssports-com.cdn.ampproject.org
 www.5rocks.io
 www.acashatusa.com
+www.adf.ly
+www.adfly.eu
 www.adtilt.com
 www.amazin.com
 www.beeftransmission.com
@@ -2552,6 +2583,7 @@ www.quotes.gb.net
 www.ralphreed.com
 www.roosterfirework.com
 www.savegolddealliteflash.icu
+www.sc.pages03.net
 www.sc.pages06.net
 www.smallbestappleliteflash.services
 www.ssacdn.com
