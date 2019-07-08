@@ -290,70 +290,55 @@ class DNSChecker():
                 request_queue.put(ip)
                 request_queue2.put(ip)
                 all_from_cache = False
-        if all_from_cache:
-            return results
-        threads = []
-        for i in range(thread_count):
-            thread = DNSCheckerWorker(self.session, self.servers, request_queue,
-                                      response_queue, 12)
+        if not all_from_cache:
+            threads = []
+            for i in range(thread_count):
+                thread = DNSCheckerWorker(self.session, self.servers, request_queue,
+                                          response_queue, 12)
+                thread.start()
+                threads.append(thread)
+            thread = ArgusPassiveDNS(self.session2, request_queue2, response_queue2)
             thread.start()
             threads.append(thread)
-        thread = ArgusPassiveDNS(self.session2, request_queue2, response_queue2)
-        thread.start()
-        threads.append(thread)
-        while any(thread.is_alive() for thread in threads):
-            try:
-                while True:
-                    ip, result = response_queue.get(timeout=0.1)
-                    try:
-                        if result['Status'] == 0:
-                            domains = [answer['data'].lower().strip('.') for answer in result['Answer'] if answer['type'] == 12]
-                            reverse_cache[ip] = [time.time(), domains]
-                            results.update(domains)
-                        else:
+            while any(thread.is_alive() for thread in threads):
+                try:
+                    while True:
+                        ip, result = response_queue.get(timeout=0.1)
+                        try:
+                            if result['Status'] == 0:
+                                domains = [answer['data'].lower().strip('.') for answer in result['Answer'] if answer['type'] == 12]
+                                reverse_cache[ip] = [time.time(), domains]
+                                results.update(domains)
+                            else:
+                                reverse_cache[ip] = (time.time(), [])
+                        except KeyError:
                             reverse_cache[ip] = (time.time(), [])
-                    except KeyError:
-                        reverse_cache[ip] = (time.time(), [])
-            except queue.Empty:
-                pass
-            try:
-                while True:
-                    ip, result = response_queue2.get(timeout=0.1)
-                    result = list(result)
-                    try:
-                        reverse_cache[ip][1].extend(result)
-                    except KeyError:
-                        reverse_cache[ip] = [time.time(), result]
-                    results.update(result)
-            except queue.Empty:
-                pass
+                except queue.Empty:
+                    pass
+                try:
+                    while True:
+                        ip, result = response_queue2.get(timeout=0.1)
+                        result = list(result)
+                        try:
+                            reverse_cache[ip][1].extend(result)
+                        except KeyError:
+                            reverse_cache[ip] = [time.time(), result]
+                        results.update(result)
+                except queue.Empty:
+                    pass
         print('Performed reverse DNS, and passive DNS lookup')
         self.mass_check(results, thread_count)
         print('Checked IP addresses')
-        domain_to_ip_dict = {'1':set()}
+        reverse_cache = dict((ip, set()) for ip in reverse_cache)
         for domain in self.cache:
-            if self.cache[domain][0] != '1' or domain in results:
-                now = domain_to_ip_dict.get(self.cache[domain][0], set())
-                now.add(domain)
-                domain_to_ip_dict[self.cache[domain][0]] = now
-        print('Generated domain_to_ip_dict')
-        for ip in domain_to_ip_dict:
-            if ip in reverse_cache:
-                old = reverse_cache[ip][1]
-                new = set(old)
-                new.update(domain_to_ip_dict[ip])
-                keep = set()
-                keep.update(domain_to_ip_dict[ip])
-                keep.update(domain_to_ip_dict['1'])
-                new.intersection_update(keep)
-                new = list(new)
-                reverse_cache[ip][1].clear()
-                reverse_cache[ip][1].extend(new)
+            try:
+                reverse_cache[self.cache[domain][0]].add(domain)
+            except KeyError:
+                pass
         results.clear()
-        results.update(domain_to_ip_dict['1'])
         for ip in ip_list:
             try:
-                results.update(domain_to_ip_dict[ip])
+                results.update(reverse_cache[ip])
             except KeyError:
                 pass
         print('Added domains which resolve to malware IP addresses: %s' % len(results))
