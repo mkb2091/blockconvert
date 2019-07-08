@@ -231,6 +231,7 @@ wildcard.twimg.com
 windowsupdate.com
 wns.windows.com
 www.alexa.com
+www.amazon.com
 www.answers.com
 www.bing.com
 www.cnet.com
