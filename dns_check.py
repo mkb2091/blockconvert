@@ -276,6 +276,7 @@ class DNSChecker():
         return results
     def mass_reverse_lookup(self, ip_list, thread_count=40):
         domain_list_length = len(ip_list)
+        cache = self.cache
         reverse_cache = self.reverse_cache
         request_queue = queue.Queue()
         response_queue = queue.Queue()
@@ -329,16 +330,18 @@ class DNSChecker():
         print('Performed reverse DNS, and passive DNS lookup')
         self.mass_check(results, thread_count)
         print('Checked IP addresses')
-        reverse_cache = dict((ip, set()) for ip in reverse_cache)
-        for domain in self.cache:
+        reverse_cache = dict((ip, (reverse_cache[ip], set())) for ip in reverse_cache)
+        for ip in reverse_cache:
+            reverse_cache[ip][1].clear()
+        for domain in cache:
             try:
-                reverse_cache[self.cache[domain][0]].add(domain)
+                reverse_cache[cache[domain][0]][1].add(domain)
             except KeyError:
                 pass
         results.clear()
         for ip in ip_list:
             try:
-                results.update(reverse_cache[ip])
+                results.update(reverse_cache[ip][1])
             except KeyError:
                 pass
         print('Added domains which resolve to malware IP addresses: %s' % len(results))
