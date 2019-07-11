@@ -38,6 +38,12 @@ Domain list: https://raw.githubusercontent.com/mkb2091/blockconvert/master/outpu
 
 DNS Response Policy Zone(RPZ) format: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz
 
+As well as generating blocklists, this project also generates whitelists which are used in the process. If you maintain your own blocklist, you may find one of the following whitelists useful(assuming your project is compatible with GPLv3):
+
+Whitelisted domains: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/whitelist_domains.txt
+
+Whitelist in AdBlock Plus format: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/whitelist_adblock.txt
+
 ## The Process
 
 1. Download file
