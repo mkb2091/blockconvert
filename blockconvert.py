@@ -174,7 +174,7 @@ class BlockList():
     def to_domain_whitelist(self):
         return '\n'.join(sorted(self.whitelist))
     def to_adblock_whitelist(self):
-        return '\n'.join(['AA||%s^' % i for i in sorted(self.whitelist)])
+        return '\n'.join(['@@||%s^' % i for i in sorted(self.whitelist)])
     def clear(self):
         self.blacklist = set()
         self.whitelist = set()
