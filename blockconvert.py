@@ -171,6 +171,10 @@ class BlockList():
         return '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blacklist)])
     def to_rpz(self):
         return '\n'.join(['%s CNAME .' % i for i in sorted(self.blacklist)])
+    def to_domain_whitelist(self):
+        return '\n'.join(sorted(self.whitelist))
+    def to_adblock_whitelist(self):
+        return '\n'.join(['AA||%s^' % i for i in sorted(self.whitelist)])
     def clear(self):
         self.blacklist = set()
         self.whitelist = set()

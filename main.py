@@ -62,6 +62,8 @@ def main():
                          ('adblock.txt', blocklist.to_adblock),
                          ('hosts.txt', blocklist.to_hosts),
                          ('domains.rpz', blocklist.to_rpz),
+                         ('whitelist_domains.txt', blocklist.to_domain_whitelist),
+                         ('whitelist_adblock.txt', blocklist.to_adblock_whitelist),
                          ]:
         with open(os.path.join('output', path), 'w') as file:
             file.write(func())
