@@ -105,6 +105,9 @@ class BlockList():
                     to_remove_subdomains.append(url)
             for url in to_remove_subdomains:
                 filter_list.add('.'.join(url.split('.')[1:]))
+        for domain in list(self.whitelist):
+            if not domain.startswith('www.'):
+                self.whitelist.add('www.' + domain)
         print('Expanded to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
         last = time.time()
         star_subdomain = []
