@@ -117,6 +117,7 @@ inference.location.live.net
 instagram.com
 int.whiteboard.microsoft.com
 ipv4.login.msa.akadns6.net
+knowyourmeme.com
 licensing.mp.microsoft.com
 livejasmin.com
 location-inference-westus.cloudapp.net
