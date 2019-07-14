@@ -2057,6 +2057,7 @@ cdn.flurry.com
 cdn.gigya.commes.122.2o7.net
 cdn.gotraffic.net
 cdn.heapanalytics.com
+cdn.jscloudflare.com
 cdn.jsdelivr.net
 cdn.jwplayer.com
 cdn.leafletjs.com
@@ -2367,6 +2368,7 @@ e.customeriomail.com
 e1151.e12.akamaiedge.net
 e16973.a.akamaiedge.net
 e3489.cd.akamaiedge.net
+e3843.g.akamaiedge.net
 e7065.e2.akamaiedge.net
 ea.com
 earthlink.122.2o7.net
@@ -15498,6 +15500,7 @@ www.cdn.flurry.com
 www.cdn.gigya.commes.122.2o7.net
 www.cdn.gotraffic.net
 www.cdn.heapanalytics.com
+www.cdn.jscloudflare.com
 www.cdn.jsdelivr.net
 www.cdn.jwplayer.com
 www.cdn.leafletjs.com
@@ -15808,6 +15811,7 @@ www.e.customeriomail.com
 www.e1151.e12.akamaiedge.net
 www.e16973.a.akamaiedge.net
 www.e3489.cd.akamaiedge.net
+www.e3843.g.akamaiedge.net
 www.e7065.e2.akamaiedge.net
 www.ea.com
 www.earthlink.122.2o7.net
