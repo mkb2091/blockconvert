@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 957851 blocked domains in each of the generated filter lists
+Theres are 950455 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -16,8 +16,6 @@ Link|Author|Expires|License|Type
 [uBlock filters – Badware risks](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt)|-|4.0 days|GPLv3|Blacklist
 [uBlock filters -- Unbreak](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt)|-|4.0 days|GPLv3|Blacklist
 [hostsVN](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts)|-|1.0 days|MIT|Blacklist
-[abuse.ch ZeuS domain blocklist](https://zeustracker.abuse.ch/blocklist.php?download=baddomains)|-|1.0 days|CC0|Blacklist
-[abuse.ch ZeuS IP blocklist BadIPs](https://zeustracker.abuse.ch/blocklist.php?download=badips)|-|1.0 days|CC0|Blacklist
 [abuse.ch URLhaus Response Policy Zones](https://urlhaus.abuse.ch/downloads/rpz/)|-|1.0 days|CC0|Blacklist
 [abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|Blacklist
 [abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|Blacklist
