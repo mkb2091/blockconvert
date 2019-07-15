@@ -11054,6 +11054,7 @@
 @@||pgl.yoyo.org^
 @@||philadelphia.cbslocal.com^
 @@||philips.112.2o7.net^
+@@||phishtank.com^
 @@||phncdn.com^
 @@||phobos.apple.com^
 @@||phonecallapi.micloud.xiaomi.net^
@@ -24497,6 +24498,7 @@
 @@||www.pgl.yoyo.org^
 @@||www.philadelphia.cbslocal.com^
 @@||www.philips.112.2o7.net^
+@@||www.phishtank.com^
 @@||www.phncdn.com^
 @@||www.phobos.apple.com^
 @@||www.phonecallapi.micloud.xiaomi.net^
