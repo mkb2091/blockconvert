@@ -56,6 +56,7 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["Adblock Polska", "https://raw.githubusercontent.com/adblockpolska/Adblock_PL_List/master/adblock_polska.txt", "adblockpl, tomasko126, MonztA", 172800, "GPLv3", false, false, false]
 ["Adblock List for Finland", "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt", "", 432000, "The Unlicense", false, false, false]
 ["AdGuard Simplified Domain Names filter", "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt", "", 86400, "GPLv3", false, false, false]
+["AdBlockID", "https://raw.githubusercontent.com/realodix/AdBlockID/master/output/adblockid.txt", "", 345600, "GPLv3", false, false, false]
 ["AdBlock Farsi", "https://raw.githubusercontent.com/SlashArash/adblockfa/master/adblockfa.txt", "", 432000, "The Beer-Ware License", false, false, false]
 ["AdAway default blocklist", "https://adaway.org/hosts.txt", "", 86400, "CC-BY-3", false, false, false]
 ["Ad filter list by Disconnect", "https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt", "", 86400, "GPLv3", false, false, false]
