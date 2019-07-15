@@ -45,18 +45,18 @@ Link|Author|Expires|License|Type
 [GOODBYE ADS](https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt)|Jerryn70 (XDA Senior Member)|1.0 days|MIT|Blacklist
 [Frellwit's Swedish Hosts File](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt)|-|1.0 days|GPL-3.0|Blacklist
 [Fanboy's Annoyance List](https://easylist.to/easylist/fanboy-annoyance.txt)|-|4.0 days|GPLv3|Blacklist
-[Easylist Czech and Slovak filter list](https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt)|tomasko126, Aslanex, vobruba-martin, Moskoe, Fanboy|4.0 hours|CC-BY-SA-4.0|Blacklist
 [EasyPrivacy](https://easylist.to/easylist/easyprivacy.txt)|-|4.0 days|GPLv3|Blacklist
 [EasyList](https://easylist.to/easylist/easylist.txt)|-|4.0 days|GPLv3|Blacklist
 [EasyList Italy](https://easylist-downloads.adblockplus.org/easylistitaly.txt)|-|1.0 days|GPLv3|Blacklist
 [EasyList Hebrew](https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt)|-|1.0 days|GPLv3|Blacklist
 [EasyList Germany](https://easylist.to/easylistgermany/easylistgermany.txt)|-|1.0 days|GPLv3|Blacklist
 [EasyList Dutch](https://easylist-downloads.adblockplus.org/easylistdutch.txt)|-|4.0 days|GPLv3|Blacklist
+[EasyList Czech and Slovak filter list](https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt)|tomasko126, Aslanex, vobruba-martin, Moskoe, Fanboy|4.0 hours|CC-BY-SA-4.0|Blacklist
 [EasyList China](https://easylist-downloads.adblockplus.org/easylistchina.txt)|-|4.0 days|GPLv3|Blacklist
 [DataMaster-Android-AdBlock-Hosts](https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts)|https://github.com/DataMaster-2501|1.0 days|GPLv3|Blacklist
 [Better content blocking rules](https://better.fyi/blockerList.txt)|-|1.0 days|CC-BY-SA-4.0|Blacklist
 [Basic tracking list by Disconnect](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)|-|1.0 days|GPLv3|Blacklist
-[BarbBlock](https://ssl.bblck.me/blacklists/adblock-plus.txt)|-|1.0 days|MIT|Blacklist
+[BarbBlock](https://ssl.bblck.me/blacklists/domain-list.txt)|-|1.0 days|MIT|Blacklist
 [Anudeep's Blacklist](https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt)|Anudeep <anudeep@protonmail.com>|1.0 days|MIT|Blacklist
 [Anudeep's Blacklist](https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt)|Anudeep <anudeep@protonmail.com>|1.0 days|MIT|Blacklist
 [Annoyance Mobile Ad hosts filter](https://raw.githubusercontent.com/yowu/AnnoyanceMobileAdHosts/master/AnnoyanceMobileAdHosts.txt)|-|1.0 days|The Unlicense|Blacklist
