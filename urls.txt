@@ -45,6 +45,7 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["DataMaster-Android-AdBlock-Hosts", "https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts", "https://github.com/DataMaster-2501", 86400, "GPLv3", false, false, false]
 ["Better content blocking rules", "https://better.fyi/blockerList.txt", "", 86400, "CC-BY-SA-4.0", false, false, false]
 ["Basic tracking list by Disconnect", "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt", "", 86400, "GPLv3", false, false, false]
+["BarbBlock", "https://ssl.bblck.me/blacklists/adblock-plus.txt", "", 86400, "MIT", false, false, false]
 ["Anudeep's Blacklist", "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt", "Anudeep <anudeep@protonmail.com>", 86400, "MIT", false, false, false]
 ["Anudeep's Blacklist", "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt", "Anudeep <anudeep@protonmail.com>", 86400, "MIT", false, false, false]
 ["Annoyance Mobile Ad hosts filter", "https://raw.githubusercontent.com/yowu/AnnoyanceMobileAdHosts/master/AnnoyanceMobileAdHosts.txt", "", 86400, "The Unlicense", false, false, false]
