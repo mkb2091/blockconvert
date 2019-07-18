@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 959215 blocked domains in each of the generated filter lists
+Theres are 959246 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -97,7 +97,6 @@ Link|Author|Expires|License|Type
 [https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_lists/domains_only.txt](https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_lists/domains_only.txt)|-|1.0 days|MIT|Blacklist
 [https://raw.githubusercontent.com/bjornstar/hosts/master/hosts](https://raw.githubusercontent.com/bjornstar/hosts/master/hosts)|-|1.0 days|The Unlicense|Blacklist
 [https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt](https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt)|-|1.0 days|MIT|Whitelist
-[https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt](https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt)|Anudeep <anudeep@protonmail.com>|1.0 days|MIT|Whitelist
 [https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list](https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list)|-|1.0 days|MIT|Whitelist
 [https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts](https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts)|-|1.0 days|MIT|Blacklist
 [https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt](https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt)|-|1.0 days|MIT|Blacklist

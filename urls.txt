@@ -86,7 +86,6 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["", "https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_lists/domains_only.txt", "", 86400, "MIT", false, false, false]
 ["", "https://raw.githubusercontent.com/bjornstar/hosts/master/hosts", "", 86400, "The Unlicense", false, false, false]
 ["", "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt", "", 86400, "MIT", true, false, false]
-["", "https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/optional-list.txt", "Anudeep <anudeep@protonmail.com>", 86400, "MIT", true, false, false]
 ["", "https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list", "", 86400, "MIT", true, false, false]
 ["", "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts", "", 86400, "MIT", false, false, false]
 ["", "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt", "", 86400, "MIT", false, false, false]
