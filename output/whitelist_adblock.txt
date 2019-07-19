@@ -2464,7 +2464,6 @@
 @@||filefactory.com^
 @@||fileflares.com^
 @@||filepicker.io^
-@@||files.coloribus.com^
 @@||files.edx.org^
 @@||files.freedownloadmanager.org^
 @@||files.graphiq.com^
@@ -15858,7 +15857,6 @@
 @@||www.filefactory.com^
 @@||www.fileflares.com^
 @@||www.filepicker.io^
-@@||www.files.coloribus.com^
 @@||www.files.edx.org^
 @@||www.files.freedownloadmanager.org^
 @@||www.files.graphiq.com^
