@@ -20,6 +20,10 @@
 *.windowsupdate.com
 *.wns.windows.com
 a-msedge.net
+next-services.apps.microsoft.com
+wscont.apps.microsoft.com
+wscont1.apps.microsoft.com
+wscont2.apps.microsoft.com
 adaway.org
 addons.mozilla.org
 adguard.com
