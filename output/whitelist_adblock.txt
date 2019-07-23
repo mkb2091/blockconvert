@@ -1802,6 +1802,7 @@
 @@||app-measurement.com^
 @@||app.adjust.com^
 @@||app.alipay.com^
+@@||app.chat.global.xiaomi.net^
 @@||app.chat.xiaomi.net^
 @@||app.launchdarkly.com^
 @@||app.migc.xiaomi.com^
@@ -10776,7 +10777,6 @@
 @@||nbcnewyork.com^
 @@||nbcuni.com^
 @@||nccp.netflix.com^
-@@||ndtv.com^
 @@||neighborsink.com^
 @@||neowin.net^
 @@||nesn.com^
@@ -15103,6 +15103,7 @@
 @@||www.app-measurement.com^
 @@||www.app.adjust.com^
 @@||www.app.alipay.com^
+@@||www.app.chat.global.xiaomi.net^
 @@||www.app.chat.xiaomi.net^
 @@||www.app.launchdarkly.com^
 @@||www.app.migc.xiaomi.com^
@@ -24077,7 +24078,6 @@
 @@||www.nbcnewyork.com^
 @@||www.nbcuni.com^
 @@||www.nccp.netflix.com^
-@@||www.ndtv.com^
 @@||www.neighborsink.com^
 @@||www.neowin.net^
 @@||www.nesn.com^
