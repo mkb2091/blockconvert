@@ -1795,6 +1795,7 @@
 @@||api.twitter.com^
 @@||api.usebutton.com^
 @@||api.vip.miui.com^
+@@||api.zaloapp.com^
 @@||apis.google.com^
 @@||apk.tw^
 @@||apnewsregistry.com^
@@ -15096,6 +15097,7 @@
 @@||www.api.twitter.com^
 @@||www.api.usebutton.com^
 @@||www.api.vip.miui.com^
+@@||www.api.zaloapp.com^
 @@||www.apis.google.com^
 @@||www.apk.tw^
 @@||www.apnewsregistry.com^
@@ -26665,6 +26667,7 @@
 @@||www.z-m.facebook.com^
 @@||www.z.cdn.turner.com^
 @@||www.zajefajna.com^
+@@||www.zaloapp.com^
 @@||www.zam.zamimg.com^
 @@||www.zap2it.com^
 @@||www.zcbprod.alipay.com^
@@ -26753,6 +26756,7 @@
 @@||z-m.facebook.com^
 @@||z.cdn.turner.com^
 @@||zajefajna.com^
+@@||zaloapp.com^
 @@||zam.zamimg.com^
 @@||zap2it.com^
 @@||zcbprod.alipay.com^
