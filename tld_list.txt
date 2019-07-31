@@ -1,4 +1,4 @@
-# Version 2019072900, Last Updated Mon Jul 29 07:07:01 2019 UTC
+# Version 2019073001, Last Updated Tue Jul 30 07:07:01 2019 UTC
 AAA
 AARP
 ABARTH
@@ -152,7 +152,6 @@ BM
 BMS
 BMW
 BN
-BNL
 BNPPARIBAS
 BO
 BOATS

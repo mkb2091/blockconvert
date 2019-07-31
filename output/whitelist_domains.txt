@@ -1591,6 +1591,7 @@ a90.g.akamai.net
 aatkit.com
 abc.com
 abcnews.go.com
+abroad.apilocate.amap.com
 account.xiaomi.com
 accounts.google.com
 accuweather.com
@@ -11023,6 +11024,7 @@ polldaddy.com
 pop.advecs.com
 popad.co
 pornhub.com
+pornhubpremium.com
 portal.client.xunlei.com
 postimage.org
 postimg.org
@@ -14893,6 +14895,7 @@ www.a90.g.akamai.net
 www.aatkit.com
 www.abc.com
 www.abcnews.go.com
+www.abroad.apilocate.amap.com
 www.account.xiaomi.com
 www.accounts.google.com
 www.accuweather.com
@@ -24325,6 +24328,7 @@ www.polldaddy.com
 www.pop.advecs.com
 www.popad.co
 www.pornhub.com
+www.pornhubpremium.com
 www.portal.client.xunlei.com
 www.postimage.org
 www.postimg.org
