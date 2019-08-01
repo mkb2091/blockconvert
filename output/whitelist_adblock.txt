@@ -160,7 +160,6 @@
 @@||*.md.mp.microsoft.com.bms^
 @@||*.md.mp.microsoft.com.bmw^
 @@||*.md.mp.microsoft.com.bn^
-@@||*.md.mp.microsoft.com.bnl^
 @@||*.md.mp.microsoft.com.bnpparibas^
 @@||*.md.mp.microsoft.com.bo^
 @@||*.md.mp.microsoft.com.boats^
@@ -2769,7 +2768,6 @@
 @@||google.bms^
 @@||google.bmw^
 @@||google.bn^
-@@||google.bnl^
 @@||google.bnpparibas^
 @@||google.bo^
 @@||google.boats^
@@ -3039,7 +3037,6 @@
 @@||google.co.bms^
 @@||google.co.bmw^
 @@||google.co.bn^
-@@||google.co.bnl^
 @@||google.co.bnpparibas^
 @@||google.co.bo^
 @@||google.co.boats^
@@ -4575,7 +4572,6 @@
 @@||google.com.bms^
 @@||google.com.bmw^
 @@||google.com.bn^
-@@||google.com.bnl^
 @@||google.com.bnpparibas^
 @@||google.com.bo^
 @@||google.com.boats^
@@ -7613,7 +7609,6 @@
 @@||kisscartoon.bms^
 @@||kisscartoon.bmw^
 @@||kisscartoon.bn^
-@@||kisscartoon.bnl^
 @@||kisscartoon.bnpparibas^
 @@||kisscartoon.bo^
 @@||kisscartoon.boats^
@@ -9277,7 +9272,6 @@
 @@||md.mp.microsoft.com.bms^
 @@||md.mp.microsoft.com.bmw^
 @@||md.mp.microsoft.com.bn^
-@@||md.mp.microsoft.com.bnl^
 @@||md.mp.microsoft.com.bnpparibas^
 @@||md.mp.microsoft.com.bo^
 @@||md.mp.microsoft.com.boats^
@@ -11828,7 +11822,6 @@
 @@||wdcp.microsoft.bms^
 @@||wdcp.microsoft.bmw^
 @@||wdcp.microsoft.bn^
-@@||wdcp.microsoft.bnl^
 @@||wdcp.microsoft.bnpparibas^
 @@||wdcp.microsoft.bo^
 @@||wdcp.microsoft.boats^
@@ -13464,7 +13457,6 @@
 @@||www.*.md.mp.microsoft.com.bms^
 @@||www.*.md.mp.microsoft.com.bmw^
 @@||www.*.md.mp.microsoft.com.bn^
-@@||www.*.md.mp.microsoft.com.bnl^
 @@||www.*.md.mp.microsoft.com.bnpparibas^
 @@||www.*.md.mp.microsoft.com.bo^
 @@||www.*.md.mp.microsoft.com.boats^
@@ -16073,7 +16065,6 @@
 @@||www.google.bms^
 @@||www.google.bmw^
 @@||www.google.bn^
-@@||www.google.bnl^
 @@||www.google.bnpparibas^
 @@||www.google.bo^
 @@||www.google.boats^
@@ -16343,7 +16334,6 @@
 @@||www.google.co.bms^
 @@||www.google.co.bmw^
 @@||www.google.co.bn^
-@@||www.google.co.bnl^
 @@||www.google.co.bnpparibas^
 @@||www.google.co.bo^
 @@||www.google.co.boats^
@@ -17879,7 +17869,6 @@
 @@||www.google.com.bms^
 @@||www.google.com.bmw^
 @@||www.google.com.bn^
-@@||www.google.com.bnl^
 @@||www.google.com.bnpparibas^
 @@||www.google.com.bo^
 @@||www.google.com.boats^
@@ -20917,7 +20906,6 @@
 @@||www.kisscartoon.bms^
 @@||www.kisscartoon.bmw^
 @@||www.kisscartoon.bn^
-@@||www.kisscartoon.bnl^
 @@||www.kisscartoon.bnpparibas^
 @@||www.kisscartoon.bo^
 @@||www.kisscartoon.boats^
@@ -22581,7 +22569,6 @@
 @@||www.md.mp.microsoft.com.bms^
 @@||www.md.mp.microsoft.com.bmw^
 @@||www.md.mp.microsoft.com.bn^
-@@||www.md.mp.microsoft.com.bnl^
 @@||www.md.mp.microsoft.com.bnpparibas^
 @@||www.md.mp.microsoft.com.bo^
 @@||www.md.mp.microsoft.com.boats^
@@ -25132,7 +25119,6 @@
 @@||www.wdcp.microsoft.bms^
 @@||www.wdcp.microsoft.bmw^
 @@||www.wdcp.microsoft.bn^
-@@||www.wdcp.microsoft.bnl^
 @@||www.wdcp.microsoft.bnpparibas^
 @@||www.wdcp.microsoft.bo^
 @@||www.wdcp.microsoft.boats^
