@@ -1796,6 +1796,7 @@
 @@||api.usebutton.com^
 @@||api.vip.miui.com^
 @@||api.zaloapp.com^
+@@||api3.siftscience.com^
 @@||apis.google.com^
 @@||apk.tw^
 @@||apnewsregistry.com^
@@ -2048,6 +2049,7 @@
 @@||cdn.ravenjs.com^
 @@||cdn.rawgit.com^
 @@||cdn.samsungcloudsolution.com^
+@@||cdn.siftscience.com^
 @@||cdn.sstatic.net^
 @@||cdn.static-economist.com^
 @@||cdn.staticaly.com^
@@ -2221,6 +2223,7 @@
 @@||dashboard.mgid.com^
 @@||dashboard.plex.tv^
 @@||dashboard.tovarro.com^
+@@||dashboard.zopim.com^
 @@||data.iana.org^
 @@||data.mistat.intl.xiaomi.com^
 @@||data.mistat.xiaomi.com^
@@ -7421,6 +7424,7 @@
 @@||joemonster.org^
 @@||joewein.net^
 @@||joint.reg2t.sandai.net^
+@@||jp06.zopim.com^
 @@||jpopasia.com^
 @@||jq.qq.com^
 @@||jquery.com^
@@ -11047,6 +11051,7 @@
 @@||promotion.aliexpress.com^
 @@||promotions.newegg.com^
 @@||protect-url.net^
+@@||protonmail.com^
 @@||providesupport.com^
 @@||proxy.novafusion.ea.com^
 @@||proxy.plex.bz^
@@ -15093,6 +15098,7 @@
 @@||www.api.usebutton.com^
 @@||www.api.vip.miui.com^
 @@||www.api.zaloapp.com^
+@@||www.api3.siftscience.com^
 @@||www.apis.google.com^
 @@||www.apk.tw^
 @@||www.apnewsregistry.com^
@@ -15345,6 +15351,7 @@
 @@||www.cdn.ravenjs.com^
 @@||www.cdn.rawgit.com^
 @@||www.cdn.samsungcloudsolution.com^
+@@||www.cdn.siftscience.com^
 @@||www.cdn.sstatic.net^
 @@||www.cdn.static-economist.com^
 @@||www.cdn.staticaly.com^
@@ -15518,6 +15525,7 @@
 @@||www.dashboard.mgid.com^
 @@||www.dashboard.plex.tv^
 @@||www.dashboard.tovarro.com^
+@@||www.dashboard.zopim.com^
 @@||www.data.iana.org^
 @@||www.data.mistat.intl.xiaomi.com^
 @@||www.data.mistat.xiaomi.com^
@@ -20718,6 +20726,7 @@
 @@||www.joemonster.org^
 @@||www.joewein.net^
 @@||www.joint.reg2t.sandai.net^
+@@||www.jp06.zopim.com^
 @@||www.jpopasia.com^
 @@||www.jq.qq.com^
 @@||www.jquery.com^
@@ -24344,6 +24353,7 @@
 @@||www.promotion.aliexpress.com^
 @@||www.promotions.newegg.com^
 @@||www.protect-url.net^
+@@||www.protonmail.com^
 @@||www.providesupport.com^
 @@||www.proxy.novafusion.ea.com^
 @@||www.proxy.plex.bz^
