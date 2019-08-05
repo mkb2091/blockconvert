@@ -1164,7 +1164,6 @@
 *.md.mp.microsoft.com.stada
 *.md.mp.microsoft.com.staples
 *.md.mp.microsoft.com.star
-*.md.mp.microsoft.com.starhub
 *.md.mp.microsoft.com.statebank
 *.md.mp.microsoft.com.statefarm
 *.md.mp.microsoft.com.stc
@@ -4044,7 +4043,6 @@ google.co.st
 google.co.stada
 google.co.staples
 google.co.star
-google.co.starhub
 google.co.statebank
 google.co.statefarm
 google.co.stc
@@ -5579,7 +5577,6 @@ google.com.st
 google.com.stada
 google.com.staples
 google.com.star
-google.com.starhub
 google.com.statebank
 google.com.statefarm
 google.com.stc
@@ -6834,7 +6831,6 @@ google.st
 google.stada
 google.staples
 google.star
-google.starhub
 google.statebank
 google.statefarm
 google.stc
@@ -8617,7 +8613,6 @@ kisscartoon.st
 kisscartoon.stada
 kisscartoon.staples
 kisscartoon.star
-kisscartoon.starhub
 kisscartoon.statebank
 kisscartoon.statefarm
 kisscartoon.stc
@@ -10280,7 +10275,6 @@ md.mp.microsoft.com.st
 md.mp.microsoft.com.stada
 md.mp.microsoft.com.staples
 md.mp.microsoft.com.star
-md.mp.microsoft.com.starhub
 md.mp.microsoft.com.statebank
 md.mp.microsoft.com.statefarm
 md.mp.microsoft.com.stc
@@ -12831,7 +12825,6 @@ wdcp.microsoft.st
 wdcp.microsoft.stada
 wdcp.microsoft.staples
 wdcp.microsoft.star
-wdcp.microsoft.starhub
 wdcp.microsoft.statebank
 wdcp.microsoft.statefarm
 wdcp.microsoft.stc
@@ -14466,7 +14459,6 @@ www.*.md.mp.microsoft.com.st
 www.*.md.mp.microsoft.com.stada
 www.*.md.mp.microsoft.com.staples
 www.*.md.mp.microsoft.com.star
-www.*.md.mp.microsoft.com.starhub
 www.*.md.mp.microsoft.com.statebank
 www.*.md.mp.microsoft.com.statefarm
 www.*.md.mp.microsoft.com.stc
@@ -17346,7 +17338,6 @@ www.google.co.st
 www.google.co.stada
 www.google.co.staples
 www.google.co.star
-www.google.co.starhub
 www.google.co.statebank
 www.google.co.statefarm
 www.google.co.stc
@@ -18881,7 +18872,6 @@ www.google.com.st
 www.google.com.stada
 www.google.com.staples
 www.google.com.star
-www.google.com.starhub
 www.google.com.statebank
 www.google.com.statefarm
 www.google.com.stc
@@ -20136,7 +20126,6 @@ www.google.st
 www.google.stada
 www.google.staples
 www.google.star
-www.google.starhub
 www.google.statebank
 www.google.statefarm
 www.google.stc
@@ -21919,7 +21908,6 @@ www.kisscartoon.st
 www.kisscartoon.stada
 www.kisscartoon.staples
 www.kisscartoon.star
-www.kisscartoon.starhub
 www.kisscartoon.statebank
 www.kisscartoon.statefarm
 www.kisscartoon.stc
@@ -23582,7 +23570,6 @@ www.md.mp.microsoft.com.st
 www.md.mp.microsoft.com.stada
 www.md.mp.microsoft.com.staples
 www.md.mp.microsoft.com.star
-www.md.mp.microsoft.com.starhub
 www.md.mp.microsoft.com.statebank
 www.md.mp.microsoft.com.statefarm
 www.md.mp.microsoft.com.stc
@@ -26133,7 +26120,6 @@ www.wdcp.microsoft.st
 www.wdcp.microsoft.stada
 www.wdcp.microsoft.staples
 www.wdcp.microsoft.star
-www.wdcp.microsoft.starhub
 www.wdcp.microsoft.statebank
 www.wdcp.microsoft.statefarm
 www.wdcp.microsoft.stc
