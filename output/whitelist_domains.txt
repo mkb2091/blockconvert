@@ -635,7 +635,6 @@
 *.md.mp.microsoft.com.ir
 *.md.mp.microsoft.com.irish
 *.md.mp.microsoft.com.is
-*.md.mp.microsoft.com.iselect
 *.md.mp.microsoft.com.ismaili
 *.md.mp.microsoft.com.ist
 *.md.mp.microsoft.com.istanbul
@@ -2277,6 +2276,7 @@ disq.us
 disqus.com
 disquscdn.com
 distilnetworks.com
+djvbdz1obemzo.cloudfront.net
 dl-client.dropbox.com
 dl-web.dropbox.com
 dl.delivery.mp.microsoft.com
@@ -3514,7 +3514,6 @@ google.co.iq
 google.co.ir
 google.co.irish
 google.co.is
-google.co.iselect
 google.co.ismaili
 google.co.ist
 google.co.istanbul
@@ -5048,7 +5047,6 @@ google.com.iq
 google.com.ir
 google.com.irish
 google.com.is
-google.com.iselect
 google.com.ismaili
 google.com.ist
 google.com.istanbul
@@ -6301,7 +6299,6 @@ google.iq
 google.ir
 google.irish
 google.is
-google.iselect
 google.ismaili
 google.ist
 google.istanbul
@@ -8084,7 +8081,6 @@ kisscartoon.iq
 kisscartoon.ir
 kisscartoon.irish
 kisscartoon.is
-kisscartoon.iselect
 kisscartoon.ismaili
 kisscartoon.ist
 kisscartoon.istanbul
@@ -9096,8 +9092,6 @@ manifest.googlevideo.com
 mapbox.com
 mapquestapi.com
 maps-api-ssl.google.com
-maps-static.chitika.net
-maps.chitika.net
 maps.google.com
 maps.googleapis.com
 maps.gstatic.com
@@ -9746,7 +9740,6 @@ md.mp.microsoft.com.iq
 md.mp.microsoft.com.ir
 md.mp.microsoft.com.irish
 md.mp.microsoft.com.is
-md.mp.microsoft.com.iselect
 md.mp.microsoft.com.ismaili
 md.mp.microsoft.com.ist
 md.mp.microsoft.com.istanbul
@@ -11040,7 +11033,6 @@ prod.do.dsp.mp.microsoft.com
 products.office.com
 profile.getyounity.com
 profile.target.com
-promo.campaigndog.com
 promodj.com
 promotion.aliexpress.com
 promotions.newegg.com
@@ -11646,7 +11638,6 @@ vox-cdn.com
 vox.com
 voxmedia.com
 vr-ov-crl.thawte.com
-vswebapp.com
 vupload2.facebook.com
 vupload2.t.facebook.com
 vxvault.net
@@ -11655,13 +11646,13 @@ w.soundcloud.com
 w3.org
 wac.edgecastcdn.net
 wac.phicdn.net
-wahoha.com
 walgreens.com
 wallet.microsoft.com
 wallpaper.pandora.xiaomi.com
 wallrider.top
 wallst.com
 walmart.com
+wangbase.com
 washington.cbslocal.com
 washingtonpost.com
 watchvideo.us
@@ -12296,7 +12287,6 @@ wdcp.microsoft.iq
 wdcp.microsoft.ir
 wdcp.microsoft.irish
 wdcp.microsoft.is
-wdcp.microsoft.iselect
 wdcp.microsoft.ismaili
 wdcp.microsoft.ist
 wdcp.microsoft.istanbul
@@ -13930,7 +13920,6 @@ www.*.md.mp.microsoft.com.iq
 www.*.md.mp.microsoft.com.ir
 www.*.md.mp.microsoft.com.irish
 www.*.md.mp.microsoft.com.is
-www.*.md.mp.microsoft.com.iselect
 www.*.md.mp.microsoft.com.ismaili
 www.*.md.mp.microsoft.com.ist
 www.*.md.mp.microsoft.com.istanbul
@@ -15572,6 +15561,7 @@ www.disq.us
 www.disqus.com
 www.disquscdn.com
 www.distilnetworks.com
+www.djvbdz1obemzo.cloudfront.net
 www.dl-client.dropbox.com
 www.dl-web.dropbox.com
 www.dl.delivery.mp.microsoft.com
@@ -16809,7 +16799,6 @@ www.google.co.iq
 www.google.co.ir
 www.google.co.irish
 www.google.co.is
-www.google.co.iselect
 www.google.co.ismaili
 www.google.co.ist
 www.google.co.istanbul
@@ -18343,7 +18332,6 @@ www.google.com.iq
 www.google.com.ir
 www.google.com.irish
 www.google.com.is
-www.google.com.iselect
 www.google.com.ismaili
 www.google.com.ist
 www.google.com.istanbul
@@ -19596,7 +19584,6 @@ www.google.iq
 www.google.ir
 www.google.irish
 www.google.is
-www.google.iselect
 www.google.ismaili
 www.google.ist
 www.google.istanbul
@@ -21379,7 +21366,6 @@ www.kisscartoon.iq
 www.kisscartoon.ir
 www.kisscartoon.irish
 www.kisscartoon.is
-www.kisscartoon.iselect
 www.kisscartoon.ismaili
 www.kisscartoon.ist
 www.kisscartoon.istanbul
@@ -22391,8 +22377,6 @@ www.manifest.googlevideo.com
 www.mapbox.com
 www.mapquestapi.com
 www.maps-api-ssl.google.com
-www.maps-static.chitika.net
-www.maps.chitika.net
 www.maps.google.com
 www.maps.googleapis.com
 www.maps.gstatic.com
@@ -23041,7 +23025,6 @@ www.md.mp.microsoft.com.iq
 www.md.mp.microsoft.com.ir
 www.md.mp.microsoft.com.irish
 www.md.mp.microsoft.com.is
-www.md.mp.microsoft.com.iselect
 www.md.mp.microsoft.com.ismaili
 www.md.mp.microsoft.com.ist
 www.md.mp.microsoft.com.istanbul
@@ -24335,7 +24318,6 @@ www.prod.do.dsp.mp.microsoft.com
 www.products.office.com
 www.profile.getyounity.com
 www.profile.target.com
-www.promo.campaigndog.com
 www.promodj.com
 www.promotion.aliexpress.com
 www.promotions.newegg.com
@@ -24941,7 +24923,6 @@ www.vox-cdn.com
 www.vox.com
 www.voxmedia.com
 www.vr-ov-crl.thawte.com
-www.vswebapp.com
 www.vupload2.facebook.com
 www.vupload2.t.facebook.com
 www.vxvault.net
@@ -24950,13 +24931,13 @@ www.w.soundcloud.com
 www.w3.org
 www.wac.edgecastcdn.net
 www.wac.phicdn.net
-www.wahoha.com
 www.walgreens.com
 www.wallet.microsoft.com
 www.wallpaper.pandora.xiaomi.com
 www.wallrider.top
 www.wallst.com
 www.walmart.com
+www.wangbase.com
 www.washington.cbslocal.com
 www.washingtonpost.com
 www.watchvideo.us
@@ -25591,7 +25572,6 @@ www.wdcp.microsoft.iq
 www.wdcp.microsoft.ir
 www.wdcp.microsoft.irish
 www.wdcp.microsoft.is
-www.wdcp.microsoft.iselect
 www.wdcp.microsoft.ismaili
 www.wdcp.microsoft.ist
 www.wdcp.microsoft.istanbul
