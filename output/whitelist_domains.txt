@@ -1925,7 +1925,6 @@ bing.ru
 bing.se
 bit.ly
 bitbucket.org
-biters.io
 bitpay.com
 bizrate.com
 bleacherreport.com
@@ -2002,7 +2001,6 @@ calendar.google.com
 candycrushsoda.king.com
 captcha.su.baidu.com
 captive.apple.com
-caraflashandroid.com
 cardinalcommerce.com
 cars.com
 cbsi.com
@@ -2165,7 +2163,6 @@ costco.com
 count.ly
 coupon.aliexpress.com
 coupons.com
-courier-js.dallasnews.com
 cp76677.edgefcs.net
 cpms.spop10.ams.plex.bz
 cpms35.spop10.ams.plex.bz
@@ -2283,7 +2280,6 @@ dl.delivery.mp.microsoft.com
 dl.dropbox.com
 dl.dropboxusercontent.com
 dl.free.fr
-dl.go4up.com
 dl.google.com
 dlsrc.getmonero.org
 dlvr.it
@@ -2326,7 +2322,6 @@ dumpert.nl
 duosecurity.com
 dw.com.com
 dwatchseries.to
-dx-tv.com
 dynaimage.cdn.turner.com
 dynupdate.no-ip.com
 dzc-metrics.mzstatic.com
@@ -2418,7 +2413,6 @@ f.youku.com
 f1.g.mi.com
 f1.media.brightcove.com
 facebook.com
-facepunch.io
 familydollar.com
 fansonly.com
 fast.wistia.com
@@ -2443,14 +2437,12 @@ feodotracker.abuse.ch
 fg.v4.download.windowsupdate.com
 file.market.xiaomi.com
 filefactory.com
-fileflares.com
 filepicker.io
 files.edx.org
 files.freedownloadmanager.org
 files.graphiq.com
 files2.freedownloadmanager.org
 filesmonster.com
-filetitle.com
 filmweb.pl
 filmyhd.net
 filters.adtidy.org
@@ -2459,10 +2451,8 @@ finance.yahoo.com
 financialcontent.com
 financialpostcom.files.wordpress.com
 find.api.micloud.xiaomi.net
-findflac.com
 findnsave.com
 firstlook.org
-fisp.io
 flattr.com
 flickr.com
 fling.com
@@ -7239,7 +7229,6 @@ h-sdk.online-metrix.net
 h.beta.facebook.com
 h.facebook.com
 hackerone-user-content.com
-hackinformer.com
 hblock.molinero.dev
 hbogo.com
 hbogo.pl
@@ -9001,7 +8990,6 @@ labs.google.com
 lads.myspacecdn.com
 ladyfootlocker.com
 laposte.net
-last.fm
 lastfm-img2.akamaized.net
 lasvegas.cbslocal.com
 latimes.com
@@ -9009,7 +8997,6 @@ latimesblogs.latimes.com
 lcdn-locator-usnkq.apple.com.akadns.net
 lcdn-locator.apple.com.akadns.net
 league-funny.com
-legia.net
 leifsex.com
 lemon-ads.com
 lh3.google.com
@@ -11109,7 +11096,6 @@ redirector.googlevideo.com
 redirector.gvt1.com
 redsky.target.com
 reebok.com
-reevown.com
 referrer.disqus.com
 reklama5.mk
 release.theplatform.com
@@ -11261,7 +11247,6 @@ skimresources.com
 skyhook.sonarr.tv
 skype.com
 skypeecs-prod-usw-0-b.cloudapp.net
-skyroyale.io
 slashdot.org
 slate.com
 slickdeals.net
@@ -11286,7 +11271,6 @@ snippets.cdn.mozilla.net
 socialmedia.by
 sohu.com
 solidfiles.com
-solvettube.com
 someonewhocares.org
 soundcloud.com
 sourceforge.net
@@ -11441,7 +11425,6 @@ thebot.net
 thechive.com
 thefreethoughtproject.com
 thehill.com
-themarker.com
 themoviedb.com
 thenextweb.com
 thepiratebay.org
@@ -15210,7 +15193,6 @@ www.bing.ru
 www.bing.se
 www.bit.ly
 www.bitbucket.org
-www.biters.io
 www.bitpay.com
 www.bizrate.com
 www.bleacherreport.com
@@ -15287,7 +15269,6 @@ www.calendar.google.com
 www.candycrushsoda.king.com
 www.captcha.su.baidu.com
 www.captive.apple.com
-www.caraflashandroid.com
 www.cardinalcommerce.com
 www.cars.com
 www.cbsi.com
@@ -15450,7 +15431,6 @@ www.costco.com
 www.count.ly
 www.coupon.aliexpress.com
 www.coupons.com
-www.courier-js.dallasnews.com
 www.cp76677.edgefcs.net
 www.cpms.spop10.ams.plex.bz
 www.cpms35.spop10.ams.plex.bz
@@ -15568,7 +15548,6 @@ www.dl.delivery.mp.microsoft.com
 www.dl.dropbox.com
 www.dl.dropboxusercontent.com
 www.dl.free.fr
-www.dl.go4up.com
 www.dl.google.com
 www.dlsrc.getmonero.org
 www.dlvr.it
@@ -15611,7 +15590,6 @@ www.dumpert.nl
 www.duosecurity.com
 www.dw.com.com
 www.dwatchseries.to
-www.dx-tv.com
 www.dynaimage.cdn.turner.com
 www.dynupdate.no-ip.com
 www.dzc-metrics.mzstatic.com
@@ -15703,7 +15681,6 @@ www.f.youku.com
 www.f1.g.mi.com
 www.f1.media.brightcove.com
 www.facebook.com
-www.facepunch.io
 www.familydollar.com
 www.fansonly.com
 www.fast.wistia.com
@@ -15728,14 +15705,12 @@ www.feodotracker.abuse.ch
 www.fg.v4.download.windowsupdate.com
 www.file.market.xiaomi.com
 www.filefactory.com
-www.fileflares.com
 www.filepicker.io
 www.files.edx.org
 www.files.freedownloadmanager.org
 www.files.graphiq.com
 www.files2.freedownloadmanager.org
 www.filesmonster.com
-www.filetitle.com
 www.filmweb.pl
 www.filmyhd.net
 www.filters.adtidy.org
@@ -15744,10 +15719,8 @@ www.finance.yahoo.com
 www.financialcontent.com
 www.financialpostcom.files.wordpress.com
 www.find.api.micloud.xiaomi.net
-www.findflac.com
 www.findnsave.com
 www.firstlook.org
-www.fisp.io
 www.flattr.com
 www.flickr.com
 www.fling.com
@@ -20524,7 +20497,6 @@ www.h-sdk.online-metrix.net
 www.h.beta.facebook.com
 www.h.facebook.com
 www.hackerone-user-content.com
-www.hackinformer.com
 www.hblock.molinero.dev
 www.hbogo.com
 www.hbogo.pl
@@ -22286,7 +22258,6 @@ www.labs.google.com
 www.lads.myspacecdn.com
 www.ladyfootlocker.com
 www.laposte.net
-www.last.fm
 www.lastfm-img2.akamaized.net
 www.lasvegas.cbslocal.com
 www.latimes.com
@@ -22294,7 +22265,6 @@ www.latimesblogs.latimes.com
 www.lcdn-locator-usnkq.apple.com.akadns.net
 www.lcdn-locator.apple.com.akadns.net
 www.league-funny.com
-www.legia.net
 www.leifsex.com
 www.lemon-ads.com
 www.lh3.google.com
@@ -24394,7 +24364,6 @@ www.redirector.googlevideo.com
 www.redirector.gvt1.com
 www.redsky.target.com
 www.reebok.com
-www.reevown.com
 www.referrer.disqus.com
 www.reklama5.mk
 www.release.theplatform.com
@@ -24546,7 +24515,6 @@ www.skimresources.com
 www.skyhook.sonarr.tv
 www.skype.com
 www.skypeecs-prod-usw-0-b.cloudapp.net
-www.skyroyale.io
 www.slashdot.org
 www.slate.com
 www.slickdeals.net
@@ -24571,7 +24539,6 @@ www.snippets.cdn.mozilla.net
 www.socialmedia.by
 www.sohu.com
 www.solidfiles.com
-www.solvettube.com
 www.someonewhocares.org
 www.soundcloud.com
 www.sourceforge.net
@@ -24726,7 +24693,6 @@ www.thebot.net
 www.thechive.com
 www.thefreethoughtproject.com
 www.thehill.com
-www.themarker.com
 www.themoviedb.com
 www.thenextweb.com
 www.thepiratebay.org
