@@ -490,6 +490,7 @@
 *.md.mp.microsoft.com.games
 *.md.mp.microsoft.com.gap
 *.md.mp.microsoft.com.garden
+*.md.mp.microsoft.com.gay
 *.md.mp.microsoft.com.gb
 *.md.mp.microsoft.com.gbiz
 *.md.mp.microsoft.com.gd
@@ -1717,6 +1718,7 @@ anonymto.me
 anrdoezrs.net
 answers.com
 answers.microsoft.com
+answers.yahoo.com
 anvato.net
 aol.com
 aolcdn.com
@@ -1864,6 +1866,7 @@ bbci.co.uk
 bbs.archlinux.org
 bbs.pcbeta.com
 bcbits.com
+bcee.lu
 bedbathandbeyond.com
 bemywife.cc
 bestbuy.com
@@ -2172,12 +2175,14 @@ cy2.settings.data.microsoft.com.akadns.net
 cybercrime-tracker.net
 d.dropbox.com
 d.la1-c2-dfw.salesforceliveagent.com
+d1f8f9xcsvx3ha.cloudfront.net
 d1z2jf7jlzjs58.cloudfront.net
 d2a00f1ecz2xpl.cloudfront.net
 d2c87l0yth4zbw.cloudfront.net
 d2c8v52ll5s99u.cloudfront.net
 d2gatte9o95jao.cloudfront.net
 d3js.org
+d3orhvfyxudxxq.cloudfront.net
 d9hhrg4mnvzow.cloudfront.net
 d9jj3mjthpub.cloudfront.net
 dailymotion.com
@@ -2267,6 +2272,7 @@ do.co
 docs.bugsnag.com
 docs.google.com
 domainnamesales.com
+donorbox.org
 dotsub.com
 down.sandai.net
 download.cnet.com
@@ -3328,6 +3334,7 @@ google.co.game
 google.co.games
 google.co.gap
 google.co.garden
+google.co.gay
 google.co.gb
 google.co.gbiz
 google.co.gd
@@ -4861,6 +4868,7 @@ google.com.game
 google.com.games
 google.com.gap
 google.com.garden
+google.com.gay
 google.com.gb
 google.com.gbiz
 google.com.gd
@@ -6113,6 +6121,7 @@ google.game
 google.games
 google.gap
 google.garden
+google.gay
 google.gb
 google.gbiz
 google.gd
@@ -7167,6 +7176,7 @@ googletagservices.com
 googleusercontent.com
 googlevideo.com
 governmentjobs.com
+gp.se
 gpsfront.aliexpress.com
 gr-assets.com
 grapeshot.co.uk
@@ -7191,6 +7201,7 @@ gtms03.alicdn.com
 gtms04.alicdn.com
 guardian.co.uk
 guce.advertising.com
+guce.engadget.com
 guildwars2.com
 guru3d.com
 gz-lb1.internet.spanner.alipaydns.com
@@ -7229,6 +7240,7 @@ homestead.com
 honcode.ch
 hoopshype.com
 hootsuite.com
+horseanswerstoday.com
 hosts-file.net
 hostsfile.mine.nu
 hotjar.com
@@ -7890,6 +7902,7 @@ kisscartoon.game
 kisscartoon.games
 kisscartoon.gap
 kisscartoon.garden
+kisscartoon.gay
 kisscartoon.gb
 kisscartoon.gbiz
 kisscartoon.gd
@@ -9547,6 +9560,7 @@ md.mp.microsoft.com.game
 md.mp.microsoft.com.games
 md.mp.microsoft.com.gap
 md.mp.microsoft.com.garden
+md.mp.microsoft.com.gay
 md.mp.microsoft.com.gb
 md.mp.microsoft.com.gbiz
 md.mp.microsoft.com.gd
@@ -12093,6 +12107,7 @@ wdcp.microsoft.game
 wdcp.microsoft.games
 wdcp.microsoft.gap
 wdcp.microsoft.garden
+wdcp.microsoft.gay
 wdcp.microsoft.gb
 wdcp.microsoft.gbiz
 wdcp.microsoft.gd
@@ -13726,6 +13741,7 @@ www.*.md.mp.microsoft.com.game
 www.*.md.mp.microsoft.com.games
 www.*.md.mp.microsoft.com.gap
 www.*.md.mp.microsoft.com.garden
+www.*.md.mp.microsoft.com.gay
 www.*.md.mp.microsoft.com.gb
 www.*.md.mp.microsoft.com.gbiz
 www.*.md.mp.microsoft.com.gd
@@ -14953,6 +14969,7 @@ www.anonymto.me
 www.anrdoezrs.net
 www.answers.com
 www.answers.microsoft.com
+www.answers.yahoo.com
 www.anvato.net
 www.aol.com
 www.aolcdn.com
@@ -15100,6 +15117,7 @@ www.bbci.co.uk
 www.bbs.archlinux.org
 www.bbs.pcbeta.com
 www.bcbits.com
+www.bcee.lu
 www.bedbathandbeyond.com
 www.bemywife.cc
 www.bestbuy.com
@@ -15408,12 +15426,14 @@ www.cy2.settings.data.microsoft.com.akadns.net
 www.cybercrime-tracker.net
 www.d.dropbox.com
 www.d.la1-c2-dfw.salesforceliveagent.com
+www.d1f8f9xcsvx3ha.cloudfront.net
 www.d1z2jf7jlzjs58.cloudfront.net
 www.d2a00f1ecz2xpl.cloudfront.net
 www.d2c87l0yth4zbw.cloudfront.net
 www.d2c8v52ll5s99u.cloudfront.net
 www.d2gatte9o95jao.cloudfront.net
 www.d3js.org
+www.d3orhvfyxudxxq.cloudfront.net
 www.d9hhrg4mnvzow.cloudfront.net
 www.d9jj3mjthpub.cloudfront.net
 www.dailymotion.com
@@ -15503,6 +15523,7 @@ www.do.co
 www.docs.bugsnag.com
 www.docs.google.com
 www.domainnamesales.com
+www.donorbox.org
 www.dotsub.com
 www.down.sandai.net
 www.download.cnet.com
@@ -16564,6 +16585,7 @@ www.google.co.game
 www.google.co.games
 www.google.co.gap
 www.google.co.garden
+www.google.co.gay
 www.google.co.gb
 www.google.co.gbiz
 www.google.co.gd
@@ -18097,6 +18119,7 @@ www.google.com.game
 www.google.com.games
 www.google.com.gap
 www.google.com.garden
+www.google.com.gay
 www.google.com.gb
 www.google.com.gbiz
 www.google.com.gd
@@ -19349,6 +19372,7 @@ www.google.game
 www.google.games
 www.google.gap
 www.google.garden
+www.google.gay
 www.google.gb
 www.google.gbiz
 www.google.gd
@@ -20403,6 +20427,7 @@ www.googletagservices.com
 www.googleusercontent.com
 www.googlevideo.com
 www.governmentjobs.com
+www.gp.se
 www.gpsfront.aliexpress.com
 www.gr-assets.com
 www.grapeshot.co.uk
@@ -20427,6 +20452,7 @@ www.gtms03.alicdn.com
 www.gtms04.alicdn.com
 www.guardian.co.uk
 www.guce.advertising.com
+www.guce.engadget.com
 www.guildwars2.com
 www.guru3d.com
 www.gz-lb1.internet.spanner.alipaydns.com
@@ -20465,6 +20491,7 @@ www.homestead.com
 www.honcode.ch
 www.hoopshype.com
 www.hootsuite.com
+www.horseanswerstoday.com
 www.hosts-file.net
 www.hostsfile.mine.nu
 www.hotjar.com
@@ -21126,6 +21153,7 @@ www.kisscartoon.game
 www.kisscartoon.games
 www.kisscartoon.gap
 www.kisscartoon.garden
+www.kisscartoon.gay
 www.kisscartoon.gb
 www.kisscartoon.gbiz
 www.kisscartoon.gd
@@ -22783,6 +22811,7 @@ www.md.mp.microsoft.com.game
 www.md.mp.microsoft.com.games
 www.md.mp.microsoft.com.gap
 www.md.mp.microsoft.com.garden
+www.md.mp.microsoft.com.gay
 www.md.mp.microsoft.com.gb
 www.md.mp.microsoft.com.gbiz
 www.md.mp.microsoft.com.gd
@@ -25329,6 +25358,7 @@ www.wdcp.microsoft.game
 www.wdcp.microsoft.games
 www.wdcp.microsoft.gap
 www.wdcp.microsoft.garden
+www.wdcp.microsoft.gay
 www.wdcp.microsoft.gb
 www.wdcp.microsoft.gbiz
 www.wdcp.microsoft.gd
