@@ -1603,7 +1603,6 @@
 @@||ad.abchina.com^
 @@||ad.kazakinfo.com^
 @@||ad.ourgame.com^
-@@||ad3.l3go.com.br^
 @@||adaway.org^
 @@||adb.juvander.net^
 @@||adback.de^
@@ -1619,7 +1618,6 @@
 @@||adgarden.tech^
 @@||adguard.com^
 @@||adguardteam.github.io^
-@@||adhese.com^
 @@||adidas.com^
 @@||adm.fwmrm.net^
 @@||admedia.adgemini.de^
@@ -1633,10 +1631,8 @@
 @@||adonline.anonza.de^
 @@||adpartner.de^
 @@||ads.askgamblers.com^
-@@||ads.cvut.cz^
 @@||ads.fuckingmachines.com^
 @@||ads.id^
-@@||ads.microsoft.com^
 @@||ads.nipr.ac.jp^
 @@||ads.pinterest.com^
 @@||ads.talkbusiness.net^
@@ -1647,15 +1643,12 @@
 @@||adsense.woso.cn^
 @@||adsp.xunlei.com^
 @@||adstyle.com^
-@@||adsystem.pl^
 @@||adv.blogupp.com^
 @@||adv.cr^
 @@||adv.gg^
 @@||adv.welaika.com^
 @@||advanceautoparts.com^
-@@||advert.ee^
 @@||advert.kf5.com^
-@@||advertise.ru^
 @@||advertising-indonesia.id^
 @@||advertising.leboncoin.fr^
 @@||adwords.google.com^
@@ -2309,7 +2302,6 @@
 @@||e3489.cd.akamaiedge.net^
 @@||e3843.g.akamaiedge.net^
 @@||ea.com^
-@@||easyads.eu^
 @@||easybytez.com^
 @@||easylist-downloads.adblockplus.org^
 @@||easylist.to^
@@ -2360,7 +2352,6 @@
 @@||ethn.io^
 @@||etl.tindersparks.com^
 @@||eu-v20.events.data.microsoft.com^
-@@||euads.org^
 @@||eucookiedirective.com^
 @@||evcdn.com^
 @@||events.launchdarkly.com^
@@ -7234,7 +7225,6 @@
 @@||hm.com^
 @@||hockeyapp.net^
 @@||hollywoodlife.com^
-@@||homad.eu^
 @@||homedepot.com^
 @@||homestead.com^
 @@||honcode.ch^
@@ -7354,7 +7344,6 @@
 @@||instapaper.com^
 @@||int.whiteboard.microsoft.com^
 @@||intellicast.com^
-@@||intellitext.co^
 @@||intensedebate.com^
 @@||intercom.io^
 @@||interface.xl9.xunlei.com^
@@ -10884,7 +10873,6 @@
 @@||outlook.com^
 @@||outlook.live.com^
 @@||outlook.office365.com^
-@@||overture.london^
 @@||ow.ly^
 @@||p.ebaystatic.com^
 @@||p.imgur.com^
@@ -10904,6 +10892,7 @@
 @@||pastebin.com^
 @@||pastebin.org^
 @@||pay.google.com^
+@@||payload.cargocollective.com^
 @@||payments-amazon.com^
 @@||paypal.com^
 @@||paypal.com.edgekey.net^
@@ -10970,8 +10959,6 @@
 @@||pmcvariety.files.wordpress.com^
 @@||poll.fm^
 @@||polldaddy.com^
-@@||pop.advecs.com^
-@@||popad.co^
 @@||pornhub.com^
 @@||pornhubpremium.com^
 @@||portal.client.xunlei.com^
@@ -11073,7 +11060,6 @@
 @@||redsky.target.com^
 @@||reebok.com^
 @@||referrer.disqus.com^
-@@||reklama5.mk^
 @@||release.theplatform.com^
 @@||releases.flowplayer.org^
 @@||res.cloudinary.com^
@@ -11084,7 +11070,6 @@
 @@||resolver.msg.xiaomi.net^
 @@||resultspage.com^
 @@||returnpath.com^
-@@||revealads.com^
 @@||rewardstyle.com^
 @@||richmedia.coolespiele.com^
 @@||ris-prod-atm.trafficmanager.net^
@@ -14854,7 +14839,6 @@
 @@||www.ad.abchina.com^
 @@||www.ad.kazakinfo.com^
 @@||www.ad.ourgame.com^
-@@||www.ad3.l3go.com.br^
 @@||www.adaway.org^
 @@||www.adb.juvander.net^
 @@||www.adback.de^
@@ -14870,7 +14854,6 @@
 @@||www.adgarden.tech^
 @@||www.adguard.com^
 @@||www.adguardteam.github.io^
-@@||www.adhese.com^
 @@||www.adidas.com^
 @@||www.adm.fwmrm.net^
 @@||www.admedia.adgemini.de^
@@ -14884,10 +14867,8 @@
 @@||www.adonline.anonza.de^
 @@||www.adpartner.de^
 @@||www.ads.askgamblers.com^
-@@||www.ads.cvut.cz^
 @@||www.ads.fuckingmachines.com^
 @@||www.ads.id^
-@@||www.ads.microsoft.com^
 @@||www.ads.nipr.ac.jp^
 @@||www.ads.pinterest.com^
 @@||www.ads.talkbusiness.net^
@@ -14898,15 +14879,12 @@
 @@||www.adsense.woso.cn^
 @@||www.adsp.xunlei.com^
 @@||www.adstyle.com^
-@@||www.adsystem.pl^
 @@||www.adv.blogupp.com^
 @@||www.adv.cr^
 @@||www.adv.gg^
 @@||www.adv.welaika.com^
 @@||www.advanceautoparts.com^
-@@||www.advert.ee^
 @@||www.advert.kf5.com^
-@@||www.advertise.ru^
 @@||www.advertising-indonesia.id^
 @@||www.advertising.leboncoin.fr^
 @@||www.adwords.google.com^
@@ -15560,7 +15538,6 @@
 @@||www.e3489.cd.akamaiedge.net^
 @@||www.e3843.g.akamaiedge.net^
 @@||www.ea.com^
-@@||www.easyads.eu^
 @@||www.easybytez.com^
 @@||www.easylist-downloads.adblockplus.org^
 @@||www.easylist.to^
@@ -15611,7 +15588,6 @@
 @@||www.ethn.io^
 @@||www.etl.tindersparks.com^
 @@||www.eu-v20.events.data.microsoft.com^
-@@||www.euads.org^
 @@||www.eucookiedirective.com^
 @@||www.evcdn.com^
 @@||www.events.launchdarkly.com^
@@ -20485,7 +20461,6 @@
 @@||www.hm.com^
 @@||www.hockeyapp.net^
 @@||www.hollywoodlife.com^
-@@||www.homad.eu^
 @@||www.homedepot.com^
 @@||www.homestead.com^
 @@||www.honcode.ch^
@@ -20605,7 +20580,6 @@
 @@||www.instapaper.com^
 @@||www.int.whiteboard.microsoft.com^
 @@||www.intellicast.com^
-@@||www.intellitext.co^
 @@||www.intensedebate.com^
 @@||www.intercom.io^
 @@||www.interface.xl9.xunlei.com^
@@ -24135,7 +24109,6 @@
 @@||www.outlook.com^
 @@||www.outlook.live.com^
 @@||www.outlook.office365.com^
-@@||www.overture.london^
 @@||www.ow.ly^
 @@||www.p.ebaystatic.com^
 @@||www.p.imgur.com^
@@ -24155,6 +24128,7 @@
 @@||www.pastebin.com^
 @@||www.pastebin.org^
 @@||www.pay.google.com^
+@@||www.payload.cargocollective.com^
 @@||www.payments-amazon.com^
 @@||www.paypal.com^
 @@||www.paypal.com.edgekey.net^
@@ -24221,8 +24195,6 @@
 @@||www.pmcvariety.files.wordpress.com^
 @@||www.poll.fm^
 @@||www.polldaddy.com^
-@@||www.pop.advecs.com^
-@@||www.popad.co^
 @@||www.pornhub.com^
 @@||www.pornhubpremium.com^
 @@||www.portal.client.xunlei.com^
@@ -24324,7 +24296,6 @@
 @@||www.redsky.target.com^
 @@||www.reebok.com^
 @@||www.referrer.disqus.com^
-@@||www.reklama5.mk^
 @@||www.release.theplatform.com^
 @@||www.releases.flowplayer.org^
 @@||www.res.cloudinary.com^
@@ -24335,7 +24306,6 @@
 @@||www.resolver.msg.xiaomi.net^
 @@||www.resultspage.com^
 @@||www.returnpath.com^
-@@||www.revealads.com^
 @@||www.rewardstyle.com^
 @@||www.richmedia.coolespiele.com^
 @@||www.ris-prod-atm.trafficmanager.net^
