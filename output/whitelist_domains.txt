@@ -1911,6 +1911,7 @@ blogspot.l.googleusercontent.com
 bloomberg.com
 bloxcms.com
 blubroid.de
+bnet.163.com
 board.jdownloader.org
 bokser.org
 boldchat.com
@@ -10759,6 +10760,8 @@ no-ip.com
 node.plexapp.com
 nola.com
 nordvpn.com
+nos.netease.com
+nosdn.127.net
 notabug.org
 notebooksbilliger.de
 notify.xboxlive.com
@@ -15155,6 +15158,7 @@ www.blogspot.l.googleusercontent.com
 www.bloomberg.com
 www.bloxcms.com
 www.blubroid.de
+www.bnet.163.com
 www.board.jdownloader.org
 www.bokser.org
 www.boldchat.com
@@ -24003,6 +24007,8 @@ www.no-ip.com
 www.node.plexapp.com
 www.nola.com
 www.nordvpn.com
+www.nos.netease.com
+www.nosdn.127.net
 www.notabug.org
 www.notebooksbilliger.de
 www.notify.xboxlive.com
