@@ -26519,6 +26519,7 @@ www.xkms.xbolive.com
 www.xkms.xboxlive.com
 www.xl7xml.client.xunlei.com
 www.xmpp-server.l.google.com
+www.xn--allestrungen-9ib.de
 www.xsdownload.adobe.com
 www.xsts.auth.xboxlive.com
 www.xueshu.baidu.com
@@ -26609,6 +26610,7 @@ xkms.xbolive.com
 xkms.xboxlive.com
 xl7xml.client.xunlei.com
 xmpp-server.l.google.com
+xn--allestrungen-9ib.de
 xsdownload.adobe.com
 xsts.auth.xboxlive.com
 xueshu.baidu.com
