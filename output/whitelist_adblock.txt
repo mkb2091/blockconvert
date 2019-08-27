@@ -1598,6 +1598,7 @@
 @@||activate-sjc0.adobe.com^
 @@||activate.adobe.com^
 @@||activate.wip3.adobe.com^
+@@||activity.windows.com^
 @@||ad-ipd.sxp.smartclip.net^
 @@||ad.10010.com^
 @@||ad.abchina.com^
@@ -1916,6 +1917,7 @@
 @@||bokser.org^
 @@||boldchat.com^
 @@||bolly2tolly.net^
+@@||bolt.dropbox.com^
 @@||books.google.com^
 @@||bootstrapcdn.com^
 @@||boston.cbslocal.com^
@@ -1998,6 +2000,7 @@
 @@||cdn.gigya.commes.122.2o7.net^
 @@||cdn.gotraffic.net^
 @@||cdn.heapanalytics.com^
+@@||cdn.hometogo.net^
 @@||cdn.jscloudflare.com^
 @@||cdn.jsdelivr.net^
 @@||cdn.jwplayer.com^
@@ -2326,6 +2329,7 @@
 @@||edgesuite.net^
 @@||editmysite.com^
 @@||eds.xboxlive.com^
+@@||ehc.com^
 @@||elasticbeanstalk.com^
 @@||eltrafiko.com^
 @@||email.netlify.com^
@@ -14845,6 +14849,7 @@
 @@||www.activate-sjc0.adobe.com^
 @@||www.activate.adobe.com^
 @@||www.activate.wip3.adobe.com^
+@@||www.activity.windows.com^
 @@||www.ad-ipd.sxp.smartclip.net^
 @@||www.ad.10010.com^
 @@||www.ad.abchina.com^
@@ -15163,6 +15168,7 @@
 @@||www.bokser.org^
 @@||www.boldchat.com^
 @@||www.bolly2tolly.net^
+@@||www.bolt.dropbox.com^
 @@||www.books.google.com^
 @@||www.bootstrapcdn.com^
 @@||www.boston.cbslocal.com^
@@ -15245,6 +15251,7 @@
 @@||www.cdn.gigya.commes.122.2o7.net^
 @@||www.cdn.gotraffic.net^
 @@||www.cdn.heapanalytics.com^
+@@||www.cdn.hometogo.net^
 @@||www.cdn.jscloudflare.com^
 @@||www.cdn.jsdelivr.net^
 @@||www.cdn.jwplayer.com^
@@ -15573,6 +15580,7 @@
 @@||www.edgesuite.net^
 @@||www.editmysite.com^
 @@||www.eds.xboxlive.com^
+@@||www.ehc.com^
 @@||www.elasticbeanstalk.com^
 @@||www.eltrafiko.com^
 @@||www.email.netlify.com^
