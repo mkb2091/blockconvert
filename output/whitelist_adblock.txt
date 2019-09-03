@@ -374,7 +374,6 @@
 @@||*.md.mp.microsoft.com.dubai^
 @@||*.md.mp.microsoft.com.duck^
 @@||*.md.mp.microsoft.com.dunlop^
-@@||*.md.mp.microsoft.com.duns^
 @@||*.md.mp.microsoft.com.dupont^
 @@||*.md.mp.microsoft.com.durban^
 @@||*.md.mp.microsoft.com.dvag^
@@ -3214,7 +3213,6 @@
 @@||google.co.dubai^
 @@||google.co.duck^
 @@||google.co.dunlop^
-@@||google.co.duns^
 @@||google.co.dupont^
 @@||google.co.durban^
 @@||google.co.dvag^
@@ -4748,7 +4746,6 @@
 @@||google.com.dubai^
 @@||google.com.duck^
 @@||google.com.dunlop^
-@@||google.com.duns^
 @@||google.com.dupont^
 @@||google.com.durban^
 @@||google.com.dvag^
@@ -6001,7 +5998,6 @@
 @@||google.dubai^
 @@||google.duck^
 @@||google.dunlop^
-@@||google.duns^
 @@||google.dupont^
 @@||google.durban^
 @@||google.dvag^
@@ -7218,6 +7214,7 @@
 @@||help.apple.com.edgekey.net^
 @@||help.ui.xboxlive.com^
 @@||heraldsunnewscorpau.files.wordpress.com^
+@@||here.com^
 @@||herokuapp.com^
 @@||highcharts.com^
 @@||hiroservers.appspot.com^
@@ -7779,7 +7776,6 @@
 @@||kisscartoon.dubai^
 @@||kisscartoon.duck^
 @@||kisscartoon.dunlop^
-@@||kisscartoon.duns^
 @@||kisscartoon.dupont^
 @@||kisscartoon.durban^
 @@||kisscartoon.dvag^
@@ -9030,6 +9026,7 @@
 @@||luckyorange.com^
 @@||lwn.net^
 @@||m.bestofmedia.com^
+@@||m.facebook.com^
 @@||m.gitee.com^
 @@||m.hotmail.com^
 @@||m.media-amazon.com^
@@ -9437,7 +9434,6 @@
 @@||md.mp.microsoft.com.dubai^
 @@||md.mp.microsoft.com.duck^
 @@||md.mp.microsoft.com.dunlop^
-@@||md.mp.microsoft.com.duns^
 @@||md.mp.microsoft.com.dupont^
 @@||md.mp.microsoft.com.durban^
 @@||md.mp.microsoft.com.dvag^
@@ -11991,7 +11987,6 @@
 @@||wdcp.microsoft.dubai^
 @@||wdcp.microsoft.duck^
 @@||wdcp.microsoft.dunlop^
-@@||wdcp.microsoft.duns^
 @@||wdcp.microsoft.dupont^
 @@||wdcp.microsoft.durban^
 @@||wdcp.microsoft.dvag^
@@ -13625,7 +13620,6 @@
 @@||www.*.md.mp.microsoft.com.dubai^
 @@||www.*.md.mp.microsoft.com.duck^
 @@||www.*.md.mp.microsoft.com.dunlop^
-@@||www.*.md.mp.microsoft.com.duns^
 @@||www.*.md.mp.microsoft.com.dupont^
 @@||www.*.md.mp.microsoft.com.durban^
 @@||www.*.md.mp.microsoft.com.dvag^
@@ -16465,7 +16459,6 @@
 @@||www.google.co.dubai^
 @@||www.google.co.duck^
 @@||www.google.co.dunlop^
-@@||www.google.co.duns^
 @@||www.google.co.dupont^
 @@||www.google.co.durban^
 @@||www.google.co.dvag^
@@ -17999,7 +17992,6 @@
 @@||www.google.com.dubai^
 @@||www.google.com.duck^
 @@||www.google.com.dunlop^
-@@||www.google.com.duns^
 @@||www.google.com.dupont^
 @@||www.google.com.durban^
 @@||www.google.com.dvag^
@@ -19252,7 +19244,6 @@
 @@||www.google.dubai^
 @@||www.google.duck^
 @@||www.google.dunlop^
-@@||www.google.duns^
 @@||www.google.dupont^
 @@||www.google.durban^
 @@||www.google.dvag^
@@ -20469,6 +20460,7 @@
 @@||www.help.apple.com.edgekey.net^
 @@||www.help.ui.xboxlive.com^
 @@||www.heraldsunnewscorpau.files.wordpress.com^
+@@||www.here.com^
 @@||www.herokuapp.com^
 @@||www.highcharts.com^
 @@||www.hiroservers.appspot.com^
@@ -21030,7 +21022,6 @@
 @@||www.kisscartoon.dubai^
 @@||www.kisscartoon.duck^
 @@||www.kisscartoon.dunlop^
-@@||www.kisscartoon.duns^
 @@||www.kisscartoon.dupont^
 @@||www.kisscartoon.durban^
 @@||www.kisscartoon.dvag^
@@ -22281,6 +22272,7 @@
 @@||www.luckyorange.com^
 @@||www.lwn.net^
 @@||www.m.bestofmedia.com^
+@@||www.m.facebook.com^
 @@||www.m.gitee.com^
 @@||www.m.hotmail.com^
 @@||www.m.media-amazon.com^
@@ -22688,7 +22680,6 @@
 @@||www.md.mp.microsoft.com.dubai^
 @@||www.md.mp.microsoft.com.duck^
 @@||www.md.mp.microsoft.com.dunlop^
-@@||www.md.mp.microsoft.com.duns^
 @@||www.md.mp.microsoft.com.dupont^
 @@||www.md.mp.microsoft.com.durban^
 @@||www.md.mp.microsoft.com.dvag^
@@ -25242,7 +25233,6 @@
 @@||www.wdcp.microsoft.dubai^
 @@||www.wdcp.microsoft.duck^
 @@||www.wdcp.microsoft.dunlop^
-@@||www.wdcp.microsoft.duns^
 @@||www.wdcp.microsoft.dupont^
 @@||www.wdcp.microsoft.durban^
 @@||www.wdcp.microsoft.dvag^
