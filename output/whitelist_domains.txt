@@ -2220,6 +2220,8 @@ denverpost.com
 detectportal.firefox.com
 dev.twitter.com
 dev.virtualearth.net
+developer.twitter.com
+developers.facebook.com
 developers.google.com
 deviantart.com
 deviantart.net
@@ -15466,6 +15468,8 @@ www.denverpost.com
 www.detectportal.firefox.com
 www.dev.twitter.com
 www.dev.virtualearth.net
+www.developer.twitter.com
+www.developers.facebook.com
 www.developers.google.com
 www.deviantart.com
 www.deviantart.net
