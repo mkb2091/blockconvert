@@ -20,6 +20,7 @@
 *.windowsupdate.com
 *.wns.windows.com
 a-msedge.net
+activation.sls.microsoft.com
 adaway.org
 addons.mozilla.org
 adguard.com
@@ -40,7 +41,9 @@ baidu.com
 better.fyi
 bing.com
 bitbucket.org
+bitly.com
 blob.weather.microsoft.com
+blog.hubspot.com
 browser.pipe.aria.microsoft.com
 c-msedge.net
 candycrushsoda.king.com
@@ -84,6 +87,7 @@ easylist.to
 emdl.ws.microsoft.com
 evoke-windowsservices-tas.msedge.net
 facebook.com
+fast.fonts.net
 fe2.update.microsoft.com
 fe2.update.microsoft.com.akadns.net
 fe3.delivery.dsp.mp.microsoft.com.nsatc.net
@@ -92,6 +96,7 @@ feodotracker.abuse.ch
 files.freedownloadmanager.org
 files2.freedownloadmanager.org
 filtri-dns.ga
+flipboard.com
 forms.office.com
 fossbytes.com
 fs.microsoft.com
@@ -150,6 +155,7 @@ oem.twimg.com
 officeclient.microsoft.com
 ogs.google.com
 oneclient.sfx.ms
+onesignal.com
 onion.to
 online.jimmyjohns.com
 outlook.office365.com
@@ -173,9 +179,11 @@ ris.api.iris.microsoft.com.akadns.net
 s-msedge.net
 s.imgur.com
 s3.amazonaws.com
+safebrowsing.google.com
 scrapinghub.com
 search.msn.com
 searchenginejournal.com
+service.weather.microsoft.com
 settings-win.data.microsoft.com
 settings.data.microsoft.com
 sina.com.cn
@@ -202,6 +210,7 @@ tecmint.com
 telecommand.telemetry.microsoft.com.akadns.net
 thebot.net
 tile-service.weather.microsoft.com
+time.windows.com
 tlu.dl.delivery.mp.microsoft.com
 to-do.microsoft.com
 tracking.epicgames.com
@@ -266,6 +275,7 @@ www.ranker.com
 www.reddit.com
 www.similarweb.com
 www.squidblacklist.org
+www.toptenreviews.com
 www.travelocity.com
 www.vanityfair.com
 www.vmn.net

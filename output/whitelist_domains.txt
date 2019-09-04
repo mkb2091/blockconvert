@@ -1597,6 +1597,7 @@ activate-sea.adobe.com
 activate-sjc0.adobe.com
 activate.adobe.com
 activate.wip3.adobe.com
+activation.sls.microsoft.com
 activity.windows.com
 ad-ipd.sxp.smartclip.net
 ad.10010.com
@@ -1892,6 +1893,7 @@ bing.ru
 bing.se
 bit.ly
 bitbucket.org
+bitly.com
 bitpay.com
 bizrate.com
 bleacherreport.com
@@ -1900,6 +1902,7 @@ blob.weather.microsoft.com
 blocklist.kowabit.de
 blog.coinbase.com
 blog.csdn.net
+blog.hubspot.com
 blog.xuite.net
 blogblog.com
 blogger.com
@@ -2389,6 +2392,7 @@ f1.media.brightcove.com
 facebook.com
 familydollar.com
 fansonly.com
+fast.fonts.net
 fast.wistia.com
 fastly.net
 faucethub.io
@@ -2430,6 +2434,7 @@ firstlook.org
 flattr.com
 flickr.com
 fling.com
+flipboard.com
 flipcause.com
 flowplayer.org
 fls-na.amazon.com
@@ -10852,6 +10857,7 @@ omroep.nl
 onceux.unicornmedia.com
 oneclient.sfx.ms
 onedrive.live.com
+onesignal.com
 onet.pl
 onetag.mgr.consensu.org
 onion.to
@@ -11133,6 +11139,7 @@ sa-blacklist.stearns.org
 sa.symcb.com
 sacramento.cbslocal.com
 safe.txmblr.com
+safebrowsing.google.com
 safelinking.net
 salemove.com
 salesforce.com
@@ -11195,6 +11202,7 @@ seedingup.it
 segment.com
 sendgrid.net
 sendspace.com
+service.weather.microsoft.com
 services.pornhub.com
 services.sonarr.tv
 sessioncam.com
@@ -11425,6 +11433,7 @@ tile.thunderforest.com
 tile2.opencyclemap.org
 tiles.mapbox.com
 time.com
+time.windows.com
 timeinc.net
 tinypass.com
 tinypic.com
@@ -11447,6 +11456,7 @@ tomshardware.com
 tools.l.google.com
 tools.pingdom.com
 top-reklama.sk
+toptenreviews.com
 torbit.com
 torrentfreak.com
 townnews.com
@@ -14845,6 +14855,7 @@ www.activate-sea.adobe.com
 www.activate-sjc0.adobe.com
 www.activate.adobe.com
 www.activate.wip3.adobe.com
+www.activation.sls.microsoft.com
 www.activity.windows.com
 www.ad-ipd.sxp.smartclip.net
 www.ad.10010.com
@@ -15140,6 +15151,7 @@ www.bing.ru
 www.bing.se
 www.bit.ly
 www.bitbucket.org
+www.bitly.com
 www.bitpay.com
 www.bizrate.com
 www.bleacherreport.com
@@ -15148,6 +15160,7 @@ www.blob.weather.microsoft.com
 www.blocklist.kowabit.de
 www.blog.coinbase.com
 www.blog.csdn.net
+www.blog.hubspot.com
 www.blog.xuite.net
 www.blogblog.com
 www.blogger.com
@@ -15637,6 +15650,7 @@ www.f1.media.brightcove.com
 www.facebook.com
 www.familydollar.com
 www.fansonly.com
+www.fast.fonts.net
 www.fast.wistia.com
 www.fastly.net
 www.faucethub.io
@@ -15678,6 +15692,7 @@ www.firstlook.org
 www.flattr.com
 www.flickr.com
 www.fling.com
+www.flipboard.com
 www.flipcause.com
 www.flowplayer.org
 www.fls-na.amazon.com
@@ -24100,6 +24115,7 @@ www.omroep.nl
 www.onceux.unicornmedia.com
 www.oneclient.sfx.ms
 www.onedrive.live.com
+www.onesignal.com
 www.onet.pl
 www.onetag.mgr.consensu.org
 www.onion.to
@@ -24381,6 +24397,7 @@ www.sa-blacklist.stearns.org
 www.sa.symcb.com
 www.sacramento.cbslocal.com
 www.safe.txmblr.com
+www.safebrowsing.google.com
 www.safelinking.net
 www.salemove.com
 www.salesforce.com
@@ -24443,6 +24460,7 @@ www.seedingup.it
 www.segment.com
 www.sendgrid.net
 www.sendspace.com
+www.service.weather.microsoft.com
 www.services.pornhub.com
 www.services.sonarr.tv
 www.sessioncam.com
@@ -24673,6 +24691,7 @@ www.tile.thunderforest.com
 www.tile2.opencyclemap.org
 www.tiles.mapbox.com
 www.time.com
+www.time.windows.com
 www.timeinc.net
 www.tinypass.com
 www.tinypic.com
@@ -24695,6 +24714,7 @@ www.tomshardware.com
 www.tools.l.google.com
 www.tools.pingdom.com
 www.top-reklama.sk
+www.toptenreviews.com
 www.torbit.com
 www.torrentfreak.com
 www.townnews.com
