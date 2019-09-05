@@ -2221,6 +2221,7 @@ demo-staging.jifflenow.com
 demotywatory.pl
 denis-ovs.narod.ru
 denverpost.com
+desktop.google.com
 detectportal.firefox.com
 dev.twitter.com
 dev.virtualearth.net
@@ -9021,6 +9022,7 @@ login.cloudflarewarp.com
 login.live.com
 login.microsoftonline.com
 login.msa.akadns6.net
+login.windows.net
 logmein-gateway.com
 logmein.com
 logos.com
@@ -10772,6 +10774,7 @@ nos.netease.com
 nosdn.127.net
 notabug.org
 notebooksbilliger.de
+notifications.google.com
 notify.xboxlive.com
 notonlyporn.net
 npmcdn.com
@@ -11140,6 +11143,7 @@ sa-blacklist.stearns.org
 sa.symcb.com
 sacramento.cbslocal.com
 safe.txmblr.com
+safebrowsing-cache.google.com
 safebrowsing.google.com
 safelinking.net
 salemove.com
@@ -15480,6 +15484,7 @@ www.demo-staging.jifflenow.com
 www.demotywatory.pl
 www.denis-ovs.narod.ru
 www.denverpost.com
+www.desktop.google.com
 www.detectportal.firefox.com
 www.dev.twitter.com
 www.dev.virtualearth.net
@@ -22280,6 +22285,7 @@ www.login.cloudflarewarp.com
 www.login.live.com
 www.login.microsoftonline.com
 www.login.msa.akadns6.net
+www.login.windows.net
 www.logmein-gateway.com
 www.logmein.com
 www.logos.com
@@ -24031,6 +24037,7 @@ www.nos.netease.com
 www.nosdn.127.net
 www.notabug.org
 www.notebooksbilliger.de
+www.notifications.google.com
 www.notify.xboxlive.com
 www.notonlyporn.net
 www.npmcdn.com
@@ -24399,6 +24406,7 @@ www.sa-blacklist.stearns.org
 www.sa.symcb.com
 www.sacramento.cbslocal.com
 www.safe.txmblr.com
+www.safebrowsing-cache.google.com
 www.safebrowsing.google.com
 www.safelinking.net
 www.salemove.com

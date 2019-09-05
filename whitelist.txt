@@ -67,6 +67,7 @@ cy2.settings.data.microsoft.com.akadns.net
 cybercrime-tracker.net
 d2gatte9o95jao.cloudfront.net
 delivery.mp.microsoft.com
+desktop.google.com
 digicert.com
 displaycatalog.mp.microsoft.com
 disq.us
@@ -131,6 +132,7 @@ location-inference-westus.cloudapp.net
 location.services.mozilla.com
 login.live.com
 login.msa.akadns6.net
+login.windows.net
 mail.google.com
 maps.windows.com
 md.mp.microsoft.com.*
@@ -147,6 +149,7 @@ naver.com
 next-services.apps.microsoft.com
 nexusrules.officeapps.live.com
 notabug.org
+notifications.google.com
 ocation-inference-westus.cloudapp.net
 ocos-office365-s2s.msedge.ne
 ocos-office365-s2s.msedge.net
@@ -180,6 +183,7 @@ ris.api.iris.microsoft.com.akadns.net
 s-msedge.net
 s.imgur.com
 s3.amazonaws.com
+safebrowsing-cache.google.com
 safebrowsing.google.com
 scrapinghub.com
 search.msn.com
