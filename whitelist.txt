@@ -35,6 +35,7 @@ arc.msn.com.nsatc.net
 ars.smartscreen.microsoft.com
 au.download.windowsupdate.com
 auth.gfx.ms
+ay.gy
 b-graph.facebook.com
 b.akamaiedge.net
 baidu.com

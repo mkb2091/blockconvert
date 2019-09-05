@@ -1838,6 +1838,7 @@ avsforum.com
 ax.init.itunes.apple.com
 ax.itunes.apple.com
 ax.phobos.apple.com.edgesuite.net
+ay.gy
 azureedge.net
 b-api.facebook.com
 b-graph.facebook.com
@@ -15096,6 +15097,7 @@ www.avsforum.com
 www.ax.init.itunes.apple.com
 www.ax.itunes.apple.com
 www.ax.phobos.apple.com.edgesuite.net
+www.ay.gy
 www.azureedge.net
 www.b-api.facebook.com
 www.b-graph.facebook.com
