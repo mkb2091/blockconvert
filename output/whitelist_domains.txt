@@ -10612,6 +10612,7 @@ media.lidl.com
 media.nu.nl
 mediacorp-videos.akamaized.net
 mediacorp.112.2o7.net
+mediafire.com
 mediamarkt.at
 mediamarkt.de
 mediamarkt.es
@@ -23875,6 +23876,7 @@ www.media.lidl.com
 www.media.nu.nl
 www.mediacorp-videos.akamaized.net
 www.mediacorp.112.2o7.net
+www.mediafire.com
 www.mediamarkt.at
 www.mediamarkt.de
 www.mediamarkt.es

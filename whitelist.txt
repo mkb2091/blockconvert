@@ -136,6 +136,7 @@ login.windows.net
 mail.google.com
 maps.windows.com
 md.mp.microsoft.com.*
+mediafire.com
 mediaredirect.microsoft.com
 mine.nu
 mobile.twitter.com
