@@ -1657,6 +1657,7 @@ adwords.safi-gmbh.ch
 ae01.alicdn.com
 aeis.alicdn.com
 aeu.alicdn.com
+affirm.com
 aguse.jp
 ajax.aspnetcdn.com
 ajax.cloudflare.com
@@ -1794,6 +1795,7 @@ apt.sonarr.tv
 arc.msn.com
 arc.msn.com.nsatc.net
 arcgis.com
+arcgisonline.com
 archive.icann.org
 archive.org
 arcot.com
@@ -1901,6 +1903,7 @@ bleacherreport.com
 blizzard.com
 blob.weather.microsoft.com
 blocklist.kowabit.de
+blockstack.org
 blog.coinbase.com
 blog.csdn.net
 blog.hubspot.com
@@ -2274,6 +2277,7 @@ dnsotls-ds.metric.gstatic.com
 do.co
 docs.bugsnag.com
 docs.google.com
+documentcloud.org
 domainnamesales.com
 donorbox.org
 dotsub.com
@@ -2447,6 +2451,7 @@ fontawesome.com
 fontawesome.io
 fontdeck.com
 fonts.com
+fonts.google.com
 fonts.googleapis.com
 fonts.gstatic.com
 fonts.net
@@ -2549,6 +2554,7 @@ gfycat.com
 ggpht.com
 giant.gfycat.com
 gigaom.com
+gigya.com
 giphy.com
 gist.github.com
 git.io
@@ -13224,6 +13230,7 @@ windows.net
 windowsupdate.com
 windowsupdate.nsatc.net
 windowupdate.org
+windy.com
 winfuture.de
 winhelp2002.mvps.org
 wip3.adobe.com
@@ -14921,6 +14928,7 @@ www.adwords.safi-gmbh.ch
 www.ae01.alicdn.com
 www.aeis.alicdn.com
 www.aeu.alicdn.com
+www.affirm.com
 www.aguse.jp
 www.ajax.aspnetcdn.com
 www.ajax.cloudflare.com
@@ -15058,6 +15066,7 @@ www.apt.sonarr.tv
 www.arc.msn.com
 www.arc.msn.com.nsatc.net
 www.arcgis.com
+www.arcgisonline.com
 www.archive.icann.org
 www.archive.org
 www.arcot.com
@@ -15165,6 +15174,7 @@ www.bleacherreport.com
 www.blizzard.com
 www.blob.weather.microsoft.com
 www.blocklist.kowabit.de
+www.blockstack.org
 www.blog.coinbase.com
 www.blog.csdn.net
 www.blog.hubspot.com
@@ -15538,6 +15548,7 @@ www.dnsotls-ds.metric.gstatic.com
 www.do.co
 www.docs.bugsnag.com
 www.docs.google.com
+www.documentcloud.org
 www.domainnamesales.com
 www.donorbox.org
 www.dotsub.com
@@ -15711,6 +15722,7 @@ www.fontawesome.com
 www.fontawesome.io
 www.fontdeck.com
 www.fonts.com
+www.fonts.google.com
 www.fonts.googleapis.com
 www.fonts.gstatic.com
 www.fonts.net
@@ -15813,6 +15825,7 @@ www.gfycat.com
 www.ggpht.com
 www.giant.gfycat.com
 www.gigaom.com
+www.gigya.com
 www.giphy.com
 www.gist.github.com
 www.git.io
@@ -26488,6 +26501,7 @@ www.windows.net
 www.windowsupdate.com
 www.windowsupdate.nsatc.net
 www.windowupdate.org
+www.windy.com
 www.winfuture.de
 www.winhelp2002.mvps.org
 www.wip3.adobe.com
