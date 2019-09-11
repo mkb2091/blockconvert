@@ -819,7 +819,6 @@
 *.md.mp.microsoft.com.mo
 *.md.mp.microsoft.com.mobi
 *.md.mp.microsoft.com.mobile
-*.md.mp.microsoft.com.mobily
 *.md.mp.microsoft.com.moda
 *.md.mp.microsoft.com.moe
 *.md.mp.microsoft.com.moi
@@ -1454,7 +1453,6 @@
 *.md.mp.microsoft.com.xn--mgbah1a3hjkrd
 *.md.mp.microsoft.com.xn--mgbai9azgqp6j
 *.md.mp.microsoft.com.xn--mgbayh7gpa
-*.md.mp.microsoft.com.xn--mgbb9fbpob
 *.md.mp.microsoft.com.xn--mgbbh1a
 *.md.mp.microsoft.com.xn--mgbbh1a71e
 *.md.mp.microsoft.com.xn--mgbc0a9azcg
@@ -3673,7 +3671,6 @@ google.co.mn
 google.co.mo
 google.co.mobi
 google.co.mobile
-google.co.mobily
 google.co.moda
 google.co.moe
 google.co.moi
@@ -4308,7 +4305,6 @@ google.co.xn--mgbab2bd
 google.co.xn--mgbah1a3hjkrd
 google.co.xn--mgbai9azgqp6j
 google.co.xn--mgbayh7gpa
-google.co.xn--mgbb9fbpob
 google.co.xn--mgbbh1a
 google.co.xn--mgbbh1a71e
 google.co.xn--mgbc0a9azcg
@@ -5206,7 +5202,6 @@ google.com.mn
 google.com.mo
 google.com.mobi
 google.com.mobile
-google.com.mobily
 google.com.moda
 google.com.moe
 google.com.moi
@@ -5841,7 +5836,6 @@ google.com.xn--mgbab2bd
 google.com.xn--mgbah1a3hjkrd
 google.com.xn--mgbai9azgqp6j
 google.com.xn--mgbayh7gpa
-google.com.xn--mgbb9fbpob
 google.com.xn--mgbbh1a
 google.com.xn--mgbbh1a71e
 google.com.xn--mgbc0a9azcg
@@ -6458,7 +6452,6 @@ google.mn
 google.mo
 google.mobi
 google.mobile
-google.mobily
 google.moda
 google.moe
 google.moi
@@ -7094,7 +7087,6 @@ google.xn--mgbab2bd
 google.xn--mgbah1a3hjkrd
 google.xn--mgbai9azgqp6j
 google.xn--mgbayh7gpa
-google.xn--mgbb9fbpob
 google.xn--mgbbh1a
 google.xn--mgbbh1a71e
 google.xn--mgbc0a9azcg
@@ -8236,7 +8228,6 @@ kisscartoon.mn
 kisscartoon.mo
 kisscartoon.mobi
 kisscartoon.mobile
-kisscartoon.mobily
 kisscartoon.moda
 kisscartoon.moe
 kisscartoon.moi
@@ -8871,7 +8862,6 @@ kisscartoon.xn--mgbab2bd
 kisscartoon.xn--mgbah1a3hjkrd
 kisscartoon.xn--mgbai9azgqp6j
 kisscartoon.xn--mgbayh7gpa
-kisscartoon.xn--mgbb9fbpob
 kisscartoon.xn--mgbbh1a
 kisscartoon.xn--mgbbh1a71e
 kisscartoon.xn--mgbc0a9azcg
@@ -9895,7 +9885,6 @@ md.mp.microsoft.com.mn
 md.mp.microsoft.com.mo
 md.mp.microsoft.com.mobi
 md.mp.microsoft.com.mobile
-md.mp.microsoft.com.mobily
 md.mp.microsoft.com.moda
 md.mp.microsoft.com.moe
 md.mp.microsoft.com.moi
@@ -10530,7 +10519,6 @@ md.mp.microsoft.com.xn--mgbab2bd
 md.mp.microsoft.com.xn--mgbah1a3hjkrd
 md.mp.microsoft.com.xn--mgbai9azgqp6j
 md.mp.microsoft.com.xn--mgbayh7gpa
-md.mp.microsoft.com.xn--mgbb9fbpob
 md.mp.microsoft.com.xn--mgbbh1a
 md.mp.microsoft.com.xn--mgbbh1a71e
 md.mp.microsoft.com.xn--mgbc0a9azcg
@@ -12456,7 +12444,6 @@ wdcp.microsoft.mn
 wdcp.microsoft.mo
 wdcp.microsoft.mobi
 wdcp.microsoft.mobile
-wdcp.microsoft.mobily
 wdcp.microsoft.moda
 wdcp.microsoft.moe
 wdcp.microsoft.moi
@@ -13091,7 +13078,6 @@ wdcp.microsoft.xn--mgbab2bd
 wdcp.microsoft.xn--mgbah1a3hjkrd
 wdcp.microsoft.xn--mgbai9azgqp6j
 wdcp.microsoft.xn--mgbayh7gpa
-wdcp.microsoft.xn--mgbb9fbpob
 wdcp.microsoft.xn--mgbbh1a
 wdcp.microsoft.xn--mgbbh1a71e
 wdcp.microsoft.xn--mgbc0a9azcg
@@ -14090,7 +14076,6 @@ www.*.md.mp.microsoft.com.mn
 www.*.md.mp.microsoft.com.mo
 www.*.md.mp.microsoft.com.mobi
 www.*.md.mp.microsoft.com.mobile
-www.*.md.mp.microsoft.com.mobily
 www.*.md.mp.microsoft.com.moda
 www.*.md.mp.microsoft.com.moe
 www.*.md.mp.microsoft.com.moi
@@ -14725,7 +14710,6 @@ www.*.md.mp.microsoft.com.xn--mgbab2bd
 www.*.md.mp.microsoft.com.xn--mgbah1a3hjkrd
 www.*.md.mp.microsoft.com.xn--mgbai9azgqp6j
 www.*.md.mp.microsoft.com.xn--mgbayh7gpa
-www.*.md.mp.microsoft.com.xn--mgbb9fbpob
 www.*.md.mp.microsoft.com.xn--mgbbh1a
 www.*.md.mp.microsoft.com.xn--mgbbh1a71e
 www.*.md.mp.microsoft.com.xn--mgbc0a9azcg
@@ -16944,7 +16928,6 @@ www.google.co.mn
 www.google.co.mo
 www.google.co.mobi
 www.google.co.mobile
-www.google.co.mobily
 www.google.co.moda
 www.google.co.moe
 www.google.co.moi
@@ -17579,7 +17562,6 @@ www.google.co.xn--mgbab2bd
 www.google.co.xn--mgbah1a3hjkrd
 www.google.co.xn--mgbai9azgqp6j
 www.google.co.xn--mgbayh7gpa
-www.google.co.xn--mgbb9fbpob
 www.google.co.xn--mgbbh1a
 www.google.co.xn--mgbbh1a71e
 www.google.co.xn--mgbc0a9azcg
@@ -18477,7 +18459,6 @@ www.google.com.mn
 www.google.com.mo
 www.google.com.mobi
 www.google.com.mobile
-www.google.com.mobily
 www.google.com.moda
 www.google.com.moe
 www.google.com.moi
@@ -19112,7 +19093,6 @@ www.google.com.xn--mgbab2bd
 www.google.com.xn--mgbah1a3hjkrd
 www.google.com.xn--mgbai9azgqp6j
 www.google.com.xn--mgbayh7gpa
-www.google.com.xn--mgbb9fbpob
 www.google.com.xn--mgbbh1a
 www.google.com.xn--mgbbh1a71e
 www.google.com.xn--mgbc0a9azcg
@@ -19729,7 +19709,6 @@ www.google.mn
 www.google.mo
 www.google.mobi
 www.google.mobile
-www.google.mobily
 www.google.moda
 www.google.moe
 www.google.moi
@@ -20365,7 +20344,6 @@ www.google.xn--mgbab2bd
 www.google.xn--mgbah1a3hjkrd
 www.google.xn--mgbai9azgqp6j
 www.google.xn--mgbayh7gpa
-www.google.xn--mgbb9fbpob
 www.google.xn--mgbbh1a
 www.google.xn--mgbbh1a71e
 www.google.xn--mgbc0a9azcg
@@ -21507,7 +21485,6 @@ www.kisscartoon.mn
 www.kisscartoon.mo
 www.kisscartoon.mobi
 www.kisscartoon.mobile
-www.kisscartoon.mobily
 www.kisscartoon.moda
 www.kisscartoon.moe
 www.kisscartoon.moi
@@ -22142,7 +22119,6 @@ www.kisscartoon.xn--mgbab2bd
 www.kisscartoon.xn--mgbah1a3hjkrd
 www.kisscartoon.xn--mgbai9azgqp6j
 www.kisscartoon.xn--mgbayh7gpa
-www.kisscartoon.xn--mgbb9fbpob
 www.kisscartoon.xn--mgbbh1a
 www.kisscartoon.xn--mgbbh1a71e
 www.kisscartoon.xn--mgbc0a9azcg
@@ -23166,7 +23142,6 @@ www.md.mp.microsoft.com.mn
 www.md.mp.microsoft.com.mo
 www.md.mp.microsoft.com.mobi
 www.md.mp.microsoft.com.mobile
-www.md.mp.microsoft.com.mobily
 www.md.mp.microsoft.com.moda
 www.md.mp.microsoft.com.moe
 www.md.mp.microsoft.com.moi
@@ -23801,7 +23776,6 @@ www.md.mp.microsoft.com.xn--mgbab2bd
 www.md.mp.microsoft.com.xn--mgbah1a3hjkrd
 www.md.mp.microsoft.com.xn--mgbai9azgqp6j
 www.md.mp.microsoft.com.xn--mgbayh7gpa
-www.md.mp.microsoft.com.xn--mgbb9fbpob
 www.md.mp.microsoft.com.xn--mgbbh1a
 www.md.mp.microsoft.com.xn--mgbbh1a71e
 www.md.mp.microsoft.com.xn--mgbc0a9azcg
@@ -25727,7 +25701,6 @@ www.wdcp.microsoft.mn
 www.wdcp.microsoft.mo
 www.wdcp.microsoft.mobi
 www.wdcp.microsoft.mobile
-www.wdcp.microsoft.mobily
 www.wdcp.microsoft.moda
 www.wdcp.microsoft.moe
 www.wdcp.microsoft.moi
@@ -26362,7 +26335,6 @@ www.wdcp.microsoft.xn--mgbab2bd
 www.wdcp.microsoft.xn--mgbah1a3hjkrd
 www.wdcp.microsoft.xn--mgbai9azgqp6j
 www.wdcp.microsoft.xn--mgbayh7gpa
-www.wdcp.microsoft.xn--mgbb9fbpob
 www.wdcp.microsoft.xn--mgbbh1a
 www.wdcp.microsoft.xn--mgbbh1a71e
 www.wdcp.microsoft.xn--mgbc0a9azcg
