@@ -8989,6 +8989,7 @@ limited-prod.giphy.map.fastly.net
 limtu.ifmo.ru
 linkedin.com
 links.iterable.com
+linktr.ee
 linkwithin.com
 list-manage.com
 lithium.facebook.com
@@ -22246,6 +22247,7 @@ www.limited-prod.giphy.map.fastly.net
 www.limtu.ifmo.ru
 www.linkedin.com
 www.links.iterable.com
+www.linktr.ee
 www.linkwithin.com
 www.list-manage.com
 www.lithium.facebook.com
