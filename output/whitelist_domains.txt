@@ -8967,6 +8967,7 @@ labs.google.com
 lads.myspacecdn.com
 ladyfootlocker.com
 laposte.net
+larati.net
 lastfm-img2.akamaized.net
 lasvegas.cbslocal.com
 latimes.com
@@ -22232,6 +22233,7 @@ www.labs.google.com
 www.lads.myspacecdn.com
 www.ladyfootlocker.com
 www.laposte.net
+www.larati.net
 www.lastfm-img2.akamaized.net
 www.lasvegas.cbslocal.com
 www.latimes.com
