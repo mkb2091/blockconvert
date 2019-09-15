@@ -11480,6 +11480,7 @@
 @@||traffic.libsyn.com^
 @@||trafficrouter.io^
 @@||trailers.apple.com^
+@@||transfer.sh^
 @@||translate.google.com^
 @@||translate.googleapis.com^
 @@||travel.latimes.com^
@@ -24746,6 +24747,7 @@
 @@||www.traffic.libsyn.com^
 @@||www.trafficrouter.io^
 @@||www.trailers.apple.com^
+@@||www.transfer.sh^
 @@||www.translate.google.com^
 @@||www.translate.googleapis.com^
 @@||www.travel.latimes.com^

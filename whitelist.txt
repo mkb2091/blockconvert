@@ -222,6 +222,7 @@ time.windows.com
 tlu.dl.delivery.mp.microsoft.com
 to-do.microsoft.com
 tracking.epicgames.com
+transfer.sh
 tsfe.trafficshaping.dsp.mp.microsoft.com
 unitedstates.smartscreen-prod.microsoft.com
 update.microsoft.com
