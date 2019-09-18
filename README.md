@@ -36,6 +36,8 @@ Hosts file format: https://raw.githubusercontent.com/mkb2091/blockconvert/master
 
 Domain list: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.txt
 
+Blocked IP address list: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/ip_blocklist.txt
+
 DNS Response Policy Zone(RPZ) format: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz
 
 As well as generating blocklists, this project also generates whitelists which are used in the process. If you maintain your own blocklist, you may find one of the following whitelists useful(assuming your project is compatible with GPLv3):
