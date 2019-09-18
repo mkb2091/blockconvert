@@ -1612,6 +1612,7 @@
 @@||adcdn.pingan.com^
 @@||adcity.tech^
 @@||adcolo.com^
+@@||add0n.com^
 @@||addon.lidl.de^
 @@||addons.mozilla.org^
 @@||adfox.ru^
@@ -1729,6 +1730,7 @@
 @@||api-v3.tinypass.com^
 @@||api.account.xiaomi.com^
 @@||api.ads.tvb.com^
+@@||api.b.hatena.ne.jp^
 @@||api.chat.xiaomi.net^
 @@||api.cloudflareapps.com^
 @@||api.coinbase.com^
@@ -1845,6 +1847,7 @@
 @@||b-graph.facebook.com^
 @@||b-www.facebook.com^
 @@||b.akamaiedge.net^
+@@||b.hatena.ne.jp^
 @@||bac-assets.com^
 @@||baconredirects-elb-eyweax7fhr0v-300945382.us-east-1.elb.amazonaws.com^
 @@||baidu.com^
@@ -14879,6 +14882,7 @@
 @@||www.adcdn.pingan.com^
 @@||www.adcity.tech^
 @@||www.adcolo.com^
+@@||www.add0n.com^
 @@||www.addon.lidl.de^
 @@||www.addons.mozilla.org^
 @@||www.adfox.ru^
@@ -14996,6 +15000,7 @@
 @@||www.api-v3.tinypass.com^
 @@||www.api.account.xiaomi.com^
 @@||www.api.ads.tvb.com^
+@@||www.api.b.hatena.ne.jp^
 @@||www.api.chat.xiaomi.net^
 @@||www.api.cloudflareapps.com^
 @@||www.api.coinbase.com^
@@ -15112,6 +15117,7 @@
 @@||www.b-graph.facebook.com^
 @@||www.b-www.facebook.com^
 @@||www.b.akamaiedge.net^
+@@||www.b.hatena.ne.jp^
 @@||www.bac-assets.com^
 @@||www.baconredirects-elb-eyweax7fhr0v-300945382.us-east-1.elb.amazonaws.com^
 @@||www.baidu.com^

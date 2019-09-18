@@ -1,4 +1,3 @@
-add0n.com
 *.a-msedge.net
 *.b.akamaiedge.net
 *.c-msedge.net
@@ -23,6 +22,7 @@ add0n.com
 a-msedge.net
 activation.sls.microsoft.com
 adaway.org
+add0n.com
 addons.mozilla.org
 adguard.com
 adguardteam.github.io
