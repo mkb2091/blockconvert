@@ -58,10 +58,15 @@ def main():
     blocklist.clean(True)
     print('Cleaned list(%ss)' % (time.time() - start))
     start = time.time()
+    blocklist.title = 'BlockConvert'
+    blocklist.expires = '1 days'
+    blocklist.homepage = 'https://github.com/mkb2091/blockconvert'
+    blocklist.license = 'GPL-3.0'
     for (path, func) in [('domains.txt', blocklist.to_domain_list),
                          ('adblock.txt', blocklist.to_adblock),
                          ('hosts.txt', blocklist.to_hosts),
                          ('domains.rpz', blocklist.to_rpz),
+                         ('ip_blocklist.txt', blocklist.to_ip_blocklist),
                          ('whitelist_domains.txt', blocklist.to_domain_whitelist),
                          ('whitelist_adblock.txt', blocklist.to_adblock_whitelist),
                          ]:

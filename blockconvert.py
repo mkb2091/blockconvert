@@ -8,9 +8,21 @@ import dns_check
 import build_regex
 import get_subdomains
 
+ADBLOCK_PLUS_HEADER = '''[Adblock Plus 2.0]
+! Version: {version}
+! Title: {title}
+! Last modified: {last_modified}
+! Expires: {expires} (update frequency)
+! Homepage: {homepage}
+! Licence: {license}
+!
+!-----------------------Filters-----------------------!
+'''
+
 class BlockList():
     def __init__(self, dns_check_threads=40):
         self.blacklist = set()
+        self.ip_blocklist = set()
         self.whitelist = set()
         self.REGEX = build_regex.REGEX
         self.DOMAIN_REGEX = build_regex.DOMAIN_REGEX
@@ -19,6 +31,10 @@ class BlockList():
         self.URL_REGEX = build_regex.URL_REGEX
         self.dns_check_threads = max(1, dns_check_threads)
         self.dns = dns_check.DNSChecker()
+        self.title = ''
+        self.expires = '1 days'
+        self.homepage = ''
+        self.license = ''
 
     def add_file(self, contents, is_whitelist=False, match_url=False):
         data = contents.lower()
@@ -76,6 +92,8 @@ class BlockList():
                 if self.IP_REGEX.fullmatch(item):
                     ips.append(item)
             if ips:
+                if filter_list is self.blacklist:
+                    self.ip_blocklist = ips
                 for ip in ips:
                     filter_list.remove(ip)
                 if do_reverse_dns:
@@ -166,11 +184,21 @@ class BlockList():
     def to_domain_list(self):
         return '\n'.join(sorted(self.blacklist))
     def to_adblock(self):
-        return '\n'.join(['||%s^' % i for i in sorted(self.blacklist)])
+        header = ADBLOCK_PLUS_HEADER.format(
+            version=time.strftime('%d-%b-%Y-%H-%M'),
+            title=self.title,
+            last_modified=time.strftime('%d %b %Y %H:%M UTC'),
+            expires=self.expires,
+            homepage=self.homepage,
+            license=self.license)
+        domains = list(self.blacklist) + list(self.ip_blocklist)
+        return header + '\n'.join(['||%s^' % i for i in sorted(domains)])
     def to_hosts(self):
         return '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blacklist)])
     def to_rpz(self):
         return '\n'.join(['%s CNAME .' % i for i in sorted(self.blacklist)])
+    def to_ip_blocklist(self):
+        return '\n'.join(sorted(self.ip_blocklist))
     def to_domain_whitelist(self):
         return '\n'.join(sorted(self.whitelist))
     def to_adblock_whitelist(self):
