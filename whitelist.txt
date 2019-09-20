@@ -1,3 +1,4 @@
+24timezones.com
 *.a-msedge.net
 *.b.akamaiedge.net
 *.c-msedge.net
