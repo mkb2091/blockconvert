@@ -189,6 +189,7 @@ ris.api.iris.microsoft.com
 ris.api.iris.microsoft.com.akadns.net
 s-msedge.net
 s.imgur.com
+s3-us-west-1.amazonaws.com
 s3.amazonaws.com
 safebrowsing-cache.google.com
 safebrowsing.google.com

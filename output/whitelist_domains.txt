@@ -11143,6 +11143,7 @@ s2.symcb.com
 s2.wp.com
 s2.youtube.com
 s3-1.amazonaws.com
+s3-us-west-1.amazonaws.com
 s3.amazonaws.com
 s3.graphiq.com
 s3.symcb.com
@@ -24416,6 +24417,7 @@ www.s2.symcb.com
 www.s2.wp.com
 www.s2.youtube.com
 www.s3-1.amazonaws.com
+www.s3-us-west-1.amazonaws.com
 www.s3.amazonaws.com
 www.s3.graphiq.com
 www.s3.symcb.com
