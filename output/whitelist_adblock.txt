@@ -1560,6 +1560,7 @@
 @@||2-edge-chat.facebook.com^
 @@||2.android.pool.ntp.org^
 @@||2121.club^
+@@||24timezones.com^
 @@||2shared.com^
 @@||3-edge-chat.facebook.com^
 @@||3dns-2.adobe.com^
@@ -14832,6 +14833,7 @@
 @@||www.2-edge-chat.facebook.com^
 @@||www.2.android.pool.ntp.org^
 @@||www.2121.club^
+@@||www.24timezones.com^
 @@||www.2shared.com^
 @@||www.3-edge-chat.facebook.com^
 @@||www.3dns-2.adobe.com^
