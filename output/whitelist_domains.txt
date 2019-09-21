@@ -1709,6 +1709,7 @@ analytics.twitter.com
 ancestry.com
 android.clients.google.com
 android.l.google.com
+androidauthority.com
 androidforums.com
 angularjs.org
 anonymto.me
@@ -14984,6 +14985,7 @@ www.analytics.twitter.com
 www.ancestry.com
 www.android.clients.google.com
 www.android.l.google.com
+www.androidauthority.com
 www.androidforums.com
 www.angularjs.org
 www.anonymto.me
