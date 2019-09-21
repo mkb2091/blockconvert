@@ -263,6 +263,7 @@ wscont2.apps.microsoft.com
 www.alexa.com
 www.amazon.com
 www.answers.com
+www.binarydefense.com
 www.bing.com
 www.cnet.com
 www.digicert.com

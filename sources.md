@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 622730 blocked domains in each of the generated filter lists
+Theres are 624973 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -55,6 +55,7 @@ Link|Author|Expires|License|Type
 [EasyList Czech and Slovak filter list](https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt)|tomasko126, Aslanex, vobruba-martin, Moskoe, Fanboy|4.0 hours|CC-BY-SA-4.0|Blacklist
 [EasyList China](https://easylist-downloads.adblockplus.org/easylistchina.txt)|-|4.0 days|GPLv3|Blacklist
 [DataMaster-Android-AdBlock-Hosts](https://raw.githubusercontent.com/DataMaster-2501/DataMaster-Android-AdBlock-Hosts/master/hosts)|https://github.com/DataMaster-2501|1.0 days|GPLv3|Blacklist
+[Binary Defense Banlist](https://www.binarydefense.com/banlist.txt)|-|1.0 days|Public use only|Blacklist
 [Better content blocking rules](https://better.fyi/blockerList.txt)|-|1.0 days|CC-BY-SA-4.0|Blacklist
 [Basic tracking list by Disconnect](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)|-|1.0 days|GPLv3|Blacklist
 [BarbBlock](https://ssl.bblck.me/blacklists/domain-list.txt)|-|1.0 days|MIT|Blacklist
