@@ -7414,6 +7414,8 @@
 @@||jwpltx.com^
 @@||kaltura.com^
 @@||kampyle.com^
+@@||kaspersky.com^
+@@||kasperskycontenthub.com^
 @@||kataweb.it^
 @@||katowice.tvp.pl^
 @@||kcsoftwares.com^
@@ -20697,6 +20699,8 @@
 @@||www.jwpltx.com^
 @@||www.kaltura.com^
 @@||www.kampyle.com^
+@@||www.kaspersky.com^
+@@||www.kasperskycontenthub.com^
 @@||www.kataweb.it^
 @@||www.katowice.tvp.pl^
 @@||www.kcsoftwares.com^
