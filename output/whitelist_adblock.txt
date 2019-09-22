@@ -303,6 +303,7 @@
 @@||*.md.mp.microsoft.com.coupon^
 @@||*.md.mp.microsoft.com.coupons^
 @@||*.md.mp.microsoft.com.courses^
+@@||*.md.mp.microsoft.com.cpa^
 @@||*.md.mp.microsoft.com.cr^
 @@||*.md.mp.microsoft.com.credit^
 @@||*.md.mp.microsoft.com.creditcard^
@@ -3163,6 +3164,7 @@
 @@||google.co.coupon^
 @@||google.co.coupons^
 @@||google.co.courses^
+@@||google.co.cpa^
 @@||google.co.cr^
 @@||google.co.credit^
 @@||google.co.creditcard^
@@ -4695,6 +4697,7 @@
 @@||google.com.coupon^
 @@||google.com.coupons^
 @@||google.com.courses^
+@@||google.com.cpa^
 @@||google.com.cr^
 @@||google.com.credit^
 @@||google.com.creditcard^
@@ -5946,6 +5949,7 @@
 @@||google.coupon^
 @@||google.coupons^
 @@||google.courses^
+@@||google.cpa^
 @@||google.cr^
 @@||google.credit^
 @@||google.creditcard^
@@ -7724,6 +7728,7 @@
 @@||kisscartoon.coupon^
 @@||kisscartoon.coupons^
 @@||kisscartoon.courses^
+@@||kisscartoon.cpa^
 @@||kisscartoon.cr^
 @@||kisscartoon.credit^
 @@||kisscartoon.creditcard^
@@ -9384,6 +9389,7 @@
 @@||md.mp.microsoft.com.coupon^
 @@||md.mp.microsoft.com.coupons^
 @@||md.mp.microsoft.com.courses^
+@@||md.mp.microsoft.com.cpa^
 @@||md.mp.microsoft.com.cr^
 @@||md.mp.microsoft.com.credit^
 @@||md.mp.microsoft.com.creditcard^
@@ -11946,6 +11952,7 @@
 @@||wdcp.microsoft.coupon^
 @@||wdcp.microsoft.coupons^
 @@||wdcp.microsoft.courses^
+@@||wdcp.microsoft.cpa^
 @@||wdcp.microsoft.cr^
 @@||wdcp.microsoft.credit^
 @@||wdcp.microsoft.creditcard^
@@ -13579,6 +13586,7 @@
 @@||www.*.md.mp.microsoft.com.coupon^
 @@||www.*.md.mp.microsoft.com.coupons^
 @@||www.*.md.mp.microsoft.com.courses^
+@@||www.*.md.mp.microsoft.com.cpa^
 @@||www.*.md.mp.microsoft.com.cr^
 @@||www.*.md.mp.microsoft.com.credit^
 @@||www.*.md.mp.microsoft.com.creditcard^
@@ -16439,6 +16447,7 @@
 @@||www.google.co.coupon^
 @@||www.google.co.coupons^
 @@||www.google.co.courses^
+@@||www.google.co.cpa^
 @@||www.google.co.cr^
 @@||www.google.co.credit^
 @@||www.google.co.creditcard^
@@ -17971,6 +17980,7 @@
 @@||www.google.com.coupon^
 @@||www.google.com.coupons^
 @@||www.google.com.courses^
+@@||www.google.com.cpa^
 @@||www.google.com.cr^
 @@||www.google.com.credit^
 @@||www.google.com.creditcard^
@@ -19222,6 +19232,7 @@
 @@||www.google.coupon^
 @@||www.google.coupons^
 @@||www.google.courses^
+@@||www.google.cpa^
 @@||www.google.cr^
 @@||www.google.credit^
 @@||www.google.creditcard^
@@ -21000,6 +21011,7 @@
 @@||www.kisscartoon.coupon^
 @@||www.kisscartoon.coupons^
 @@||www.kisscartoon.courses^
+@@||www.kisscartoon.cpa^
 @@||www.kisscartoon.cr^
 @@||www.kisscartoon.credit^
 @@||www.kisscartoon.creditcard^
@@ -22660,6 +22672,7 @@
 @@||www.md.mp.microsoft.com.coupon^
 @@||www.md.mp.microsoft.com.coupons^
 @@||www.md.mp.microsoft.com.courses^
+@@||www.md.mp.microsoft.com.cpa^
 @@||www.md.mp.microsoft.com.cr^
 @@||www.md.mp.microsoft.com.credit^
 @@||www.md.mp.microsoft.com.creditcard^
@@ -25222,6 +25235,7 @@
 @@||www.wdcp.microsoft.coupon^
 @@||www.wdcp.microsoft.coupons^
 @@||www.wdcp.microsoft.courses^
+@@||www.wdcp.microsoft.cpa^
 @@||www.wdcp.microsoft.cr^
 @@||www.wdcp.microsoft.credit^
 @@||www.wdcp.microsoft.creditcard^
