@@ -28,6 +28,7 @@ addons.mozilla.org
 adguard.com
 adguardteam.github.io
 aftership.com
+aka.ms
 aliexpress.com
 androidauthority.com
 answers.com
@@ -287,6 +288,7 @@ www.malwaredomainlist.com
 www.msftconnecttest.com
 www.namecheap.com
 www.orbitz.com
+www.pcmatic.com
 www.phishtank.com
 www.privateinternetaccess.com
 www.ranker.com

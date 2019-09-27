@@ -1666,6 +1666,7 @@ ajax.aspnetcdn.com
 ajax.cloudflare.com
 ajax.googleapis.com
 ak.c.ooyala.com
+aka.ms
 akadns.net
 akamai.net
 akamaiedge.net
@@ -10954,6 +10955,7 @@ paypalobjects.com
 pbs.twimg.com
 pc.xunlei.com
 pcbeta.com
+pcmatic.com
 pdc.micloud.xiaomi.net
 pdf.yt
 pennlive.com
@@ -14964,6 +14966,7 @@ www.ajax.aspnetcdn.com
 www.ajax.cloudflare.com
 www.ajax.googleapis.com
 www.ak.c.ooyala.com
+www.aka.ms
 www.akadns.net
 www.akamai.net
 www.akamaiedge.net
@@ -24252,6 +24255,7 @@ www.paypalobjects.com
 www.pbs.twimg.com
 www.pc.xunlei.com
 www.pcbeta.com
+www.pcmatic.com
 www.pdc.micloud.xiaomi.net
 www.pdf.yt
 www.pennlive.com
