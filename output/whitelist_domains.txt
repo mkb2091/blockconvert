@@ -7382,6 +7382,7 @@ interface.xl9.xunlei.com
 internetofthings.ibmcloud.com
 investingchannel.com
 investorplace.com
+io9.com
 ip-adress.com
 ipapi.co
 ipify.org
@@ -11391,6 +11392,7 @@ store.akamai.steamstatic.com
 store.steampowered.com
 storecatalogrevocation.storequality.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
+streamtheworld.com
 strefa.fm
 stripe.com
 stripecdn.com
@@ -20682,6 +20684,7 @@ www.interface.xl9.xunlei.com
 www.internetofthings.ibmcloud.com
 www.investingchannel.com
 www.investorplace.com
+www.io9.com
 www.ip-adress.com
 www.ipapi.co
 www.ipify.org
@@ -24691,6 +24694,7 @@ www.store.akamai.steamstatic.com
 www.store.steampowered.com
 www.storecatalogrevocation.storequality.microsoft.com
 www.storeedgefd.dsx.mp.microsoft.com
+www.streamtheworld.com
 www.strefa.fm
 www.stripe.com
 www.stripecdn.com

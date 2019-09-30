@@ -129,6 +129,7 @@ img-prod-cms-rt-microsoft-com.akamaized.net
 inference.location.live.net
 instagram.com
 int.whiteboard.microsoft.com
+io9.com
 ip-adress.com
 ipv4.login.msa.akadns6.net
 kasperskycontenthub.com
