@@ -2588,6 +2588,7 @@ gizmodo.com.au
 glb.paypal.com
 global.market.xiaomi.com
 global.search.xiaomi.net
+global.ssl.fastly.net
 gmail.com
 gmail.google.com
 gmodules.com
@@ -15890,6 +15891,7 @@ www.gizmodo.com.au
 www.glb.paypal.com
 www.global.market.xiaomi.com
 www.global.search.xiaomi.net
+www.global.ssl.fastly.net
 www.gmail.com
 www.gmail.google.com
 www.gmodules.com
