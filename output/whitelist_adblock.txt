@@ -11346,6 +11346,7 @@
 @@||stackexchange.com^
 @@||stackoverflow.com^
 @@||stackpath.bootstrapcdn.com^
+@@||stacksocial.com^
 @@||staging.plex.tv^
 @@||stanev.org^
 @@||star-mini.c10r.facebook.com^
@@ -24654,6 +24655,7 @@
 @@||www.stackexchange.com^
 @@||www.stackoverflow.com^
 @@||www.stackpath.bootstrapcdn.com^
+@@||www.stacksocial.com^
 @@||www.staging.plex.tv^
 @@||www.stanev.org^
 @@||www.star-mini.c10r.facebook.com^

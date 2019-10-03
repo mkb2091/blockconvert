@@ -220,6 +220,7 @@ sohu.com
 sourceforge.net
 ssl.bblck.me
 sslbl.abuse.ch
+stacksocial.com
 star-mini.c10r.facebook.com
 static-dot-virustotalcloud.appspot.com
 statsfe2.update.microsoft.com.akadns.net
