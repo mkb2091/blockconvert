@@ -2185,6 +2185,7 @@ curvesncombatboots.com
 custhelp.com
 custody.coinbase.com
 customerevents.netflix.com
+cv.rdtcdn.com
 cvp1.cdn.turner.com
 cvs.com
 cy2.displaycatalog.md.mp.microsoft.com.akadns.net
@@ -2384,6 +2385,7 @@ ethn.io
 etl.tindersparks.com
 eu-v20.events.data.microsoft.com
 eucookiedirective.com
+ev.rdtcdn.com
 evcdn.com
 events.launchdarkly.com
 events.mapbox.com
@@ -2437,6 +2439,7 @@ fg.v4.download.windowsupdate.com
 file.market.xiaomi.com
 filefactory.com
 filepicker.io
+files.catbox.moe
 files.edx.org
 files.freedownloadmanager.org
 files.graphiq.com
@@ -11018,6 +11021,7 @@ plus.google.com
 plus.l.google.com
 poll.fm
 polldaddy.com
+polyfill.io
 pornhub.com
 pornhubpremium.com
 portal.client.xunlei.com
@@ -11115,6 +11119,7 @@ redirectingat.com
 redirector.googlevideo.com
 redirector.gvt1.com
 redsky.target.com
+redtube.com
 reebok.com
 referrer.disqus.com
 release.theplatform.com
@@ -15488,6 +15493,7 @@ www.curvesncombatboots.com
 www.custhelp.com
 www.custody.coinbase.com
 www.customerevents.netflix.com
+www.cv.rdtcdn.com
 www.cvp1.cdn.turner.com
 www.cvs.com
 www.cy2.displaycatalog.md.mp.microsoft.com.akadns.net
@@ -15687,6 +15693,7 @@ www.ethn.io
 www.etl.tindersparks.com
 www.eu-v20.events.data.microsoft.com
 www.eucookiedirective.com
+www.ev.rdtcdn.com
 www.evcdn.com
 www.events.launchdarkly.com
 www.events.mapbox.com
@@ -15740,6 +15747,7 @@ www.fg.v4.download.windowsupdate.com
 www.file.market.xiaomi.com
 www.filefactory.com
 www.filepicker.io
+www.files.catbox.moe
 www.files.edx.org
 www.files.freedownloadmanager.org
 www.files.graphiq.com
@@ -24321,6 +24329,7 @@ www.plus.google.com
 www.plus.l.google.com
 www.poll.fm
 www.polldaddy.com
+www.polyfill.io
 www.pornhub.com
 www.pornhubpremium.com
 www.portal.client.xunlei.com
@@ -24418,6 +24427,7 @@ www.redirectingat.com
 www.redirector.googlevideo.com
 www.redirector.gvt1.com
 www.redsky.target.com
+www.redtube.com
 www.reebok.com
 www.referrer.disqus.com
 www.release.theplatform.com
@@ -26701,6 +26711,7 @@ www.zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com
 www.znbl8rufo7atiirtn-unitysoftware.siteintercept.qualtrics.com
 www.znbmujw2vcljimxnp-mastercard.siteintercept.qualtrics.com
 www.zneex9v5omnknmibj-seagatecx.siteintercept.qualtrics.com
+www.zoho.com
 www.zombaio.com
 www.zope.net
 www.zopim.com
@@ -26803,6 +26814,7 @@ zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com
 znbl8rufo7atiirtn-unitysoftware.siteintercept.qualtrics.com
 znbmujw2vcljimxnp-mastercard.siteintercept.qualtrics.com
 zneex9v5omnknmibj-seagatecx.siteintercept.qualtrics.com
+zoho.com
 zombaio.com
 zope.net
 zopim.com

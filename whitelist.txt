@@ -66,6 +66,7 @@ cointraffic.io
 config.edge.skype.com
 content.invisioncic.com
 ctldl.windowsupdate.com
+cv.rdtcdn.com
 cy2.displaycatalog.md.mp.microsoft.com.akadns.net
 cy2.licensing.md.mp.microsoft.com.akadns.net
 cy2.settings.data.microsoft.com.akadns.net
@@ -92,6 +93,7 @@ e-msedge.net
 easylist-downloads.adblockplus.org
 easylist.to
 emdl.ws.microsoft.com
+ev.rdtcdn.com
 evoke-windowsservices-tas.msedge.net
 facebook.com
 fast.fonts.net
@@ -100,6 +102,7 @@ fe2.update.microsoft.com.akadns.net
 fe3.delivery.dsp.mp.microsoft.com.nsatc.net
 fe3.delivery.mp.microsoft.com
 feodotracker.abuse.ch
+files.catbox.moe
 files.freedownloadmanager.org
 files2.freedownloadmanager.org
 filtri-dns.ga
@@ -178,6 +181,7 @@ outlook.office365.com
 pastebin.com
 pastebin.org
 pbs.twimg.com
+polyfill.io
 pornhub.com
 prod.do.dsp.mp.microsoft.com
 pti.store.microsoft.com
@@ -188,6 +192,7 @@ quora.com
 ransomwaretracker.abuse.ch
 raw.githubusercontent.com
 reddit.com
+redtube.com
 returnpath.com
 ris-prod-atm.trafficmanager.net
 ris.api.iris.microsoft.com
@@ -305,3 +310,4 @@ www.webmd.com
 www.yoast.com
 yahoo.co.jp
 zeustracker.abuse.ch
+zoho.com
