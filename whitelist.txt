@@ -1,3 +1,4 @@
+fiddle.jshell.net
 *.a-msedge.net
 *.b.akamaiedge.net
 *.c-msedge.net
