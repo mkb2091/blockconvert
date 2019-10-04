@@ -2066,6 +2066,7 @@
 @@||cf.hamreus.com^
 @@||cf.iadsdk.apple.com^
 @@||cfvod.kaltura.com^
+@@||change.org^
 @@||channel.facebook.com^
 @@||charter.com^
 @@||chat.facebook.com^
@@ -2077,11 +2078,13 @@
 @@||checkout.stripe.com^
 @@||chicago.cbslocal.com^
 @@||chirp.bizrate.com^
+@@||chng.it^
 @@||chomikuj.pl^
 @@||christianpost.com^
 @@||chrome.google.com^
 @@||ci4.googleusercontent.com^
 @@||ci5.googleusercontent.com^
+@@||cinevood.club^
 @@||civicscience.com^
 @@||cj.com^
 @@||cj.dotomi.com^
@@ -15375,6 +15378,7 @@
 @@||www.cf.hamreus.com^
 @@||www.cf.iadsdk.apple.com^
 @@||www.cfvod.kaltura.com^
+@@||www.change.org^
 @@||www.channel.facebook.com^
 @@||www.charter.com^
 @@||www.chat.facebook.com^
@@ -15386,11 +15390,13 @@
 @@||www.checkout.stripe.com^
 @@||www.chicago.cbslocal.com^
 @@||www.chirp.bizrate.com^
+@@||www.chng.it^
 @@||www.chomikuj.pl^
 @@||www.christianpost.com^
 @@||www.chrome.google.com^
 @@||www.ci4.googleusercontent.com^
 @@||www.ci5.googleusercontent.com^
+@@||www.cinevood.club^
 @@||www.civicscience.com^
 @@||www.cj.com^
 @@||www.cj.dotomi.com^
