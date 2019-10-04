@@ -1,4 +1,3 @@
-fiddle.jshell.net
 *.a-msedge.net
 *.b.akamaiedge.net
 *.c-msedge.net
@@ -105,6 +104,7 @@ fe2.update.microsoft.com.akadns.net
 fe3.delivery.dsp.mp.microsoft.com.nsatc.net
 fe3.delivery.mp.microsoft.com
 feodotracker.abuse.ch
+fiddle.jshell.net
 files.catbox.moe
 files.freedownloadmanager.org
 files2.freedownloadmanager.org

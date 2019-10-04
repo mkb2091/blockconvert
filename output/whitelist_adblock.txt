@@ -1774,6 +1774,7 @@
 @@||apis.google.com^
 @@||apk.tw^
 @@||apnewsregistry.com^
+@@||app-advertise.zhihuishu.com^
 @@||app-api.ted.com^
 @@||app-measurement.com^
 @@||app.adjust.com^
@@ -2439,6 +2440,7 @@
 @@||feeds2.feedburner.com^
 @@||feodotracker.abuse.ch^
 @@||fg.v4.download.windowsupdate.com^
+@@||fiddle.jshell.net^
 @@||file.market.xiaomi.com^
 @@||filefactory.com^
 @@||filepicker.io^
@@ -7247,6 +7249,7 @@
 @@||healthyadvertising.es^
 @@||heapanalytics.com^
 @@||heavy.com^
+@@||heise.de^
 @@||helium.com^
 @@||hello.firefox.com^
 @@||hellobar.com^
@@ -10743,6 +10746,7 @@
 @@||mw1.google.com^
 @@||mw2.google.com^
 @@||my.aliexpress.com^
+@@||my.pcloud.com^
 @@||my.plexapp.com^
 @@||myaccounts.capitalone.com^
 @@||mycapture.com^
@@ -15086,6 +15090,7 @@
 @@||www.apis.google.com^
 @@||www.apk.tw^
 @@||www.apnewsregistry.com^
+@@||www.app-advertise.zhihuishu.com^
 @@||www.app-api.ted.com^
 @@||www.app-measurement.com^
 @@||www.app.adjust.com^
@@ -15751,6 +15756,7 @@
 @@||www.feeds2.feedburner.com^
 @@||www.feodotracker.abuse.ch^
 @@||www.fg.v4.download.windowsupdate.com^
+@@||www.fiddle.jshell.net^
 @@||www.file.market.xiaomi.com^
 @@||www.filefactory.com^
 @@||www.filepicker.io^
@@ -20559,6 +20565,7 @@
 @@||www.healthyadvertising.es^
 @@||www.heapanalytics.com^
 @@||www.heavy.com^
+@@||www.heise.de^
 @@||www.helium.com^
 @@||www.hello.firefox.com^
 @@||www.hellobar.com^
@@ -24055,6 +24062,7 @@
 @@||www.mw1.google.com^
 @@||www.mw2.google.com^
 @@||www.my.aliexpress.com^
+@@||www.my.pcloud.com^
 @@||www.my.plexapp.com^
 @@||www.myaccounts.capitalone.com^
 @@||www.mycapture.com^
