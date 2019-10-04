@@ -1,4 +1,5 @@
 Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
+["Magneto Malware Skanner - Burner Domains", "https://raw.githubusercontent.com/gwillem/magento-malware-scanner/master/rules/burner-domains.txt", "", 864000, "GPLv3", false, false, false]
 ["uBlock filters", "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt", "", 345600, "GPLv3", false, false, false]
 ["uBlock filters \u2013 Resource abuse", "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt", "", 345600, "GPLv3", false, false, false]
 ["uBlock filters \u2013 Privacy", "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt", "", 345600, "GPLv3", false, false, false]
