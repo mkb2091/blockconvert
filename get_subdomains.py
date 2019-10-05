@@ -14,7 +14,7 @@ def get_subdomains(dns_checker, domains):
     min_length = len(domains[0])
     for target in domains:
         targets.append('.' + target)
-        if len(target)< min_length:
+        if len(target) < min_length:
             min_length = len(target)
     for domain in dns_checker.cache:
         if len(domain) >= (min_length + 2) and dns_checker.cache[domain]:

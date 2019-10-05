@@ -15,24 +15,42 @@ def main():
     with open('urls.txt') as file:
         for line in file.read().splitlines():
             try:
-                (title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns) = json.loads(line)
-                urls.append((title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns))
+                (title, url, author, expires, list_license, is_whitelist,
+                 match_url, do_reverse_dns) = json.loads(line)
+                urls.append(
+                    (title,
+                     url,
+                     author,
+                     expires,
+                     list_license,
+                     is_whitelist,
+                     match_url,
+                     do_reverse_dns))
             except json.JSONDecodeError:
                 pass
     urls.sort(key=json.dumps, reverse=True)
     with open('urls.txt', 'w') as file:
-        file.write('Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns\n')
+        file.write(
+            'Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns\n')
         file.write('\n'.join([json.dumps(i) for i in urls]))
     start = time.time()
     manager = download.DownloadManager()
     manager.bl.add_file('\n'.join(url for (_, url, _, _, _, _, _, _) in urls),
-                       is_whitelist=True, match_url=True)
+                        is_whitelist=True, match_url=True)
     with open('whitelist.txt') as file:
         manager.bl.add_file(file.read(), is_whitelist=True, match_url=True)
     with open('whitelist.txt', 'w') as file:
         file.write('\n'.join(sorted(manager.bl.whitelist)))
     download.copy_whitelist_and_clean()
-    for (title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns) in urls:
+    for (
+        title,
+        url,
+        author,
+        expires,
+        list_license,
+        is_whitelist,
+        match_url,
+            do_reverse_dns) in urls:
         manager.add_url(url, is_whitelist, match_url, do_reverse_dns, expires)
     manager.clean()
     print('Downloaded needed files(%ss)' % (time.time() - start))
@@ -42,7 +60,9 @@ def main():
     blocklist.clear()
     for (_, url, _, _, _, _, _, _) in urls:
         path = download.url_to_path(url)
-        for (f, is_whitelist) in (('blacklist.txt', False), ('whitelist.txt', True)):
+        for (
+                f, is_whitelist) in (
+                ('blacklist.txt', False), ('whitelist.txt', True)):
             try:
                 with open(os.path.join(path, f)) as file:
                     blocklist.add_file(file.read(), is_whitelist)
@@ -74,6 +94,7 @@ def main():
             file.write(func())
     generate_readme.generate_readme(urls, len(blocklist.blacklist))
     print('Generated output(%ss)' % (time.time() - start))
+
 
 if __name__ == '__main__':
     main()

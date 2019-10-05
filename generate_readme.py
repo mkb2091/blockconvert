@@ -16,10 +16,19 @@ enemyofarsenic(Reddit): Many very useful suggestions such as whitelist, passive 
 
 '''
 
+
 def generate_readme(urls, rule_count):
     url_table = [['Link', 'Author', 'Expires', 'License', 'Type'],
                  [':---:', ':---:', ':---:', ':---:', ':---:']]
-    for (title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns) in urls:
+    for (
+        title,
+        url,
+        author,
+        expires,
+        list_license,
+        is_whitelist,
+        match_url,
+            do_reverse_dns) in urls:
         if expires >= 24 * 60 * 60:
             expires = '%s days' % (round(expires / 24 / 60 / 60, 1))
         elif expires >= 60 * 60:
@@ -33,7 +42,8 @@ def generate_readme(urls, rule_count):
         if author == '':
             author = '-'
         link = '[%s](%s)' % (title, url)
-        url_table.append([link, author, expires, list_license, ('Whitelist' if is_whitelist else 'Blacklist')])
+        url_table.append([link, author, expires, list_license,
+                          ('Whitelist' if is_whitelist else 'Blacklist')])
     url_table = '\n'.join('|'.join(line) for line in url_table)
     with open('sources.md', 'w') as file:
         file.write(SOURCES.format(**locals()))
