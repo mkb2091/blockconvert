@@ -139,6 +139,7 @@ int.whiteboard.microsoft.com
 io9.com
 ip-adress.com
 ipv4.login.msa.akadns6.net
+jarv.is
 kasperskycontenthub.com
 knowyourmeme.com
 larati.net
