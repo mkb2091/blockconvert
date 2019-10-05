@@ -19,6 +19,7 @@ ADBLOCK_PLUS_HEADER = '''[Adblock Plus 2.0]
 !-----------------------Filters-----------------------!
 '''
 
+
 class BlockList():
     def __init__(self, dns_check_threads=40):
         self.blacklist = set()
@@ -40,8 +41,12 @@ class BlockList():
         data = contents.lower()
         try:
             data = json.loads(data)
-            if ('action_map' in data and isinstance(data['action_map'], dict)
-                and 'snitch_map' in data and isinstance(data['snitch_map'], dict)):
+            if (
+                'action_map' in data and isinstance(
+                    data['action_map'],
+                    dict) and 'snitch_map' in data and isinstance(
+                    data['snitch_map'],
+                    dict)):
                 self.parse_privacy_badger(data)
         except json.JSONDecodeError:
             whitelist = self.whitelist
@@ -62,18 +67,22 @@ class BlockList():
                     match = self.REGEX.fullmatch(line)
                     if match:
                         blacklist.update(filter(bool, match.groups()))
+
     def parse_privacy_badger(self, data):
         temp_whitelist = set()
         for x in data['snitch_map']:
             temp_whitelist.update(data['snitch_map'][x])
         for i in data['action_map']:
             if self.DOMAIN_REGEX.fullmatch(i):
-                if isinstance(data['action_map'][i], dict) and 'heuristicaction' in data['action_map'][i]:
+                if isinstance(
+                        data['action_map'][i],
+                        dict) and 'heuristicaction' in data['action_map'][i]:
                     if data['action_map'][i]['heuristicaction'] == 'block':
                         if i not in temp_whitelist:
                             self.blacklist.add(i)
                     elif data['action_map'][i]['heuristicaction'] == 'cookieblock':
                         self.whitelist.add(i)
+
     def basic_clean(self, keep_ip=True):
         if not keep_ip:
             for filter_list in [self.blacklist, self.whitelist]:
@@ -83,6 +92,7 @@ class BlockList():
                         ips.append(item)
                 for ip in ips:
                     filter_list.remove(ip)
+
     def clean(self, do_reverse_dns=False):
         dns = self.dns
         last = time.time()
@@ -113,8 +123,9 @@ class BlockList():
             for url in star_tld:
                 filter_list.remove(url)
                 for tld in self.TLDS:
-                    filter_list.add(url[:-1]+tld)
-        print('Expanded .* TLD to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+                    filter_list.add(url[:-1] + tld)
+        print('Expanded .* TLD to %s rules(%ss)' %
+              (len(self.blacklist), time.time() - last))
         last = time.time()
         for filter_list in [self.blacklist, self.whitelist]:
             to_remove_subdomains = []
@@ -126,7 +137,8 @@ class BlockList():
         for domain in list(self.whitelist):
             if not domain.startswith('www.'):
                 self.whitelist.add('www.' + domain)
-        print('Expanded to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+        print('Expanded to %s rules(%ss)' %
+              (len(self.blacklist), time.time() - last))
         last = time.time()
         star_subdomain = []
         for url in self.blacklist:
@@ -135,8 +147,11 @@ class BlockList():
         for url in star_subdomain:
             self.blacklist.remove(url)
             self.blacklist.add(url[2:])
-        self.blacklist.update(get_subdomains.get_subdomains(self.dns, star_subdomain))
-        print('Expanded *. subdomain to %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+        self.blacklist.update(
+            get_subdomains.get_subdomains(
+                self.dns, star_subdomain))
+        print('Expanded *. subdomain to %s rules(%ss)' %
+              (len(self.blacklist), time.time() - last))
         last = time.time()
         whitelist_star = {}
         for i in self.whitelist:
@@ -165,7 +180,8 @@ class BlockList():
                 except KeyError:
                     pass
             self.blacklist.difference_update(to_remove)
-        print('Applied whitelist, now at %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+        print('Applied whitelist, now at %s rules(%ss)' %
+              (len(self.blacklist), time.time() - last))
         print()
         last = time.time()
         result = dns.mass_check(self.blacklist, self.dns_check_threads)
@@ -174,15 +190,18 @@ class BlockList():
         for domain in result:
             if not result[domain]:
                 self.blacklist.remove(domain)
-        print('Removed expired domains, now at %s rules(%ss)' % (len(self.blacklist), time.time() - last))
+        print('Removed expired domains, now at %s rules(%ss)' %
+              (len(self.blacklist), time.time() - last))
         last = time.time()
         for filter_list in [self.blacklist, self.whitelist]:
             for url in list(filter_list):
                 if not self.DOMAIN_REGEX.match(url):
                     filter_list.remove(url)
         print('Removed invalid domains(%ss)' % (time.time() - last))
+
     def to_domain_list(self):
         return '\n'.join(sorted(self.blacklist))
+
     def to_adblock(self):
         header = ADBLOCK_PLUS_HEADER.format(
             version=time.strftime('%d-%b-%Y-%H-%M'),
@@ -193,18 +212,23 @@ class BlockList():
             license=self.license)
         domains = list(self.blacklist) + list(self.ip_blocklist)
         return header + '\n'.join(['||%s^' % i for i in sorted(domains)])
+
     def to_hosts(self):
         return '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blacklist)])
+
     def to_rpz(self):
         return '\n'.join(['%s CNAME .' % i for i in sorted(self.blacklist)])
+
     def to_ip_blocklist(self):
         return '\n'.join(sorted(self.ip_blocklist))
+
     def to_domain_whitelist(self):
         return '\n'.join(sorted(self.whitelist))
+
     def to_adblock_whitelist(self):
         return '\n'.join(['@@||%s^' % i for i in sorted(self.whitelist)])
+
     def clear(self):
         self.blacklist = set()
         self.ip_blocklist = set()
         self.whitelist = set()
-

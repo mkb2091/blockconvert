@@ -27,7 +27,7 @@ RESERVED = [
     ipaddress.IPv4Network('224.0.0.0/4'),
     ipaddress.IPv4Network('240.0.0.0/4'),
     ipaddress.IPv4Network('255.255.255.255/32')
-    ]
+]
 
 
 class DNSCheckerWorker(threading.Thread):
@@ -39,6 +39,7 @@ class DNSCheckerWorker(threading.Thread):
         self.request_queue = request_queue
         self.response_queue = response_queue
         self.request_type = request_type
+
     def run(self):
         session = self.session
         servers = self.servers
@@ -57,7 +58,8 @@ class DNSCheckerWorker(threading.Thread):
                     if isinstance(ip, ipaddress.IPv4Address):
                         domain = ip.exploded.split('.')[::-1]
                     else:
-                        domain = ipaddress.ip_address(domain).exploded.replace(':', '')[::-1]
+                        domain = ipaddress.ip_address(
+                            domain).exploded.replace(':', '')[::-1]
                     domain = '.'.join(domain)
                     domain += '.in-addr.arpa.'
                 success = False
@@ -66,28 +68,37 @@ class DNSCheckerWorker(threading.Thread):
                     server = servers[pos]
                     try:
                         r = session.get(server + urllib.parse.urlencode(
-                            {'name':domain.lstrip('.'), 'type':self.request_type}))
+                            {'name': domain.lstrip('.'), 'type': self.request_type}))
                         response_queue.put((old_domain, r.json()))
                         if retry > 0:
                             print('Fixed\n', end='')
                         success = True
                         break
                     except Exception as error:
-                        print(server+'\n', end='')
+                        print(server + '\n', end='')
                 if not success:
                     print('Could\'t fix\n', end='')
                     response_queue.put((domain, True))
         except queue.Empty:
             pass
+
+
 class ArgusPassiveDNS(threading.Thread):
     def __init__(self, session, request_queue, response_queue):
         threading.Thread.__init__(self)
         self.session = session
         self.url = 'https://api.mnemonic.no/pdns/v3/search'
-        self.data = {'aggregateResult':True, 'customerID':[], 'includeAnonymousResults':True,
-                'limit':1000**2,'offset':0,'rrClass':[], 'tlp':[]}
+        self.data = {
+            'aggregateResult': True,
+            'customerID': [],
+            'includeAnonymousResults': True,
+            'limit': 1000**2,
+            'offset': 0,
+            'rrClass': [],
+            'tlp': []}
         self.request_queue = request_queue
         self.response_queue = response_queue
+
     def run(self):
         request_queue = self.request_queue
         response_queue = self.response_queue
@@ -114,9 +125,11 @@ class ArgusPassiveDNS(threading.Thread):
                     except TypeError:
                         print(r.json())
                         try:
-                            if r.json()['metaData']['millisUntilResourcesAvailable']/1000 > 30*60:
+                            if r.json()[
+                                    'metaData']['millisUntilResourcesAvailable'] / 1000 > 30 * 60:
                                 return
-                            time.sleep(r.json()['metaData']['millisUntilResourcesAvailable']/1000)
+                            time.sleep(
+                                r.json()['metaData']['millisUntilResourcesAvailable'] / 1000)
                             time.sleep(1)
                         except Exception as error:
                             print(error)
@@ -134,6 +147,7 @@ class ArgusPassiveDNS(threading.Thread):
         except queue.Empty:
             pass
 
+
 class DNSChecker():
     def __init__(self):
         self.session = requests.Session()
@@ -143,10 +157,10 @@ class DNSChecker():
         self.session2.headers['User-Agent'] = 'DOH'
         self.session2.headers['Accept'] = '*/*'
         self.servers = ['https://dns.google.com/resolve?',
-                        'https://cloudflare-dns.com/dns-query?',]
+                        'https://cloudflare-dns.com/dns-query?', ]
         self.cache = dict()
         self.reverse_cache = dict()
-        one_week_ago = (time.time() - 60*60*24*7)
+        one_week_ago = (time.time() - 60 * 60 * 24 * 7)
         try:
             with open('dns_cache.txt') as file:
                 for line in file:
@@ -164,7 +178,7 @@ class DNSChecker():
                         pass
         except FileNotFoundError:
             pass
-        one_half_week_ago = (time.time() - 60*60*24*7*1.5)
+        one_half_week_ago = (time.time() - 60 * 60 * 24 * 7 * 1.5)
         try:
             with open('reverse_dns_cache.txt') as file:
                 for line in file:
@@ -175,29 +189,37 @@ class DNSChecker():
                                    and '*' not in domain]
                         last_modified = int(last_modified)
                         if last_modified > one_half_week_ago:
-                            self.reverse_cache[ip_address] = (last_modified, domains)
+                            self.reverse_cache[ip_address] = (
+                                last_modified, domains)
                     except (ValueError):
                         pass
         except FileNotFoundError:
             pass
+
     def clean_forward_cache(self):
         cache = self.cache
         for domain in list(cache):
             now = cache[domain]
             if not ('*' not in domain
-                and build_regex.DOMAIN_REGEX.fullmatch(domain)
-                and (now[0] == '' or build_regex.IP_REGEX.fullmatch(now[0]))):
+                    and build_regex.DOMAIN_REGEX.fullmatch(domain)
+                    and (now[0] == '' or build_regex.IP_REGEX.fullmatch(now[0]))):
                 del cache[domain]
+
     def save_forward_cache(self, clean=True):
         if clean:
             self.clean_forward_cache()
         with open('temp', 'w') as file:
             for domain in sorted(self.cache):
                 if self.cache[domain][0]:
-                    file.write('%s,%s,%s\n' % (domain, self.cache[domain][0], int(self.cache[domain][1])))
+                    file.write(
+                        '%s,%s,%s\n' %
+                        (domain, self.cache[domain][0], int(
+                            self.cache[domain][1])))
                 else:
-                    file.write('%s,%s\n' % (domain, int(self.cache[domain][1])))
+                    file.write('%s,%s\n' %
+                               (domain, int(self.cache[domain][1])))
         os.replace('temp', 'dns_cache.txt')
+
     def save_reverse_cache(self):
         lines = (','.join((ip, str(int(self.reverse_cache[ip][0])),
                            *sorted([domain for domain in set(self.reverse_cache[ip][1])
@@ -209,6 +231,7 @@ class DNSChecker():
             for line in lines:
                 file.write(line + '\n')
         os.replace('temp', 'reverse_dns_cache.txt')
+
     def mass_check(self, domain_list, thread_count=40):
         domain_list_length = len(domain_list)
         cache = self.cache
@@ -236,8 +259,12 @@ class DNSChecker():
         del domain_list
         threads = []
         for i in range(thread_count):
-            thread = DNSCheckerWorker(self.session, self.servers, request_queue,
-                                      response_queue, 1)
+            thread = DNSCheckerWorker(
+                self.session,
+                self.servers,
+                request_queue,
+                response_queue,
+                1)
             thread.start()
             threads.append(thread)
         start = time.time()
@@ -251,8 +278,10 @@ class DNSChecker():
                     if exists:
                         for answer in result['Answer']:
                             try:
-                                ip = ipaddress.IPv4Network('%s/32' % answer['data'])
-                                exists = exists and (not any(network.overlaps(ip) for network in RESERVED))
+                                ip = ipaddress.IPv4Network(
+                                    '%s/32' % answer['data'])
+                                exists = exists and (
+                                    not any(network.overlaps(ip) for network in RESERVED))
                             except ipaddress.AddressValueError:
                                 pass
                     if exists and isinstance(ip, ipaddress.IPv4Network):
@@ -264,8 +293,12 @@ class DNSChecker():
                     results[domain] = ip
                     cache[domain] = (ip, time.time())
                     if len(results) % 20000 == 19999:
-                        print('%s/s %s Valid: %s Invalid: %s ' % (round((len(results) - initial_length)/(time.time() - start), 2),
-                              round(len(results)/domain_list_length, 5), valid_count, invalid_count))
+                        print('%s/s %s Valid: %s Invalid: %s ' %
+                              (round((len(results) -
+                                      initial_length) /
+                                     (time.time() -
+                                      start), 2), round(len(results) /
+                                                        domain_list_length, 5), valid_count, invalid_count))
                         self.save_forward_cache(clean=False)
             except queue.Empty:
                 pass
@@ -274,6 +307,7 @@ class DNSChecker():
                 print(domain, result)
         self.save_forward_cache()
         return results
+
     def mass_reverse_lookup(self, ip_list, thread_count=40):
         domain_list_length = len(ip_list)
         cache = self.cache
@@ -294,11 +328,16 @@ class DNSChecker():
         if not all_from_cache:
             threads = []
             for i in range(thread_count):
-                thread = DNSCheckerWorker(self.session, self.servers, request_queue,
-                                          response_queue, 12)
+                thread = DNSCheckerWorker(
+                    self.session,
+                    self.servers,
+                    request_queue,
+                    response_queue,
+                    12)
                 thread.start()
                 threads.append(thread)
-            thread = ArgusPassiveDNS(self.session2, request_queue2, response_queue2)
+            thread = ArgusPassiveDNS(
+                self.session2, request_queue2, response_queue2)
             thread.start()
             threads.append(thread)
             while any(thread.is_alive() for thread in threads):
@@ -307,7 +346,8 @@ class DNSChecker():
                         ip, result = response_queue.get(timeout=0.1)
                         try:
                             if result['Status'] == 0:
-                                domains = [answer['data'].lower().strip('.') for answer in result['Answer'] if answer['type'] == 12]
+                                domains = [answer['data'].lower().strip(
+                                    '.') for answer in result['Answer'] if answer['type'] == 12]
                                 reverse_cache[ip] = [time.time(), domains]
                                 results.update(domains)
                             else:
@@ -330,7 +370,8 @@ class DNSChecker():
         print('Performed reverse DNS, and passive DNS lookup')
         self.mass_check(results, thread_count)
         print('Checked IP addresses')
-        reverse_cache = dict((ip, (reverse_cache[ip], set())) for ip in reverse_cache)
+        reverse_cache = dict(
+            (ip, (reverse_cache[ip], set())) for ip in reverse_cache)
         for ip in reverse_cache:
             reverse_cache[ip][1].clear()
         for domain in cache:
@@ -344,7 +385,8 @@ class DNSChecker():
                 results.update(reverse_cache[ip][1])
             except KeyError:
                 pass
-        print('Added domains which resolve to malware IP addresses: %s' % len(results))
+        print(
+            'Added domains which resolve to malware IP addresses: %s' %
+            len(results))
         self.save_reverse_cache()
         return results
-
