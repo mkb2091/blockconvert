@@ -40,7 +40,7 @@ def main():
     start = time.time()
     blocklist = manager.bl
     blocklist.clear()
-    for (title, url, author, expires, list_license, is_whitelist, match_url, do_reverse_dns) in urls:
+    for (_, url, _, _, _, _, _, _) in urls:
         path = download.url_to_path(url)
         for (f, is_whitelist) in (('blacklist.txt', False), ('whitelist.txt', True)):
             try:
