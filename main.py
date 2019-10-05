@@ -87,6 +87,7 @@ def main():
                          ('hosts.txt', blocklist.to_hosts),
                          ('domains.rpz', blocklist.to_rpz),
                          ('ip_blocklist.txt', blocklist.to_ip_blocklist),
+                         ('ip_blocklist.ipset', blocklist.to_ipset_blocklist),
                          ('whitelist_domains.txt', blocklist.to_domain_whitelist),
                          ('whitelist_adblock.txt', blocklist.to_adblock_whitelist),
                          ]:
