@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 664518 blocked domains in each of the generated filter lists
+Theres are 664522 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -27,6 +27,7 @@ Link|Author|Expires|License|Type
 [VX Vault last 100 Links](http://vxvault.net/URL_List.php)|Kicelo, Dominik Schuermann|1.0 days|Copyleft 2010. No rights reserved. |Blacklist
 [Toshiya's Filter List - Experimental](https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt)|Toshiya|4.0 days|GPLv3|Blacklist
 [The Hosts File Project](https://hblock.molinero.dev/hosts)|Héctor Molinero Fernández <hector@molinero.dev>|1.0 days|MIT|Blacklist
+[Strappazzon's Tracking List](https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Tracking.txt)|-|3.0 days|MIT|Blacklist
 [Spam404](https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt)|-|2.0 days|Permission to modify, copy and distribute|Blacklist
 [Skeletal Blocker](https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List)|SkeletalDemise|2.0 days|GPLv3|Blacklist
 [Ransomware URL Blocklist ](https://ransomwaretracker.abuse.ch/downloads/RW_URLBL.txt)|-|1.0 days|Free for use without any limitations|Blacklist
@@ -34,6 +35,7 @@ Link|Author|Expires|License|Type
 [Ransomware Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)|-|1.0 days|Free for use without any limitations|Blacklist
 [Privacy filters](https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt)|-|1.0 days|The Unlicense|Blacklist
 [Press the Attack](https://raw.githubusercontent.com/bogachenko/presstheattack/master/presstheattack.txt)|-|3.0 hours|MIT|Blacklist
+[Nopelist](https://raw.githubusercontent.com/genediazjr/nopelist/master/nopelist.txt)|Gene Diaz|7.0 days|MIT|Blacklist
 [NoTrack Tracker Blocklist](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt)|QuidsUp|1.0 days|GPLv3|Blacklist
 [NoTrack Malware Blocklist](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt)|QuidsUp|1.0 days|GPLv3|Blacklist
 [NoCoin Filter List](https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt)|-|1.0 days|MIT|Blacklist
