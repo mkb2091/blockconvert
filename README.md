@@ -28,6 +28,8 @@ Advantages of using this list:
 
 - uBlock Origin: Click the uBlock Origin logo/uBlock Origin extension. Click open dashboard(3 horizontal lines under the disable uBlock Origin button, on the right). Click Filter lists. Scroll to the bottom, and click Import(in custom section). Copy and paste either Adblock style blocklist or domain blocklist from the link section below.
 
+- IPset + iptables: Pick a directory to store file, then set the following script to run on reboot(eg via cron) and also create a regular script to download new version(eg weekly/daily cron which runs wget): `sudo ipset -exist -file $PATH_TO_FILE restore && sudo iptables -I INPUT -m set --match-set BlockConvert src -j DROP && sudo iptables -I FORWARD -m set --match-set BlockConvert src -j DROP`
+
 ## Links
 
 Adblock Plus format:  https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/adblock.txt
@@ -37,6 +39,8 @@ Hosts file format: https://raw.githubusercontent.com/mkb2091/blockconvert/master
 Domain list: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.txt
 
 Blocked IP address list: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/ip_blocklist.txt
+
+IPSet format: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/ip_blocklist.ipset
 
 DNS Response Policy Zone(RPZ) format: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz
 
