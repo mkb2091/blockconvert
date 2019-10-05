@@ -205,5 +205,6 @@ class BlockList():
         return '\n'.join(['@@||%s^' % i for i in sorted(self.whitelist)])
     def clear(self):
         self.blacklist = set()
+        self.ip_blocklist = set()
         self.whitelist = set()
 
