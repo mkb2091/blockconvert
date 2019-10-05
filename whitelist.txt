@@ -23,6 +23,7 @@
 a-msedge.net
 activation.sls.microsoft.com
 adaway.org
+adblock.ee
 add0n.com
 addons.mozilla.org
 adguard.com

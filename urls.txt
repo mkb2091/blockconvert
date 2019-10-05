@@ -40,6 +40,7 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["GOODBYE ADS", "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt", "Jerryn70 (XDA Senior Member)", 86400, "MIT", false, false, false]
 ["Frellwit's Swedish Hosts File", "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt", "", 86400, "GPL-3.0", false, false, false]
 ["Fanboy's Annoyance List", "https://easylist.to/easylist/fanboy-annoyance.txt", "", 345600, "GPLv3", false, false, false]
+["Eesti saitidele kohandatud filter", "https://adblock.ee/list.php", "", 86400, "CC0", false, false, false]
 ["EasyPrivacy", "https://easylist.to/easylist/easyprivacy.txt", "", 345600, "GPLv3", false, false, false]
 ["EasyList", "https://easylist.to/easylist/easylist.txt", "", 345600, "GPLv3", false, false, false]
 ["EasyList Italy", "https://easylist-downloads.adblockplus.org/easylistitaly.txt", "", 86400, "GPLv3", false, false, false]

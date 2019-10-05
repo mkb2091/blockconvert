@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 817501 blocked domains in each of the generated filter lists
+Theres are 664544 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -51,6 +51,7 @@ Link|Author|Expires|License|Type
 [GOODBYE ADS](https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt)|Jerryn70 (XDA Senior Member)|1.0 days|MIT|Blacklist
 [Frellwit's Swedish Hosts File](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt)|-|1.0 days|GPL-3.0|Blacklist
 [Fanboy's Annoyance List](https://easylist.to/easylist/fanboy-annoyance.txt)|-|4.0 days|GPLv3|Blacklist
+[Eesti saitidele kohandatud filter](https://adblock.ee/list.php)|-|1.0 days|CC0|Blacklist
 [EasyPrivacy](https://easylist.to/easylist/easyprivacy.txt)|-|4.0 days|GPLv3|Blacklist
 [EasyList](https://easylist.to/easylist/easylist.txt)|-|4.0 days|GPLv3|Blacklist
 [EasyList Italy](https://easylist-downloads.adblockplus.org/easylistitaly.txt)|-|1.0 days|GPLv3|Blacklist
