@@ -222,6 +222,11 @@ class BlockList():
     def to_ip_blocklist(self):
         return '\n'.join(sorted(self.ip_blocklist))
 
+    def to_ipset_blocklist(self):
+        data = 'create %s hash:ip family inet hashsize 4096 maxelem 65536\n' % self.title
+        return data + '\n'.join(['add %s %s' % (self.title, ip)
+                                 for ip in sorted(self.ip_blocklist)])
+
     def to_domain_whitelist(self):
         return '\n'.join(sorted(self.whitelist))
 
