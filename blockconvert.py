@@ -19,6 +19,30 @@ ADBLOCK_PLUS_HEADER = '''[Adblock Plus 2.0]
 !-----------------------Filters-----------------------!
 '''
 
+DOMAIN_LIST_HEADER = '''
+# Title: {title}
+# Last modified: {last_modified}
+# Expires: {expires} (update frequency)
+# Homepage: {homepage}
+# Licence: {license}
+'''
+
+HOSTS_HEADER = '''
+# Title: {title}
+# Last modified: {last_modified}
+# Expires: {expires} (update frequency)
+# Homepage: {homepage}
+# Licence: {license}
+127.0.0.1       localhost
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+'''
+
+
 
 class BlockList():
     def __init__(self, dns_check_threads=40):
@@ -200,7 +224,14 @@ class BlockList():
         print('Removed invalid domains(%ss)' % (time.time() - last))
 
     def to_domain_list(self):
-        return '\n'.join(sorted(self.blacklist))
+        header = DOMAIN_LIST_HEADER.format(
+            version=time.strftime('%d-%b-%Y-%H-%M'),
+            title=self.title,
+            last_modified=time.strftime('%d %b %Y %H:%M UTC'),
+            expires=self.expires,
+            homepage=self.homepage,
+            license=self.license)
+        return header + '\n'.join(sorted(self.blacklist))
 
     def to_adblock(self):
         header = ADBLOCK_PLUS_HEADER.format(
@@ -214,7 +245,14 @@ class BlockList():
         return header + '\n'.join(['||%s^' % i for i in sorted(domains)])
 
     def to_hosts(self):
-        return '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blacklist)])
+        header = HOSTS_HEADER.format(
+            version=time.strftime('%d-%b-%Y-%H-%M'),
+            title=self.title,
+            last_modified=time.strftime('%d %b %Y %H:%M UTC'),
+            expires=self.expires,
+            homepage=self.homepage,
+            license=self.license)
+        return header + '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blacklist)])
 
     def to_rpz(self):
         return '\n'.join(['%s CNAME .' % i for i in sorted(self.blacklist)])
