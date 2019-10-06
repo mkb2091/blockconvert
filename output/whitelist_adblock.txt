@@ -2129,6 +2129,7 @@
 @@||collegehumor.com^
 @@||com.com^
 @@||community.spiceworks.com^
+@@||completion.amazon.com^
 @@||complex.com^
 @@||confib.ifmo.ru^
 @@||config.edge.skype.com^
@@ -9070,6 +9071,7 @@
 @@||lookaside.facebook.com^
 @@||loop.services.mozilla.com^
 @@||losangeles.cbslocal.com^
+@@||lowendbox.com^
 @@||lowes.com^
 @@||lphbs.com^
 @@||lublin.tvp.pl^
@@ -13231,6 +13233,7 @@
 @@||web.de^
 @@||web.facebook.com^
 @@||web.pcbeta.com^
+@@||web.tresorit.com^
 @@||webcam.yahoo.com^
 @@||webflow.com^
 @@||weblb-wg.dual-gslb.spotify.com^
@@ -15446,6 +15449,7 @@
 @@||www.collegehumor.com^
 @@||www.com.com^
 @@||www.community.spiceworks.com^
+@@||www.completion.amazon.com^
 @@||www.complex.com^
 @@||www.confib.ifmo.ru^
 @@||www.config.edge.skype.com^
@@ -22387,6 +22391,7 @@
 @@||www.lookaside.facebook.com^
 @@||www.loop.services.mozilla.com^
 @@||www.losangeles.cbslocal.com^
+@@||www.lowendbox.com^
 @@||www.lowes.com^
 @@||www.lphbs.com^
 @@||www.lublin.tvp.pl^
@@ -26548,6 +26553,7 @@
 @@||www.web.de^
 @@||www.web.facebook.com^
 @@||www.web.pcbeta.com^
+@@||www.web.tresorit.com^
 @@||www.webcam.yahoo.com^
 @@||www.webflow.com^
 @@||www.weblb-wg.dual-gslb.spotify.com^

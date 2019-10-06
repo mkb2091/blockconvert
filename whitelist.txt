@@ -66,6 +66,7 @@ client-s.gateway.messenger.live.com
 cloudfront.net
 code.jquery.com
 cointraffic.io
+completion.amazon.com
 config.edge.skype.com
 content.invisioncic.com
 ctldl.windowsupdate.com
@@ -152,6 +153,7 @@ location.services.mozilla.com
 login.live.com
 login.msa.akadns6.net
 login.windows.net
+lowendbox.com
 mail.google.com
 maps.windows.com
 md.mp.microsoft.com.*
@@ -266,6 +268,7 @@ wbd.ms
 wd-prod-cp-us-west-1-fe.westus.cloudapp.azure.com
 wdcp.microsoft.*
 wdcp.microsoft.com
+web.tresorit.com
 webmasters.stackexchange.com
 whiteboard.microsoft.com
 whiteboard.ms
