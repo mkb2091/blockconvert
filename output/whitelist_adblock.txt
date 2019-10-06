@@ -9032,6 +9032,7 @@
 @@||limtu.ifmo.ru^
 @@||linkedin.com^
 @@||links.iterable.com^
+@@||links.mint.com^
 @@||linktr.ee^
 @@||linkwithin.com^
 @@||list-manage.com^
@@ -22352,6 +22353,7 @@
 @@||www.limtu.ifmo.ru^
 @@||www.linkedin.com^
 @@||www.links.iterable.com^
+@@||www.links.mint.com^
 @@||www.linktr.ee^
 @@||www.linkwithin.com^
 @@||www.list-manage.com^
