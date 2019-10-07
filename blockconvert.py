@@ -43,7 +43,6 @@ ff02::3 ip6-allhosts
 '''
 
 
-
 class BlockList():
     def __init__(self, dns_check_threads=40):
         self.blacklist = set()
@@ -252,7 +251,8 @@ class BlockList():
             expires=self.expires,
             homepage=self.homepage,
             license=self.license)
-        return header + '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blacklist)])
+        return header + \
+            '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blacklist)])
 
     def to_rpz(self):
         return '\n'.join(['%s CNAME .' % i for i in sorted(self.blacklist)])
