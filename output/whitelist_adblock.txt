@@ -2000,6 +2000,7 @@
 @@||ccleaner.com^
 @@||cda.pl^
 @@||cdn-a.sonyentertainmentnetwork.com^
+@@||cdn-eu.dynamicyield.com^
 @@||cdn-images.mailchimp.com^
 @@||cdn-us-ec.yottaa.net^
 @@||cdn.anvato.net^
@@ -2010,6 +2011,7 @@
 @@||cdn.cpnscdn.com^
 @@||cdn.discordapp.com^
 @@||cdn.discourse.org^
+@@||cdn.dynamicyield.com^
 @@||cdn.edgesuite.net^
 @@||cdn.embed.ly^
 @@||cdn.embedly.com^
@@ -11112,6 +11114,8 @@
 @@||rawgit.com^
 @@||rawhttp.cloudflareworkers.com^
 @@||razorpay.com^
+@@||rcom-eu.dynamicyield.com^
+@@||rcom.dynamicyield.com^
 @@||readability.com^
 @@||readthedocs.org^
 @@||real-debrid.com^
@@ -11353,6 +11357,8 @@
 @@||sslbl.abuse.ch^
 @@||sslshare.gshifen.com^
 @@||sstatic.net^
+@@||st-eu.dynamicyield.com^
+@@||st.dynamicyield.com^
 @@||st.mycdn.me^
 @@||stackexchange.com^
 @@||stackoverflow.com^
@@ -11374,6 +11380,7 @@
 @@||static.ak.connect.facebook.com^
 @@||static.ak.facebook.com^
 @@||static.coinbase.com^
+@@||static.dynamicyield.com^
 @@||static.fontawesome.com^
 @@||static.kickstarter.com^
 @@||static.licdn.com^
@@ -15321,6 +15328,7 @@
 @@||www.ccleaner.com^
 @@||www.cda.pl^
 @@||www.cdn-a.sonyentertainmentnetwork.com^
+@@||www.cdn-eu.dynamicyield.com^
 @@||www.cdn-images.mailchimp.com^
 @@||www.cdn-us-ec.yottaa.net^
 @@||www.cdn.anvato.net^
@@ -15331,6 +15339,7 @@
 @@||www.cdn.cpnscdn.com^
 @@||www.cdn.discordapp.com^
 @@||www.cdn.discourse.org^
+@@||www.cdn.dynamicyield.com^
 @@||www.cdn.edgesuite.net^
 @@||www.cdn.embed.ly^
 @@||www.cdn.embedly.com^
@@ -24433,6 +24442,8 @@
 @@||www.rawgit.com^
 @@||www.rawhttp.cloudflareworkers.com^
 @@||www.razorpay.com^
+@@||www.rcom-eu.dynamicyield.com^
+@@||www.rcom.dynamicyield.com^
 @@||www.readability.com^
 @@||www.readthedocs.org^
 @@||www.real-debrid.com^
@@ -24674,6 +24685,8 @@
 @@||www.sslbl.abuse.ch^
 @@||www.sslshare.gshifen.com^
 @@||www.sstatic.net^
+@@||www.st-eu.dynamicyield.com^
+@@||www.st.dynamicyield.com^
 @@||www.st.mycdn.me^
 @@||www.stackexchange.com^
 @@||www.stackoverflow.com^
@@ -24695,6 +24708,7 @@
 @@||www.static.ak.connect.facebook.com^
 @@||www.static.ak.facebook.com^
 @@||www.static.coinbase.com^
+@@||www.static.dynamicyield.com^
 @@||www.static.fontawesome.com^
 @@||www.static.kickstarter.com^
 @@||www.static.licdn.com^
@@ -26688,6 +26702,7 @@
 @@||www.yimg.com^
 @@||www.ynuf.aliapp.org^
 @@||www.yoast.com^
+@@||www.yottaa.net^
 @@||www.youku.com^
 @@||www.youtu.be^
 @@||www.youtube-nocookie.com^
@@ -26791,6 +26806,7 @@
 @@||yimg.com^
 @@||ynuf.aliapp.org^
 @@||yoast.com^
+@@||yottaa.net^
 @@||youku.com^
 @@||youtu.be^
 @@||youtube-nocookie.com^
