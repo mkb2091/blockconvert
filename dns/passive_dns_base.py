@@ -4,6 +4,7 @@ import json
 
 import requests
 
+
 class PassiveDNS:
     def __init__(self, api_key, path):
         self.api_key = api_key
@@ -12,6 +13,14 @@ class PassiveDNS:
         cursor = self.conn.cursor()
         cursor.execute(
             'CREATE TABLE IF NOT EXISTS PassiveDNS (ip PRIMARY KEY, domains, last_modified, last_used)')
+        self.conn.commit()
+
+    def _add_result(self, ip, domains):
+        cursor = self.conn.cursor()
+        cursor.execute(
+            'REPLACE INTO PassiveDNS VALUES (?, ?, ?, ?)', (ip, json.dumps(domains), int(
+                time.time()), int(
+                time.time())))
         self.conn.commit()
 
     def get_domains(self, ips):

@@ -13,24 +13,24 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
     def _get_domains(self, ip):
         try:
             for _ in range(10):
-                r = self.session.get(self.URL.format(api_key=self.api_key, ip=ip))
+                r = self.session.get(
+                    self.URL.format(
+                        api_key=self.api_key, ip=ip))
                 if r.status_code == 200:
                     if r.json()['response_code'] == 1:
-                        domains = sorted([x['hostname'] for x in r.json()['resolutions']])
+                        domains = sorted([x['hostname']
+                                          for x in r.json()['resolutions']])
                     else:
                         print(r.json()['response_code'])
                         domains = []
-                    cursor = self.conn.cursor()
-                    cursor.execute('REPLACE INTO PassiveDNS VALUES (?, ?, ?, ?)',
-                                   (ip, json.dumps(domains), int(time.time()), int(time.time())))
-                    self.conn.commit()
+                    self._add_result(ip, domains)
                     return domains
                 elif r.status_code == 204:
                     print('VirusTotal: 204 - Request rate limit exceeded')
                     time.sleep(15)
                 elif r.status_code == 403:
                     print('VirusTotal: 403 Forbidden')
-                    return 
+                    return
                 else:
                     return []
         except Exception as error:
