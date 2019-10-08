@@ -2186,6 +2186,7 @@
 @@||csi.gstatic.com^
 @@||cstv.com^
 @@||ct-m-fbx.fbsbx.com^
+@@||ct.sendgrid.net^
 @@||ctldl.windowsupdate.com^
 @@||cursecdn.com^
 @@||curvesncombatboots.com^
@@ -15517,6 +15518,7 @@
 @@||www.csi.gstatic.com^
 @@||www.cstv.com^
 @@||www.ct-m-fbx.fbsbx.com^
+@@||www.ct.sendgrid.net^
 @@||www.ctldl.windowsupdate.com^
 @@||www.cursecdn.com^
 @@||www.curvesncombatboots.com^

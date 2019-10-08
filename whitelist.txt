@@ -69,6 +69,7 @@ cointraffic.io
 completion.amazon.com
 config.edge.skype.com
 content.invisioncic.com
+ct.sendgrid.net
 ctldl.windowsupdate.com
 cv.rdtcdn.com
 cy2.displaycatalog.md.mp.microsoft.com.akadns.net
