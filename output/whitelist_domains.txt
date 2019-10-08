@@ -2347,6 +2347,7 @@ ebay.pl
 ebayimg.com
 ebayrtm.com
 ebaystatic.com
+ebd.cda.pl
 ebmedia.eventbrite.com
 ec-ns.sascdn.com
 echo.edge.messenger.live.com
@@ -2453,6 +2454,7 @@ files.freedownloadmanager.org
 files.graphiq.com
 files2.freedownloadmanager.org
 filesmonster.com
+fili.cc
 filmweb.pl
 filmyhd.net
 filters.adtidy.org
@@ -11583,6 +11585,7 @@ typepad.com
 typography.com
 ubuntuforums.org
 uc.pcbeta.com
+ue.flipboard.com
 ui-portal.de
 ui.bamstatic.com
 ui.skype.akadns.net
@@ -15675,6 +15678,7 @@ www.ebay.pl
 www.ebayimg.com
 www.ebayrtm.com
 www.ebaystatic.com
+www.ebd.cda.pl
 www.ebmedia.eventbrite.com
 www.ec-ns.sascdn.com
 www.echo.edge.messenger.live.com
@@ -15781,6 +15785,7 @@ www.files.freedownloadmanager.org
 www.files.graphiq.com
 www.files2.freedownloadmanager.org
 www.filesmonster.com
+www.fili.cc
 www.filmweb.pl
 www.filmyhd.net
 www.filters.adtidy.org
@@ -24911,6 +24916,7 @@ www.typepad.com
 www.typography.com
 www.ubuntuforums.org
 www.uc.pcbeta.com
+www.ue.flipboard.com
 www.ui-portal.de
 www.ui.bamstatic.com
 www.ui.skype.akadns.net
