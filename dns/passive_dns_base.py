@@ -1,3 +1,4 @@
+import random
 import sqlite3
 import time
 import json
@@ -34,8 +35,11 @@ class PassiveDNS:
                 len(ips))),
             ips)
         result = cursor.fetchall()
+        random.shuffle(result)
         for (ip, _, _) in result:
             ips_left.remove(ip)
+        ips_left = list(ips_left)
+        random.shuffle(ips_left)
         for ip in ips_left:
             fetched = self._get_domains(ip)
             if fetched is not None:
