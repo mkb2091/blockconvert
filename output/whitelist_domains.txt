@@ -1867,6 +1867,7 @@ bandcamp.com
 bankid.no
 bankrate.com
 bartleby.zendesk.com
+battle.net
 bazaarvoice.com
 bbb.org
 bbc.co.uk
@@ -15199,6 +15200,7 @@ www.bandcamp.com
 www.bankid.no
 www.bankrate.com
 www.bartleby.zendesk.com
+www.battle.net
 www.bazaarvoice.com
 www.bbb.org
 www.bbc.co.uk
