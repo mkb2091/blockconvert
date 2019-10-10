@@ -1,5 +1,6 @@
 # BlockConvert
 
+[![HitCount](http://hits.dwyl.io/mkb2091/blockconvert.svg)](http://hits.dwyl.io/mkb2091/blockconvert)
 
 Malware, advert and tracking blacklist
 
