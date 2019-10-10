@@ -1557,6 +1557,7 @@
 @@||140cc.v.fwmrm.net^
 @@||1drv.com^
 @@||1fichier.com^
+@@||1l-hit.mail.ru^
 @@||1und1.de^
 @@||2-edge-chat.facebook.com^
 @@||2.android.pool.ntp.org^
@@ -1604,6 +1605,7 @@
 @@||ad.10010.com^
 @@||ad.abchina.com^
 @@||ad.kazakinfo.com^
+@@||ad.mail.ru^
 @@||ad.ourgame.com^
 @@||adaway.org^
 @@||adb.juvander.net^
@@ -1731,6 +1733,7 @@
 @@||api-glb.smoot.apple.com^
 @@||api-global.netflix.com^
 @@||api-merchants.skimlinks.com^
+@@||api-na.geetest.com^
 @@||api-partner.spotify.com^
 @@||api-spotify.com^
 @@||api-tv.spotify.com^
@@ -1866,7 +1869,6 @@
 @@||bandcamp.com^
 @@||bankid.no^
 @@||bankrate.com^
-@@||bartleby.zendesk.com^
 @@||battle.net^
 @@||bazaarvoice.com^
 @@||bbb.org^
@@ -2131,6 +2133,7 @@
 @@||cointraffic.io^
 @@||collegehumor.com^
 @@||com.com^
+@@||comments.us1.gigya.com^
 @@||community.spiceworks.com^
 @@||completion.amazon.com^
 @@||complex.com^
@@ -2427,6 +2430,7 @@
 @@||fansonly.com^
 @@||fast.fonts.net^
 @@||fast.wistia.com^
+@@||fast.wistia.net^
 @@||fastly.net^
 @@||faucethub.io^
 @@||fb.com^
@@ -2552,7 +2556,6 @@
 @@||g.live.com^
 @@||g.msn.com.nsatc.net^
 @@||g00.msn.com^
-@@||g2insights-cdn.azureedge.net^
 @@||game.xiaomi.com^
 @@||gameofbitcoins.com^
 @@||gamespot.com^
@@ -7229,7 +7232,6 @@
 @@||gs.apple.com^
 @@||gs.statcounter.com^
 @@||gscdn.nl^
-@@||gscounters.eu1.gigya.com^
 @@||gscounters.us1.gigya.com^
 @@||gslb.spotify.com^
 @@||gsp1.apple.com^
@@ -7384,6 +7386,7 @@
 @@||indeed.com^
 @@||inergizedigital.com^
 @@||inference.location.live.net^
+@@||ingov.zendesk.com^
 @@||insomniagamingfestival.com^
 @@||inspectlet.com^
 @@||instagram.c10r.facebook.com^
@@ -11049,7 +11052,6 @@
 @@||ppt.cc^
 @@||ppurifier.game.xiaomi.com^
 @@||practivate.adobe.com^
-@@||prd.jwpltx.com^
 @@||prerollads.nl^
 @@||pricegrabber.com^
 @@||pricelist.skype.com^
@@ -11444,13 +11446,13 @@
 @@||t-online.at^
 @@||t-online.de^
 @@||t.co^
-@@||t.paypal.com^
 @@||t.umblr.com^
 @@||t0.ssl.ak.dynamic.tiles.virtualearth.net^
 @@||t0.ssl.ak.tiles.virtualearth.net^
 @@||t1.g.mi.com^
 @@||t11.baidu.com^
 @@||t12.baidu.com^
+@@||tags.tiqcdn.com^
 @@||taleo.net^
 @@||talk.google.com^
 @@||talk.l.google.com^
@@ -11528,8 +11530,8 @@
 @@||tomshardware.com^
 @@||tools.l.google.com^
 @@||tools.pingdom.com^
+@@||top-fwz1.mail.ru^
 @@||top-reklama.sk^
-@@||top100.rambler.ru^
 @@||toptenreviews.com^
 @@||torbit.com^
 @@||torrentfreak.com^
@@ -11678,6 +11680,7 @@
 @@||vkontakte.ru^
 @@||vmixcore.com^
 @@||vmn.net^
+@@||vms.boldchat.com^
 @@||vmss.boldchat.com^
 @@||vod.pl^
 @@||vod.tvp.pl^
@@ -14890,6 +14893,7 @@
 @@||www.140cc.v.fwmrm.net^
 @@||www.1drv.com^
 @@||www.1fichier.com^
+@@||www.1l-hit.mail.ru^
 @@||www.1und1.de^
 @@||www.2-edge-chat.facebook.com^
 @@||www.2.android.pool.ntp.org^
@@ -14937,6 +14941,7 @@
 @@||www.ad.10010.com^
 @@||www.ad.abchina.com^
 @@||www.ad.kazakinfo.com^
+@@||www.ad.mail.ru^
 @@||www.ad.ourgame.com^
 @@||www.adaway.org^
 @@||www.adb.juvander.net^
@@ -15064,6 +15069,7 @@
 @@||www.api-glb.smoot.apple.com^
 @@||www.api-global.netflix.com^
 @@||www.api-merchants.skimlinks.com^
+@@||www.api-na.geetest.com^
 @@||www.api-partner.spotify.com^
 @@||www.api-spotify.com^
 @@||www.api-tv.spotify.com^
@@ -15199,7 +15205,6 @@
 @@||www.bandcamp.com^
 @@||www.bankid.no^
 @@||www.bankrate.com^
-@@||www.bartleby.zendesk.com^
 @@||www.battle.net^
 @@||www.bazaarvoice.com^
 @@||www.bbb.org^
@@ -15464,6 +15469,7 @@
 @@||www.cointraffic.io^
 @@||www.collegehumor.com^
 @@||www.com.com^
+@@||www.comments.us1.gigya.com^
 @@||www.community.spiceworks.com^
 @@||www.completion.amazon.com^
 @@||www.complex.com^
@@ -15760,6 +15766,7 @@
 @@||www.fansonly.com^
 @@||www.fast.fonts.net^
 @@||www.fast.wistia.com^
+@@||www.fast.wistia.net^
 @@||www.fastly.net^
 @@||www.faucethub.io^
 @@||www.fb.com^
@@ -15885,7 +15892,6 @@
 @@||www.g.live.com^
 @@||www.g.msn.com.nsatc.net^
 @@||www.g00.msn.com^
-@@||www.g2insights-cdn.azureedge.net^
 @@||www.game.xiaomi.com^
 @@||www.gameofbitcoins.com^
 @@||www.gamespot.com^
@@ -20562,7 +20568,6 @@
 @@||www.gs.apple.com^
 @@||www.gs.statcounter.com^
 @@||www.gscdn.nl^
-@@||www.gscounters.eu1.gigya.com^
 @@||www.gscounters.us1.gigya.com^
 @@||www.gslb.spotify.com^
 @@||www.gsp1.apple.com^
@@ -20717,6 +20722,7 @@
 @@||www.indeed.com^
 @@||www.inergizedigital.com^
 @@||www.inference.location.live.net^
+@@||www.ingov.zendesk.com^
 @@||www.insomniagamingfestival.com^
 @@||www.inspectlet.com^
 @@||www.instagram.c10r.facebook.com^
@@ -24382,7 +24388,6 @@
 @@||www.ppt.cc^
 @@||www.ppurifier.game.xiaomi.com^
 @@||www.practivate.adobe.com^
-@@||www.prd.jwpltx.com^
 @@||www.prerollads.nl^
 @@||www.pricegrabber.com^
 @@||www.pricelist.skype.com^
@@ -24777,13 +24782,13 @@
 @@||www.t-online.at^
 @@||www.t-online.de^
 @@||www.t.co^
-@@||www.t.paypal.com^
 @@||www.t.umblr.com^
 @@||www.t0.ssl.ak.dynamic.tiles.virtualearth.net^
 @@||www.t0.ssl.ak.tiles.virtualearth.net^
 @@||www.t1.g.mi.com^
 @@||www.t11.baidu.com^
 @@||www.t12.baidu.com^
+@@||www.tags.tiqcdn.com^
 @@||www.taleo.net^
 @@||www.talk.google.com^
 @@||www.talk.l.google.com^
@@ -24861,8 +24866,8 @@
 @@||www.tomshardware.com^
 @@||www.tools.l.google.com^
 @@||www.tools.pingdom.com^
+@@||www.top-fwz1.mail.ru^
 @@||www.top-reklama.sk^
-@@||www.top100.rambler.ru^
 @@||www.toptenreviews.com^
 @@||www.torbit.com^
 @@||www.torrentfreak.com^
@@ -25011,6 +25016,7 @@
 @@||www.vkontakte.ru^
 @@||www.vmixcore.com^
 @@||www.vmn.net^
+@@||www.vms.boldchat.com^
 @@||www.vmss.boldchat.com^
 @@||www.vod.pl^
 @@||www.vod.tvp.pl^
@@ -26742,13 +26748,14 @@
 @@||www.zendesk.com^
 @@||www.zergnet.com^
 @@||www.zero.facebook.com^
+@@||www.zerohedge.com^
 @@||www.zeustracker.abuse.ch^
 @@||www.zht.alipay.com^
 @@||www.ziplist.com^
 @@||www.zippyshare.com^
 @@||www.ziprecruiter.com^
 @@||www.zlcdn.com^
-@@||www.zn0mtvfxokez0eitv-nlmenterprise.siteintercept.qualtrics.com^
+@@||www.zn2t6mdnujruus8jh-inc.siteintercept.qualtrics.com^
 @@||www.zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com^
 @@||www.zn72km24lnwppaswx-emeraldgroup.siteintercept.qualtrics.com^
 @@||www.zn7ngtyxwjbrjz6xb-cms.gov1.siteintercept.qualtrics.com^
@@ -26761,6 +26768,7 @@
 @@||www.zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com^
 @@||www.znbl8rufo7atiirtn-unitysoftware.siteintercept.qualtrics.com^
 @@||www.znbmujw2vcljimxnp-mastercard.siteintercept.qualtrics.com^
+@@||www.znbr5amnlemoxdurh-redbubble.siteintercept.qualtrics.com^
 @@||www.zneex9v5omnknmibj-seagatecx.siteintercept.qualtrics.com^
 @@||www.zoho.com^
 @@||www.zombaio.com^
@@ -26846,13 +26854,14 @@
 @@||zendesk.com^
 @@||zergnet.com^
 @@||zero.facebook.com^
+@@||zerohedge.com^
 @@||zeustracker.abuse.ch^
 @@||zht.alipay.com^
 @@||ziplist.com^
 @@||zippyshare.com^
 @@||ziprecruiter.com^
 @@||zlcdn.com^
-@@||zn0mtvfxokez0eitv-nlmenterprise.siteintercept.qualtrics.com^
+@@||zn2t6mdnujruus8jh-inc.siteintercept.qualtrics.com^
 @@||zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com^
 @@||zn72km24lnwppaswx-emeraldgroup.siteintercept.qualtrics.com^
 @@||zn7ngtyxwjbrjz6xb-cms.gov1.siteintercept.qualtrics.com^
@@ -26865,6 +26874,7 @@
 @@||zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com^
 @@||znbl8rufo7atiirtn-unitysoftware.siteintercept.qualtrics.com^
 @@||znbmujw2vcljimxnp-mastercard.siteintercept.qualtrics.com^
+@@||znbr5amnlemoxdurh-redbubble.siteintercept.qualtrics.com^
 @@||zneex9v5omnknmibj-seagatecx.siteintercept.qualtrics.com^
 @@||zoho.com^
 @@||zombaio.com^
