@@ -1624,6 +1624,7 @@
 @@||adguard.com^
 @@||adguardteam.github.io^
 @@||adidas.com^
+@@||adiu.amap.com^
 @@||adm.fwmrm.net^
 @@||admedia.adgemini.de^
 @@||admin.brightcove.com^
@@ -2270,6 +2271,7 @@
 @@||diep.io^
 @@||digg.com^
 @@||digicert.com^
+@@||digitalassetlinks.googleapis.com^
 @@||digitaltrends.com^
 @@||directvnow.com^
 @@||discord.gg^
@@ -10759,7 +10761,6 @@
 @@||mw1.google.com^
 @@||mw2.google.com^
 @@||my.aliexpress.com^
-@@||my.pcloud.com^
 @@||my.plexapp.com^
 @@||myaccounts.capitalone.com^
 @@||mycapture.com^
@@ -11151,6 +11152,7 @@
 @@||resolver.gslb.mi-idc.com^
 @@||resolver.msg.xiaomi.ne^
 @@||resolver.msg.xiaomi.net^
+@@||restapi.amap.com^
 @@||resultspage.com^
 @@||returnpath.com^
 @@||rewardstyle.com^
@@ -14960,6 +14962,7 @@
 @@||www.adguard.com^
 @@||www.adguardteam.github.io^
 @@||www.adidas.com^
+@@||www.adiu.amap.com^
 @@||www.adm.fwmrm.net^
 @@||www.admedia.adgemini.de^
 @@||www.admin.brightcove.com^
@@ -15606,6 +15609,7 @@
 @@||www.diep.io^
 @@||www.digg.com^
 @@||www.digicert.com^
+@@||www.digitalassetlinks.googleapis.com^
 @@||www.digitaltrends.com^
 @@||www.directvnow.com^
 @@||www.discord.gg^
@@ -24095,7 +24099,6 @@
 @@||www.mw1.google.com^
 @@||www.mw2.google.com^
 @@||www.my.aliexpress.com^
-@@||www.my.pcloud.com^
 @@||www.my.plexapp.com^
 @@||www.myaccounts.capitalone.com^
 @@||www.mycapture.com^
@@ -24487,6 +24490,7 @@
 @@||www.resolver.gslb.mi-idc.com^
 @@||www.resolver.msg.xiaomi.ne^
 @@||www.resolver.msg.xiaomi.net^
+@@||www.restapi.amap.com^
 @@||www.resultspage.com^
 @@||www.returnpath.com^
 @@||www.rewardstyle.com^
