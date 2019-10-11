@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 617289 blocked domains in each of the generated filter lists
+Theres are 593960 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -30,11 +30,14 @@ Link|Author|Expires|License|Type
 [Strappazzon's Tracking List](https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Tracking.txt)|-|3.0 days|MIT|Blacklist
 [Spam404](https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt)|-|2.0 days|Permission to modify, copy and distribute|Blacklist
 [Skeletal Blocker](https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List)|SkeletalDemise|2.0 days|GPLv3|Blacklist
+[Scams and Phishing](https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt)|infinitytec|10.0 days|MIT|Blacklist
 [Ransomware URL Blocklist ](https://ransomwaretracker.abuse.ch/downloads/RW_URLBL.txt)|-|1.0 days|Free for use without any limitations|Blacklist
 [Ransomware IP Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt)|-|1.0 days|Free for use without any limitations|Blacklist
 [Ransomware Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)|-|1.0 days|Free for use without any limitations|Blacklist
 [Privacy filters](https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt)|-|1.0 days|The Unlicense|Blacklist
 [Press the Attack](https://raw.githubusercontent.com/bogachenko/presstheattack/master/presstheattack.txt)|-|3.0 hours|MIT|Blacklist
+[Possibilities](https://raw.githubusercontent.com/infinitytec/blocklists/master/possibilities.txt)|infinitytec|10.0 days|MIT|Blacklist
+[Not Good Pi](https://raw.githubusercontent.com/infinitytec/blocklists/master/not-good-pi.txt)|infinitytec|10.0 days|MIT|Blacklist
 [Nopelist](https://raw.githubusercontent.com/genediazjr/nopelist/master/nopelist.txt)|Gene Diaz|7.0 days|MIT|Blacklist
 [NoTrack Tracker Blocklist](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt)|QuidsUp|1.0 days|GPLv3|Blacklist
 [NoTrack Malware Blocklist](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt)|QuidsUp|1.0 days|GPLv3|Blacklist
@@ -69,6 +72,7 @@ Link|Author|Expires|License|Type
 [Anudeep's Blacklist](https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt)|Anudeep <anudeep@protonmail.com>|1.0 days|MIT|Blacklist
 [Annoyance Mobile Ad hosts filter](https://raw.githubusercontent.com/yowu/AnnoyanceMobileAdHosts/master/AnnoyanceMobileAdHosts.txt)|-|1.0 days|The Unlicense|Blacklist
 [Adware filters](https://easylist-downloads.adblockplus.org/adwarefilters.txt)|-|1.0 days|GPLv3|Blacklist
+[Ads and Trackers](https://raw.githubusercontent.com/infinitytec/blocklists/master/ads-and-trackers.txt)|infinitytec|10.0 days|MIT|Blacklist
 [AdguardMobileAds](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt)|-|1.0 days|GPLv3|Blacklist
 [AdguardDNS](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt)|-|1.0 days|GPLv3|Blacklist
 [AdguardApps](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt)|-|1.0 days|GPLv3|Blacklist
