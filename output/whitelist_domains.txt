@@ -1912,6 +1912,7 @@ bing.ru
 bing.se
 bit.ly
 bitbucket.org
+bitlord.com
 bitly.com
 bitpay.com
 bizrate.com
@@ -15250,6 +15251,7 @@ www.bing.ru
 www.bing.se
 www.bit.ly
 www.bitbucket.org
+www.bitlord.com
 www.bitly.com
 www.bitpay.com
 www.bizrate.com
