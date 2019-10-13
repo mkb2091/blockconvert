@@ -1851,6 +1851,7 @@
 @@||authorize.net^
 @@||autoforums.com^
 @@||avsforum.com^
+@@||awin1.com^
 @@||ax.init.itunes.apple.com^
 @@||ax.itunes.apple.com^
 @@||ax.phobos.apple.com.edgesuite.net^
@@ -10775,6 +10776,7 @@
 @@||na4r.services.adobe.com^
 @@||namecheap.com^
 @@||nanopool.org^
+@@||narkive.com^
 @@||naszdziennik.pl^
 @@||nationalgeographic.com^
 @@||nationbuilder.com^
@@ -11164,6 +11166,7 @@
 @@||road.adblock.ro^
 @@||roadandtrack.com^
 @@||roku.com^
+@@||router.utorrent.com^
 @@||rover.ebay.com^
 @@||rptrcks.walmart.com^
 @@||rpxnow.com^
@@ -15190,6 +15193,7 @@
 @@||www.authorize.net^
 @@||www.autoforums.com^
 @@||www.avsforum.com^
+@@||www.awin1.com^
 @@||www.ax.init.itunes.apple.com^
 @@||www.ax.itunes.apple.com^
 @@||www.ax.phobos.apple.com.edgesuite.net^
@@ -24114,6 +24118,7 @@
 @@||www.na4r.services.adobe.com^
 @@||www.namecheap.com^
 @@||www.nanopool.org^
+@@||www.narkive.com^
 @@||www.naszdziennik.pl^
 @@||www.nationalgeographic.com^
 @@||www.nationbuilder.com^
@@ -24503,6 +24508,7 @@
 @@||www.road.adblock.ro^
 @@||www.roadandtrack.com^
 @@||www.roku.com^
+@@||www.router.utorrent.com^
 @@||www.rover.ebay.com^
 @@||www.rptrcks.walmart.com^
 @@||www.rpxnow.com^

@@ -41,6 +41,7 @@ arc.msn.com.nsatc.net
 ars.smartscreen.microsoft.com
 au.download.windowsupdate.com
 auth.gfx.ms
+awin1.com
 ay.gy
 b-graph.facebook.com
 b.akamaiedge.net
@@ -170,6 +171,7 @@ motherboard.vice.com
 mp.microsoft.com
 mscrl.microsoft.com
 msedge.net
+narkive.com
 naver.com
 next-services.apps.microsoft.com
 nexusrules.officeapps.live.com
@@ -207,6 +209,7 @@ returnpath.com
 ris-prod-atm.trafficmanager.net
 ris.api.iris.microsoft.com
 ris.api.iris.microsoft.com.akadns.net
+router.utorrent.com
 s-msedge.net
 s.imgur.com
 s3-us-west-1.amazonaws.com
