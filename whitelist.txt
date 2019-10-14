@@ -31,6 +31,7 @@ adguardteam.github.io
 aftership.com
 aka.ms
 aliexpress.com
+allure.com
 androidauthority.com
 answers.com
 answers.microsoft.com
@@ -219,6 +220,7 @@ safebrowsing.google.com
 scrapinghub.com
 search.msn.com
 searchenginejournal.com
+secure.mbl.is
 service.weather.microsoft.com
 settings-win.data.microsoft.com
 settings.data.microsoft.com
@@ -308,6 +310,7 @@ www.instagram.com
 www.kaspersky.com
 www.ku6.com
 www.malwaredomainlist.com
+www.mbl.is
 www.msftconnecttest.com
 www.namecheap.com
 www.orbitz.com

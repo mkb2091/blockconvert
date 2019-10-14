@@ -1686,6 +1686,7 @@
 @@||aliexpress.com^
 @@||allegro.pl^
 @@||allmyvideos.net^
+@@||allure.com^
 @@||alluremedia.com.au^
 @@||ally.com^
 @@||alternativeto.net^
@@ -9131,6 +9132,7 @@
 @@||maxcdn.bootstrapcdn.com^
 @@||maxmind.com^
 @@||maxthon.com^
+@@||mbl.is^
 @@||mc.yandex.ru^
 @@||mcclatchyinteractive.com^
 @@||mcp-media5.anvato.net^
@@ -11257,6 +11259,7 @@
 @@||secure.gravatar.com^
 @@||secure.livechatinc.com^
 @@||secure.logmein.com^
+@@||secure.mbl.is^
 @@||secure.moneygram.com^
 @@||secure.netflix.com^
 @@||secure.surveymonkey.com^
@@ -15028,6 +15031,7 @@
 @@||www.aliexpress.com^
 @@||www.allegro.pl^
 @@||www.allmyvideos.net^
+@@||www.allure.com^
 @@||www.alluremedia.com.au^
 @@||www.ally.com^
 @@||www.alternativeto.net^
@@ -22473,6 +22477,7 @@
 @@||www.maxcdn.bootstrapcdn.com^
 @@||www.maxmind.com^
 @@||www.maxthon.com^
+@@||www.mbl.is^
 @@||www.mc.yandex.ru^
 @@||www.mcclatchyinteractive.com^
 @@||www.mcp-media5.anvato.net^
@@ -24599,6 +24604,7 @@
 @@||www.secure.gravatar.com^
 @@||www.secure.livechatinc.com^
 @@||www.secure.logmein.com^
+@@||www.secure.mbl.is^
 @@||www.secure.moneygram.com^
 @@||www.secure.netflix.com^
 @@||www.secure.surveymonkey.com^
