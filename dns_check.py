@@ -230,7 +230,10 @@ class DNSChecker():
             process.start()
             processes.append((process, result))
         for (process, result) in processes:
-            process.join()
+            try:
+                process.join()
+            except KeyboardInterrupt:
+                process.join()
             results.update(result)
         domain_list = set()
         for result in results:

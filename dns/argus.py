@@ -29,18 +29,19 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                         print('Argus: %s, %s' % (ip, len(domains)))
                         return domains
                     except TypeError:
-                        try:
-                            print('Argus: Resource Available in %s' % r.json()['metaData']['millisUntilResourcesAvailable'] / 1000)
-                            if r.json()[
-                                    'metaData']['millisUntilResourcesAvailable'] / 1000 > 30 * 60:
-                                return
-                            time.sleep(
-                                r.json()['metaData']['millisUntilResourcesAvailable'] / 1000)
-                            time.sleep(1)
-                        except KeyError as error:
-                            print('Argus: %s' % error)
-                            time.sleep(1)
-                            break
+                        print('Argus: Received unexpected data')
+                elif r.status_code == 402:
+                    try:
+                        millisUntilResourcesAvailable = int(r.json()['metaData']['millisUntilResourcesAvailable']) / 1000
+                        print('Argus: Resource Available in %s' % millisUntilResourcesAvailable)
+                        if millisUntilResourcesAvailable > 30 * 60:
+                            return
+                        time.sleep(millisUntilResourcesAvailable)
+                        time.sleep(1)
+                    except KeyError as error:
+                        print('Argus: %s' % error)
+                        time.sleep(1)
+                        break
                 else:
                     print('Argus: Recieved unexpected status code:', r.status_code)
                     return
