@@ -4,10 +4,14 @@ import json
 
 import requests
 
-import passive_dns_base
+try:
+    import passive_dns_base
+except ImportError:
+    import dns.passive_dns_base as passive_dns_base 
 
 
 class PassiveDNS(passive_dns_base.PassiveDNS):
+    NAME = 'Argus'
     URL = 'https://api.mnemonic.no/pdns/v3/{ip}'
 
     def _get_domains(self, ip):
@@ -22,9 +26,11 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                                 domains.add(item['query'])
                         domains = list(domains)
                         self._add_result(ip, domains)
+                        print('Argus: %s, %s' % (ip, len(domains)))
                         return domains
                     except TypeError:
                         try:
+                            print('Argus: Resource Available in %s' % r.json()['metaData']['millisUntilResourcesAvailable'] / 1000)
                             if r.json()[
                                     'metaData']['millisUntilResourcesAvailable'] / 1000 > 30 * 60:
                                 return
@@ -32,8 +38,11 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                                 r.json()['metaData']['millisUntilResourcesAvailable'] / 1000)
                             time.sleep(1)
                         except KeyError as error:
-                            print(error)
+                            print('Argus: %s' % error)
                             time.sleep(1)
                             break
+                else:
+                    print('Argus: Recieved unexpected status code:', r.status_code)
+                    return
         except Exception as error:
-            print(error)
+            print('Argus: %s' % error)

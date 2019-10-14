@@ -75,8 +75,8 @@ def set_status(url, last_modified, last_checked, etag):
 
 
 class DownloadManager():
-    def __init__(self, **kwargs):
-        self.bl = blockconvert.BlockList(**kwargs)
+    def __init__(self, bl):
+        self.bl = bl
         self.session = requests.Session()
         self.session.headers['User-Agent'] = 'BlocklistConvert' + \
             str(int(time.time()))

@@ -4,10 +4,13 @@ import json
 
 import requests
 
-import passive_dns_base
-
+try:
+    import passive_dns_base
+except ImportError:
+    import dns.passive_dns_base as passive_dns_base 
 
 class PassiveDNS(passive_dns_base.PassiveDNS):
+    NAME = 'VirusTotal'
     URL = 'https://www.virustotal.com/vtapi/v2/ip-address/report?apikey={api_key}&ip={ip}'
 
     def _get_domains(self, ip):
@@ -21,9 +24,9 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                         domains = sorted([x['hostname']
                                           for x in r.json()['resolutions']])
                     else:
-                        print(r.json()['response_code'])
                         domains = []
                     self._add_result(ip, domains)
+                    print('VirusTotal: %s, %s' % (ip, len(domains)))
                     return domains
                 elif r.status_code == 204:
                     print('VirusTotal: 204 - Request rate limit exceeded')
@@ -32,9 +35,10 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                     print('VirusTotal: 403 Forbidden')
                     return
                 else:
-                    return []
+                    print('VirusTotal: Unexpected status code: %s' % r.status_code)
+                    return
         except Exception as error:
-            print(error)
+            print('VirusTotal: %s' % error)
 
 
 class GetSubdomains:

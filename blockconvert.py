@@ -44,7 +44,8 @@ ff02::3 ip6-allhosts
 
 
 class BlockList():
-    def __init__(self, dns_check_threads=40):
+    def __init__(self, config, dns_check_threads=40):
+        self.config = config
         self.blacklist = set()
         self.ip_blocklist = set()
         self.whitelist = set()
@@ -54,7 +55,7 @@ class BlockList():
         self.TLDS = build_regex.TLDS
         self.URL_REGEX = build_regex.URL_REGEX
         self.dns_check_threads = max(1, dns_check_threads)
-        self.dns = dns_check.DNSChecker()
+        self.dns = dns_check.DNSChecker(config)
         self.title = ''
         self.expires = '1 days'
         self.homepage = ''

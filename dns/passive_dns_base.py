@@ -7,6 +7,7 @@ import requests
 
 
 class PassiveDNS:
+    NAME = 'PassiveDNSBase'
     def __init__(self, api_key, path):
         self.api_key = api_key
         self.session = requests.Session()
@@ -24,8 +25,9 @@ class PassiveDNS:
                 time.time())))
         self.conn.commit()
 
-    def get_domains(self, ips):
+    def get_domains(self, ips, result_list):
         total_domains = set()
+        ips = list(set(ips))
         ips_left = set(ips)
         cursor = self.conn.cursor()
         cursor.execute(
@@ -38,6 +40,7 @@ class PassiveDNS:
         random.shuffle(result)
         for (ip, _, _) in result:
             ips_left.remove(ip)
+        print('%s: %s new - %s total' % (self.NAME, len(ips_left), len(ips)))
         ips_left = list(ips_left)
         random.shuffle(ips_left)
         api_working = True
@@ -59,4 +62,5 @@ class PassiveDNS:
                     api_working = False
             else:
                 total_domains.update(domains)
-        return total_domains
+        result_list.clear()
+        result_list.extend(total_domains)
