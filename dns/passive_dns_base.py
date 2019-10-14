@@ -40,18 +40,23 @@ class PassiveDNS:
             ips_left.remove(ip)
         ips_left = list(ips_left)
         random.shuffle(ips_left)
+        api_working = True
         for ip in ips_left:
             fetched = self._get_domains(ip)
             if fetched is not None:
                 total_domains.update(fetched)
+            else:
+                api_working = False
+                break
         for (ip, domains, last_modified) in result:
             domains = json.loads(domains)
-            if time.time() > (last_modified + 7 * 24 * 60 * 60):
+            if time.time() > (last_modified + 7 * 24 * 60 * 60) and api_working:
                 result = self._get_domains(ip)
                 if result is not None:
                     total_domains.update(result)
                 else:
                     total_domains.update(domains)
+                    api_working = False
             else:
                 total_domains.update(domains)
         return total_domains
