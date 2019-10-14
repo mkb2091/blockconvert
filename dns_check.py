@@ -12,6 +12,7 @@ import requests
 import build_regex
 import dns.argus
 import dns.virus_total
+import dns.threatminer
 
 RESERVED = [
     ipaddress.IPv4Network('0.0.0.0/8'),
@@ -118,6 +119,7 @@ class DNSChecker():
             pass
         self.argus = dns.argus.PassiveDNS(config.get('argus_api', ''), os.path.join('db', 'argus.db'))
         self.virus_total = dns.virus_total.PassiveDNS(config.get('virus_total_api', ''), os.path.join('db', 'virus_total.db'))
+        self.threatminer = dns.threatminer.PassiveDNS(config.get('threatminer_api', ''), os.path.join('db', 'threatminer.db'))
 
     def clean_forward_cache(self):
         cache = self.cache
@@ -222,7 +224,7 @@ class DNSChecker():
     def mass_reverse_lookup(self, ip_list, thread_count=40):
         ip_list = set(ip_list)
         results = set()
-        function_list = [self.argus.get_domains, self.virus_total.get_domains]
+        function_list = [self.argus.get_domains, self.virus_total.get_domains, self.threatminer.get_domains]
         processes = []
         for function in function_list:
             result = list()
