@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 592731 blocked domains in each of the generated filter lists
+Theres are 596103 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -43,6 +43,7 @@ Link|Author|Expires|License|Type
 [NoTrack Malware Blocklist](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt)|QuidsUp|1.0 days|GPLv3|Blacklist
 [NoCoin Filter List](https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt)|-|1.0 days|MIT|Blacklist
 [NSA Blocklist](https://raw.githubusercontent.com/Cauchon/NSABlocklist-pi-hole-edition/master/HOSTS%20(excluding%20most%20GOV%20URLs))|Original maintainer: CHEF-KOCH, Pi-Hole Edition maintainer: Cauchon|10.0 days|MIT|Blacklist
+[MobileAdTrackers](https://raw.githubusercontent.com/jawz101/MobileAdTrackers/master/hosts)|-|1.0 days|Modified MIT|Blacklist
 [MinerBlock Filters](https://raw.githubusercontent.com/xd4rker/MinerBlock/master/assets/filters.txt)|-|1.0 days|MIT|Blacklist
 [Magneto Malware Skanner - Burner Domains](https://raw.githubusercontent.com/gwillem/magento-malware-scanner/master/rules/burner-domains.txt)|-|10.0 days|GPLv3|Blacklist
 [Lightswitch05's Tracking Aggressive](https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt)|Daniel White|2.0 days|Apache2|Blacklist
