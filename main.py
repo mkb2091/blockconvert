@@ -9,8 +9,18 @@ import generate_readme
 
 
 def main():
+    config = {}
+    try:
+        with open('config.json') as file:
+            config = json.load(file)
+    except FileNotFoundError:
+        print('config.json not found')
+    except json.JSONDecodeError:
+        print('config.json not valid JSON')
     if not os.path.exists('data'):
         os.mkdir('data')
+    if not os.path.exists('db'):
+        os.mkdir('db')
     urls = []
     with open('urls.txt') as file:
         for line in file.read().splitlines():
@@ -34,13 +44,14 @@ def main():
             'Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns\n')
         file.write('\n'.join([json.dumps(i) for i in urls]))
     start = time.time()
-    manager = download.DownloadManager()
-    manager.bl.add_file('\n'.join(url for (_, url, _, _, _, _, _, _) in urls),
+    blocklist = blockconvert.BlockList(config=config)
+    manager = download.DownloadManager(blocklist)
+    blocklist.add_file('\n'.join(url for (_, url, _, _, _, _, _, _) in urls),
                         is_whitelist=True, match_url=True)
     with open('whitelist.txt') as file:
-        manager.bl.add_file(file.read(), is_whitelist=True, match_url=True)
+        blocklist.add_file(file.read(), is_whitelist=True, match_url=True)
     with open('whitelist.txt', 'w') as file:
-        file.write('\n'.join(sorted(manager.bl.whitelist)))
+        file.write('\n'.join(sorted(blocklist.whitelist)))
     download.copy_whitelist_and_clean()
     for (
         title,
@@ -56,7 +67,6 @@ def main():
     print('Downloaded needed files(%ss)' % (time.time() - start))
     print()
     start = time.time()
-    blocklist = manager.bl
     blocklist.clear()
     for (_, url, _, _, _, _, _, _) in urls:
         path = download.url_to_path(url)
