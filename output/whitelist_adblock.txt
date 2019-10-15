@@ -2211,6 +2211,7 @@
 @@||d.dropbox.com^
 @@||d1f8f9xcsvx3ha.cloudfront.net^
 @@||d1z2jf7jlzjs58.cloudfront.net^
+@@||d2405b0jymm2dk.cloudfront.net^
 @@||d2c87l0yth4zbw.cloudfront.net^
 @@||d2c8v52ll5s99u.cloudfront.net^
 @@||d2gatte9o95jao.cloudfront.net^
@@ -2275,6 +2276,7 @@
 @@||digg.com^
 @@||digicert.com^
 @@||digitalassetlinks.googleapis.com^
+@@||digitalriver.com^
 @@||digitaltrends.com^
 @@||directvnow.com^
 @@||discord.gg^
@@ -2323,6 +2325,8 @@
 @@||dp.msnmessenger.akadns.com^
 @@||dragoart.com^
 @@||dreamamateurs.com^
+@@||drh.img.digitalriver.com^
+@@||drh1.img.digitalriver.com^
 @@||drift.com^
 @@||driftt.com^
 @@||drive.google.com^
@@ -2626,6 +2630,7 @@
 @@||go.redirectingat.com^
 @@||go.trafficrouter.io^
 @@||go.trouter.io^
+@@||go2cloud.org^
 @@||godaddy.com^
 @@||godatafeed.com^
 @@||gogousenet.com^
@@ -7271,6 +7276,7 @@
 @@||help.ui.xboxlive.com^
 @@||here.com^
 @@||herokuapp.com^
+@@||heureka.cz^
 @@||highcharts.com^
 @@||hiroservers.appspot.com^
 @@||history.com^
@@ -15556,6 +15562,7 @@
 @@||www.d.dropbox.com^
 @@||www.d1f8f9xcsvx3ha.cloudfront.net^
 @@||www.d1z2jf7jlzjs58.cloudfront.net^
+@@||www.d2405b0jymm2dk.cloudfront.net^
 @@||www.d2c87l0yth4zbw.cloudfront.net^
 @@||www.d2c8v52ll5s99u.cloudfront.net^
 @@||www.d2gatte9o95jao.cloudfront.net^
@@ -15620,6 +15627,7 @@
 @@||www.digg.com^
 @@||www.digicert.com^
 @@||www.digitalassetlinks.googleapis.com^
+@@||www.digitalriver.com^
 @@||www.digitaltrends.com^
 @@||www.directvnow.com^
 @@||www.discord.gg^
@@ -15668,6 +15676,8 @@
 @@||www.dp.msnmessenger.akadns.com^
 @@||www.dragoart.com^
 @@||www.dreamamateurs.com^
+@@||www.drh.img.digitalriver.com^
+@@||www.drh1.img.digitalriver.com^
 @@||www.drift.com^
 @@||www.driftt.com^
 @@||www.drive.google.com^
@@ -15971,6 +15981,7 @@
 @@||www.go.redirectingat.com^
 @@||www.go.trafficrouter.io^
 @@||www.go.trouter.io^
+@@||www.go2cloud.org^
 @@||www.godaddy.com^
 @@||www.godatafeed.com^
 @@||www.gogousenet.com^
@@ -20616,6 +20627,7 @@
 @@||www.help.ui.xboxlive.com^
 @@||www.here.com^
 @@||www.herokuapp.com^
+@@||www.heureka.cz^
 @@||www.highcharts.com^
 @@||www.hiroservers.appspot.com^
 @@||www.history.com^
