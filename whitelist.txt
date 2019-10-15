@@ -1,3 +1,4 @@
+d2405b0jymm2dk.cloudfront.net
 *.a-msedge.net
 *.b.akamaiedge.net
 *.c-msedge.net
