@@ -114,6 +114,6 @@ dmypy.json
 .pyre/
 
 dns_cache.txt
-data/https%3A%2F%2Fraw.githubusercontent.com%2Fookangzheng%2Fblahdns%2Fmaster%2Fhosts%2Fwhitelist.txt/
+data/
 db/
 config.json
