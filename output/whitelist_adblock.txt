@@ -2324,7 +2324,6 @@
 @@||downloads.mailchimp.com^
 @@||dp.msnmessenger.akadns.com^
 @@||dragoart.com^
-@@||dreamamateurs.com^
 @@||drh.img.digitalriver.com^
 @@||drh1.img.digitalriver.com^
 @@||drift.com^
@@ -7263,7 +7262,6 @@
 @@||hblock.molinero.dev^
 @@||hbogo.com^
 @@||hbogo.pl^
-@@||hdzog.com^
 @@||he.net^
 @@||healthyadvertising.es^
 @@||heapanalytics.com^
@@ -10845,6 +10843,7 @@
 @@||notifications.google.com^
 @@||notify.xboxlive.com^
 @@||notonlyporn.net^
+@@||now.sh^
 @@||npmcdn.com^
 @@||npr-news.streaming.adswizz.com^
 @@||npr.org^
@@ -15675,7 +15674,6 @@
 @@||www.downloads.mailchimp.com^
 @@||www.dp.msnmessenger.akadns.com^
 @@||www.dragoart.com^
-@@||www.dreamamateurs.com^
 @@||www.drh.img.digitalriver.com^
 @@||www.drh1.img.digitalriver.com^
 @@||www.drift.com^
@@ -20614,7 +20612,6 @@
 @@||www.hblock.molinero.dev^
 @@||www.hbogo.com^
 @@||www.hbogo.pl^
-@@||www.hdzog.com^
 @@||www.he.net^
 @@||www.healthyadvertising.es^
 @@||www.heapanalytics.com^
@@ -24196,6 +24193,7 @@
 @@||www.notifications.google.com^
 @@||www.notify.xboxlive.com^
 @@||www.notonlyporn.net^
+@@||www.now.sh^
 @@||www.npmcdn.com^
 @@||www.npr-news.streaming.adswizz.com^
 @@||www.npr.org^

@@ -183,6 +183,7 @@ next-services.apps.microsoft.com
 nexusrules.officeapps.live.com
 notabug.org
 notifications.google.com
+now.sh
 ocation-inference-westus.cloudapp.net
 ocos-office365-s2s.msedge.ne
 ocos-office365-s2s.msedge.net
