@@ -22,7 +22,7 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                 if r.status_code == 200:
                     if r.json()['response_code'] == 1:
                         domains = sorted([x['hostname']
-                                          for x in r.json()['resolutions']])
+                                          for x in r.json()['resolutions'] if x['hostname']])
                     else:
                         domains = []
                     self._add_result(ip, domains)
