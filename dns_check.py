@@ -78,6 +78,8 @@ class DNSCheckerWorker(threading.Thread):
                             print('Fixed\n', end='')
                         success = True
                         break
+                    except json.JSONDecodeError:
+                        print('JSON decode error using %s to check %s' % (server, old_domain) + '\n', end='')
                     except Exception as error:
                         print(server + '\n', end='')
                 if not success:
@@ -155,18 +157,19 @@ class DNSChecker():
         valid_count = 0
         invalid_count = 0
         for domain in domain_list:
-            try:
-                results[domain] = cache[domain][0]
-                if cache[domain][0]:
-                    valid_count += 1
-                else:
-                    invalid_count += 1
-            except KeyError:
-                if build_regex.DOMAIN_REGEX.fullmatch(domain):
-                    request_queue.put(domain)
-                    all_from_cache = False
-                else:
-                    results[domain] = ('', time.time())
+            if not domain.startswith('*'):
+                try:
+                    results[domain] = cache[domain][0]
+                    if cache[domain][0]:
+                        valid_count += 1
+                    else:
+                        invalid_count += 1
+                except KeyError:
+                    if build_regex.DOMAIN_REGEX.fullmatch(domain):
+                        request_queue.put(domain)
+                        all_from_cache = False
+                    else:
+                        results[domain] = ('', time.time())
         if all_from_cache:
             return results
         del domain_list
