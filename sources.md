@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 552528 blocked domains in each of the generated filter lists
+Theres are 582726 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -21,10 +21,12 @@ Link|Author|Expires|License|Type
 [abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|Blacklist
 [abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|Blacklist
 [😍 All-in-One Customized Adblock List 2.7](https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt)|deanoman|2.0 hours|MIT|Blacklist
+[🎮 Game Console Adblock List](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt)|-|4.0 days|Dandelicence|Blacklist
 [WindowsSpyBlocker - Hosts spy rules](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt)|-|1.0 days|MIT|Blacklist
 [WindowsSpyBlocker - Hosts extra rules](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt)|-|1.0 days|MIT|Blacklist
 [Whitelist](https://raw.githubusercontent.com/ookangzheng/blahdns/master/hosts/whitelist.txt)|ookangzheng|1.0 days|CC BY-NC-SA 4.0(I  received permission to add to this project)|Whitelist
 [VX Vault last 100 Links](http://vxvault.net/URL_List.php)|Kicelo, Dominik Schuermann|1.0 days|Copyleft 2010. No rights reserved. |Blacklist
+[Useful Linux Shell Scripts Hosts](https://raw.githubusercontent.com/jackrabbit335/UsefulLinuxShellScripts/master/Hosts%20%26%20sourcelist/blacklist.txt)|-|10.0 days|GPL-3.0|Blacklist
 [Toshiya's Filter List - Experimental](https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt)|Toshiya|4.0 days|GPLv3|Blacklist
 [The Hosts File Project](https://hblock.molinero.dev/hosts)|Héctor Molinero Fernández <hector@molinero.dev>|1.0 days|MIT|Blacklist
 [Strappazzon's Tracking List](https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Tracking.txt)|-|3.0 days|MIT|Blacklist
@@ -69,6 +71,7 @@ Link|Author|Expires|License|Type
 [Better content blocking rules](https://better.fyi/blockerList.txt)|-|1.0 days|CC-BY-SA-4.0|Blacklist
 [Basic tracking list by Disconnect](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)|-|1.0 days|GPLv3|Blacklist
 [BarbBlock](https://ssl.bblck.me/blacklists/domain-list.txt)|-|1.0 days|MIT|Blacklist
+[BAR-list](https://raw.githubusercontent.com/zznidar/BAR/master/BAR-list)|-|10.0 days|GPL-3.0|Blacklist
 [Anudeep's Blacklist](https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt)|Anudeep <anudeep@protonmail.com>|1.0 days|MIT|Blacklist
 [Anudeep's Blacklist](https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt)|Anudeep <anudeep@protonmail.com>|1.0 days|MIT|Blacklist
 [Annoyance Mobile Ad hosts filter](https://raw.githubusercontent.com/yowu/AnnoyanceMobileAdHosts/master/AnnoyanceMobileAdHosts.txt)|-|1.0 days|The Unlicense|Blacklist

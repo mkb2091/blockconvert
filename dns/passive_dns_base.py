@@ -25,7 +25,7 @@ class PassiveDNS:
                 time.time())))
         self.conn.commit()
 
-    def get_domains(self, ips, result_list):
+    def get_domains(self, ips, result_queue):
         total_domains = set()
         ips = list(set(ips))
         ips_left = set(ips)
@@ -66,5 +66,9 @@ class PassiveDNS:
                     api_working = False
             else:
                 total_domains.update(domains)
-        result_list.clear()
-        result_list.extend(total_domains)
+        try:
+            result_queue.put(list(total_domains))
+        except KeyboardInterrupt:
+            print('Error while transferring data')
+            result_queue.put(list(total_domains))
+        print('%s: %s' % (self.NAME, len(total_domains)))

@@ -227,21 +227,18 @@ class DNSChecker():
         function_list = [self.argus.get_domains, self.virus_total.get_domains, self.threatminer.get_domains]
         processes = []
         for function in function_list:
-            result = list()
-            process = multiprocessing.Process(target=function, args=(list(ip_list), result))
+            result_queue = multiprocessing.Queue()
+            process = multiprocessing.Process(target=function, args=(list(ip_list), result_queue))
             process.start()
-            processes.append((process, result))
+            processes.append((process, result_queue))
         for (process, result) in processes:
             try:
-                process.join()
+                results.update(result.get())
             except KeyboardInterrupt:
-                process.join()
-            results.update(result)
-        domain_list = set()
-        for result in results:
-            domain_list.update(result)
+                results.update(result.get())
+        print('Found %s domains, performing dns check' % len(results))
         print('Performed reverse DNS, and passive DNS lookup')
-        self.mass_check(domain_list, thread_count)
+        self.mass_check(results, thread_count)
         print('Checked IP addresses')
         cache = self.cache
         checked_domains = []
