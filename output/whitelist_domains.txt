@@ -1630,7 +1630,6 @@ admedia.adgemini.de
 admin.brightcove.com
 admin.mgid.com
 adnet.qq.com
-adnews.com.br
 adobe-dns-2.adobe.com
 adobe-dns-3.adobe.com
 adobe-dns.adobe.com
@@ -1712,7 +1711,6 @@ ams.amazon.co.uk
 ams.amazon.com
 amzn.to
 an.yandex.ru
-analytics.google.com
 analytics.twitter.com
 ancestry.com
 android.clients.google.com
@@ -1796,7 +1794,6 @@ appengine.google.com
 appldnld.apple.com
 apple.com
 appleid.apple.com
-apply.indeed.com
 apps.facebook.com
 apps.skype.com
 appsbackup-pa.clients6.google.com
@@ -2039,7 +2036,6 @@ cdn.optimizely.com
 cdn.pcbeta.attachment.inimc.com
 cdn.pcbeta.css.inimc.com
 cdn.pcbeta.static.inimc.com
-cdn.phoenix.intergi.com
 cdn.radiantmediatechs.com
 cdn.ravenjs.com
 cdn.rawgit.com
@@ -2096,12 +2092,10 @@ ci4.googleusercontent.com
 ci5.googleusercontent.com
 cinevood.club
 civicscience.com
-cj.com
 cj.dotomi.com
 clarity-green.hart.com
 cleanprint.net
 cleveland.com
-click.uol.com.br
 clicktale.net
 client-office365-tas.msedge.net
 client-s.gateway.messenger.live.com
@@ -2233,7 +2227,6 @@ dashboard.zopim.com
 data.iana.org
 data.mistat.intl.xiaomi.com
 data.mistat.xiaomi.com
-data.wetter.info
 datafilehost.com
 dataplicity.com
 datei.to
@@ -2341,7 +2334,6 @@ dudamobile.com
 dumpert.nl
 duosecurity.com
 dw.com.com
-dwatchseries.to
 dynaimage.cdn.turner.com
 dynupdate.no-ip.com
 dzc-metrics.mzstatic.com
@@ -2398,7 +2390,6 @@ ereg.adobe.com
 ereg.wip3.adobe.com
 error.facebook.com
 es.t8cdn.com
-esellerate.net
 espn.com
 estara.com
 et4.de
@@ -2485,7 +2476,6 @@ flipboard.com
 flipcause.com
 flowplayer.org
 fls-na.amazon.com
-flurry.com
 flyertown.ca
 fm.tuba.pl
 fontawesome.com
@@ -7452,6 +7442,7 @@ jtvnw.net
 justin.tv
 jwpcdn.com
 jwpltx.com
+jwpsrv.com
 kaltura.com
 kampyle.com
 kaspersky.com
@@ -9063,14 +9054,12 @@ livefyre.com
 livehelpnow.net
 livejasmin.com
 livepassdl.conviva.com
-liveperson.net
 livestream.com
 llnwd.net
 lm.facebook.com
 lm.licenses.adobe.com
 lmlicenses.wip4.adobe.com
 load.to
-localytics.com
 location-inference-westus.cloudapp.net
 location.services.mozilla.com
 lodz.tvp.pl
@@ -10770,7 +10759,6 @@ mw1.google.com
 mw2.google.com
 my.aliexpress.com
 my.plexapp.com
-myaccounts.capitalone.com
 mycapture.com
 myfox8.com
 myportfolio.com
@@ -10932,7 +10920,6 @@ onesignal.com
 onet.pl
 onion.to
 online.jimmyjohns.com
-onphpid.com
 onswipe.com
 open.fm
 open.scdn.co
@@ -11219,7 +11206,6 @@ sacramento.cbslocal.com
 safe.txmblr.com
 safebrowsing-cache.google.com
 safebrowsing.google.com
-safelinking.net
 salemove.com
 salesforce.com
 salesforceliveagent.com
@@ -11265,7 +11251,6 @@ secure.gravatar.com
 secure.livechatinc.com
 secure.logmein.com
 secure.mbl.is
-secure.moneygram.com
 secure.netflix.com
 secure.surveymonkey.com
 secure5.arcot.com
@@ -14980,7 +14965,6 @@ www.admedia.adgemini.de
 www.admin.brightcove.com
 www.admin.mgid.com
 www.adnet.qq.com
-www.adnews.com.br
 www.adobe-dns-2.adobe.com
 www.adobe-dns-3.adobe.com
 www.adobe-dns.adobe.com
@@ -15062,7 +15046,6 @@ www.ams.amazon.co.uk
 www.ams.amazon.com
 www.amzn.to
 www.an.yandex.ru
-www.analytics.google.com
 www.analytics.twitter.com
 www.ancestry.com
 www.android.clients.google.com
@@ -15146,7 +15129,6 @@ www.appengine.google.com
 www.appldnld.apple.com
 www.apple.com
 www.appleid.apple.com
-www.apply.indeed.com
 www.apps.facebook.com
 www.apps.skype.com
 www.appsbackup-pa.clients6.google.com
@@ -15389,7 +15371,6 @@ www.cdn.optimizely.com
 www.cdn.pcbeta.attachment.inimc.com
 www.cdn.pcbeta.css.inimc.com
 www.cdn.pcbeta.static.inimc.com
-www.cdn.phoenix.intergi.com
 www.cdn.radiantmediatechs.com
 www.cdn.ravenjs.com
 www.cdn.rawgit.com
@@ -15446,12 +15427,10 @@ www.ci4.googleusercontent.com
 www.ci5.googleusercontent.com
 www.cinevood.club
 www.civicscience.com
-www.cj.com
 www.cj.dotomi.com
 www.clarity-green.hart.com
 www.cleanprint.net
 www.cleveland.com
-www.click.uol.com.br
 www.clicktale.net
 www.client-office365-tas.msedge.net
 www.client-s.gateway.messenger.live.com
@@ -15583,7 +15562,6 @@ www.dashboard.zopim.com
 www.data.iana.org
 www.data.mistat.intl.xiaomi.com
 www.data.mistat.xiaomi.com
-www.data.wetter.info
 www.datafilehost.com
 www.dataplicity.com
 www.datei.to
@@ -15691,7 +15669,6 @@ www.dudamobile.com
 www.dumpert.nl
 www.duosecurity.com
 www.dw.com.com
-www.dwatchseries.to
 www.dynaimage.cdn.turner.com
 www.dynupdate.no-ip.com
 www.dzc-metrics.mzstatic.com
@@ -15748,7 +15725,6 @@ www.ereg.adobe.com
 www.ereg.wip3.adobe.com
 www.error.facebook.com
 www.es.t8cdn.com
-www.esellerate.net
 www.espn.com
 www.estara.com
 www.et4.de
@@ -15835,7 +15811,6 @@ www.flipboard.com
 www.flipcause.com
 www.flowplayer.org
 www.fls-na.amazon.com
-www.flurry.com
 www.flyertown.ca
 www.fm.tuba.pl
 www.fontawesome.com
@@ -20802,6 +20777,7 @@ www.jtvnw.net
 www.justin.tv
 www.jwpcdn.com
 www.jwpltx.com
+www.jwpsrv.com
 www.kaltura.com
 www.kampyle.com
 www.kaspersky.com
@@ -22413,14 +22389,12 @@ www.livefyre.com
 www.livehelpnow.net
 www.livejasmin.com
 www.livepassdl.conviva.com
-www.liveperson.net
 www.livestream.com
 www.llnwd.net
 www.lm.facebook.com
 www.lm.licenses.adobe.com
 www.lmlicenses.wip4.adobe.com
 www.load.to
-www.localytics.com
 www.location-inference-westus.cloudapp.net
 www.location.services.mozilla.com
 www.lodz.tvp.pl
@@ -24120,7 +24094,6 @@ www.mw1.google.com
 www.mw2.google.com
 www.my.aliexpress.com
 www.my.plexapp.com
-www.myaccounts.capitalone.com
 www.mycapture.com
 www.myfox8.com
 www.myportfolio.com
@@ -24282,7 +24255,6 @@ www.onesignal.com
 www.onet.pl
 www.onion.to
 www.online.jimmyjohns.com
-www.onphpid.com
 www.onswipe.com
 www.open.fm
 www.open.scdn.co
@@ -24569,7 +24541,6 @@ www.sacramento.cbslocal.com
 www.safe.txmblr.com
 www.safebrowsing-cache.google.com
 www.safebrowsing.google.com
-www.safelinking.net
 www.salemove.com
 www.salesforce.com
 www.salesforceliveagent.com
@@ -24615,7 +24586,6 @@ www.secure.gravatar.com
 www.secure.livechatinc.com
 www.secure.logmein.com
 www.secure.mbl.is
-www.secure.moneygram.com
 www.secure.netflix.com
 www.secure.surveymonkey.com
 www.secure5.arcot.com
@@ -26758,7 +26728,6 @@ www.ytimg-edge-static.l.google.com
 www.ytimg.com
 www.ytimg.l.google.com
 www.ytstatic.l.google.com
-www.yui.yahooapis.com
 www.yunfile.com
 www.z-1.c10r.facebook.com
 www.z-ecx.images-amazon.com
@@ -26864,7 +26833,6 @@ ytimg-edge-static.l.google.com
 ytimg.com
 ytimg.l.google.com
 ytstatic.l.google.com
-yui.yahooapis.com
 yunfile.com
 z-1.c10r.facebook.com
 z-ecx.images-amazon.com

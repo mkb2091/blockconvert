@@ -3,7 +3,6 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["uBlock filters \u2013 Resource abuse", "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt", "", 345600, "GPLv3", false, false, false]
 ["uBlock filters \u2013 Privacy", "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt", "", 345600, "GPLv3", false, false, false]
 ["uBlock filters \u2013 Badware risks", "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt", "", 345600, "GPLv3", false, false, false]
-["uBlock filters -- Unbreak", "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt", "", 345600, "GPLv3", false, false, false]
 ["iOS Tracker Blocklist", "https://jarv.is/ios-trackers/adguard.txt", "jakejarvis", 864000, "MIT", false, false, false]
 ["hostsVN", "https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts", "", 86400, "MIT", false, false, false]
 ["abuse.ch URLhaus Response Policy Zones", "https://urlhaus.abuse.ch/downloads/rpz/", "", 86400, "CC0", false, false, false]
