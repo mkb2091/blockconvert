@@ -17,8 +17,8 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
     def _get_domains(self, ip):
         try:
             for _ in range(10):
-                time.sleep(6)
                 r = self.session.get(self.URL.format(ip=ip))
+                time.sleep(max(0, 6 - r.elapsed.total_seconds()))
                 if r.status_code == 200:
                     try:
                         domains = set()
