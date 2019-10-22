@@ -29,6 +29,7 @@ class PassiveDNS:
         total_domains = set()
         ips = list(set(ips))
         ips_left = set(ips)
+        ips_expired = list()
         cursor = self.conn.cursor()
         cursor.execute(
             'SELECT ip, domains, last_modified FROM PassiveDNS WHERE ip IN (%s)' %
@@ -38,8 +39,14 @@ class PassiveDNS:
             ips)
         result = cursor.fetchall()
         random.shuffle(result)
-        for (ip, _, _) in result:
+        for (ip, domains, last_modified) in result:
+            domains = json.loads(domains)
+            if time.time() < (last_modified + 7 * 24 * 60 * 60):
+                total_domains.update(domains)
+            else:
+                ips_expired.append([last_modified, ip, domains, False])
             ips_left.remove(ip)
+        ips_expired.sort()
         print('%s: %s new - %s total' % (self.NAME, len(ips_left), len(ips)))
         ips_left = list(ips_left)
         random.shuffle(ips_left)
@@ -55,16 +62,23 @@ class PassiveDNS:
         except KeyboardInterrupt:
             print('KeyboardInterrupt, skipping fetching new ips')
             api_working = False
-        for (ip, domains, last_modified) in result:
-            domains = json.loads(domains)
-            if time.time() > (last_modified + 7 * 24 * 60 * 60) and api_working:
-                result = self._get_domains(ip)
-                if result is not None:
-                    total_domains.update(result)
-                else:
-                    total_domains.update(domains)
-                    api_working = False
-            else:
+        
+        print('%s: Fetching expired (%s expired - %s total)' % (self.NAME, len(ips_expired), len(ips)))
+        try:
+            for item in ips_expired:
+                (last_modified, ip, domains, done) = item
+                if not done:
+                    result = self._get_domains(ip)
+                    if result is not None:
+                        total_domains.update(result)
+                    else:
+                        total_domains.update(domains)
+                        break
+                    item[3] = True
+        except KeyboardInterrupt:
+            print('KeyboardInterrupt, skipping updating expired data')
+        for (last_modified, ip, domains, done) in ips_expired:
+            if not done:
                 total_domains.update(domains)
         try:
             result_queue.put(list(total_domains))
