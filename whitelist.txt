@@ -99,6 +99,7 @@ download.windowsupdate.com
 downloads.getmonero.org
 drh.img.digitalriver.com
 drh1.img.digitalriver.com
+drudgereport.com
 dsx.mp.microsoft.com
 duckdns.org
 duckduckgo.com
@@ -129,6 +130,7 @@ g.akamaiedge.net
 g.live.com
 g.msn.com.nsatc.net
 gamespot.com
+gannettdigital.com
 gateway.reddit.com
 geo-prod.do.dsp.mp.microsoft.com
 geo-prod.dodsp.mp.microsoft.com.nsatc.net
@@ -137,6 +139,7 @@ gitlab.com
 global.ssl.fastly.net
 go.microsoft.com
 go2cloud.org
+guce.huffpost.com
 hblock.molinero.dev
 highcharts.com
 hostsfile.mine.nu
@@ -146,6 +149,8 @@ i.ibb.co
 image.prntscr.com
 img-prod-cms-rt-microsoft-com.akamaized.net
 inference.location.live.net
+infowars.com
+infowarsstore.com
 instagram.com
 int.whiteboard.microsoft.com
 io9.com
@@ -294,6 +299,7 @@ wns.windows.com
 wscont.apps.microsoft.com
 wscont1.apps.microsoft.com
 wscont2.apps.microsoft.com
+wsj.com
 www.alexa.com
 www.amazon.com
 www.answers.com

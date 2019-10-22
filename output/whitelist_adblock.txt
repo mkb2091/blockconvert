@@ -2325,6 +2325,7 @@
 @@||drive.google.com^
 @@||dropbox.com^
 @@||dropbox.comdl.dropbox.com^
+@@||drudgereport.com^
 @@||drugs.com^
 @@||dsp.brand.sogou.com^
 @@||dsw.tt.omtrdc.net^
@@ -2560,6 +2561,7 @@
 @@||gamespot.com^
 @@||gannett-cdn.com^
 @@||gannett-tv.com^
+@@||gannettdigital.com^
 @@||gannettonline.com^
 @@||gap.com^
 @@||gasbuddy.com^
@@ -7243,6 +7245,7 @@
 @@||gtms04.alicdn.com^
 @@||guardian.co.uk^
 @@||guce.advertising.com^
+@@||guce.huffpost.com^
 @@||guildwars2.com^
 @@||guru3d.com^
 @@||gz-lb1.internet.spanner.alipaydns.com^
@@ -7386,6 +7389,8 @@
 @@||indeed.com^
 @@||inergizedigital.com^
 @@||inference.location.live.net^
+@@||infowars.com^
+@@||infowarsstore.com^
 @@||ingov.zendesk.com^
 @@||insomniagamingfestival.com^
 @@||inspectlet.com^
@@ -13326,6 +13331,7 @@
 @@||wscont1.apps.microsoft.com^
 @@||wscont2.apps.microsoft.com^
 @@||wshifen.com^
+@@||wsj.com^
 @@||wt.logmein.com^
 @@||wtkr.com^
 @@||wufoo.com^
@@ -15661,6 +15667,7 @@
 @@||www.drive.google.com^
 @@||www.dropbox.com^
 @@||www.dropbox.comdl.dropbox.com^
+@@||www.drudgereport.com^
 @@||www.drugs.com^
 @@||www.dsp.brand.sogou.com^
 @@||www.dsw.tt.omtrdc.net^
@@ -15896,6 +15903,7 @@
 @@||www.gamespot.com^
 @@||www.gannett-cdn.com^
 @@||www.gannett-tv.com^
+@@||www.gannettdigital.com^
 @@||www.gannettonline.com^
 @@||www.gap.com^
 @@||www.gasbuddy.com^
@@ -20579,6 +20587,7 @@
 @@||www.gtms04.alicdn.com^
 @@||www.guardian.co.uk^
 @@||www.guce.advertising.com^
+@@||www.guce.huffpost.com^
 @@||www.guildwars2.com^
 @@||www.guru3d.com^
 @@||www.gz-lb1.internet.spanner.alipaydns.com^
@@ -20722,6 +20731,8 @@
 @@||www.indeed.com^
 @@||www.inergizedigital.com^
 @@||www.inference.location.live.net^
+@@||www.infowars.com^
+@@||www.infowarsstore.com^
 @@||www.ingov.zendesk.com^
 @@||www.insomniagamingfestival.com^
 @@||www.inspectlet.com^
@@ -26662,6 +26673,7 @@
 @@||www.wscont1.apps.microsoft.com^
 @@||www.wscont2.apps.microsoft.com^
 @@||www.wshifen.com^
+@@||www.wsj.com^
 @@||www.wt.logmein.com^
 @@||www.wtkr.com^
 @@||www.wufoo.com^
