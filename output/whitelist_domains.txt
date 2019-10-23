@@ -1681,7 +1681,6 @@ albert.apple.com
 alert60.com
 alexa.com
 algolia.com
-alicdn.com
 aliexpress.com
 allegro.pl
 allmyvideos.net
@@ -1765,6 +1764,7 @@ api.pushbullet.com
 api.razorpay.com
 api.rlje.net
 api.sec.miui.com
+api.soundcloud.com
 api.target.com
 api.tw06.xlmc.sandai.net
 api.twisto.cz
@@ -2404,6 +2404,7 @@ evcdn.com
 events.launchdarkly.com
 events.mapbox.com
 eventus-design.com
+everyaction.com
 evoke-windowsservices-tas.msedge.net
 ew.com
 example.com
@@ -10818,6 +10819,7 @@ nflxext.com
 nflximg.com
 nflximg.net
 ngfiles.com
+ngpvan.com
 nhl.com
 nike.com
 nine.plugins.plexapp.com
@@ -11673,7 +11675,6 @@ vidto.me
 viduki.com
 viglink.com
 vimeo.com
-vimeocdn.com
 vip5.afdorigin-prod-am02.afdogw.com
 vip5.afdorigin-prod-ch02.afdogw.com
 virtualearth.net
@@ -15023,7 +15024,6 @@ www.albert.apple.com
 www.alert60.com
 www.alexa.com
 www.algolia.com
-www.alicdn.com
 www.aliexpress.com
 www.allegro.pl
 www.allmyvideos.net
@@ -15107,6 +15107,7 @@ www.api.pushbullet.com
 www.api.razorpay.com
 www.api.rlje.net
 www.api.sec.miui.com
+www.api.soundcloud.com
 www.api.target.com
 www.api.tw06.xlmc.sandai.net
 www.api.twisto.cz
@@ -15746,6 +15747,7 @@ www.evcdn.com
 www.events.launchdarkly.com
 www.events.mapbox.com
 www.eventus-design.com
+www.everyaction.com
 www.evoke-windowsservices-tas.msedge.net
 www.ew.com
 www.example.com
@@ -24160,6 +24162,7 @@ www.nflxext.com
 www.nflximg.com
 www.nflximg.net
 www.ngfiles.com
+www.ngpvan.com
 www.nhl.com
 www.nike.com
 www.nine.plugins.plexapp.com
@@ -25015,7 +25018,6 @@ www.vidto.me
 www.viduki.com
 www.viglink.com
 www.vimeo.com
-www.vimeocdn.com
 www.vip5.afdorigin-prod-am02.afdogw.com
 www.vip5.afdorigin-prod-ch02.afdogw.com
 www.virtualearth.net
@@ -26719,10 +26721,8 @@ www.yahoo.co.jp
 www.yahoo.com
 www.yahoo.net
 www.yahooapis.com
-www.yandex.net
 www.yandex.ocsp-responder.com
 www.yandex.ru
-www.yandex.ua
 www.yardbarker.com
 www.yellowpages.com
 www.yelpcdn.com
@@ -26824,10 +26824,8 @@ yahoo.co.jp
 yahoo.com
 yahoo.net
 yahooapis.com
-yandex.net
 yandex.ocsp-responder.com
 yandex.ru
-yandex.ua
 yardbarker.com
 yellowpages.com
 yelpcdn.com
