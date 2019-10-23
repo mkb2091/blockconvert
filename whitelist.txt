@@ -68,10 +68,12 @@ client-office365-tas.msedge.net
 client-s.gateway.messenger.live.com
 cloudfront.net
 cmail19.com
+cmail20.com
 code.jquery.com
 cointraffic.io
 completion.amazon.com
 config.edge.skype.com
+confirmit.com
 content.invisioncic.com
 ct.sendgrid.net
 ctldl.windowsupdate.com
@@ -256,6 +258,7 @@ store-images.s-microsoft.com
 storecatalogrevocation.storequality.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 support.microsoft.com
+survey.euro.confirmit.com
 techradar.com
 tecmint.com
 telecommand.telemetry.microsoft.com.akadns.net

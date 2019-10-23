@@ -2114,6 +2114,7 @@ cloudflareworkers.com
 cloudfront.net
 cloudinary.com
 cmail19.com
+cmail20.com
 cn.bing.com
 cnbc.com
 cnet.com
@@ -2141,6 +2142,7 @@ config.edge.skype.com
 config.ioam.de
 config.pinyin.sogou.com
 configuration.apple.com.akadns.net
+confirmit.com
 connect.facebook.net
 connect.rom.miui.com
 connectivitycheck.gstatic.com
@@ -11437,6 +11439,7 @@ stripecdn.com
 suggestqueries.google.com
 support.coinbase.com
 support.microsoft.com
+survey.euro.confirmit.com
 survey.forseeresults.com
 surveygizmo.com
 surveymonkey.com
@@ -15457,6 +15460,7 @@ www.cloudflareworkers.com
 www.cloudfront.net
 www.cloudinary.com
 www.cmail19.com
+www.cmail20.com
 www.cn.bing.com
 www.cnbc.com
 www.cnet.com
@@ -15484,6 +15488,7 @@ www.config.edge.skype.com
 www.config.ioam.de
 www.config.pinyin.sogou.com
 www.configuration.apple.com.akadns.net
+www.confirmit.com
 www.connect.facebook.net
 www.connect.rom.miui.com
 www.connectivitycheck.gstatic.com
@@ -24780,6 +24785,7 @@ www.stripecdn.com
 www.suggestqueries.google.com
 www.support.coinbase.com
 www.support.microsoft.com
+www.survey.euro.confirmit.com
 www.survey.forseeresults.com
 www.surveygizmo.com
 www.surveymonkey.com
