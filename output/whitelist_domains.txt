@@ -1731,6 +1731,7 @@ ap.spotify.com
 api-cdn.embed.ly
 api-glb.smoot.apple.com
 api-global.netflix.com
+api-maps.yandex.ru
 api-merchants.skimlinks.com
 api-na.geetest.com
 api-partner.spotify.com
@@ -11678,6 +11679,7 @@ vidto.me
 viduki.com
 viglink.com
 vimeo.com
+vimeocdn.com
 vip5.afdorigin-prod-am02.afdogw.com
 vip5.afdorigin-prod-ch02.afdogw.com
 virtualearth.net
@@ -15077,6 +15079,7 @@ www.ap.spotify.com
 www.api-cdn.embed.ly
 www.api-glb.smoot.apple.com
 www.api-global.netflix.com
+www.api-maps.yandex.ru
 www.api-merchants.skimlinks.com
 www.api-na.geetest.com
 www.api-partner.spotify.com
@@ -25024,6 +25027,7 @@ www.vidto.me
 www.viduki.com
 www.viglink.com
 www.vimeo.com
+www.vimeocdn.com
 www.vip5.afdorigin-prod-am02.afdogw.com
 www.vip5.afdorigin-prod-ch02.afdogw.com
 www.virtualearth.net

@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 581654 blocked domains in each of the generated filter lists
+Theres are 581698 blocked domains in each of the generated filter lists
 
 ## Sources
 
