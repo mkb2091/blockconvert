@@ -7368,6 +7368,7 @@ imagetwist.com
 imagevenue.com
 imasdk.googleapis.com
 img-bahn.de
+img-fotki.yandex.ru
 img-prod-cms-rt-microsoft-com.akamaized.net
 img.ads.tvb.com
 img.alicdn.com
@@ -20716,6 +20717,7 @@ www.imagetwist.com
 www.imagevenue.com
 www.imasdk.googleapis.com
 www.img-bahn.de
+www.img-fotki.yandex.ru
 www.img-prod-cms-rt-microsoft-com.akamaized.net
 www.img.ads.tvb.com
 www.img.alicdn.com
