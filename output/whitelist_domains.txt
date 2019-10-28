@@ -1590,6 +1590,7 @@ abc.com
 abcnews.go.com
 abroad.apilocate.amap.com
 account.xiaomi.com
+accounts.eu1.gigya.com
 accounts.google.com
 accounts.us1.gigya.com
 accuweather.com
@@ -1886,6 +1887,7 @@ bestbuy.com
 bestofmedia.com
 beta.spotify.map.fastly.net
 betanews.com
+betfair.com
 better.fyi
 betterttv.net
 bgr.com
@@ -2516,6 +2518,7 @@ forums.mozillazine.org
 forums.plex.tv
 forums.roku.com
 forums.sonarr.tv
+forums.storagereview.com
 forums.techguy.org
 forums.whirlpool.net.au
 fossbytes.com
@@ -11133,6 +11136,7 @@ razorpay.com
 rcom-eu.dynamicyield.com
 rcom.dynamicyield.com
 readability.com
+readcomiconline.to
 readthedocs.org
 real-debrid.com
 realestate.nj.com
@@ -14939,6 +14943,7 @@ www.abc.com
 www.abcnews.go.com
 www.abroad.apilocate.amap.com
 www.account.xiaomi.com
+www.accounts.eu1.gigya.com
 www.accounts.google.com
 www.accounts.us1.gigya.com
 www.accuweather.com
@@ -15235,6 +15240,7 @@ www.bestbuy.com
 www.bestofmedia.com
 www.beta.spotify.map.fastly.net
 www.betanews.com
+www.betfair.com
 www.better.fyi
 www.betterttv.net
 www.bgr.com
@@ -15865,6 +15871,7 @@ www.forums.mozillazine.org
 www.forums.plex.tv
 www.forums.roku.com
 www.forums.sonarr.tv
+www.forums.storagereview.com
 www.forums.techguy.org
 www.forums.whirlpool.net.au
 www.fossbytes.com
@@ -24482,6 +24489,7 @@ www.razorpay.com
 www.rcom-eu.dynamicyield.com
 www.rcom.dynamicyield.com
 www.readability.com
+www.readcomiconline.to
 www.readthedocs.org
 www.real-debrid.com
 www.realestate.nj.com

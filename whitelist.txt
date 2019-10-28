@@ -21,6 +21,7 @@
 *.wns.windows.com
 24timezones.com
 a-msedge.net
+accounts.eu1.gigya.com
 activation.sls.microsoft.com
 adaway.org
 adblock.ee
@@ -125,6 +126,7 @@ files2.freedownloadmanager.org
 filtri-dns.ga
 flipboard.com
 forms.office.com
+forums.storagereview.com
 fossbytes.com
 fs.microsoft.com
 g.akamai.net
@@ -218,6 +220,7 @@ query.prod.cms.rt.microsoft.com
 quora.com
 ransomwaretracker.abuse.ch
 raw.githubusercontent.com
+readcomiconline.to
 reddit.com
 redtube.com
 returnpath.com
@@ -306,6 +309,7 @@ wsj.com
 www.alexa.com
 www.amazon.com
 www.answers.com
+www.betfair.com
 www.binarydefense.com
 www.bing.com
 www.bitlord.com
