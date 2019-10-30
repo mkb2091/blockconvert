@@ -12,7 +12,7 @@ except ImportError:
 
 class PassiveDNS(passive_dns_base.PassiveDNS):
     NAME = 'Argus'
-    URL = 'https://api.mnemonic.no/pdns/v3/{ip}'
+    URL = 'https://api.mnemonic.no/pdns/v3/{ip}?limit=100000'
 
     def _get_domains(self, ip):
         try:
