@@ -223,6 +223,7 @@ raw.githubusercontent.com
 readcomiconline.to
 reddit.com
 redtube.com
+report-uri.com
 returnpath.com
 ris-prod-atm.trafficmanager.net
 ris.api.iris.microsoft.com
@@ -349,6 +350,7 @@ www.vmn.net
 www.webmd.com
 www.yoast.com
 yahoo.co.jp
+zdnet.com
 zerohedge.com
 zeustracker.abuse.ch
 zoho.com

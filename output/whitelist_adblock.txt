@@ -11210,6 +11210,7 @@
 @@||referrer.disqus.com^
 @@||release.theplatform.com^
 @@||releases.flowplayer.org^
+@@||report-uri.com^
 @@||res.cloudinary.com^
 @@||researchgate.net^
 @@||resellerratings.com^
@@ -24625,6 +24626,7 @@
 @@||www.referrer.disqus.com^
 @@||www.release.theplatform.com^
 @@||www.releases.flowplayer.org^
+@@||www.report-uri.com^
 @@||www.res.cloudinary.com^
 @@||www.researchgate.net^
 @@||www.resellerratings.com^
@@ -26900,6 +26902,7 @@
 @@||www.zcbprod.alipay.com^
 @@||www.zdassets.com^
 @@||www.zdbb.net^
+@@||www.zdnet.com^
 @@||www.zencdn.net^
 @@||www.zendesk.com^
 @@||www.zero.facebook.com^
@@ -27007,6 +27010,7 @@
 @@||zcbprod.alipay.com^
 @@||zdassets.com^
 @@||zdbb.net^
+@@||zdnet.com^
 @@||zencdn.net^
 @@||zendesk.com^
 @@||zero.facebook.com^
