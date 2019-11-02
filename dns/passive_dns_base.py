@@ -21,7 +21,7 @@ class PassiveDNS:
     def _add_result(self, ip, domains):
         cursor = self.conn.cursor()
         cursor.execute(
-            'REPLACE INTO PassiveDNS VALUES (?, ?, ?, ?)', (ip, json.dumps(domains), int(
+            'REPLACE INTO PassiveDNS VALUES (?, ?, ?, ?)', (ip, json.dumps(domains).replace(' ', ''), int(
                 time.time()), int(
                 time.time())))
         self.conn.commit()
