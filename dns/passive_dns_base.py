@@ -8,9 +8,10 @@ import requests
 
 class PassiveDNS:
     NAME = 'PassiveDNSBase'
-    def __init__(self, api_key, path):
+    def __init__(self, api_key, path, do_update=True):
         self.api_key = api_key
         self.session = requests.Session()
+        self.do_update = do_update
         self.conn = sqlite3.connect(path)
         cursor = self.conn.cursor()
         cursor.execute(
@@ -41,7 +42,7 @@ class PassiveDNS:
         random.shuffle(result)
         for (ip, domains, last_modified) in result:
             domains = json.loads(domains)
-            if time.time() < (last_modified + 7 * 24 * 60 * 60):
+            if (not self.do_update) or (time.time() < (last_modified + 7 * 24 * 60 * 60)):
                 total_domains.update(domains)
             else:
                 ips_expired.append([last_modified, ip, domains, False])

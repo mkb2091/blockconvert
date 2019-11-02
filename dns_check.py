@@ -90,7 +90,7 @@ class DNSCheckerWorker(threading.Thread):
 
 
 class DNSChecker():
-    def __init__(self, config):
+    def __init__(self, config, update):
         self.session = requests.Session()
         self.session.headers['User-Agent'] = 'DOH'
         self.session.headers['Accept'] = 'application/dns-json'
@@ -113,15 +113,15 @@ class DNSChecker():
                             domain, last_modified = split
                             ip = ''
                         last_modified = int(last_modified)
-                        if last_modified > one_week_ago:
+                        if (not update) or (last_modified > one_week_ago):
                             self.cache[domain] = (ip, last_modified)
                     except (ValueError):
                         pass
         except FileNotFoundError:
             pass
-        self.argus = dns.argus.PassiveDNS(config.get('argus_api', ''), os.path.join('db', 'argus.db'))
-        self.virus_total = dns.virus_total.PassiveDNS(config.get('virus_total_api', ''), os.path.join('db', 'virus_total.db'))
-        self.threatminer = dns.threatminer.PassiveDNS(config.get('threatminer_api', ''), os.path.join('db', 'threatminer.db'))
+        self.argus = dns.argus.PassiveDNS(config.get('argus_api', ''), os.path.join('db', 'argus.db'), update)
+        self.virus_total = dns.virus_total.PassiveDNS(config.get('virus_total_api', ''), os.path.join('db', 'virus_total.db'), update)
+        self.threatminer = dns.threatminer.PassiveDNS(config.get('threatminer_api', ''), os.path.join('db', 'threatminer.db'), update)
 
     def clean_forward_cache(self):
         cache = self.cache
