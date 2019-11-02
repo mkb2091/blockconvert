@@ -9,6 +9,10 @@ import generate_readme
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-u", "--update", help="increase output verbosity",
+                    action="store_true")
+    args = parser.parse_args()
     config = {}
     try:
         with open('config.json') as file:
@@ -44,7 +48,7 @@ def main():
             'Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns\n')
         file.write('\n'.join([json.dumps(i) for i in urls]))
     start = time.time()
-    blocklist = blockconvert.BlockList(config=config)
+    blocklist = blockconvert.BlockList(config=config, update=args.update)
     manager = download.DownloadManager(blocklist)
     blocklist.add_file('\n'.join(url for (_, url, _, _, _, _, _, _) in urls),
                         is_whitelist=True, match_url=True)
