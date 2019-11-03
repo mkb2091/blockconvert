@@ -2109,7 +2109,6 @@ ci5.googleusercontent.com
 cinevood.club
 civicscience.com
 cj.dotomi.com
-clarity-green.hart.com
 cleanprint.net
 cleveland.com
 clicktale.net
@@ -2195,7 +2194,6 @@ craveonline.com
 crbcdn.jsfiddle.net
 creative.ak.fbcdn.net
 creativecommons.org
-criteo.investorroom.com
 crl.microsoft.com
 crl.verisign.net
 crowdynews.com
@@ -15526,7 +15524,6 @@ www.ci5.googleusercontent.com
 www.cinevood.club
 www.civicscience.com
 www.cj.dotomi.com
-www.clarity-green.hart.com
 www.cleanprint.net
 www.cleveland.com
 www.clicktale.net
@@ -15612,7 +15609,6 @@ www.craveonline.com
 www.crbcdn.jsfiddle.net
 www.creative.ak.fbcdn.net
 www.creativecommons.org
-www.criteo.investorroom.com
 www.crl.microsoft.com
 www.crl.verisign.net
 www.crowdynews.com
