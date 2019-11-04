@@ -7,7 +7,7 @@ import requests
 try:
     import passive_dns_base
 except ImportError:
-    import dns.passive_dns_base as passive_dns_base 
+    import dns.passive_dns_base as passive_dns_base
 
 
 class PassiveDNS(passive_dns_base.PassiveDNS):
@@ -32,8 +32,11 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                         print('Argus: Received unexpected data')
                 elif r.status_code == 402:
                     try:
-                        millisUntilResourcesAvailable = int(r.json()['metaData']['millisUntilResourcesAvailable']) / 1000
-                        print('Argus: Resource Available in %s' % millisUntilResourcesAvailable)
+                        millisUntilResourcesAvailable = int(
+                            r.json()['metaData']['millisUntilResourcesAvailable']) / 1000
+                        print(
+                            'Argus: Resource Available in %s' %
+                            millisUntilResourcesAvailable)
                         if millisUntilResourcesAvailable > 30 * 60:
                             return
                         time.sleep(millisUntilResourcesAvailable)
@@ -43,7 +46,9 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                         time.sleep(1)
                         break
                 else:
-                    print('Argus: Recieved unexpected status code:', r.status_code)
+                    print(
+                        'Argus: Recieved unexpected status code:',
+                        r.status_code)
                     return
         except Exception as error:
             print('Argus: %s' % error)

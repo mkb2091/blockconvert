@@ -8,6 +8,7 @@ import requests
 
 class PassiveDNS:
     NAME = 'PassiveDNSBase'
+
     def __init__(self, api_key, path, do_update=True):
         self.api_key = api_key
         self.session = requests.Session()
@@ -21,7 +22,8 @@ class PassiveDNS:
     def _add_result(self, ip, domains):
         cursor = self.conn.cursor()
         cursor.execute(
-            'REPLACE INTO PassiveDNS VALUES (?, ?, ?, ?)', (ip, json.dumps(domains).replace(' ', ''), int(
+            'REPLACE INTO PassiveDNS VALUES (?, ?, ?, ?)', (ip, json.dumps(domains).replace(
+                ' ', ''), int(
                 time.time()), int(
                 time.time())))
         self.conn.commit()
@@ -42,7 +44,8 @@ class PassiveDNS:
         random.shuffle(result)
         for (ip, domains, last_modified) in result:
             domains = json.loads(domains)
-            if (not self.do_update) or (time.time() < (last_modified + 7 * 24 * 60 * 60)):
+            if (not self.do_update) or (time.time() <
+                                        (last_modified + 7 * 24 * 60 * 60)):
                 total_domains.update(domains)
             else:
                 ips_expired.append([last_modified, ip, domains, False])
@@ -63,8 +66,9 @@ class PassiveDNS:
         except KeyboardInterrupt:
             print('KeyboardInterrupt, skipping fetching new ips')
             api_working = False
-        
-        print('%s: Fetching expired (%s expired - %s total)' % (self.NAME, len(ips_expired), len(ips)))
+
+        print('%s: Fetching expired (%s expired - %s total)' %
+              (self.NAME, len(ips_expired), len(ips)))
         try:
             for item in ips_expired:
                 (last_modified, ip, domains, done) = item

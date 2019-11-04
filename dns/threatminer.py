@@ -7,7 +7,7 @@ import requests
 try:
     import passive_dns_base
 except ImportError:
-    import dns.passive_dns_base as passive_dns_base 
+    import dns.passive_dns_base as passive_dns_base
 
 
 class PassiveDNS(passive_dns_base.PassiveDNS):
@@ -32,7 +32,9 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                     except TypeError:
                         print('%s: Received unexpected data' % self.NAME)
                 else:
-                    print('%s: Recieved unexpected status code:%s' % (self.NAME, r.status_code))
+                    print(
+                        '%s: Recieved unexpected status code:%s' %
+                        (self.NAME, r.status_code))
                     return
         except Exception as error:
             print('%s: %s' % (self.NAME, error))

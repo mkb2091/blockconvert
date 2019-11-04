@@ -79,7 +79,9 @@ class DNSCheckerWorker(threading.Thread):
                         success = True
                         break
                     except json.JSONDecodeError:
-                        print('JSON decode error using %s to check %s' % (server, old_domain) + '\n', end='')
+                        print(
+                            'JSON decode error using %s to check %s' %
+                            (server, old_domain) + '\n', end='')
                     except Exception as error:
                         print(server + '\n', end='')
                 if not success:
@@ -119,9 +121,18 @@ class DNSChecker():
                         pass
         except FileNotFoundError:
             pass
-        self.argus = dns.argus.PassiveDNS(config.get('argus_api', ''), os.path.join('db', 'argus.db'), update)
-        self.virus_total = dns.virus_total.PassiveDNS(config.get('virus_total_api', ''), os.path.join('db', 'virus_total.db'), update)
-        self.threatminer = dns.threatminer.PassiveDNS(config.get('threatminer_api', ''), os.path.join('db', 'threatminer.db'), update)
+        self.argus = dns.argus.PassiveDNS(
+            config.get(
+                'argus_api', ''), os.path.join(
+                'db', 'argus.db'), update)
+        self.virus_total = dns.virus_total.PassiveDNS(
+            config.get(
+                'virus_total_api', ''), os.path.join(
+                'db', 'virus_total.db'), update)
+        self.threatminer = dns.threatminer.PassiveDNS(
+            config.get(
+                'threatminer_api', ''), os.path.join(
+                'db', 'threatminer.db'), update)
 
     def clean_forward_cache(self):
         cache = self.cache
@@ -227,11 +238,16 @@ class DNSChecker():
     def mass_reverse_lookup(self, ip_list, thread_count=40):
         ip_list = set(ip_list)
         results = set()
-        function_list = [self.argus.get_domains, self.virus_total.get_domains, self.threatminer.get_domains]
+        function_list = [
+            self.argus.get_domains,
+            self.virus_total.get_domains,
+            self.threatminer.get_domains]
         processes = []
         for function in function_list:
             result_queue = multiprocessing.Queue()
-            process = multiprocessing.Process(target=function, args=(list(ip_list), result_queue))
+            process = multiprocessing.Process(
+                target=function, args=(
+                    list(ip_list), result_queue))
             process.start()
             processes.append((process, result_queue))
         for (process, result) in processes:

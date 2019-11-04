@@ -7,7 +7,8 @@ import requests
 try:
     import passive_dns_base
 except ImportError:
-    import dns.passive_dns_base as passive_dns_base 
+    import dns.passive_dns_base as passive_dns_base
+
 
 class PassiveDNS(passive_dns_base.PassiveDNS):
     NAME = 'VirusTotal'
@@ -21,8 +22,8 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                         api_key=self.api_key, ip=ip))
                 if r.status_code == 200:
                     if r.json()['response_code'] == 1:
-                        domains = sorted([x['hostname']
-                                          for x in r.json()['resolutions'] if x['hostname']])
+                        domains = sorted([x['hostname'] for x in r.json()[
+                                         'resolutions'] if x['hostname']])
                     else:
                         domains = []
                     self._add_result(ip, domains)
@@ -35,7 +36,9 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                     print('VirusTotal: 403 Forbidden')
                     return
                 else:
-                    print('VirusTotal: Unexpected status code: %s' % r.status_code)
+                    print(
+                        'VirusTotal: Unexpected status code: %s' %
+                        r.status_code)
                     return
         except Exception as error:
             print('VirusTotal: %s' % error)
