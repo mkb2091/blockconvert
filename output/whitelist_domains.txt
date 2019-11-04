@@ -11158,7 +11158,6 @@ q13fox.com
 qq.com
 qualtrics.com
 quantummetric.com
-query.petametrics.com
 query.prod.cms.rt.microsoft.com
 quora.com
 quotemedia.com
@@ -24573,7 +24572,6 @@ www.q13fox.com
 www.qq.com
 www.qualtrics.com
 www.quantummetric.com
-www.query.petametrics.com
 www.query.prod.cms.rt.microsoft.com
 www.quora.com
 www.quotemedia.com
