@@ -11,7 +11,7 @@ import generate_readme
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-u", "--update", help="increase output verbosity",
-                    action="store_true")
+                        action="store_true")
     args = parser.parse_args()
     config = {}
     try:
@@ -51,7 +51,7 @@ def main():
     blocklist = blockconvert.BlockList(config=config, update=args.update)
     manager = download.DownloadManager(blocklist)
     blocklist.add_file('\n'.join(url for (_, url, _, _, _, _, _, _) in urls),
-                        is_whitelist=True, match_url=True)
+                       is_whitelist=True, match_url=True)
     with open('whitelist.txt') as file:
         blocklist.add_file(file.read(), is_whitelist=True, match_url=True)
     with open('whitelist.txt', 'w') as file:
