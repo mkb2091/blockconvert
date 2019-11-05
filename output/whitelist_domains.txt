@@ -2495,6 +2495,7 @@ financialpostcom.files.wordpress.com
 find.api.micloud.xiaomi.net
 findnsave.com
 firstlook.org
+fiverr.com
 flattr.com
 flickr.com
 fling.com
@@ -15909,6 +15910,7 @@ www.financialpostcom.files.wordpress.com
 www.find.api.micloud.xiaomi.net
 www.findnsave.com
 www.firstlook.org
+www.fiverr.com
 www.flattr.com
 www.flickr.com
 www.fling.com

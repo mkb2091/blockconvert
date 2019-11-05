@@ -124,6 +124,7 @@ files.catbox.moe
 files.freedownloadmanager.org
 files2.freedownloadmanager.org
 filtri-dns.ga
+fiverr.com
 flipboard.com
 forms.office.com
 forums.storagereview.com
