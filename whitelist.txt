@@ -21,6 +21,7 @@
 *.wns.windows.com
 24timezones.com
 a-msedge.net
+aax-us-east.amazon-adsystem.com
 accounts.eu1.gigya.com
 activation.sls.microsoft.com
 adaway.org
@@ -39,6 +40,7 @@ answers.com
 answers.microsoft.com
 api.facebook.com
 appspot-preview.l.google.com
+apt.newrelic.com
 arc.msn.com
 arc.msn.com.nsatc.net
 ars.smartscreen.microsoft.com
@@ -99,6 +101,7 @@ dmd.metaservices.microsoft.com
 dmd.metaservices.microsoft.com.akadns.net
 dns.google.com
 do.co
+download.newrelic.com
 download.windowsupdate.com
 downloads.getmonero.org
 drh.img.digitalriver.com
@@ -285,6 +288,7 @@ v.firebog.net
 v10.events.data.microsoft.com
 v10.vortex-win.data.microsoft.com
 v20.events.data.microsoft.com
+vgwort.de
 vignette.wikia.nocookie.net
 vip5.afdorigin-prod-am02.afdogw.com
 vip5.afdorigin-prod-ch02.afdogw.com
@@ -306,6 +310,7 @@ wikidot.com
 wildcard.twimg.com
 windowsupdate.com
 wns.windows.com
+worldstream.nl
 wscont.apps.microsoft.com
 wscont1.apps.microsoft.com
 wscont2.apps.microsoft.com
@@ -332,18 +337,21 @@ www.google.com.*
 www.heureka.cz
 www.ign.com
 www.instagram.com
+www.ip-tracker.org
 www.kaspersky.com
 www.ku6.com
 www.malwaredomainlist.com
 www.mbl.is
 www.msftconnecttest.com
 www.namecheap.com
+www.newrelic.com
 www.orbitz.com
 www.pcmatic.com
 www.phishtank.com
 www.privateinternetaccess.com
 www.ranker.com
 www.reddit.com
+www.semrush.com
 www.similarweb.com
 www.squidblacklist.org
 www.toptenreviews.com

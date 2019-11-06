@@ -1589,6 +1589,7 @@ a652.dscb.akamai.net
 a8chomedotblog.files.wordpress.com
 a90.g.akamai.net
 aatkit.com
+aax-us-east.amazon-adsystem.com
 abc.com
 abcnews.go.com
 abroad.apilocate.amap.com
@@ -1811,6 +1812,7 @@ appspot-preview.l.google.com
 appspot.com
 apptimize.com
 apresolve.spotify.com
+apt.newrelic.com
 apt.sonarr.tv
 arc.msn.com
 arc.msn.com.nsatc.net
@@ -2331,6 +2333,7 @@ dotsub.com
 down.sandai.net
 download.cnet.com
 download.intsig.net
+download.newrelic.com
 download.sonarr.tv
 download.windowsupdate.com
 downloads.getmonero.org
@@ -7444,6 +7447,7 @@ investingchannel.com
 investorplace.com
 io9.com
 ip-adress.com
+ip-tracker.org
 ipapi.co
 ipify.org
 ipinfo.io
@@ -10844,6 +10848,7 @@ networksolutions.com
 newad.mail.wo.cn
 newegg.com
 newjobs.com
+newrelic.com
 news.ebc.net.tw
 news.google.com
 news.ycombinator.com
@@ -11335,6 +11340,7 @@ seedingup.es
 seedingup.fr
 seedingup.it
 segment.com
+semrush.com
 sendgrid.net
 sendspace.com
 service.weather.microsoft.com
@@ -11724,6 +11730,7 @@ vc.yahoo.com
 verify.monzo.com
 verisign.com
 verisigninc.112.2o7.net
+vgwort.de
 vgy.me
 viafoura.net
 viarnd.112.2o7.net
@@ -13390,6 +13397,7 @@ wnyc.org
 wordpress.com
 world-gen.g.aaplimg.com
 worldnow.com
+worldstream.nl
 wp.com
 wpengine.com
 ws-mt1.pusher.com
@@ -15005,6 +15013,7 @@ www.a652.dscb.akamai.net
 www.a8chomedotblog.files.wordpress.com
 www.a90.g.akamai.net
 www.aatkit.com
+www.aax-us-east.amazon-adsystem.com
 www.abc.com
 www.abcnews.go.com
 www.abroad.apilocate.amap.com
@@ -15227,6 +15236,7 @@ www.appspot-preview.l.google.com
 www.appspot.com
 www.apptimize.com
 www.apresolve.spotify.com
+www.apt.newrelic.com
 www.apt.sonarr.tv
 www.arc.msn.com
 www.arc.msn.com.nsatc.net
@@ -15747,6 +15757,7 @@ www.dotsub.com
 www.down.sandai.net
 www.download.cnet.com
 www.download.intsig.net
+www.download.newrelic.com
 www.download.sonarr.tv
 www.download.windowsupdate.com
 www.downloads.getmonero.org
@@ -20860,6 +20871,7 @@ www.investingchannel.com
 www.investorplace.com
 www.io9.com
 www.ip-adress.com
+www.ip-tracker.org
 www.ipapi.co
 www.ipify.org
 www.ipinfo.io
@@ -24260,6 +24272,7 @@ www.networksolutions.com
 www.newad.mail.wo.cn
 www.newegg.com
 www.newjobs.com
+www.newrelic.com
 www.news.ebc.net.tw
 www.news.google.com
 www.news.ycombinator.com
@@ -24751,6 +24764,7 @@ www.seedingup.es
 www.seedingup.fr
 www.seedingup.it
 www.segment.com
+www.semrush.com
 www.sendgrid.net
 www.sendspace.com
 www.service.weather.microsoft.com
@@ -25140,6 +25154,7 @@ www.vc.yahoo.com
 www.verify.monzo.com
 www.verisign.com
 www.verisigninc.112.2o7.net
+www.vgwort.de
 www.vgy.me
 www.viafoura.net
 www.viarnd.112.2o7.net
@@ -26806,6 +26821,7 @@ www.wnyc.org
 www.wordpress.com
 www.world-gen.g.aaplimg.com
 www.worldnow.com
+www.worldstream.nl
 www.wp.com
 www.wpengine.com
 www.ws-mt1.pusher.com
