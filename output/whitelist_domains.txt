@@ -1679,6 +1679,7 @@ akamaiedge.net
 akamaihd.net
 akamaitechnologies.com
 akamaized.net
+akismet.com
 al.com
 alb.reddit.com
 albert.apple.com
@@ -15094,6 +15095,7 @@ www.akamaiedge.net
 www.akamaihd.net
 www.akamaitechnologies.com
 www.akamaized.net
+www.akismet.com
 www.al.com
 www.alb.reddit.com
 www.albert.apple.com
