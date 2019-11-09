@@ -11415,6 +11415,7 @@
 @@||spb.ru^
 @@||spclient.spotify.com^
 @@||spclient.wg.spotify.com^
+@@||speedcurve.com^
 @@||spiceworks.com^
 @@||sport.onet.pl^
 @@||sport.pl^
@@ -24842,6 +24843,7 @@
 @@||www.spb.ru^
 @@||www.spclient.spotify.com^
 @@||www.spclient.wg.spotify.com^
+@@||www.speedcurve.com^
 @@||www.spiceworks.com^
 @@||www.sport.onet.pl^
 @@||www.sport.pl^
