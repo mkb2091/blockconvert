@@ -11140,6 +11140,7 @@
 @@||promodj.com^
 @@||promotion.aliexpress.com^
 @@||promotions.newegg.com^
+@@||proofpoint.com^
 @@||protonmail.com^
 @@||providesupport.com^
 @@||proxy.novafusion.ea.com^
@@ -11705,6 +11706,7 @@
 @@||uploads.tapatalk-cdn.com^
 @@||uplynk.com^
 @@||uptobox.com^
+@@||urldefense.proofpoint.com^
 @@||urlhaus.abuse.ch^
 @@||us-aebridge.aliexpress.com.gds.alibabadns.com^
 @@||us.configsvc1.live.com.akadns.net^
@@ -24568,6 +24570,7 @@
 @@||www.promodj.com^
 @@||www.promotion.aliexpress.com^
 @@||www.promotions.newegg.com^
+@@||www.proofpoint.com^
 @@||www.protonmail.com^
 @@||www.providesupport.com^
 @@||www.proxy.novafusion.ea.com^
@@ -25133,6 +25136,7 @@
 @@||www.uploads.tapatalk-cdn.com^
 @@||www.uplynk.com^
 @@||www.uptobox.com^
+@@||www.urldefense.proofpoint.com^
 @@||www.urlhaus.abuse.ch^
 @@||www.us-aebridge.aliexpress.com.gds.alibabadns.com^
 @@||www.us.configsvc1.live.com.akadns.net^

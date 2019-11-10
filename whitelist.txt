@@ -221,6 +221,7 @@ pbs.twimg.com
 polyfill.io
 pornhub.com
 prod.do.dsp.mp.microsoft.com
+proofpoint.com
 pti.store.microsoft.com
 purchase.mp.microsoft.com
 qq.com
@@ -284,6 +285,7 @@ transfer.sh
 tsfe.trafficshaping.dsp.mp.microsoft.com
 unitedstates.smartscreen-prod.microsoft.com
 update.microsoft.com
+urldefense.proofpoint.com
 urlhaus.abuse.ch
 us.configsvc1.live.com.akadns.net
 use.typekit.net
