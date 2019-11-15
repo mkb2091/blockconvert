@@ -1,4 +1,5 @@
 @@||*.a-msedge.net^
+@@||*.adafruit.com^
 @@||*.b.akamaiedge.net^
 @@||*.c-msedge.net^
 @@||*.delivery.mp.microsoft.com^
@@ -13409,6 +13410,7 @@
 @@||www-cdn.icloud.com.akadns.net^
 @@||www-tc.pbs.org^
 @@||www.*.a-msedge.net^
+@@||www.*.adafruit.com^
 @@||www.*.b.akamaiedge.net^
 @@||www.*.c-msedge.net^
 @@||www.*.delivery.mp.microsoft.com^

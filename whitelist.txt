@@ -1,4 +1,5 @@
 *.a-msedge.net
+*.adafruit.com
 *.b.akamaiedge.net
 *.c-msedge.net
 *.delivery.mp.microsoft.com
