@@ -218,7 +218,6 @@
 *.md.mp.microsoft.com.career
 *.md.mp.microsoft.com.careers
 *.md.mp.microsoft.com.cars
-*.md.mp.microsoft.com.cartier
 *.md.mp.microsoft.com.casa
 *.md.mp.microsoft.com.case
 *.md.mp.microsoft.com.caseih
@@ -410,7 +409,6 @@
 *.md.mp.microsoft.com.eurovision
 *.md.mp.microsoft.com.eus
 *.md.mp.microsoft.com.events
-*.md.mp.microsoft.com.everbank
 *.md.mp.microsoft.com.exchange
 *.md.mp.microsoft.com.expert
 *.md.mp.microsoft.com.exposed
@@ -955,7 +953,6 @@
 *.md.mp.microsoft.com.photography
 *.md.mp.microsoft.com.photos
 *.md.mp.microsoft.com.physio
-*.md.mp.microsoft.com.piaget
 *.md.mp.microsoft.com.pics
 *.md.mp.microsoft.com.pictet
 *.md.mp.microsoft.com.pictures
@@ -1643,6 +1640,7 @@ adpartner.de
 ads.askgamblers.com
 ads.fuckingmachines.com
 ads.id
+ads.microsoft.com
 ads.nipr.ac.jp
 ads.pinterest.com
 ads.talkbusiness.net
@@ -2871,7 +2869,6 @@ google.care
 google.career
 google.careers
 google.cars
-google.cartier
 google.casa
 google.case
 google.caseih
@@ -3140,7 +3137,6 @@ google.co.care
 google.co.career
 google.co.careers
 google.co.cars
-google.co.cartier
 google.co.casa
 google.co.case
 google.co.caseih
@@ -3332,7 +3328,6 @@ google.co.eu
 google.co.eurovision
 google.co.eus
 google.co.events
-google.co.everbank
 google.co.exchange
 google.co.expert
 google.co.exposed
@@ -3877,7 +3872,6 @@ google.co.photo
 google.co.photography
 google.co.photos
 google.co.physio
-google.co.piaget
 google.co.pics
 google.co.pictet
 google.co.pictures
@@ -4673,7 +4667,6 @@ google.com.care
 google.com.career
 google.com.careers
 google.com.cars
-google.com.cartier
 google.com.casa
 google.com.case
 google.com.caseih
@@ -4865,7 +4858,6 @@ google.com.eu
 google.com.eurovision
 google.com.eus
 google.com.events
-google.com.everbank
 google.com.exchange
 google.com.expert
 google.com.exposed
@@ -5410,7 +5402,6 @@ google.com.photo
 google.com.photography
 google.com.photos
 google.com.physio
-google.com.piaget
 google.com.pics
 google.com.pictet
 google.com.pictures
@@ -6117,7 +6108,6 @@ google.eu
 google.eurovision
 google.eus
 google.events
-google.everbank
 google.exchange
 google.expert
 google.exposed
@@ -6662,7 +6652,6 @@ google.photo
 google.photography
 google.photos
 google.physio
-google.piaget
 google.pics
 google.pictet
 google.pictures
@@ -7725,7 +7714,6 @@ kisscartoon.care
 kisscartoon.career
 kisscartoon.careers
 kisscartoon.cars
-kisscartoon.cartier
 kisscartoon.casa
 kisscartoon.case
 kisscartoon.caseih
@@ -7917,7 +7905,6 @@ kisscartoon.eu
 kisscartoon.eurovision
 kisscartoon.eus
 kisscartoon.events
-kisscartoon.everbank
 kisscartoon.exchange
 kisscartoon.expert
 kisscartoon.exposed
@@ -8462,7 +8449,6 @@ kisscartoon.photo
 kisscartoon.photography
 kisscartoon.photos
 kisscartoon.physio
-kisscartoon.piaget
 kisscartoon.pics
 kisscartoon.pictet
 kisscartoon.pictures
@@ -9394,7 +9380,6 @@ md.mp.microsoft.com.care
 md.mp.microsoft.com.career
 md.mp.microsoft.com.careers
 md.mp.microsoft.com.cars
-md.mp.microsoft.com.cartier
 md.mp.microsoft.com.casa
 md.mp.microsoft.com.case
 md.mp.microsoft.com.caseih
@@ -9586,7 +9571,6 @@ md.mp.microsoft.com.eu
 md.mp.microsoft.com.eurovision
 md.mp.microsoft.com.eus
 md.mp.microsoft.com.events
-md.mp.microsoft.com.everbank
 md.mp.microsoft.com.exchange
 md.mp.microsoft.com.expert
 md.mp.microsoft.com.exposed
@@ -10131,7 +10115,6 @@ md.mp.microsoft.com.photo
 md.mp.microsoft.com.photography
 md.mp.microsoft.com.photos
 md.mp.microsoft.com.physio
-md.mp.microsoft.com.piaget
 md.mp.microsoft.com.pics
 md.mp.microsoft.com.pictet
 md.mp.microsoft.com.pictures
@@ -12011,7 +11994,6 @@ wdcp.microsoft.care
 wdcp.microsoft.career
 wdcp.microsoft.careers
 wdcp.microsoft.cars
-wdcp.microsoft.cartier
 wdcp.microsoft.casa
 wdcp.microsoft.case
 wdcp.microsoft.caseih
@@ -12203,7 +12185,6 @@ wdcp.microsoft.eu
 wdcp.microsoft.eurovision
 wdcp.microsoft.eus
 wdcp.microsoft.events
-wdcp.microsoft.everbank
 wdcp.microsoft.exchange
 wdcp.microsoft.expert
 wdcp.microsoft.exposed
@@ -12748,7 +12729,6 @@ wdcp.microsoft.photo
 wdcp.microsoft.photography
 wdcp.microsoft.photos
 wdcp.microsoft.physio
-wdcp.microsoft.piaget
 wdcp.microsoft.pics
 wdcp.microsoft.pictet
 wdcp.microsoft.pictures
@@ -13648,7 +13628,6 @@ www.*.md.mp.microsoft.com.care
 www.*.md.mp.microsoft.com.career
 www.*.md.mp.microsoft.com.careers
 www.*.md.mp.microsoft.com.cars
-www.*.md.mp.microsoft.com.cartier
 www.*.md.mp.microsoft.com.casa
 www.*.md.mp.microsoft.com.case
 www.*.md.mp.microsoft.com.caseih
@@ -13840,7 +13819,6 @@ www.*.md.mp.microsoft.com.eu
 www.*.md.mp.microsoft.com.eurovision
 www.*.md.mp.microsoft.com.eus
 www.*.md.mp.microsoft.com.events
-www.*.md.mp.microsoft.com.everbank
 www.*.md.mp.microsoft.com.exchange
 www.*.md.mp.microsoft.com.expert
 www.*.md.mp.microsoft.com.exposed
@@ -14385,7 +14363,6 @@ www.*.md.mp.microsoft.com.photo
 www.*.md.mp.microsoft.com.photography
 www.*.md.mp.microsoft.com.photos
 www.*.md.mp.microsoft.com.physio
-www.*.md.mp.microsoft.com.piaget
 www.*.md.mp.microsoft.com.pics
 www.*.md.mp.microsoft.com.pictet
 www.*.md.mp.microsoft.com.pictures
@@ -15073,6 +15050,7 @@ www.adpartner.de
 www.ads.askgamblers.com
 www.ads.fuckingmachines.com
 www.ads.id
+www.ads.microsoft.com
 www.ads.nipr.ac.jp
 www.ads.pinterest.com
 www.ads.talkbusiness.net
@@ -16301,7 +16279,6 @@ www.google.care
 www.google.career
 www.google.careers
 www.google.cars
-www.google.cartier
 www.google.casa
 www.google.case
 www.google.caseih
@@ -16570,7 +16547,6 @@ www.google.co.care
 www.google.co.career
 www.google.co.careers
 www.google.co.cars
-www.google.co.cartier
 www.google.co.casa
 www.google.co.case
 www.google.co.caseih
@@ -16762,7 +16738,6 @@ www.google.co.eu
 www.google.co.eurovision
 www.google.co.eus
 www.google.co.events
-www.google.co.everbank
 www.google.co.exchange
 www.google.co.expert
 www.google.co.exposed
@@ -17307,7 +17282,6 @@ www.google.co.photo
 www.google.co.photography
 www.google.co.photos
 www.google.co.physio
-www.google.co.piaget
 www.google.co.pics
 www.google.co.pictet
 www.google.co.pictures
@@ -18103,7 +18077,6 @@ www.google.com.care
 www.google.com.career
 www.google.com.careers
 www.google.com.cars
-www.google.com.cartier
 www.google.com.casa
 www.google.com.case
 www.google.com.caseih
@@ -18295,7 +18268,6 @@ www.google.com.eu
 www.google.com.eurovision
 www.google.com.eus
 www.google.com.events
-www.google.com.everbank
 www.google.com.exchange
 www.google.com.expert
 www.google.com.exposed
@@ -18840,7 +18812,6 @@ www.google.com.photo
 www.google.com.photography
 www.google.com.photos
 www.google.com.physio
-www.google.com.piaget
 www.google.com.pics
 www.google.com.pictet
 www.google.com.pictures
@@ -19547,7 +19518,6 @@ www.google.eu
 www.google.eurovision
 www.google.eus
 www.google.events
-www.google.everbank
 www.google.exchange
 www.google.expert
 www.google.exposed
@@ -20092,7 +20062,6 @@ www.google.photo
 www.google.photography
 www.google.photos
 www.google.physio
-www.google.piaget
 www.google.pics
 www.google.pictet
 www.google.pictures
@@ -21155,7 +21124,6 @@ www.kisscartoon.care
 www.kisscartoon.career
 www.kisscartoon.careers
 www.kisscartoon.cars
-www.kisscartoon.cartier
 www.kisscartoon.casa
 www.kisscartoon.case
 www.kisscartoon.caseih
@@ -21347,7 +21315,6 @@ www.kisscartoon.eu
 www.kisscartoon.eurovision
 www.kisscartoon.eus
 www.kisscartoon.events
-www.kisscartoon.everbank
 www.kisscartoon.exchange
 www.kisscartoon.expert
 www.kisscartoon.exposed
@@ -21892,7 +21859,6 @@ www.kisscartoon.photo
 www.kisscartoon.photography
 www.kisscartoon.photos
 www.kisscartoon.physio
-www.kisscartoon.piaget
 www.kisscartoon.pics
 www.kisscartoon.pictet
 www.kisscartoon.pictures
@@ -22824,7 +22790,6 @@ www.md.mp.microsoft.com.care
 www.md.mp.microsoft.com.career
 www.md.mp.microsoft.com.careers
 www.md.mp.microsoft.com.cars
-www.md.mp.microsoft.com.cartier
 www.md.mp.microsoft.com.casa
 www.md.mp.microsoft.com.case
 www.md.mp.microsoft.com.caseih
@@ -23016,7 +22981,6 @@ www.md.mp.microsoft.com.eu
 www.md.mp.microsoft.com.eurovision
 www.md.mp.microsoft.com.eus
 www.md.mp.microsoft.com.events
-www.md.mp.microsoft.com.everbank
 www.md.mp.microsoft.com.exchange
 www.md.mp.microsoft.com.expert
 www.md.mp.microsoft.com.exposed
@@ -23561,7 +23525,6 @@ www.md.mp.microsoft.com.photo
 www.md.mp.microsoft.com.photography
 www.md.mp.microsoft.com.photos
 www.md.mp.microsoft.com.physio
-www.md.mp.microsoft.com.piaget
 www.md.mp.microsoft.com.pics
 www.md.mp.microsoft.com.pictet
 www.md.mp.microsoft.com.pictures
@@ -25441,7 +25404,6 @@ www.wdcp.microsoft.care
 www.wdcp.microsoft.career
 www.wdcp.microsoft.careers
 www.wdcp.microsoft.cars
-www.wdcp.microsoft.cartier
 www.wdcp.microsoft.casa
 www.wdcp.microsoft.case
 www.wdcp.microsoft.caseih
@@ -25633,7 +25595,6 @@ www.wdcp.microsoft.eu
 www.wdcp.microsoft.eurovision
 www.wdcp.microsoft.eus
 www.wdcp.microsoft.events
-www.wdcp.microsoft.everbank
 www.wdcp.microsoft.exchange
 www.wdcp.microsoft.expert
 www.wdcp.microsoft.exposed
@@ -26178,7 +26139,6 @@ www.wdcp.microsoft.photo
 www.wdcp.microsoft.photography
 www.wdcp.microsoft.photos
 www.wdcp.microsoft.physio
-www.wdcp.microsoft.piaget
 www.wdcp.microsoft.pics
 www.wdcp.microsoft.pictet
 www.wdcp.microsoft.pictures
