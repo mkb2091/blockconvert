@@ -1573,6 +1573,8 @@
 @@||6-edge-chat.facebook.com^
 @@||70i.net^
 @@||8ch.net^
+@@||91-cdn.com^
+@@||91mobiles.com^
 @@||9to5maccom.disqus.com^
 @@||a-airasia-001-gyf12.insnw.net^
 @@||a-msedge.net^
@@ -14984,6 +14986,8 @@
 @@||www.6-edge-chat.facebook.com^
 @@||www.70i.net^
 @@||www.8ch.net^
+@@||www.91-cdn.com^
+@@||www.91mobiles.com^
 @@||www.9to5maccom.disqus.com^
 @@||www.a-airasia-001-gyf12.insnw.net^
 @@||www.a-msedge.net^

@@ -21,6 +21,8 @@
 *.windowsupdate.com
 *.wns.windows.com
 24timezones.com
+91-cdn.com
+91mobiles.com
 a-msedge.net
 aax-us-east.amazon-adsystem.com
 accounts.eu1.gigya.com
