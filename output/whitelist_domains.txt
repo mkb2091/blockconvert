@@ -1746,6 +1746,7 @@ api-tv.spotify.com
 api-v3.tinypass.com
 api.account.xiaomi.com
 api.ads.tvb.com
+api.amazonalexa.com
 api.b.hatena.ne.jp
 api.chat.xiaomi.net
 api.cloudflareapps.com
@@ -1822,6 +1823,7 @@ arcgisonline.com
 archive.icann.org
 archive.org
 arcot.com
+arcus-uswest.amazon.com
 ars.smartscreen.microsoft.com
 arstechnica.com
 art19.com
@@ -2254,6 +2256,7 @@ datafilehost.com
 dataplicity.com
 datei.to
 db.local.clamav.net
+dcape-na.amazon.com
 de.ioam.de
 dealer-ssl.spotify.com
 dealer.com
@@ -10789,6 +10792,7 @@ msftncsi.com
 msg.edit.yahoo.com
 msg.yahoo.com
 msg2.client.xunlei.com
+msh.amazon.com
 msn.com
 mt0.google.com
 mt1.google.com
@@ -11447,6 +11451,7 @@ startpage.com
 stat.download.xunlei.com
 statcounter.com
 static-dot-virustotalcloud.appspot.com
+static-pepper.dealabs.com
 static-xl9-ssl.xunlei.com
 static.3001.net
 static.ada.support
@@ -15159,6 +15164,7 @@ www.api-tv.spotify.com
 www.api-v3.tinypass.com
 www.api.account.xiaomi.com
 www.api.ads.tvb.com
+www.api.amazonalexa.com
 www.api.b.hatena.ne.jp
 www.api.chat.xiaomi.net
 www.api.cloudflareapps.com
@@ -15235,6 +15241,7 @@ www.arcgisonline.com
 www.archive.icann.org
 www.archive.org
 www.arcot.com
+www.arcus-uswest.amazon.com
 www.ars.smartscreen.microsoft.com
 www.arstechnica.com
 www.art19.com
@@ -15667,6 +15674,7 @@ www.datafilehost.com
 www.dataplicity.com
 www.datei.to
 www.db.local.clamav.net
+www.dcape-na.amazon.com
 www.de.ioam.de
 www.dealer-ssl.spotify.com
 www.dealer.com
@@ -24202,6 +24210,7 @@ www.msftncsi.com
 www.msg.edit.yahoo.com
 www.msg.yahoo.com
 www.msg2.client.xunlei.com
+www.msh.amazon.com
 www.msn.com
 www.mt0.google.com
 www.mt1.google.com
@@ -24860,6 +24869,7 @@ www.startpage.com
 www.stat.download.xunlei.com
 www.statcounter.com
 www.static-dot-virustotalcloud.appspot.com
+www.static-pepper.dealabs.com
 www.static-xl9-ssl.xunlei.com
 www.static.3001.net
 www.static.ada.support
