@@ -1584,7 +1584,7 @@ a.ooyala.com
 a.shifen.com
 a.wishabi.com
 a1014.g.akamai.net
-a4621041136.cdn.optimizely.com
+a1859010085.cdn.optimizely.com
 a652.dscb.akamai.net
 a8chomedotblog.files.wordpress.com
 a90.g.akamai.net
@@ -1883,7 +1883,6 @@ baltimore.cbslocal.com
 bandcamp.com
 bankid.no
 bankrate.com
-bartleby.zendesk.com
 battle.net
 bazaarvoice.com
 bbb.org
@@ -1901,6 +1900,7 @@ bestbuy.com
 bestofmedia.com
 beta.spotify.map.fastly.net
 betaabril.files.wordpress.com
+betadailytelegraphatnewscorpau.files.wordpress.com
 betanews.com
 betfair.com
 better.fyi
@@ -1959,7 +1959,6 @@ bokser.org
 boldchat.com
 bolly2tolly.net
 bolt.dropbox.com
-bonniercorp.122.2o7.net
 books.google.com
 bootstrapcdn.com
 boston.cbslocal.com
@@ -1999,6 +1998,7 @@ c.disquscdn.com
 c.disquscdn.com.cdn.cloudflare.net
 c.evidon.com
 c.id.mi.com
+c.la1w1.salesforceliveagent.com
 c.media-amazon.com
 c.msn.com
 c.o0bg.com
@@ -2061,6 +2061,7 @@ cdn.pcbeta.static.inimc.com
 cdn.radiantmediatechs.com
 cdn.ravenjs.com
 cdn.rawgit.com
+cdn.registerdisney.go.com
 cdn.samsungcloudsolution.com
 cdn.siftscience.com
 cdn.sstatic.net
@@ -2103,6 +2104,7 @@ chatenabled.mail.google.com
 check4.facebook.com
 check6.facebook.com
 checkout.google.com
+checkout.paypal.com
 checkout.razorpay.com
 checkout.stripe.com
 chicago.cbslocal.com
@@ -2287,8 +2289,8 @@ deviantart.net
 device-metrics-us-2.amazon.com
 device-metrics-us.amazon.com
 device.auth.xboxlive.com
+devmlbglobal.112.2o7.net
 dezeenhq.disqus.com
-di-dtaectolog-us-prod-1.appspot.com
 di.com.pl
 dict.leo.org
 dictionary.cambridge.org
@@ -2463,7 +2465,6 @@ familydollar.com
 fansonly.com
 fast.fonts.net
 fast.wistia.com
-fast.wistia.net
 fastly.net
 faucethub.io
 fb.com
@@ -7424,6 +7425,7 @@ inergizedigital.com
 inference.location.live.net
 infowars.com
 infowarsstore.com
+ingov.zendesk.com
 inq.com
 insidehighered.disqus.com
 insomniagamingfestival.com
@@ -7466,7 +7468,6 @@ jarv.is
 javhub.net
 jcpenney.com
 jdownloader.org
-jetpackme.files.wordpress.com
 jobs.lifehacker.com
 joemonster.org
 joewein.net
@@ -9033,7 +9034,6 @@ kisscartoon.zm
 kisscartoon.zone
 kisscartoon.zuerich
 kisscartoon.zw
-kit-pro.fontawesome.com
 kit.fontawesome.com
 klarna.com
 klarnacdn.net
@@ -9105,6 +9105,7 @@ llnwd.net
 lm.facebook.com
 lm.licenses.adobe.com
 lmlicenses.wip4.adobe.com
+lo.v.liveperson.net
 load.to
 location-inference-westus.cloudapp.net
 location.services.mozilla.com
@@ -10992,6 +10993,7 @@ opf.ooyala.com
 opinion.latimes.com
 optimize-stats.voxmedia.com
 optimizely.com
+oracle.112.2o7.net
 orange.fr
 orbitz.com
 oregonlive.com
@@ -11058,7 +11060,6 @@ picasaweb.google.com
 piclens.com
 pilkanozna.pl
 pimg1.126.net
-ping-meta-prd.jwpltx.com
 pingjs.qq.com
 pinimg.com
 pinterest.com
@@ -11399,6 +11400,7 @@ sohu.com
 solidfiles.com
 someonewhocares.org
 sourceforge.net
+sp.auth.adobe.com
 spaces.live.com
 spapps.co
 spapps.spotify.edgekey.net
@@ -11461,6 +11463,7 @@ static.beyondmenu.com
 static.coinbase.com
 static.dynamicyield.com
 static.fontawesome.com
+static.geetest.com
 static.kickstarter.com
 static.licdn.com
 static.networkedblogs.com
@@ -11519,6 +11522,7 @@ szczecin.tvp.pl
 t-online.at
 t-online.de
 t.co
+t.paypal.com
 t.umblr.com
 t0.ssl.ak.dynamic.tiles.virtualearth.net
 t0.ssl.ak.tiles.virtualearth.net
@@ -11559,7 +11563,7 @@ teredo.ipv6.microsoft.com
 textalk.se
 tg1.premium.db4.wix.com
 tg1.premium.dc11.wix.com
-theaustraliannewscorpau.wordpress.com
+theaustraliannewscorpau.files.wordpress.com
 thebot.net
 thechive.com
 thefreethoughtproject.com
@@ -11583,6 +11587,7 @@ tile2.opencyclemap.org
 tiles.mapbox.com
 time.com
 time.windows.com
+timedotcom.files.wordpress.com
 timeinc.net
 tinypass.com
 tinypic.com
@@ -11721,12 +11726,12 @@ v10.vortex-win.data.microsoft.com
 v20.events.data.microsoft.com
 v20.vortex-win.data.microsoft.com
 v4.download.windowsupdate.com
+va.v.liveperson.net
 vanityfair.com
 variety.com
 vc.yahoo.com
 verify.monzo.com
 verisign.com
-verisigninc.112.2o7.net
 vgwort.de
 vgy.me
 viafoura.net
@@ -15002,7 +15007,7 @@ www.a.ooyala.com
 www.a.shifen.com
 www.a.wishabi.com
 www.a1014.g.akamai.net
-www.a4621041136.cdn.optimizely.com
+www.a1859010085.cdn.optimizely.com
 www.a652.dscb.akamai.net
 www.a8chomedotblog.files.wordpress.com
 www.a90.g.akamai.net
@@ -15301,7 +15306,6 @@ www.baltimore.cbslocal.com
 www.bandcamp.com
 www.bankid.no
 www.bankrate.com
-www.bartleby.zendesk.com
 www.battle.net
 www.bazaarvoice.com
 www.bbb.org
@@ -15319,6 +15323,7 @@ www.bestbuy.com
 www.bestofmedia.com
 www.beta.spotify.map.fastly.net
 www.betaabril.files.wordpress.com
+www.betadailytelegraphatnewscorpau.files.wordpress.com
 www.betanews.com
 www.betfair.com
 www.better.fyi
@@ -15377,7 +15382,6 @@ www.bokser.org
 www.boldchat.com
 www.bolly2tolly.net
 www.bolt.dropbox.com
-www.bonniercorp.122.2o7.net
 www.books.google.com
 www.bootstrapcdn.com
 www.boston.cbslocal.com
@@ -15417,6 +15421,7 @@ www.c.disquscdn.com
 www.c.disquscdn.com.cdn.cloudflare.net
 www.c.evidon.com
 www.c.id.mi.com
+www.c.la1w1.salesforceliveagent.com
 www.c.media-amazon.com
 www.c.msn.com
 www.c.o0bg.com
@@ -15479,6 +15484,7 @@ www.cdn.pcbeta.static.inimc.com
 www.cdn.radiantmediatechs.com
 www.cdn.ravenjs.com
 www.cdn.rawgit.com
+www.cdn.registerdisney.go.com
 www.cdn.samsungcloudsolution.com
 www.cdn.siftscience.com
 www.cdn.sstatic.net
@@ -15521,6 +15527,7 @@ www.chatenabled.mail.google.com
 www.check4.facebook.com
 www.check6.facebook.com
 www.checkout.google.com
+www.checkout.paypal.com
 www.checkout.razorpay.com
 www.checkout.stripe.com
 www.chicago.cbslocal.com
@@ -15705,8 +15712,8 @@ www.deviantart.net
 www.device-metrics-us-2.amazon.com
 www.device-metrics-us.amazon.com
 www.device.auth.xboxlive.com
+www.devmlbglobal.112.2o7.net
 www.dezeenhq.disqus.com
-www.di-dtaectolog-us-prod-1.appspot.com
 www.di.com.pl
 www.dict.leo.org
 www.dictionary.cambridge.org
@@ -15881,7 +15888,6 @@ www.familydollar.com
 www.fansonly.com
 www.fast.fonts.net
 www.fast.wistia.com
-www.fast.wistia.net
 www.fastly.net
 www.faucethub.io
 www.fb.com
@@ -20842,6 +20848,7 @@ www.inergizedigital.com
 www.inference.location.live.net
 www.infowars.com
 www.infowarsstore.com
+www.ingov.zendesk.com
 www.inq.com
 www.insidehighered.disqus.com
 www.insomniagamingfestival.com
@@ -20884,7 +20891,6 @@ www.jarv.is
 www.javhub.net
 www.jcpenney.com
 www.jdownloader.org
-www.jetpackme.files.wordpress.com
 www.jobs.lifehacker.com
 www.joemonster.org
 www.joewein.net
@@ -22451,7 +22457,6 @@ www.kisscartoon.zm
 www.kisscartoon.zone
 www.kisscartoon.zuerich
 www.kisscartoon.zw
-www.kit-pro.fontawesome.com
 www.kit.fontawesome.com
 www.klarna.com
 www.klarnacdn.net
@@ -22523,6 +22528,7 @@ www.llnwd.net
 www.lm.facebook.com
 www.lm.licenses.adobe.com
 www.lmlicenses.wip4.adobe.com
+www.lo.v.liveperson.net
 www.load.to
 www.location-inference-westus.cloudapp.net
 www.location.services.mozilla.com
@@ -24410,6 +24416,7 @@ www.opf.ooyala.com
 www.opinion.latimes.com
 www.optimize-stats.voxmedia.com
 www.optimizely.com
+www.oracle.112.2o7.net
 www.orange.fr
 www.orbitz.com
 www.oregonlive.com
@@ -24476,7 +24483,6 @@ www.picasaweb.google.com
 www.piclens.com
 www.pilkanozna.pl
 www.pimg1.126.net
-www.ping-meta-prd.jwpltx.com
 www.pingjs.qq.com
 www.pinimg.com
 www.pinterest.com
@@ -24817,6 +24823,7 @@ www.sohu.com
 www.solidfiles.com
 www.someonewhocares.org
 www.sourceforge.net
+www.sp.auth.adobe.com
 www.spaces.live.com
 www.spapps.co
 www.spapps.spotify.edgekey.net
@@ -24879,6 +24886,7 @@ www.static.beyondmenu.com
 www.static.coinbase.com
 www.static.dynamicyield.com
 www.static.fontawesome.com
+www.static.geetest.com
 www.static.kickstarter.com
 www.static.licdn.com
 www.static.networkedblogs.com
@@ -24937,6 +24945,7 @@ www.szczecin.tvp.pl
 www.t-online.at
 www.t-online.de
 www.t.co
+www.t.paypal.com
 www.t.umblr.com
 www.t0.ssl.ak.dynamic.tiles.virtualearth.net
 www.t0.ssl.ak.tiles.virtualearth.net
@@ -24977,7 +24986,7 @@ www.teredo.ipv6.microsoft.com
 www.textalk.se
 www.tg1.premium.db4.wix.com
 www.tg1.premium.dc11.wix.com
-www.theaustraliannewscorpau.wordpress.com
+www.theaustraliannewscorpau.files.wordpress.com
 www.thebot.net
 www.thechive.com
 www.thefreethoughtproject.com
@@ -25001,6 +25010,7 @@ www.tile2.opencyclemap.org
 www.tiles.mapbox.com
 www.time.com
 www.time.windows.com
+www.timedotcom.files.wordpress.com
 www.timeinc.net
 www.tinypass.com
 www.tinypic.com
@@ -25139,12 +25149,12 @@ www.v10.vortex-win.data.microsoft.com
 www.v20.events.data.microsoft.com
 www.v20.vortex-win.data.microsoft.com
 www.v4.download.windowsupdate.com
+www.va.v.liveperson.net
 www.vanityfair.com
 www.variety.com
 www.vc.yahoo.com
 www.verify.monzo.com
 www.verisign.com
-www.verisigninc.112.2o7.net
 www.vgwort.de
 www.vgy.me
 www.viafoura.net
@@ -26920,7 +26930,6 @@ www.zlcdn.com
 www.zn06b7kx4u8wjygz7-seagatecx.siteintercept.qualtrics.com
 www.zn2t6mdnujruus8jh-inc.siteintercept.qualtrics.com
 www.zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com
-www.zn72km24lnwppaswx-emeraldgroup.siteintercept.qualtrics.com
 www.zn7ngtyxwjbrjz6xb-cms.gov1.siteintercept.qualtrics.com
 www.zn7whwrcrmbs9xwyd-nlmenterprise.siteintercept.qualtrics.com
 www.zn8p1dph4rgqzwv0x-move.siteintercept.qualtrics.com
@@ -26929,9 +26938,10 @@ www.zn_42v6draxyafsjmv-homedepot.siteintercept.qualtrics.com
 www.zn_55bdrev4af0c1yl-cbs.siteintercept.qualtrics.com
 www.zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com
 www.zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com
+www.znawx8uuhpc9plfo5-emeraldgroup.siteintercept.qualtrics.com
 www.znbl8rufo7atiirtn-unitysoftware.siteintercept.qualtrics.com
 www.znbmujw2vcljimxnp-mastercard.siteintercept.qualtrics.com
-www.znbr5amnlemoxdurh-redbubble.siteintercept.qualtrics.com
+www.znboxxjgn65c0lkmz-wholefoods.siteintercept.qualtrics.com
 www.zneex5qn74n7jckl7-expediainc.siteintercept.qualtrics.com
 www.zoho.com
 www.zoho.eu
@@ -27028,7 +27038,6 @@ zlcdn.com
 zn06b7kx4u8wjygz7-seagatecx.siteintercept.qualtrics.com
 zn2t6mdnujruus8jh-inc.siteintercept.qualtrics.com
 zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com
-zn72km24lnwppaswx-emeraldgroup.siteintercept.qualtrics.com
 zn7ngtyxwjbrjz6xb-cms.gov1.siteintercept.qualtrics.com
 zn7whwrcrmbs9xwyd-nlmenterprise.siteintercept.qualtrics.com
 zn8p1dph4rgqzwv0x-move.siteintercept.qualtrics.com
@@ -27037,9 +27046,10 @@ zn_42v6draxyafsjmv-homedepot.siteintercept.qualtrics.com
 zn_55bdrev4af0c1yl-cbs.siteintercept.qualtrics.com
 zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com
 zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com
+znawx8uuhpc9plfo5-emeraldgroup.siteintercept.qualtrics.com
 znbl8rufo7atiirtn-unitysoftware.siteintercept.qualtrics.com
 znbmujw2vcljimxnp-mastercard.siteintercept.qualtrics.com
-znbr5amnlemoxdurh-redbubble.siteintercept.qualtrics.com
+znboxxjgn65c0lkmz-wholefoods.siteintercept.qualtrics.com
 zneex5qn74n7jckl7-expediainc.siteintercept.qualtrics.com
 zoho.com
 zoho.eu
