@@ -1536,6 +1536,7 @@
 @@||*.prod.do.dsp.mp.microsoft.com^
 @@||*.s-msedge.net^
 @@||*.search.msn.com^
+@@||*.simply.com^
 @@||*.skype.com^
 @@||*.smartscreen.microsoft.com^
 @@||*.telecommand.telemetry.microsoft.com.akadns.net^
@@ -14959,6 +14960,7 @@
 @@||www.*.prod.do.dsp.mp.microsoft.com^
 @@||www.*.s-msedge.net^
 @@||www.*.search.msn.com^
+@@||www.*.simply.com^
 @@||www.*.skype.com^
 @@||www.*.smartscreen.microsoft.com^
 @@||www.*.telecommand.telemetry.microsoft.com.akadns.net^

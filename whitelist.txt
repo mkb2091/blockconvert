@@ -13,6 +13,7 @@
 *.prod.do.dsp.mp.microsoft.com
 *.s-msedge.net
 *.search.msn.com
+*.simply.com
 *.skype.com
 *.smartscreen.microsoft.com
 *.telecommand.telemetry.microsoft.com.akadns.net
