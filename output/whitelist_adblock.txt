@@ -251,7 +251,6 @@
 @@||*.md.mp.microsoft.com.chintai^
 @@||*.md.mp.microsoft.com.christmas^
 @@||*.md.mp.microsoft.com.chrome^
-@@||*.md.mp.microsoft.com.chrysler^
 @@||*.md.mp.microsoft.com.church^
 @@||*.md.mp.microsoft.com.ci^
 @@||*.md.mp.microsoft.com.cipriani^
@@ -365,7 +364,6 @@
 @@||*.md.mp.microsoft.com.do^
 @@||*.md.mp.microsoft.com.docs^
 @@||*.md.mp.microsoft.com.doctor^
-@@||*.md.mp.microsoft.com.dodge^
 @@||*.md.mp.microsoft.com.dog^
 @@||*.md.mp.microsoft.com.domains^
 @@||*.md.mp.microsoft.com.dot^
@@ -699,7 +697,6 @@
 @@||*.md.mp.microsoft.com.kz^
 @@||*.md.mp.microsoft.com.la^
 @@||*.md.mp.microsoft.com.lacaixa^
-@@||*.md.mp.microsoft.com.ladbrokes^
 @@||*.md.mp.microsoft.com.lamborghini^
 @@||*.md.mp.microsoft.com.lamer^
 @@||*.md.mp.microsoft.com.lancaster^
@@ -826,7 +823,6 @@
 @@||*.md.mp.microsoft.com.monash^
 @@||*.md.mp.microsoft.com.money^
 @@||*.md.mp.microsoft.com.monster^
-@@||*.md.mp.microsoft.com.mopar^
 @@||*.md.mp.microsoft.com.mormon^
 @@||*.md.mp.microsoft.com.mortgage^
 @@||*.md.mp.microsoft.com.moscow^
@@ -1155,7 +1151,6 @@
 @@||*.md.mp.microsoft.com.spreadbetting^
 @@||*.md.mp.microsoft.com.sr^
 @@||*.md.mp.microsoft.com.srl^
-@@||*.md.mp.microsoft.com.srt^
 @@||*.md.mp.microsoft.com.ss^
 @@||*.md.mp.microsoft.com.st^
 @@||*.md.mp.microsoft.com.stada^
@@ -1268,7 +1263,6 @@
 @@||*.md.mp.microsoft.com.ua^
 @@||*.md.mp.microsoft.com.ubank^
 @@||*.md.mp.microsoft.com.ubs^
-@@||*.md.mp.microsoft.com.uconnect^
 @@||*.md.mp.microsoft.com.ug^
 @@||*.md.mp.microsoft.com.uk^
 @@||*.md.mp.microsoft.com.unicom^
@@ -1321,7 +1315,6 @@
 @@||*.md.mp.microsoft.com.walter^
 @@||*.md.mp.microsoft.com.wang^
 @@||*.md.mp.microsoft.com.wanggou^
-@@||*.md.mp.microsoft.com.warman^
 @@||*.md.mp.microsoft.com.watch^
 @@||*.md.mp.microsoft.com.watches^
 @@||*.md.mp.microsoft.com.weather^
@@ -2027,6 +2020,7 @@
 @@||ccleaner.com^
 @@||cda.pl^
 @@||cdn-a.sonyentertainmentnetwork.com^
+@@||cdn-content.ampproject.org^
 @@||cdn-eu.dynamicyield.com^
 @@||cdn-images.mailchimp.com^
 @@||cdn-us-ec.yottaa.net^
@@ -2300,6 +2294,7 @@
 @@||digicert.com^
 @@||digitalassetlinks.googleapis.com^
 @@||digitalriver.com^
+@@||digitalrivercontent.net^
 @@||digitaltrends.com^
 @@||directvnow.com^
 @@||discord.gg^
@@ -2482,6 +2477,7 @@
 @@||feedburner.google.com^
 @@||feedly.com^
 @@||feedproxy.google.com^
+@@||feeds.soundcloud.com^
 @@||feeds2.feedburner.com^
 @@||feodotracker.abuse.ch^
 @@||fg.v4.download.windowsupdate.com^
@@ -2909,7 +2905,6 @@
 @@||google.chintai^
 @@||google.christmas^
 @@||google.chrome^
-@@||google.chrysler^
 @@||google.church^
 @@||google.ci^
 @@||google.cipriani^
@@ -3177,7 +3172,6 @@
 @@||google.co.chintai^
 @@||google.co.christmas^
 @@||google.co.chrome^
-@@||google.co.chrysler^
 @@||google.co.church^
 @@||google.co.ci^
 @@||google.co.cipriani^
@@ -3291,7 +3285,6 @@
 @@||google.co.do^
 @@||google.co.docs^
 @@||google.co.doctor^
-@@||google.co.dodge^
 @@||google.co.dog^
 @@||google.co.domains^
 @@||google.co.dot^
@@ -3625,7 +3618,6 @@
 @@||google.co.kz^
 @@||google.co.la^
 @@||google.co.lacaixa^
-@@||google.co.ladbrokes^
 @@||google.co.lamborghini^
 @@||google.co.lamer^
 @@||google.co.lancaster^
@@ -3752,7 +3744,6 @@
 @@||google.co.monash^
 @@||google.co.money^
 @@||google.co.monster^
-@@||google.co.mopar^
 @@||google.co.mormon^
 @@||google.co.mortgage^
 @@||google.co.moscow^
@@ -4081,7 +4072,6 @@
 @@||google.co.spreadbetting^
 @@||google.co.sr^
 @@||google.co.srl^
-@@||google.co.srt^
 @@||google.co.ss^
 @@||google.co.st^
 @@||google.co.stada^
@@ -4194,7 +4184,6 @@
 @@||google.co.ua^
 @@||google.co.ubank^
 @@||google.co.ubs^
-@@||google.co.uconnect^
 @@||google.co.ug^
 @@||google.co.uk^
 @@||google.co.unicom^
@@ -4247,7 +4236,6 @@
 @@||google.co.walter^
 @@||google.co.wang^
 @@||google.co.wanggou^
-@@||google.co.warman^
 @@||google.co.watch^
 @@||google.co.watches^
 @@||google.co.weather^
@@ -4707,7 +4695,6 @@
 @@||google.com.chintai^
 @@||google.com.christmas^
 @@||google.com.chrome^
-@@||google.com.chrysler^
 @@||google.com.church^
 @@||google.com.ci^
 @@||google.com.cipriani^
@@ -4821,7 +4808,6 @@
 @@||google.com.do^
 @@||google.com.docs^
 @@||google.com.doctor^
-@@||google.com.dodge^
 @@||google.com.dog^
 @@||google.com.domains^
 @@||google.com.dot^
@@ -5155,7 +5141,6 @@
 @@||google.com.kz^
 @@||google.com.la^
 @@||google.com.lacaixa^
-@@||google.com.ladbrokes^
 @@||google.com.lamborghini^
 @@||google.com.lamer^
 @@||google.com.lancaster^
@@ -5282,7 +5267,6 @@
 @@||google.com.monash^
 @@||google.com.money^
 @@||google.com.monster^
-@@||google.com.mopar^
 @@||google.com.mormon^
 @@||google.com.mortgage^
 @@||google.com.moscow^
@@ -5611,7 +5595,6 @@
 @@||google.com.spreadbetting^
 @@||google.com.sr^
 @@||google.com.srl^
-@@||google.com.srt^
 @@||google.com.ss^
 @@||google.com.st^
 @@||google.com.stada^
@@ -5724,7 +5707,6 @@
 @@||google.com.ua^
 @@||google.com.ubank^
 @@||google.com.ubs^
-@@||google.com.uconnect^
 @@||google.com.ug^
 @@||google.com.uk^
 @@||google.com.unicom^
@@ -5777,7 +5759,6 @@
 @@||google.com.walter^
 @@||google.com.wang^
 @@||google.com.wanggou^
-@@||google.com.warman^
 @@||google.com.watch^
 @@||google.com.watches^
 @@||google.com.weather^
@@ -6071,7 +6052,6 @@
 @@||google.do^
 @@||google.docs^
 @@||google.doctor^
-@@||google.dodge^
 @@||google.dog^
 @@||google.domains^
 @@||google.dot^
@@ -6405,7 +6385,6 @@
 @@||google.kz^
 @@||google.la^
 @@||google.lacaixa^
-@@||google.ladbrokes^
 @@||google.lamborghini^
 @@||google.lamer^
 @@||google.lancaster^
@@ -6532,7 +6511,6 @@
 @@||google.monash^
 @@||google.money^
 @@||google.monster^
-@@||google.mopar^
 @@||google.mormon^
 @@||google.mortgage^
 @@||google.moscow^
@@ -6862,7 +6840,6 @@
 @@||google.spreadbetting^
 @@||google.sr^
 @@||google.srl^
-@@||google.srt^
 @@||google.ss^
 @@||google.st^
 @@||google.stada^
@@ -6975,7 +6952,6 @@
 @@||google.ua^
 @@||google.ubank^
 @@||google.ubs^
-@@||google.uconnect^
 @@||google.ug^
 @@||google.uk^
 @@||google.unicom^
@@ -7028,7 +7004,6 @@
 @@||google.walter^
 @@||google.wang^
 @@||google.wanggou^
-@@||google.warman^
 @@||google.watch^
 @@||google.watches^
 @@||google.weather^
@@ -7754,7 +7729,6 @@
 @@||kisscartoon.chintai^
 @@||kisscartoon.christmas^
 @@||kisscartoon.chrome^
-@@||kisscartoon.chrysler^
 @@||kisscartoon.church^
 @@||kisscartoon.ci^
 @@||kisscartoon.cipriani^
@@ -7868,7 +7842,6 @@
 @@||kisscartoon.do^
 @@||kisscartoon.docs^
 @@||kisscartoon.doctor^
-@@||kisscartoon.dodge^
 @@||kisscartoon.dog^
 @@||kisscartoon.domains^
 @@||kisscartoon.dot^
@@ -8202,7 +8175,6 @@
 @@||kisscartoon.kz^
 @@||kisscartoon.la^
 @@||kisscartoon.lacaixa^
-@@||kisscartoon.ladbrokes^
 @@||kisscartoon.lamborghini^
 @@||kisscartoon.lamer^
 @@||kisscartoon.lancaster^
@@ -8329,7 +8301,6 @@
 @@||kisscartoon.monash^
 @@||kisscartoon.money^
 @@||kisscartoon.monster^
-@@||kisscartoon.mopar^
 @@||kisscartoon.mormon^
 @@||kisscartoon.mortgage^
 @@||kisscartoon.moscow^
@@ -8658,7 +8629,6 @@
 @@||kisscartoon.spreadbetting^
 @@||kisscartoon.sr^
 @@||kisscartoon.srl^
-@@||kisscartoon.srt^
 @@||kisscartoon.ss^
 @@||kisscartoon.st^
 @@||kisscartoon.stada^
@@ -8771,7 +8741,6 @@
 @@||kisscartoon.ua^
 @@||kisscartoon.ubank^
 @@||kisscartoon.ubs^
-@@||kisscartoon.uconnect^
 @@||kisscartoon.ug^
 @@||kisscartoon.uk^
 @@||kisscartoon.unicom^
@@ -8824,7 +8793,6 @@
 @@||kisscartoon.walter^
 @@||kisscartoon.wang^
 @@||kisscartoon.wanggou^
-@@||kisscartoon.warman^
 @@||kisscartoon.watch^
 @@||kisscartoon.watches^
 @@||kisscartoon.weather^
@@ -9420,7 +9388,6 @@
 @@||md.mp.microsoft.com.chintai^
 @@||md.mp.microsoft.com.christmas^
 @@||md.mp.microsoft.com.chrome^
-@@||md.mp.microsoft.com.chrysler^
 @@||md.mp.microsoft.com.church^
 @@||md.mp.microsoft.com.ci^
 @@||md.mp.microsoft.com.cipriani^
@@ -9534,7 +9501,6 @@
 @@||md.mp.microsoft.com.do^
 @@||md.mp.microsoft.com.docs^
 @@||md.mp.microsoft.com.doctor^
-@@||md.mp.microsoft.com.dodge^
 @@||md.mp.microsoft.com.dog^
 @@||md.mp.microsoft.com.domains^
 @@||md.mp.microsoft.com.dot^
@@ -9868,7 +9834,6 @@
 @@||md.mp.microsoft.com.kz^
 @@||md.mp.microsoft.com.la^
 @@||md.mp.microsoft.com.lacaixa^
-@@||md.mp.microsoft.com.ladbrokes^
 @@||md.mp.microsoft.com.lamborghini^
 @@||md.mp.microsoft.com.lamer^
 @@||md.mp.microsoft.com.lancaster^
@@ -9995,7 +9960,6 @@
 @@||md.mp.microsoft.com.monash^
 @@||md.mp.microsoft.com.money^
 @@||md.mp.microsoft.com.monster^
-@@||md.mp.microsoft.com.mopar^
 @@||md.mp.microsoft.com.mormon^
 @@||md.mp.microsoft.com.mortgage^
 @@||md.mp.microsoft.com.moscow^
@@ -10324,7 +10288,6 @@
 @@||md.mp.microsoft.com.spreadbetting^
 @@||md.mp.microsoft.com.sr^
 @@||md.mp.microsoft.com.srl^
-@@||md.mp.microsoft.com.srt^
 @@||md.mp.microsoft.com.ss^
 @@||md.mp.microsoft.com.st^
 @@||md.mp.microsoft.com.stada^
@@ -10437,7 +10400,6 @@
 @@||md.mp.microsoft.com.ua^
 @@||md.mp.microsoft.com.ubank^
 @@||md.mp.microsoft.com.ubs^
-@@||md.mp.microsoft.com.uconnect^
 @@||md.mp.microsoft.com.ug^
 @@||md.mp.microsoft.com.uk^
 @@||md.mp.microsoft.com.unicom^
@@ -10490,7 +10452,6 @@
 @@||md.mp.microsoft.com.walter^
 @@||md.mp.microsoft.com.wang^
 @@||md.mp.microsoft.com.wanggou^
-@@||md.mp.microsoft.com.warman^
 @@||md.mp.microsoft.com.watch^
 @@||md.mp.microsoft.com.watches^
 @@||md.mp.microsoft.com.weather^
@@ -10966,6 +10927,7 @@
 @@||oload.xyz^
 @@||olpair.com^
 @@||om.cbsi.com^
+@@||omny.fm^
 @@||omroep.nl^
 @@||onceux.unicornmedia.com^
 @@||oneclient.sfx.ms^
@@ -12040,7 +12002,6 @@
 @@||wdcp.microsoft.chintai^
 @@||wdcp.microsoft.christmas^
 @@||wdcp.microsoft.chrome^
-@@||wdcp.microsoft.chrysler^
 @@||wdcp.microsoft.church^
 @@||wdcp.microsoft.ci^
 @@||wdcp.microsoft.cipriani^
@@ -12154,7 +12115,6 @@
 @@||wdcp.microsoft.do^
 @@||wdcp.microsoft.docs^
 @@||wdcp.microsoft.doctor^
-@@||wdcp.microsoft.dodge^
 @@||wdcp.microsoft.dog^
 @@||wdcp.microsoft.domains^
 @@||wdcp.microsoft.dot^
@@ -12488,7 +12448,6 @@
 @@||wdcp.microsoft.kz^
 @@||wdcp.microsoft.la^
 @@||wdcp.microsoft.lacaixa^
-@@||wdcp.microsoft.ladbrokes^
 @@||wdcp.microsoft.lamborghini^
 @@||wdcp.microsoft.lamer^
 @@||wdcp.microsoft.lancaster^
@@ -12615,7 +12574,6 @@
 @@||wdcp.microsoft.monash^
 @@||wdcp.microsoft.money^
 @@||wdcp.microsoft.monster^
-@@||wdcp.microsoft.mopar^
 @@||wdcp.microsoft.mormon^
 @@||wdcp.microsoft.mortgage^
 @@||wdcp.microsoft.moscow^
@@ -12944,7 +12902,6 @@
 @@||wdcp.microsoft.spreadbetting^
 @@||wdcp.microsoft.sr^
 @@||wdcp.microsoft.srl^
-@@||wdcp.microsoft.srt^
 @@||wdcp.microsoft.ss^
 @@||wdcp.microsoft.st^
 @@||wdcp.microsoft.stada^
@@ -13057,7 +13014,6 @@
 @@||wdcp.microsoft.ua^
 @@||wdcp.microsoft.ubank^
 @@||wdcp.microsoft.ubs^
-@@||wdcp.microsoft.uconnect^
 @@||wdcp.microsoft.ug^
 @@||wdcp.microsoft.uk^
 @@||wdcp.microsoft.unicom^
@@ -13110,7 +13066,6 @@
 @@||wdcp.microsoft.walter^
 @@||wdcp.microsoft.wang^
 @@||wdcp.microsoft.wanggou^
-@@||wdcp.microsoft.warman^
 @@||wdcp.microsoft.watch^
 @@||wdcp.microsoft.watches^
 @@||wdcp.microsoft.weather^
@@ -13391,6 +13346,7 @@
 @@||wistia.com^
 @@||wistia.net^
 @@||wix.com^
+@@||wixapps.net^
 @@||wnba.com^
 @@||wns.windows.com^
 @@||wnyc.org^
@@ -13675,7 +13631,6 @@
 @@||www.*.md.mp.microsoft.com.chintai^
 @@||www.*.md.mp.microsoft.com.christmas^
 @@||www.*.md.mp.microsoft.com.chrome^
-@@||www.*.md.mp.microsoft.com.chrysler^
 @@||www.*.md.mp.microsoft.com.church^
 @@||www.*.md.mp.microsoft.com.ci^
 @@||www.*.md.mp.microsoft.com.cipriani^
@@ -13789,7 +13744,6 @@
 @@||www.*.md.mp.microsoft.com.do^
 @@||www.*.md.mp.microsoft.com.docs^
 @@||www.*.md.mp.microsoft.com.doctor^
-@@||www.*.md.mp.microsoft.com.dodge^
 @@||www.*.md.mp.microsoft.com.dog^
 @@||www.*.md.mp.microsoft.com.domains^
 @@||www.*.md.mp.microsoft.com.dot^
@@ -14123,7 +14077,6 @@
 @@||www.*.md.mp.microsoft.com.kz^
 @@||www.*.md.mp.microsoft.com.la^
 @@||www.*.md.mp.microsoft.com.lacaixa^
-@@||www.*.md.mp.microsoft.com.ladbrokes^
 @@||www.*.md.mp.microsoft.com.lamborghini^
 @@||www.*.md.mp.microsoft.com.lamer^
 @@||www.*.md.mp.microsoft.com.lancaster^
@@ -14250,7 +14203,6 @@
 @@||www.*.md.mp.microsoft.com.monash^
 @@||www.*.md.mp.microsoft.com.money^
 @@||www.*.md.mp.microsoft.com.monster^
-@@||www.*.md.mp.microsoft.com.mopar^
 @@||www.*.md.mp.microsoft.com.mormon^
 @@||www.*.md.mp.microsoft.com.mortgage^
 @@||www.*.md.mp.microsoft.com.moscow^
@@ -14579,7 +14531,6 @@
 @@||www.*.md.mp.microsoft.com.spreadbetting^
 @@||www.*.md.mp.microsoft.com.sr^
 @@||www.*.md.mp.microsoft.com.srl^
-@@||www.*.md.mp.microsoft.com.srt^
 @@||www.*.md.mp.microsoft.com.ss^
 @@||www.*.md.mp.microsoft.com.st^
 @@||www.*.md.mp.microsoft.com.stada^
@@ -14692,7 +14643,6 @@
 @@||www.*.md.mp.microsoft.com.ua^
 @@||www.*.md.mp.microsoft.com.ubank^
 @@||www.*.md.mp.microsoft.com.ubs^
-@@||www.*.md.mp.microsoft.com.uconnect^
 @@||www.*.md.mp.microsoft.com.ug^
 @@||www.*.md.mp.microsoft.com.uk^
 @@||www.*.md.mp.microsoft.com.unicom^
@@ -14745,7 +14695,6 @@
 @@||www.*.md.mp.microsoft.com.walter^
 @@||www.*.md.mp.microsoft.com.wang^
 @@||www.*.md.mp.microsoft.com.wanggou^
-@@||www.*.md.mp.microsoft.com.warman^
 @@||www.*.md.mp.microsoft.com.watch^
 @@||www.*.md.mp.microsoft.com.watches^
 @@||www.*.md.mp.microsoft.com.weather^
@@ -15451,6 +15400,7 @@
 @@||www.ccleaner.com^
 @@||www.cda.pl^
 @@||www.cdn-a.sonyentertainmentnetwork.com^
+@@||www.cdn-content.ampproject.org^
 @@||www.cdn-eu.dynamicyield.com^
 @@||www.cdn-images.mailchimp.com^
 @@||www.cdn-us-ec.yottaa.net^
@@ -15724,6 +15674,7 @@
 @@||www.digicert.com^
 @@||www.digitalassetlinks.googleapis.com^
 @@||www.digitalriver.com^
+@@||www.digitalrivercontent.net^
 @@||www.digitaltrends.com^
 @@||www.directvnow.com^
 @@||www.discord.gg^
@@ -15906,6 +15857,7 @@
 @@||www.feedburner.google.com^
 @@||www.feedly.com^
 @@||www.feedproxy.google.com^
+@@||www.feeds.soundcloud.com^
 @@||www.feeds2.feedburner.com^
 @@||www.feodotracker.abuse.ch^
 @@||www.fg.v4.download.windowsupdate.com^
@@ -16333,7 +16285,6 @@
 @@||www.google.chintai^
 @@||www.google.christmas^
 @@||www.google.chrome^
-@@||www.google.chrysler^
 @@||www.google.church^
 @@||www.google.ci^
 @@||www.google.cipriani^
@@ -16601,7 +16552,6 @@
 @@||www.google.co.chintai^
 @@||www.google.co.christmas^
 @@||www.google.co.chrome^
-@@||www.google.co.chrysler^
 @@||www.google.co.church^
 @@||www.google.co.ci^
 @@||www.google.co.cipriani^
@@ -16715,7 +16665,6 @@
 @@||www.google.co.do^
 @@||www.google.co.docs^
 @@||www.google.co.doctor^
-@@||www.google.co.dodge^
 @@||www.google.co.dog^
 @@||www.google.co.domains^
 @@||www.google.co.dot^
@@ -17049,7 +16998,6 @@
 @@||www.google.co.kz^
 @@||www.google.co.la^
 @@||www.google.co.lacaixa^
-@@||www.google.co.ladbrokes^
 @@||www.google.co.lamborghini^
 @@||www.google.co.lamer^
 @@||www.google.co.lancaster^
@@ -17176,7 +17124,6 @@
 @@||www.google.co.monash^
 @@||www.google.co.money^
 @@||www.google.co.monster^
-@@||www.google.co.mopar^
 @@||www.google.co.mormon^
 @@||www.google.co.mortgage^
 @@||www.google.co.moscow^
@@ -17505,7 +17452,6 @@
 @@||www.google.co.spreadbetting^
 @@||www.google.co.sr^
 @@||www.google.co.srl^
-@@||www.google.co.srt^
 @@||www.google.co.ss^
 @@||www.google.co.st^
 @@||www.google.co.stada^
@@ -17618,7 +17564,6 @@
 @@||www.google.co.ua^
 @@||www.google.co.ubank^
 @@||www.google.co.ubs^
-@@||www.google.co.uconnect^
 @@||www.google.co.ug^
 @@||www.google.co.uk^
 @@||www.google.co.unicom^
@@ -17671,7 +17616,6 @@
 @@||www.google.co.walter^
 @@||www.google.co.wang^
 @@||www.google.co.wanggou^
-@@||www.google.co.warman^
 @@||www.google.co.watch^
 @@||www.google.co.watches^
 @@||www.google.co.weather^
@@ -18131,7 +18075,6 @@
 @@||www.google.com.chintai^
 @@||www.google.com.christmas^
 @@||www.google.com.chrome^
-@@||www.google.com.chrysler^
 @@||www.google.com.church^
 @@||www.google.com.ci^
 @@||www.google.com.cipriani^
@@ -18245,7 +18188,6 @@
 @@||www.google.com.do^
 @@||www.google.com.docs^
 @@||www.google.com.doctor^
-@@||www.google.com.dodge^
 @@||www.google.com.dog^
 @@||www.google.com.domains^
 @@||www.google.com.dot^
@@ -18579,7 +18521,6 @@
 @@||www.google.com.kz^
 @@||www.google.com.la^
 @@||www.google.com.lacaixa^
-@@||www.google.com.ladbrokes^
 @@||www.google.com.lamborghini^
 @@||www.google.com.lamer^
 @@||www.google.com.lancaster^
@@ -18706,7 +18647,6 @@
 @@||www.google.com.monash^
 @@||www.google.com.money^
 @@||www.google.com.monster^
-@@||www.google.com.mopar^
 @@||www.google.com.mormon^
 @@||www.google.com.mortgage^
 @@||www.google.com.moscow^
@@ -19035,7 +18975,6 @@
 @@||www.google.com.spreadbetting^
 @@||www.google.com.sr^
 @@||www.google.com.srl^
-@@||www.google.com.srt^
 @@||www.google.com.ss^
 @@||www.google.com.st^
 @@||www.google.com.stada^
@@ -19148,7 +19087,6 @@
 @@||www.google.com.ua^
 @@||www.google.com.ubank^
 @@||www.google.com.ubs^
-@@||www.google.com.uconnect^
 @@||www.google.com.ug^
 @@||www.google.com.uk^
 @@||www.google.com.unicom^
@@ -19201,7 +19139,6 @@
 @@||www.google.com.walter^
 @@||www.google.com.wang^
 @@||www.google.com.wanggou^
-@@||www.google.com.warman^
 @@||www.google.com.watch^
 @@||www.google.com.watches^
 @@||www.google.com.weather^
@@ -19495,7 +19432,6 @@
 @@||www.google.do^
 @@||www.google.docs^
 @@||www.google.doctor^
-@@||www.google.dodge^
 @@||www.google.dog^
 @@||www.google.domains^
 @@||www.google.dot^
@@ -19829,7 +19765,6 @@
 @@||www.google.kz^
 @@||www.google.la^
 @@||www.google.lacaixa^
-@@||www.google.ladbrokes^
 @@||www.google.lamborghini^
 @@||www.google.lamer^
 @@||www.google.lancaster^
@@ -19956,7 +19891,6 @@
 @@||www.google.monash^
 @@||www.google.money^
 @@||www.google.monster^
-@@||www.google.mopar^
 @@||www.google.mormon^
 @@||www.google.mortgage^
 @@||www.google.moscow^
@@ -20286,7 +20220,6 @@
 @@||www.google.spreadbetting^
 @@||www.google.sr^
 @@||www.google.srl^
-@@||www.google.srt^
 @@||www.google.ss^
 @@||www.google.st^
 @@||www.google.stada^
@@ -20399,7 +20332,6 @@
 @@||www.google.ua^
 @@||www.google.ubank^
 @@||www.google.ubs^
-@@||www.google.uconnect^
 @@||www.google.ug^
 @@||www.google.uk^
 @@||www.google.unicom^
@@ -20452,7 +20384,6 @@
 @@||www.google.walter^
 @@||www.google.wang^
 @@||www.google.wanggou^
-@@||www.google.warman^
 @@||www.google.watch^
 @@||www.google.watches^
 @@||www.google.weather^
@@ -21178,7 +21109,6 @@
 @@||www.kisscartoon.chintai^
 @@||www.kisscartoon.christmas^
 @@||www.kisscartoon.chrome^
-@@||www.kisscartoon.chrysler^
 @@||www.kisscartoon.church^
 @@||www.kisscartoon.ci^
 @@||www.kisscartoon.cipriani^
@@ -21292,7 +21222,6 @@
 @@||www.kisscartoon.do^
 @@||www.kisscartoon.docs^
 @@||www.kisscartoon.doctor^
-@@||www.kisscartoon.dodge^
 @@||www.kisscartoon.dog^
 @@||www.kisscartoon.domains^
 @@||www.kisscartoon.dot^
@@ -21626,7 +21555,6 @@
 @@||www.kisscartoon.kz^
 @@||www.kisscartoon.la^
 @@||www.kisscartoon.lacaixa^
-@@||www.kisscartoon.ladbrokes^
 @@||www.kisscartoon.lamborghini^
 @@||www.kisscartoon.lamer^
 @@||www.kisscartoon.lancaster^
@@ -21753,7 +21681,6 @@
 @@||www.kisscartoon.monash^
 @@||www.kisscartoon.money^
 @@||www.kisscartoon.monster^
-@@||www.kisscartoon.mopar^
 @@||www.kisscartoon.mormon^
 @@||www.kisscartoon.mortgage^
 @@||www.kisscartoon.moscow^
@@ -22082,7 +22009,6 @@
 @@||www.kisscartoon.spreadbetting^
 @@||www.kisscartoon.sr^
 @@||www.kisscartoon.srl^
-@@||www.kisscartoon.srt^
 @@||www.kisscartoon.ss^
 @@||www.kisscartoon.st^
 @@||www.kisscartoon.stada^
@@ -22195,7 +22121,6 @@
 @@||www.kisscartoon.ua^
 @@||www.kisscartoon.ubank^
 @@||www.kisscartoon.ubs^
-@@||www.kisscartoon.uconnect^
 @@||www.kisscartoon.ug^
 @@||www.kisscartoon.uk^
 @@||www.kisscartoon.unicom^
@@ -22248,7 +22173,6 @@
 @@||www.kisscartoon.walter^
 @@||www.kisscartoon.wang^
 @@||www.kisscartoon.wanggou^
-@@||www.kisscartoon.warman^
 @@||www.kisscartoon.watch^
 @@||www.kisscartoon.watches^
 @@||www.kisscartoon.weather^
@@ -22844,7 +22768,6 @@
 @@||www.md.mp.microsoft.com.chintai^
 @@||www.md.mp.microsoft.com.christmas^
 @@||www.md.mp.microsoft.com.chrome^
-@@||www.md.mp.microsoft.com.chrysler^
 @@||www.md.mp.microsoft.com.church^
 @@||www.md.mp.microsoft.com.ci^
 @@||www.md.mp.microsoft.com.cipriani^
@@ -22958,7 +22881,6 @@
 @@||www.md.mp.microsoft.com.do^
 @@||www.md.mp.microsoft.com.docs^
 @@||www.md.mp.microsoft.com.doctor^
-@@||www.md.mp.microsoft.com.dodge^
 @@||www.md.mp.microsoft.com.dog^
 @@||www.md.mp.microsoft.com.domains^
 @@||www.md.mp.microsoft.com.dot^
@@ -23292,7 +23214,6 @@
 @@||www.md.mp.microsoft.com.kz^
 @@||www.md.mp.microsoft.com.la^
 @@||www.md.mp.microsoft.com.lacaixa^
-@@||www.md.mp.microsoft.com.ladbrokes^
 @@||www.md.mp.microsoft.com.lamborghini^
 @@||www.md.mp.microsoft.com.lamer^
 @@||www.md.mp.microsoft.com.lancaster^
@@ -23419,7 +23340,6 @@
 @@||www.md.mp.microsoft.com.monash^
 @@||www.md.mp.microsoft.com.money^
 @@||www.md.mp.microsoft.com.monster^
-@@||www.md.mp.microsoft.com.mopar^
 @@||www.md.mp.microsoft.com.mormon^
 @@||www.md.mp.microsoft.com.mortgage^
 @@||www.md.mp.microsoft.com.moscow^
@@ -23748,7 +23668,6 @@
 @@||www.md.mp.microsoft.com.spreadbetting^
 @@||www.md.mp.microsoft.com.sr^
 @@||www.md.mp.microsoft.com.srl^
-@@||www.md.mp.microsoft.com.srt^
 @@||www.md.mp.microsoft.com.ss^
 @@||www.md.mp.microsoft.com.st^
 @@||www.md.mp.microsoft.com.stada^
@@ -23861,7 +23780,6 @@
 @@||www.md.mp.microsoft.com.ua^
 @@||www.md.mp.microsoft.com.ubank^
 @@||www.md.mp.microsoft.com.ubs^
-@@||www.md.mp.microsoft.com.uconnect^
 @@||www.md.mp.microsoft.com.ug^
 @@||www.md.mp.microsoft.com.uk^
 @@||www.md.mp.microsoft.com.unicom^
@@ -23914,7 +23832,6 @@
 @@||www.md.mp.microsoft.com.walter^
 @@||www.md.mp.microsoft.com.wang^
 @@||www.md.mp.microsoft.com.wanggou^
-@@||www.md.mp.microsoft.com.warman^
 @@||www.md.mp.microsoft.com.watch^
 @@||www.md.mp.microsoft.com.watches^
 @@||www.md.mp.microsoft.com.weather^
@@ -24390,6 +24307,7 @@
 @@||www.oload.xyz^
 @@||www.olpair.com^
 @@||www.om.cbsi.com^
+@@||www.omny.fm^
 @@||www.omroep.nl^
 @@||www.onceux.unicornmedia.com^
 @@||www.oneclient.sfx.ms^
@@ -25464,7 +25382,6 @@
 @@||www.wdcp.microsoft.chintai^
 @@||www.wdcp.microsoft.christmas^
 @@||www.wdcp.microsoft.chrome^
-@@||www.wdcp.microsoft.chrysler^
 @@||www.wdcp.microsoft.church^
 @@||www.wdcp.microsoft.ci^
 @@||www.wdcp.microsoft.cipriani^
@@ -25578,7 +25495,6 @@
 @@||www.wdcp.microsoft.do^
 @@||www.wdcp.microsoft.docs^
 @@||www.wdcp.microsoft.doctor^
-@@||www.wdcp.microsoft.dodge^
 @@||www.wdcp.microsoft.dog^
 @@||www.wdcp.microsoft.domains^
 @@||www.wdcp.microsoft.dot^
@@ -25912,7 +25828,6 @@
 @@||www.wdcp.microsoft.kz^
 @@||www.wdcp.microsoft.la^
 @@||www.wdcp.microsoft.lacaixa^
-@@||www.wdcp.microsoft.ladbrokes^
 @@||www.wdcp.microsoft.lamborghini^
 @@||www.wdcp.microsoft.lamer^
 @@||www.wdcp.microsoft.lancaster^
@@ -26039,7 +25954,6 @@
 @@||www.wdcp.microsoft.monash^
 @@||www.wdcp.microsoft.money^
 @@||www.wdcp.microsoft.monster^
-@@||www.wdcp.microsoft.mopar^
 @@||www.wdcp.microsoft.mormon^
 @@||www.wdcp.microsoft.mortgage^
 @@||www.wdcp.microsoft.moscow^
@@ -26368,7 +26282,6 @@
 @@||www.wdcp.microsoft.spreadbetting^
 @@||www.wdcp.microsoft.sr^
 @@||www.wdcp.microsoft.srl^
-@@||www.wdcp.microsoft.srt^
 @@||www.wdcp.microsoft.ss^
 @@||www.wdcp.microsoft.st^
 @@||www.wdcp.microsoft.stada^
@@ -26481,7 +26394,6 @@
 @@||www.wdcp.microsoft.ua^
 @@||www.wdcp.microsoft.ubank^
 @@||www.wdcp.microsoft.ubs^
-@@||www.wdcp.microsoft.uconnect^
 @@||www.wdcp.microsoft.ug^
 @@||www.wdcp.microsoft.uk^
 @@||www.wdcp.microsoft.unicom^
@@ -26534,7 +26446,6 @@
 @@||www.wdcp.microsoft.walter^
 @@||www.wdcp.microsoft.wang^
 @@||www.wdcp.microsoft.wanggou^
-@@||www.wdcp.microsoft.warman^
 @@||www.wdcp.microsoft.watch^
 @@||www.wdcp.microsoft.watches^
 @@||www.wdcp.microsoft.weather^
@@ -26815,6 +26726,7 @@
 @@||www.wistia.com^
 @@||www.wistia.net^
 @@||www.wix.com^
+@@||www.wixapps.net^
 @@||www.wnba.com^
 @@||www.wns.windows.com^
 @@||www.wnyc.org^
