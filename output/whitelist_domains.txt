@@ -2149,6 +2149,7 @@ codeorigin.jquery.com
 coin-eu.amazonpay.com
 coin.amazonpay.com
 coinbase.com
+coinpot.co
 cointraffic.io
 collegehumor.com
 com.com
@@ -2398,6 +2399,7 @@ editmysite.com
 eds.xboxlive.com
 ehc.com
 elasticbeanstalk.com
+electrum.org
 eltrafiko.com
 email.netlify.com
 embed.flowplayer.org
@@ -15529,6 +15531,7 @@ www.codeorigin.jquery.com
 www.coin-eu.amazonpay.com
 www.coin.amazonpay.com
 www.coinbase.com
+www.coinpot.co
 www.cointraffic.io
 www.collegehumor.com
 www.com.com
@@ -15778,6 +15781,7 @@ www.editmysite.com
 www.eds.xboxlive.com
 www.ehc.com
 www.elasticbeanstalk.com
+www.electrum.org
 www.eltrafiko.com
 www.email.netlify.com
 www.embed.flowplayer.org

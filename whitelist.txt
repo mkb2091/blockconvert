@@ -79,6 +79,7 @@ cloudfront.net
 cmail19.com
 cmail20.com
 code.jquery.com
+coinpot.co
 cointraffic.io
 completion.amazon.com
 config.edge.skype.com
@@ -118,6 +119,7 @@ duckduckgo.com
 e-msedge.net
 easylist-downloads.adblockplus.org
 easylist.to
+electrum.org
 emdl.ws.microsoft.com
 ev.rdtcdn.com
 evoke-windowsservices-tas.msedge.net
