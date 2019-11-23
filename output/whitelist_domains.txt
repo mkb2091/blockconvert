@@ -2592,6 +2592,7 @@ g.ezoic.net
 g.live.com
 g.msn.com.nsatc.net
 g00.msn.com
+gadgetsnow.com
 game.xiaomi.com
 gameofbitcoins.com
 gamespot.com
@@ -11319,6 +11320,7 @@ sharepoint.com
 shawglobalnews.files.wordpress.com
 shield.sitelock.com
 shop-pro.jp
+shop.gadgetsnow.com
 shop.lego.com
 shop.samsung.com
 shopify.com
@@ -15975,6 +15977,7 @@ www.g.ezoic.net
 www.g.live.com
 www.g.msn.com.nsatc.net
 www.g00.msn.com
+www.gadgetsnow.com
 www.game.xiaomi.com
 www.gameofbitcoins.com
 www.gamespot.com
@@ -24702,6 +24705,7 @@ www.sharepoint.com
 www.shawglobalnews.files.wordpress.com
 www.shield.sitelock.com
 www.shop-pro.jp
+www.shop.gadgetsnow.com
 www.shop.lego.com
 www.shop.samsung.com
 www.shopify.com

@@ -145,6 +145,7 @@ g.akamai.net
 g.akamaiedge.net
 g.live.com
 g.msn.com.nsatc.net
+gadgetsnow.com
 gamespot.com
 gannettdigital.com
 gateway.reddit.com
@@ -257,6 +258,7 @@ secure.mbl.is
 service.weather.microsoft.com
 settings-win.data.microsoft.com
 settings.data.microsoft.com
+shop.gadgetsnow.com
 sina.com.cn
 skype.com
 skypeecs-prod-usw-0-b.cloudapp.net
