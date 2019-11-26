@@ -1559,6 +1559,7 @@
 @@||3-edge-chat.facebook.com^
 @@||3dns-2.adobe.com^
 @@||3dns-3.adobe.com^
+@@||3gdl.tcdn.qq.com^
 @@||4-edge-chat.facebook.com^
 @@||4chan.org^
 @@||4shared.com^
@@ -1704,6 +1705,7 @@
 @@||amazonaws.com^
 @@||amazoncustomerservice.d2.sc.omtrdc.net^
 @@||americanhomecomings.com^
+@@||amos.alicdn.com^
 @@||amp.businessinsider.com^
 @@||amp.usatoday.com^
 @@||ams.amazon.co.jp^
@@ -1818,6 +1820,7 @@
 @@||archive.org^
 @@||arcot.com^
 @@||arcus-uswest.amazon.com^
+@@||arms-retcode.aliyuncs.com^
 @@||ars.smartscreen.microsoft.com^
 @@||arstechnica.com^
 @@||art19.com^
@@ -2624,6 +2627,7 @@
 @@||getpocket.com^
 @@||gfycat.com^
 @@||ggpht.com^
+@@||gia.jd.com^
 @@||giant.gfycat.com^
 @@||gigaom.com^
 @@||gigya.com^
@@ -2646,6 +2650,8 @@
 @@||global.market.xiaomi.com^
 @@||global.search.xiaomi.net^
 @@||global.ssl.fastly.net^
+@@||gm.gds.mmstat.com^
+@@||gm.mmstat.com^
 @@||gmail.com^
 @@||gmail.google.com^
 @@||gmodules.com^
@@ -7406,6 +7412,7 @@
 @@||infowars.com^
 @@||infowarsstore.com^
 @@||ingov.zendesk.com^
+@@||inputdirector.com^
 @@||inq.com^
 @@||insidehighered.disqus.com^
 @@||insomniagamingfestival.com^
@@ -10781,6 +10788,7 @@
 @@||na1r.services.adobe.com^
 @@||na2m-pr.licenses.adobe.com^
 @@||na4r.services.adobe.com^
+@@||na61-na62.wagbridge.alibaba.tanx.com^
 @@||namecheap.com^
 @@||nanopool.org^
 @@||narkive.com^
@@ -11021,6 +11029,7 @@
 @@||photobucket.com^
 @@||photos-ugc.l.googleusercontent.com^
 @@||phplist.com^
+@@||phs.tanx.com^
 @@||pi-hole.net^
 @@||pic.twitter.com^
 @@||picasaweb.google.com^
@@ -11209,6 +11218,7 @@
 @@||s-msn.com^
 @@||s-passets-cache-ak0.pinimg.com^
 @@||s-static.ak.facebook.com^
+@@||s.click.taobao.com^
 @@||s.gateway.messenger.live.com^
 @@||s.graphiq.com^
 @@||s.imgur.com^
@@ -11315,6 +11325,7 @@
 @@||sfsapi.micloud.xiaomi.net^
 @@||sgizmo.com^
 @@||sgpac.account.xiaomi.com^
+@@||sh.wagbridge.taobao.com.gds.alibabadns.com^
 @@||share-online.biz^
 @@||sharepoint.com^
 @@||shawglobalnews.files.wordpress.com^
@@ -11512,6 +11523,7 @@
 @@||targetimg1.com^
 @@||targetimg2.com^
 @@||tawk.to^
+@@||tce.alicdn.com^
 @@||teamviewer.com^
 @@||techguy.org^
 @@||technorati.com^
@@ -13352,6 +13364,7 @@
 @@||wistia.net^
 @@||wix.com^
 @@||wixapps.net^
+@@||wl.jd.com^
 @@||wnba.com^
 @@||wns.windows.com^
 @@||wnyc.org^
@@ -14944,6 +14957,7 @@
 @@||www.3-edge-chat.facebook.com^
 @@||www.3dns-2.adobe.com^
 @@||www.3dns-3.adobe.com^
+@@||www.3gdl.tcdn.qq.com^
 @@||www.4-edge-chat.facebook.com^
 @@||www.4chan.org^
 @@||www.4shared.com^
@@ -15089,6 +15103,7 @@
 @@||www.amazonaws.com^
 @@||www.amazoncustomerservice.d2.sc.omtrdc.net^
 @@||www.americanhomecomings.com^
+@@||www.amos.alicdn.com^
 @@||www.amp.businessinsider.com^
 @@||www.amp.usatoday.com^
 @@||www.ams.amazon.co.jp^
@@ -15203,6 +15218,7 @@
 @@||www.archive.org^
 @@||www.arcot.com^
 @@||www.arcus-uswest.amazon.com^
+@@||www.arms-retcode.aliyuncs.com^
 @@||www.ars.smartscreen.microsoft.com^
 @@||www.arstechnica.com^
 @@||www.art19.com^
@@ -16009,6 +16025,7 @@
 @@||www.getpocket.com^
 @@||www.gfycat.com^
 @@||www.ggpht.com^
+@@||www.gia.jd.com^
 @@||www.giant.gfycat.com^
 @@||www.gigaom.com^
 @@||www.gigya.com^
@@ -16031,6 +16048,8 @@
 @@||www.global.market.xiaomi.com^
 @@||www.global.search.xiaomi.net^
 @@||www.global.ssl.fastly.net^
+@@||www.gm.gds.mmstat.com^
+@@||www.gm.mmstat.com^
 @@||www.gmail.com^
 @@||www.gmail.google.com^
 @@||www.gmodules.com^
@@ -20791,6 +20810,7 @@
 @@||www.infowars.com^
 @@||www.infowarsstore.com^
 @@||www.ingov.zendesk.com^
+@@||www.inputdirector.com^
 @@||www.inq.com^
 @@||www.insidehighered.disqus.com^
 @@||www.insomniagamingfestival.com^
@@ -24166,6 +24186,7 @@
 @@||www.na1r.services.adobe.com^
 @@||www.na2m-pr.licenses.adobe.com^
 @@||www.na4r.services.adobe.com^
+@@||www.na61-na62.wagbridge.alibaba.tanx.com^
 @@||www.namecheap.com^
 @@||www.nanopool.org^
 @@||www.narkive.com^
@@ -24406,6 +24427,7 @@
 @@||www.photobucket.com^
 @@||www.photos-ugc.l.googleusercontent.com^
 @@||www.phplist.com^
+@@||www.phs.tanx.com^
 @@||www.pi-hole.net^
 @@||www.pic.twitter.com^
 @@||www.picasaweb.google.com^
@@ -24594,6 +24616,7 @@
 @@||www.s-msn.com^
 @@||www.s-passets-cache-ak0.pinimg.com^
 @@||www.s-static.ak.facebook.com^
+@@||www.s.click.taobao.com^
 @@||www.s.gateway.messenger.live.com^
 @@||www.s.graphiq.com^
 @@||www.s.imgur.com^
@@ -24700,6 +24723,7 @@
 @@||www.sfsapi.micloud.xiaomi.net^
 @@||www.sgizmo.com^
 @@||www.sgpac.account.xiaomi.com^
+@@||www.sh.wagbridge.taobao.com.gds.alibabadns.com^
 @@||www.share-online.biz^
 @@||www.sharepoint.com^
 @@||www.shawglobalnews.files.wordpress.com^
@@ -24897,6 +24921,7 @@
 @@||www.targetimg1.com^
 @@||www.targetimg2.com^
 @@||www.tawk.to^
+@@||www.tce.alicdn.com^
 @@||www.teamviewer.com^
 @@||www.techguy.org^
 @@||www.technorati.com^
@@ -26737,6 +26762,7 @@
 @@||www.wistia.net^
 @@||www.wix.com^
 @@||www.wixapps.net^
+@@||www.wl.jd.com^
 @@||www.wnba.com^
 @@||www.wns.windows.com^
 @@||www.wnyc.org^

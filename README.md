@@ -33,17 +33,17 @@ Advantages of using this list:
 
 ## Links
 
-Adblock Plus format:  https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/adblock.txt
+[Adblock Plus format](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/adblock.txt)
 
-Hosts file format: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/hosts.txt
+[Hosts file format](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/hosts.txt)
 
-Domain list: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.txt
+[Domain list](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.txt)
 
-Blocked IP address list: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/ip_blocklist.txt
+[Blocked IP address list](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/ip_blocklist.txt)
 
-IPSet format: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/ip_blocklist.ipset
+[IPSet format](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/ip_blocklist.ipset)
 
-DNS Response Policy Zone(RPZ) format: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz
+[DNS Response Policy Zone(RPZ) format](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz)
 
 As well as generating blocklists, this project also generates whitelists which are used in the process. If you maintain your own blocklist, you may find one of the following whitelists useful(assuming your project is compatible with GPLv3):
 
@@ -72,3 +72,7 @@ Whitelist in AdBlock Plus format: https://raw.githubusercontent.com/mkb2091/bloc
 9. Remove all invalid domains
 
 Sources: [Sources](https://github.com/mkb2091/blockconvert/blob/master/sources.md)
+
+## Donation
+
+Bitcoin: 1MJZRsWS12oX68iGfedrabxQyacGUiGVwv

@@ -15,6 +15,7 @@ ADBLOCK_PLUS_HEADER = '''[Adblock Plus 2.0]
 ! Expires: {expires} (update frequency)
 ! Homepage: {homepage}
 ! Licence: {license}
+! Bitcoin: {bitcoin}
 !
 !-----------------------Filters-----------------------!
 '''
@@ -25,6 +26,7 @@ DOMAIN_LIST_HEADER = '''
 # Expires: {expires} (update frequency)
 # Homepage: {homepage}
 # Licence: {license}
+# Bitcoin: {bitcoin}
 '''
 
 HOSTS_HEADER = '''
@@ -33,6 +35,7 @@ HOSTS_HEADER = '''
 # Expires: {expires} (update frequency)
 # Homepage: {homepage}
 # Licence: {license}
+# Bitcoin: {bitcoin}
 127.0.0.1       localhost
 ::1     localhost ip6-localhost ip6-loopback
 fe00::0 ip6-localnet
@@ -60,6 +63,7 @@ class BlockList():
         self.expires = '1 days'
         self.homepage = ''
         self.license = ''
+        self.bitcoin = ''
 
     def add_file(self, contents, is_whitelist=False, match_url=False):
         data = contents.lower()
@@ -230,7 +234,8 @@ class BlockList():
             last_modified=time.strftime('%d %b %Y %H:%M UTC'),
             expires=self.expires,
             homepage=self.homepage,
-            license=self.license)
+            license=self.license,
+            bitcoin=self.bitcoin)
         return header + '\n'.join(sorted(self.blacklist))
 
     def to_adblock(self):
@@ -240,7 +245,8 @@ class BlockList():
             last_modified=time.strftime('%d %b %Y %H:%M UTC'),
             expires=self.expires,
             homepage=self.homepage,
-            license=self.license)
+            license=self.license,
+            bitcoin=self.bitcoin)
         domains = list(self.blacklist) + list(self.ip_blocklist)
         return header + '\n'.join(['||%s^' % i for i in sorted(domains)])
 
@@ -251,7 +257,8 @@ class BlockList():
             last_modified=time.strftime('%d %b %Y %H:%M UTC'),
             expires=self.expires,
             homepage=self.homepage,
-            license=self.license)
+            license=self.license,
+            bitcoin=self.bitcoin)
         return header + \
             '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blacklist)])
 
