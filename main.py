@@ -96,6 +96,7 @@ def main():
     blocklist.expires = '1 days'
     blocklist.homepage = 'https://github.com/mkb2091/blockconvert'
     blocklist.license = 'GPL-3.0'
+    blocklist.bitcoin = '1MJZRsWS12oX68iGfedrabxQyacGUiGVwv'
     for (path, func) in [('domains.txt', blocklist.to_domain_list),
                          ('adblock.txt', blocklist.to_adblock),
                          ('hosts.txt', blocklist.to_hosts),
