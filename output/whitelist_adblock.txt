@@ -2462,6 +2462,7 @@
 @@||f.youku.com^
 @@||f1.g.mi.com^
 @@||f1.media.brightcove.com^
+@@||faast.schibsted.io^
 @@||facebook.com^
 @@||familydollar.com^
 @@||fansonly.com^
@@ -7455,6 +7456,7 @@
 @@||javhub.net^
 @@||jcpenney.com^
 @@||jdownloader.org^
+@@||joblo.com^
 @@||jobs.lifehacker.com^
 @@||joemonster.org^
 @@||joewein.net^
@@ -11192,6 +11194,7 @@
 @@||resolver.gslb.mi-idc.com^
 @@||resolver.msg.xiaomi.ne^
 @@||resolver.msg.xiaomi.net^
+@@||rest-prde.immedia-semi.com^
 @@||restapi.amap.com^
 @@||resultspage.com^
 @@||returnpath.com^
@@ -11550,6 +11553,7 @@
 @@||thehill.com^
 @@||themoviedb.com^
 @@||thenextweb.com^
+@@||theoldnet.com^
 @@||thepiratebay.org^
 @@||theplatform.com^
 @@||theregister.co.uk^
@@ -15860,6 +15864,7 @@
 @@||www.f.youku.com^
 @@||www.f1.g.mi.com^
 @@||www.f1.media.brightcove.com^
+@@||www.faast.schibsted.io^
 @@||www.facebook.com^
 @@||www.familydollar.com^
 @@||www.fansonly.com^
@@ -20853,6 +20858,7 @@
 @@||www.javhub.net^
 @@||www.jcpenney.com^
 @@||www.jdownloader.org^
+@@||www.joblo.com^
 @@||www.jobs.lifehacker.com^
 @@||www.joemonster.org^
 @@||www.joewein.net^
@@ -24590,6 +24596,7 @@
 @@||www.resolver.gslb.mi-idc.com^
 @@||www.resolver.msg.xiaomi.ne^
 @@||www.resolver.msg.xiaomi.net^
+@@||www.rest-prde.immedia-semi.com^
 @@||www.restapi.amap.com^
 @@||www.resultspage.com^
 @@||www.returnpath.com^
@@ -24948,6 +24955,7 @@
 @@||www.thehill.com^
 @@||www.themoviedb.com^
 @@||www.thenextweb.com^
+@@||www.theoldnet.com^
 @@||www.thepiratebay.org^
 @@||www.theplatform.com^
 @@||www.theregister.co.uk^

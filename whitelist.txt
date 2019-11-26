@@ -123,6 +123,7 @@ electrum.org
 emdl.ws.microsoft.com
 ev.rdtcdn.com
 evoke-windowsservices-tas.msedge.net
+faast.schibsted.io
 facebook.com
 fast.fonts.net
 fe2.update.microsoft.com
@@ -240,6 +241,7 @@ readcomiconline.to
 reddit.com
 redtube.com
 report-uri.com
+rest-prde.immedia-semi.com
 returnpath.com
 ris-prod-atm.trafficmanager.net
 ris.api.iris.microsoft.com
@@ -284,6 +286,7 @@ techradar.com
 tecmint.com
 telecommand.telemetry.microsoft.com.akadns.net
 thebot.net
+theoldnet.com
 tile-service.weather.microsoft.com
 time.windows.com
 tlu.dl.delivery.mp.microsoft.com
@@ -352,6 +355,7 @@ www.heureka.cz
 www.ign.com
 www.instagram.com
 www.ip-tracker.org
+www.joblo.com
 www.kaspersky.com
 www.ku6.com
 www.malwaredomainlist.com
