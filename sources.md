@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 919933 blocked domains in each of the generated filter lists
+Theres are 925566 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -26,6 +26,7 @@ Link|Author|Expires|License|Type
 [Whitelist](https://raw.githubusercontent.com/ookangzheng/blahdns/master/hosts/whitelist.txt)|ookangzheng|1.0 days|CC BY-NC-SA 4.0(I  received permission to add to this project)|Whitelist
 [VX Vault last 100 Links](http://vxvault.net/URL_List.php)|Kicelo, Dominik Schuermann|1.0 days|Copyleft 2010. No rights reserved. |Blacklist
 [Useful Linux Shell Scripts Hosts](https://raw.githubusercontent.com/jackrabbit335/UsefulLinuxShellScripts/master/Hosts%20%26%20sourcelist/blacklist.txt)|-|10.0 days|GPL-3.0|Blacklist
+[Typosquatting Blocklist](https://raw.githubusercontent.com/hl2guide/DNS-Sinkhole-Lists-A2/master/typosquatting_blocklist.txt)|-|1.0 days|MIT|Blacklist
 [Toshiya's Filter List - Experimental](https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt)|Toshiya|4.0 days|GPLv3|Blacklist
 [The Hosts File Project](https://hblock.molinero.dev/hosts)|Héctor Molinero Fernández <hector@molinero.dev>|1.0 days|MIT|Blacklist
 [Strappazzon's Tracking List](https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Tracking.txt)|-|3.0 days|MIT|Blacklist
