@@ -2,16 +2,8 @@
 
 [![HitCount](http://hits.dwyl.io/mkb2091/blockconvert.svg)](http://hits.dwyl.io/mkb2091/blockconvert)
 
-Malware, advert and tracking blacklist
+Malware, advert and tracking blocklist which consolidates and improves many other blocklists.
 
-Advantages of using this list:
-- Conversion of list types. As well as supporting many common filter list formats, it also supports Privacy Badger data file, which uses algorithms to detect trackers allowing newly created trackers to be quickly detected and added to this blocklist without a human needing to spot the tracker.
-
-- Reverse DNS and passive DNS on malware IP addresses. This allows finding all the domains which a malware IP blacklist suggests could be dangerous to be found and blocked. This allows blocking of malware domains that haven't yet been added to other malware domain lists.
-
-- Use of a whitelist. Using a hosts file doesn't allow whitelisting, and many DNS-based blockers don't have great whitelist support. This list has it's own whitelist, as well as using a few others to try to reduce false positives. This list supports "*" in subdomain and TLD to aid in easily fixing many false positives at once. (If you do find a false positive(a domain that shouldn't be blocked), then please make an issue and I will remove it)
-
-- Use of DNS to check if domains still exist. Many lists contain domains that have expired and no longer exist. This makes those lists larger than needed which wastes bandwidth, space and can slow blocking.
 
 ## What this blocks:
 - Malware/Phishing: Many malware lists are used in building this list, including multiple malware IP lists, which are used to find many more malware domains.
@@ -21,6 +13,15 @@ Advantages of using this list:
 - Trackers: Many tracking domains are extracted from the lists used, including Privacy Badger data files which automatically identify trackers.
 
 - Coin mining: A few coin mining blocklists are used to block browser-based coin mining from using cpu.
+
+## Advantages of using this list:
+- Conversion of list types. As well as supporting many common filter list formats, it also supports Privacy Badger data file, which uses algorithms to detect trackers allowing newly created trackers to be quickly detected and added to this blocklist without a human needing to spot the tracker.
+
+- Reverse DNS and passive DNS on malware IP addresses. This allows finding all the domains which a malware IP blacklist suggests could be dangerous to be found and blocked. This allows blocking of malware domains that haven't yet been added to other malware domain lists.
+
+- Use of a whitelist. Using a hosts file doesn't allow whitelisting, and many DNS-based blockers don't have great whitelist support. This list has it's own whitelist, as well as using a few others to try to reduce false positives. This list supports "*" in subdomain and TLD to aid in easily fixing many false positives at once. (If you do find a false positive(a domain that shouldn't be blocked), then please make an issue and I will remove it)
+
+- Use of DNS to check if domains still exist. Many lists contain domains that have expired and no longer exist. This makes those lists larger than needed which wastes bandwidth, space and can slow blocking.
 
 ## How to use:
 - Pi-hole: Go to the web interface. Log in. Settings -> Blocklists. Copy domain list URL(Pi-hole supports hosts and domain lists, and domain list is a smaller file) from below in the links section, and paste it in the textbox. Click Save.
@@ -45,11 +46,11 @@ Advantages of using this list:
 
 [DNS Response Policy Zone(RPZ) format](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/domains.rpz)
 
-As well as generating blocklists, this project also generates whitelists which are used in the process. If you maintain your own blocklist, you may find one of the following whitelists useful(assuming your project is compatible with GPLv3):
+As well as generating blocklists, this project also generates whitelists which are used in the process. If you maintain your own blocklist, you may find one of the following whitelists useful (assuming your project is compatible with GPLv3):
 
-Whitelisted domains: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/whitelist_domains.txt
+[Whitelisted domains](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/whitelist_domains.txt)
 
-Whitelist in AdBlock Plus format: https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/whitelist_adblock.txt
+[Whitelist in AdBlock Plus format](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/whitelist_adblock.txt)
 
 ## The Process
 
