@@ -262,6 +262,7 @@ secure.mbl.is
 service.weather.microsoft.com
 settings-win.data.microsoft.com
 settings.data.microsoft.com
+sh.st
 shop.gadgetsnow.com
 sina.com.cn
 skype.com
