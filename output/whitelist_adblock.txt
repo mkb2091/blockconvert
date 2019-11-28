@@ -1744,6 +1744,7 @@
 @@||api.ads.tvb.com^
 @@||api.amazonalexa.com^
 @@||api.b.hatena.ne.jp^
+@@||api.bing.com^
 @@||api.chat.xiaomi.net^
 @@||api.cloudflareapps.com^
 @@||api.coinbase.com^
@@ -15146,6 +15147,7 @@
 @@||www.api.ads.tvb.com^
 @@||www.api.amazonalexa.com^
 @@||www.api.b.hatena.ne.jp^
+@@||www.api.bing.com^
 @@||www.api.chat.xiaomi.net^
 @@||www.api.cloudflareapps.com^
 @@||www.api.coinbase.com^

@@ -42,6 +42,7 @@ allure.com
 androidauthority.com
 answers.com
 answers.microsoft.com
+api.bing.com
 api.facebook.com
 appspot-preview.l.google.com
 apt.newrelic.com
