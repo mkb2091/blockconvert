@@ -7382,6 +7382,7 @@ imageshack.us
 imagesrv.adition.com
 imagetwist.com
 imagevenue.com
+imagizer.imageshack.com
 imasdk.googleapis.com
 img-bahn.de
 img-fotki.yandex.ru
@@ -20785,6 +20786,7 @@ www.imageshack.us
 www.imagesrv.adition.com
 www.imagetwist.com
 www.imagevenue.com
+www.imagizer.imageshack.com
 www.imasdk.googleapis.com
 www.img-bahn.de
 www.img-fotki.yandex.ru
