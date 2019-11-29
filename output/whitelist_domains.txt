@@ -2044,6 +2044,7 @@ cdn.embedly.com
 cdn.fbsbx.com
 cdn.fluidplayer.com
 cdn.flurry.com
+cdn.fontawesome.com
 cdn.gigya.commes.122.2o7.net
 cdn.gotraffic.net
 cdn.heapanalytics.com
@@ -9018,6 +9019,8 @@ kisscartoon.zm
 kisscartoon.zone
 kisscartoon.zuerich
 kisscartoon.zw
+kit-free.fontawesome.com
+kit-pro.fontawesome.com
 kit.fontawesome.com
 klarna.com
 klarnacdn.net
@@ -15449,6 +15452,7 @@ www.cdn.embedly.com
 www.cdn.fbsbx.com
 www.cdn.fluidplayer.com
 www.cdn.flurry.com
+www.cdn.fontawesome.com
 www.cdn.gigya.commes.122.2o7.net
 www.cdn.gotraffic.net
 www.cdn.heapanalytics.com
@@ -22423,6 +22427,8 @@ www.kisscartoon.zm
 www.kisscartoon.zone
 www.kisscartoon.zuerich
 www.kisscartoon.zw
+www.kit-free.fontawesome.com
+www.kit-pro.fontawesome.com
 www.kit.fontawesome.com
 www.klarna.com
 www.klarnacdn.net

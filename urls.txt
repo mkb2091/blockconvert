@@ -10,6 +10,8 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["abuse.ch Feodo Tracker Botnet C2 IP Blocklist", "https://feodotracker.abuse.ch/downloads/ipblocklist.txt", "", 86400, "CC0", false, true, true]
 ["\ud83d\ude0d All-in-One Customized Adblock List 2.7", "https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt", "deanoman", 7200, "MIT", false, false, false]
 ["\ud83c\udfae Game Console Adblock List", "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt", "", 345600, "Dandelicence", false, false, false]
+["\u2764xorcan\u2764 T\u00fcrk ip-list", "https://raw.githubusercontent.com/xorcan/hosts/master/xips.txt", "xorcan", 86400, "GPL-3.0", false, false, true]
+["\u2764xorcan\u2764 T\u00fcrk ad-list", "https://raw.githubusercontent.com/xorcan/hosts/master/xhosts.txt", "xorcan", 864000, "GPL-3.0", false, false, false]
 ["WindowsSpyBlocker - Hosts spy rules", "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt", "", 86400, "MIT", false, false, false]
 ["WindowsSpyBlocker - Hosts extra rules", "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt", "", 86400, "MIT", false, false, false]
 ["Whitelist", "https://raw.githubusercontent.com/ookangzheng/blahdns/master/hosts/whitelist.txt", "ookangzheng", 86400, "CC BY-NC-SA 4.0(I  received permission to add to this project)", true, false, false]

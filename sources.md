@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 928589 blocked domains in each of the generated filter lists
+Theres are 930875 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -21,6 +21,8 @@ Link|Author|Expires|License|Type
 [abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|Blacklist
 [😍 All-in-One Customized Adblock List 2.7](https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt)|deanoman|2.0 hours|MIT|Blacklist
 [🎮 Game Console Adblock List](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt)|-|4.0 days|Dandelicence|Blacklist
+[❤xorcan❤ Türk ip-list](https://raw.githubusercontent.com/xorcan/hosts/master/xips.txt)|xorcan|1.0 days|GPL-3.0|Blacklist
+[❤xorcan❤ Türk ad-list](https://raw.githubusercontent.com/xorcan/hosts/master/xhosts.txt)|xorcan|10.0 days|GPL-3.0|Blacklist
 [WindowsSpyBlocker - Hosts spy rules](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt)|-|1.0 days|MIT|Blacklist
 [WindowsSpyBlocker - Hosts extra rules](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt)|-|1.0 days|MIT|Blacklist
 [Whitelist](https://raw.githubusercontent.com/ookangzheng/blahdns/master/hosts/whitelist.txt)|ookangzheng|1.0 days|CC BY-NC-SA 4.0(I  received permission to add to this project)|Whitelist
