@@ -80,6 +80,7 @@ cloudfront.net
 cmail19.com
 cmail20.com
 code.jquery.com
+codeberg.org
 coinpot.co
 cointraffic.io
 completion.amazon.com

@@ -2148,6 +2148,7 @@
 @@||code.highcharts.com^
 @@||code.jquery.com^
 @@||code.responsivevoice.org^
+@@||codeberg.org^
 @@||codecanyon.net^
 @@||codeload.github.com^
 @@||codeorigin.jquery.com^
@@ -15549,6 +15550,7 @@
 @@||www.code.highcharts.com^
 @@||www.code.jquery.com^
 @@||www.code.responsivevoice.org^
+@@||www.codeberg.org^
 @@||www.codecanyon.net^
 @@||www.codeload.github.com^
 @@||www.codeorigin.jquery.com^

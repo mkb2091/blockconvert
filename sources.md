@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 930620 blocked domains in each of the generated filter lists
+Theres are 1067612 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -41,6 +41,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [Privacy filters](https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt)|-|1.0 days|The Unlicense|26|0
 [Press the Attack](https://raw.githubusercontent.com/bogachenko/presstheattack/master/presstheattack.txt)|-|3.0 hours|MIT|13088|0
 [Possibilities](https://raw.githubusercontent.com/infinitytec/blocklists/master/possibilities.txt)|infinitytec|10.0 days|MIT|14|0
+[Pi-Hole blocklist](https://codeberg.org/spootle/blocklist/raw/branch/master/blocklist.txt)|-|1.0 days|GPL-3.0|559004|0
 [Not Good Pi](https://raw.githubusercontent.com/infinitytec/blocklists/master/not-good-pi.txt)|infinitytec|10.0 days|MIT|4|0
 [Nopelist](https://raw.githubusercontent.com/genediazjr/nopelist/master/nopelist.txt)|Gene Diaz|7.0 days|MIT|168|0
 [NoTrack Tracker Blocklist](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt)|QuidsUp|1.0 days|GPLv3|14396|0
