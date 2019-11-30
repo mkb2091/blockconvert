@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 930585 blocked domains in each of the generated filter lists
+Theres are 930620 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -17,7 +17,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [iOS Tracker Blocklist](https://jarv.is/ios-trackers/adguard.txt)|jakejarvis|10.0 days|MIT|485|0
 [hostsVN](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts)|-|1.0 days|MIT|19186|0
 [abuse.ch URLhaus Response Policy Zones](https://urlhaus.abuse.ch/downloads/rpz/)|-|1.0 days|CC0|2427|0
-[abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|0|0
+[abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|91|0
 [abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|634|0
 [😍 All-in-One Customized Adblock List 2.7](https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt)|deanoman|2.0 hours|MIT|42364|790
 [🎮 Game Console Adblock List](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt)|-|4.0 days|Dandelicence|4|0
