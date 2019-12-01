@@ -1766,6 +1766,7 @@ api.mapbox.com
 api.micloud.xiaomi.net
 api.onedrive.com
 api.ooyala.com
+api.particle.io
 api.pushbullet.com
 api.razorpay.com
 api.rlje.net
@@ -2307,6 +2308,7 @@ directvnow.com
 discord.gg
 discovermagazine.com
 discovery.com
+discuss.newrelic.com
 discussions.apple.com
 display.ugc.bazaarvoice.com
 displaycatalog.mp.microsoft.com
@@ -7472,6 +7474,7 @@ js-agent.newrelic.com
 js.maxmind.com
 js.pusher.com
 js.stripe.com
+js.t.sinajs.cn
 jsdelivr.net
 jsfiddle.net
 jsonip.com
@@ -11433,6 +11436,7 @@ stackexchange.com
 stackoverflow.com
 stackpath.bootstrapcdn.com
 stacksocial.com
+staging-discuss.newrelic.com
 staging.plex.tv
 stanev.org
 star-mini.c10r.facebook.com
@@ -11471,6 +11475,7 @@ staticxx.facebook.com
 stats.pusher.com
 statsfe2.update.microsoft.com.akadns.net
 status.coinbase.com
+status.newrelic.com
 status.plex.tv
 statusapi.micloud.xiaomi.net
 statuscake-email.com
@@ -11671,6 +11676,7 @@ ui.skype.com
 uicdn.com
 ultimedia.com
 ultraimg.com
+umich.qualtrics.com
 unbouncepages.com
 unibytes.com
 unicornmedia.com
@@ -15177,6 +15183,7 @@ www.api.mapbox.com
 www.api.micloud.xiaomi.net
 www.api.onedrive.com
 www.api.ooyala.com
+www.api.particle.io
 www.api.pushbullet.com
 www.api.razorpay.com
 www.api.rlje.net
@@ -15718,6 +15725,7 @@ www.directvnow.com
 www.discord.gg
 www.discovermagazine.com
 www.discovery.com
+www.discuss.newrelic.com
 www.discussions.apple.com
 www.display.ugc.bazaarvoice.com
 www.displaycatalog.mp.microsoft.com
@@ -20883,6 +20891,7 @@ www.js-agent.newrelic.com
 www.js.maxmind.com
 www.js.pusher.com
 www.js.stripe.com
+www.js.t.sinajs.cn
 www.jsdelivr.net
 www.jsfiddle.net
 www.jsonip.com
@@ -24844,6 +24853,7 @@ www.stackexchange.com
 www.stackoverflow.com
 www.stackpath.bootstrapcdn.com
 www.stacksocial.com
+www.staging-discuss.newrelic.com
 www.staging.plex.tv
 www.stanev.org
 www.star-mini.c10r.facebook.com
@@ -24882,6 +24892,7 @@ www.staticxx.facebook.com
 www.stats.pusher.com
 www.statsfe2.update.microsoft.com.akadns.net
 www.status.coinbase.com
+www.status.newrelic.com
 www.status.plex.tv
 www.statusapi.micloud.xiaomi.net
 www.statuscake-email.com
@@ -25082,6 +25093,7 @@ www.ui.skype.com
 www.uicdn.com
 www.ultimedia.com
 www.ultraimg.com
+www.umich.qualtrics.com
 www.unbouncepages.com
 www.unibytes.com
 www.unicornmedia.com
@@ -26833,6 +26845,7 @@ www.wxug.com
 www.wykop.pl
 www.wyspagier.pl
 www.wywy.com
+www.x1.com
 www.xbox.ipv6.microsoft.com
 www.xboxexperiencesprod.experimentation.xboxlive.com
 www.xboxlive.com
@@ -26941,6 +26954,7 @@ wxug.com
 wykop.pl
 wyspagier.pl
 wywy.com
+x1.com
 xbox.ipv6.microsoft.com
 xboxexperiencesprod.experimentation.xboxlive.com
 xboxlive.com

@@ -44,6 +44,7 @@ answers.com
 answers.microsoft.com
 api.bing.com
 api.facebook.com
+api.particle.io
 appspot-preview.l.google.com
 apt.newrelic.com
 arc.msn.com
@@ -100,6 +101,7 @@ delivery.mp.microsoft.com
 desktop.google.com
 digicert.com
 digitalriver.com
+discuss.newrelic.com
 displaycatalog.mp.microsoft.com
 disq.us
 dl.delivery.mp.microsoft.com
@@ -181,6 +183,7 @@ ip-adress.com
 ipv4.login.msa.akadns6.net
 it.toolbox.com
 jarv.is
+js.t.sinajs.cn
 kasperskycontenthub.com
 knowyourmeme.com
 larati.net
@@ -283,9 +286,11 @@ sourceforge.net
 ssl.bblck.me
 sslbl.abuse.ch
 stacksocial.com
+staging-discuss.newrelic.com
 star-mini.c10r.facebook.com
 static-dot-virustotalcloud.appspot.com
 statsfe2.update.microsoft.com.akadns.net
+status.newrelic.com
 statuscake-email.com
 store-images.microsoft.com
 store-images.s-microsoft.com
@@ -305,6 +310,7 @@ to-do.microsoft.com
 tracking.epicgames.com
 transfer.sh
 tsfe.trafficshaping.dsp.mp.microsoft.com
+umich.qualtrics.com
 unitedstates.smartscreen-prod.microsoft.com
 update.microsoft.com
 urldefense.proofpoint.com
@@ -391,6 +397,7 @@ www.travelocity.com
 www.vanityfair.com
 www.vmn.net
 www.webmd.com
+www.x1.com
 www.yoast.com
 yahoo.co.jp
 zdnet.com
