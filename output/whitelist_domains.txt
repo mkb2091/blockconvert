@@ -11362,6 +11362,7 @@ sls.update.microsoft.com
 sls.update.microsoft.com.akadns.net
 sm.trb.com
 smallfiles.client.xunlei.com
+smallseotools.com
 smartlock.google.com
 smartlook.com
 smartpixel.tv
@@ -24764,6 +24765,7 @@ www.sls.update.microsoft.com
 www.sls.update.microsoft.com.akadns.net
 www.sm.trb.com
 www.smallfiles.client.xunlei.com
+www.smallseotools.com
 www.smartlock.google.com
 www.smartlook.com
 www.smartpixel.tv

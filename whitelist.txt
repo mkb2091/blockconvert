@@ -270,6 +270,7 @@ skype.com
 skypeecs-prod-usw-0-b.cloudapp.net
 sls.update.microsoft.com
 sls.update.microsoft.com.akadns.net
+smallseotools.com
 smartscreen-sn3p.smartscreen.microsoft.com
 smartscreen.microsoft.com
 sohu.com
