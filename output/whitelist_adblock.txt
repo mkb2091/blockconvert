@@ -2390,6 +2390,7 @@
 @@||ebd.cda.pl^
 @@||ebmedia.eventbrite.com^
 @@||ec-ns.sascdn.com^
+@@||ecdinterface.philips.com^
 @@||echo.edge.messenger.live.com^
 @@||ecn.dev.virtualearth.net^
 @@||ecwid.com^
@@ -2607,6 +2608,7 @@
 @@||gannettdigital.com^
 @@||gannettonline.com^
 @@||gap.com^
+@@||gardenstatehelicopters.com^
 @@||gasbuddy.com^
 @@||gateway.fe.apple-dns.net^
 @@||gateway.reddit.com^
@@ -7296,6 +7298,7 @@
 @@||hockeyapp.net^
 @@||hollywoodlife.com^
 @@||homedepot.com^
+@@||homedepot.tt.omtrdc.net^
 @@||homestead.com^
 @@||honcode.ch^
 @@||hoopshype.com^
@@ -11085,6 +11088,7 @@
 @@||postmediacanadadotcom.files.wordpress.com^
 @@||postmediavancouversun2.files.wordpress.com^
 @@||powerreviews.com^
+@@||powr.io^
 @@||pp.userapi.com^
 @@||ppt.cc^
 @@||ppurifier.game.xiaomi.com^
@@ -11170,6 +11174,7 @@
 @@||recaptcha.net^
 @@||recurly.com^
 @@||redcdn.pl^
+@@||reddit.app.link^
 @@||reddit.com^
 @@||redditarchive.com^
 @@||redditmedia.com^
@@ -11226,6 +11231,7 @@
 @@||s.graphiq.com^
 @@||s.imgur.com^
 @@||s.marketwatch.com^
+@@||s.ndemiccreations.com^
 @@||s.pinimg.com^
 @@||s.reddit.com^
 @@||s.shopify.com^
@@ -11467,6 +11473,8 @@
 @@||status.coinbase.com^
 @@||status.plex.tv^
 @@||statusapi.micloud.xiaomi.net^
+@@||statuscake-email.com^
+@@||statuscake.com^
 @@||statuspage.io^
 @@||steamcommunity.com^
 @@||steampowered.com^
@@ -15793,6 +15801,7 @@
 @@||www.ebd.cda.pl^
 @@||www.ebmedia.eventbrite.com^
 @@||www.ec-ns.sascdn.com^
+@@||www.ecdinterface.philips.com^
 @@||www.echo.edge.messenger.live.com^
 @@||www.ecn.dev.virtualearth.net^
 @@||www.ecwid.com^
@@ -16010,6 +16019,7 @@
 @@||www.gannettdigital.com^
 @@||www.gannettonline.com^
 @@||www.gap.com^
+@@||www.gardenstatehelicopters.com^
 @@||www.gasbuddy.com^
 @@||www.gateway.fe.apple-dns.net^
 @@||www.gateway.reddit.com^
@@ -20699,6 +20709,7 @@
 @@||www.hockeyapp.net^
 @@||www.hollywoodlife.com^
 @@||www.homedepot.com^
+@@||www.homedepot.tt.omtrdc.net^
 @@||www.homestead.com^
 @@||www.honcode.ch^
 @@||www.hoopshype.com^
@@ -24488,6 +24499,7 @@
 @@||www.postmediacanadadotcom.files.wordpress.com^
 @@||www.postmediavancouversun2.files.wordpress.com^
 @@||www.powerreviews.com^
+@@||www.powr.io^
 @@||www.pp.userapi.com^
 @@||www.ppt.cc^
 @@||www.ppurifier.game.xiaomi.com^
@@ -24573,6 +24585,7 @@
 @@||www.recaptcha.net^
 @@||www.recurly.com^
 @@||www.redcdn.pl^
+@@||www.reddit.app.link^
 @@||www.reddit.com^
 @@||www.redditarchive.com^
 @@||www.redditmedia.com^
@@ -24629,6 +24642,7 @@
 @@||www.s.graphiq.com^
 @@||www.s.imgur.com^
 @@||www.s.marketwatch.com^
+@@||www.s.ndemiccreations.com^
 @@||www.s.pinimg.com^
 @@||www.s.reddit.com^
 @@||www.s.shopify.com^
@@ -24870,6 +24884,8 @@
 @@||www.status.coinbase.com^
 @@||www.status.plex.tv^
 @@||www.statusapi.micloud.xiaomi.net^
+@@||www.statuscake-email.com^
+@@||www.statuscake.com^
 @@||www.statuspage.io^
 @@||www.steamcommunity.com^
 @@||www.steampowered.com^

@@ -151,6 +151,7 @@ g.msn.com.nsatc.net
 gadgetsnow.com
 gamespot.com
 gannettdigital.com
+gardenstatehelicopters.com
 gateway.reddit.com
 geo-prod.do.dsp.mp.microsoft.com
 geo-prod.dodsp.mp.microsoft.com.nsatc.net
@@ -162,6 +163,7 @@ go2cloud.org
 guce.huffpost.com
 hblock.molinero.dev
 highcharts.com
+homedepot.tt.omtrdc.net
 hostsfile.mine.nu
 howtogeek.com
 hwcdn.net
@@ -231,6 +233,7 @@ pastebin.org
 pbs.twimg.com
 polyfill.io
 pornhub.com
+powr.io
 prod.do.dsp.mp.microsoft.com
 proofpoint.com
 pti.store.microsoft.com
@@ -241,6 +244,7 @@ quora.com
 ransomwaretracker.abuse.ch
 raw.githubusercontent.com
 readcomiconline.to
+reddit.app.link
 reddit.com
 redtube.com
 report-uri.com
@@ -252,6 +256,7 @@ ris.api.iris.microsoft.com.akadns.net
 router.utorrent.com
 s-msedge.net
 s.imgur.com
+s.ndemiccreations.com
 s3-us-west-1.amazonaws.com
 s3.amazonaws.com
 safebrowsing-cache.google.com
@@ -281,6 +286,7 @@ stacksocial.com
 star-mini.c10r.facebook.com
 static-dot-virustotalcloud.appspot.com
 statsfe2.update.microsoft.com.akadns.net
+statuscake-email.com
 store-images.microsoft.com
 store-images.s-microsoft.com
 storecatalogrevocation.storequality.microsoft.com
@@ -347,6 +353,7 @@ www.bitlord.com
 www.cnet.com
 www.digicert.com
 www.distilnetworks.com
+www.ecdinterface.philips.com
 www.entireweb.com
 www.faucethub.io
 www.freedownloadmanager.org
@@ -378,6 +385,7 @@ www.semrush.com
 www.similarweb.com
 www.speedcurve.com
 www.squidblacklist.org
+www.statuscake.com
 www.toptenreviews.com
 www.travelocity.com
 www.vanityfair.com
