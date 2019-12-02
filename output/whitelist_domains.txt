@@ -7411,6 +7411,7 @@ imp.appledaily.com
 ims-na1-prprod.adobelogin.com
 imshopping.com
 inapcache.boston.com
+inc.com
 incoming.telemetry.mozilla.org
 indeed.com
 inergizedigital.com
@@ -20828,6 +20829,7 @@ www.imp.appledaily.com
 www.ims-na1-prprod.adobelogin.com
 www.imshopping.com
 www.inapcache.boston.com
+www.inc.com
 www.incoming.telemetry.mozilla.org
 www.indeed.com
 www.inergizedigital.com

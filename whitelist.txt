@@ -371,6 +371,7 @@ www.google.co.*
 www.google.com.*
 www.heureka.cz
 www.ign.com
+www.inc.com
 www.instagram.com
 www.ip-tracker.org
 www.joblo.com
