@@ -740,6 +740,7 @@
 *.md.mp.microsoft.com.lixil
 *.md.mp.microsoft.com.lk
 *.md.mp.microsoft.com.llc
+*.md.mp.microsoft.com.llp
 *.md.mp.microsoft.com.loan
 *.md.mp.microsoft.com.loans
 *.md.mp.microsoft.com.locker
@@ -3678,6 +3679,7 @@ google.co.living
 google.co.lixil
 google.co.lk
 google.co.llc
+google.co.llp
 google.co.loan
 google.co.loans
 google.co.locker
@@ -5200,6 +5202,7 @@ google.com.living
 google.com.lixil
 google.com.lk
 google.com.llc
+google.com.llp
 google.com.loan
 google.com.loans
 google.com.locker
@@ -6443,6 +6446,7 @@ google.living
 google.lixil
 google.lk
 google.llc
+google.llp
 google.loan
 google.loans
 google.locker
@@ -8238,6 +8242,7 @@ kisscartoon.living
 kisscartoon.lixil
 kisscartoon.lk
 kisscartoon.llc
+kisscartoon.llp
 kisscartoon.loan
 kisscartoon.loans
 kisscartoon.locker
@@ -9898,6 +9903,7 @@ md.mp.microsoft.com.living
 md.mp.microsoft.com.lixil
 md.mp.microsoft.com.lk
 md.mp.microsoft.com.llc
+md.mp.microsoft.com.llp
 md.mp.microsoft.com.loan
 md.mp.microsoft.com.loans
 md.mp.microsoft.com.locker
@@ -12530,6 +12536,7 @@ wdcp.microsoft.living
 wdcp.microsoft.lixil
 wdcp.microsoft.lk
 wdcp.microsoft.llc
+wdcp.microsoft.llp
 wdcp.microsoft.loan
 wdcp.microsoft.loans
 wdcp.microsoft.locker
@@ -14159,6 +14166,7 @@ www.*.md.mp.microsoft.com.living
 www.*.md.mp.microsoft.com.lixil
 www.*.md.mp.microsoft.com.lk
 www.*.md.mp.microsoft.com.llc
+www.*.md.mp.microsoft.com.llp
 www.*.md.mp.microsoft.com.loan
 www.*.md.mp.microsoft.com.loans
 www.*.md.mp.microsoft.com.locker
@@ -17097,6 +17105,7 @@ www.google.co.living
 www.google.co.lixil
 www.google.co.lk
 www.google.co.llc
+www.google.co.llp
 www.google.co.loan
 www.google.co.loans
 www.google.co.locker
@@ -18619,6 +18628,7 @@ www.google.com.living
 www.google.com.lixil
 www.google.com.lk
 www.google.com.llc
+www.google.com.llp
 www.google.com.loan
 www.google.com.loans
 www.google.com.locker
@@ -19862,6 +19872,7 @@ www.google.living
 www.google.lixil
 www.google.lk
 www.google.llc
+www.google.llp
 www.google.loan
 www.google.loans
 www.google.locker
@@ -21657,6 +21668,7 @@ www.kisscartoon.living
 www.kisscartoon.lixil
 www.kisscartoon.lk
 www.kisscartoon.llc
+www.kisscartoon.llp
 www.kisscartoon.loan
 www.kisscartoon.loans
 www.kisscartoon.locker
@@ -23317,6 +23329,7 @@ www.md.mp.microsoft.com.living
 www.md.mp.microsoft.com.lixil
 www.md.mp.microsoft.com.lk
 www.md.mp.microsoft.com.llc
+www.md.mp.microsoft.com.llp
 www.md.mp.microsoft.com.loan
 www.md.mp.microsoft.com.loans
 www.md.mp.microsoft.com.locker
@@ -25949,6 +25962,7 @@ www.wdcp.microsoft.living
 www.wdcp.microsoft.lixil
 www.wdcp.microsoft.lk
 www.wdcp.microsoft.llc
+www.wdcp.microsoft.llp
 www.wdcp.microsoft.loan
 www.wdcp.microsoft.loans
 www.wdcp.microsoft.locker

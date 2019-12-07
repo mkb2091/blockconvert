@@ -1,4 +1,4 @@
-# Version 2019120500, Last Updated Thu Dec  5 07:07:01 2019 UTC
+# Version 2019120600, Last Updated Fri Dec  6 07:07:01 2019 UTC
 AAA
 AARP
 ABARTH
@@ -731,6 +731,7 @@ LIVING
 LIXIL
 LK
 LLC
+LLP
 LOAN
 LOANS
 LOCKER
