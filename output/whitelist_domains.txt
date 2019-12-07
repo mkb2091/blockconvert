@@ -10979,6 +10979,7 @@ openloed.co
 openstreetmap.org
 opensubtitles.org
 openuserjs.org
+openwall.com
 openx.com
 opf.ooyala.com
 opinion.latimes.com
@@ -24405,6 +24406,7 @@ www.openloed.co
 www.openstreetmap.org
 www.opensubtitles.org
 www.openuserjs.org
+www.openwall.com
 www.openx.com
 www.opf.ooyala.com
 www.opinion.latimes.com
