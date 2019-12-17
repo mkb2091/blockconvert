@@ -2263,6 +2263,7 @@
 @@||datei.to^
 @@||db.local.clamav.net^
 @@||dcape-na.amazon.com^
+@@||ddragon.leagueoflegends.com^
 @@||de.ioam.de^
 @@||dealer-ssl.spotify.com^
 @@||dealer.com^
@@ -2325,6 +2326,7 @@
 @@||dl.dropboxusercontent.com^
 @@||dl.free.fr^
 @@||dl.google.com^
+@@||dlied6.qq.com^
 @@||dlsrc.getmonero.org^
 @@||dlvr.it^
 @@||dm3p.wns.notify.windows.com.akadns.net^
@@ -15690,6 +15692,7 @@
 @@||www.datei.to^
 @@||www.db.local.clamav.net^
 @@||www.dcape-na.amazon.com^
+@@||www.ddragon.leagueoflegends.com^
 @@||www.de.ioam.de^
 @@||www.dealer-ssl.spotify.com^
 @@||www.dealer.com^
@@ -15752,6 +15755,7 @@
 @@||www.dl.dropboxusercontent.com^
 @@||www.dl.free.fr^
 @@||www.dl.google.com^
+@@||www.dlied6.qq.com^
 @@||www.dlsrc.getmonero.org^
 @@||www.dlvr.it^
 @@||www.dm3p.wns.notify.windows.com.akadns.net^
