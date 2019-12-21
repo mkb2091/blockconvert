@@ -2347,6 +2347,7 @@ donorbox.org
 dotsub.com
 down.sandai.net
 download.cnet.com
+download.electrum.org
 download.intsig.net
 download.newrelic.com
 download.sonarr.tv
@@ -15777,6 +15778,7 @@ www.donorbox.org
 www.dotsub.com
 www.down.sandai.net
 www.download.cnet.com
+www.download.electrum.org
 www.download.intsig.net
 www.download.newrelic.com
 www.download.sonarr.tv

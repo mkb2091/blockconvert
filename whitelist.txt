@@ -111,6 +111,7 @@ dmd.metaservices.microsoft.com
 dmd.metaservices.microsoft.com.akadns.net
 dns.google.com
 do.co
+download.electrum.org
 download.newrelic.com
 download.windowsupdate.com
 downloads.getmonero.org
