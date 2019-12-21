@@ -2588,6 +2588,7 @@ frz.io
 fs.microsoft.com
 ftp.chocolatey.org
 ftp.heanet.ie
+ftp.tsukuba.wide.ad.jp
 fullstory.com
 funnyordie.com
 fuseservice.com
@@ -16017,6 +16018,7 @@ www.frz.io
 www.fs.microsoft.com
 www.ftp.chocolatey.org
 www.ftp.heanet.ie
+www.ftp.tsukuba.wide.ad.jp
 www.fullstory.com
 www.funnyordie.com
 www.fuseservice.com
