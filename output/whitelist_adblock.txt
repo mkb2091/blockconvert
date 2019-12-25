@@ -830,7 +830,6 @@
 @@||*.md.mp.microsoft.com.motorcycles^
 @@||*.md.mp.microsoft.com.mov^
 @@||*.md.mp.microsoft.com.movie^
-@@||*.md.mp.microsoft.com.movistar^
 @@||*.md.mp.microsoft.com.mp^
 @@||*.md.mp.microsoft.com.mq^
 @@||*.md.mp.microsoft.com.mr^
@@ -1203,7 +1202,6 @@
 @@||*.md.mp.microsoft.com.tech^
 @@||*.md.mp.microsoft.com.technology^
 @@||*.md.mp.microsoft.com.tel^
-@@||*.md.mp.microsoft.com.telefonica^
 @@||*.md.mp.microsoft.com.temasek^
 @@||*.md.mp.microsoft.com.tennis^
 @@||*.md.mp.microsoft.com.teva^
@@ -3773,7 +3771,6 @@
 @@||google.co.motorcycles^
 @@||google.co.mov^
 @@||google.co.movie^
-@@||google.co.movistar^
 @@||google.co.mp^
 @@||google.co.mq^
 @@||google.co.mr^
@@ -4146,7 +4143,6 @@
 @@||google.co.tech^
 @@||google.co.technology^
 @@||google.co.tel^
-@@||google.co.telefonica^
 @@||google.co.temasek^
 @@||google.co.tennis^
 @@||google.co.teva^
@@ -5296,7 +5292,6 @@
 @@||google.com.motorcycles^
 @@||google.com.mov^
 @@||google.com.movie^
-@@||google.com.movistar^
 @@||google.com.mp^
 @@||google.com.mq^
 @@||google.com.mr^
@@ -5669,7 +5664,6 @@
 @@||google.com.tech^
 @@||google.com.technology^
 @@||google.com.tel^
-@@||google.com.telefonica^
 @@||google.com.temasek^
 @@||google.com.tennis^
 @@||google.com.teva^
@@ -6540,7 +6534,6 @@
 @@||google.motorcycles^
 @@||google.mov^
 @@||google.movie^
-@@||google.movistar^
 @@||google.mp^
 @@||google.mq^
 @@||google.mr^
@@ -6914,7 +6907,6 @@
 @@||google.tech^
 @@||google.technology^
 @@||google.tel^
-@@||google.telefonica^
 @@||google.temasek^
 @@||google.tennis^
 @@||google.teva^
@@ -8336,7 +8328,6 @@
 @@||kisscartoon.motorcycles^
 @@||kisscartoon.mov^
 @@||kisscartoon.movie^
-@@||kisscartoon.movistar^
 @@||kisscartoon.mp^
 @@||kisscartoon.mq^
 @@||kisscartoon.mr^
@@ -8709,7 +8700,6 @@
 @@||kisscartoon.tech^
 @@||kisscartoon.technology^
 @@||kisscartoon.tel^
-@@||kisscartoon.telefonica^
 @@||kisscartoon.temasek^
 @@||kisscartoon.tennis^
 @@||kisscartoon.teva^
@@ -9997,7 +9987,6 @@
 @@||md.mp.microsoft.com.motorcycles^
 @@||md.mp.microsoft.com.mov^
 @@||md.mp.microsoft.com.movie^
-@@||md.mp.microsoft.com.movistar^
 @@||md.mp.microsoft.com.mp^
 @@||md.mp.microsoft.com.mq^
 @@||md.mp.microsoft.com.mr^
@@ -10370,7 +10359,6 @@
 @@||md.mp.microsoft.com.tech^
 @@||md.mp.microsoft.com.technology^
 @@||md.mp.microsoft.com.tel^
-@@||md.mp.microsoft.com.telefonica^
 @@||md.mp.microsoft.com.temasek^
 @@||md.mp.microsoft.com.tennis^
 @@||md.mp.microsoft.com.teva^
@@ -12631,7 +12619,6 @@
 @@||wdcp.microsoft.motorcycles^
 @@||wdcp.microsoft.mov^
 @@||wdcp.microsoft.movie^
-@@||wdcp.microsoft.movistar^
 @@||wdcp.microsoft.mp^
 @@||wdcp.microsoft.mq^
 @@||wdcp.microsoft.mr^
@@ -13004,7 +12991,6 @@
 @@||wdcp.microsoft.tech^
 @@||wdcp.microsoft.technology^
 @@||wdcp.microsoft.tel^
-@@||wdcp.microsoft.telefonica^
 @@||wdcp.microsoft.temasek^
 @@||wdcp.microsoft.tennis^
 @@||wdcp.microsoft.teva^
@@ -14261,7 +14247,6 @@
 @@||www.*.md.mp.microsoft.com.motorcycles^
 @@||www.*.md.mp.microsoft.com.mov^
 @@||www.*.md.mp.microsoft.com.movie^
-@@||www.*.md.mp.microsoft.com.movistar^
 @@||www.*.md.mp.microsoft.com.mp^
 @@||www.*.md.mp.microsoft.com.mq^
 @@||www.*.md.mp.microsoft.com.mr^
@@ -14634,7 +14619,6 @@
 @@||www.*.md.mp.microsoft.com.tech^
 @@||www.*.md.mp.microsoft.com.technology^
 @@||www.*.md.mp.microsoft.com.tel^
-@@||www.*.md.mp.microsoft.com.telefonica^
 @@||www.*.md.mp.microsoft.com.temasek^
 @@||www.*.md.mp.microsoft.com.tennis^
 @@||www.*.md.mp.microsoft.com.teva^
@@ -17204,7 +17188,6 @@
 @@||www.google.co.motorcycles^
 @@||www.google.co.mov^
 @@||www.google.co.movie^
-@@||www.google.co.movistar^
 @@||www.google.co.mp^
 @@||www.google.co.mq^
 @@||www.google.co.mr^
@@ -17577,7 +17560,6 @@
 @@||www.google.co.tech^
 @@||www.google.co.technology^
 @@||www.google.co.tel^
-@@||www.google.co.telefonica^
 @@||www.google.co.temasek^
 @@||www.google.co.tennis^
 @@||www.google.co.teva^
@@ -18727,7 +18709,6 @@
 @@||www.google.com.motorcycles^
 @@||www.google.com.mov^
 @@||www.google.com.movie^
-@@||www.google.com.movistar^
 @@||www.google.com.mp^
 @@||www.google.com.mq^
 @@||www.google.com.mr^
@@ -19100,7 +19081,6 @@
 @@||www.google.com.tech^
 @@||www.google.com.technology^
 @@||www.google.com.tel^
-@@||www.google.com.telefonica^
 @@||www.google.com.temasek^
 @@||www.google.com.tennis^
 @@||www.google.com.teva^
@@ -19971,7 +19951,6 @@
 @@||www.google.motorcycles^
 @@||www.google.mov^
 @@||www.google.movie^
-@@||www.google.movistar^
 @@||www.google.mp^
 @@||www.google.mq^
 @@||www.google.mr^
@@ -20345,7 +20324,6 @@
 @@||www.google.tech^
 @@||www.google.technology^
 @@||www.google.tel^
-@@||www.google.telefonica^
 @@||www.google.temasek^
 @@||www.google.tennis^
 @@||www.google.teva^
@@ -21767,7 +21745,6 @@
 @@||www.kisscartoon.motorcycles^
 @@||www.kisscartoon.mov^
 @@||www.kisscartoon.movie^
-@@||www.kisscartoon.movistar^
 @@||www.kisscartoon.mp^
 @@||www.kisscartoon.mq^
 @@||www.kisscartoon.mr^
@@ -22140,7 +22117,6 @@
 @@||www.kisscartoon.tech^
 @@||www.kisscartoon.technology^
 @@||www.kisscartoon.tel^
-@@||www.kisscartoon.telefonica^
 @@||www.kisscartoon.temasek^
 @@||www.kisscartoon.tennis^
 @@||www.kisscartoon.teva^
@@ -23428,7 +23404,6 @@
 @@||www.md.mp.microsoft.com.motorcycles^
 @@||www.md.mp.microsoft.com.mov^
 @@||www.md.mp.microsoft.com.movie^
-@@||www.md.mp.microsoft.com.movistar^
 @@||www.md.mp.microsoft.com.mp^
 @@||www.md.mp.microsoft.com.mq^
 @@||www.md.mp.microsoft.com.mr^
@@ -23801,7 +23776,6 @@
 @@||www.md.mp.microsoft.com.tech^
 @@||www.md.mp.microsoft.com.technology^
 @@||www.md.mp.microsoft.com.tel^
-@@||www.md.mp.microsoft.com.telefonica^
 @@||www.md.mp.microsoft.com.temasek^
 @@||www.md.mp.microsoft.com.tennis^
 @@||www.md.mp.microsoft.com.teva^
@@ -26062,7 +26036,6 @@
 @@||www.wdcp.microsoft.motorcycles^
 @@||www.wdcp.microsoft.mov^
 @@||www.wdcp.microsoft.movie^
-@@||www.wdcp.microsoft.movistar^
 @@||www.wdcp.microsoft.mp^
 @@||www.wdcp.microsoft.mq^
 @@||www.wdcp.microsoft.mr^
@@ -26435,7 +26408,6 @@
 @@||www.wdcp.microsoft.tech^
 @@||www.wdcp.microsoft.technology^
 @@||www.wdcp.microsoft.tel^
-@@||www.wdcp.microsoft.telefonica^
 @@||www.wdcp.microsoft.temasek^
 @@||www.wdcp.microsoft.tennis^
 @@||www.wdcp.microsoft.teva^
