@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 803526 blocked domains in each of the generated filter lists
+Theres are 803560 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -16,7 +16,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [uBlock filters – Badware risks](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt)|-|4.0 days|GPLv3|50|0
 [iOS Tracker Blocklist](https://jarv.is/ios-trackers/adguard.txt)|jakejarvis|10.0 days|MIT|485|0
 [hostsVN](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts)|-|1.0 days|MIT|19071|0
-[abuse.ch URLhaus Response Policy Zones](https://urlhaus.abuse.ch/downloads/rpz/)|-|1.0 days|CC0|1457|0
+[abuse.ch URLhaus Response Policy Zones](https://urlhaus.abuse.ch/downloads/rpz/)|-|1.0 days|CC0|1417|0
 [abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|93|0
 [abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|760|0
 [😍 All-in-One Customized Adblock List 2.7](https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt)|deanoman|2.0 hours|MIT|42364|790
@@ -58,7 +58,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [International List](https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt)|-|3.0 days|The Unlicense|15|1
 [I Hate Tracker](https://raw.githubusercontent.com/pirat28/IHateTracker/master/iHateTracker.txt)|Pirat28|10.0 days|MIT|377|0
 [GOODBYE ADS](https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt)|Jerryn70 (XDA Senior Member)|1.0 days|MIT|71023|0
-[Frellwit's Swedish Hosts File](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt)|-|1.0 days|GPL-3.0|647|0
+[Frellwit's Swedish Hosts File](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt)|-|1.0 days|GPL-3.0|650|0
 [Fanboy's Annoyance List](https://easylist.to/easylist/fanboy-annoyance.txt)|-|4.0 days|GPLv3|688|8
 [Eesti saitidele kohandatud filter](https://adblock.ee/list.php)|-|1.0 days|CC0|192|0
 [EasyPrivacy](https://easylist.to/easylist/easyprivacy.txt)|-|4.0 days|GPLv3|7461|5
@@ -85,7 +85,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [AdguardApps](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt)|-|1.0 days|GPLv3|19|0
 [Adblock Polska](https://raw.githubusercontent.com/adblockpolska/Adblock_PL_List/master/adblock_polska.txt)|adblockpl, tomasko126, MonztA|2.0 days|GPLv3|84|1
 [Adblock List for Finland](https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt)|-|5.0 days|The Unlicense|117|1
-[AdGuard Simplified Domain Names filter](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt)|-|1.0 days|GPLv3|32658|3
+[AdGuard Simplified Domain Names filter](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt)|-|1.0 days|GPLv3|32670|3
 [AdBlockID](https://raw.githubusercontent.com/realodix/AdBlockID/master/output/adblockid.txt)|-|4.0 days|GPLv3|699|0
 [AdBlock Farsi](https://raw.githubusercontent.com/SlashArash/adblockfa/master/adblockfa.txt)|-|5.0 days|The Beer-Ware License|136|0
 [AdAway default blocklist](https://adaway.org/hosts.txt)|-|1.0 days|CC-BY-3|409|0
@@ -125,11 +125,11 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt](https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt)|-|1.0 days|GPLv3+|0|748
 [https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json](https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json)|-|1.0 days|GPLv3|468|278
 [https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt](https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt)|-|1.0 days|CC-BY-SA-4.0|53|0
-[https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt](https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt)|-|1.0 days|CC0|67319|0
+[https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt](https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt)|-|1.0 days|CC0|67322|0
 [https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt)|-|1.0 days|GPLv3|620|0
 [https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt)|-|1.0 days|GPLv3|36067|0
 [https://filtri-dns.ga/filtri.txt](https://filtri-dns.ga/filtri.txt)|-|1.0 days|GPLv3|14570|0
-[https://cybercrime-tracker.net/all.php](https://cybercrime-tracker.net/all.php)|-|1.0 days|CC0|12036|0
+[https://cybercrime-tracker.net/all.php](https://cybercrime-tracker.net/all.php)|-|1.0 days|CC0|12051|0
 [https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt](https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt)|-|10.0 days|Public Domain|2046|0
 
 ## Credits
