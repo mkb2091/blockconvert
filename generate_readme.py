@@ -19,12 +19,24 @@ enemyofarsenic(Reddit): Many very useful suggestions such as whitelist, passive 
 
 '''
 
+
 def url_to_path(url):
     return os.path.join('data', urllib.parse.urlencode({'': url})[1:])
 
+
 def generate_readme(urls, rule_count):
-    url_table = [['Link', 'Author', 'Expires', 'License', 'Blacklist Size', 'Whitelist Size'],
-                 [':---:', ':---:', ':---:', ':---:', ':---:', ':---:']]
+    url_table = [['Link',
+                  'Author',
+                  'Expires',
+                  'License',
+                  'Blacklist Size',
+                  'Whitelist Size'],
+                 [':---:',
+                  ':---:',
+                  ':---:',
+                  ':---:',
+                  ':---:',
+                  ':---:']]
     for (
         title,
         url,
@@ -57,7 +69,8 @@ def generate_readme(urls, rule_count):
                 whitelist_size = str(len(file.read().splitlines()))
         except IOError:
             whitelist_size = 0
-        url_table.append([link, author, expires, list_license, blacklist_size, whitelist_size])
+        url_table.append([link, author, expires, list_license,
+                          blacklist_size, whitelist_size])
     url_table = '\n'.join('|'.join(line) for line in url_table)
     with open('sources.md', 'w') as file:
         file.write(SOURCES.format(**locals()))
