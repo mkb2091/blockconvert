@@ -721,7 +721,6 @@
 @@||*.md.mp.microsoft.com.lexus^
 @@||*.md.mp.microsoft.com.lgbt^
 @@||*.md.mp.microsoft.com.li^
-@@||*.md.mp.microsoft.com.liaison^
 @@||*.md.mp.microsoft.com.lidl^
 @@||*.md.mp.microsoft.com.life^
 @@||*.md.mp.microsoft.com.lifeinsurance^
@@ -1532,6 +1531,7 @@
 @@||*.smartscreen.microsoft.com^
 @@||*.telecommand.telemetry.microsoft.com.akadns.net^
 @@||*.tlu.dl.delivery.mp.microsoft.com^
+@@||*.ugc.bazaarvoice.com^
 @@||*.update.microsoft.com^
 @@||*.windowsupdate.com^
 @@||*.wns.windows.com^
@@ -1597,6 +1597,7 @@
 @@||activate-sjc0.adobe.com^
 @@||activate.adobe.com^
 @@||activate.wip3.adobe.com^
+@@||activation-v2.sls.microsoft.com^
 @@||activation.sls.microsoft.com^
 @@||activity.windows.com^
 @@||ad-ipd.sxp.smartclip.net^
@@ -2420,6 +2421,9 @@
 @@||emjcd.com^
 @@||en.bab.la^
 @@||encrypted-tbn0.gstatic.com^
+@@||encrypted-tbn1.gstatic.com^
+@@||encrypted-tbn2.gstatic.com^
+@@||encrypted-tbn3.gstatic.com^
 @@||engadget.com^
 @@||entireweb.com^
 @@||entitlement.auth.adobe.com^
@@ -2466,6 +2470,7 @@
 @@||external.xx.fbcdn.net^
 @@||extjs.cachefly.net^
 @@||extremetech.disqus.com^
+@@||f.chtah.com^
 @@||f.youku.com^
 @@||f1.g.mi.com^
 @@||f1.media.brightcove.com^
@@ -2475,6 +2480,7 @@
 @@||fansonly.com^
 @@||fast.fonts.net^
 @@||fast.wistia.com^
+@@||fast.wistia.net^
 @@||fastly.net^
 @@||faucethub.io^
 @@||fb.com^
@@ -2588,6 +2594,7 @@
 @@||ftp.chocolatey.org^
 @@||ftp.heanet.ie^
 @@||ftp.tsukuba.wide.ad.jp^
+@@||ftpcontent.worldnow.com^
 @@||fullstory.com^
 @@||funnyordie.com^
 @@||fuseservice.com^
@@ -3662,7 +3669,6 @@
 @@||google.co.lexus^
 @@||google.co.lgbt^
 @@||google.co.li^
-@@||google.co.liaison^
 @@||google.co.lidl^
 @@||google.co.life^
 @@||google.co.lifeinsurance^
@@ -5183,7 +5189,6 @@
 @@||google.com.lexus^
 @@||google.com.lgbt^
 @@||google.com.li^
-@@||google.com.liaison^
 @@||google.com.lidl^
 @@||google.com.life^
 @@||google.com.lifeinsurance^
@@ -6425,7 +6430,6 @@
 @@||google.lexus^
 @@||google.lgbt^
 @@||google.li^
-@@||google.liaison^
 @@||google.lidl^
 @@||google.life^
 @@||google.lifeinsurance^
@@ -8219,7 +8223,6 @@
 @@||kisscartoon.lexus^
 @@||kisscartoon.lgbt^
 @@||kisscartoon.li^
-@@||kisscartoon.liaison^
 @@||kisscartoon.lidl^
 @@||kisscartoon.life^
 @@||kisscartoon.lifeinsurance^
@@ -9128,6 +9131,7 @@
 @@||m.media-amazon.com^
 @@||m.pcbeta.com^
 @@||m.stripe.com^
+@@||m.stripe.network^
 @@||m.weeklyad.target.com^
 @@||m.youtube.com^
 @@||mac.pcbeta.com^
@@ -9878,7 +9882,6 @@
 @@||md.mp.microsoft.com.lexus^
 @@||md.mp.microsoft.com.lgbt^
 @@||md.mp.microsoft.com.li^
-@@||md.mp.microsoft.com.liaison^
 @@||md.mp.microsoft.com.lidl^
 @@||md.mp.microsoft.com.life^
 @@||md.mp.microsoft.com.lifeinsurance^
@@ -11007,6 +11010,7 @@
 @@||passwordbox.com^
 @@||pastebin.com^
 @@||pastebin.org^
+@@||pasteboard.co^
 @@||pay.google.com^
 @@||payload.cargocollective.com^
 @@||payments-amazon.com^
@@ -11084,6 +11088,7 @@
 @@||poll.fm^
 @@||polldaddy.com^
 @@||polyfill.io^
+@@||pool.ntp.org^
 @@||pornhub.com^
 @@||pornhubpremium.com^
 @@||portal.client.xunlei.com^
@@ -11156,6 +11161,7 @@
 @@||rackspacecloud.com^
 @@||radikal.ru^
 @@||radiostacja.pl^
+@@||rakuten.com^
 @@||rambler.ru^
 @@||ranker.com^
 @@||ransomwaretracker.abuse.ch^
@@ -11470,6 +11476,7 @@
 @@||static.ws.126.net^
 @@||static.www.odcdn.com.edgekey.net^
 @@||static.xx.fbcdn.net^
+@@||static.zdassets.com^
 @@||staticamzn.com^
 @@||staticflickr.com^
 @@||staticxx.facebook.com^
@@ -11499,6 +11506,7 @@
 @@||streamtheworld.com^
 @@||strefa.fm^
 @@||stripe.com^
+@@||stripe.network^
 @@||stripecdn.com^
 @@||suggestqueries.google.com^
 @@||support.coinbase.com^
@@ -12510,7 +12518,6 @@
 @@||wdcp.microsoft.lexus^
 @@||wdcp.microsoft.lgbt^
 @@||wdcp.microsoft.li^
-@@||wdcp.microsoft.liaison^
 @@||wdcp.microsoft.lidl^
 @@||wdcp.microsoft.life^
 @@||wdcp.microsoft.lifeinsurance^
@@ -14138,7 +14145,6 @@
 @@||www.*.md.mp.microsoft.com.lexus^
 @@||www.*.md.mp.microsoft.com.lgbt^
 @@||www.*.md.mp.microsoft.com.li^
-@@||www.*.md.mp.microsoft.com.liaison^
 @@||www.*.md.mp.microsoft.com.lidl^
 @@||www.*.md.mp.microsoft.com.life^
 @@||www.*.md.mp.microsoft.com.lifeinsurance^
@@ -14949,6 +14955,7 @@
 @@||www.*.smartscreen.microsoft.com^
 @@||www.*.telecommand.telemetry.microsoft.com.akadns.net^
 @@||www.*.tlu.dl.delivery.mp.microsoft.com^
+@@||www.*.ugc.bazaarvoice.com^
 @@||www.*.update.microsoft.com^
 @@||www.*.windowsupdate.com^
 @@||www.*.wns.windows.com^
@@ -15014,6 +15021,7 @@
 @@||www.activate-sjc0.adobe.com^
 @@||www.activate.adobe.com^
 @@||www.activate.wip3.adobe.com^
+@@||www.activation-v2.sls.microsoft.com^
 @@||www.activation.sls.microsoft.com^
 @@||www.activity.windows.com^
 @@||www.ad-ipd.sxp.smartclip.net^
@@ -15837,6 +15845,9 @@
 @@||www.emjcd.com^
 @@||www.en.bab.la^
 @@||www.encrypted-tbn0.gstatic.com^
+@@||www.encrypted-tbn1.gstatic.com^
+@@||www.encrypted-tbn2.gstatic.com^
+@@||www.encrypted-tbn3.gstatic.com^
 @@||www.engadget.com^
 @@||www.entireweb.com^
 @@||www.entitlement.auth.adobe.com^
@@ -15883,6 +15894,7 @@
 @@||www.external.xx.fbcdn.net^
 @@||www.extjs.cachefly.net^
 @@||www.extremetech.disqus.com^
+@@||www.f.chtah.com^
 @@||www.f.youku.com^
 @@||www.f1.g.mi.com^
 @@||www.f1.media.brightcove.com^
@@ -15892,6 +15904,7 @@
 @@||www.fansonly.com^
 @@||www.fast.fonts.net^
 @@||www.fast.wistia.com^
+@@||www.fast.wistia.net^
 @@||www.fastly.net^
 @@||www.faucethub.io^
 @@||www.fb.com^
@@ -16005,6 +16018,7 @@
 @@||www.ftp.chocolatey.org^
 @@||www.ftp.heanet.ie^
 @@||www.ftp.tsukuba.wide.ad.jp^
+@@||www.ftpcontent.worldnow.com^
 @@||www.fullstory.com^
 @@||www.funnyordie.com^
 @@||www.fuseservice.com^
@@ -17079,7 +17093,6 @@
 @@||www.google.co.lexus^
 @@||www.google.co.lgbt^
 @@||www.google.co.li^
-@@||www.google.co.liaison^
 @@||www.google.co.lidl^
 @@||www.google.co.life^
 @@||www.google.co.lifeinsurance^
@@ -18600,7 +18613,6 @@
 @@||www.google.com.lexus^
 @@||www.google.com.lgbt^
 @@||www.google.com.li^
-@@||www.google.com.liaison^
 @@||www.google.com.lidl^
 @@||www.google.com.life^
 @@||www.google.com.lifeinsurance^
@@ -19842,7 +19854,6 @@
 @@||www.google.lexus^
 @@||www.google.lgbt^
 @@||www.google.li^
-@@||www.google.liaison^
 @@||www.google.lidl^
 @@||www.google.life^
 @@||www.google.lifeinsurance^
@@ -21636,7 +21647,6 @@
 @@||www.kisscartoon.lexus^
 @@||www.kisscartoon.lgbt^
 @@||www.kisscartoon.li^
-@@||www.kisscartoon.liaison^
 @@||www.kisscartoon.lidl^
 @@||www.kisscartoon.life^
 @@||www.kisscartoon.lifeinsurance^
@@ -22545,6 +22555,7 @@
 @@||www.m.media-amazon.com^
 @@||www.m.pcbeta.com^
 @@||www.m.stripe.com^
+@@||www.m.stripe.network^
 @@||www.m.weeklyad.target.com^
 @@||www.m.youtube.com^
 @@||www.mac.pcbeta.com^
@@ -23295,7 +23306,6 @@
 @@||www.md.mp.microsoft.com.lexus^
 @@||www.md.mp.microsoft.com.lgbt^
 @@||www.md.mp.microsoft.com.li^
-@@||www.md.mp.microsoft.com.liaison^
 @@||www.md.mp.microsoft.com.lidl^
 @@||www.md.mp.microsoft.com.life^
 @@||www.md.mp.microsoft.com.lifeinsurance^
@@ -24424,6 +24434,7 @@
 @@||www.passwordbox.com^
 @@||www.pastebin.com^
 @@||www.pastebin.org^
+@@||www.pasteboard.co^
 @@||www.pay.google.com^
 @@||www.payload.cargocollective.com^
 @@||www.payments-amazon.com^
@@ -24501,6 +24512,7 @@
 @@||www.poll.fm^
 @@||www.polldaddy.com^
 @@||www.polyfill.io^
+@@||www.pool.ntp.org^
 @@||www.pornhub.com^
 @@||www.pornhubpremium.com^
 @@||www.portal.client.xunlei.com^
@@ -24573,6 +24585,7 @@
 @@||www.rackspacecloud.com^
 @@||www.radikal.ru^
 @@||www.radiostacja.pl^
+@@||www.rakuten.com^
 @@||www.rambler.ru^
 @@||www.ranker.com^
 @@||www.ransomwaretracker.abuse.ch^
@@ -24887,6 +24900,7 @@
 @@||www.static.ws.126.net^
 @@||www.static.www.odcdn.com.edgekey.net^
 @@||www.static.xx.fbcdn.net^
+@@||www.static.zdassets.com^
 @@||www.staticamzn.com^
 @@||www.staticflickr.com^
 @@||www.staticxx.facebook.com^
@@ -24916,6 +24930,7 @@
 @@||www.streamtheworld.com^
 @@||www.strefa.fm^
 @@||www.stripe.com^
+@@||www.stripe.network^
 @@||www.stripecdn.com^
 @@||www.suggestqueries.google.com^
 @@||www.support.coinbase.com^
@@ -25927,7 +25942,6 @@
 @@||www.wdcp.microsoft.lexus^
 @@||www.wdcp.microsoft.lgbt^
 @@||www.wdcp.microsoft.li^
-@@||www.wdcp.microsoft.liaison^
 @@||www.wdcp.microsoft.lidl^
 @@||www.wdcp.microsoft.life^
 @@||www.wdcp.microsoft.lifeinsurance^

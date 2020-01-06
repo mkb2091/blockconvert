@@ -18,6 +18,7 @@
 *.smartscreen.microsoft.com
 *.telecommand.telemetry.microsoft.com.akadns.net
 *.tlu.dl.delivery.mp.microsoft.com
+*.ugc.bazaarvoice.com
 *.update.microsoft.com
 *.windowsupdate.com
 *.wns.windows.com
@@ -27,6 +28,7 @@
 a-msedge.net
 aax-us-east.amazon-adsystem.com
 accounts.eu1.gigya.com
+activation-v2.sls.microsoft.com
 activation.sls.microsoft.com
 adaway.org
 adblock.ee
@@ -126,11 +128,16 @@ easylist-downloads.adblockplus.org
 easylist.to
 electrum.org
 emdl.ws.microsoft.com
+encrypted-tbn1.gstatic.com
+encrypted-tbn2.gstatic.com
+encrypted-tbn3.gstatic.com
 ev.rdtcdn.com
 evoke-windowsservices-tas.msedge.net
+f.chtah.com
 faast.schibsted.io
 facebook.com
 fast.fonts.net
+fast.wistia.net
 fe2.update.microsoft.com
 fe2.update.microsoft.com.akadns.net
 fe3.delivery.dsp.mp.microsoft.com.nsatc.net
@@ -147,6 +154,7 @@ forms.office.com
 forums.storagereview.com
 fossbytes.com
 fs.microsoft.com
+ftpcontent.worldnow.com
 g.akamai.net
 g.akamaiedge.net
 g.live.com
@@ -199,6 +207,7 @@ login.live.com
 login.msa.akadns6.net
 login.windows.net
 lowendbox.com
+m.stripe.network
 mail.google.com
 maps.windows.com
 md.mp.microsoft.com.*
@@ -237,6 +246,7 @@ pastebin.com
 pastebin.org
 pbs.twimg.com
 polyfill.io
+pool.ntp.org
 pornhub.com
 powr.io
 prod.do.dsp.mp.microsoft.com
@@ -246,6 +256,7 @@ purchase.mp.microsoft.com
 qq.com
 query.prod.cms.rt.microsoft.com
 quora.com
+rakuten.com
 ransomwaretracker.abuse.ch
 raw.githubusercontent.com
 readcomiconline.to
@@ -291,6 +302,7 @@ stacksocial.com
 staging-discuss.newrelic.com
 star-mini.c10r.facebook.com
 static-dot-virustotalcloud.appspot.com
+static.zdassets.com
 statsfe2.update.microsoft.com.akadns.net
 status.newrelic.com
 statuscake-email.com
@@ -386,6 +398,7 @@ www.namecheap.com
 www.newrelic.com
 www.openwall.com
 www.orbitz.com
+www.pasteboard.co
 www.pcmatic.com
 www.phishtank.com
 www.privateinternetaccess.com
