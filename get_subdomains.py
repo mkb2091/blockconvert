@@ -7,7 +7,7 @@ def get_subdomains(dns_checker, domains):
     ip_set = set()
     for domain in ip_results:
         if ip_results[domain]:
-            ip_set.add(ip_results[domain])
+            ip_set.update(ip_results[domain])
     reverse_lookup_results = dns_checker.mass_reverse_lookup(ip_set)
     results = set()
     targets = []
