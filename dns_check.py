@@ -13,6 +13,7 @@ import build_regex
 import dns.argus
 import dns.virus_total
 import dns.threatminer
+import dns.dns_over_https
 
 RESERVED = [
     ipaddress.IPv4Network('0.0.0.0/8'),
@@ -34,10 +35,10 @@ RESERVED = [
 ]
 
 
-class DNSCheckerWorker(threading.Thread):
+class DNSCheckerWorker(multiprocessing.Process):
     def __init__(self, session, servers, request_queue, response_queue,
                  request_type=1):
-        threading.Thread.__init__(self)
+        multiprocessing.Process.__init__(self)
         self.session = session
         self.servers = servers
         self.request_queue = request_queue
@@ -53,6 +54,9 @@ class DNSCheckerWorker(threading.Thread):
         try:
             while True:
                 old_domain = domain = request_queue.get_nowait()
+                response_queue.put(
+                    (old_domain, {'Status': 0, 'Answer': [{'data': '182.183.90.1'}]}))
+                continue
                 if self.request_type == 12:
                     try:
                         ip = ipaddress.ip_address(domain)
@@ -133,6 +137,8 @@ class DNSChecker():
             config.get(
                 'threatminer_api', ''), os.path.join(
                 'db', 'threatminer.db'), update)
+        self.doh = dns.dns_over_https.DNSLookupDOH(
+            os.path.join('db', 'dns_cache.db'), update, thread_count=80)
 
     def clean_forward_cache(self):
         cache = self.cache
@@ -159,81 +165,7 @@ class DNSChecker():
         os.replace('temp', 'dns_cache.txt')
 
     def mass_check(self, domain_list, thread_count=40):
-        domain_list_length = len(domain_list)
-        cache = self.cache
-        request_queue = queue.Queue()
-        response_queue = queue.Queue()
-        results = dict()
-        all_from_cache = True
-        valid_count = 0
-        invalid_count = 0
-        for domain in domain_list:
-            if not domain.startswith('*'):
-                try:
-                    results[domain] = cache[domain][0]
-                    if cache[domain][0]:
-                        valid_count += 1
-                    else:
-                        invalid_count += 1
-                except KeyError:
-                    if build_regex.DOMAIN_REGEX.fullmatch(domain):
-                        request_queue.put(domain)
-                        all_from_cache = False
-                    else:
-                        results[domain] = ('', time.time())
-        if all_from_cache:
-            return results
-        del domain_list
-        threads = []
-        for i in range(thread_count):
-            thread = DNSCheckerWorker(
-                self.session,
-                self.servers,
-                request_queue,
-                response_queue,
-                1)
-            thread.start()
-            threads.append(thread)
-        start = time.time()
-        initial_length = len(results)
-        while any(thread.is_alive() for thread in threads):
-            try:
-                while True:
-                    domain, result = response_queue.get(timeout=0.1)
-                    exists = result['Status'] == 0 and 'Answer' in result
-                    ip = ''
-                    if exists:
-                        for answer in result['Answer']:
-                            try:
-                                ip = ipaddress.IPv4Network(
-                                    '%s/32' % answer['data'])
-                                exists = exists and (
-                                    not any(network.overlaps(ip) for network in RESERVED))
-                            except ipaddress.AddressValueError:
-                                pass
-                    if exists and isinstance(ip, ipaddress.IPv4Network):
-                        valid_count += 1
-                        ip = ip.network_address.exploded
-                    else:
-                        invalid_count += 1
-                        ip = ''
-                    results[domain] = ip
-                    cache[domain] = (ip, time.time())
-                    if len(results) % 20000 == 19999:
-                        print('%s/s %s Valid: %s Invalid: %s ' %
-                              (round((len(results) -
-                                      initial_length) /
-                                     (time.time() -
-                                      start), 2), round(len(results) /
-                                                        domain_list_length, 5), valid_count, invalid_count))
-                        self.save_forward_cache(clean=False)
-            except queue.Empty:
-                pass
-            except Exception as error:
-                print(error)
-                print(domain, result)
-        self.save_forward_cache()
-        return results
+        return self.doh.get_dns_results(domain_list)
 
     def mass_reverse_lookup(self, ip_list, thread_count=40):
         ip_list = set(ip_list)
