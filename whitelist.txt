@@ -8,6 +8,7 @@
 *.e-msedge.net
 *.g.akamai.net
 *.g.akamaiedge.net
+*.gab.com
 *.md.mp.microsoft.com.*
 *.mp.microsoft.com
 *.prod.do.dsp.mp.microsoft.com

@@ -8,6 +8,7 @@
 @@||*.e-msedge.net^
 @@||*.g.akamai.net^
 @@||*.g.akamaiedge.net^
+@@||*.gab.com^
 @@||*.md.mp.microsoft.com.aaa^
 @@||*.md.mp.microsoft.com.aarp^
 @@||*.md.mp.microsoft.com.abarth^
@@ -13432,6 +13433,7 @@
 @@||www.*.e-msedge.net^
 @@||www.*.g.akamai.net^
 @@||www.*.g.akamaiedge.net^
+@@||www.*.gab.com^
 @@||www.*.md.mp.microsoft.com.aaa^
 @@||www.*.md.mp.microsoft.com.aarp^
 @@||www.*.md.mp.microsoft.com.abarth^
