@@ -1569,7 +1569,6 @@
 8ch.net
 91-cdn.com
 91mobiles.com
-9to5maccom.disqus.com
 a-airasia-001-gyf12.insnw.net
 a-msedge.net
 a.disquscdn.com
@@ -1578,9 +1577,7 @@ a.ooyala.com
 a.shifen.com
 a.wishabi.com
 a1014.g.akamai.net
-a1859010085.cdn.optimizely.com
 a652.dscb.akamai.net
-a8chomedotblog.files.wordpress.com
 a90.g.akamai.net
 aatkit.com
 aax-us-east.amazon-adsystem.com
@@ -1590,7 +1587,6 @@ abroad.apilocate.amap.com
 account.xiaomi.com
 accounts.eu1.gigya.com
 accounts.google.com
-accounts.us1.gigya.com
 accuweather.com
 acehardware.com
 actionnetwork.org
@@ -1704,6 +1700,7 @@ amazon.in
 amazon.it
 amazonaws.com
 amazoncustomerservice.d2.sc.omtrdc.net
+americanexpress.com
 americanhomecomings.com
 amos.alicdn.com
 amp.businessinsider.com
@@ -1739,7 +1736,6 @@ api-na.geetest.com
 api-partner.spotify.com
 api-spotify.com
 api-tv.spotify.com
-api-v3.tinypass.com
 api.account.xiaomi.com
 api.ads.tvb.com
 api.amazonalexa.com
@@ -1757,7 +1753,6 @@ api.fast.com
 api.flickr.com
 api.flyertown.ca
 api.giphy.com
-api.instagram.com
 api.intsig.net
 api.io.mi.com
 api.ipify.org
@@ -1774,7 +1769,6 @@ api.rlje.net
 api.sec.miui.com
 api.soundcloud.com
 api.target.com
-api.tinypass.com
 api.tw06.xlmc.sandai.net
 api.twisto.cz
 api.twisto.pl
@@ -1786,7 +1780,6 @@ api3.siftscience.com
 apis.google.com
 apk.tw
 apnewsregistry.com
-app-ab24.marketo.com
 app-advertise.zhihuishu.com
 app-api.ted.com
 app-measurement.com
@@ -1899,8 +1892,6 @@ bestbuy.ca
 bestbuy.com
 bestofmedia.com
 beta.spotify.map.fastly.net
-betaabril.files.wordpress.com
-betadailytelegraphatnewscorpau.files.wordpress.com
 betanews.com
 betfair.com
 better.fyi
@@ -1930,6 +1921,7 @@ bing.ru
 bing.se
 bit.ly
 bitbucket.org
+bitcoin.com
 bitlord.com
 bitly.com
 bitpay.com
@@ -1959,19 +1951,18 @@ bokser.org
 boldchat.com
 bolly2tolly.net
 bolt.dropbox.com
+bonniercorp.122.2o7.net
 books.google.com
 bootstrapcdn.com
 boston.cbslocal.com
 bowercdn.net
 boxrec.com
-boygeniusreport.files.wordpress.com
 bp.blogspot.com
 braintreegateway.com
 brakrock.be
 brcdn.com
 break.com
 breakingburner.com
-breitbartproduction.disqus.com
 brightcove.com
 brightcove.map.fastly.net
 brightcove.net
@@ -1985,7 +1976,6 @@ business.officedepot.com.edgekey.net
 businessfinder.nj.com
 businessinsider.com
 buy.geni.us
-buy.tinypass.com
 buyad.bi-xenon.cn
 buymeacoffee.com
 buzzfed.com
@@ -1998,7 +1988,7 @@ c.disquscdn.com
 c.disquscdn.com.cdn.cloudflare.net
 c.evidon.com
 c.id.mi.com
-c.la1w1.salesforceliveagent.com
+c.la4-c2-dfw.salesforceliveagent.com
 c.media-amazon.com
 c.msn.com
 c.o0bg.com
@@ -2063,7 +2053,6 @@ cdn.pcbeta.static.inimc.com
 cdn.radiantmediatechs.com
 cdn.ravenjs.com
 cdn.rawgit.com
-cdn.registerdisney.go.com
 cdn.samsungcloudsolution.com
 cdn.siftscience.com
 cdn.sstatic.net
@@ -2071,7 +2060,6 @@ cdn.static-economist.com
 cdn.staticaly.com
 cdn.syndication.twimg.com
 cdn.syndication.twitter.com
-cdn.tinypass.com
 cdn.viblast.com
 cdn.vidible.tv
 cdn2.hubspot.net
@@ -2085,9 +2073,6 @@ cdngeneral.rentcafe.com
 cdninstagram.com
 cdnjs.cloudflare.com
 cdnpk.com
-cdns.eu1.gigya.com
-cdns.gigya.com
-cdns.us1.gigya.com
 cdnsecakmi.kaltura.com
 cdp.aliexpress.com
 cds.d2s7q6s2.hwcdn.net
@@ -2106,11 +2091,9 @@ chatenabled.mail.google.com
 check4.facebook.com
 check6.facebook.com
 checkout.google.com
-checkout.paypal.com
 checkout.razorpay.com
 checkout.stripe.com
 chicago.cbslocal.com
-chirp.bizrate.com
 chng.it
 chomikuj.pl
 christianpost.com
@@ -2161,7 +2144,6 @@ coinpot.co
 cointraffic.io
 collegehumor.com
 com.com
-comments.us1.gigya.com
 community.spiceworks.com
 completion.amazon.com
 complex.com
@@ -2232,7 +2214,6 @@ cy2.licensing.md.mp.microsoft.com.akadns.net
 cy2.settings.data.microsoft.com.akadns.net
 cybercrime-tracker.net
 d.dropbox.com
-d.la1-c2-dfw.salesforceliveagent.com
 d1f8f9xcsvx3ha.cloudfront.net
 d1z2jf7jlzjs58.cloudfront.net
 d2405b0jymm2dk.cloudfront.net
@@ -2243,7 +2224,6 @@ d395dw5zk780j2.cloudfront.net
 d3js.org
 d3orhvfyxudxxq.cloudfront.net
 d9hhrg4mnvzow.cloudfront.net
-d9jj3mjthpub.cloudfront.net
 dailymotion.com
 danid.dk
 dash.cloudflare.com
@@ -2252,7 +2232,6 @@ dashboard.lentainform.com
 dashboard.marketgid.com
 dashboard.mgid.com
 dashboard.plex.tv
-dashboard.tinypass.com
 dashboard.tovarro.com
 dashboard.zopim.com
 data.iana.org
@@ -2295,7 +2274,6 @@ device-metrics-us-2.amazon.com
 device-metrics-us.amazon.com
 device.auth.xboxlive.com
 devmlbglobal.112.2o7.net
-dezeenhq.disqus.com
 di.com.pl
 dict.leo.org
 dictionary.cambridge.org
@@ -2353,7 +2331,6 @@ download.newrelic.com
 download.sonarr.tv
 download.windowsupdate.com
 downloads.getmonero.org
-downloads.mailchimp.com
 dp.msnmessenger.akadns.com
 dragoart.com
 drh.img.digitalriver.com
@@ -2384,7 +2361,6 @@ e16973.a.akamaiedge.net
 e3489.cd.akamaiedge.net
 e3843.g.akamaiedge.net
 ea.com
-earthlink.122.2o7.net
 easybytez.com
 easylist-downloads.adblockplus.org
 easylist.to
@@ -2451,10 +2427,8 @@ eventus-design.com
 everyaction.com
 evoke-windowsservices-tas.msedge.net
 ew.com
-ewedit.files.wordpress.com
 example.com
 example.org
-experience.tinypass.com
 express.co.uk
 expressen.se
 external-lhr0-1.xx.fbcdn.net
@@ -2470,7 +2444,6 @@ external-lhr8-1.xx.fbcdn.net
 external-lhr9-1.xx.fbcdn.net
 external.xx.fbcdn.net
 extjs.cachefly.net
-extremetech.disqus.com
 f.chtah.com
 f.youku.com
 f1.g.mi.com
@@ -2519,7 +2492,6 @@ filters.adtidy.org
 filtri-dns.ga
 finance.yahoo.com
 financialcontent.com
-financialpostcom.files.wordpress.com
 find.api.micloud.xiaomi.net
 findnsave.com
 firstlook.org
@@ -2612,6 +2584,7 @@ g.ezoic.net
 g.live.com
 g.msn.com.nsatc.net
 g00.msn.com
+g2insights-cdn.azureedge.net
 gadgetsnow.com
 game.xiaomi.com
 gameofbitcoins.com
@@ -2629,7 +2602,6 @@ gatherer.wizards.com
 gawker.com
 gawkerassets.com
 gazeta.pl
-geekwire.disqus.com
 geenstijl.nl
 geetest.com
 gelbooru.com
@@ -2651,6 +2623,7 @@ gigaom.com
 gigya.com
 giphy.com
 gist.github.com
+gist.githubusercontent.com
 git.io
 git.teknik.io
 gitcdn.xyz
@@ -7253,12 +7226,9 @@ greenhouse.io
 group.pcbeta.com
 groupon.com
 groups.google.com
-grunerandjahr.112.2o7.net
 gs.apple.com
 gs.statcounter.com
 gscdn.nl
-gscounters.eu1.gigya.com
-gscounters.us1.gigya.com
 gslb.spotify.com
 gsp1.apple.com
 gstatic.com
@@ -7276,7 +7246,6 @@ gz-lb1.internet.spanner.alipaydns.com
 h-sdk.online-metrix.net
 h.beta.facebook.com
 h.facebook.com
-h6.msn.com
 hackerone-user-content.com
 hblock.molinero.dev
 hbogo.com
@@ -7320,7 +7289,6 @@ howaboutwe.com
 howstuffworks.com
 howtoforge.com
 howtogeek.com
-howtogeek.disqus.com
 hub5pn.sandai.net
 hubciddata.sandai.net
 hubspot.com
@@ -7363,7 +7331,6 @@ ichnaea-web.netflix.com
 ichnaea.netflix.com
 icloud.com
 id.sonyentertainmentnetwork.com
-id.tinypass.com
 idg.se
 ifmo.ru
 ign.com
@@ -7401,7 +7368,6 @@ img.alicdn.com.danuoyi.alicdn.com
 img.purch.com
 img.shouji.sogou.com
 img.vidible.tv
-img.youtube.com
 img1.blogblog.com
 img1.sj.qq.com
 img2.user.kanimg.com
@@ -7426,7 +7392,6 @@ infowarsstore.com
 ingov.zendesk.com
 inputdirector.com
 inq.com
-insidehighered.disqus.com
 insomniagamingfestival.com
 inspectlet.com
 instagram.c10r.facebook.com
@@ -7462,7 +7427,6 @@ j.mp
 jabcreations.com
 jacepayment.airasia.com
 janrain.com
-japantimes.disqus.com
 jarv.is
 javhub.net
 jcpenney.com
@@ -9045,7 +9009,6 @@ kxcdn.com
 l.betrad.com
 l.facebook.com
 l.ooyala.com
-l.yimg.com
 labs.google.com
 lads.myspacecdn.com
 ladyfootlocker.com
@@ -9098,8 +9061,8 @@ llnwd.net
 lm.facebook.com
 lm.licenses.adobe.com
 lmlicenses.wip4.adobe.com
-lo.v.liveperson.net
 load.to
+localbitcoins.com
 location-inference-westus.cloudapp.net
 location.services.mozilla.com
 lodz.tvp.pl
@@ -10805,7 +10768,6 @@ nanopool.org
 narkive.com
 naszdziennik.pl
 nationalgeographic.com
-nationalpostcom.files.wordpress.com
 nationbuilder.com
 naver.com
 nba.com
@@ -10822,16 +10784,15 @@ netdna-cdn.com
 netdna-ssl.com
 netdna.bootstrapcdn.com
 netflix.com
-network.bazaarvoice.com
 networksolutions.com
 newad.mail.wo.cn
 newegg.com
 newjobs.com
 newrelic.com
+news.bitcoin.com
 news.ebc.net.tw
 news.google.com
 news.ycombinator.com
-newsatnewscorpau.files.wordpress.com
 newsday.com
 newsinc.com
 newslook.com
@@ -10883,7 +10844,6 @@ ny.com
 ny1.com
 nydailynews.com
 nymag.com
-nyoobserver.files.wordpress.com
 nypost.com
 nyt.com
 nytimes.com
@@ -10897,7 +10857,6 @@ ocation-inference-westus.cloudapp.net
 ocdn.eu
 ocos-office365-s2s.msedge.ne
 ocos-office365-s2s.msedge.net
-ocregister.disqus.com
 ocsn.com
 ocsp.apple.com
 ocsp.comodoca.com
@@ -10981,7 +10940,6 @@ opf.ooyala.com
 opinion.latimes.com
 optimize-stats.voxmedia.com
 optimizely.com
-oracle.112.2o7.net
 orange.fr
 orbitz.com
 oregonlive.com
@@ -11026,7 +10984,6 @@ pdc.micloud.xiaomi.net
 pdf.yt
 pennlive.com
 people.com
-peopledotcom.files.wordpress.com
 performgroup.com
 personalweb.alipay.com
 pfsense.org
@@ -11083,9 +11040,6 @@ plot.ly
 plugins.longtailvideo.com
 plus.google.com
 plus.l.google.com
-pmcdeadline2.files.wordpress.com
-pmctvline2.files.wordpress.com
-pmcvariety.files.wordpress.com
 poll.fm
 polldaddy.com
 polyfill.io
@@ -11095,8 +11049,6 @@ pornhubpremium.com
 portal.client.xunlei.com
 postimage.org
 postimg.org
-postmediacanadadotcom.files.wordpress.com
-postmediavancouversun2.files.wordpress.com
 powerreviews.com
 powr.io
 pp.userapi.com
@@ -11111,9 +11063,7 @@ prisjakt.nu
 prismic.io
 privacy-policy.truste.com
 privateinternetaccess.com
-prnewswire.122.2o7.net
 prnt.sc
-pro.fontawesome.com
 prod.appnexus.map.fastly.net
 prod.disqus.map.fastlylb.net
 prod.do.dsp.mp.microsoft.com
@@ -11155,7 +11105,6 @@ quantummetric.com
 query.prod.cms.rt.microsoft.com
 quora.com
 quotemedia.com
-r-login.wordpress.com
 r.sg.sec.miui.com
 r.us-east-1.awstrack.me
 rackcdn.com
@@ -11199,7 +11148,6 @@ redirector.gvt1.com
 redsky.target.com
 redtube.com
 reebok.com
-refer.wordpress.com
 referrer.disqus.com
 release.theplatform.com
 releases.flowplayer.org
@@ -11226,6 +11174,7 @@ router.utorrent.com
 rover.ebay.com
 rptrcks.walmart.com
 rpxnow.com
+rs.mail.ru
 rsi.hotmail.com
 rssinclude.com
 rt.imgur.com
@@ -11250,7 +11199,6 @@ s.w.org
 s.yimg.com
 s.youtube.com
 s.ytimg.com
-s0.wordpress.com
 s0.wp.com
 s1.symcb.com
 s1.wp.com
@@ -11301,7 +11249,6 @@ scribdassets.com
 script.google.com
 script.ioam.de
 sdad.guru
-seal-boston.bbb.org
 search.msn.com
 search.twitter.com
 search.yahoo.com
@@ -11341,7 +11288,6 @@ services.sonarr.tv
 sessioncam.com
 settings-win.data.microsoft.com
 settings.data.microsoft.com
-sewatch.disqus.com
 sfsapi.micloud.xiaomi.net
 sgizmo.com
 sgpac.account.xiaomi.com
@@ -11349,7 +11295,6 @@ sh.st
 sh.wagbridge.taobao.com.gds.alibabadns.com
 share-online.biz
 sharepoint.com
-shawglobalnews.files.wordpress.com
 shield.sitelock.com
 shop-pro.jp
 shop.gadgetsnow.com
@@ -11377,7 +11322,6 @@ slickdeals.net
 slidedeck.com
 sls.update.microsoft.com
 sls.update.microsoft.com.akadns.net
-sm.trb.com
 smallfiles.client.xunlei.com
 smallseotools.com
 smartlock.google.com
@@ -11394,8 +11338,6 @@ snaptu-mini.c10r.facebook.com
 snaptu-mini.facebook.com
 sndcdn.com
 snippets.cdn.mozilla.net
-socialize.eu1.gigya.com
-socialize.us1.gigya.com
 socialmedia.by
 sohu.com
 solidfiles.com
@@ -11571,7 +11513,6 @@ teredo.ipv6.microsoft.com
 textalk.se
 tg1.premium.db4.wix.com
 tg1.premium.dc11.wix.com
-theaustraliannewscorpau.files.wordpress.com
 thebot.net
 thechive.com
 thefreethoughtproject.com
@@ -11596,7 +11537,6 @@ tile2.opencyclemap.org
 tiles.mapbox.com
 time.com
 time.windows.com
-timedotcom.files.wordpress.com
 timeinc.net
 tinypass.com
 tinypic.com
@@ -11661,7 +11601,6 @@ turnto.com
 tusfiles.net
 tv.wp.pl
 tvdb2.plex.tv
-tve-common.nbcuni.com
 tvn24.pl
 tvnstyle.pl
 tvp.pl
@@ -11672,6 +11611,7 @@ twimg.com
 twimg0-a.akamaihd.net
 twitch.tv
 twitter.com
+typeform.com
 typekit.com
 typekit.net
 typepad.com
@@ -11711,6 +11651,7 @@ uploaded.to
 uploads.disquscdn.com
 uploads.tapatalk-cdn.com
 uplynk.com
+ups.inq.com
 uptobox.com
 urldefense.proofpoint.com
 urlhaus.abuse.ch
@@ -11725,7 +11666,6 @@ userreplay.net
 userscloud.com
 userscripts-mirror.org
 userstream.twitter.com
-usnews.122.2o7.net
 v.firebog.net
 v.pinimg.com
 v.shopify.com
@@ -11736,7 +11676,6 @@ v10.vortex-win.data.microsoft.com
 v20.events.data.microsoft.com
 v20.vortex-win.data.microsoft.com
 v4.download.windowsupdate.com
-va.v.liveperson.net
 vanityfair.com
 variety.com
 vc.yahoo.com
@@ -13332,6 +13271,7 @@ web.beta.facebook.com
 web.de
 web.facebook.com
 web.pcbeta.com
+web.poecdn.com
 web.tresorit.com
 webcam.yahoo.com
 webflow.com
@@ -13418,9 +13358,7 @@ wtkr.com
 wufoo.com
 wunderground.com
 wupload.com
-wwfglobalbackup.disqus.com
 wwis-dubc1-vip60.adobe.com
-www-bostonherald-com.disqus.com
 www-cdn.icloud.com.akadns.net
 www-tc.pbs.org
 www.*.a-msedge.net
@@ -14994,7 +14932,6 @@ www.70i.net
 www.8ch.net
 www.91-cdn.com
 www.91mobiles.com
-www.9to5maccom.disqus.com
 www.a-airasia-001-gyf12.insnw.net
 www.a-msedge.net
 www.a.disquscdn.com
@@ -15003,9 +14940,7 @@ www.a.ooyala.com
 www.a.shifen.com
 www.a.wishabi.com
 www.a1014.g.akamai.net
-www.a1859010085.cdn.optimizely.com
 www.a652.dscb.akamai.net
-www.a8chomedotblog.files.wordpress.com
 www.a90.g.akamai.net
 www.aatkit.com
 www.aax-us-east.amazon-adsystem.com
@@ -15015,7 +14950,6 @@ www.abroad.apilocate.amap.com
 www.account.xiaomi.com
 www.accounts.eu1.gigya.com
 www.accounts.google.com
-www.accounts.us1.gigya.com
 www.accuweather.com
 www.acehardware.com
 www.actionnetwork.org
@@ -15129,6 +15063,7 @@ www.amazon.in
 www.amazon.it
 www.amazonaws.com
 www.amazoncustomerservice.d2.sc.omtrdc.net
+www.americanexpress.com
 www.americanhomecomings.com
 www.amos.alicdn.com
 www.amp.businessinsider.com
@@ -15164,7 +15099,6 @@ www.api-na.geetest.com
 www.api-partner.spotify.com
 www.api-spotify.com
 www.api-tv.spotify.com
-www.api-v3.tinypass.com
 www.api.account.xiaomi.com
 www.api.ads.tvb.com
 www.api.amazonalexa.com
@@ -15182,7 +15116,6 @@ www.api.fast.com
 www.api.flickr.com
 www.api.flyertown.ca
 www.api.giphy.com
-www.api.instagram.com
 www.api.intsig.net
 www.api.io.mi.com
 www.api.ipify.org
@@ -15199,7 +15132,6 @@ www.api.rlje.net
 www.api.sec.miui.com
 www.api.soundcloud.com
 www.api.target.com
-www.api.tinypass.com
 www.api.tw06.xlmc.sandai.net
 www.api.twisto.cz
 www.api.twisto.pl
@@ -15211,7 +15143,6 @@ www.api3.siftscience.com
 www.apis.google.com
 www.apk.tw
 www.apnewsregistry.com
-www.app-ab24.marketo.com
 www.app-advertise.zhihuishu.com
 www.app-api.ted.com
 www.app-measurement.com
@@ -15324,8 +15255,6 @@ www.bestbuy.ca
 www.bestbuy.com
 www.bestofmedia.com
 www.beta.spotify.map.fastly.net
-www.betaabril.files.wordpress.com
-www.betadailytelegraphatnewscorpau.files.wordpress.com
 www.betanews.com
 www.betfair.com
 www.better.fyi
@@ -15355,6 +15284,7 @@ www.bing.ru
 www.bing.se
 www.bit.ly
 www.bitbucket.org
+www.bitcoin.com
 www.bitlord.com
 www.bitly.com
 www.bitpay.com
@@ -15384,19 +15314,18 @@ www.bokser.org
 www.boldchat.com
 www.bolly2tolly.net
 www.bolt.dropbox.com
+www.bonniercorp.122.2o7.net
 www.books.google.com
 www.bootstrapcdn.com
 www.boston.cbslocal.com
 www.bowercdn.net
 www.boxrec.com
-www.boygeniusreport.files.wordpress.com
 www.bp.blogspot.com
 www.braintreegateway.com
 www.brakrock.be
 www.brcdn.com
 www.break.com
 www.breakingburner.com
-www.breitbartproduction.disqus.com
 www.brightcove.com
 www.brightcove.map.fastly.net
 www.brightcove.net
@@ -15410,7 +15339,6 @@ www.business.officedepot.com.edgekey.net
 www.businessfinder.nj.com
 www.businessinsider.com
 www.buy.geni.us
-www.buy.tinypass.com
 www.buyad.bi-xenon.cn
 www.buymeacoffee.com
 www.buzzfed.com
@@ -15423,7 +15351,7 @@ www.c.disquscdn.com
 www.c.disquscdn.com.cdn.cloudflare.net
 www.c.evidon.com
 www.c.id.mi.com
-www.c.la1w1.salesforceliveagent.com
+www.c.la4-c2-dfw.salesforceliveagent.com
 www.c.media-amazon.com
 www.c.msn.com
 www.c.o0bg.com
@@ -15488,7 +15416,6 @@ www.cdn.pcbeta.static.inimc.com
 www.cdn.radiantmediatechs.com
 www.cdn.ravenjs.com
 www.cdn.rawgit.com
-www.cdn.registerdisney.go.com
 www.cdn.samsungcloudsolution.com
 www.cdn.siftscience.com
 www.cdn.sstatic.net
@@ -15496,7 +15423,6 @@ www.cdn.static-economist.com
 www.cdn.staticaly.com
 www.cdn.syndication.twimg.com
 www.cdn.syndication.twitter.com
-www.cdn.tinypass.com
 www.cdn.viblast.com
 www.cdn.vidible.tv
 www.cdn2.hubspot.net
@@ -15510,9 +15436,6 @@ www.cdngeneral.rentcafe.com
 www.cdninstagram.com
 www.cdnjs.cloudflare.com
 www.cdnpk.com
-www.cdns.eu1.gigya.com
-www.cdns.gigya.com
-www.cdns.us1.gigya.com
 www.cdnsecakmi.kaltura.com
 www.cdp.aliexpress.com
 www.cds.d2s7q6s2.hwcdn.net
@@ -15531,11 +15454,9 @@ www.chatenabled.mail.google.com
 www.check4.facebook.com
 www.check6.facebook.com
 www.checkout.google.com
-www.checkout.paypal.com
 www.checkout.razorpay.com
 www.checkout.stripe.com
 www.chicago.cbslocal.com
-www.chirp.bizrate.com
 www.chng.it
 www.chomikuj.pl
 www.christianpost.com
@@ -15586,7 +15507,6 @@ www.coinpot.co
 www.cointraffic.io
 www.collegehumor.com
 www.com.com
-www.comments.us1.gigya.com
 www.community.spiceworks.com
 www.completion.amazon.com
 www.complex.com
@@ -15657,7 +15577,6 @@ www.cy2.licensing.md.mp.microsoft.com.akadns.net
 www.cy2.settings.data.microsoft.com.akadns.net
 www.cybercrime-tracker.net
 www.d.dropbox.com
-www.d.la1-c2-dfw.salesforceliveagent.com
 www.d1f8f9xcsvx3ha.cloudfront.net
 www.d1z2jf7jlzjs58.cloudfront.net
 www.d2405b0jymm2dk.cloudfront.net
@@ -15668,7 +15587,6 @@ www.d395dw5zk780j2.cloudfront.net
 www.d3js.org
 www.d3orhvfyxudxxq.cloudfront.net
 www.d9hhrg4mnvzow.cloudfront.net
-www.d9jj3mjthpub.cloudfront.net
 www.dailymotion.com
 www.danid.dk
 www.dash.cloudflare.com
@@ -15677,7 +15595,6 @@ www.dashboard.lentainform.com
 www.dashboard.marketgid.com
 www.dashboard.mgid.com
 www.dashboard.plex.tv
-www.dashboard.tinypass.com
 www.dashboard.tovarro.com
 www.dashboard.zopim.com
 www.data.iana.org
@@ -15720,7 +15637,6 @@ www.device-metrics-us-2.amazon.com
 www.device-metrics-us.amazon.com
 www.device.auth.xboxlive.com
 www.devmlbglobal.112.2o7.net
-www.dezeenhq.disqus.com
 www.di.com.pl
 www.dict.leo.org
 www.dictionary.cambridge.org
@@ -15778,7 +15694,6 @@ www.download.newrelic.com
 www.download.sonarr.tv
 www.download.windowsupdate.com
 www.downloads.getmonero.org
-www.downloads.mailchimp.com
 www.dp.msnmessenger.akadns.com
 www.dragoart.com
 www.drh.img.digitalriver.com
@@ -15809,7 +15724,6 @@ www.e16973.a.akamaiedge.net
 www.e3489.cd.akamaiedge.net
 www.e3843.g.akamaiedge.net
 www.ea.com
-www.earthlink.122.2o7.net
 www.easybytez.com
 www.easylist-downloads.adblockplus.org
 www.easylist.to
@@ -15876,10 +15790,8 @@ www.eventus-design.com
 www.everyaction.com
 www.evoke-windowsservices-tas.msedge.net
 www.ew.com
-www.ewedit.files.wordpress.com
 www.example.com
 www.example.org
-www.experience.tinypass.com
 www.express.co.uk
 www.expressen.se
 www.external-lhr0-1.xx.fbcdn.net
@@ -15895,7 +15807,6 @@ www.external-lhr8-1.xx.fbcdn.net
 www.external-lhr9-1.xx.fbcdn.net
 www.external.xx.fbcdn.net
 www.extjs.cachefly.net
-www.extremetech.disqus.com
 www.f.chtah.com
 www.f.youku.com
 www.f1.g.mi.com
@@ -15944,7 +15855,6 @@ www.filters.adtidy.org
 www.filtri-dns.ga
 www.finance.yahoo.com
 www.financialcontent.com
-www.financialpostcom.files.wordpress.com
 www.find.api.micloud.xiaomi.net
 www.findnsave.com
 www.firstlook.org
@@ -16037,6 +15947,7 @@ www.g.ezoic.net
 www.g.live.com
 www.g.msn.com.nsatc.net
 www.g00.msn.com
+www.g2insights-cdn.azureedge.net
 www.gadgetsnow.com
 www.game.xiaomi.com
 www.gameofbitcoins.com
@@ -16054,7 +15965,6 @@ www.gatherer.wizards.com
 www.gawker.com
 www.gawkerassets.com
 www.gazeta.pl
-www.geekwire.disqus.com
 www.geenstijl.nl
 www.geetest.com
 www.gelbooru.com
@@ -16076,6 +15986,7 @@ www.gigaom.com
 www.gigya.com
 www.giphy.com
 www.gist.github.com
+www.gist.githubusercontent.com
 www.git.io
 www.git.teknik.io
 www.gitcdn.xyz
@@ -20678,12 +20589,9 @@ www.greenhouse.io
 www.group.pcbeta.com
 www.groupon.com
 www.groups.google.com
-www.grunerandjahr.112.2o7.net
 www.gs.apple.com
 www.gs.statcounter.com
 www.gscdn.nl
-www.gscounters.eu1.gigya.com
-www.gscounters.us1.gigya.com
 www.gslb.spotify.com
 www.gsp1.apple.com
 www.gstatic.com
@@ -20701,7 +20609,6 @@ www.gz-lb1.internet.spanner.alipaydns.com
 www.h-sdk.online-metrix.net
 www.h.beta.facebook.com
 www.h.facebook.com
-www.h6.msn.com
 www.hackerone-user-content.com
 www.hblock.molinero.dev
 www.hbogo.com
@@ -20745,7 +20652,6 @@ www.howaboutwe.com
 www.howstuffworks.com
 www.howtoforge.com
 www.howtogeek.com
-www.howtogeek.disqus.com
 www.hub5pn.sandai.net
 www.hubciddata.sandai.net
 www.hubspot.com
@@ -20788,7 +20694,6 @@ www.ichnaea-web.netflix.com
 www.ichnaea.netflix.com
 www.icloud.com
 www.id.sonyentertainmentnetwork.com
-www.id.tinypass.com
 www.idg.se
 www.ifmo.ru
 www.ign.com
@@ -20826,7 +20731,6 @@ www.img.alicdn.com.danuoyi.alicdn.com
 www.img.purch.com
 www.img.shouji.sogou.com
 www.img.vidible.tv
-www.img.youtube.com
 www.img1.blogblog.com
 www.img1.sj.qq.com
 www.img2.user.kanimg.com
@@ -20851,7 +20755,6 @@ www.infowarsstore.com
 www.ingov.zendesk.com
 www.inputdirector.com
 www.inq.com
-www.insidehighered.disqus.com
 www.insomniagamingfestival.com
 www.inspectlet.com
 www.instagram.c10r.facebook.com
@@ -20887,7 +20790,6 @@ www.j.mp
 www.jabcreations.com
 www.jacepayment.airasia.com
 www.janrain.com
-www.japantimes.disqus.com
 www.jarv.is
 www.javhub.net
 www.jcpenney.com
@@ -22470,7 +22372,6 @@ www.kxcdn.com
 www.l.betrad.com
 www.l.facebook.com
 www.l.ooyala.com
-www.l.yimg.com
 www.labs.google.com
 www.lads.myspacecdn.com
 www.ladyfootlocker.com
@@ -22523,8 +22424,8 @@ www.llnwd.net
 www.lm.facebook.com
 www.lm.licenses.adobe.com
 www.lmlicenses.wip4.adobe.com
-www.lo.v.liveperson.net
 www.load.to
+www.localbitcoins.com
 www.location-inference-westus.cloudapp.net
 www.location.services.mozilla.com
 www.lodz.tvp.pl
@@ -24230,7 +24131,6 @@ www.nanopool.org
 www.narkive.com
 www.naszdziennik.pl
 www.nationalgeographic.com
-www.nationalpostcom.files.wordpress.com
 www.nationbuilder.com
 www.naver.com
 www.nba.com
@@ -24247,16 +24147,15 @@ www.netdna-cdn.com
 www.netdna-ssl.com
 www.netdna.bootstrapcdn.com
 www.netflix.com
-www.network.bazaarvoice.com
 www.networksolutions.com
 www.newad.mail.wo.cn
 www.newegg.com
 www.newjobs.com
 www.newrelic.com
+www.news.bitcoin.com
 www.news.ebc.net.tw
 www.news.google.com
 www.news.ycombinator.com
-www.newsatnewscorpau.files.wordpress.com
 www.newsday.com
 www.newsinc.com
 www.newslook.com
@@ -24308,7 +24207,6 @@ www.ny.com
 www.ny1.com
 www.nydailynews.com
 www.nymag.com
-www.nyoobserver.files.wordpress.com
 www.nypost.com
 www.nyt.com
 www.nytimes.com
@@ -24322,7 +24220,6 @@ www.ocation-inference-westus.cloudapp.net
 www.ocdn.eu
 www.ocos-office365-s2s.msedge.ne
 www.ocos-office365-s2s.msedge.net
-www.ocregister.disqus.com
 www.ocsn.com
 www.ocsp.apple.com
 www.ocsp.comodoca.com
@@ -24406,7 +24303,6 @@ www.opf.ooyala.com
 www.opinion.latimes.com
 www.optimize-stats.voxmedia.com
 www.optimizely.com
-www.oracle.112.2o7.net
 www.orange.fr
 www.orbitz.com
 www.oregonlive.com
@@ -24451,7 +24347,6 @@ www.pdc.micloud.xiaomi.net
 www.pdf.yt
 www.pennlive.com
 www.people.com
-www.peopledotcom.files.wordpress.com
 www.performgroup.com
 www.personalweb.alipay.com
 www.pfsense.org
@@ -24508,9 +24403,6 @@ www.plot.ly
 www.plugins.longtailvideo.com
 www.plus.google.com
 www.plus.l.google.com
-www.pmcdeadline2.files.wordpress.com
-www.pmctvline2.files.wordpress.com
-www.pmcvariety.files.wordpress.com
 www.poll.fm
 www.polldaddy.com
 www.polyfill.io
@@ -24520,8 +24412,6 @@ www.pornhubpremium.com
 www.portal.client.xunlei.com
 www.postimage.org
 www.postimg.org
-www.postmediacanadadotcom.files.wordpress.com
-www.postmediavancouversun2.files.wordpress.com
 www.powerreviews.com
 www.powr.io
 www.pp.userapi.com
@@ -24536,9 +24426,7 @@ www.prisjakt.nu
 www.prismic.io
 www.privacy-policy.truste.com
 www.privateinternetaccess.com
-www.prnewswire.122.2o7.net
 www.prnt.sc
-www.pro.fontawesome.com
 www.prod.appnexus.map.fastly.net
 www.prod.disqus.map.fastlylb.net
 www.prod.do.dsp.mp.microsoft.com
@@ -24580,7 +24468,6 @@ www.quantummetric.com
 www.query.prod.cms.rt.microsoft.com
 www.quora.com
 www.quotemedia.com
-www.r-login.wordpress.com
 www.r.sg.sec.miui.com
 www.r.us-east-1.awstrack.me
 www.rackcdn.com
@@ -24624,7 +24511,6 @@ www.redirector.gvt1.com
 www.redsky.target.com
 www.redtube.com
 www.reebok.com
-www.refer.wordpress.com
 www.referrer.disqus.com
 www.release.theplatform.com
 www.releases.flowplayer.org
@@ -24651,6 +24537,7 @@ www.router.utorrent.com
 www.rover.ebay.com
 www.rptrcks.walmart.com
 www.rpxnow.com
+www.rs.mail.ru
 www.rsi.hotmail.com
 www.rssinclude.com
 www.rt.imgur.com
@@ -24675,7 +24562,6 @@ www.s.w.org
 www.s.yimg.com
 www.s.youtube.com
 www.s.ytimg.com
-www.s0.wordpress.com
 www.s0.wp.com
 www.s1.symcb.com
 www.s1.wp.com
@@ -24726,7 +24612,6 @@ www.scribdassets.com
 www.script.google.com
 www.script.ioam.de
 www.sdad.guru
-www.seal-boston.bbb.org
 www.search.msn.com
 www.search.twitter.com
 www.search.yahoo.com
@@ -24766,7 +24651,6 @@ www.services.sonarr.tv
 www.sessioncam.com
 www.settings-win.data.microsoft.com
 www.settings.data.microsoft.com
-www.sewatch.disqus.com
 www.sfsapi.micloud.xiaomi.net
 www.sgizmo.com
 www.sgpac.account.xiaomi.com
@@ -24774,7 +24658,6 @@ www.sh.st
 www.sh.wagbridge.taobao.com.gds.alibabadns.com
 www.share-online.biz
 www.sharepoint.com
-www.shawglobalnews.files.wordpress.com
 www.shield.sitelock.com
 www.shop-pro.jp
 www.shop.gadgetsnow.com
@@ -24802,7 +24685,6 @@ www.slickdeals.net
 www.slidedeck.com
 www.sls.update.microsoft.com
 www.sls.update.microsoft.com.akadns.net
-www.sm.trb.com
 www.smallfiles.client.xunlei.com
 www.smallseotools.com
 www.smartlock.google.com
@@ -24819,8 +24701,6 @@ www.snaptu-mini.c10r.facebook.com
 www.snaptu-mini.facebook.com
 www.sndcdn.com
 www.snippets.cdn.mozilla.net
-www.socialize.eu1.gigya.com
-www.socialize.us1.gigya.com
 www.socialmedia.by
 www.sohu.com
 www.solidfiles.com
@@ -24996,7 +24876,6 @@ www.teredo.ipv6.microsoft.com
 www.textalk.se
 www.tg1.premium.db4.wix.com
 www.tg1.premium.dc11.wix.com
-www.theaustraliannewscorpau.files.wordpress.com
 www.thebot.net
 www.thechive.com
 www.thefreethoughtproject.com
@@ -25021,7 +24900,6 @@ www.tile2.opencyclemap.org
 www.tiles.mapbox.com
 www.time.com
 www.time.windows.com
-www.timedotcom.files.wordpress.com
 www.timeinc.net
 www.tinypass.com
 www.tinypic.com
@@ -25086,7 +24964,6 @@ www.turnto.com
 www.tusfiles.net
 www.tv.wp.pl
 www.tvdb2.plex.tv
-www.tve-common.nbcuni.com
 www.tvn24.pl
 www.tvnstyle.pl
 www.tvp.pl
@@ -25097,6 +24974,7 @@ www.twimg.com
 www.twimg0-a.akamaihd.net
 www.twitch.tv
 www.twitter.com
+www.typeform.com
 www.typekit.com
 www.typekit.net
 www.typepad.com
@@ -25136,6 +25014,7 @@ www.uploaded.to
 www.uploads.disquscdn.com
 www.uploads.tapatalk-cdn.com
 www.uplynk.com
+www.ups.inq.com
 www.uptobox.com
 www.urldefense.proofpoint.com
 www.urlhaus.abuse.ch
@@ -25150,7 +25029,6 @@ www.userreplay.net
 www.userscloud.com
 www.userscripts-mirror.org
 www.userstream.twitter.com
-www.usnews.122.2o7.net
 www.v.firebog.net
 www.v.pinimg.com
 www.v.shopify.com
@@ -25161,7 +25039,6 @@ www.v10.vortex-win.data.microsoft.com
 www.v20.events.data.microsoft.com
 www.v20.vortex-win.data.microsoft.com
 www.v4.download.windowsupdate.com
-www.va.v.liveperson.net
 www.vanityfair.com
 www.variety.com
 www.vc.yahoo.com
@@ -26757,6 +26634,7 @@ www.web.beta.facebook.com
 www.web.de
 www.web.facebook.com
 www.web.pcbeta.com
+www.web.poecdn.com
 www.web.tresorit.com
 www.webcam.yahoo.com
 www.webflow.com
@@ -26843,9 +26721,7 @@ www.wtkr.com
 www.wufoo.com
 www.wunderground.com
 www.wupload.com
-www.wwfglobalbackup.disqus.com
 www.wwis-dubc1-vip60.adobe.com
-www.www-bostonherald-com.disqus.com
 www.www-cdn.icloud.com.akadns.net
 www.www-tc.pbs.org
 www.www17.wixdns.net
@@ -26867,7 +26743,6 @@ www.xboxexperiencesprod.experimentation.xboxlive.com
 www.xboxlive.com
 www.xd.adobelanding.com
 www.xda-developers.com
-www.xdaportal.disqus.com
 www.xflight.xboxlive.com
 www.xianzhenyuan.cn
 www.xiaomi.com
@@ -26890,6 +26765,7 @@ www.yahooapis.com
 www.yandex.ocsp-responder.com
 www.yandex.ru
 www.yardbarker.com
+www.yastatic.net
 www.yellowpages.com
 www.yelpcdn.com
 www.yerl.org
@@ -26933,21 +26809,19 @@ www.zippyshare.com
 www.ziprecruiter.com
 www.zlcdn.com
 www.zn06b7kx4u8wjygz7-seagatecx.siteintercept.qualtrics.com
-www.zn2t6mdnujruus8jh-inc.siteintercept.qualtrics.com
 www.zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com
 www.zn7ngtyxwjbrjz6xb-cms.gov1.siteintercept.qualtrics.com
 www.zn7whwrcrmbs9xwyd-nlmenterprise.siteintercept.qualtrics.com
 www.zn8p1dph4rgqzwv0x-move.siteintercept.qualtrics.com
-www.zn9yauo1hia5mptaj-sni.siteintercept.qualtrics.com
 www.zn_42v6draxyafsjmv-homedepot.siteintercept.qualtrics.com
 www.zn_55bdrev4af0c1yl-cbs.siteintercept.qualtrics.com
 www.zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com
 www.zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com
+www.zn_agburbioucamt8f-babycenter.siteintercept.qualtrics.com
+www.zn_ed65ynwxvsuk9lf-cbs.siteintercept.qualtrics.com
 www.znawx8uuhpc9plfo5-emeraldgroup.siteintercept.qualtrics.com
 www.znbl8rufo7atiirtn-unitysoftware.siteintercept.qualtrics.com
 www.znbmujw2vcljimxnp-mastercard.siteintercept.qualtrics.com
-www.znboxxjgn65c0lkmz-wholefoods.siteintercept.qualtrics.com
-www.zneex5qn74n7jckl7-expediainc.siteintercept.qualtrics.com
 www.zoho.com
 www.zoho.eu
 www.zohopublic.com
@@ -26976,7 +26850,6 @@ xboxexperiencesprod.experimentation.xboxlive.com
 xboxlive.com
 xd.adobelanding.com
 xda-developers.com
-xdaportal.disqus.com
 xflight.xboxlive.com
 xianzhenyuan.cn
 xiaomi.com
@@ -26999,6 +26872,7 @@ yahooapis.com
 yandex.ocsp-responder.com
 yandex.ru
 yardbarker.com
+yastatic.net
 yellowpages.com
 yelpcdn.com
 yerl.org
@@ -27042,21 +26916,19 @@ zippyshare.com
 ziprecruiter.com
 zlcdn.com
 zn06b7kx4u8wjygz7-seagatecx.siteintercept.qualtrics.com
-zn2t6mdnujruus8jh-inc.siteintercept.qualtrics.com
 zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com
 zn7ngtyxwjbrjz6xb-cms.gov1.siteintercept.qualtrics.com
 zn7whwrcrmbs9xwyd-nlmenterprise.siteintercept.qualtrics.com
 zn8p1dph4rgqzwv0x-move.siteintercept.qualtrics.com
-zn9yauo1hia5mptaj-sni.siteintercept.qualtrics.com
 zn_42v6draxyafsjmv-homedepot.siteintercept.qualtrics.com
 zn_55bdrev4af0c1yl-cbs.siteintercept.qualtrics.com
 zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com
 zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com
+zn_agburbioucamt8f-babycenter.siteintercept.qualtrics.com
+zn_ed65ynwxvsuk9lf-cbs.siteintercept.qualtrics.com
 znawx8uuhpc9plfo5-emeraldgroup.siteintercept.qualtrics.com
 znbl8rufo7atiirtn-unitysoftware.siteintercept.qualtrics.com
 znbmujw2vcljimxnp-mastercard.siteintercept.qualtrics.com
-znboxxjgn65c0lkmz-wholefoods.siteintercept.qualtrics.com
-zneex5qn74n7jckl7-expediainc.siteintercept.qualtrics.com
 zoho.com
 zoho.eu
 zohopublic.com

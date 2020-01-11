@@ -65,6 +65,7 @@ bestbuy.ca
 better.fyi
 bing.com
 bitbucket.org
+bitcoin.com
 bitly.com
 blob.weather.microsoft.com
 blog.hubspot.com
@@ -224,6 +225,7 @@ mscrl.microsoft.com
 msedge.net
 narkive.com
 naver.com
+news.bitcoin.com
 next-services.apps.microsoft.com
 nexusrules.officeapps.live.com
 ning.com
