@@ -20,6 +20,7 @@ class PassiveDNS(passive_dns_base.PassiveDNS):
                 r = self.session.get(
                     self.URL.format(
                         api_key=self.api_key, ip=ip))
+                time.sleep(15 - r.elapsed.total_seconds())
                 if r.status_code == 200:
                     if r.json()['response_code'] == 1:
                         domains = sorted([x['hostname'] for x in r.json()[
