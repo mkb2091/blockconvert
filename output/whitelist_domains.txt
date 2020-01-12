@@ -2321,6 +2321,7 @@ docs.bugsnag.com
 docs.google.com
 documentcloud.org
 domainnamesales.com
+donate.getmonero.org
 donorbox.org
 dotsub.com
 down.sandai.net
@@ -2525,6 +2526,7 @@ fortune.com
 forum.avast.com
 forum.dobreprogramy.pl
 forum.doom9.org
+forum.getmonero.org
 forum.paradoxplaza.com
 forum.synology.com
 forum.xda-developers.com
@@ -9100,6 +9102,7 @@ m.weeklyad.target.com
 m.youtube.com
 mac.pcbeta.com
 macys.com
+mail.getmonero.org
 mail.google.com
 mail.ru
 mailchimp.com
@@ -10713,6 +10716,7 @@ mobile.facebook.com
 mobile.twitter.com
 mobilenetworkscoring-pa.googleapis.com
 modern.watson.data.microsoft.com.akadns.net
+monero.org
 money.yandex.ru
 moonbit.co.in
 motherboard.vice.com
@@ -11408,6 +11412,7 @@ static.coinbase.com
 static.dynamicyield.com
 static.fontawesome.com
 static.geetest.com
+static.getmonero.org
 static.kickstarter.com
 static.licdn.com
 static.networkedblogs.com
@@ -13270,6 +13275,7 @@ web.archive.org
 web.beta.facebook.com
 web.de
 web.facebook.com
+web.getmonero.org
 web.pcbeta.com
 web.poecdn.com
 web.tresorit.com
@@ -15684,6 +15690,7 @@ www.docs.bugsnag.com
 www.docs.google.com
 www.documentcloud.org
 www.domainnamesales.com
+www.donate.getmonero.org
 www.donorbox.org
 www.dotsub.com
 www.down.sandai.net
@@ -15888,6 +15895,7 @@ www.fortune.com
 www.forum.avast.com
 www.forum.dobreprogramy.pl
 www.forum.doom9.org
+www.forum.getmonero.org
 www.forum.paradoxplaza.com
 www.forum.synology.com
 www.forum.xda-developers.com
@@ -22463,6 +22471,7 @@ www.m.weeklyad.target.com
 www.m.youtube.com
 www.mac.pcbeta.com
 www.macys.com
+www.mail.getmonero.org
 www.mail.google.com
 www.mail.ru
 www.mailchimp.com
@@ -24076,6 +24085,7 @@ www.mobile.facebook.com
 www.mobile.twitter.com
 www.mobilenetworkscoring-pa.googleapis.com
 www.modern.watson.data.microsoft.com.akadns.net
+www.monero.org
 www.money.yandex.ru
 www.moonbit.co.in
 www.motherboard.vice.com
@@ -24771,6 +24781,7 @@ www.static.coinbase.com
 www.static.dynamicyield.com
 www.static.fontawesome.com
 www.static.geetest.com
+www.static.getmonero.org
 www.static.kickstarter.com
 www.static.licdn.com
 www.static.networkedblogs.com
@@ -26633,6 +26644,7 @@ www.web.archive.org
 www.web.beta.facebook.com
 www.web.de
 www.web.facebook.com
+www.web.getmonero.org
 www.web.pcbeta.com
 www.web.poecdn.com
 www.web.tresorit.com

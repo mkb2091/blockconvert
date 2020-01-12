@@ -115,6 +115,7 @@ dmd.metaservices.microsoft.com
 dmd.metaservices.microsoft.com.akadns.net
 dns.google.com
 do.co
+donate.getmonero.org
 download.electrum.org
 download.newrelic.com
 download.windowsupdate.com
@@ -153,6 +154,7 @@ filtri-dns.ga
 fiverr.com
 flipboard.com
 forms.office.com
+forum.getmonero.org
 forums.storagereview.com
 fossbytes.com
 fs.microsoft.com
@@ -210,6 +212,7 @@ login.msa.akadns6.net
 login.windows.net
 lowendbox.com
 m.stripe.network
+mail.getmonero.org
 mail.google.com
 maps.windows.com
 md.mp.microsoft.com.*
@@ -305,6 +308,7 @@ stacksocial.com
 staging-discuss.newrelic.com
 star-mini.c10r.facebook.com
 static-dot-virustotalcloud.appspot.com
+static.getmonero.org
 static.zdassets.com
 statsfe2.update.microsoft.com.akadns.net
 status.newrelic.com
@@ -352,6 +356,7 @@ wbd.ms
 wd-prod-cp-us-west-1-fe.westus.cloudapp.azure.com
 wdcp.microsoft.*
 wdcp.microsoft.com
+web.getmonero.org
 web.tresorit.com
 webmasters.stackexchange.com
 whiteboard.microsoft.com
@@ -396,6 +401,7 @@ www.kaspersky.com
 www.ku6.com
 www.malwaredomainlist.com
 www.mbl.is
+www.monero.org
 www.msftconnecttest.com
 www.namecheap.com
 www.newrelic.com
