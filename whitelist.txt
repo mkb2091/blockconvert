@@ -23,6 +23,7 @@
 *.update.microsoft.com
 *.windowsupdate.com
 *.wns.windows.com
+1drv.ms
 24timezones.com
 91-cdn.com
 91mobiles.com

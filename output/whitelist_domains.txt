@@ -1547,6 +1547,7 @@
 123greetings.com
 140cc.v.fwmrm.net
 1drv.com
+1drv.ms
 1fichier.com
 1l-hit.mail.ru
 1und1.de
@@ -14916,6 +14917,7 @@ www.122.2o7.net
 www.123greetings.com
 www.140cc.v.fwmrm.net
 www.1drv.com
+www.1drv.ms
 www.1fichier.com
 www.1l-hit.mail.ru
 www.1und1.de
