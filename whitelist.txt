@@ -54,6 +54,7 @@ apt.newrelic.com
 arc.msn.com
 arc.msn.com.nsatc.net
 ars.smartscreen.microsoft.com
+attfeedback.uservoice.com
 au.download.windowsupdate.com
 auth.gfx.ms
 awin1.com
@@ -339,6 +340,7 @@ urldefense.proofpoint.com
 urlhaus.abuse.ch
 us.configsvc1.live.com.akadns.net
 use.typekit.net
+uservoice.com
 v.firebog.net
 v10.events.data.microsoft.com
 v10.vortex-win.data.microsoft.com
@@ -427,6 +429,7 @@ www.webmd.com
 www.x1.com
 www.yoast.com
 yahoo.co.jp
+yahoo.uservoice.com
 zdnet.com
 zerohedge.com
 zeustracker.abuse.ch

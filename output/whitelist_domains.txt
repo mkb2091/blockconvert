@@ -1840,6 +1840,7 @@ at.alicdn.com.danuoyi.alicdn.com
 attach2.mobile01.com
 attachment.fbsbx.com
 attestation.xboxlive.com
+attfeedback.uservoice.com
 attservicesinc.tt.omtrdc.net
 au.download.windowsupdate.com
 au.v4.download.windowsupdate.com
@@ -11672,6 +11673,7 @@ userreplay.net
 userscloud.com
 userscripts-mirror.org
 userstream.twitter.com
+uservoice.com
 v.firebog.net
 v.pinimg.com
 v.shopify.com
@@ -15210,6 +15212,7 @@ www.at.alicdn.com.danuoyi.alicdn.com
 www.attach2.mobile01.com
 www.attachment.fbsbx.com
 www.attestation.xboxlive.com
+www.attfeedback.uservoice.com
 www.attservicesinc.tt.omtrdc.net
 www.au.download.windowsupdate.com
 www.au.v4.download.windowsupdate.com
@@ -25042,6 +25045,7 @@ www.userreplay.net
 www.userscloud.com
 www.userscripts-mirror.org
 www.userstream.twitter.com
+www.uservoice.com
 www.v.firebog.net
 www.v.pinimg.com
 www.v.shopify.com
@@ -26775,6 +26779,7 @@ www.y3.analytics.yahoo.com
 www.yahoo.co.jp
 www.yahoo.com
 www.yahoo.net
+www.yahoo.uservoice.com
 www.yahooapis.com
 www.yandex.ocsp-responder.com
 www.yandex.ru
@@ -26882,6 +26887,7 @@ y3.analytics.yahoo.com
 yahoo.co.jp
 yahoo.com
 yahoo.net
+yahoo.uservoice.com
 yahooapis.com
 yandex.ocsp-responder.com
 yandex.ru
