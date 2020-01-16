@@ -2166,6 +2166,7 @@ contacts.msn.com
 content.invisioncic.com
 content.jwplatform.com
 content.logmein.com
+continuum.dds.microsoft.com
 convio.net
 cookie-bar.eu
 cookieblock.trackersimulate.org
@@ -15538,6 +15539,7 @@ www.contacts.msn.com
 www.content.invisioncic.com
 www.content.jwplatform.com
 www.content.logmein.com
+www.continuum.dds.microsoft.com
 www.convio.net
 www.cookie-bar.eu
 www.cookieblock.trackersimulate.org
