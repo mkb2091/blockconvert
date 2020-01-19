@@ -75,18 +75,21 @@ def set_status(url, last_modified, last_checked, etag):
 
 
 class DownloadManager():
-    def __init__(self, bl):
+    def __init__(self, bl, args):
         self.bl = bl
         self.session = requests.Session()
         self.session.headers['User-Agent'] = 'BlocklistConvert' + \
             str(int(time.time()))
         self.paths = []
+        self.args = args
 
     def add_url(self, url, is_whitelist, match_url, do_reverse_dns, expires):
         base = url_to_path(url)
         self.paths.append(base)
         check_frequency = max(expires, 12 * 60 * 60)
         last_modified, last_checked, old_etag = get_status(url)
+        if self.args.disable_network:
+            return
         if last_modified < (
             time.time() -
             expires) and last_checked < (

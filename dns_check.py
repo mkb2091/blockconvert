@@ -35,68 +35,8 @@ RESERVED = [
 ]
 
 
-class DNSCheckerWorker(multiprocessing.Process):
-    def __init__(self, session, servers, request_queue, response_queue,
-                 request_type=1):
-        multiprocessing.Process.__init__(self)
-        self.session = session
-        self.servers = servers
-        self.request_queue = request_queue
-        self.response_queue = response_queue
-        self.request_type = request_type
-
-    def run(self):
-        session = self.session
-        servers = self.servers
-        request_queue = self.request_queue
-        response_queue = self.response_queue
-        pos = 0
-        try:
-            while True:
-                old_domain = domain = request_queue.get_nowait()
-                response_queue.put(
-                    (old_domain, {'Status': 0, 'Answer': [{'data': '182.183.90.1'}]}))
-                continue
-                if self.request_type == 12:
-                    try:
-                        ip = ipaddress.ip_address(domain)
-                    except ValueError:
-                        response_queue.put((old_domain, {}))
-                        continue
-                    if isinstance(ip, ipaddress.IPv4Address):
-                        domain = ip.exploded.split('.')[::-1]
-                    else:
-                        domain = ipaddress.ip_address(
-                            domain).exploded.replace(':', '')[::-1]
-                    domain = '.'.join(domain)
-                    domain += '.in-addr.arpa.'
-                success = False
-                for retry in range(3):
-                    pos = (pos + 1) % len(servers)
-                    server = servers[pos]
-                    try:
-                        r = session.get(server + urllib.parse.urlencode(
-                            {'name': domain.lstrip('.'), 'type': self.request_type}))
-                        response_queue.put((old_domain, r.json()))
-                        if retry > 0:
-                            print('Fixed\n', end='')
-                        success = True
-                        break
-                    except json.JSONDecodeError:
-                        print(
-                            'JSON decode error using %s to check %s' %
-                            (server, old_domain) + '\n', end='')
-                    except Exception as error:
-                        print(server + '\n', end='')
-                if not success:
-                    print('Could\'t fix\n', end='')
-                    response_queue.put((domain, True))
-        except queue.Empty:
-            pass
-
-
 class DNSChecker():
-    def __init__(self, config, update):
+    def __init__(self, config, update, disable_networking):
         self.session = requests.Session()
         self.session.headers['User-Agent'] = 'DOH'
         self.session.headers['Accept'] = 'application/dns-json'
@@ -128,17 +68,22 @@ class DNSChecker():
         self.argus = dns.argus.PassiveDNS(
             config.get(
                 'argus_api', ''), os.path.join(
-                'db', 'argus.db'), update)
+                'db', 'argus.db'), update, disable_networking)
         self.virus_total = dns.virus_total.PassiveDNS(
             config.get(
                 'virus_total_api', ''), os.path.join(
-                'db', 'virus_total.db'), update)
+                'db', 'virus_total.db'), update, disable_networking)
         self.threatminer = dns.threatminer.PassiveDNS(
             config.get(
                 'threatminer_api', ''), os.path.join(
-                'db', 'threatminer.db'), update)
+                'db', 'threatminer.db'), update, disable_networking)
         self.doh = dns.dns_over_https.DNSLookupDOH(
-            os.path.join('db', 'dns_cache.db'), update, thread_count=80)
+            os.path.join(
+                'db',
+                'dns_cache.db'),
+            update,
+            thread_count=80,
+            disable_network=disable_networking)
 
     def clean_forward_cache(self):
         cache = self.cache
