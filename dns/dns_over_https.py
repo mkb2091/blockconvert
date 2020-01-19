@@ -81,8 +81,8 @@ class DNSCheckerWorker(threading.Thread):
                         print(result)
                 except json.JSONDecodeError:
                     print(
-                    'JSON decode error using %s to check %s' %
-                    (server, domain) + '\n', end='')
+                        'JSON decode error using %s to check %s' %
+                        (server, domain) + '\n', end='')
                 except Exception as error:
                     print(type(error), error)
                 if retry > 0:

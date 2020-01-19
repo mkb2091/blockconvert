@@ -7,7 +7,13 @@ import requests
 
 
 class DNSLookup:
-    def __init__(self, path, do_update=True, thread_count=40, commit_frequency=10):
+    def __init__(
+            self,
+            path,
+            do_update=True,
+            thread_count=40,
+            commit_frequency=10,
+            disable_network=False):
         self.session = requests.Session()
         self.session.headers['User-Agent'] = 'DOH'
         self.session.headers['Accept'] = 'application/dns-json'
@@ -20,6 +26,7 @@ class DNSLookup:
         self.conn.commit()
         self.last_commit = 0
         self.commit_frequency = 10
+        self.disable_network = disable_network
 
     def lookup_domains(self, domain):
         raise NotImplementedError
@@ -57,7 +64,7 @@ class DNSLookup:
         cursor = self.conn.cursor()
         fetched = list()
         for i in range(int(len(domain_list) / 1000) + 1):
-            current = domain_list[1000 * i: 1000 * (i+1)]
+            current = domain_list[1000 * i: 1000 * (i + 1)]
             cursor.execute(
                 'SELECT domain, ip_addresses, ttl, last_modified FROM DNSLookupCache WHERE domain IN (%s)' %
                 (','.join(
@@ -78,31 +85,33 @@ class DNSLookup:
         new = [domain for domain in domain_list if domain not in results]
         i = 0
         print('Looking up %s new domain' % len(new))
-        for result in self.lookup_domains(new):
-            if isinstance(result, str) or result is None:
-                print('Domain lookup failed:', result)
-                failure = True
-                break
-            else:
-                (domain, ips, ttl) = result
-                self._add_result(domain, ips, ttl, last_modified=time.time())
-                if domain in domain_list:
-                    if domain not in results:
-                        i += 1
-                        if i % 100 == 99:
-                            print('%s / %s\n' % (i, len(new)), end='')
-                    results[domain] = tuple(ips)
-        if not failure:
-            print('Looking up %s expired records' % len(expired))
-            for (i, result) in self.lookup_domains(expired):
+        if not self.disable_network:
+            for result in self.lookup_domains(new):
                 if isinstance(result, str) or result is None:
                     print('Domain lookup failed:', result)
                     failure = True
                     break
                 else:
-                    (ips, ttl) = result
+                    (domain, ips, ttl) = result
                     self._add_result(
-                        self, domain, ips, ttl, last_modified=time.time())
-                    results[domain] = tuple(ips)
+                        domain, ips, ttl, last_modified=time.time())
+                    if domain in domain_list:
+                        if domain not in results:
+                            i += 1
+                            if i % 100 == 99:
+                                print('%s / %s\n' % (i, len(new)), end='')
+                        results[domain] = tuple(ips)
+            if not failure:
+                print('Looking up %s expired records' % len(expired))
+                for (i, result) in self.lookup_domains(expired):
+                    if isinstance(result, str) or result is None:
+                        print('Domain lookup failed:', result)
+                        failure = True
+                        break
+                    else:
+                        (ips, ttl) = result
+                        self._add_result(
+                            self, domain, ips, ttl, last_modified=time.time())
+                        results[domain] = tuple(ips)
         self.conn.commit()
         return results

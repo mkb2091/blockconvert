@@ -9,10 +9,16 @@ import requests
 class PassiveDNS:
     NAME = 'PassiveDNSBase'
 
-    def __init__(self, api_key, path, do_update=True):
+    def __init__(
+            self,
+            api_key,
+            path,
+            do_update=True,
+            disable_networking=False):
         self.api_key = api_key
         self.session = requests.Session()
         self.do_update = do_update
+        self.disable_networking = disable_networking
         self.conn = sqlite3.connect(path)
         cursor = self.conn.cursor()
         cursor.execute(
@@ -55,33 +61,34 @@ class PassiveDNS:
         ips_left = list(ips_left)
         random.shuffle(ips_left)
         api_working = True
-        try:
-            for ip in ips_left:
-                fetched = self._get_domains(ip)
-                if fetched is not None:
-                    total_domains.update(fetched)
-                else:
-                    api_working = False
-                    break
-        except KeyboardInterrupt:
-            print('KeyboardInterrupt, skipping fetching new ips')
-            api_working = False
-
+        if not self.disable_networking:
+            try:
+                for ip in ips_left:
+                    fetched = self._get_domains(ip)
+                    if fetched is not None:
+                        total_domains.update(fetched)
+                    else:
+                        api_working = False
+                        break
+            except KeyboardInterrupt:
+                print('KeyboardInterrupt, skipping fetching new ips')
+                api_working = False
         print('%s: Fetching expired (%s expired - %s total)' %
               (self.NAME, len(ips_expired), len(ips)))
-        try:
-            for item in ips_expired:
-                (last_modified, ip, domains, done) = item
-                if not done:
-                    result = self._get_domains(ip)
-                    if result is not None:
-                        total_domains.update(result)
-                    else:
-                        total_domains.update(domains)
-                        break
-                    item[3] = True
-        except KeyboardInterrupt:
-            print('KeyboardInterrupt, skipping updating expired data')
+        if not self.disable_networking:
+            try:
+                for item in ips_expired:
+                    (last_modified, ip, domains, done) = item
+                    if not done:
+                        result = self._get_domains(ip)
+                        if result is not None:
+                            total_domains.update(result)
+                        else:
+                            total_domains.update(domains)
+                            break
+                        item[3] = True
+            except KeyboardInterrupt:
+                print('KeyboardInterrupt, skipping updating expired data')
         for (last_modified, ip, domains, done) in ips_expired:
             if not done:
                 total_domains.update(domains)
