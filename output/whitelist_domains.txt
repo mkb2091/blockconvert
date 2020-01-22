@@ -9107,6 +9107,7 @@ m.weeklyad.target.com
 m.youtube.com
 mac.pcbeta.com
 macys.com
+mail.com
 mail.getmonero.org
 mail.google.com
 mail.ru
@@ -22482,6 +22483,7 @@ www.m.weeklyad.target.com
 www.m.youtube.com
 www.mac.pcbeta.com
 www.macys.com
+www.mail.com
 www.mail.getmonero.org
 www.mail.google.com
 www.mail.ru

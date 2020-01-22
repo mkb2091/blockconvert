@@ -216,6 +216,7 @@ login.msa.akadns6.net
 login.windows.net
 lowendbox.com
 m.stripe.network
+mail.com
 mail.getmonero.org
 mail.google.com
 maps.windows.com
