@@ -11279,7 +11279,9 @@
 @@||secure.surveymonkey.com^
 @@||secure5.arcot.com^
 @@||secureir.ebaystatic.com^
+@@||securel.longtailvideo.com^
 @@||securemecca.com^
+@@||secureplugins.longtailvideo.com^
 @@||securesuite.co.uk^
 @@||securitymetrics.com^
 @@||seeclickfix.com^
@@ -24655,7 +24657,9 @@
 @@||www.secure.surveymonkey.com^
 @@||www.secure5.arcot.com^
 @@||www.secureir.ebaystatic.com^
+@@||www.securel.longtailvideo.com^
 @@||www.securemecca.com^
+@@||www.secureplugins.longtailvideo.com^
 @@||www.securesuite.co.uk^
 @@||www.securitymetrics.com^
 @@||www.seeclickfix.com^
