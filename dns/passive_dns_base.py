@@ -40,13 +40,17 @@ class PassiveDNS:
         ips_left = set(ips)
         ips_expired = list()
         cursor = self.conn.cursor()
-        cursor.execute(
-            'SELECT ip, domains, last_modified FROM PassiveDNS WHERE ip IN (%s)' %
-            (','.join(
-                ['?'] *
-                len(ips))),
-            ips)
-        result = cursor.fetchall()
+        fetched = list()
+        for i in range(int(len(ips) / 100) + 1):
+            current = ips[100 * i: 100 * (i + 1)]
+            cursor.execute(
+                'SELECT ip, domains, last_modified FROM PassiveDNS WHERE ip IN (%s)' %
+                (','.join(
+                    ['?'] *
+                    len(current))),
+                current)
+            fetched.extend(cursor.fetchall())
+        result = fetched
         random.shuffle(result)
         for (ip, domains, last_modified) in result:
             domains = json.loads(domains)
