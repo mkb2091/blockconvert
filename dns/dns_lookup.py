@@ -63,8 +63,8 @@ class DNSLookup:
         domain_list = list(set(domain_list))
         cursor = self.conn.cursor()
         fetched = list()
-        for i in range(int(len(domain_list) / 1000) + 1):
-            current = domain_list[1000 * i: 1000 * (i + 1)]
+        for i in range(int(len(domain_list) / 100) + 1):
+            current = domain_list[100 * i: 100 * (i + 1)]
             cursor.execute(
                 'SELECT domain, ip_addresses, ttl, last_modified FROM DNSLookupCache WHERE domain IN (%s)' %
                 (','.join(
