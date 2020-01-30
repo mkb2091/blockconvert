@@ -1447,6 +1447,7 @@
 @@||*.md.mp.microsoft.com.xn--mgbbh1a71e^
 @@||*.md.mp.microsoft.com.xn--mgbc0a9azcg^
 @@||*.md.mp.microsoft.com.xn--mgbca7dzdo^
+@@||*.md.mp.microsoft.com.xn--mgbcpq6gpa1a^
 @@||*.md.mp.microsoft.com.xn--mgberp4a5d4ar^
 @@||*.md.mp.microsoft.com.xn--mgbgu82a^
 @@||*.md.mp.microsoft.com.xn--mgbi4ecexp^
@@ -1472,6 +1473,7 @@
 @@||*.md.mp.microsoft.com.xn--pbt977c^
 @@||*.md.mp.microsoft.com.xn--pgbs0dh^
 @@||*.md.mp.microsoft.com.xn--pssy2u^
+@@||*.md.mp.microsoft.com.xn--q7ce6a^
 @@||*.md.mp.microsoft.com.xn--q9jyb4c^
 @@||*.md.mp.microsoft.com.xn--qcka1pmc^
 @@||*.md.mp.microsoft.com.xn--qxa6a^
@@ -2140,6 +2142,7 @@
 @@||codecanyon.net^
 @@||codeload.github.com^
 @@||codeorigin.jquery.com^
+@@||codepen.io^
 @@||coin-eu.amazonpay.com^
 @@||coin.amazonpay.com^
 @@||coinbase.com^
@@ -4374,6 +4377,7 @@
 @@||google.co.xn--mgbbh1a71e^
 @@||google.co.xn--mgbc0a9azcg^
 @@||google.co.xn--mgbca7dzdo^
+@@||google.co.xn--mgbcpq6gpa1a^
 @@||google.co.xn--mgberp4a5d4ar^
 @@||google.co.xn--mgbgu82a^
 @@||google.co.xn--mgbi4ecexp^
@@ -4399,6 +4403,7 @@
 @@||google.co.xn--pbt977c^
 @@||google.co.xn--pgbs0dh^
 @@||google.co.xn--pssy2u^
+@@||google.co.xn--q7ce6a^
 @@||google.co.xn--q9jyb4c^
 @@||google.co.xn--qcka1pmc^
 @@||google.co.xn--qxa6a^
@@ -5894,6 +5899,7 @@
 @@||google.com.xn--mgbbh1a71e^
 @@||google.com.xn--mgbc0a9azcg^
 @@||google.com.xn--mgbca7dzdo^
+@@||google.com.xn--mgbcpq6gpa1a^
 @@||google.com.xn--mgberp4a5d4ar^
 @@||google.com.xn--mgbgu82a^
 @@||google.com.xn--mgbi4ecexp^
@@ -5919,6 +5925,7 @@
 @@||google.com.xn--pbt977c^
 @@||google.com.xn--pgbs0dh^
 @@||google.com.xn--pssy2u^
+@@||google.com.xn--q7ce6a^
 @@||google.com.xn--q9jyb4c^
 @@||google.com.xn--qcka1pmc^
 @@||google.com.xn--qxa6a^
@@ -7136,6 +7143,7 @@
 @@||google.xn--mgbbh1a71e^
 @@||google.xn--mgbc0a9azcg^
 @@||google.xn--mgbca7dzdo^
+@@||google.xn--mgbcpq6gpa1a^
 @@||google.xn--mgberp4a5d4ar^
 @@||google.xn--mgbgu82a^
 @@||google.xn--mgbi4ecexp^
@@ -7161,6 +7169,7 @@
 @@||google.xn--pbt977c^
 @@||google.xn--pgbs0dh^
 @@||google.xn--pssy2u^
+@@||google.xn--q7ce6a^
 @@||google.xn--q9jyb4c^
 @@||google.xn--qcka1pmc^
 @@||google.xn--qxa6a^
@@ -8919,6 +8928,7 @@
 @@||kisscartoon.xn--mgbbh1a71e^
 @@||kisscartoon.xn--mgbc0a9azcg^
 @@||kisscartoon.xn--mgbca7dzdo^
+@@||kisscartoon.xn--mgbcpq6gpa1a^
 @@||kisscartoon.xn--mgberp4a5d4ar^
 @@||kisscartoon.xn--mgbgu82a^
 @@||kisscartoon.xn--mgbi4ecexp^
@@ -8944,6 +8954,7 @@
 @@||kisscartoon.xn--pbt977c^
 @@||kisscartoon.xn--pgbs0dh^
 @@||kisscartoon.xn--pssy2u^
+@@||kisscartoon.xn--q7ce6a^
 @@||kisscartoon.xn--q9jyb4c^
 @@||kisscartoon.xn--qcka1pmc^
 @@||kisscartoon.xn--qxa6a^
@@ -10580,6 +10591,7 @@
 @@||md.mp.microsoft.com.xn--mgbbh1a71e^
 @@||md.mp.microsoft.com.xn--mgbc0a9azcg^
 @@||md.mp.microsoft.com.xn--mgbca7dzdo^
+@@||md.mp.microsoft.com.xn--mgbcpq6gpa1a^
 @@||md.mp.microsoft.com.xn--mgberp4a5d4ar^
 @@||md.mp.microsoft.com.xn--mgbgu82a^
 @@||md.mp.microsoft.com.xn--mgbi4ecexp^
@@ -10605,6 +10617,7 @@
 @@||md.mp.microsoft.com.xn--pbt977c^
 @@||md.mp.microsoft.com.xn--pgbs0dh^
 @@||md.mp.microsoft.com.xn--pssy2u^
+@@||md.mp.microsoft.com.xn--q7ce6a^
 @@||md.mp.microsoft.com.xn--q9jyb4c^
 @@||md.mp.microsoft.com.xn--qcka1pmc^
 @@||md.mp.microsoft.com.xn--qxa6a^
@@ -11646,6 +11659,7 @@
 @@||unitedstates.smartscreen-prod.microsoft.com^
 @@||unix.com^
 @@||unpkg.com^
+@@||unsplash.com^
 @@||unsubscribe.mailerlite.com^
 @@||uob.sc.omtrdc.net^
 @@||up.anv.bz^
@@ -13197,6 +13211,7 @@
 @@||wdcp.microsoft.xn--mgbbh1a71e^
 @@||wdcp.microsoft.xn--mgbc0a9azcg^
 @@||wdcp.microsoft.xn--mgbca7dzdo^
+@@||wdcp.microsoft.xn--mgbcpq6gpa1a^
 @@||wdcp.microsoft.xn--mgberp4a5d4ar^
 @@||wdcp.microsoft.xn--mgbgu82a^
 @@||wdcp.microsoft.xn--mgbi4ecexp^
@@ -13222,6 +13237,7 @@
 @@||wdcp.microsoft.xn--pbt977c^
 @@||wdcp.microsoft.xn--pgbs0dh^
 @@||wdcp.microsoft.xn--pssy2u^
+@@||wdcp.microsoft.xn--q7ce6a^
 @@||wdcp.microsoft.xn--q9jyb4c^
 @@||wdcp.microsoft.xn--qcka1pmc^
 @@||wdcp.microsoft.xn--qxa6a^
@@ -14825,6 +14841,7 @@
 @@||www.*.md.mp.microsoft.com.xn--mgbbh1a71e^
 @@||www.*.md.mp.microsoft.com.xn--mgbc0a9azcg^
 @@||www.*.md.mp.microsoft.com.xn--mgbca7dzdo^
+@@||www.*.md.mp.microsoft.com.xn--mgbcpq6gpa1a^
 @@||www.*.md.mp.microsoft.com.xn--mgberp4a5d4ar^
 @@||www.*.md.mp.microsoft.com.xn--mgbgu82a^
 @@||www.*.md.mp.microsoft.com.xn--mgbi4ecexp^
@@ -14850,6 +14867,7 @@
 @@||www.*.md.mp.microsoft.com.xn--pbt977c^
 @@||www.*.md.mp.microsoft.com.xn--pgbs0dh^
 @@||www.*.md.mp.microsoft.com.xn--pssy2u^
+@@||www.*.md.mp.microsoft.com.xn--q7ce6a^
 @@||www.*.md.mp.microsoft.com.xn--q9jyb4c^
 @@||www.*.md.mp.microsoft.com.xn--qcka1pmc^
 @@||www.*.md.mp.microsoft.com.xn--qxa6a^
@@ -15518,6 +15536,7 @@
 @@||www.codecanyon.net^
 @@||www.codeload.github.com^
 @@||www.codeorigin.jquery.com^
+@@||www.codepen.io^
 @@||www.coin-eu.amazonpay.com^
 @@||www.coin.amazonpay.com^
 @@||www.coinbase.com^
@@ -17752,6 +17771,7 @@
 @@||www.google.co.xn--mgbbh1a71e^
 @@||www.google.co.xn--mgbc0a9azcg^
 @@||www.google.co.xn--mgbca7dzdo^
+@@||www.google.co.xn--mgbcpq6gpa1a^
 @@||www.google.co.xn--mgberp4a5d4ar^
 @@||www.google.co.xn--mgbgu82a^
 @@||www.google.co.xn--mgbi4ecexp^
@@ -17777,6 +17797,7 @@
 @@||www.google.co.xn--pbt977c^
 @@||www.google.co.xn--pgbs0dh^
 @@||www.google.co.xn--pssy2u^
+@@||www.google.co.xn--q7ce6a^
 @@||www.google.co.xn--q9jyb4c^
 @@||www.google.co.xn--qcka1pmc^
 @@||www.google.co.xn--qxa6a^
@@ -19272,6 +19293,7 @@
 @@||www.google.com.xn--mgbbh1a71e^
 @@||www.google.com.xn--mgbc0a9azcg^
 @@||www.google.com.xn--mgbca7dzdo^
+@@||www.google.com.xn--mgbcpq6gpa1a^
 @@||www.google.com.xn--mgberp4a5d4ar^
 @@||www.google.com.xn--mgbgu82a^
 @@||www.google.com.xn--mgbi4ecexp^
@@ -19297,6 +19319,7 @@
 @@||www.google.com.xn--pbt977c^
 @@||www.google.com.xn--pgbs0dh^
 @@||www.google.com.xn--pssy2u^
+@@||www.google.com.xn--q7ce6a^
 @@||www.google.com.xn--q9jyb4c^
 @@||www.google.com.xn--qcka1pmc^
 @@||www.google.com.xn--qxa6a^
@@ -20514,6 +20537,7 @@
 @@||www.google.xn--mgbbh1a71e^
 @@||www.google.xn--mgbc0a9azcg^
 @@||www.google.xn--mgbca7dzdo^
+@@||www.google.xn--mgbcpq6gpa1a^
 @@||www.google.xn--mgberp4a5d4ar^
 @@||www.google.xn--mgbgu82a^
 @@||www.google.xn--mgbi4ecexp^
@@ -20539,6 +20563,7 @@
 @@||www.google.xn--pbt977c^
 @@||www.google.xn--pgbs0dh^
 @@||www.google.xn--pssy2u^
+@@||www.google.xn--q7ce6a^
 @@||www.google.xn--q9jyb4c^
 @@||www.google.xn--qcka1pmc^
 @@||www.google.xn--qxa6a^
@@ -22297,6 +22322,7 @@
 @@||www.kisscartoon.xn--mgbbh1a71e^
 @@||www.kisscartoon.xn--mgbc0a9azcg^
 @@||www.kisscartoon.xn--mgbca7dzdo^
+@@||www.kisscartoon.xn--mgbcpq6gpa1a^
 @@||www.kisscartoon.xn--mgberp4a5d4ar^
 @@||www.kisscartoon.xn--mgbgu82a^
 @@||www.kisscartoon.xn--mgbi4ecexp^
@@ -22322,6 +22348,7 @@
 @@||www.kisscartoon.xn--pbt977c^
 @@||www.kisscartoon.xn--pgbs0dh^
 @@||www.kisscartoon.xn--pssy2u^
+@@||www.kisscartoon.xn--q7ce6a^
 @@||www.kisscartoon.xn--q9jyb4c^
 @@||www.kisscartoon.xn--qcka1pmc^
 @@||www.kisscartoon.xn--qxa6a^
@@ -23958,6 +23985,7 @@
 @@||www.md.mp.microsoft.com.xn--mgbbh1a71e^
 @@||www.md.mp.microsoft.com.xn--mgbc0a9azcg^
 @@||www.md.mp.microsoft.com.xn--mgbca7dzdo^
+@@||www.md.mp.microsoft.com.xn--mgbcpq6gpa1a^
 @@||www.md.mp.microsoft.com.xn--mgberp4a5d4ar^
 @@||www.md.mp.microsoft.com.xn--mgbgu82a^
 @@||www.md.mp.microsoft.com.xn--mgbi4ecexp^
@@ -23983,6 +24011,7 @@
 @@||www.md.mp.microsoft.com.xn--pbt977c^
 @@||www.md.mp.microsoft.com.xn--pgbs0dh^
 @@||www.md.mp.microsoft.com.xn--pssy2u^
+@@||www.md.mp.microsoft.com.xn--q7ce6a^
 @@||www.md.mp.microsoft.com.xn--q9jyb4c^
 @@||www.md.mp.microsoft.com.xn--qcka1pmc^
 @@||www.md.mp.microsoft.com.xn--qxa6a^
@@ -25024,6 +25053,7 @@
 @@||www.unitedstates.smartscreen-prod.microsoft.com^
 @@||www.unix.com^
 @@||www.unpkg.com^
+@@||www.unsplash.com^
 @@||www.unsubscribe.mailerlite.com^
 @@||www.uob.sc.omtrdc.net^
 @@||www.up.anv.bz^
@@ -26575,6 +26605,7 @@
 @@||www.wdcp.microsoft.xn--mgbbh1a71e^
 @@||www.wdcp.microsoft.xn--mgbc0a9azcg^
 @@||www.wdcp.microsoft.xn--mgbca7dzdo^
+@@||www.wdcp.microsoft.xn--mgbcpq6gpa1a^
 @@||www.wdcp.microsoft.xn--mgberp4a5d4ar^
 @@||www.wdcp.microsoft.xn--mgbgu82a^
 @@||www.wdcp.microsoft.xn--mgbi4ecexp^
@@ -26600,6 +26631,7 @@
 @@||www.wdcp.microsoft.xn--pbt977c^
 @@||www.wdcp.microsoft.xn--pgbs0dh^
 @@||www.wdcp.microsoft.xn--pssy2u^
+@@||www.wdcp.microsoft.xn--q7ce6a^
 @@||www.wdcp.microsoft.xn--q9jyb4c^
 @@||www.wdcp.microsoft.xn--qcka1pmc^
 @@||www.wdcp.microsoft.xn--qxa6a^
