@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 773687 blocked domains in each of the generated filter lists
+Theres are 773644 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -32,7 +32,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [Toshiya's Filter List - Experimental](https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt)|Toshiya|4.0 days|GPLv3|2118|2
 [The Hosts File Project](https://hblock.molinero.dev/hosts)|Héctor Molinero Fernández <hector@molinero.dev>|1.0 days|MIT|125781|0
 [Strappazzon's Tracking List](https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Tracking.txt)|-|3.0 days|MIT|11|0
-[Spam404](https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt)|-|2.0 days|Permission to modify, copy and distribute|6921|0
+[Spam404](https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt)|-|2.0 days|Permission to modify, copy and distribute|6930|0
 [Skeletal Blocker](https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List)|SkeletalDemise|2.0 days|GPLv3|517|0
 [Scams and Phishing](https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt)|infinitytec|10.0 days|MIT|52|0
 [Ransomware URL Blocklist ](https://ransomwaretracker.abuse.ch/downloads/RW_URLBL.txt)|-|1.0 days|Free for use without any limitations|0|0
