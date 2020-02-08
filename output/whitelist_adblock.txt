@@ -2280,6 +2280,7 @@
 @@||device-metrics-us-2.amazon.com^
 @@||device-metrics-us.amazon.com^
 @@||device.auth.xboxlive.com^
+@@||deviceportal.nettvservices.com^
 @@||devmlbglobal.112.2o7.net^
 @@||di.com.pl^
 @@||dict.leo.org^
@@ -7377,6 +7378,7 @@
 @@||imagevenue.com^
 @@||imagizer.imageshack.com^
 @@||imasdk.googleapis.com^
+@@||imbox.io^
 @@||img-bahn.de^
 @@||img-fotki.yandex.ru^
 @@||img-prod-cms-rt-microsoft-com.akamaized.net^
@@ -11033,6 +11035,7 @@
 @@||piclens.com^
 @@||pilkanozna.pl^
 @@||pimg1.126.net^
+@@||ping.taplytics.com^
 @@||pingjs.qq.com^
 @@||pinimg.com^
 @@||pinterest.com^
@@ -15677,6 +15680,7 @@
 @@||www.device-metrics-us-2.amazon.com^
 @@||www.device-metrics-us.amazon.com^
 @@||www.device.auth.xboxlive.com^
+@@||www.deviceportal.nettvservices.com^
 @@||www.devmlbglobal.112.2o7.net^
 @@||www.di.com.pl^
 @@||www.dict.leo.org^
@@ -20774,6 +20778,7 @@
 @@||www.imagevenue.com^
 @@||www.imagizer.imageshack.com^
 @@||www.imasdk.googleapis.com^
+@@||www.imbox.io^
 @@||www.img-bahn.de^
 @@||www.img-fotki.yandex.ru^
 @@||www.img-prod-cms-rt-microsoft-com.akamaized.net^
@@ -24430,6 +24435,7 @@
 @@||www.piclens.com^
 @@||www.pilkanozna.pl^
 @@||www.pimg1.126.net^
+@@||www.ping.taplytics.com^
 @@||www.pingjs.qq.com^
 @@||www.pinimg.com^
 @@||www.pinterest.com^
