@@ -79,7 +79,7 @@ class DNSLookup:
             ips = json.loads(ips)
             results[domain] = tuple(ips)
             if self.do_update and time.time() > (last_modified + ttl):
-                expired.append(domain, last_modified + ttl)
+                expired.append((domain, last_modified + ttl))
         failure = False
         print('Found %s existing records' % len(results))
         new = [domain for domain in domain_list if domain not in results]
