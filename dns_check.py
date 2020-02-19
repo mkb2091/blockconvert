@@ -108,8 +108,10 @@ class DNSChecker():
             'Added domains which resolve to malware IP addresses: %s' %
             len(checked_domains))
         return checked_domains
+
     def get_subdomains(self, domains):
-        return self.doh.get_subdomains([domain.lstrip('*.') for domain in domains])
+        return self.doh.get_subdomains(
+            [domain.lstrip('*.') for domain in domains])
 
 
 def _get_domains(
