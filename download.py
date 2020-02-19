@@ -4,9 +4,6 @@ import time
 import json
 import os
 
-import blockconvert
-
-
 def url_to_path(url):
     return os.path.join('data', urllib.parse.urlencode({'': url})[1:])
 

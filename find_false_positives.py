@@ -5,9 +5,6 @@ import os
 
 import requests
 
-import build_regex
-
-
 def url_to_path(url):
     return os.path.join('data', urllib.parse.urlencode({'': url})[1:])
 
