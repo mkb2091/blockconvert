@@ -43,6 +43,9 @@ class DNSCheckerWorker(threading.Thread):
         self.pos = 0
 
     def lookup_domain(self, domain):
+        if not isinstance(domain, str):
+            print(type(domain), domain)
+            exit(0)
         for retry in range(3):
             self.pos = (self.pos + 1) % len(self.servers)
             server = self.servers[self.pos]
@@ -88,7 +91,7 @@ class DNSCheckerWorker(threading.Thread):
                 if retry > 0:
                     print('Fixed\n', end='')
                 break
-            except Exception as error:
+            except MemoryError as error:
                 print(
                     'Server: %s, ErrorType: %s, Error: %s\n' %
                     (server, type(error), error), end='')

@@ -6,7 +6,6 @@ import re
 
 import dns_check
 import build_regex
-import get_subdomains
 
 ADBLOCK_PLUS_HEADER = '''[Adblock Plus 2.0]
 ! Version: {version}
@@ -181,8 +180,7 @@ class BlockList():
             self.blacklist.remove(url)
             self.blacklist.add(url[2:])
         self.blacklist.update(
-            get_subdomains.get_subdomains(
-                self.dns, star_subdomain))
+            self.dns.get_subdomains(star_subdomain))
         print('Expanded *. subdomain to %s rules(%ss)' %
               (len(self.blacklist), time.time() - last))
         last = time.time()

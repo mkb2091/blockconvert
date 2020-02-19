@@ -48,26 +48,6 @@ class DNSChecker():
         self.session2.headers['Accept'] = '*/*'
         self.servers = ['https://dns.google.com/resolve?',
                         'https://cloudflare-dns.com/dns-query?', ]
-        self.cache = dict()
-        self.reverse_cache = dict()
-        one_week_ago = (time.time() - 60 * 60 * 24 * 7)
-        try:
-            with open('dns_cache.txt') as file:
-                for line in file:
-                    try:
-                        split = line.rstrip().split(',')
-                        if len(split) == 3:
-                            domain, ip, last_modified = split
-                        else:
-                            domain, last_modified = split
-                            ip = ''
-                        last_modified = int(last_modified)
-                        if (not update) or (last_modified > one_week_ago):
-                            self.cache[domain] = (ip, last_modified)
-                    except (ValueError):
-                        pass
-        except FileNotFoundError:
-            pass
         self.doh = dns.dns_over_https.DNSLookupDOH(
             os.path.join(
                 'db',
@@ -91,16 +71,27 @@ class DNSChecker():
         config = self.config
         update = self.update
         disable_networking = self.disable_networking
-        function_list = [(dns.argus.PassiveDNS, config.get('argus_api', ''),  os.path.join('db', 'argus.db'), update, disable_networking),
-                         (dns.virus_total.PassiveDNS, config.get('virus_total_api', ''), os.path.join('db', 'virus_total.db'), update, disable_networking),
-                         (dns.threatminer.PassiveDNS, config.get('threatminer_api', ''), os.path.join('db', 'threatminer.db'), update, disable_networking)
-	]
+        function_list = [
+            (dns.argus.PassiveDNS, config.get(
+                'argus_api', ''), os.path.join(
+                'db', 'argus.db'), update, disable_networking), (dns.virus_total.PassiveDNS, config.get(
+                    'virus_total_api', ''), os.path.join(
+                    'db', 'virus_total.db'), update, disable_networking), (dns.threatminer.PassiveDNS, config.get(
+                        'threatminer_api', ''), os.path.join(
+                            'db', 'threatminer.db'), update, disable_networking)]
         processes = []
         for (base, conf, path, _update, _disable_networking) in function_list:
             result_queue = multiprocessing.Queue()
             process = multiprocessing.Process(
-                target=_get_domains, args=(
-                    base, conf, path, _update, _disable_networking, list(ip_list), result_queue))
+                target=_get_domains,
+                args=(
+                    base,
+                    conf,
+                    path,
+                    _update,
+                    _disable_networking,
+                    list(ip_list),
+                    result_queue))
             process.start()
             processes.append((process, result_queue))
         for (process, result) in processes:
@@ -112,15 +103,27 @@ class DNSChecker():
         print('Performed reverse DNS, and passive DNS lookup')
         self.mass_check(results, thread_count)
         print('Checked IP addresses')
-        cache = self.cache
-        checked_domains = []
-        for domain in cache:
-            if cache[domain][0] in ip_list:
-                checked_domains.append(domain)
+        checked_domains = self.doh.reverse_lookup(ip_list)
         print(
             'Added domains which resolve to malware IP addresses: %s' %
             len(checked_domains))
         return checked_domains
+    def get_subdomains(self, domains):
+        return self.doh.get_subdomains([domain.lstrip('*.') for domain in domains])
 
-def _get_domains(base, conf, path, _update, _disable_networking, ip_list, result_queue):
-    base(conf, path, _update, _disable_networking).get_domains(ip_list, result_queue)
+
+def _get_domains(
+        base,
+        conf,
+        path,
+        _update,
+        _disable_networking,
+        ip_list,
+        result_queue):
+    base(
+        conf,
+        path,
+        _update,
+        _disable_networking).get_domains(
+        ip_list,
+        result_queue)
