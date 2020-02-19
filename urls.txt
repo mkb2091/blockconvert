@@ -112,6 +112,7 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["", "https://raw.githubusercontent.com/Marfjeh/coinhive-block/master/domains", "", 86400, "MIT", false, false, false]
 ["", "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt", "", 86400, "GPLv3+", true, false, false]
 ["", "https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json", "", 86400, "GPLv3", false, false, false]
+["", "https://raw.githubusercontent.com/EFForg/badger-sett/master/results.json", "", 86400, "GPLv3", false, false, false]
 ["", "https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt", "", 86400, "CC-BY-SA-4.0", false, false, false]
 ["", "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt", "", 86400, "CC0", false, false, false]
 ["", "https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt", "", 86400, "GPLv3", false, false, false]
