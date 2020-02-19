@@ -54,6 +54,7 @@ apt.newrelic.com
 arc.msn.com
 arc.msn.com.nsatc.net
 ars.smartscreen.microsoft.com
+assets.penny-arcade.com
 attfeedback.uservoice.com
 au.download.windowsupdate.com
 auth.gfx.ms
@@ -191,6 +192,7 @@ image.prntscr.com
 imagizer.imageshack.com
 img-prod-cms-rt-microsoft-com.akamaized.net
 inference.location.live.net
+informer.com
 infowars.com
 infowarsstore.com
 instagram.com
@@ -306,6 +308,7 @@ sls.update.microsoft.com.akadns.net
 smallseotools.com
 smartscreen-sn3p.smartscreen.microsoft.com
 smartscreen.microsoft.com
+software.informer.com
 sohu.com
 sourceforge.net
 ssl.bblck.me
@@ -334,6 +337,7 @@ tile-service.weather.microsoft.com
 time.windows.com
 tlu.dl.delivery.mp.microsoft.com
 to-do.microsoft.com
+tracker.tvnihon.com
 tracking.epicgames.com
 transfer.sh
 tsfe.trafficshaping.dsp.mp.microsoft.com
@@ -426,6 +430,7 @@ www.similarweb.com
 www.speedcurve.com
 www.squidblacklist.org
 www.statuscake.com
+www.texashomebase.com
 www.toptenreviews.com
 www.travelocity.com
 www.vanityfair.com
