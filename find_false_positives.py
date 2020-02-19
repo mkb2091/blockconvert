@@ -44,6 +44,8 @@ for url in skipped:
         print(url, len(now))
         for domain in now:
             potential[domain] = potential.get(domain, 0) + 1
+    with open(os.path.join('potential', urllib.parse.urlencode({'': url})[1:]), 'w') as file:
+        file.write('\n'.join(now))
 print('Total potential false positive length:', len(potential))
 with open('potential_fp.txt', 'w') as file:
     for (_, domain) in sorted([(potential[i], i)
