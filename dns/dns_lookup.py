@@ -173,12 +173,12 @@ class DNSLookup:
         print('Checking database for subdomains')
         for i in range(int(len(domain_list) / amount) + 1):
             current = domain_list[amount * i: amount * (i + 1)]
-            cursor.execute('SELECT domain, ip_address, last_modified, ttl FROM DNSLookupCache LEFT JOIN DNSResultCache ON DNSLookupCache.domain_id = DNSResultCache.domain_id WHERE %s'
+            cursor.execute('SELECT domain, last_modified, ttl FROM DNSLookupCache WHERE %s'
                            % (' OR '.join(
                                ['domain LIKE ?'] *
                                len(current))),
                            ['%.' + domain.lstrip('.') for domain in current])
-            for (_, ip_address, _, _) in cursor.fetchall():
-                results.append(ip_address)
+            for (domain, _, _) in cursor.fetchall():
+                results.append(domain)
             print(len(results))
         return results
