@@ -61,16 +61,16 @@ def generate_readme(urls, rule_count):
         link = '[%s](%s)' % (title, url)
         try:
             with open(os.path.join(url_to_path(url), 'blacklist.txt'), 'rb') as file:
-                blacklist_size = str(len(file.read().splitlines()))
+                blacklist_size = len(file.read().splitlines())
         except IOError:
             blacklist_size = 0
         try:
             with open(os.path.join(url_to_path(url), 'whitelist.txt'), 'rb') as file:
-                whitelist_size = str(len(file.read().splitlines()))
+                whitelist_size = len(file.read().splitlines())
         except IOError:
             whitelist_size = 0
         url_table.append([link, author, expires, list_license,
-                          blacklist_size, whitelist_size])
+                          str(blacklist_size), str(whitelist_size)])
     url_table = '\n'.join('|'.join(line) for line in url_table)
     with open('sources.md', 'w') as file:
         file.write(SOURCES.format(**locals()))
