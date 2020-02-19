@@ -119,7 +119,7 @@ class DNSLookup:
                             i += 1
                             if i % 100 == 99:
                                 print('%s / %s\n' % (i, len(new)), end='')
-                        results[domain] = tuple(ips)
+                        results[domain] = bool(ips)
             if not failure:
                 i = 0
                 to_add = list()
@@ -131,7 +131,7 @@ class DNSLookup:
                     else:
                         (domain, ips, ttl) = result
                         to_add.append((domain, ips, ttl))
-                        results[domain] = tuple(ips)
+                        results[domain] = bool(ips)
                         if domain in domain_list:
                             i += 1
                             if i % 100 == 99:
