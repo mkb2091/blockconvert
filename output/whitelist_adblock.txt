@@ -2461,6 +2461,7 @@
 @@||faast.schibsted.io^
 @@||facebook.com^
 @@||familydollar.com^
+@@||fandom.wikia.com^
 @@||fansonly.com^
 @@||fast.fonts.net^
 @@||fast.wistia.com^
@@ -9045,6 +9046,7 @@
 @@||lcdn-locator.apple.com.akadns.net^
 @@||league-funny.com^
 @@||leagueoflegends.com^
+@@||leanplum.com^
 @@||leifsex.com^
 @@||lemon-ads.com^
 @@||lh3.google.com^
@@ -15863,6 +15865,7 @@
 @@||www.faast.schibsted.io^
 @@||www.facebook.com^
 @@||www.familydollar.com^
+@@||www.fandom.wikia.com^
 @@||www.fansonly.com^
 @@||www.fast.fonts.net^
 @@||www.fast.wistia.com^
@@ -22447,6 +22450,7 @@
 @@||www.lcdn-locator.apple.com.akadns.net^
 @@||www.league-funny.com^
 @@||www.leagueoflegends.com^
+@@||www.leanplum.com^
 @@||www.leifsex.com^
 @@||www.lemon-ads.com^
 @@||www.lh3.google.com^

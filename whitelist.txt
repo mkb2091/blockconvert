@@ -142,6 +142,7 @@ evoke-windowsservices-tas.msedge.net
 f.chtah.com
 faast.schibsted.io
 facebook.com
+fandom.wikia.com
 fast.fonts.net
 fast.wistia.net
 fe2.update.microsoft.com
@@ -405,6 +406,7 @@ www.ip-tracker.org
 www.joblo.com
 www.kaspersky.com
 www.ku6.com
+www.leanplum.com
 www.malwaredomainlist.com
 www.mbl.is
 www.monero.org
