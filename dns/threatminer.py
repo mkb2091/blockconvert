@@ -1,8 +1,4 @@
-import sqlite3
 import time
-import json
-
-import requests
 
 try:
     import passive_dns_base

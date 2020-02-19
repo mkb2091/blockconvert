@@ -1,7 +1,5 @@
-import random
 import sqlite3
 import time
-import json
 
 import requests
 
@@ -129,7 +127,6 @@ class DNSLookup:
                 for result in self.lookup_domains(expired):
                     if isinstance(result, str) or result is None:
                         print('Domain lookup failed:', result)
-                        failure = True
                         break
                     else:
                         (domain, ips, ttl) = result
@@ -146,7 +143,6 @@ class DNSLookup:
         return results
 
     def reverse_lookup(self, ip_list):
-        results = dict()
         ip_list = list(set(ip_list))
         cursor = self.conn.cursor()
         results = list()
@@ -165,7 +161,6 @@ class DNSLookup:
         return results
 
     def get_subdomains(self, domain_list):
-        results = dict()
         domain_list = list(set(domain_list))
         cursor = self.conn.cursor()
         results = list()

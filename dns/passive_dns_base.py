@@ -79,7 +79,7 @@ class PassiveDNS:
                 api_working = False
         print('%s: Fetching expired (%s expired - %s total)' %
               (self.NAME, len(ips_expired), len(ips)))
-        if not self.disable_networking:
+        if not self.disable_networking and api_working:
             try:
                 for item in ips_expired:
                     (last_modified, ip, domains, done) = item

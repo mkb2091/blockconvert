@@ -1,8 +1,5 @@
-import argparse
 import time
 import json
-import os
-import re
 
 import dns_check
 import build_regex
@@ -232,7 +229,6 @@ class BlockList():
 
     def to_domain_list(self):
         header = DOMAIN_LIST_HEADER.format(
-            version=time.strftime('%d-%b-%Y-%H-%M'),
             title=self.title,
             last_modified=time.strftime('%d %b %Y %H:%M UTC'),
             expires=self.expires,
@@ -255,7 +251,6 @@ class BlockList():
 
     def to_hosts(self):
         header = HOSTS_HEADER.format(
-            version=time.strftime('%d-%b-%Y-%H-%M'),
             title=self.title,
             last_modified=time.strftime('%d %b %Y %H:%M UTC'),
             expires=self.expires,

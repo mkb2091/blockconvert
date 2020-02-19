@@ -1,15 +1,9 @@
 import multiprocessing
-import threading
 import ipaddress
-import urllib
-import queue
-import json
-import time
 import os
 
 import requests
 
-import build_regex
 import dns.argus
 import dns.virus_total
 import dns.threatminer

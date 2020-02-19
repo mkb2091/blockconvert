@@ -4,8 +4,6 @@ import urllib
 import queue
 import json
 
-import requests
-
 try:
     import dns_lookup
 except ImportError:
