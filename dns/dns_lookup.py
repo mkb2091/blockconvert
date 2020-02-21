@@ -56,18 +56,22 @@ class DNSLookup:
         cursor = self.conn.cursor()
         for (domain, _, _) in results:
             cursor.execute(
-                'SELECT domain_id FROM DNSLookupCache WHERE domain = ?', (domain, ))
-        domain_ids = cursor.fetchall()
-        cursor.executemany('DELETE FROM DNSResultCache WHERE domain_id = ?',
-                           domain_ids)
+                'SELECT domain, domain_id FROM DNSLookupCache WHERE domain = ?', (domain, ))
+        domain_to_domain_id = dict(cursor.fetchall())
+        cursor.executemany(
+            'REPLACE INTO DNSLookupCache (domain_id, domain, last_modified, ttl) VALUES (?, ?, ?, ?)', [
+                (domain_to_domain_id[domain], domain, last_modified, ttl) for (
+                    domain, _, ttl) in results if domain in domain_to_domain_id])
         cursor.executemany(
             'REPLACE INTO DNSLookupCache (domain, last_modified, ttl) VALUES (?, ?, ?)', [
                 (domain, last_modified, ttl) for (
-                    domain, _, ttl) in results])
+                    domain, _, ttl) in results if domain not in domain_to_domain_id])
         for (domain, _, _) in results:
             cursor.execute(
                 'SELECT domain, domain_id FROM DNSLookupCache WHERE domain = ?', (domain, ))
         domain_to_domain_id = dict(cursor.fetchall())
+        cursor.executemany('DELETE FROM DNSResultCache WHERE domain_id = ?',
+                           [(domain_to_domain_id[domain], ) for domain in domain_to_domain_id])
         cursor.executemany(
             'INSERT INTO DNSResultCache VALUES (?, ?)', [
                 (domain_to_domain_id[domain], ip) for (
@@ -145,7 +149,7 @@ class DNSLookup:
     def reverse_lookup(self, ip_list):
         ip_list = list(set(ip_list))
         cursor = self.conn.cursor()
-        results = list()
+        results = set()
         amount = 100
         for i in range(int(len(ip_list) / amount) + 1):
             current = ip_list[amount * i: amount * (i + 1)]
@@ -156,9 +160,9 @@ class DNSLookup:
                     len(current))),
                 current)
             for (domain, _, _, _) in cursor.fetchall():
-                results.append(domain)
+                results.add(domain)
             print(len(results))
-        return results
+        return list(results)
 
     def get_subdomains(self, domain_list):
         domain_list = list(set(domain_list))
