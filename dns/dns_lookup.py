@@ -54,22 +54,27 @@ class DNSLookup:
 
     def _add_results(self, results, last_modified):
         cursor = self.conn.cursor()
+        domain_to_domain_id = dict()
         for (domain, _, _) in results:
             cursor.execute(
                 'SELECT domain, domain_id FROM DNSLookupCache WHERE domain = ?', (domain, ))
-        domain_to_domain_id = dict(cursor.fetchall())
+            for (domain, domain_id) in cursor.fetchall():
+                domain_to_domain_id[domain] = domain_id
+        print(len(results), len(domain_to_domain_id))
         cursor.executemany(
             'REPLACE INTO DNSLookupCache (domain_id, domain, last_modified, ttl) VALUES (?, ?, ?, ?)', [
                 (domain_to_domain_id[domain], domain, last_modified, ttl) for (
                     domain, _, ttl) in results if domain in domain_to_domain_id])
         cursor.executemany(
-            'REPLACE INTO DNSLookupCache (domain, last_modified, ttl) VALUES (?, ?, ?)', [
+            'INSERT INTO DNSLookupCache (domain, last_modified, ttl) VALUES (?, ?, ?)', [
                 (domain, last_modified, ttl) for (
                     domain, _, ttl) in results if domain not in domain_to_domain_id])
+        domain_to_domain_id = dict()
         for (domain, _, _) in results:
             cursor.execute(
                 'SELECT domain, domain_id FROM DNSLookupCache WHERE domain = ?', (domain, ))
-        domain_to_domain_id = dict(cursor.fetchall())
+            for (domain, domain_id) in cursor.fetchall():
+                domain_to_domain_id[domain] = domain_id
         cursor.executemany('DELETE FROM DNSResultCache WHERE domain_id = ?',
                            [(domain_to_domain_id[domain], ) for domain in domain_to_domain_id])
         cursor.executemany(
@@ -109,6 +114,7 @@ class DNSLookup:
         if not self.disable_network:
             print('Looking up %s new domain' % len(new))
             i = 0
+            to_add = list()
             for result in self.lookup_domains(new):
                 if isinstance(result, str) or result is None:
                     print('Domain lookup failed:', result)
@@ -116,14 +122,17 @@ class DNSLookup:
                     break
                 else:
                     (domain, ips, ttl) = result
-                    self._add_result(
-                        domain, ips, ttl, last_modified=time.time())
+                    to_add.append((domain, ips, ttl))
                     if domain in domain_list:
                         if domain not in results:
                             i += 1
                             if i % 100 == 99:
                                 print('%s / %s\n' % (i, len(new)), end='')
+                                self._add_results(to_add, time.time())
+                                to_add.clear()
                         results[domain] = bool(ips)
+            self._add_results(to_add, time.time())
+
             if not failure:
                 i = 0
                 to_add = list()
