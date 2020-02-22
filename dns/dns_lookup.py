@@ -53,6 +53,8 @@ class DNSLookup:
         self._add_results([(domain, ips, ttl)], last_modified)
 
     def _add_results(self, results, last_modified):
+        results = dict([(domain, (ips, ttl)) for (domain, ips, ttl) in results])
+        results = [(domain, results[domain][0], results[domain][1]) for domain in results]
         cursor = self.conn.cursor()
         domain_to_domain_id = dict()
         for (domain, _, _) in results:
