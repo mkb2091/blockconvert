@@ -86,7 +86,7 @@ class DNSLookup:
         self.conn.commit()
 
     def get_dns_results(self, domain_list):
-        results = dict()
+        results = list()
         domain_list = list(set(domain_list))
         cursor = self.conn.cursor()
         amount = 100
@@ -101,7 +101,8 @@ class DNSLookup:
                     len(current))),
                 current)
             for (domain, ip, last_modified, ttl) in cursor.fetchall():
-                results[domain] = results.get(domain, False) or bool(ip)
+                if ip:
+                    results.append(ip)
                 if self.do_update and time.time() > (last_modified + ttl):
                     expired.add((domain, last_modified + ttl))
         expired = [
@@ -126,13 +127,13 @@ class DNSLookup:
                     (domain, ips, ttl) = result
                     to_add.append((domain, ips, ttl))
                     if domain in domain_list:
-                        if domain not in results:
-                            i += 1
-                            if i % 100 == 99:
-                                print('%s / %s\n' % (i, len(new)), end='')
-                                self._add_results(to_add, time.time())
-                                to_add.clear()
-                        results[domain] = bool(ips)
+                        i += 1
+                        if i % 100 == 99:
+                            print('%s / %s\n' % (i, len(new)), end='')
+                            self._add_results(to_add, time.time())
+                            to_add.clear()
+                        if ips:
+                            results.append(domain)
             self._add_results(to_add, time.time())
 
             if not failure:
@@ -146,7 +147,8 @@ class DNSLookup:
                     else:
                         (domain, ips, ttl) = result
                         to_add.append((domain, ips, ttl))
-                        results[domain] = bool(ips)
+                        if ips:
+                            results.append(domain)
                         if domain in domain_list:
                             i += 1
                             if i % 100 == 99:

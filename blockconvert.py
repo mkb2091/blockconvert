@@ -212,12 +212,7 @@ class BlockList():
               (len(self.blacklist), time.time() - last))
         print()
         last = time.time()
-        result = dns.mass_check(self.blacklist, self.dns_check_threads)
-        print('Checked DNS(%ss)' % (time.time() - last))
-        last = time.time()
-        for domain in result:
-            if not result[domain]:
-                self.blacklist.remove(domain)
+        self.blacklist = set(dns.mass_check(self.blacklist, self.dns_check_threads))
         print('Removed expired domains, now at %s rules(%ss)' %
               (len(self.blacklist), time.time() - last))
         last = time.time()
