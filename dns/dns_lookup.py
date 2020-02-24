@@ -101,7 +101,7 @@ class DNSLookup:
                 current)
             for (domain, ip, last_modified, ttl) in cursor.fetchall():
                 if ip:
-                    results.add(ip)
+                    results.add(domain)
                 if self.do_update and time.time() > (last_modified + ttl):
                     expired.add((domain, last_modified + ttl))
         expired = [
