@@ -86,11 +86,10 @@ class DNSLookup:
         self.conn.commit()
 
     def get_dns_results(self, domain_list):
-        results = list()
         domain_list = list(set(domain_list))
         cursor = self.conn.cursor()
         amount = 100
-        results = dict()
+        results = set()
         expired = set()
         for i in range(int(len(domain_list) / amount) + 1):
             current = domain_list[amount * i: amount * (i + 1)]
@@ -102,7 +101,7 @@ class DNSLookup:
                 current)
             for (domain, ip, last_modified, ttl) in cursor.fetchall():
                 if ip:
-                    results.append(ip)
+                    results.add(ip)
                 if self.do_update and time.time() > (last_modified + ttl):
                     expired.add((domain, last_modified + ttl))
         expired = [
@@ -132,8 +131,9 @@ class DNSLookup:
                             print('%s / %s\n' % (i, len(new)), end='')
                             self._add_results(to_add, time.time())
                             to_add.clear()
-                        if ips:
-                            results.append(domain)
+                        results.add(domain)
+                        if not ips:
+                            results.remove(domain)
             self._add_results(to_add, time.time())
 
             if not failure:
@@ -147,8 +147,9 @@ class DNSLookup:
                     else:
                         (domain, ips, ttl) = result
                         to_add.append((domain, ips, ttl))
-                        if ips:
-                            results.append(domain)
+                        results.add(domain)
+                        if not ips:
+                            results.remove(domain)
                         if domain in domain_list:
                             i += 1
                             if i % 100 == 99:
