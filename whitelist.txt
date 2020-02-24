@@ -48,6 +48,7 @@ answers.com
 answers.microsoft.com
 api.bing.com
 api.facebook.com
+api.mymonero.com
 api.particle.io
 appspot-preview.l.google.com
 apt.newrelic.com
@@ -415,6 +416,7 @@ www.malwaredomainlist.com
 www.mbl.is
 www.monero.org
 www.msftconnecttest.com
+www.mymonero.com
 www.namecheap.com
 www.newrelic.com
 www.openwall.com
