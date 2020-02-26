@@ -1,6 +1,7 @@
 *.a-msedge.net
 *.adafruit.com
 *.b.akamaiedge.net
+*.burst-alliance.org
 *.c-msedge.net
 *.delivery.mp.microsoft.com
 *.dl.delivery.mp.microsoft.com
