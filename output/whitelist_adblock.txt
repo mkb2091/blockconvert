@@ -1,6 +1,7 @@
 @@||*.a-msedge.net^
 @@||*.adafruit.com^
 @@||*.b.akamaiedge.net^
+@@||*.burst-alliance.org^
 @@||*.c-msedge.net^
 @@||*.delivery.mp.microsoft.com^
 @@||*.dl.delivery.mp.microsoft.com^
@@ -1759,6 +1760,7 @@
 @@||a14738960062.cdn.optimizely.com^
 @@||a15506560068.cdn.optimizely.com^
 @@||a1625899514.cdn.optimizely.com^
+@@||a16488430484.cdn.optimizely.com^
 @@||a1706490390.cdn.optimizely.com^
 @@||a2900460605.cdn.optimizely.com^
 @@||a2zapk.com^
@@ -1771,6 +1773,7 @@
 @@||a72135589.cdn.optimizely.com^
 @@||a8109351330.cdn.optimizely.com^
 @@||a8209871389.cdn.optimizely.com^
+@@||a8270235338.cdn.optimizely.com^
 @@||a8367280580.cdn-pci.optimizely.com^
 @@||a8392411042.cdn.optimizely.com^
 @@||a8571253058.cdn.optimizely.com^
@@ -1858,6 +1861,7 @@
 @@||acroipm.adobe.com^
 @@||acroipm2.adobe.com^
 @@||acronymfinder.com^
+@@||acsdk.gameyw.easebar.com^
 @@||act.wechat.com^
 @@||actionbutton.co^
 @@||actionnetwork.org^
@@ -2880,6 +2884,7 @@
 @@||api.mina.mi.com^
 @@||api.miui.security.xiaomi.com^
 @@||api.mixpanel.com^
+@@||api.mymonero.com^
 @@||api.naver.com^
 @@||api.netflix.com^
 @@||api.next.exchange^
@@ -3124,6 +3129,7 @@
 @@||arcticapi.com^
 @@||arcus-uswest.amazon.com^
 @@||ardownload.adobe.com^
+@@||area51.stackexchange.com^
 @@||ares.dl.playstation.net^
 @@||areyouonit.soundcloud.com^
 @@||argos.co.uk^
@@ -3375,6 +3381,7 @@
 @@||bcedns.com^
 @@||bcedns.net^
 @@||bcee.lu^
+@@||bd-pratidin.com^
 @@||bdg-analytics.appspot.com^
 @@||bdimg.com^
 @@||bdydns.com^
@@ -6071,6 +6078,7 @@
 @@||go.leanplum.com^
 @@||go.microsoft.com^
 @@||go.nordvpn.net^
+@@||go.onelink.me^
 @@||go.redirectingat.com^
 @@||go.skimresources.com^
 @@||go.skype.com^
@@ -10716,6 +10724,7 @@
 @@||gs.wixapps.net^
 @@||gs2.ww.prod.dl.playstation.net^
 @@||gscdn.nl^
+@@||gscounters.eu1.gigya.com^
 @@||gscounters.us1.gigya.com^
 @@||gslb.spotify.com^
 @@||gsmarena.com^
@@ -10748,6 +10757,7 @@
 @@||gumtree.co.za^
 @@||gumtree.com^
 @@||gumtree.com.au^
+@@||gunbroker.zendesk.com^
 @@||guns.dailycaller.com^
 @@||guokr.com^
 @@||guru3d.com^
@@ -13419,6 +13429,7 @@
 @@||live.synchub.sonymobile.com^
 @@||live.viber.com^
 @@||live.xbox.com^
+@@||liveapi.yext.com^
 @@||liveaquaria.com^
 @@||livearea.api.np.km.playstation.net^
 @@||livearea.np.dl.playstation.net^
@@ -15781,6 +15792,7 @@
 @@||myftpupload.com^
 @@||myhome.naver.com^
 @@||mylife.com^
+@@||mymonero.com^
 @@||mypc.naver.com^
 @@||mypoints.snap.com^
 @@||myportfolio.com^
@@ -15795,6 +15807,7 @@
 @@||myxperia.sonymobile.com^
 @@||mzstatic.com^
 @@||n11scdn.akamaized.net^
+@@||n11scdn2.akamaized.net^
 @@||n2s.us^
 @@||n6.net^
 @@||na1.documents.adobe.com^
@@ -15909,6 +15922,7 @@
 @@||news.vuukle.com^
 @@||news.wko.at^
 @@||news.xbox.com^
+@@||news.yahoo.com^
 @@||news.ycombinator.com^
 @@||newsapi.com.au^
 @@||newscdn.com.au^
@@ -16997,6 +17011,7 @@
 @@||recaptcha.net^
 @@||recipe.rakuten.co.jp^
 @@||recirculation.spot.im^
+@@||reckendrees.systems^
 @@||recode.net^
 @@||recommendation.spot.im^
 @@||recurly.com^
@@ -17394,6 +17409,7 @@
 @@||scs.naver.com^
 @@||sd-ccdc.huawei.com^
 @@||sdad.guru^
+@@||sdk-os.mpsdk.easebar.com^
 @@||sdk.accountkit.com^
 @@||sdk.peppermint.samsung.com^
 @@||sdk.taboola.com^
@@ -18720,6 +18736,7 @@
 @@||ucla.edu^
 @@||ud.me^
 @@||udacity.com^
+@@||udc-neb.kampyle.com^
 @@||udl-api.sonymobile.com^
 @@||uds.licenses.adobe.com^
 @@||udurl.com^
@@ -18763,6 +18780,7 @@
 @@||unicornmedia.com^
 @@||union.ucweb.com^
 @@||uniportal.huawei.com^
+@@||unisdk.update.easebar.com^
 @@||unitedstates.smartscreen-prod.microsoft.com^
 @@||unity3d.com^
 @@||university.rakuten.co.jp^
@@ -18790,6 +18808,7 @@
 @@||update.microsoft.com^
 @@||update.miui.com^
 @@||update.sonymobile.com^
+@@||update.unisdk.easebar.com^
 @@||update.utorrent.com^
 @@||update.viber.com^
 @@||updates.push.services.mozilla.com^
@@ -18977,6 +18996,7 @@
 @@||verify.authorize.net^
 @@||verify.monzo.com^
 @@||verisign.com^
+@@||verizon.inq.com^
 @@||verizonwireless.com^
 @@||version.hybrid.api.here.com^
 @@||vesta.web.telegram.org^
@@ -19031,7 +19051,9 @@
 @@||videomate.mobi^
 @@||videoplaza.tv^
 @@||videopress.com^
+@@||videos-rockstargames-com.akamaized.net^
 @@||videos.files.wordpress.com^
+@@||videos.videopress.com^
 @@||videos.vidible.tv^
 @@||vidible.tv^
 @@||vidoza.net^
@@ -20999,6 +21021,7 @@
 @@||www.*.a-msedge.net^
 @@||www.*.adafruit.com^
 @@||www.*.b.akamaiedge.net^
+@@||www.*.burst-alliance.org^
 @@||www.*.c-msedge.net^
 @@||www.*.delivery.mp.microsoft.com^
 @@||www.*.dl.delivery.mp.microsoft.com^
@@ -22757,6 +22780,7 @@
 @@||www.a14738960062.cdn.optimizely.com^
 @@||www.a15506560068.cdn.optimizely.com^
 @@||www.a1625899514.cdn.optimizely.com^
+@@||www.a16488430484.cdn.optimizely.com^
 @@||www.a1706490390.cdn.optimizely.com^
 @@||www.a2900460605.cdn.optimizely.com^
 @@||www.a2zapk.com^
@@ -22769,6 +22793,7 @@
 @@||www.a72135589.cdn.optimizely.com^
 @@||www.a8109351330.cdn.optimizely.com^
 @@||www.a8209871389.cdn.optimizely.com^
+@@||www.a8270235338.cdn.optimizely.com^
 @@||www.a8367280580.cdn-pci.optimizely.com^
 @@||www.a8392411042.cdn.optimizely.com^
 @@||www.a8571253058.cdn.optimizely.com^
@@ -22856,6 +22881,7 @@
 @@||www.acroipm.adobe.com^
 @@||www.acroipm2.adobe.com^
 @@||www.acronymfinder.com^
+@@||www.acsdk.gameyw.easebar.com^
 @@||www.act.wechat.com^
 @@||www.actionbutton.co^
 @@||www.actionnetwork.org^
@@ -23878,6 +23904,7 @@
 @@||www.api.mina.mi.com^
 @@||www.api.miui.security.xiaomi.com^
 @@||www.api.mixpanel.com^
+@@||www.api.mymonero.com^
 @@||www.api.naver.com^
 @@||www.api.netflix.com^
 @@||www.api.next.exchange^
@@ -24122,6 +24149,7 @@
 @@||www.arcticapi.com^
 @@||www.arcus-uswest.amazon.com^
 @@||www.ardownload.adobe.com^
+@@||www.area51.stackexchange.com^
 @@||www.ares.dl.playstation.net^
 @@||www.areyouonit.soundcloud.com^
 @@||www.argos.co.uk^
@@ -24373,6 +24401,7 @@
 @@||www.bcedns.com^
 @@||www.bcedns.net^
 @@||www.bcee.lu^
+@@||www.bd-pratidin.com^
 @@||www.bdg-analytics.appspot.com^
 @@||www.bdimg.com^
 @@||www.bdydns.com^
@@ -27069,6 +27098,7 @@
 @@||www.go.leanplum.com^
 @@||www.go.microsoft.com^
 @@||www.go.nordvpn.net^
+@@||www.go.onelink.me^
 @@||www.go.redirectingat.com^
 @@||www.go.skimresources.com^
 @@||www.go.skype.com^
@@ -31714,6 +31744,7 @@
 @@||www.gs.wixapps.net^
 @@||www.gs2.ww.prod.dl.playstation.net^
 @@||www.gscdn.nl^
+@@||www.gscounters.eu1.gigya.com^
 @@||www.gscounters.us1.gigya.com^
 @@||www.gslb.spotify.com^
 @@||www.gsmarena.com^
@@ -31746,6 +31777,7 @@
 @@||www.gumtree.co.za^
 @@||www.gumtree.com^
 @@||www.gumtree.com.au^
+@@||www.gunbroker.zendesk.com^
 @@||www.guns.dailycaller.com^
 @@||www.guokr.com^
 @@||www.guru3d.com^
@@ -34417,6 +34449,7 @@
 @@||www.live.synchub.sonymobile.com^
 @@||www.live.viber.com^
 @@||www.live.xbox.com^
+@@||www.liveapi.yext.com^
 @@||www.liveaquaria.com^
 @@||www.livearea.api.np.km.playstation.net^
 @@||www.livearea.np.dl.playstation.net^
@@ -36779,6 +36812,7 @@
 @@||www.myftpupload.com^
 @@||www.myhome.naver.com^
 @@||www.mylife.com^
+@@||www.mymonero.com^
 @@||www.mypc.naver.com^
 @@||www.mypoints.snap.com^
 @@||www.myportfolio.com^
@@ -36793,6 +36827,7 @@
 @@||www.myxperia.sonymobile.com^
 @@||www.mzstatic.com^
 @@||www.n11scdn.akamaized.net^
+@@||www.n11scdn2.akamaized.net^
 @@||www.n2s.us^
 @@||www.n6.net^
 @@||www.na1.documents.adobe.com^
@@ -36907,6 +36942,7 @@
 @@||www.news.vuukle.com^
 @@||www.news.wko.at^
 @@||www.news.xbox.com^
+@@||www.news.yahoo.com^
 @@||www.news.ycombinator.com^
 @@||www.newsapi.com.au^
 @@||www.newscdn.com.au^
@@ -37995,6 +38031,7 @@
 @@||www.recaptcha.net^
 @@||www.recipe.rakuten.co.jp^
 @@||www.recirculation.spot.im^
+@@||www.reckendrees.systems^
 @@||www.recode.net^
 @@||www.recommendation.spot.im^
 @@||www.recurly.com^
@@ -38392,6 +38429,7 @@
 @@||www.scs.naver.com^
 @@||www.sd-ccdc.huawei.com^
 @@||www.sdad.guru^
+@@||www.sdk-os.mpsdk.easebar.com^
 @@||www.sdk.accountkit.com^
 @@||www.sdk.peppermint.samsung.com^
 @@||www.sdk.taboola.com^
@@ -39718,6 +39756,7 @@
 @@||www.ucla.edu^
 @@||www.ud.me^
 @@||www.udacity.com^
+@@||www.udc-neb.kampyle.com^
 @@||www.udl-api.sonymobile.com^
 @@||www.uds.licenses.adobe.com^
 @@||www.udurl.com^
@@ -39761,6 +39800,7 @@
 @@||www.unicornmedia.com^
 @@||www.union.ucweb.com^
 @@||www.uniportal.huawei.com^
+@@||www.unisdk.update.easebar.com^
 @@||www.unitedstates.smartscreen-prod.microsoft.com^
 @@||www.unity3d.com^
 @@||www.university.rakuten.co.jp^
@@ -39788,6 +39828,7 @@
 @@||www.update.microsoft.com^
 @@||www.update.miui.com^
 @@||www.update.sonymobile.com^
+@@||www.update.unisdk.easebar.com^
 @@||www.update.utorrent.com^
 @@||www.update.viber.com^
 @@||www.updates.push.services.mozilla.com^
@@ -39975,6 +40016,7 @@
 @@||www.verify.authorize.net^
 @@||www.verify.monzo.com^
 @@||www.verisign.com^
+@@||www.verizon.inq.com^
 @@||www.verizonwireless.com^
 @@||www.version.hybrid.api.here.com^
 @@||www.vesta.web.telegram.org^
@@ -40029,7 +40071,9 @@
 @@||www.videomate.mobi^
 @@||www.videoplaza.tv^
 @@||www.videopress.com^
+@@||www.videos-rockstargames-com.akamaized.net^
 @@||www.videos.files.wordpress.com^
+@@||www.videos.videopress.com^
 @@||www.videos.vidible.tv^
 @@||www.vidible.tv^
 @@||www.vidoza.net^
@@ -42205,6 +42249,7 @@
 @@||www.zn3owdqdlxu72cwnv-nejm.siteintercept.qualtrics.com^
 @@||www.zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com^
 @@||www.zn6s8zxrar8dc7rld-educationinsight.siteintercept.qualtrics.com^
+@@||www.zn6y5j1pcz0fpkvop-newsuk.siteintercept.qualtrics.com^
 @@||www.zn87b2gchqlbyp0jn-viacom.siteintercept.qualtrics.com^
 @@||www.zn9yauo1hia5mptaj-sni.siteintercept.qualtrics.com^
 @@||www.zn_37mptkltsyz3yj3-cbs.siteintercept.qualtrics.com^
@@ -42215,6 +42260,7 @@
 @@||www.zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com^
 @@||www.zn_ccjokix6bpit8tr-cbs.siteintercept.qualtrics.com^
 @@||www.zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com^
+@@||www.znavrrbuaasua7fbz-trulia.siteintercept.qualtrics.com^
 @@||www.znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com^
 @@||www.zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com^
 @@||www.znequvsn9dye3xf9b-amcci.siteintercept.qualtrics.com^
@@ -42444,6 +42490,7 @@
 @@||zn3owdqdlxu72cwnv-nejm.siteintercept.qualtrics.com^
 @@||zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com^
 @@||zn6s8zxrar8dc7rld-educationinsight.siteintercept.qualtrics.com^
+@@||zn6y5j1pcz0fpkvop-newsuk.siteintercept.qualtrics.com^
 @@||zn87b2gchqlbyp0jn-viacom.siteintercept.qualtrics.com^
 @@||zn9yauo1hia5mptaj-sni.siteintercept.qualtrics.com^
 @@||zn_37mptkltsyz3yj3-cbs.siteintercept.qualtrics.com^
@@ -42454,6 +42501,7 @@
 @@||zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com^
 @@||zn_ccjokix6bpit8tr-cbs.siteintercept.qualtrics.com^
 @@||zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com^
+@@||znavrrbuaasua7fbz-trulia.siteintercept.qualtrics.com^
 @@||znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com^
 @@||zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com^
 @@||znequvsn9dye3xf9b-amcci.siteintercept.qualtrics.com^
