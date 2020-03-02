@@ -91,6 +91,7 @@ class DNSLookup:
         amount = 100
         results = set()
         expired = set()
+        no_record = set()
         for i in range(int(len(domain_list) / amount) + 1):
             current = domain_list[amount * i: amount * (i + 1)]
             cursor.execute(
@@ -102,6 +103,8 @@ class DNSLookup:
             for (domain, ip, last_modified, ttl) in cursor.fetchall():
                 if ip:
                     results.add(domain)
+                else:
+                    no_record.add(domain)
                 if self.do_update and time.time() > (last_modified + ttl):
                     expired.add((domain, last_modified + ttl))
         expired = [
@@ -112,7 +115,8 @@ class DNSLookup:
                 key=lambda x: x[1])]
         failure = False
         print('Found %s existing records' % len(results))
-        new = [domain for domain in domain_list if domain not in results]
+        new = [domain for domain in domain_list if domain not in results and domain not in no_record]
+        del no_record
         if not self.disable_network:
             print('Looking up %s new domain' % len(new))
             i = 0
