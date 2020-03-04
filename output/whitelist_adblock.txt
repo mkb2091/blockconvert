@@ -1760,7 +1760,6 @@
 @@||a14738960062.cdn.optimizely.com^
 @@||a15506560068.cdn.optimizely.com^
 @@||a1625899514.cdn.optimizely.com^
-@@||a16488430484.cdn.optimizely.com^
 @@||a1706490390.cdn.optimizely.com^
 @@||a2900460605.cdn.optimizely.com^
 @@||a2zapk.com^
@@ -3460,6 +3459,7 @@
 @@||biglots.112.2o7.net^
 @@||bigthink.com^
 @@||bigzipfiles.facebook.com^
+@@||bild-reuters-video.akamaized.net^
 @@||bilder-upload.eu^
 @@||bilibili.com^
 @@||bill.xbox.com^
@@ -15451,6 +15451,7 @@
 @@||media.viafoura.net^
 @@||media.viber.com^
 @@||media.xda-developers.com^
+@@||mediacorp.112.2o7.net^
 @@||mediafile.dcinside.com^
 @@||mediafire.com^
 @@||mediakit.breitbart.com^
@@ -15807,7 +15808,7 @@
 @@||myxperia.sonymobile.com^
 @@||mzstatic.com^
 @@||n11scdn.akamaized.net^
-@@||n11scdn2.akamaized.net^
+@@||n11scdn3.akamaized.net^
 @@||n2s.us^
 @@||n6.net^
 @@||na1.documents.adobe.com^
@@ -15925,6 +15926,7 @@
 @@||news.yahoo.com^
 @@||news.ycombinator.com^
 @@||newsapi.com.au^
+@@||newsatnewscorpau.files.wordpress.com^
 @@||newscdn.com.au^
 @@||newsday.com^
 @@||newserver.nirsoft.net^
@@ -22780,7 +22782,6 @@
 @@||www.a14738960062.cdn.optimizely.com^
 @@||www.a15506560068.cdn.optimizely.com^
 @@||www.a1625899514.cdn.optimizely.com^
-@@||www.a16488430484.cdn.optimizely.com^
 @@||www.a1706490390.cdn.optimizely.com^
 @@||www.a2900460605.cdn.optimizely.com^
 @@||www.a2zapk.com^
@@ -24480,6 +24481,7 @@
 @@||www.biglots.112.2o7.net^
 @@||www.bigthink.com^
 @@||www.bigzipfiles.facebook.com^
+@@||www.bild-reuters-video.akamaized.net^
 @@||www.bilder-upload.eu^
 @@||www.bilibili.com^
 @@||www.bill.xbox.com^
@@ -36471,6 +36473,7 @@
 @@||www.media.viafoura.net^
 @@||www.media.viber.com^
 @@||www.media.xda-developers.com^
+@@||www.mediacorp.112.2o7.net^
 @@||www.mediafile.dcinside.com^
 @@||www.mediafire.com^
 @@||www.mediakit.breitbart.com^
@@ -36827,7 +36830,7 @@
 @@||www.myxperia.sonymobile.com^
 @@||www.mzstatic.com^
 @@||www.n11scdn.akamaized.net^
-@@||www.n11scdn2.akamaized.net^
+@@||www.n11scdn3.akamaized.net^
 @@||www.n2s.us^
 @@||www.n6.net^
 @@||www.na1.documents.adobe.com^
@@ -36945,6 +36948,7 @@
 @@||www.news.yahoo.com^
 @@||www.news.ycombinator.com^
 @@||www.newsapi.com.au^
+@@||www.newsatnewscorpau.files.wordpress.com^
 @@||www.newscdn.com.au^
 @@||www.newsday.com^
 @@||www.newserver.nirsoft.net^
@@ -42260,10 +42264,10 @@
 @@||www.zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com^
 @@||www.zn_ccjokix6bpit8tr-cbs.siteintercept.qualtrics.com^
 @@||www.zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com^
-@@||www.znavrrbuaasua7fbz-trulia.siteintercept.qualtrics.com^
 @@||www.znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com^
 @@||www.zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com^
 @@||www.znequvsn9dye3xf9b-amcci.siteintercept.qualtrics.com^
+@@||www.zney281m5bvkorinx-coupons.siteintercept.qualtrics.com^
 @@||www.zobj.net^
 @@||www.zoho.com^
 @@||www.zoho.eu^
@@ -42501,10 +42505,10 @@
 @@||zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com^
 @@||zn_ccjokix6bpit8tr-cbs.siteintercept.qualtrics.com^
 @@||zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com^
-@@||znavrrbuaasua7fbz-trulia.siteintercept.qualtrics.com^
 @@||znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com^
 @@||zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com^
 @@||znequvsn9dye3xf9b-amcci.siteintercept.qualtrics.com^
+@@||zney281m5bvkorinx-coupons.siteintercept.qualtrics.com^
 @@||zobj.net^
 @@||zoho.com^
 @@||zoho.eu^
