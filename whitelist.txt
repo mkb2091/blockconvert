@@ -1,3 +1,4 @@
+stats.stackexchange.com
 *.a-msedge.net
 *.adafruit.com
 *.b.akamaiedge.net
