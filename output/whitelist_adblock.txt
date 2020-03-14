@@ -1917,6 +1917,7 @@
 @@||acroipm.adobe.com^
 @@||acroipm2.adobe.com^
 @@||acronymfinder.com^
+@@||acs.m.taobao.com^
 @@||acsdk.gameyw.easebar.com^
 @@||act.wechat.com^
 @@||actionbutton.co^
@@ -1952,6 +1953,8 @@
 @@||ad.vu^
 @@||adage.com^
 @@||adameve.com^
+@@||adash.man.aliyuncs.com^
+@@||adashx.m.taobao.com^
 @@||adaware.com^
 @@||adaway.org^
 @@||adb.juvander.net^
@@ -2713,6 +2716,7 @@
 @@||ambassadors.xbox.com^
 @@||amd.cdn.turner.com^
 @@||amd.com^
+@@||amdc.m.taobao.com^
 @@||ameblo.jp^
 @@||america.net^
 @@||americanexpress.com^
@@ -3323,6 +3327,7 @@
 @@||au1.p5.documentsawsperf.adobe.com^
 @@||auctions.yahoo.co.jp^
 @@||audible.com^
+@@||audid-api.taobao.com^
 @@||audio-ak.spotify.com.edgesuite.net^
 @@||audio-ake.spotify.com.edgesuite.net^
 @@||audio-akp.spotify.com.edgesuite.net^
@@ -3354,6 +3359,7 @@
 @@||authentication.taboola.com^
 @@||authoring.xbox.com^
 @@||authorize.net^
+@@||authweb.alipay.com^
 @@||authy.vimeo.com^
 @@||auto.daum.net^
 @@||auto.search.msn.com^
@@ -5126,6 +5132,7 @@
 @@||dotsub.com^
 @@||doubanio.com^
 @@||doubleclick.net^
+@@||down-cdn.dingtalk.com^
 @@||down.boomkat.com^
 @@||down.local.sec.samsung.com^
 @@||down.local.sec.samsung.com.cdngc.net^
@@ -5219,6 +5226,7 @@
 @@||duosecurity.com^
 @@||dvb.pandora.xiaomi.com^
 @@||dvd.netflix.com^
+@@||dw-online.ksosoft.com^
 @@||dw.com.com^
 @@||dw.techrepublic.com^
 @@||dw.uptodown.com^
@@ -5427,6 +5435,7 @@
 @@||entertain.v.daum.net^
 @@||entireweb.com^
 @@||entitlement.auth.adobe.com^
+@@||entpsz.alipay.com^
 @@||entrepreneur.com^
 @@||entry-at.line.me^
 @@||eo.wikipedia.com^
@@ -5692,6 +5701,7 @@
 @@||file-igamecj.akamaized.net^
 @@||file-up.org^
 @@||file-upload.com^
+@@||file.dingtalk.com^
 @@||file.igamecj.com^
 @@||file.market.xiaomi.com^
 @@||file.wechat.com^
@@ -5704,6 +5714,7 @@
 @@||filehippo.com^
 @@||filehorse.com^
 @@||filepicker.io^
+@@||files.alicdn.com^
 @@||files.anedot.com^
 @@||files.bbci.co.uk^
 @@||files.brightcove.com^
@@ -5858,6 +5869,7 @@
 @@||fota-secure-dn.ospserver.net^
 @@||fotmob.com^
 @@||fotolia.com^
+@@||fourier.taobao.com^
 @@||foursquare.com^
 @@||fox13now.com^
 @@||fox17online.com^
@@ -10891,6 +10903,7 @@
 @@||gurud.ee^
 @@||gvt1.com^
 @@||gw.alicdn.com^
+@@||gw.alipayobjects.com^
 @@||gyazo.com^
 @@||gz-lb1.internet.spanner.alipaydns.com^
 @@||h-cdn.com^
@@ -10898,6 +10911,7 @@
 @@||h.beta.facebook.com^
 @@||h.biz^
 @@||h.facebook.com^
+@@||h5.dingtalk.com^
 @@||h5.m.taobao.com^
 @@||h5.mi.com^
 @@||hackaday.com^
@@ -11135,6 +11149,7 @@
 @@||i-cdn.embed.ly^
 @@||i-technet.sec.s-msft.com^
 @@||i.alicdn.com^
+@@||i.alipayobjects.com^
 @@||i.cdn.turner.com^
 @@||i.click.taobao.com^
 @@||i.cmpnet.com^
@@ -15552,6 +15567,7 @@
 @@||md.mp.microsoft.com.zone^
 @@||md.mp.microsoft.com.zuerich^
 @@||md.mp.microsoft.com.zw^
+@@||mdap.alipay.com^
 @@||mdidesign.ca^
 @@||mdxvitals-res.cloudinary.com^
 @@||me-en.kaspersky.com^
@@ -15729,6 +15745,7 @@
 @@||mix1065fm.cbslocal.com^
 @@||mixin.dl.files.xiaomi.net^
 @@||mixin.xiaomi.net^
+@@||mixnews.lv^
 @@||mixpanel.com^
 @@||mkfreedl.b-cdn.net^
 @@||mkt7185.com^
@@ -15783,7 +15800,9 @@
 @@||mobile.rakuten.co.jp^
 @@||mobile.scribd.com^
 @@||mobile.twitter.com^
+@@||mobilecns.alipay.com^
 @@||mobiledl.adobe.com^
+@@||mobilegw.alipay.com^
 @@||mobilemarketing.adobe.com^
 @@||mobilenetworkscoring-pa.googleapis.com^
 @@||mobisystems.com^
@@ -17781,6 +17800,7 @@
 @@||sgp01.tp.hd.mi.com^
 @@||sgpac.account.xiaomi.com^
 @@||sgsg.samsung.com^
+@@||sh.docs.dingtalk.com^
 @@||sh.st^
 @@||sh.wagbridge.taobao.com.gds.alibabadns.com^
 @@||shacknews.com^
@@ -17837,6 +17857,7 @@
 @@||shots.snap.com^
 @@||shrd.fncstatic.com^
 @@||shrm-res.cloudinary.com^
+@@||shuc-android.ksord.com^
 @@||shuju.mi.com^
 @@||si.edu^
 @@||si.playstation.com^
@@ -18200,6 +18221,7 @@
 @@||static.clickfunnels.com^
 @@||static.coinbase.com^
 @@||static.crunchyroll.com^
+@@||static.dingtalk.com^
 @@||static.djangoproject.com^
 @@||static.dynamicyield.com^
 @@||static.fastpic.ru^
@@ -18274,6 +18296,7 @@
 @@||stats.gc.fe.apple-dns.net^
 @@||stats.lineageos.org^
 @@||stats.pusher.com^
+@@||stats.stackexchange.com^
 @@||stats.streamelements.com^
 @@||stats.t-online.de^
 @@||statsandengagement.help.soundcloud.com^
@@ -18964,6 +18987,7 @@
 @@||umblr.com^
 @@||umd.edu^
 @@||umdc.aliapp.org^
+@@||umdc.alipay.org^
 @@||umeeting.huawei.com^
 @@||umeng.com^
 @@||umich.edu^
@@ -20995,6 +21019,7 @@
 @@||webmail.vtr.net^
 @@||webmasters.stackexchange.com^
 @@||webmd.com^
+@@||weboffice-static.docs.dingtalk.com^
 @@||webopedia.com^
 @@||webpagefx.com^
 @@||webresint.122.2o7.net^
@@ -21154,6 +21179,7 @@
 @@||wnyc.org^
 @@||wololo.net^
 @@||womenshealthmag.com^
+@@||woodpecker.uc.cn^
 @@||woopic.com^
 @@||woopra.com^
 @@||word.office.naver.com^
@@ -23148,6 +23174,7 @@
 @@||www.acroipm.adobe.com^
 @@||www.acroipm2.adobe.com^
 @@||www.acronymfinder.com^
+@@||www.acs.m.taobao.com^
 @@||www.acsdk.gameyw.easebar.com^
 @@||www.act.wechat.com^
 @@||www.actionbutton.co^
@@ -23183,6 +23210,8 @@
 @@||www.ad.vu^
 @@||www.adage.com^
 @@||www.adameve.com^
+@@||www.adash.man.aliyuncs.com^
+@@||www.adashx.m.taobao.com^
 @@||www.adaware.com^
 @@||www.adaway.org^
 @@||www.adb.juvander.net^
@@ -23944,6 +23973,7 @@
 @@||www.ambassadors.xbox.com^
 @@||www.amd.cdn.turner.com^
 @@||www.amd.com^
+@@||www.amdc.m.taobao.com^
 @@||www.ameblo.jp^
 @@||www.america.net^
 @@||www.americanexpress.com^
@@ -24554,6 +24584,7 @@
 @@||www.au1.p5.documentsawsperf.adobe.com^
 @@||www.auctions.yahoo.co.jp^
 @@||www.audible.com^
+@@||www.audid-api.taobao.com^
 @@||www.audio-ak.spotify.com.edgesuite.net^
 @@||www.audio-ake.spotify.com.edgesuite.net^
 @@||www.audio-akp.spotify.com.edgesuite.net^
@@ -24585,6 +24616,7 @@
 @@||www.authentication.taboola.com^
 @@||www.authoring.xbox.com^
 @@||www.authorize.net^
+@@||www.authweb.alipay.com^
 @@||www.authy.vimeo.com^
 @@||www.auto.daum.net^
 @@||www.auto.search.msn.com^
@@ -26357,6 +26389,7 @@
 @@||www.dotsub.com^
 @@||www.doubanio.com^
 @@||www.doubleclick.net^
+@@||www.down-cdn.dingtalk.com^
 @@||www.down.boomkat.com^
 @@||www.down.local.sec.samsung.com^
 @@||www.down.local.sec.samsung.com.cdngc.net^
@@ -26450,6 +26483,7 @@
 @@||www.duosecurity.com^
 @@||www.dvb.pandora.xiaomi.com^
 @@||www.dvd.netflix.com^
+@@||www.dw-online.ksosoft.com^
 @@||www.dw.com.com^
 @@||www.dw.techrepublic.com^
 @@||www.dw.uptodown.com^
@@ -26658,6 +26692,7 @@
 @@||www.entertain.v.daum.net^
 @@||www.entireweb.com^
 @@||www.entitlement.auth.adobe.com^
+@@||www.entpsz.alipay.com^
 @@||www.entrepreneur.com^
 @@||www.entry-at.line.me^
 @@||www.eo.wikipedia.com^
@@ -26923,6 +26958,7 @@
 @@||www.file-igamecj.akamaized.net^
 @@||www.file-up.org^
 @@||www.file-upload.com^
+@@||www.file.dingtalk.com^
 @@||www.file.igamecj.com^
 @@||www.file.market.xiaomi.com^
 @@||www.file.wechat.com^
@@ -26935,6 +26971,7 @@
 @@||www.filehippo.com^
 @@||www.filehorse.com^
 @@||www.filepicker.io^
+@@||www.files.alicdn.com^
 @@||www.files.anedot.com^
 @@||www.files.bbci.co.uk^
 @@||www.files.brightcove.com^
@@ -27089,6 +27126,7 @@
 @@||www.fota-secure-dn.ospserver.net^
 @@||www.fotmob.com^
 @@||www.fotolia.com^
+@@||www.fourier.taobao.com^
 @@||www.foursquare.com^
 @@||www.fox13now.com^
 @@||www.fox17online.com^
@@ -32122,6 +32160,7 @@
 @@||www.gurud.ee^
 @@||www.gvt1.com^
 @@||www.gw.alicdn.com^
+@@||www.gw.alipayobjects.com^
 @@||www.gyazo.com^
 @@||www.gz-lb1.internet.spanner.alipaydns.com^
 @@||www.h-cdn.com^
@@ -32129,6 +32168,7 @@
 @@||www.h.beta.facebook.com^
 @@||www.h.biz^
 @@||www.h.facebook.com^
+@@||www.h5.dingtalk.com^
 @@||www.h5.m.taobao.com^
 @@||www.h5.mi.com^
 @@||www.hackaday.com^
@@ -32366,6 +32406,7 @@
 @@||www.i-cdn.embed.ly^
 @@||www.i-technet.sec.s-msft.com^
 @@||www.i.alicdn.com^
+@@||www.i.alipayobjects.com^
 @@||www.i.cdn.turner.com^
 @@||www.i.click.taobao.com^
 @@||www.i.cmpnet.com^
@@ -36783,6 +36824,7 @@
 @@||www.md.mp.microsoft.com.zone^
 @@||www.md.mp.microsoft.com.zuerich^
 @@||www.md.mp.microsoft.com.zw^
+@@||www.mdap.alipay.com^
 @@||www.mdidesign.ca^
 @@||www.mdxvitals-res.cloudinary.com^
 @@||www.me-en.kaspersky.com^
@@ -36960,6 +37002,7 @@
 @@||www.mix1065fm.cbslocal.com^
 @@||www.mixin.dl.files.xiaomi.net^
 @@||www.mixin.xiaomi.net^
+@@||www.mixnews.lv^
 @@||www.mixpanel.com^
 @@||www.mkfreedl.b-cdn.net^
 @@||www.mkt7185.com^
@@ -37014,7 +37057,9 @@
 @@||www.mobile.rakuten.co.jp^
 @@||www.mobile.scribd.com^
 @@||www.mobile.twitter.com^
+@@||www.mobilecns.alipay.com^
 @@||www.mobiledl.adobe.com^
+@@||www.mobilegw.alipay.com^
 @@||www.mobilemarketing.adobe.com^
 @@||www.mobilenetworkscoring-pa.googleapis.com^
 @@||www.mobisystems.com^
@@ -39012,6 +39057,7 @@
 @@||www.sgp01.tp.hd.mi.com^
 @@||www.sgpac.account.xiaomi.com^
 @@||www.sgsg.samsung.com^
+@@||www.sh.docs.dingtalk.com^
 @@||www.sh.st^
 @@||www.sh.wagbridge.taobao.com.gds.alibabadns.com^
 @@||www.shacknews.com^
@@ -39068,6 +39114,7 @@
 @@||www.shots.snap.com^
 @@||www.shrd.fncstatic.com^
 @@||www.shrm-res.cloudinary.com^
+@@||www.shuc-android.ksord.com^
 @@||www.shuju.mi.com^
 @@||www.si.edu^
 @@||www.si.playstation.com^
@@ -39431,6 +39478,7 @@
 @@||www.static.clickfunnels.com^
 @@||www.static.coinbase.com^
 @@||www.static.crunchyroll.com^
+@@||www.static.dingtalk.com^
 @@||www.static.djangoproject.com^
 @@||www.static.dynamicyield.com^
 @@||www.static.fastpic.ru^
@@ -39505,6 +39553,7 @@
 @@||www.stats.gc.fe.apple-dns.net^
 @@||www.stats.lineageos.org^
 @@||www.stats.pusher.com^
+@@||www.stats.stackexchange.com^
 @@||www.stats.streamelements.com^
 @@||www.stats.t-online.de^
 @@||www.statsandengagement.help.soundcloud.com^
@@ -40195,6 +40244,7 @@
 @@||www.umblr.com^
 @@||www.umd.edu^
 @@||www.umdc.aliapp.org^
+@@||www.umdc.alipay.org^
 @@||www.umeeting.huawei.com^
 @@||www.umeng.com^
 @@||www.umich.edu^
@@ -42226,6 +42276,7 @@
 @@||www.webmail.vtr.net^
 @@||www.webmasters.stackexchange.com^
 @@||www.webmd.com^
+@@||www.weboffice-static.docs.dingtalk.com^
 @@||www.webopedia.com^
 @@||www.webpagefx.com^
 @@||www.webresint.122.2o7.net^
@@ -42385,6 +42436,7 @@
 @@||www.wnyc.org^
 @@||www.wololo.net^
 @@||www.womenshealthmag.com^
+@@||www.woodpecker.uc.cn^
 @@||www.woopic.com^
 @@||www.woopra.com^
 @@||www.word.office.naver.com^
