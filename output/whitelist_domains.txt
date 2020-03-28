@@ -1705,8 +1705,6 @@
 58pic.com
 5min.com
 6-edge-chat.facebook.com
-609d93yvzj2e-a.akamaihd.net
-66.media.tumblr.com
 699pic.com
 6e.de
 6p.ru
@@ -1865,7 +1863,6 @@ acsdk.gameyw.easebar.com
 act.wechat.com
 actionbutton.co
 actionnetwork.org
-actions.everyaction.com
 activate-sea.adobe.com
 activate-sjc0.adobe.com
 activate.adobe.com
@@ -1962,7 +1959,6 @@ ads.askgamblers.com
 ads.fuckingmachines.com
 ads.google.com
 ads.id
-ads.investingchannel.com
 ads.microsoft.com
 ads.nipr.ac.jp
 ads.pinterest.com
@@ -1994,7 +1990,6 @@ ae911truth.org
 aeis.alicdn.com
 aemmobile.adobe.com
 aetna.com
-aetnaaetnaprod2018.112.2o7.net
 aeu.alicdn.com
 affiliate-program.amazon.com
 affiliate.hitbtc.com
@@ -2676,7 +2671,6 @@ ams.amazon.co.jp
 ams.amazon.co.uk
 ams.amazon.com
 amzn.to
-ana.112.2o7.net
 ana.fr
 analytics.edgesuite.net
 analytics.google.com
@@ -2743,7 +2737,6 @@ api-beta.huawei.com
 api-blog.blog.naver.com
 api-c.sonymobile.com
 api-cdn.embed.ly
-api-cf.affirm.com
 api-consup.huawei.com
 api-embedded.soundcloud.com
 api-glb.smoot.apple.com
@@ -2764,7 +2757,6 @@ api-mobile-creators.soundcloud.com
 api-mobile.soundcloud.com
 api-mobile.x.sndcdn.com
 api-mobileweb.soundcloud.com
-api-na.geetest.com
 api-nyc.soundcloud.com
 api-partner.spotify.com
 api-partners.soundcloud.com
@@ -2850,7 +2842,6 @@ api.fast.com
 api.feedburner.com
 api.flickr.com
 api.flowplayer.com
-api.flyertown.ca
 api.foursquare.com
 api.foxnews.com
 api.gallery.intl.miui.com
@@ -2883,7 +2874,6 @@ api.keycdn.com
 api.kinja.com
 api.leanplum.com
 api.line.me
-api.livechatinc.com
 api.login.engadget.com
 api.login.techcrunch.com
 api.luftdaten.info
@@ -3034,7 +3024,6 @@ app-measurement.com
 app-perms.playstation.com
 app-ru.huawei.com
 app-sj16.marketo.com
-app-sj26.marketo.com
 app-uk.huawei.com
 app.adjust.com
 app.alipay.com
@@ -4092,7 +4081,6 @@ cedexis.net
 cedexispub.cdnetworks.net
 cell.office.naver.com
 census.gov
-centaurpublications.122.2o7.net
 centraleu.pi-dns.com
 cern.ch
 cert.halo.part.xbox.com
@@ -4863,7 +4851,6 @@ device.auth.xboxlive.com
 deviceapi.micloud.xiaomi.net
 deviceportal.nettvservices.com
 devices.netflix.com
-devimages-cdn.apple.com
 devmate.com
 df.ly
 dfapvmql-q.global.ssl.fastly.net
@@ -5270,7 +5257,6 @@ elmundo.es
 eloqua.com
 elpais.com
 elsalvador.com
-eltiempo.112.2o7.net
 eltraficosv.com
 eltrafiko.com
 elurl.com
@@ -5512,7 +5498,6 @@ fakecell.sys.miui.com
 familydollar.com
 fan.twitch.tv
 fanat.ua
-fanatics.112.2o7.net
 fandango.com
 fandom.wikia.com
 fansonly.com
@@ -5787,7 +5772,6 @@ fox6now.com
 fox8.com
 foxnews.com
 foxsports.com.au
-fp-cdn.azureedge.net
 fp-eu-w1-aai.flowplayer.com
 fp.profiles.us.playstation.com
 fpdownload.adobe.com
@@ -5910,7 +5894,6 @@ g2play.com
 g3.net
 ga.gravatar.com
 gacollector.l.google.com
-gadasource.storage.googleapis.com
 gadgetsnow.com
 gall.dcinside.com
 gallery.cdn.pandora.xiaomi.com
@@ -11552,7 +11535,6 @@ japanese.engadget.com
 japantimes.disqus.com
 jarv.is
 jarvis-dev.sonymobile.com
-jasper.112.2o7.net
 javdict.disqus.com
 javhub.net
 jcpenney.com
@@ -13408,7 +13390,6 @@ linkbucks.com
 linkedin.com
 linkedinmobileapp.com
 linkis.com
-linkmaker.itunes.apple.com
 links.announcements.soundcloud.com
 links.confirmation.soundcloud.com
 links.em.ign.com
@@ -15931,7 +15912,6 @@ netlify.com
 netroam.mihome.intl.xiaomi.net
 netroam.mihome.xiaomi.net
 netstorage-nur.akamaized.net
-network-eu.bazaarvoice.com
 network.bazaarvoice.com
 networking.engadget.com
 networks.feedburner.com
@@ -16485,7 +16465,6 @@ pastebin.com
 pastebin.org
 pasteboard.co
 pasted.co
-patagonia.122.2o7.net
 path.qualcomm.com
 patheos.com
 patorjk.com
@@ -16496,7 +16475,6 @@ pay.google.com
 pay.igamecj.com
 pay.line.me
 pay.oneplus.com
-pay.shopify.com
 pay.stripe.com
 pay.wechat.com
 payload.cargocollective.com
@@ -16600,7 +16578,6 @@ pie.daum.net
 piguiqproxy.com
 pilkanozna.pl
 pimg1.126.net
-ping-meta-prd.jwpltx.com
 ping.feedburner.com
 ping.taplytics.com
 pingjs.qq.com
@@ -17012,7 +16989,6 @@ radikal.ru
 radiofrance.fr
 radiostacja.pl
 raidrush.ws
-rakuten.112.2o7.net
 rakuten.co.jp
 rakuten.com
 rambler.ru
@@ -17453,7 +17429,6 @@ scribol.com
 script.google.com
 script.ioam.de
 scripts.ign.com
-scripts.kataweb.it
 scripts.pay.bka.sh
 scs.huawei.com
 scs.naver.com
@@ -17462,7 +17437,6 @@ sdad.guru
 sdk-os.mpsdk.easebar.com
 sdk.accountkit.com
 sdk.peppermint.samsung.com
-sdk.pulse.schibsted.com
 sdk.taboola.com
 sdmaid.darken.eu
 sds.playstation.com
@@ -17881,7 +17855,6 @@ sony.jp
 sony.net
 sonycreativesoftware.com
 sonyericsson2.accu-weather.com
-sonygs.112.2o7.net
 sonymobile.com
 sonyselect-api.sonymobile.com
 soporte.latam.playstation.com
@@ -19260,7 +19233,6 @@ wapi.voot.com
 wapking.guru
 waptrick.com
 warez-bb.org
-warnerbros.112.2o7.net
 washington.cbslocal.com
 washington.edu
 washingtonpost.com
@@ -22783,8 +22755,6 @@ www.58.com
 www.58pic.com
 www.5min.com
 www.6-edge-chat.facebook.com
-www.609d93yvzj2e-a.akamaihd.net
-www.66.media.tumblr.com
 www.699pic.com
 www.6e.de
 www.6p.ru
@@ -22943,7 +22913,6 @@ www.acsdk.gameyw.easebar.com
 www.act.wechat.com
 www.actionbutton.co
 www.actionnetwork.org
-www.actions.everyaction.com
 www.activate-sea.adobe.com
 www.activate-sjc0.adobe.com
 www.activate.adobe.com
@@ -23040,7 +23009,6 @@ www.ads.askgamblers.com
 www.ads.fuckingmachines.com
 www.ads.google.com
 www.ads.id
-www.ads.investingchannel.com
 www.ads.microsoft.com
 www.ads.nipr.ac.jp
 www.ads.pinterest.com
@@ -23072,7 +23040,6 @@ www.ae911truth.org
 www.aeis.alicdn.com
 www.aemmobile.adobe.com
 www.aetna.com
-www.aetnaaetnaprod2018.112.2o7.net
 www.aeu.alicdn.com
 www.affiliate-program.amazon.com
 www.affiliate.hitbtc.com
@@ -23754,7 +23721,6 @@ www.ams.amazon.co.jp
 www.ams.amazon.co.uk
 www.ams.amazon.com
 www.amzn.to
-www.ana.112.2o7.net
 www.ana.fr
 www.analytics.edgesuite.net
 www.analytics.google.com
@@ -23821,7 +23787,6 @@ www.api-beta.huawei.com
 www.api-blog.blog.naver.com
 www.api-c.sonymobile.com
 www.api-cdn.embed.ly
-www.api-cf.affirm.com
 www.api-consup.huawei.com
 www.api-embedded.soundcloud.com
 www.api-glb.smoot.apple.com
@@ -23842,7 +23807,6 @@ www.api-mobile-creators.soundcloud.com
 www.api-mobile.soundcloud.com
 www.api-mobile.x.sndcdn.com
 www.api-mobileweb.soundcloud.com
-www.api-na.geetest.com
 www.api-nyc.soundcloud.com
 www.api-partner.spotify.com
 www.api-partners.soundcloud.com
@@ -23928,7 +23892,6 @@ www.api.fast.com
 www.api.feedburner.com
 www.api.flickr.com
 www.api.flowplayer.com
-www.api.flyertown.ca
 www.api.foursquare.com
 www.api.foxnews.com
 www.api.gallery.intl.miui.com
@@ -23961,7 +23924,6 @@ www.api.keycdn.com
 www.api.kinja.com
 www.api.leanplum.com
 www.api.line.me
-www.api.livechatinc.com
 www.api.login.engadget.com
 www.api.login.techcrunch.com
 www.api.luftdaten.info
@@ -24112,7 +24074,6 @@ www.app-measurement.com
 www.app-perms.playstation.com
 www.app-ru.huawei.com
 www.app-sj16.marketo.com
-www.app-sj26.marketo.com
 www.app-uk.huawei.com
 www.app.adjust.com
 www.app.alipay.com
@@ -25170,7 +25131,6 @@ www.cedexis.net
 www.cedexispub.cdnetworks.net
 www.cell.office.naver.com
 www.census.gov
-www.centaurpublications.122.2o7.net
 www.centraleu.pi-dns.com
 www.cern.ch
 www.cert.halo.part.xbox.com
@@ -25941,7 +25901,6 @@ www.device.auth.xboxlive.com
 www.deviceapi.micloud.xiaomi.net
 www.deviceportal.nettvservices.com
 www.devices.netflix.com
-www.devimages-cdn.apple.com
 www.devmate.com
 www.df.ly
 www.dfapvmql-q.global.ssl.fastly.net
@@ -26348,7 +26307,6 @@ www.elmundo.es
 www.eloqua.com
 www.elpais.com
 www.elsalvador.com
-www.eltiempo.112.2o7.net
 www.eltraficosv.com
 www.eltrafiko.com
 www.elurl.com
@@ -26590,7 +26548,6 @@ www.fakecell.sys.miui.com
 www.familydollar.com
 www.fan.twitch.tv
 www.fanat.ua
-www.fanatics.112.2o7.net
 www.fandango.com
 www.fandom.wikia.com
 www.fansonly.com
@@ -26865,7 +26822,6 @@ www.fox6now.com
 www.fox8.com
 www.foxnews.com
 www.foxsports.com.au
-www.fp-cdn.azureedge.net
 www.fp-eu-w1-aai.flowplayer.com
 www.fp.profiles.us.playstation.com
 www.fpdownload.adobe.com
@@ -26988,7 +26944,6 @@ www.g2play.com
 www.g3.net
 www.ga.gravatar.com
 www.gacollector.l.google.com
-www.gadasource.storage.googleapis.com
 www.gadgetsnow.com
 www.gall.dcinside.com
 www.gallery.cdn.pandora.xiaomi.com
@@ -32630,7 +32585,6 @@ www.japanese.engadget.com
 www.japantimes.disqus.com
 www.jarv.is
 www.jarvis-dev.sonymobile.com
-www.jasper.112.2o7.net
 www.javdict.disqus.com
 www.javhub.net
 www.jcpenney.com
@@ -34486,7 +34440,6 @@ www.linkbucks.com
 www.linkedin.com
 www.linkedinmobileapp.com
 www.linkis.com
-www.linkmaker.itunes.apple.com
 www.links.announcements.soundcloud.com
 www.links.confirmation.soundcloud.com
 www.links.em.ign.com
@@ -37009,7 +36962,6 @@ www.netlify.com
 www.netroam.mihome.intl.xiaomi.net
 www.netroam.mihome.xiaomi.net
 www.netstorage-nur.akamaized.net
-www.network-eu.bazaarvoice.com
 www.network.bazaarvoice.com
 www.networking.engadget.com
 www.networks.feedburner.com
@@ -37563,7 +37515,6 @@ www.pastebin.com
 www.pastebin.org
 www.pasteboard.co
 www.pasted.co
-www.patagonia.122.2o7.net
 www.path.qualcomm.com
 www.patheos.com
 www.patorjk.com
@@ -37574,7 +37525,6 @@ www.pay.google.com
 www.pay.igamecj.com
 www.pay.line.me
 www.pay.oneplus.com
-www.pay.shopify.com
 www.pay.stripe.com
 www.pay.wechat.com
 www.payload.cargocollective.com
@@ -37678,7 +37628,6 @@ www.pie.daum.net
 www.piguiqproxy.com
 www.pilkanozna.pl
 www.pimg1.126.net
-www.ping-meta-prd.jwpltx.com
 www.ping.feedburner.com
 www.ping.taplytics.com
 www.pingjs.qq.com
@@ -38090,7 +38039,6 @@ www.radikal.ru
 www.radiofrance.fr
 www.radiostacja.pl
 www.raidrush.ws
-www.rakuten.112.2o7.net
 www.rakuten.co.jp
 www.rakuten.com
 www.rambler.ru
@@ -38531,7 +38479,6 @@ www.scribol.com
 www.script.google.com
 www.script.ioam.de
 www.scripts.ign.com
-www.scripts.kataweb.it
 www.scripts.pay.bka.sh
 www.scs.huawei.com
 www.scs.naver.com
@@ -38540,7 +38487,6 @@ www.sdad.guru
 www.sdk-os.mpsdk.easebar.com
 www.sdk.accountkit.com
 www.sdk.peppermint.samsung.com
-www.sdk.pulse.schibsted.com
 www.sdk.taboola.com
 www.sdmaid.darken.eu
 www.sds.playstation.com
@@ -38959,7 +38905,6 @@ www.sony.jp
 www.sony.net
 www.sonycreativesoftware.com
 www.sonyericsson2.accu-weather.com
-www.sonygs.112.2o7.net
 www.sonymobile.com
 www.sonyselect-api.sonymobile.com
 www.soporte.latam.playstation.com
@@ -40338,7 +40283,6 @@ www.wapi.voot.com
 www.wapking.guru
 www.waptrick.com
 www.warez-bb.org
-www.warnerbros.112.2o7.net
 www.washington.cbslocal.com
 www.washington.edu
 www.washingtonpost.com
