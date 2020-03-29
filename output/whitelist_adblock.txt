@@ -849,7 +849,6 @@
 @@||*.md.mp.microsoft.com.mz^
 @@||*.md.mp.microsoft.com.na^
 @@||*.md.mp.microsoft.com.nab^
-@@||*.md.mp.microsoft.com.nadex^
 @@||*.md.mp.microsoft.com.nagoya^
 @@||*.md.mp.microsoft.com.name^
 @@||*.md.mp.microsoft.com.nationwide^
@@ -3019,7 +3018,6 @@
 @@||app-cdn.spot.im^
 @@||app-conf.xperialounge.sonymobile.com^
 @@||app-eu.huawei.com^
-@@||app-lon02.marketo.com^
 @@||app-measurement.com^
 @@||app-perms.playstation.com^
 @@||app-ru.huawei.com^
@@ -4081,6 +4079,7 @@
 @@||cedexispub.cdnetworks.net^
 @@||cell.office.naver.com^
 @@||census.gov^
+@@||centaurpublications.122.2o7.net^
 @@||centraleu.pi-dns.com^
 @@||cern.ch^
 @@||cert.halo.part.xbox.com^
@@ -4851,6 +4850,7 @@
 @@||deviceapi.micloud.xiaomi.net^
 @@||deviceportal.nettvservices.com^
 @@||devices.netflix.com^
+@@||devimages-cdn.apple.com^
 @@||devmate.com^
 @@||df.ly^
 @@||dfapvmql-q.global.ssl.fastly.net^
@@ -7230,7 +7230,6 @@
 @@||google.co.mz^
 @@||google.co.na^
 @@||google.co.nab^
-@@||google.co.nadex^
 @@||google.co.nagoya^
 @@||google.co.name^
 @@||google.co.nationwide^
@@ -8751,7 +8750,6 @@
 @@||google.com.mz^
 @@||google.com.na^
 @@||google.com.nab^
-@@||google.com.nadex^
 @@||google.com.nagoya^
 @@||google.com.name^
 @@||google.com.nationwide^
@@ -9993,7 +9991,6 @@
 @@||google.mz^
 @@||google.na^
 @@||google.nab^
-@@||google.nadex^
 @@||google.nagoya^
 @@||google.name^
 @@||google.nationwide^
@@ -12524,7 +12521,6 @@
 @@||kisscartoon.mz^
 @@||kisscartoon.na^
 @@||kisscartoon.nab^
-@@||kisscartoon.nadex^
 @@||kisscartoon.nagoya^
 @@||kisscartoon.name^
 @@||kisscartoon.nationwide^
@@ -14749,7 +14745,6 @@
 @@||md.mp.microsoft.com.mz^
 @@||md.mp.microsoft.com.na^
 @@||md.mp.microsoft.com.nab^
-@@||md.mp.microsoft.com.nadex^
 @@||md.mp.microsoft.com.nagoya^
 @@||md.mp.microsoft.com.name^
 @@||md.mp.microsoft.com.nationwide^
@@ -17721,7 +17716,6 @@
 @@||sitestat.com^
 @@||sj1gtm003.adobe.com^
 @@||sj1gtm004.adobe.com^
-@@||sjrtp2-cdn.marketo.com^
 @@||sk.gravatar.com^
 @@||sk.wikipedia.com^
 @@||sketch.sonymobile.com^
@@ -19233,6 +19227,7 @@
 @@||wapking.guru^
 @@||waptrick.com^
 @@||warez-bb.org^
+@@||warnerbros.112.2o7.net^
 @@||washington.cbslocal.com^
 @@||washington.edu^
 @@||washingtonpost.com^
@@ -20088,7 +20083,6 @@
 @@||wdcp.microsoft.mz^
 @@||wdcp.microsoft.na^
 @@||wdcp.microsoft.nab^
-@@||wdcp.microsoft.nadex^
 @@||wdcp.microsoft.nagoya^
 @@||wdcp.microsoft.name^
 @@||wdcp.microsoft.nationwide^
@@ -20822,7 +20816,6 @@
 @@||weboffice-static.docs.dingtalk.com^
 @@||webopedia.com^
 @@||webpagefx.com^
-@@||webresint.122.2o7.net^
 @@||webs.com^
 @@||websearch.rakuten.co.jp^
 @@||websecurity.norton.com^
@@ -21899,7 +21892,6 @@
 @@||www.*.md.mp.microsoft.com.mz^
 @@||www.*.md.mp.microsoft.com.na^
 @@||www.*.md.mp.microsoft.com.nab^
-@@||www.*.md.mp.microsoft.com.nadex^
 @@||www.*.md.mp.microsoft.com.nagoya^
 @@||www.*.md.mp.microsoft.com.name^
 @@||www.*.md.mp.microsoft.com.nationwide^
@@ -24069,7 +24061,6 @@
 @@||www.app-cdn.spot.im^
 @@||www.app-conf.xperialounge.sonymobile.com^
 @@||www.app-eu.huawei.com^
-@@||www.app-lon02.marketo.com^
 @@||www.app-measurement.com^
 @@||www.app-perms.playstation.com^
 @@||www.app-ru.huawei.com^
@@ -25131,6 +25122,7 @@
 @@||www.cedexispub.cdnetworks.net^
 @@||www.cell.office.naver.com^
 @@||www.census.gov^
+@@||www.centaurpublications.122.2o7.net^
 @@||www.centraleu.pi-dns.com^
 @@||www.cern.ch^
 @@||www.cert.halo.part.xbox.com^
@@ -25901,6 +25893,7 @@
 @@||www.deviceapi.micloud.xiaomi.net^
 @@||www.deviceportal.nettvservices.com^
 @@||www.devices.netflix.com^
+@@||www.devimages-cdn.apple.com^
 @@||www.devmate.com^
 @@||www.df.ly^
 @@||www.dfapvmql-q.global.ssl.fastly.net^
@@ -28280,7 +28273,6 @@
 @@||www.google.co.mz^
 @@||www.google.co.na^
 @@||www.google.co.nab^
-@@||www.google.co.nadex^
 @@||www.google.co.nagoya^
 @@||www.google.co.name^
 @@||www.google.co.nationwide^
@@ -29801,7 +29793,6 @@
 @@||www.google.com.mz^
 @@||www.google.com.na^
 @@||www.google.com.nab^
-@@||www.google.com.nadex^
 @@||www.google.com.nagoya^
 @@||www.google.com.name^
 @@||www.google.com.nationwide^
@@ -31043,7 +31034,6 @@
 @@||www.google.mz^
 @@||www.google.na^
 @@||www.google.nab^
-@@||www.google.nadex^
 @@||www.google.nagoya^
 @@||www.google.name^
 @@||www.google.nationwide^
@@ -33574,7 +33564,6 @@
 @@||www.kisscartoon.mz^
 @@||www.kisscartoon.na^
 @@||www.kisscartoon.nab^
-@@||www.kisscartoon.nadex^
 @@||www.kisscartoon.nagoya^
 @@||www.kisscartoon.name^
 @@||www.kisscartoon.nationwide^
@@ -35799,7 +35788,6 @@
 @@||www.md.mp.microsoft.com.mz^
 @@||www.md.mp.microsoft.com.na^
 @@||www.md.mp.microsoft.com.nab^
-@@||www.md.mp.microsoft.com.nadex^
 @@||www.md.mp.microsoft.com.nagoya^
 @@||www.md.mp.microsoft.com.name^
 @@||www.md.mp.microsoft.com.nationwide^
@@ -38771,7 +38759,6 @@
 @@||www.sitestat.com^
 @@||www.sj1gtm003.adobe.com^
 @@||www.sj1gtm004.adobe.com^
-@@||www.sjrtp2-cdn.marketo.com^
 @@||www.sk.gravatar.com^
 @@||www.sk.wikipedia.com^
 @@||www.sketch.sonymobile.com^
@@ -40283,6 +40270,7 @@
 @@||www.wapking.guru^
 @@||www.waptrick.com^
 @@||www.warez-bb.org^
+@@||www.warnerbros.112.2o7.net^
 @@||www.washington.cbslocal.com^
 @@||www.washington.edu^
 @@||www.washingtonpost.com^
@@ -41138,7 +41126,6 @@
 @@||www.wdcp.microsoft.mz^
 @@||www.wdcp.microsoft.na^
 @@||www.wdcp.microsoft.nab^
-@@||www.wdcp.microsoft.nadex^
 @@||www.wdcp.microsoft.nagoya^
 @@||www.wdcp.microsoft.name^
 @@||www.wdcp.microsoft.nationwide^
@@ -41872,7 +41859,6 @@
 @@||www.weboffice-static.docs.dingtalk.com^
 @@||www.webopedia.com^
 @@||www.webpagefx.com^
-@@||www.webresint.122.2o7.net^
 @@||www.webs.com^
 @@||www.websearch.rakuten.co.jp^
 @@||www.websecurity.norton.com^
