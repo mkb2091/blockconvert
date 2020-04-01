@@ -1798,7 +1798,6 @@ a31463647.cdn.optimizely.com
 a3226860758.cdn.optimizely.com
 a3391893108.cdn.optimizely.com
 a3533800155.cdn-pci.optimizely.com
-a3567930175.cdn.optimizely.com
 a3698060313.cdn.optimizely.com
 a4.mzstatic.com
 a400912536.cdn.optimizely.com
@@ -1812,7 +1811,6 @@ a5090114122.cdn.optimizely.com
 a57.foxnews.com
 a571703138.cdn.optimizely.com
 a591102174.cdn.optimizely.com
-a6250770393.cdn.optimizely.com
 a652.dscb.akamai.net
 a72135589.cdn.optimizely.com
 a7270127.cdn.optimizely.com
@@ -3278,7 +3276,6 @@ assets.huffingtonpost.com
 assets.hulu.com
 assets.ign.com
 assets.inshorts.com
-assets.libsyn.com
 assets.map.brightcove.com
 assets.nflxext.com
 assets.penny-arcade.com
@@ -3603,7 +3600,6 @@ bizrate.com
 bj.bcebos.com
 bjbgc.com
 bk01.hh.xiaomi.com
-bkc20sr6ry21-a.akamaihd.net
 black.game.naver.com
 blackberry.com
 blackboxrepack.com
@@ -3702,7 +3698,6 @@ blogspot.fr
 blogspot.in
 blogspot.jp
 blogspot.l.googleusercontent.com
-bloodydisgusting.disqus.com
 bloomberg.com
 bloxcms.com
 bls.gov
@@ -4506,6 +4501,7 @@ comic.naver.com
 comic.nil.naver.com
 commentcamarche.net
 comments.ign.com
+comments.us1.gigya.com
 commerce.adobe.com
 commerce.api.np.km.playstation.net
 commerce.coinbase.com
@@ -5897,8 +5893,8 @@ fox5sandiego.com
 fox6now.com
 fox8.com
 foxnews.com
-foxnewsuni-f.akamaihd.net
 foxsports.com.au
+foxvideo.akamaized.net
 fp-cdn.azureedge.net
 fp-eu-w1-aai.flowplayer.com
 fp.profiles.us.playstation.com
@@ -11119,7 +11115,6 @@ href.li
 hrst.ph
 hrten.com
 htm.huawei.com
-html5-player.libsyn.com
 htmlcommentbox.com
 hu.gravatar.com
 hu.ign.com
@@ -13592,6 +13587,7 @@ live.static.chat.mi.com
 live.synchub.sonymobile.com
 live.viber.com
 live.xbox.com
+live2weltcms-lh.akamaihd.net
 liveapi.yext.com
 liveaquaria.com
 livearea.api.np.km.playstation.net
@@ -15987,7 +15983,7 @@ mywot.com
 myxperia.sonymobile.com
 mzstatic.com
 n11scdn.akamaized.net
-n11scdn3.akamaized.net
+n11scdn4.akamaized.net
 n2s.us
 n6.net
 na1.documents.adobe.com
@@ -16945,6 +16941,7 @@ privacy-policy.truste.com
 privacy.rakuten.co.jp
 privateinternetaccess.com
 prize.travel.rakuten.co.jp
+prnewswire.122.2o7.net
 prnewswire.com
 prnt.sc
 pro-accounts.snapchat.com
@@ -17618,7 +17615,6 @@ sdad.guru
 sdk-os.mpsdk.easebar.com
 sdk.accountkit.com
 sdk.peppermint.samsung.com
-sdk.pulse.schibsted.com
 sdk.taboola.com
 sdmaid.darken.eu
 sds.playstation.com
@@ -18303,7 +18299,6 @@ statics-www-ssl.gingersoftware.com
 statics.streamable.com
 staticxx.facebook.com
 statig0.akamaized.net
-statig4.akamaized.net
 station-drivers.com
 station.sony.com
 stats.adobe.com
@@ -18876,7 +18871,6 @@ tripadvisor.com
 tripod.com
 trk.cp20.com
 trk.klclick.com
-trk.vidible.tv
 trophy01.np.community.playstation.net
 trowel.twitch.tv
 truecaller.com
@@ -19012,6 +19006,7 @@ unagi-eu.amazon.com
 unbouncepages.com
 unc.edu
 und.weg.ist.sie.com
+undefined.disqus.com
 undraw.co
 unesco.org
 unibytes.com
@@ -21255,7 +21250,6 @@ ww3.gogoanime.io
 ww4.gogoanime.io
 ww4.sinaimg.cn
 ww5.gogoanime.io
-wwfglobalbackup.disqus.com
 wwis-dubc1-vip60.adobe.com
 www-admin.sonymobile.com
 www-bostonherald-com.disqus.com
@@ -23068,7 +23062,6 @@ www.a31463647.cdn.optimizely.com
 www.a3226860758.cdn.optimizely.com
 www.a3391893108.cdn.optimizely.com
 www.a3533800155.cdn-pci.optimizely.com
-www.a3567930175.cdn.optimizely.com
 www.a3698060313.cdn.optimizely.com
 www.a4.mzstatic.com
 www.a400912536.cdn.optimizely.com
@@ -23082,7 +23075,6 @@ www.a5090114122.cdn.optimizely.com
 www.a57.foxnews.com
 www.a571703138.cdn.optimizely.com
 www.a591102174.cdn.optimizely.com
-www.a6250770393.cdn.optimizely.com
 www.a652.dscb.akamai.net
 www.a72135589.cdn.optimizely.com
 www.a7270127.cdn.optimizely.com
@@ -24548,7 +24540,6 @@ www.assets.huffingtonpost.com
 www.assets.hulu.com
 www.assets.ign.com
 www.assets.inshorts.com
-www.assets.libsyn.com
 www.assets.map.brightcove.com
 www.assets.nflxext.com
 www.assets.penny-arcade.com
@@ -24873,7 +24864,6 @@ www.bizrate.com
 www.bj.bcebos.com
 www.bjbgc.com
 www.bk01.hh.xiaomi.com
-www.bkc20sr6ry21-a.akamaihd.net
 www.black.game.naver.com
 www.blackberry.com
 www.blackboxrepack.com
@@ -24972,7 +24962,6 @@ www.blogspot.fr
 www.blogspot.in
 www.blogspot.jp
 www.blogspot.l.googleusercontent.com
-www.bloodydisgusting.disqus.com
 www.bloomberg.com
 www.bloxcms.com
 www.bls.gov
@@ -25776,6 +25765,7 @@ www.comic.naver.com
 www.comic.nil.naver.com
 www.commentcamarche.net
 www.comments.ign.com
+www.comments.us1.gigya.com
 www.commerce.adobe.com
 www.commerce.api.np.km.playstation.net
 www.commerce.coinbase.com
@@ -27167,8 +27157,8 @@ www.fox5sandiego.com
 www.fox6now.com
 www.fox8.com
 www.foxnews.com
-www.foxnewsuni-f.akamaihd.net
 www.foxsports.com.au
+www.foxvideo.akamaized.net
 www.fp-cdn.azureedge.net
 www.fp-eu-w1-aai.flowplayer.com
 www.fp.profiles.us.playstation.com
@@ -32389,7 +32379,6 @@ www.href.li
 www.hrst.ph
 www.hrten.com
 www.htm.huawei.com
-www.html5-player.libsyn.com
 www.htmlcommentbox.com
 www.hu.gravatar.com
 www.hu.ign.com
@@ -34862,6 +34851,7 @@ www.live.static.chat.mi.com
 www.live.synchub.sonymobile.com
 www.live.viber.com
 www.live.xbox.com
+www.live2weltcms-lh.akamaihd.net
 www.liveapi.yext.com
 www.liveaquaria.com
 www.livearea.api.np.km.playstation.net
@@ -37257,7 +37247,7 @@ www.mywot.com
 www.myxperia.sonymobile.com
 www.mzstatic.com
 www.n11scdn.akamaized.net
-www.n11scdn3.akamaized.net
+www.n11scdn4.akamaized.net
 www.n2s.us
 www.n6.net
 www.na1.documents.adobe.com
@@ -38215,6 +38205,7 @@ www.privacy-policy.truste.com
 www.privacy.rakuten.co.jp
 www.privateinternetaccess.com
 www.prize.travel.rakuten.co.jp
+www.prnewswire.122.2o7.net
 www.prnewswire.com
 www.prnt.sc
 www.pro-accounts.snapchat.com
@@ -38888,7 +38879,6 @@ www.sdad.guru
 www.sdk-os.mpsdk.easebar.com
 www.sdk.accountkit.com
 www.sdk.peppermint.samsung.com
-www.sdk.pulse.schibsted.com
 www.sdk.taboola.com
 www.sdmaid.darken.eu
 www.sds.playstation.com
@@ -39573,7 +39563,6 @@ www.statics-www-ssl.gingersoftware.com
 www.statics.streamable.com
 www.staticxx.facebook.com
 www.statig0.akamaized.net
-www.statig4.akamaized.net
 www.station-drivers.com
 www.station.sony.com
 www.stats.adobe.com
@@ -40146,7 +40135,6 @@ www.tripadvisor.com
 www.tripod.com
 www.trk.cp20.com
 www.trk.klclick.com
-www.trk.vidible.tv
 www.trophy01.np.community.playstation.net
 www.trowel.twitch.tv
 www.truecaller.com
@@ -40282,6 +40270,7 @@ www.unagi-eu.amazon.com
 www.unbouncepages.com
 www.unc.edu
 www.und.weg.ist.sie.com
+www.undefined.disqus.com
 www.undraw.co
 www.unesco.org
 www.unibytes.com
@@ -42525,7 +42514,6 @@ www.ww3.gogoanime.io
 www.ww4.gogoanime.io
 www.ww4.sinaimg.cn
 www.ww5.gogoanime.io
-www.wwfglobalbackup.disqus.com
 www.wwis-dubc1-vip60.adobe.com
 www.www-admin.sonymobile.com
 www.www-bostonherald-com.disqus.com
@@ -42774,7 +42762,6 @@ www.zn8i03elsrj8ujesh-transunioncxusa.siteintercept.qualtrics.com
 www.zn9gnmr4g3ce3ts9l-fandango.siteintercept.qualtrics.com
 www.zn9kkmnshrhatfgln-levistrauss.siteintercept.qualtrics.com
 www.zn9piaqbfitnjr87h-eddiebauer.siteintercept.qualtrics.com
-www.zn9qvbtnjsxcm2hwz-expediainc.siteintercept.qualtrics.com
 www.zn9tpesl2k1zdbytl-cbs.siteintercept.qualtrics.com
 www.zn9yauo1hia5mptaj-sni.siteintercept.qualtrics.com
 www.zn_37mptkltsyz3yj3-cbs.siteintercept.qualtrics.com
@@ -42784,6 +42771,7 @@ www.zn_55bdrev4af0c1yl-cbs.siteintercept.qualtrics.com
 www.zn_5u81q8n4jdu5ls9-cbs.siteintercept.qualtrics.com
 www.zn_6qberv3uhxxxrjh-gettyimages.siteintercept.qualtrics.com
 www.zn_6vxkyqywaf9f1t7-usbank.siteintercept.qualtrics.com
+www.zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com
 www.zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com
 www.zn_agburbioucamt8f-babycenter.siteintercept.qualtrics.com
 www.zn_baufuuufwz4y0zr-ally.siteintercept.qualtrics.com
@@ -43059,7 +43047,6 @@ zn8i03elsrj8ujesh-transunioncxusa.siteintercept.qualtrics.com
 zn9gnmr4g3ce3ts9l-fandango.siteintercept.qualtrics.com
 zn9kkmnshrhatfgln-levistrauss.siteintercept.qualtrics.com
 zn9piaqbfitnjr87h-eddiebauer.siteintercept.qualtrics.com
-zn9qvbtnjsxcm2hwz-expediainc.siteintercept.qualtrics.com
 zn9tpesl2k1zdbytl-cbs.siteintercept.qualtrics.com
 zn9yauo1hia5mptaj-sni.siteintercept.qualtrics.com
 zn_37mptkltsyz3yj3-cbs.siteintercept.qualtrics.com
@@ -43069,6 +43056,7 @@ zn_55bdrev4af0c1yl-cbs.siteintercept.qualtrics.com
 zn_5u81q8n4jdu5ls9-cbs.siteintercept.qualtrics.com
 zn_6qberv3uhxxxrjh-gettyimages.siteintercept.qualtrics.com
 zn_6vxkyqywaf9f1t7-usbank.siteintercept.qualtrics.com
+zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com
 zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com
 zn_agburbioucamt8f-babycenter.siteintercept.qualtrics.com
 zn_baufuuufwz4y0zr-ally.siteintercept.qualtrics.com
