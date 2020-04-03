@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 641114 blocked domains in each of the generated filter lists
+Theres are 640494 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -10,15 +10,15 @@ The files in data/ are all modified versions generated from the below sources:
 
 Link|Author|Expires|License|Blacklist Size|Whitelist Size
 :---:|:---:|:---:|:---:|:---:|:---:
-[uBlock filters](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt)|-|4.0 days|GPLv3|407|0
+[uBlock filters](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt)|-|4.0 days|GPLv3|401|0
 [uBlock filters – Resource abuse](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt)|-|4.0 days|GPLv3|9|0
-[uBlock filters – Privacy](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt)|-|4.0 days|GPLv3|14|0
+[uBlock filters – Privacy](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt)|-|4.0 days|GPLv3|15|0
 [uBlock filters – Badware risks](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt)|-|4.0 days|GPLv3|56|0
 [iOS Tracker Blocklist](https://jarv.is/ios-trackers/adguard.txt)|jakejarvis|10.0 days|MIT|485|0
-[hostsVN](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts)|-|1.0 days|MIT|18546|0
+[hostsVN](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts)|-|1.0 days|MIT|18605|0
 [abuse.ch URLhaus Response Policy Zones](https://urlhaus.abuse.ch/downloads/rpz/)|-|1.0 days|CC0|995|0
-[abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|113|0
-[abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|1435|0
+[abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|116|0
+[abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|1431|0
 [😍 All-in-One Customized Adblock List 2.7](https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt)|deanoman|2.0 hours|MIT|42364|790
 [🎮 Game Console Adblock List](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt)|-|4.0 days|Dandelicence|8|0
 [❤xorcan❤ Türk ip-list](https://raw.githubusercontent.com/xorcan/hosts/master/xips.txt)|xorcan|1.0 days|GPL-3.0|13|0
@@ -31,7 +31,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [Useful Linux Shell Scripts Hosts](https://raw.githubusercontent.com/jackrabbit335/UsefulLinuxShellScripts/master/Hosts%20%26%20sourcelist/blacklist.txt)|-|10.0 days|GPL-3.0|75|0
 [Typosquatting Blocklist](https://raw.githubusercontent.com/hl2guide/DNS-Sinkhole-Lists-A2/master/typosquatting_blocklist.txt)|-|1.0 days|MIT|11159|0
 [Toshiya's Filter List - Experimental](https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt)|Toshiya|4.0 days|GPLv3|2118|2
-[The Hosts File Project](https://hblock.molinero.dev/hosts)|Héctor Molinero Fernández <hector@molinero.dev>|1.0 days|MIT|241747|0
+[The Hosts File Project](https://hblock.molinero.dev/hosts)|Héctor Molinero Fernández <hector@molinero.dev>|1.0 days|MIT|242006|0
 [Strappazzon's Tracking List](https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Tracking.txt)|-|3.0 days|MIT|11|0
 [Spam404](https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt)|-|2.0 days|Permission to modify, copy and distribute|7015|0
 [Skeletal Blocker](https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List)|SkeletalDemise|2.0 days|GPLv3|517|0
@@ -52,8 +52,8 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [MobileAdTrackers](https://raw.githubusercontent.com/jawz101/MobileAdTrackers/master/hosts)|-|1.0 days|Modified MIT|12183|0
 [MinerBlock Filters](https://raw.githubusercontent.com/xd4rker/MinerBlock/master/assets/filters.txt)|-|1.0 days|MIT|431|0
 [Magneto Malware Skanner - Burner Domains](https://raw.githubusercontent.com/gwillem/magento-malware-scanner/master/rules/burner-domains.txt)|-|10.0 days|GPLv3|420|0
-[Lightswitch05's Tracking Aggressive](https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt)|Daniel White|2.0 days|Apache2|7075|0
-[Lightswitch05's Ads & Tracking](https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt)|Daniel White|2.0 days|Apache2|111376|0
+[Lightswitch05's Tracking Aggressive](https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt)|Daniel White|2.0 days|Apache2|7087|0
+[Lightswitch05's Ads & Tracking](https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt)|Daniel White|2.0 days|Apache2|115450|0
 [Latvian List](https://hostsfile.mine.nu/hosts0.txt)|-|1.0 days|GPLv3|105785|0
 [KADhosts](https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt)|-|1.0 days|CC-BY-SA-4|9070|0
 [International List](https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt)|-|3.0 days|The Unlicense|15|1
@@ -65,14 +65,14 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [Fanboy's Annoyance List](https://easylist.to/easylist/fanboy-annoyance.txt)|-|4.0 days|GPLv3|734|8
 [Energized Basic Protection - Whitelist](https://raw.githubusercontent.com/EnergizedProtection/unblock/master/basic/formats/domains.txt)|-|1.0 days|MIT|0|10267
 [Eesti saitidele kohandatud filter](https://adblock.ee/list.php)|-|1.0 days|CC0|192|0
-[EasyPrivacy](https://easylist.to/easylist/easyprivacy.txt)|-|4.0 days|GPLv3|6807|5
-[EasyList](https://easylist.to/easylist/easylist.txt)|-|4.0 days|GPLv3|17876|60
+[EasyPrivacy](https://easylist.to/easylist/easyprivacy.txt)|-|4.0 days|GPLv3|6814|5
+[EasyList](https://easylist.to/easylist/easylist.txt)|-|4.0 days|GPLv3|17919|60
 [EasyList Italy](https://easylist-downloads.adblockplus.org/easylistitaly.txt)|-|1.0 days|GPLv3|221|0
 [EasyList Hebrew](https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt)|-|1.0 days|GPLv3|280|0
 [EasyList Germany](https://easylist.to/easylistgermany/easylistgermany.txt)|-|1.0 days|GPLv3|619|13
 [EasyList Dutch](https://easylist-downloads.adblockplus.org/easylistdutch.txt)|-|4.0 days|GPLv3|84|1
 [EasyList Czech and Slovak filter list](https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt)|tomasko126, Aslanex, vobruba-martin, Moskoe, Fanboy|4.0 hours|CC-BY-SA-4.0|82|1
-[EasyList China](https://easylist-downloads.adblockplus.org/easylistchina.txt)|-|4.0 days|GPLv3|5639|22
+[EasyList China](https://easylist-downloads.adblockplus.org/easylistchina.txt)|-|4.0 days|GPLv3|5676|23
 [Binary Defense Banlist](https://www.binarydefense.com/banlist.txt)|-|1.0 days|Public use only|6475|0
 [Better content blocking rules](https://better.fyi/blockerList.txt)|-|1.0 days|CC-BY-SA-4.0|743|2
 [Basic tracking list by Disconnect](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)|-|1.0 days|GPLv3|34|0

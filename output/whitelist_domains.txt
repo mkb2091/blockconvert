@@ -1397,7 +1397,6 @@
 *.md.mp.microsoft.com.xn--e1a4c
 *.md.mp.microsoft.com.xn--eckvdtc9d
 *.md.mp.microsoft.com.xn--efvy88h
-*.md.mp.microsoft.com.xn--estv75g
 *.md.mp.microsoft.com.xn--fct429k
 *.md.mp.microsoft.com.xn--fhbei
 *.md.mp.microsoft.com.xn--fiq228c5hs
@@ -1535,6 +1534,7 @@
 *.tlu.dl.delivery.mp.microsoft.com
 *.ugc.bazaarvoice.com
 *.update.microsoft.com
+*.vk.com
 *.windowsupdate.com
 *.wns.windows.com
 0-edge-chat.facebook.com
@@ -1893,6 +1893,7 @@ ad.mail.ru
 ad.ourgame.com
 ad.samsungadhub.com
 ad.vu
+ad2.uoocuniversity.com
 adage.com
 adameve.com
 adash.man.aliyuncs.com
@@ -7835,7 +7836,6 @@ google.co.xn--d1alf
 google.co.xn--e1a4c
 google.co.xn--eckvdtc9d
 google.co.xn--efvy88h
-google.co.xn--estv75g
 google.co.xn--fct429k
 google.co.xn--fhbei
 google.co.xn--fiq228c5hs
@@ -9355,7 +9355,6 @@ google.com.xn--d1alf
 google.com.xn--e1a4c
 google.com.xn--eckvdtc9d
 google.com.xn--efvy88h
-google.com.xn--estv75g
 google.com.xn--fct429k
 google.com.xn--fhbei
 google.com.xn--fiq228c5hs
@@ -10597,7 +10596,6 @@ google.xn--d1alf
 google.xn--e1a4c
 google.xn--eckvdtc9d
 google.xn--efvy88h
-google.xn--estv75g
 google.xn--fct429k
 google.xn--fhbei
 google.xn--fiq228c5hs
@@ -13129,7 +13127,6 @@ kisscartoon.xn--d1alf
 kisscartoon.xn--e1a4c
 kisscartoon.xn--eckvdtc9d
 kisscartoon.xn--efvy88h
-kisscartoon.xn--estv75g
 kisscartoon.xn--fct429k
 kisscartoon.xn--fhbei
 kisscartoon.xn--fiq228c5hs
@@ -15359,7 +15356,6 @@ md.mp.microsoft.com.xn--d1alf
 md.mp.microsoft.com.xn--e1a4c
 md.mp.microsoft.com.xn--eckvdtc9d
 md.mp.microsoft.com.xn--efvy88h
-md.mp.microsoft.com.xn--estv75g
 md.mp.microsoft.com.xn--fct429k
 md.mp.microsoft.com.xn--fhbei
 md.mp.microsoft.com.xn--fiq228c5hs
@@ -20739,7 +20735,6 @@ wdcp.microsoft.xn--d1alf
 wdcp.microsoft.xn--e1a4c
 wdcp.microsoft.xn--eckvdtc9d
 wdcp.microsoft.xn--efvy88h
-wdcp.microsoft.xn--estv75g
 wdcp.microsoft.xn--fct429k
 wdcp.microsoft.xn--fhbei
 wdcp.microsoft.xn--fiq228c5hs
@@ -22548,7 +22543,6 @@ www.*.md.mp.microsoft.com.xn--d1alf
 www.*.md.mp.microsoft.com.xn--e1a4c
 www.*.md.mp.microsoft.com.xn--eckvdtc9d
 www.*.md.mp.microsoft.com.xn--efvy88h
-www.*.md.mp.microsoft.com.xn--estv75g
 www.*.md.mp.microsoft.com.xn--fct429k
 www.*.md.mp.microsoft.com.xn--fhbei
 www.*.md.mp.microsoft.com.xn--fiq228c5hs
@@ -22686,6 +22680,7 @@ www.*.telecommand.telemetry.microsoft.com.akadns.net
 www.*.tlu.dl.delivery.mp.microsoft.com
 www.*.ugc.bazaarvoice.com
 www.*.update.microsoft.com
+www.*.vk.com
 www.*.windowsupdate.com
 www.*.wns.windows.com
 www.0-edge-chat.facebook.com
@@ -23044,6 +23039,7 @@ www.ad.mail.ru
 www.ad.ourgame.com
 www.ad.samsungadhub.com
 www.ad.vu
+www.ad2.uoocuniversity.com
 www.adage.com
 www.adameve.com
 www.adash.man.aliyuncs.com
@@ -28986,7 +28982,6 @@ www.google.co.xn--d1alf
 www.google.co.xn--e1a4c
 www.google.co.xn--eckvdtc9d
 www.google.co.xn--efvy88h
-www.google.co.xn--estv75g
 www.google.co.xn--fct429k
 www.google.co.xn--fhbei
 www.google.co.xn--fiq228c5hs
@@ -30506,7 +30501,6 @@ www.google.com.xn--d1alf
 www.google.com.xn--e1a4c
 www.google.com.xn--eckvdtc9d
 www.google.com.xn--efvy88h
-www.google.com.xn--estv75g
 www.google.com.xn--fct429k
 www.google.com.xn--fhbei
 www.google.com.xn--fiq228c5hs
@@ -31748,7 +31742,6 @@ www.google.xn--d1alf
 www.google.xn--e1a4c
 www.google.xn--eckvdtc9d
 www.google.xn--efvy88h
-www.google.xn--estv75g
 www.google.xn--fct429k
 www.google.xn--fhbei
 www.google.xn--fiq228c5hs
@@ -34280,7 +34273,6 @@ www.kisscartoon.xn--d1alf
 www.kisscartoon.xn--e1a4c
 www.kisscartoon.xn--eckvdtc9d
 www.kisscartoon.xn--efvy88h
-www.kisscartoon.xn--estv75g
 www.kisscartoon.xn--fct429k
 www.kisscartoon.xn--fhbei
 www.kisscartoon.xn--fiq228c5hs
@@ -36510,7 +36502,6 @@ www.md.mp.microsoft.com.xn--d1alf
 www.md.mp.microsoft.com.xn--e1a4c
 www.md.mp.microsoft.com.xn--eckvdtc9d
 www.md.mp.microsoft.com.xn--efvy88h
-www.md.mp.microsoft.com.xn--estv75g
 www.md.mp.microsoft.com.xn--fct429k
 www.md.mp.microsoft.com.xn--fhbei
 www.md.mp.microsoft.com.xn--fiq228c5hs
@@ -41890,7 +41881,6 @@ www.wdcp.microsoft.xn--d1alf
 www.wdcp.microsoft.xn--e1a4c
 www.wdcp.microsoft.xn--eckvdtc9d
 www.wdcp.microsoft.xn--efvy88h
-www.wdcp.microsoft.xn--estv75g
 www.wdcp.microsoft.xn--fct429k
 www.wdcp.microsoft.xn--fhbei
 www.wdcp.microsoft.xn--fiq228c5hs
