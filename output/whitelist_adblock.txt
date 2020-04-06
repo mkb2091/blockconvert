@@ -15610,6 +15610,7 @@
 @@||media.line.me^
 @@||media.moddb.com^
 @@||media.nu.nl^
+@@||media.pearsoncmg.com^
 @@||media.photobucket.com^
 @@||media.playstation.com^
 @@||media.r18.com^
@@ -18509,6 +18510,7 @@
 @@||survey.foreseeresults.com^
 @@||survey.forseeresults.com^
 @@||survey.medallia.com^
+@@||survey.pearsoncmg.com^
 @@||surveygizmo.com^
 @@||surveymonkey.com^
 @@||sv.gravatar.com^
@@ -36878,6 +36880,7 @@
 @@||www.media.line.me^
 @@||www.media.moddb.com^
 @@||www.media.nu.nl^
+@@||www.media.pearsoncmg.com^
 @@||www.media.photobucket.com^
 @@||www.media.playstation.com^
 @@||www.media.r18.com^
@@ -39777,6 +39780,7 @@
 @@||www.survey.foreseeresults.com^
 @@||www.survey.forseeresults.com^
 @@||www.survey.medallia.com^
+@@||www.survey.pearsoncmg.com^
 @@||www.surveygizmo.com^
 @@||www.surveymonkey.com^
 @@||www.sv.gravatar.com^
