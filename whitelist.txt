@@ -292,6 +292,7 @@ s.imgur.com
 s.ndemiccreations.com
 s3-us-west-1.amazonaws.com
 s3.amazonaws.com
+s7.orientaltrading.com
 safebrowsing-cache.google.com
 safebrowsing.google.com
 scrapinghub.com
