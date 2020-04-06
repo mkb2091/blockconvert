@@ -227,6 +227,7 @@ mail.getmonero.org
 mail.google.com
 maps.windows.com
 md.mp.microsoft.com.*
+media.pearsoncmg.com
 mediafire.com
 mediaredirect.microsoft.com
 mine.nu
@@ -333,6 +334,7 @@ storecatalogrevocation.storequality.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 support.microsoft.com
 survey.euro.confirmit.com
+survey.pearsoncmg.com
 techradar.com
 tecmint.com
 telecommand.telemetry.microsoft.com.akadns.net
