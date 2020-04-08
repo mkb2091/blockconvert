@@ -410,6 +410,7 @@ www.google.*
 www.google.co.*
 www.google.com.*
 www.heureka.cz
+www.hubpages.com
 www.ign.com
 www.inc.com
 www.instagram.com
