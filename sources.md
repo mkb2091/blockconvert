@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 646675 blocked domains in each of the generated filter lists
+Theres are 647834 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -71,7 +71,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [EasyList Hebrew](https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt)|-|1.0 days|GPLv3|280|0
 [EasyList Germany](https://easylist.to/easylistgermany/easylistgermany.txt)|-|1.0 days|GPLv3|619|13
 [EasyList Dutch](https://easylist-downloads.adblockplus.org/easylistdutch.txt)|-|4.0 days|GPLv3|84|1
-[EasyList Czech and Slovak filter list](https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt)|tomasko126, Aslanex, vobruba-martin, Moskoe, Fanboy|4.0 hours|CC-BY-SA-4.0|82|1
+[EasyList Czech and Slovak filter list](https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt)|tomasko126, Aslanex, vobruba-martin, Moskoe, Fanboy|4.0 hours|CC-BY-SA-4.0|81|1
 [EasyList China](https://easylist-downloads.adblockplus.org/easylistchina.txt)|-|4.0 days|GPLv3|5702|23
 [Binary Defense Banlist](https://www.binarydefense.com/banlist.txt)|-|1.0 days|Public use only|8041|0
 [Better content blocking rules](https://better.fyi/blockerList.txt)|-|1.0 days|CC-BY-SA-4.0|743|2
