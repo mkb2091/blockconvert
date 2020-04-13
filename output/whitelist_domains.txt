@@ -1704,6 +1704,7 @@
 58pic.com
 5min.com
 6-edge-chat.facebook.com
+609d93yvzj2e-a.akamaihd.net
 66.media.tumblr.com
 699pic.com
 6e.de
@@ -1771,6 +1772,7 @@ a152450673.cdn.optimizely.com
 a15506560068.cdn.optimizely.com
 a15508090763.cdn.optimizely.com
 a1625899514.cdn.optimizely.com
+a16488430484.cdn.optimizely.com
 a16854766608.cdn.optimizely.com
 a16921720005.cdn.optimizely.com
 a1706490390.cdn.optimizely.com
@@ -1809,7 +1811,6 @@ a5090114122.cdn.optimizely.com
 a57.foxnews.com
 a571703138.cdn.optimizely.com
 a591102174.cdn.optimizely.com
-a6250770393.cdn.optimizely.com
 a652.dscb.akamai.net
 a72135589.cdn.optimizely.com
 a7270127.cdn.optimizely.com
@@ -1817,7 +1818,6 @@ a7398083153.cdn.optimizely.com
 a752092193.cdn.optimizely.com
 a752671897.cdn.optimizely.com
 a7546840313.cdn.optimizely.com
-a7803129.cdn.optimizely.com
 a7808901045.cdn.optimizely.com
 a7871036.cdn.optimizely.com
 a791773171.cdn.optimizely.com
@@ -1858,7 +1858,7 @@ about.pinterest.com
 aboutcookies.org
 abrilsuperinteressante.files.wordpress.com
 abroad.apilocate.amap.com
-abrtp1-cdn.marketo.com
+abrtp1.marketo.com
 abs.twimg.com
 abtest.mistat.intl.xiaomi.com
 abtest.mistat.xiaomi.com
@@ -3727,7 +3727,6 @@ bolt.dropbox.com
 bomis.snap.com
 book.daum.net
 book.naver.com
-bookbub-res.cloudinary.com
 booking.com
 booking.naver.com
 bookmark.naver.com
@@ -3768,6 +3767,7 @@ break.com
 breakingburner.com
 bree-com.mail.protection.outlook.com
 breitbart.com
+breitbartproduction.disqus.com
 brew.qualcomm.com
 bridgetrack.com
 brightcove.com
@@ -3983,7 +3983,6 @@ cdm.cursecdn.com
 cdmdownload.adobe.com
 cdn-3.convertexperiments.com
 cdn-a.sonyentertainmentnetwork.com
-cdn-aimi.akamaized.net
 cdn-apple.com
 cdn-au.metacdn.com
 cdn-audio-1.medium.com
@@ -5091,6 +5090,7 @@ dmd.metaservices.microsoft.com
 dmd.metaservices.microsoft.com.akadns.net
 dmp.adform.net
 dms.ospserver.net
+dmxleo.dailymotion.com
 dn.ospserver.net
 dn.se
 dnaindia.com
@@ -11126,6 +11126,7 @@ href.li
 hrst.ph
 hrten.com
 htm.huawei.com
+html5-player.libsyn.com
 htmlcommentbox.com
 hu.gravatar.com
 hu.ign.com
@@ -11190,7 +11191,6 @@ i.reddit.com
 i.s-microsoft.com
 i.scdn.co
 i.snap.com
-i.stack.imgur.com
 i.vgy.me
 i.viafoura.co
 i.x.sndcdn.com
@@ -11325,6 +11325,7 @@ images-h2-2.ssl-images-amazon.com
 images-na-2.ssl-images-amazon.com
 images-na.ssl-images-amazon.com
 images-ssl.gotinder.com
+images-static.trustpilot.com
 images-tv.adobe.com
 images-xboxdesignlab.xbox.com
 images.anandtech.com
@@ -11357,6 +11358,7 @@ images.sportsworldnews.com
 images.spot.im
 images.staging.vudu.com
 images.support.sonymobile.com
+images.unsplash.com
 images01.olx-st.com
 images02.adrise.tv
 images1.minutemediacdn.com
@@ -15708,6 +15710,7 @@ mibi.api.xiaomi.com
 mibi.xiaomi.com
 micardapi.micloud.xiaomi.net
 micdrive.openapi.xiaomi.net
+michaels.secure.force.com
 micloud.xiaomi.net
 micpn.com
 microbit.org
@@ -15936,6 +15939,7 @@ mvp.xbox.com
 mw1.google.com
 mw2.google.com
 mwbsys.com
+mwf-service.akamaized.net
 mx.freenet.de
 mx.namecoin.info
 mx1.hitbtc.com
@@ -15993,7 +15997,6 @@ mywot.com
 myxperia.sonymobile.com
 mzstatic.com
 n11scdn.akamaized.net
-n11scdn3.akamaized.net
 n2s.us
 n6.net
 na1.documents.adobe.com
@@ -16487,6 +16490,7 @@ openwall.com
 openx.com
 opera.com
 opf.ooyala.com
+opgg-static.akamaized.net
 opinion.latimes.com
 opinionlab.com
 opinionstage.com
@@ -16950,6 +16954,7 @@ privacy-policy.truste.com
 privacy.rakuten.co.jp
 privateinternetaccess.com
 prize.travel.rakuten.co.jp
+prnewswire.122.2o7.net
 prnewswire.com
 prnt.sc
 pro-accounts.snapchat.com
@@ -17192,6 +17197,7 @@ rawgit.com
 rawhttp.cloudflareworkers.com
 raygun.io
 razorpay.com
+rc-portal.force.com
 rcollard.com
 rcom-eu.dynamicyield.com
 rcom.dynamicyield.com
@@ -17402,6 +17408,7 @@ ru.twitch.tv
 ru.wikipedia.com
 rudo.video
 rukminim1.flixcart.com
+rum.optimizely.com
 rupload.facebook.com
 rush.oneplus.com
 rutube.ru
@@ -19313,7 +19320,6 @@ view.em.funimation.com
 view.engage.xbox.com
 view.status.xbox.com
 view.vzaar.com
-views.unsplash.com
 viglink.com
 vignette.wikia.nocookie.net
 viki.com
@@ -22978,6 +22984,7 @@ www.58.com
 www.58pic.com
 www.5min.com
 www.6-edge-chat.facebook.com
+www.609d93yvzj2e-a.akamaihd.net
 www.66.media.tumblr.com
 www.699pic.com
 www.6e.de
@@ -23045,6 +23052,7 @@ www.a152450673.cdn.optimizely.com
 www.a15506560068.cdn.optimizely.com
 www.a15508090763.cdn.optimizely.com
 www.a1625899514.cdn.optimizely.com
+www.a16488430484.cdn.optimizely.com
 www.a16854766608.cdn.optimizely.com
 www.a16921720005.cdn.optimizely.com
 www.a1706490390.cdn.optimizely.com
@@ -23083,7 +23091,6 @@ www.a5090114122.cdn.optimizely.com
 www.a57.foxnews.com
 www.a571703138.cdn.optimizely.com
 www.a591102174.cdn.optimizely.com
-www.a6250770393.cdn.optimizely.com
 www.a652.dscb.akamai.net
 www.a72135589.cdn.optimizely.com
 www.a7270127.cdn.optimizely.com
@@ -23091,7 +23098,6 @@ www.a7398083153.cdn.optimizely.com
 www.a752092193.cdn.optimizely.com
 www.a752671897.cdn.optimizely.com
 www.a7546840313.cdn.optimizely.com
-www.a7803129.cdn.optimizely.com
 www.a7808901045.cdn.optimizely.com
 www.a7871036.cdn.optimizely.com
 www.a791773171.cdn.optimizely.com
@@ -23132,7 +23138,7 @@ www.about.pinterest.com
 www.aboutcookies.org
 www.abrilsuperinteressante.files.wordpress.com
 www.abroad.apilocate.amap.com
-www.abrtp1-cdn.marketo.com
+www.abrtp1.marketo.com
 www.abs.twimg.com
 www.abtest.mistat.intl.xiaomi.com
 www.abtest.mistat.xiaomi.com
@@ -25001,7 +25007,6 @@ www.bolt.dropbox.com
 www.bomis.snap.com
 www.book.daum.net
 www.book.naver.com
-www.bookbub-res.cloudinary.com
 www.booking.com
 www.booking.naver.com
 www.bookmark.naver.com
@@ -25042,6 +25047,7 @@ www.break.com
 www.breakingburner.com
 www.bree-com.mail.protection.outlook.com
 www.breitbart.com
+www.breitbartproduction.disqus.com
 www.brew.qualcomm.com
 www.bridgetrack.com
 www.brightcove.com
@@ -25257,7 +25263,6 @@ www.cdm.cursecdn.com
 www.cdmdownload.adobe.com
 www.cdn-3.convertexperiments.com
 www.cdn-a.sonyentertainmentnetwork.com
-www.cdn-aimi.akamaized.net
 www.cdn-apple.com
 www.cdn-au.metacdn.com
 www.cdn-audio-1.medium.com
@@ -26365,6 +26370,7 @@ www.dmd.metaservices.microsoft.com
 www.dmd.metaservices.microsoft.com.akadns.net
 www.dmp.adform.net
 www.dms.ospserver.net
+www.dmxleo.dailymotion.com
 www.dn.ospserver.net
 www.dn.se
 www.dnaindia.com
@@ -32400,6 +32406,7 @@ www.href.li
 www.hrst.ph
 www.hrten.com
 www.htm.huawei.com
+www.html5-player.libsyn.com
 www.htmlcommentbox.com
 www.hu.gravatar.com
 www.hu.ign.com
@@ -32464,7 +32471,6 @@ www.i.reddit.com
 www.i.s-microsoft.com
 www.i.scdn.co
 www.i.snap.com
-www.i.stack.imgur.com
 www.i.vgy.me
 www.i.viafoura.co
 www.i.x.sndcdn.com
@@ -32599,6 +32605,7 @@ www.images-h2-2.ssl-images-amazon.com
 www.images-na-2.ssl-images-amazon.com
 www.images-na.ssl-images-amazon.com
 www.images-ssl.gotinder.com
+www.images-static.trustpilot.com
 www.images-tv.adobe.com
 www.images-xboxdesignlab.xbox.com
 www.images.anandtech.com
@@ -32631,6 +32638,7 @@ www.images.sportsworldnews.com
 www.images.spot.im
 www.images.staging.vudu.com
 www.images.support.sonymobile.com
+www.images.unsplash.com
 www.images01.olx-st.com
 www.images02.adrise.tv
 www.images1.minutemediacdn.com
@@ -36982,6 +36990,7 @@ www.mibi.api.xiaomi.com
 www.mibi.xiaomi.com
 www.micardapi.micloud.xiaomi.net
 www.micdrive.openapi.xiaomi.net
+www.michaels.secure.force.com
 www.micloud.xiaomi.net
 www.micpn.com
 www.microbit.org
@@ -37210,6 +37219,7 @@ www.mvp.xbox.com
 www.mw1.google.com
 www.mw2.google.com
 www.mwbsys.com
+www.mwf-service.akamaized.net
 www.mx.freenet.de
 www.mx.namecoin.info
 www.mx1.hitbtc.com
@@ -37267,7 +37277,6 @@ www.mywot.com
 www.myxperia.sonymobile.com
 www.mzstatic.com
 www.n11scdn.akamaized.net
-www.n11scdn3.akamaized.net
 www.n2s.us
 www.n6.net
 www.na1.documents.adobe.com
@@ -37761,6 +37770,7 @@ www.openwall.com
 www.openx.com
 www.opera.com
 www.opf.ooyala.com
+www.opgg-static.akamaized.net
 www.opinion.latimes.com
 www.opinionlab.com
 www.opinionstage.com
@@ -38224,6 +38234,7 @@ www.privacy-policy.truste.com
 www.privacy.rakuten.co.jp
 www.privateinternetaccess.com
 www.prize.travel.rakuten.co.jp
+www.prnewswire.122.2o7.net
 www.prnewswire.com
 www.prnt.sc
 www.pro-accounts.snapchat.com
@@ -38466,6 +38477,7 @@ www.rawgit.com
 www.rawhttp.cloudflareworkers.com
 www.raygun.io
 www.razorpay.com
+www.rc-portal.force.com
 www.rcollard.com
 www.rcom-eu.dynamicyield.com
 www.rcom.dynamicyield.com
@@ -38676,6 +38688,7 @@ www.ru.twitch.tv
 www.ru.wikipedia.com
 www.rudo.video
 www.rukminim1.flixcart.com
+www.rum.optimizely.com
 www.rupload.facebook.com
 www.rush.oneplus.com
 www.rutube.ru
@@ -40587,7 +40600,6 @@ www.view.em.funimation.com
 www.view.engage.xbox.com
 www.view.status.xbox.com
 www.view.vzaar.com
-www.views.unsplash.com
 www.viglink.com
 www.vignette.wikia.nocookie.net
 www.viki.com
@@ -42790,7 +42802,6 @@ www.zn_55bdrev4af0c1yl-cbs.siteintercept.qualtrics.com
 www.zn_5u81q8n4jdu5ls9-cbs.siteintercept.qualtrics.com
 www.zn_6qberv3uhxxxrjh-gettyimages.siteintercept.qualtrics.com
 www.zn_6vxkyqywaf9f1t7-usbank.siteintercept.qualtrics.com
-www.zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com
 www.zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com
 www.zn_agburbioucamt8f-babycenter.siteintercept.qualtrics.com
 www.zn_baufuuufwz4y0zr-ally.siteintercept.qualtrics.com
@@ -42807,6 +42818,7 @@ www.znbdhpkbkrivmgkyl-dishvoc.siteintercept.qualtrics.com
 www.znbkhvqf0zrgtvrlt-tribune.siteintercept.qualtrics.com
 www.znbmujw2vcljimxnp-mastercard.siteintercept.qualtrics.com
 www.znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com
+www.znbsk4yipsnfkyadd-mlb.siteintercept.qualtrics.com
 www.znbxwbrctocp45cuv-weightwatcherscx.siteintercept.qualtrics.com
 www.zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com
 www.zndcfzcjvykskwjbz-qvc.siteintercept.qualtrics.com
@@ -43077,7 +43089,6 @@ zn_55bdrev4af0c1yl-cbs.siteintercept.qualtrics.com
 zn_5u81q8n4jdu5ls9-cbs.siteintercept.qualtrics.com
 zn_6qberv3uhxxxrjh-gettyimages.siteintercept.qualtrics.com
 zn_6vxkyqywaf9f1t7-usbank.siteintercept.qualtrics.com
-zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com
 zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com
 zn_agburbioucamt8f-babycenter.siteintercept.qualtrics.com
 zn_baufuuufwz4y0zr-ally.siteintercept.qualtrics.com
@@ -43094,6 +43105,7 @@ znbdhpkbkrivmgkyl-dishvoc.siteintercept.qualtrics.com
 znbkhvqf0zrgtvrlt-tribune.siteintercept.qualtrics.com
 znbmujw2vcljimxnp-mastercard.siteintercept.qualtrics.com
 znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com
+znbsk4yipsnfkyadd-mlb.siteintercept.qualtrics.com
 znbxwbrctocp45cuv-weightwatcherscx.siteintercept.qualtrics.com
 zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com
 zndcfzcjvykskwjbz-qvc.siteintercept.qualtrics.com
