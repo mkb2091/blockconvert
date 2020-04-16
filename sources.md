@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 648116 blocked domains in each of the generated filter lists
+Theres are 647889 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -33,7 +33,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [Toshiya's Filter List - Experimental](https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt)|Toshiya|4.0 days|GPLv3|2118|2
 [The Hosts File Project](https://hblock.molinero.dev/hosts)|Héctor Molinero Fernández <hector@molinero.dev>|1.0 days|MIT|250287|0
 [Strappazzon's Tracking List](https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Tracking.txt)|-|3.0 days|MIT|11|0
-[Spam404](https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt)|-|2.0 days|Permission to modify, copy and distribute|7020|0
+[Spam404](https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt)|-|2.0 days|Permission to modify, copy and distribute|7021|0
 [Skeletal Blocker](https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List)|SkeletalDemise|2.0 days|GPLv3|517|0
 [Scams and Phishing](https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt)|infinitytec|10.0 days|MIT|135|0
 [Ransomware URL Blocklist ](https://ransomwaretracker.abuse.ch/downloads/RW_URLBL.txt)|-|1.0 days|Free for use without any limitations|0|0
@@ -52,8 +52,8 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [MobileAdTrackers](https://raw.githubusercontent.com/jawz101/MobileAdTrackers/master/hosts)|-|1.0 days|Modified MIT|12183|0
 [MinerBlock Filters](https://raw.githubusercontent.com/xd4rker/MinerBlock/master/assets/filters.txt)|-|1.0 days|MIT|431|0
 [Magneto Malware Skanner - Burner Domains](https://raw.githubusercontent.com/gwillem/magento-malware-scanner/master/rules/burner-domains.txt)|-|10.0 days|GPLv3|420|0
-[Lightswitch05's Tracking Aggressive](https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt)|Daniel White|2.0 days|Apache2|7170|0
-[Lightswitch05's Ads & Tracking](https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt)|Daniel White|2.0 days|Apache2|118624|0
+[Lightswitch05's Tracking Aggressive](https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt)|Daniel White|2.0 days|Apache2|7250|0
+[Lightswitch05's Ads & Tracking](https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt)|Daniel White|2.0 days|Apache2|118725|0
 [Latvian List](https://hostsfile.mine.nu/hosts0.txt)|-|1.0 days|GPLv3|105785|0
 [KADhosts](https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt)|-|1.0 days|CC-BY-SA-4|9535|0
 [International List](https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt)|-|3.0 days|The Unlicense|15|1
