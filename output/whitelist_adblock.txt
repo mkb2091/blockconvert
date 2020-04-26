@@ -1704,6 +1704,7 @@
 @@||58pic.com^
 @@||5min.com^
 @@||6-edge-chat.facebook.com^
+@@||609d93yvzj2e-a.akamaihd.net^
 @@||699pic.com^
 @@||6e.de^
 @@||6p.ru^
@@ -1992,7 +1993,6 @@
 @@||aeis.alicdn.com^
 @@||aemmobile.adobe.com^
 @@||aetna.com^
-@@||aetnaaetnaprod2018.112.2o7.net^
 @@||aeu.alicdn.com^
 @@||affiliate-program.amazon.com^
 @@||affiliate.hitbtc.com^
@@ -3023,6 +3023,7 @@
 @@||app-ab09.marketo.com^
 @@||app-ab13.marketo.com^
 @@||app-ab17.marketo.com^
+@@||app-aba.marketo.com^
 @@||app-advertise.zhihuishu.com^
 @@||app-analytics.snapchat.com^
 @@||app-analyticsv2.snapchat.com^
@@ -3035,6 +3036,7 @@
 @@||app-ru.huawei.com^
 @@||app-sj16.marketo.com^
 @@||app-sj21.marketo.com^
+@@||app-sj30.marketo.com^
 @@||app-uk.huawei.com^
 @@||app.adjust.com^
 @@||app.alipay.com^
@@ -3095,6 +3097,7 @@
 @@||apply.wechat.com^
 @@||appnee.com^
 @@||apps-dn2.ospserver.net^
+@@||apps.bazaarvoice.com^
 @@||apps.daum.net^
 @@||apps.entrance.sonymobile.com^
 @@||apps.facebook.com^
@@ -3342,6 +3345,7 @@
 @@||b.techcrunch.com^
 @@||b.tiles.mapbox.com^
 @@||b0.cc^
+@@||b2c-mlm.marketo.com^
 @@||b6.me^
 @@||babybus.com^
 @@||bac-assets.com^
@@ -3694,7 +3698,6 @@
 @@||brooksbrothers.com^
 @@||brothersoft.com^
 @@||brownfarm.game.line.me^
-@@||brownshoe.112.2o7.net^
 @@||browser-update.org^
 @@||browser.cloud.ucweb.com^
 @@||browser.pipe.aria.microsoft.com^
@@ -4548,6 +4551,7 @@
 @@||cosu.sonymobile.com^
 @@||count.ly^
 @@||counter-strike.net^
+@@||countess.twitch.tv^
 @@||coupon.aliexpress.com^
 @@||couponbar.coupons.com^
 @@||coupondunia.go2cloud.org^
@@ -4869,10 +4873,10 @@
 @@||devimages-cdn.apple.com^
 @@||devmate.com^
 @@||df.ly^
+@@||dfapvmql-q.global.ssl.fastly.net^
 @@||dfm-dailynews.disqus.com^
 @@||dftp.flowplayer.com^
 @@||dgit.com^
-@@||di-dtaectolog-us-prod-1.appspot.com^
 @@||di.com.pl^
 @@||dialin.qualcomm.com^
 @@||dialog.filepicker.io^
@@ -5227,7 +5231,6 @@
 @@||edge-chat.facebook.com^
 @@||edge-mqtt.facebook.com^
 @@||edge.api.brightcove.com^
-@@||edge.dis.commercecloud.salesforce.com^
 @@||edge.pantheon.io^
 @@||edge.skype.com^
 @@||edgecastcdn.net^
@@ -5294,8 +5297,6 @@
 @@||email.pinterest.com^
 @@||emailondeck.com^
 @@||emarketer.com^
-@@||embed-fastly.wistia.com^
-@@||embed-ssl.wistia.com^
 @@||embed.actionbutton.co^
 @@||embed.flowplayer.org^
 @@||embed.ly^
@@ -11231,7 +11232,6 @@
 @@||images.spot.im^
 @@||images.staging.vudu.com^
 @@||images.support.sonymobile.com^
-@@||images.unsplash.com^
 @@||images01.olx-st.com^
 @@||images02.adrise.tv^
 @@||images1.minutemediacdn.com^
@@ -11648,6 +11648,7 @@
 @@||jwpltx.com^
 @@||jwpsrv.com^
 @@||jx.me^
+@@||k65ewyg12vn9-a.akamaihd.net^
 @@||ka.gravatar.com^
 @@||kakakucom.112.2o7.net^
 @@||kakaotv.daum.net^
@@ -17296,6 +17297,7 @@
 @@||s.spot.im^
 @@||s.to^
 @@||s.tradingview.com^
+@@||s.update.dailymotion.com^
 @@||s.w-x.co^
 @@||s.w.org^
 @@||s.yimg.com^
@@ -17756,6 +17758,8 @@
 @@||sitestat.com^
 @@||sj1gtm003.adobe.com^
 @@||sj1gtm004.adobe.com^
+@@||sjrtp-cdn.marketo.com^
+@@||sjrtp2-cdn.marketo.com^
 @@||sk.gravatar.com^
 @@||sk.wikipedia.com^
 @@||sketch.sonymobile.com^
@@ -17922,6 +17926,7 @@
 @@||speed4up.com^
 @@||speedbit.com^
 @@||speedcurve.com^
+@@||speedtest.dailymotion.com^
 @@||speedtest.net^
 @@||spencersonline.com^
 @@||spiceworks.com^
@@ -18103,6 +18108,7 @@
 @@||static.moovitapp.com^
 @@||static.naver.com^
 @@||static.networkedblogs.com^
+@@||static.olark.com^
 @@||static.opentok.com^
 @@||static.ow.ly^
 @@||static.parastorage.com^
@@ -18837,6 +18843,7 @@
 @@||umich.qualtrics.com^
 @@||umn.edu^
 @@||un.org^
+@@||unagi-eu.amazon.com^
 @@||unbouncepages.com^
 @@||unc.edu^
 @@||und.weg.ist.sie.com^
@@ -18912,7 +18919,6 @@
 @@||urbanairship.com^
 @@||urbandictionary.com^
 @@||urbanspoon.com^
-@@||urbn.my.salesforce.com^
 @@||url.cc^
 @@||url.ch^
 @@||url.com^
@@ -22788,6 +22794,7 @@
 @@||www.58pic.com^
 @@||www.5min.com^
 @@||www.6-edge-chat.facebook.com^
+@@||www.609d93yvzj2e-a.akamaihd.net^
 @@||www.699pic.com^
 @@||www.6e.de^
 @@||www.6p.ru^
@@ -23076,7 +23083,6 @@
 @@||www.aeis.alicdn.com^
 @@||www.aemmobile.adobe.com^
 @@||www.aetna.com^
-@@||www.aetnaaetnaprod2018.112.2o7.net^
 @@||www.aeu.alicdn.com^
 @@||www.affiliate-program.amazon.com^
 @@||www.affiliate.hitbtc.com^
@@ -24107,6 +24113,7 @@
 @@||www.app-ab09.marketo.com^
 @@||www.app-ab13.marketo.com^
 @@||www.app-ab17.marketo.com^
+@@||www.app-aba.marketo.com^
 @@||www.app-advertise.zhihuishu.com^
 @@||www.app-analytics.snapchat.com^
 @@||www.app-analyticsv2.snapchat.com^
@@ -24119,6 +24126,7 @@
 @@||www.app-ru.huawei.com^
 @@||www.app-sj16.marketo.com^
 @@||www.app-sj21.marketo.com^
+@@||www.app-sj30.marketo.com^
 @@||www.app-uk.huawei.com^
 @@||www.app.adjust.com^
 @@||www.app.alipay.com^
@@ -24179,6 +24187,7 @@
 @@||www.apply.wechat.com^
 @@||www.appnee.com^
 @@||www.apps-dn2.ospserver.net^
+@@||www.apps.bazaarvoice.com^
 @@||www.apps.daum.net^
 @@||www.apps.entrance.sonymobile.com^
 @@||www.apps.facebook.com^
@@ -24426,6 +24435,7 @@
 @@||www.b.techcrunch.com^
 @@||www.b.tiles.mapbox.com^
 @@||www.b0.cc^
+@@||www.b2c-mlm.marketo.com^
 @@||www.b6.me^
 @@||www.babybus.com^
 @@||www.bac-assets.com^
@@ -24778,7 +24788,6 @@
 @@||www.brooksbrothers.com^
 @@||www.brothersoft.com^
 @@||www.brownfarm.game.line.me^
-@@||www.brownshoe.112.2o7.net^
 @@||www.browser-update.org^
 @@||www.browser.cloud.ucweb.com^
 @@||www.browser.pipe.aria.microsoft.com^
@@ -25632,6 +25641,7 @@
 @@||www.cosu.sonymobile.com^
 @@||www.count.ly^
 @@||www.counter-strike.net^
+@@||www.countess.twitch.tv^
 @@||www.coupon.aliexpress.com^
 @@||www.couponbar.coupons.com^
 @@||www.coupondunia.go2cloud.org^
@@ -25953,10 +25963,10 @@
 @@||www.devimages-cdn.apple.com^
 @@||www.devmate.com^
 @@||www.df.ly^
+@@||www.dfapvmql-q.global.ssl.fastly.net^
 @@||www.dfm-dailynews.disqus.com^
 @@||www.dftp.flowplayer.com^
 @@||www.dgit.com^
-@@||www.di-dtaectolog-us-prod-1.appspot.com^
 @@||www.di.com.pl^
 @@||www.dialin.qualcomm.com^
 @@||www.dialog.filepicker.io^
@@ -26311,7 +26321,6 @@
 @@||www.edge-chat.facebook.com^
 @@||www.edge-mqtt.facebook.com^
 @@||www.edge.api.brightcove.com^
-@@||www.edge.dis.commercecloud.salesforce.com^
 @@||www.edge.pantheon.io^
 @@||www.edge.skype.com^
 @@||www.edgecastcdn.net^
@@ -26378,8 +26387,6 @@
 @@||www.email.pinterest.com^
 @@||www.emailondeck.com^
 @@||www.emarketer.com^
-@@||www.embed-fastly.wistia.com^
-@@||www.embed-ssl.wistia.com^
 @@||www.embed.actionbutton.co^
 @@||www.embed.flowplayer.org^
 @@||www.embed.ly^
@@ -32315,7 +32322,6 @@
 @@||www.images.spot.im^
 @@||www.images.staging.vudu.com^
 @@||www.images.support.sonymobile.com^
-@@||www.images.unsplash.com^
 @@||www.images01.olx-st.com^
 @@||www.images02.adrise.tv^
 @@||www.images1.minutemediacdn.com^
@@ -32732,6 +32738,7 @@
 @@||www.jwpltx.com^
 @@||www.jwpsrv.com^
 @@||www.jx.me^
+@@||www.k65ewyg12vn9-a.akamaihd.net^
 @@||www.ka.gravatar.com^
 @@||www.kakakucom.112.2o7.net^
 @@||www.kakaotv.daum.net^
@@ -38380,6 +38387,7 @@
 @@||www.s.spot.im^
 @@||www.s.to^
 @@||www.s.tradingview.com^
+@@||www.s.update.dailymotion.com^
 @@||www.s.w-x.co^
 @@||www.s.w.org^
 @@||www.s.yimg.com^
@@ -38840,6 +38848,8 @@
 @@||www.sitestat.com^
 @@||www.sj1gtm003.adobe.com^
 @@||www.sj1gtm004.adobe.com^
+@@||www.sjrtp-cdn.marketo.com^
+@@||www.sjrtp2-cdn.marketo.com^
 @@||www.sk.gravatar.com^
 @@||www.sk.wikipedia.com^
 @@||www.sketch.sonymobile.com^
@@ -39006,6 +39016,7 @@
 @@||www.speed4up.com^
 @@||www.speedbit.com^
 @@||www.speedcurve.com^
+@@||www.speedtest.dailymotion.com^
 @@||www.speedtest.net^
 @@||www.spencersonline.com^
 @@||www.spiceworks.com^
@@ -39187,6 +39198,7 @@
 @@||www.static.moovitapp.com^
 @@||www.static.naver.com^
 @@||www.static.networkedblogs.com^
+@@||www.static.olark.com^
 @@||www.static.opentok.com^
 @@||www.static.ow.ly^
 @@||www.static.parastorage.com^
@@ -39921,6 +39933,7 @@
 @@||www.umich.qualtrics.com^
 @@||www.umn.edu^
 @@||www.un.org^
+@@||www.unagi-eu.amazon.com^
 @@||www.unbouncepages.com^
 @@||www.unc.edu^
 @@||www.und.weg.ist.sie.com^
@@ -39996,7 +40009,6 @@
 @@||www.urbanairship.com^
 @@||www.urbandictionary.com^
 @@||www.urbanspoon.com^
-@@||www.urbn.my.salesforce.com^
 @@||www.url.cc^
 @@||www.url.ch^
 @@||www.url.com^
