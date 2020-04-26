@@ -30,6 +30,7 @@
 91-cdn.com
 91mobiles.com
 a-msedge.net
+a248.e.akamai.net
 aax-us-east.amazon-adsystem.com
 accounts.eu1.gigya.com
 activation-v2.sls.microsoft.com
