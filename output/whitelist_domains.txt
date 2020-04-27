@@ -1704,7 +1704,6 @@
 58pic.com
 5min.com
 6-edge-chat.facebook.com
-609d93yvzj2e-a.akamaihd.net
 699pic.com
 6e.de
 6p.ru
@@ -1760,6 +1759,7 @@ a14738960062.cdn.optimizely.com
 a15506560068.cdn.optimizely.com
 a1625899514.cdn.optimizely.com
 a1706490390.cdn.optimizely.com
+a248.e.akamai.net
 a2900460605.cdn.optimizely.com
 a2zapk.com
 a3226860758.cdn.optimizely.com
@@ -1863,7 +1863,6 @@ acsdk.gameyw.easebar.com
 act.wechat.com
 actionbutton.co
 actionnetwork.org
-actions.everyaction.com
 activate-sea.adobe.com
 activate-sjc0.adobe.com
 activate.adobe.com
@@ -1961,7 +1960,6 @@ ads.askgamblers.com
 ads.fuckingmachines.com
 ads.google.com
 ads.id
-ads.investingchannel.com
 ads.microsoft.com
 ads.nipr.ac.jp
 ads.pinterest.com
@@ -2018,7 +2016,6 @@ airtable.com
 ajax.aspnetcdn.com
 ajax.cloudflare.com
 ajax.googleapis.com
-ajax.microsoft.com
 ak-app-cdn.spot.im
 ak-dynamic-cdn.spot.im
 ak-images.spot.im
@@ -2676,7 +2673,6 @@ ams.amazon.co.jp
 ams.amazon.co.uk
 ams.amazon.com
 amzn.to
-ana.112.2o7.net
 ana.fr
 analytics.edgesuite.net
 analytics.google.com
@@ -2763,7 +2759,6 @@ api-mobile-creators.soundcloud.com
 api-mobile.soundcloud.com
 api-mobile.x.sndcdn.com
 api-mobileweb.soundcloud.com
-api-na.geetest.com
 api-nyc.soundcloud.com
 api-partner.spotify.com
 api-partners.soundcloud.com
@@ -2849,7 +2844,6 @@ api.fast.com
 api.feedburner.com
 api.flickr.com
 api.flowplayer.com
-api.flyertown.ca
 api.foursquare.com
 api.foxnews.com
 api.gallery.intl.miui.com
@@ -3020,10 +3014,7 @@ apnupdate.sonymobile.com
 apo.st
 apollo.dl.playstation.net
 app-301.huawei.com
-app-ab09.marketo.com
 app-ab13.marketo.com
-app-ab17.marketo.com
-app-aba.marketo.com
 app-advertise.zhihuishu.com
 app-analytics.snapchat.com
 app-analyticsv2.snapchat.com
@@ -3035,8 +3026,6 @@ app-measurement.com
 app-perms.playstation.com
 app-ru.huawei.com
 app-sj16.marketo.com
-app-sj21.marketo.com
-app-sj30.marketo.com
 app-uk.huawei.com
 app.adjust.com
 app.alipay.com
@@ -3097,7 +3086,6 @@ apply.techcrunch.com
 apply.wechat.com
 appnee.com
 apps-dn2.ospserver.net
-apps.bazaarvoice.com
 apps.daum.net
 apps.entrance.sonymobile.com
 apps.facebook.com
@@ -3345,7 +3333,6 @@ b.stats.paypal.com
 b.techcrunch.com
 b.tiles.mapbox.com
 b0.cc
-b2c-mlm.marketo.com
 b6.me
 babybus.com
 bac-assets.com
@@ -4045,7 +4032,6 @@ cdn.walkme.com
 cdn.wetest.qq.com
 cdn.wololo.net
 cdn01.dailycaller.com
-cdn1.affirm.com
 cdn1.digitaltrends.com
 cdn1.friendbuy.com
 cdn1.xda-developers.com
@@ -4097,7 +4083,6 @@ cedexis.net
 cedexispub.cdnetworks.net
 cell.office.naver.com
 census.gov
-centaurpublications.122.2o7.net
 centraleu.pi-dns.com
 cern.ch
 cert.halo.part.xbox.com
@@ -4551,7 +4536,6 @@ costream.twitch.tv
 cosu.sonymobile.com
 count.ly
 counter-strike.net
-countess.twitch.tv
 coupon.aliexpress.com
 couponbar.coupons.com
 coupondunia.go2cloud.org
@@ -4873,7 +4857,6 @@ devices.netflix.com
 devimages-cdn.apple.com
 devmate.com
 df.ly
-dfapvmql-q.global.ssl.fastly.net
 dfm-dailynews.disqus.com
 dftp.flowplayer.com
 dgit.com
@@ -5277,7 +5260,6 @@ elmundo.es
 eloqua.com
 elpais.com
 elsalvador.com
-eltiempo.112.2o7.net
 eltraficosv.com
 eltrafiko.com
 elurl.com
@@ -5795,7 +5777,6 @@ fox6now.com
 fox8.com
 foxnews.com
 foxsports.com.au
-fp-cdn.azureedge.net
 fp-eu-w1-aai.flowplayer.com
 fp.profiles.us.playstation.com
 fpdownload.adobe.com
@@ -5918,7 +5899,6 @@ g2play.com
 g3.net
 ga.gravatar.com
 gacollector.l.google.com
-gadasource.storage.googleapis.com
 gadgetsnow.com
 gall.dcinside.com
 gallery.cdn.pandora.xiaomi.com
@@ -11003,6 +10983,7 @@ href.li
 hrst.ph
 hrten.com
 htm.huawei.com
+html5-player.libsyn.com
 htmlcommentbox.com
 hu.gravatar.com
 hu.ign.com
@@ -11648,7 +11629,6 @@ jwplayer.com
 jwpltx.com
 jwpsrv.com
 jx.me
-k65ewyg12vn9-a.akamaihd.net
 ka.gravatar.com
 kakakucom.112.2o7.net
 kakaotv.daum.net
@@ -13252,7 +13232,6 @@ kr.blog.twitch.tv
 kr.ign.com
 kr.me
 kr.wikipedia.com
-kraken.rambler.ru
 krakow.tvp.pl
 krautchan.net
 krdic.naver.com
@@ -13520,7 +13499,6 @@ loccitane.com
 lockurl.com
 lodz.tvp.pl
 log.entrance.sonymobile.com
-log.olark.com
 logback.qos.ch
 logbuch-netzpolitik.de
 logging.apache.org
@@ -13931,10 +13909,6 @@ mazu.sec.miui.com
 mbest.aliexpress.com
 mbl.is
 mc-siderail.spot.im
-mc.us13.list-manage.com
-mc.us16.list-manage.com
-mc.us19.list-manage.com
-mc.us5.list-manage.com
 mcaf.ee
 mcafee.com
 mcclatchyinteractive.com
@@ -16493,7 +16467,6 @@ pastebin.com
 pastebin.org
 pasteboard.co
 pasted.co
-patagonia.122.2o7.net
 path.qualcomm.com
 patheos.com
 patorjk.com
@@ -16504,7 +16477,6 @@ pay.google.com
 pay.igamecj.com
 pay.line.me
 pay.oneplus.com
-pay.shopify.com
 pay.stripe.com
 pay.wechat.com
 payload.cargocollective.com
@@ -17020,7 +16992,6 @@ radikal.ru
 radiofrance.fr
 radiostacja.pl
 raidrush.ws
-rakuten.112.2o7.net
 rakuten.co.jp
 rakuten.com
 rambler.ru
@@ -17297,7 +17268,6 @@ s.snapchat.com
 s.spot.im
 s.to
 s.tradingview.com
-s.update.dailymotion.com
 s.w-x.co
 s.w.org
 s.yimg.com
@@ -17758,8 +17728,6 @@ sites.techcrunch.com
 sitestat.com
 sj1gtm003.adobe.com
 sj1gtm004.adobe.com
-sjrtp-cdn.marketo.com
-sjrtp2-cdn.marketo.com
 sk.gravatar.com
 sk.wikipedia.com
 sketch.sonymobile.com
@@ -17893,7 +17861,6 @@ sony.jp
 sony.net
 sonycreativesoftware.com
 sonyericsson2.accu-weather.com
-sonygs.112.2o7.net
 sonymobile.com
 sonyselect-api.sonymobile.com
 soporte.latam.playstation.com
@@ -17926,7 +17893,6 @@ spectre.twitch.tv
 speed4up.com
 speedbit.com
 speedcurve.com
-speedtest.dailymotion.com
 speedtest.net
 spencersonline.com
 spiceworks.com
@@ -18108,7 +18074,6 @@ static.moddb.com
 static.moovitapp.com
 static.naver.com
 static.networkedblogs.com
-static.olark.com
 static.opentok.com
 static.ow.ly
 static.parastorage.com
@@ -18843,7 +18808,6 @@ umich.edu
 umich.qualtrics.com
 umn.edu
 un.org
-unagi-eu.amazon.com
 unbouncepages.com
 unc.edu
 und.weg.ist.sie.com
@@ -22794,7 +22758,6 @@ www.58.com
 www.58pic.com
 www.5min.com
 www.6-edge-chat.facebook.com
-www.609d93yvzj2e-a.akamaihd.net
 www.699pic.com
 www.6e.de
 www.6p.ru
@@ -22850,6 +22813,7 @@ www.a14738960062.cdn.optimizely.com
 www.a15506560068.cdn.optimizely.com
 www.a1625899514.cdn.optimizely.com
 www.a1706490390.cdn.optimizely.com
+www.a248.e.akamai.net
 www.a2900460605.cdn.optimizely.com
 www.a2zapk.com
 www.a3226860758.cdn.optimizely.com
@@ -22953,7 +22917,6 @@ www.acsdk.gameyw.easebar.com
 www.act.wechat.com
 www.actionbutton.co
 www.actionnetwork.org
-www.actions.everyaction.com
 www.activate-sea.adobe.com
 www.activate-sjc0.adobe.com
 www.activate.adobe.com
@@ -23051,7 +23014,6 @@ www.ads.askgamblers.com
 www.ads.fuckingmachines.com
 www.ads.google.com
 www.ads.id
-www.ads.investingchannel.com
 www.ads.microsoft.com
 www.ads.nipr.ac.jp
 www.ads.pinterest.com
@@ -23108,7 +23070,6 @@ www.airtable.com
 www.ajax.aspnetcdn.com
 www.ajax.cloudflare.com
 www.ajax.googleapis.com
-www.ajax.microsoft.com
 www.ak-app-cdn.spot.im
 www.ak-dynamic-cdn.spot.im
 www.ak-images.spot.im
@@ -23766,7 +23727,6 @@ www.ams.amazon.co.jp
 www.ams.amazon.co.uk
 www.ams.amazon.com
 www.amzn.to
-www.ana.112.2o7.net
 www.ana.fr
 www.analytics.edgesuite.net
 www.analytics.google.com
@@ -23853,7 +23813,6 @@ www.api-mobile-creators.soundcloud.com
 www.api-mobile.soundcloud.com
 www.api-mobile.x.sndcdn.com
 www.api-mobileweb.soundcloud.com
-www.api-na.geetest.com
 www.api-nyc.soundcloud.com
 www.api-partner.spotify.com
 www.api-partners.soundcloud.com
@@ -23939,7 +23898,6 @@ www.api.fast.com
 www.api.feedburner.com
 www.api.flickr.com
 www.api.flowplayer.com
-www.api.flyertown.ca
 www.api.foursquare.com
 www.api.foxnews.com
 www.api.gallery.intl.miui.com
@@ -24110,10 +24068,7 @@ www.apnupdate.sonymobile.com
 www.apo.st
 www.apollo.dl.playstation.net
 www.app-301.huawei.com
-www.app-ab09.marketo.com
 www.app-ab13.marketo.com
-www.app-ab17.marketo.com
-www.app-aba.marketo.com
 www.app-advertise.zhihuishu.com
 www.app-analytics.snapchat.com
 www.app-analyticsv2.snapchat.com
@@ -24125,8 +24080,6 @@ www.app-measurement.com
 www.app-perms.playstation.com
 www.app-ru.huawei.com
 www.app-sj16.marketo.com
-www.app-sj21.marketo.com
-www.app-sj30.marketo.com
 www.app-uk.huawei.com
 www.app.adjust.com
 www.app.alipay.com
@@ -24187,7 +24140,6 @@ www.apply.techcrunch.com
 www.apply.wechat.com
 www.appnee.com
 www.apps-dn2.ospserver.net
-www.apps.bazaarvoice.com
 www.apps.daum.net
 www.apps.entrance.sonymobile.com
 www.apps.facebook.com
@@ -24435,7 +24387,6 @@ www.b.stats.paypal.com
 www.b.techcrunch.com
 www.b.tiles.mapbox.com
 www.b0.cc
-www.b2c-mlm.marketo.com
 www.b6.me
 www.babybus.com
 www.bac-assets.com
@@ -25135,7 +25086,6 @@ www.cdn.walkme.com
 www.cdn.wetest.qq.com
 www.cdn.wololo.net
 www.cdn01.dailycaller.com
-www.cdn1.affirm.com
 www.cdn1.digitaltrends.com
 www.cdn1.friendbuy.com
 www.cdn1.xda-developers.com
@@ -25187,7 +25137,6 @@ www.cedexis.net
 www.cedexispub.cdnetworks.net
 www.cell.office.naver.com
 www.census.gov
-www.centaurpublications.122.2o7.net
 www.centraleu.pi-dns.com
 www.cern.ch
 www.cert.halo.part.xbox.com
@@ -25641,7 +25590,6 @@ www.costream.twitch.tv
 www.cosu.sonymobile.com
 www.count.ly
 www.counter-strike.net
-www.countess.twitch.tv
 www.coupon.aliexpress.com
 www.couponbar.coupons.com
 www.coupondunia.go2cloud.org
@@ -25963,7 +25911,6 @@ www.devices.netflix.com
 www.devimages-cdn.apple.com
 www.devmate.com
 www.df.ly
-www.dfapvmql-q.global.ssl.fastly.net
 www.dfm-dailynews.disqus.com
 www.dftp.flowplayer.com
 www.dgit.com
@@ -26367,7 +26314,6 @@ www.elmundo.es
 www.eloqua.com
 www.elpais.com
 www.elsalvador.com
-www.eltiempo.112.2o7.net
 www.eltraficosv.com
 www.eltrafiko.com
 www.elurl.com
@@ -26885,7 +26831,6 @@ www.fox6now.com
 www.fox8.com
 www.foxnews.com
 www.foxsports.com.au
-www.fp-cdn.azureedge.net
 www.fp-eu-w1-aai.flowplayer.com
 www.fp.profiles.us.playstation.com
 www.fpdownload.adobe.com
@@ -27008,7 +26953,6 @@ www.g2play.com
 www.g3.net
 www.ga.gravatar.com
 www.gacollector.l.google.com
-www.gadasource.storage.googleapis.com
 www.gadgetsnow.com
 www.gall.dcinside.com
 www.gallery.cdn.pandora.xiaomi.com
@@ -32093,6 +32037,7 @@ www.href.li
 www.hrst.ph
 www.hrten.com
 www.htm.huawei.com
+www.html5-player.libsyn.com
 www.htmlcommentbox.com
 www.hu.gravatar.com
 www.hu.ign.com
@@ -32738,7 +32683,6 @@ www.jwplayer.com
 www.jwpltx.com
 www.jwpsrv.com
 www.jx.me
-www.k65ewyg12vn9-a.akamaihd.net
 www.ka.gravatar.com
 www.kakakucom.112.2o7.net
 www.kakaotv.daum.net
@@ -34342,7 +34286,6 @@ www.kr.blog.twitch.tv
 www.kr.ign.com
 www.kr.me
 www.kr.wikipedia.com
-www.kraken.rambler.ru
 www.krakow.tvp.pl
 www.krautchan.net
 www.krdic.naver.com
@@ -34610,7 +34553,6 @@ www.loccitane.com
 www.lockurl.com
 www.lodz.tvp.pl
 www.log.entrance.sonymobile.com
-www.log.olark.com
 www.logback.qos.ch
 www.logbuch-netzpolitik.de
 www.logging.apache.org
@@ -35021,10 +34963,6 @@ www.mazu.sec.miui.com
 www.mbest.aliexpress.com
 www.mbl.is
 www.mc-siderail.spot.im
-www.mc.us13.list-manage.com
-www.mc.us16.list-manage.com
-www.mc.us19.list-manage.com
-www.mc.us5.list-manage.com
 www.mcaf.ee
 www.mcafee.com
 www.mcclatchyinteractive.com
@@ -37583,7 +37521,6 @@ www.pastebin.com
 www.pastebin.org
 www.pasteboard.co
 www.pasted.co
-www.patagonia.122.2o7.net
 www.path.qualcomm.com
 www.patheos.com
 www.patorjk.com
@@ -37594,7 +37531,6 @@ www.pay.google.com
 www.pay.igamecj.com
 www.pay.line.me
 www.pay.oneplus.com
-www.pay.shopify.com
 www.pay.stripe.com
 www.pay.wechat.com
 www.payload.cargocollective.com
@@ -38110,7 +38046,6 @@ www.radikal.ru
 www.radiofrance.fr
 www.radiostacja.pl
 www.raidrush.ws
-www.rakuten.112.2o7.net
 www.rakuten.co.jp
 www.rakuten.com
 www.rambler.ru
@@ -38387,7 +38322,6 @@ www.s.snapchat.com
 www.s.spot.im
 www.s.to
 www.s.tradingview.com
-www.s.update.dailymotion.com
 www.s.w-x.co
 www.s.w.org
 www.s.yimg.com
@@ -38848,8 +38782,6 @@ www.sites.techcrunch.com
 www.sitestat.com
 www.sj1gtm003.adobe.com
 www.sj1gtm004.adobe.com
-www.sjrtp-cdn.marketo.com
-www.sjrtp2-cdn.marketo.com
 www.sk.gravatar.com
 www.sk.wikipedia.com
 www.sketch.sonymobile.com
@@ -38983,7 +38915,6 @@ www.sony.jp
 www.sony.net
 www.sonycreativesoftware.com
 www.sonyericsson2.accu-weather.com
-www.sonygs.112.2o7.net
 www.sonymobile.com
 www.sonyselect-api.sonymobile.com
 www.soporte.latam.playstation.com
@@ -39016,7 +38947,6 @@ www.spectre.twitch.tv
 www.speed4up.com
 www.speedbit.com
 www.speedcurve.com
-www.speedtest.dailymotion.com
 www.speedtest.net
 www.spencersonline.com
 www.spiceworks.com
@@ -39198,7 +39128,6 @@ www.static.moddb.com
 www.static.moovitapp.com
 www.static.naver.com
 www.static.networkedblogs.com
-www.static.olark.com
 www.static.opentok.com
 www.static.ow.ly
 www.static.parastorage.com
@@ -39933,7 +39862,6 @@ www.umich.edu
 www.umich.qualtrics.com
 www.umn.edu
 www.un.org
-www.unagi-eu.amazon.com
 www.unbouncepages.com
 www.unc.edu
 www.und.weg.ist.sie.com
