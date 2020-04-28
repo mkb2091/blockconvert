@@ -1756,9 +1756,12 @@ a1014.g.akamai.net
 a1096093.cdn.optimizely.com
 a11000223989.cdn.optimizely.com
 a14738960062.cdn.optimizely.com
+a14750590849.cdn.optimizely.com
 a15506560068.cdn.optimizely.com
 a1625899514.cdn.optimizely.com
 a1706490390.cdn.optimizely.com
+a17489381590.cdn-pci.optimizely.com
+a201252808.cdn.optimizely.com
 a248.e.akamai.net
 a2900460605.cdn.optimizely.com
 a2zapk.com
@@ -1863,6 +1866,7 @@ acsdk.gameyw.easebar.com
 act.wechat.com
 actionbutton.co
 actionnetwork.org
+actions.everyaction.com
 activate-sea.adobe.com
 activate-sjc0.adobe.com
 activate.adobe.com
@@ -2032,7 +2036,6 @@ akamaitechnologies.com
 akamaized.net
 akismet.com
 al.com
-alamy-livechat.secure.force.com
 alb.reddit.com
 albert.apple.com
 aldwx.com
@@ -2844,6 +2847,7 @@ api.fast.com
 api.feedburner.com
 api.flickr.com
 api.flowplayer.com
+api.flyertown.ca
 api.foursquare.com
 api.foxnews.com
 api.gallery.intl.miui.com
@@ -2876,7 +2880,6 @@ api.keycdn.com
 api.kinja.com
 api.leanplum.com
 api.line.me
-api.livechatinc.com
 api.login.engadget.com
 api.login.techcrunch.com
 api.luftdaten.info
@@ -3333,6 +3336,7 @@ b.stats.paypal.com
 b.techcrunch.com
 b.tiles.mapbox.com
 b0.cc
+b2c-mlm.marketo.com
 b6.me
 babybus.com
 bac-assets.com
@@ -4688,6 +4692,7 @@ damengxiang.me
 danbooru.donmai.us
 danid.dk
 dansguardian.org
+dapulse-res.cloudinary.com
 dash.cloudflare.com
 dash.tmearn.com
 dashboard.idealmedia.com
@@ -4854,12 +4859,13 @@ device.auth.xboxlive.com
 deviceapi.micloud.xiaomi.net
 deviceportal.nettvservices.com
 devices.netflix.com
-devimages-cdn.apple.com
 devmate.com
 df.ly
+dfapvmql-q.global.ssl.fastly.net
 dfm-dailynews.disqus.com
 dftp.flowplayer.com
 dgit.com
+di-dtaectolog-us-prod-1.appspot.com
 di.com.pl
 dialin.qualcomm.com
 dialog.filepicker.io
@@ -10983,7 +10989,6 @@ href.li
 hrst.ph
 hrten.com
 htm.huawei.com
-html5-player.libsyn.com
 htmlcommentbox.com
 hu.gravatar.com
 hu.ign.com
@@ -11619,6 +11624,7 @@ jsfiddle.net
 jsonip.com
 jssocdn.indiatimes.com
 jtvnw.net
+jugem.akamaized.net
 jugem.jp
 jumia.com.ng
 justhost.com
@@ -13392,7 +13398,6 @@ linkbucks.com
 linkedin.com
 linkedinmobileapp.com
 linkis.com
-linkmaker.itunes.apple.com
 links.announcements.soundcloud.com
 links.confirmation.soundcloud.com
 links.em.ign.com
@@ -13499,6 +13504,7 @@ loccitane.com
 lockurl.com
 lodz.tvp.pl
 log.entrance.sonymobile.com
+log.olark.com
 logback.qos.ch
 logbuch-netzpolitik.de
 logging.apache.org
@@ -16722,6 +16728,7 @@ postgresql.org
 postimage.org
 postimg.cc
 postimg.org
+postmediamontrealgazette2.files.wordpress.com
 postoffice.adobe.com
 potplayer.daum.net
 powerreviews.com
@@ -17015,7 +17022,6 @@ rawgit.com
 rawhttp.cloudflareworkers.com
 raygun.io
 razorpay.com
-rc-portal.force.com
 rcollard.com
 rcom-eu.dynamicyield.com
 rcom.dynamicyield.com
@@ -17451,6 +17457,7 @@ se.wikipedia.com
 sea.battle.net
 sea.ign.com
 sea1.cdn.survey.medallia.com
+seal-goldengate.bbb.org
 seal.digicert.com
 seal.godaddy.com
 seal.networksolutions.com
@@ -17589,7 +17596,6 @@ servepics.com
 server-54-230-93-120.fra2.r.cloudfront.net
 serverfault.com
 service.biv.sony.tv
-service.force.com
 service.marketing.adobe.com
 service.oneplus.com
 service.weather.microsoft.com
@@ -17937,6 +17943,7 @@ squareup.com
 squidblacklist.org
 squirt.io
 sr.gravatar.com
+srtb.msn.com
 srv1.xbext.com
 srv2.xbext.com
 ss0.baidu.com
@@ -18023,6 +18030,7 @@ static-asm.secure.skypeassets.com
 static-dm.akamaized.net
 static-dot-virustotalcloud.appspot.com
 static-fonts.adobe.com
+static-global-s-msn-com.akamaized.net
 static-pepper.dealabs.com
 static-resource.np.community.playstation.net
 static-xl9-ssl.xunlei.com
@@ -22810,9 +22818,12 @@ www.a1014.g.akamai.net
 www.a1096093.cdn.optimizely.com
 www.a11000223989.cdn.optimizely.com
 www.a14738960062.cdn.optimizely.com
+www.a14750590849.cdn.optimizely.com
 www.a15506560068.cdn.optimizely.com
 www.a1625899514.cdn.optimizely.com
 www.a1706490390.cdn.optimizely.com
+www.a17489381590.cdn-pci.optimizely.com
+www.a201252808.cdn.optimizely.com
 www.a248.e.akamai.net
 www.a2900460605.cdn.optimizely.com
 www.a2zapk.com
@@ -22917,6 +22928,7 @@ www.acsdk.gameyw.easebar.com
 www.act.wechat.com
 www.actionbutton.co
 www.actionnetwork.org
+www.actions.everyaction.com
 www.activate-sea.adobe.com
 www.activate-sjc0.adobe.com
 www.activate.adobe.com
@@ -23086,7 +23098,6 @@ www.akamaitechnologies.com
 www.akamaized.net
 www.akismet.com
 www.al.com
-www.alamy-livechat.secure.force.com
 www.alb.reddit.com
 www.albert.apple.com
 www.aldwx.com
@@ -23898,6 +23909,7 @@ www.api.fast.com
 www.api.feedburner.com
 www.api.flickr.com
 www.api.flowplayer.com
+www.api.flyertown.ca
 www.api.foursquare.com
 www.api.foxnews.com
 www.api.gallery.intl.miui.com
@@ -23930,7 +23942,6 @@ www.api.keycdn.com
 www.api.kinja.com
 www.api.leanplum.com
 www.api.line.me
-www.api.livechatinc.com
 www.api.login.engadget.com
 www.api.login.techcrunch.com
 www.api.luftdaten.info
@@ -24387,6 +24398,7 @@ www.b.stats.paypal.com
 www.b.techcrunch.com
 www.b.tiles.mapbox.com
 www.b0.cc
+www.b2c-mlm.marketo.com
 www.b6.me
 www.babybus.com
 www.bac-assets.com
@@ -25742,6 +25754,7 @@ www.damengxiang.me
 www.danbooru.donmai.us
 www.danid.dk
 www.dansguardian.org
+www.dapulse-res.cloudinary.com
 www.dash.cloudflare.com
 www.dash.tmearn.com
 www.dashboard.idealmedia.com
@@ -25908,12 +25921,13 @@ www.device.auth.xboxlive.com
 www.deviceapi.micloud.xiaomi.net
 www.deviceportal.nettvservices.com
 www.devices.netflix.com
-www.devimages-cdn.apple.com
 www.devmate.com
 www.df.ly
+www.dfapvmql-q.global.ssl.fastly.net
 www.dfm-dailynews.disqus.com
 www.dftp.flowplayer.com
 www.dgit.com
+www.di-dtaectolog-us-prod-1.appspot.com
 www.di.com.pl
 www.dialin.qualcomm.com
 www.dialog.filepicker.io
@@ -32037,7 +32051,6 @@ www.href.li
 www.hrst.ph
 www.hrten.com
 www.htm.huawei.com
-www.html5-player.libsyn.com
 www.htmlcommentbox.com
 www.hu.gravatar.com
 www.hu.ign.com
@@ -32673,6 +32686,7 @@ www.jsfiddle.net
 www.jsonip.com
 www.jssocdn.indiatimes.com
 www.jtvnw.net
+www.jugem.akamaized.net
 www.jugem.jp
 www.jumia.com.ng
 www.justhost.com
@@ -34446,7 +34460,6 @@ www.linkbucks.com
 www.linkedin.com
 www.linkedinmobileapp.com
 www.linkis.com
-www.linkmaker.itunes.apple.com
 www.links.announcements.soundcloud.com
 www.links.confirmation.soundcloud.com
 www.links.em.ign.com
@@ -34553,6 +34566,7 @@ www.loccitane.com
 www.lockurl.com
 www.lodz.tvp.pl
 www.log.entrance.sonymobile.com
+www.log.olark.com
 www.logback.qos.ch
 www.logbuch-netzpolitik.de
 www.logging.apache.org
@@ -37776,6 +37790,7 @@ www.postgresql.org
 www.postimage.org
 www.postimg.cc
 www.postimg.org
+www.postmediamontrealgazette2.files.wordpress.com
 www.postoffice.adobe.com
 www.potplayer.daum.net
 www.powerreviews.com
@@ -38069,7 +38084,6 @@ www.rawgit.com
 www.rawhttp.cloudflareworkers.com
 www.raygun.io
 www.razorpay.com
-www.rc-portal.force.com
 www.rcollard.com
 www.rcom-eu.dynamicyield.com
 www.rcom.dynamicyield.com
@@ -38505,6 +38519,7 @@ www.se.wikipedia.com
 www.sea.battle.net
 www.sea.ign.com
 www.sea1.cdn.survey.medallia.com
+www.seal-goldengate.bbb.org
 www.seal.digicert.com
 www.seal.godaddy.com
 www.seal.networksolutions.com
@@ -38643,7 +38658,6 @@ www.servepics.com
 www.server-54-230-93-120.fra2.r.cloudfront.net
 www.serverfault.com
 www.service.biv.sony.tv
-www.service.force.com
 www.service.marketing.adobe.com
 www.service.oneplus.com
 www.service.weather.microsoft.com
@@ -38991,6 +39005,7 @@ www.squareup.com
 www.squidblacklist.org
 www.squirt.io
 www.sr.gravatar.com
+www.srtb.msn.com
 www.srv1.xbext.com
 www.srv2.xbext.com
 www.ss0.baidu.com
@@ -39077,6 +39092,7 @@ www.static-asm.secure.skypeassets.com
 www.static-dm.akamaized.net
 www.static-dot-virustotalcloud.appspot.com
 www.static-fonts.adobe.com
+www.static-global-s-msn-com.akamaized.net
 www.static-pepper.dealabs.com
 www.static-resource.np.community.playstation.net
 www.static-xl9-ssl.xunlei.com
@@ -42316,8 +42332,11 @@ www.zn2ith43ttzi1b8b3-sni.siteintercept.qualtrics.com
 www.zn394yygoj0zd35dd-cbs.siteintercept.qualtrics.com
 www.zn3owdqdlxu72cwnv-nejm.siteintercept.qualtrics.com
 www.zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com
+www.zn6nkavjyvflen0ab-uafieldtesting.siteintercept.qualtrics.com
 www.zn6s8zxrar8dc7rld-educationinsight.siteintercept.qualtrics.com
+www.zn6zitpy5escbfrch-educationinsight.siteintercept.qualtrics.com
 www.zn87b2gchqlbyp0jn-viacom.siteintercept.qualtrics.com
+www.zn8a1gd8ckeekprrz-samsunggdc.siteintercept.qualtrics.com
 www.zn9yauo1hia5mptaj-sni.siteintercept.qualtrics.com
 www.zn_37mptkltsyz3yj3-cbs.siteintercept.qualtrics.com
 www.zn_3v23d21mc1uqclj-cbs.siteintercept.qualtrics.com
@@ -42327,8 +42346,10 @@ www.zn_6qberv3uhxxxrjh-gettyimages.siteintercept.qualtrics.com
 www.zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com
 www.zn_ccjokix6bpit8tr-cbs.siteintercept.qualtrics.com
 www.zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com
+www.znb8cwip4xmbx9mch-chegg.siteintercept.qualtrics.com
 www.znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com
 www.zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com
+www.zndcfzcjvykskwjbz-qvc.siteintercept.qualtrics.com
 www.znequvsn9dye3xf9b-amcci.siteintercept.qualtrics.com
 www.zobj.net
 www.zoho.com
@@ -42555,8 +42576,11 @@ zn2ith43ttzi1b8b3-sni.siteintercept.qualtrics.com
 zn394yygoj0zd35dd-cbs.siteintercept.qualtrics.com
 zn3owdqdlxu72cwnv-nejm.siteintercept.qualtrics.com
 zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com
+zn6nkavjyvflen0ab-uafieldtesting.siteintercept.qualtrics.com
 zn6s8zxrar8dc7rld-educationinsight.siteintercept.qualtrics.com
+zn6zitpy5escbfrch-educationinsight.siteintercept.qualtrics.com
 zn87b2gchqlbyp0jn-viacom.siteintercept.qualtrics.com
+zn8a1gd8ckeekprrz-samsunggdc.siteintercept.qualtrics.com
 zn9yauo1hia5mptaj-sni.siteintercept.qualtrics.com
 zn_37mptkltsyz3yj3-cbs.siteintercept.qualtrics.com
 zn_3v23d21mc1uqclj-cbs.siteintercept.qualtrics.com
@@ -42566,8 +42590,10 @@ zn_6qberv3uhxxxrjh-gettyimages.siteintercept.qualtrics.com
 zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com
 zn_ccjokix6bpit8tr-cbs.siteintercept.qualtrics.com
 zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com
+znb8cwip4xmbx9mch-chegg.siteintercept.qualtrics.com
 znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com
 zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com
+zndcfzcjvykskwjbz-qvc.siteintercept.qualtrics.com
 znequvsn9dye3xf9b-amcci.siteintercept.qualtrics.com
 zobj.net
 zoho.com
