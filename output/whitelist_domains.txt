@@ -1761,6 +1761,7 @@ a15506560068.cdn.optimizely.com
 a1625899514.cdn.optimizely.com
 a1706490390.cdn.optimizely.com
 a17489381590.cdn-pci.optimizely.com
+a17802831565.cdn.optimizely.com
 a201252808.cdn.optimizely.com
 a248.e.akamai.net
 a2900460605.cdn.optimizely.com
@@ -4540,6 +4541,7 @@ costream.twitch.tv
 cosu.sonymobile.com
 count.ly
 counter-strike.net
+counter.rambler.ru
 coupon.aliexpress.com
 couponbar.coupons.com
 coupondunia.go2cloud.org
@@ -4658,6 +4660,7 @@ d-h.st
 d.dropbox.com
 d.g.mi.com
 d.huawei.com
+d.la4-c1-dfw.salesforceliveagent.com
 d.line-scdn.net
 d.ns.campaign.adobe.com
 d.xiaomi.com
@@ -4692,7 +4695,6 @@ damengxiang.me
 danbooru.donmai.us
 danid.dk
 dansguardian.org
-dapulse-res.cloudinary.com
 dash.cloudflare.com
 dash.tmearn.com
 dashboard.idealmedia.com
@@ -11395,6 +11397,7 @@ inscloudgate.net
 inscname.net
 insider.sonymobile.com
 insiderdownloads.ign.com
+insights.bizrate.com
 insights.samsung.com
 insomniagamingfestival.com
 inspectlet.com
@@ -13504,7 +13507,6 @@ loccitane.com
 lockurl.com
 lodz.tvp.pl
 log.entrance.sonymobile.com
-log.olark.com
 logback.qos.ch
 logbuch-netzpolitik.de
 logging.apache.org
@@ -17457,7 +17459,6 @@ se.wikipedia.com
 sea.battle.net
 sea.ign.com
 sea1.cdn.survey.medallia.com
-seal-goldengate.bbb.org
 seal.digicert.com
 seal.godaddy.com
 seal.networksolutions.com
@@ -17596,6 +17597,7 @@ servepics.com
 server-54-230-93-120.fra2.r.cloudfront.net
 serverfault.com
 service.biv.sony.tv
+service.force.com
 service.marketing.adobe.com
 service.oneplus.com
 service.weather.microsoft.com
@@ -18891,6 +18893,7 @@ ur.wikipedia.com
 urbanairship.com
 urbandictionary.com
 urbanspoon.com
+urbn.my.salesforce.com
 url.cc
 url.ch
 url.com
@@ -22823,6 +22826,7 @@ www.a15506560068.cdn.optimizely.com
 www.a1625899514.cdn.optimizely.com
 www.a1706490390.cdn.optimizely.com
 www.a17489381590.cdn-pci.optimizely.com
+www.a17802831565.cdn.optimizely.com
 www.a201252808.cdn.optimizely.com
 www.a248.e.akamai.net
 www.a2900460605.cdn.optimizely.com
@@ -25602,6 +25606,7 @@ www.costream.twitch.tv
 www.cosu.sonymobile.com
 www.count.ly
 www.counter-strike.net
+www.counter.rambler.ru
 www.coupon.aliexpress.com
 www.couponbar.coupons.com
 www.coupondunia.go2cloud.org
@@ -25720,6 +25725,7 @@ www.d-h.st
 www.d.dropbox.com
 www.d.g.mi.com
 www.d.huawei.com
+www.d.la4-c1-dfw.salesforceliveagent.com
 www.d.line-scdn.net
 www.d.ns.campaign.adobe.com
 www.d.xiaomi.com
@@ -25754,7 +25760,6 @@ www.damengxiang.me
 www.danbooru.donmai.us
 www.danid.dk
 www.dansguardian.org
-www.dapulse-res.cloudinary.com
 www.dash.cloudflare.com
 www.dash.tmearn.com
 www.dashboard.idealmedia.com
@@ -32457,6 +32462,7 @@ www.inscloudgate.net
 www.inscname.net
 www.insider.sonymobile.com
 www.insiderdownloads.ign.com
+www.insights.bizrate.com
 www.insights.samsung.com
 www.insomniagamingfestival.com
 www.inspectlet.com
@@ -34566,7 +34572,6 @@ www.loccitane.com
 www.lockurl.com
 www.lodz.tvp.pl
 www.log.entrance.sonymobile.com
-www.log.olark.com
 www.logback.qos.ch
 www.logbuch-netzpolitik.de
 www.logging.apache.org
@@ -38519,7 +38524,6 @@ www.se.wikipedia.com
 www.sea.battle.net
 www.sea.ign.com
 www.sea1.cdn.survey.medallia.com
-www.seal-goldengate.bbb.org
 www.seal.digicert.com
 www.seal.godaddy.com
 www.seal.networksolutions.com
@@ -38658,6 +38662,7 @@ www.servepics.com
 www.server-54-230-93-120.fra2.r.cloudfront.net
 www.serverfault.com
 www.service.biv.sony.tv
+www.service.force.com
 www.service.marketing.adobe.com
 www.service.oneplus.com
 www.service.weather.microsoft.com
@@ -39953,6 +39958,7 @@ www.ur.wikipedia.com
 www.urbanairship.com
 www.urbandictionary.com
 www.urbanspoon.com
+www.urbn.my.salesforce.com
 www.url.cc
 www.url.ch
 www.url.com
@@ -42333,6 +42339,7 @@ www.zn394yygoj0zd35dd-cbs.siteintercept.qualtrics.com
 www.zn3owdqdlxu72cwnv-nejm.siteintercept.qualtrics.com
 www.zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com
 www.zn6nkavjyvflen0ab-uafieldtesting.siteintercept.qualtrics.com
+www.zn6qhlgucixd8r9td-scrippsmedia.siteintercept.qualtrics.com
 www.zn6s8zxrar8dc7rld-educationinsight.siteintercept.qualtrics.com
 www.zn6zitpy5escbfrch-educationinsight.siteintercept.qualtrics.com
 www.zn87b2gchqlbyp0jn-viacom.siteintercept.qualtrics.com
@@ -42346,10 +42353,9 @@ www.zn_6qberv3uhxxxrjh-gettyimages.siteintercept.qualtrics.com
 www.zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com
 www.zn_ccjokix6bpit8tr-cbs.siteintercept.qualtrics.com
 www.zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com
-www.znb8cwip4xmbx9mch-chegg.siteintercept.qualtrics.com
+www.zna4z7j6shnw1yaxz-equifax.siteintercept.qualtrics.com
 www.znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com
 www.zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com
-www.zndcfzcjvykskwjbz-qvc.siteintercept.qualtrics.com
 www.znequvsn9dye3xf9b-amcci.siteintercept.qualtrics.com
 www.zobj.net
 www.zoho.com
@@ -42577,6 +42583,7 @@ zn394yygoj0zd35dd-cbs.siteintercept.qualtrics.com
 zn3owdqdlxu72cwnv-nejm.siteintercept.qualtrics.com
 zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com
 zn6nkavjyvflen0ab-uafieldtesting.siteintercept.qualtrics.com
+zn6qhlgucixd8r9td-scrippsmedia.siteintercept.qualtrics.com
 zn6s8zxrar8dc7rld-educationinsight.siteintercept.qualtrics.com
 zn6zitpy5escbfrch-educationinsight.siteintercept.qualtrics.com
 zn87b2gchqlbyp0jn-viacom.siteintercept.qualtrics.com
@@ -42590,10 +42597,9 @@ zn_6qberv3uhxxxrjh-gettyimages.siteintercept.qualtrics.com
 zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com
 zn_ccjokix6bpit8tr-cbs.siteintercept.qualtrics.com
 zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com
-znb8cwip4xmbx9mch-chegg.siteintercept.qualtrics.com
+zna4z7j6shnw1yaxz-equifax.siteintercept.qualtrics.com
 znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com
 zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com
-zndcfzcjvykskwjbz-qvc.siteintercept.qualtrics.com
 znequvsn9dye3xf9b-amcci.siteintercept.qualtrics.com
 zobj.net
 zoho.com
