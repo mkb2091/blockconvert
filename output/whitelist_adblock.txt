@@ -1719,6 +1719,7 @@
 @@||9apps.com^
 @@||9gag.com^
 @@||9to5google.com^
+@@||9to5googleprod.disqus.com^
 @@||9to5maccom.disqus.com^
 @@||a-0001.a-msedge.net^
 @@||a-0002.a-msedge.net^
@@ -1768,6 +1769,7 @@
 @@||a2zapk.com^
 @@||a3226860758.cdn.optimizely.com^
 @@||a3698060313.cdn.optimizely.com^
+@@||a3747760300.cdn.optimizely.com^
 @@||a4.mzstatic.com^
 @@||a5.behance.net^
 @@||a57.foxnews.com^
@@ -2654,6 +2656,7 @@
 @@||amazonaws.com^
 @@||amazoncustomerservice.d2.sc.omtrdc.net^
 @@||ambassadors.xbox.com^
+@@||amc-theatres-res.cloudinary.com^
 @@||amd.cdn.turner.com^
 @@||amd.com^
 @@||amdc.m.taobao.com^
@@ -3019,6 +3022,7 @@
 @@||apollo.dl.playstation.net^
 @@||app-301.huawei.com^
 @@||app-ab13.marketo.com^
+@@||app-ab14.marketo.com^
 @@||app-advertise.zhihuishu.com^
 @@||app-analytics.snapchat.com^
 @@||app-analyticsv2.snapchat.com^
@@ -4541,7 +4545,6 @@
 @@||cosu.sonymobile.com^
 @@||count.ly^
 @@||counter-strike.net^
-@@||counter.rambler.ru^
 @@||coupon.aliexpress.com^
 @@||couponbar.coupons.com^
 @@||coupondunia.go2cloud.org^
@@ -4660,7 +4663,6 @@
 @@||d.dropbox.com^
 @@||d.g.mi.com^
 @@||d.huawei.com^
-@@||d.la4-c1-dfw.salesforceliveagent.com^
 @@||d.line-scdn.net^
 @@||d.ns.campaign.adobe.com^
 @@||d.xiaomi.com^
@@ -5267,6 +5269,7 @@
 @@||elmundo.es^
 @@||eloqua.com^
 @@||elpais.com^
+@@||elperiodicoc.disqus.com^
 @@||elsalvador.com^
 @@||eltraficosv.com^
 @@||eltrafiko.com^
@@ -11397,7 +11400,6 @@
 @@||inscname.net^
 @@||insider.sonymobile.com^
 @@||insiderdownloads.ign.com^
-@@||insights.bizrate.com^
 @@||insights.samsung.com^
 @@||insomniagamingfestival.com^
 @@||inspectlet.com^
@@ -11627,7 +11629,6 @@
 @@||jsonip.com^
 @@||jssocdn.indiatimes.com^
 @@||jtvnw.net^
-@@||jugem.akamaized.net^
 @@||jugem.jp^
 @@||jumia.com.ng^
 @@||justhost.com^
@@ -16542,6 +16543,7 @@
 @@||pfsense.org^
 @@||pg.cdn.integration.viber.com^
 @@||pg.cdn.viber.com^
+@@||pga-tour-res.cloudinary.com^
 @@||pgcdn.com^
 @@||pgi.billdesk.com^
 @@||pgl.yoyo.org^
@@ -16822,6 +16824,7 @@
 @@||profile.citrix.com^
 @@||profile.d.xiaomi.net^
 @@||profile.getyounity.com^
+@@||profile.ngpvan.com^
 @@||profile.target.com^
 @@||profit.ndtv.com^
 @@||proflowers.com^
@@ -16926,6 +16929,7 @@
 @@||puu.sh^
 @@||pv.api.io.mi.com^
 @@||pv.sohu.com^
+@@||pvhservicecloud.my.salesforce.com^
 @@||pvpn.sonymobile.com^
 @@||pwc.chase.com^
 @@||pwebanner.naver.com^
@@ -22784,6 +22788,7 @@
 @@||www.9apps.com^
 @@||www.9gag.com^
 @@||www.9to5google.com^
+@@||www.9to5googleprod.disqus.com^
 @@||www.9to5maccom.disqus.com^
 @@||www.a-0001.a-msedge.net^
 @@||www.a-0002.a-msedge.net^
@@ -22833,6 +22838,7 @@
 @@||www.a2zapk.com^
 @@||www.a3226860758.cdn.optimizely.com^
 @@||www.a3698060313.cdn.optimizely.com^
+@@||www.a3747760300.cdn.optimizely.com^
 @@||www.a4.mzstatic.com^
 @@||www.a5.behance.net^
 @@||www.a57.foxnews.com^
@@ -23719,6 +23725,7 @@
 @@||www.amazonaws.com^
 @@||www.amazoncustomerservice.d2.sc.omtrdc.net^
 @@||www.ambassadors.xbox.com^
+@@||www.amc-theatres-res.cloudinary.com^
 @@||www.amd.cdn.turner.com^
 @@||www.amd.com^
 @@||www.amdc.m.taobao.com^
@@ -24084,6 +24091,7 @@
 @@||www.apollo.dl.playstation.net^
 @@||www.app-301.huawei.com^
 @@||www.app-ab13.marketo.com^
+@@||www.app-ab14.marketo.com^
 @@||www.app-advertise.zhihuishu.com^
 @@||www.app-analytics.snapchat.com^
 @@||www.app-analyticsv2.snapchat.com^
@@ -25606,7 +25614,6 @@
 @@||www.cosu.sonymobile.com^
 @@||www.count.ly^
 @@||www.counter-strike.net^
-@@||www.counter.rambler.ru^
 @@||www.coupon.aliexpress.com^
 @@||www.couponbar.coupons.com^
 @@||www.coupondunia.go2cloud.org^
@@ -25725,7 +25732,6 @@
 @@||www.d.dropbox.com^
 @@||www.d.g.mi.com^
 @@||www.d.huawei.com^
-@@||www.d.la4-c1-dfw.salesforceliveagent.com^
 @@||www.d.line-scdn.net^
 @@||www.d.ns.campaign.adobe.com^
 @@||www.d.xiaomi.com^
@@ -26332,6 +26338,7 @@
 @@||www.elmundo.es^
 @@||www.eloqua.com^
 @@||www.elpais.com^
+@@||www.elperiodicoc.disqus.com^
 @@||www.elsalvador.com^
 @@||www.eltraficosv.com^
 @@||www.eltrafiko.com^
@@ -32462,7 +32469,6 @@
 @@||www.inscname.net^
 @@||www.insider.sonymobile.com^
 @@||www.insiderdownloads.ign.com^
-@@||www.insights.bizrate.com^
 @@||www.insights.samsung.com^
 @@||www.insomniagamingfestival.com^
 @@||www.inspectlet.com^
@@ -32692,7 +32698,6 @@
 @@||www.jsonip.com^
 @@||www.jssocdn.indiatimes.com^
 @@||www.jtvnw.net^
-@@||www.jugem.akamaized.net^
 @@||www.jugem.jp^
 @@||www.jumia.com.ng^
 @@||www.justhost.com^
@@ -37607,6 +37612,7 @@
 @@||www.pfsense.org^
 @@||www.pg.cdn.integration.viber.com^
 @@||www.pg.cdn.viber.com^
+@@||www.pga-tour-res.cloudinary.com^
 @@||www.pgcdn.com^
 @@||www.pgi.billdesk.com^
 @@||www.pgl.yoyo.org^
@@ -37887,6 +37893,7 @@
 @@||www.profile.citrix.com^
 @@||www.profile.d.xiaomi.net^
 @@||www.profile.getyounity.com^
+@@||www.profile.ngpvan.com^
 @@||www.profile.target.com^
 @@||www.profit.ndtv.com^
 @@||www.proflowers.com^
@@ -37991,6 +37998,7 @@
 @@||www.puu.sh^
 @@||www.pv.api.io.mi.com^
 @@||www.pv.sohu.com^
+@@||www.pvhservicecloud.my.salesforce.com^
 @@||www.pvpn.sonymobile.com^
 @@||www.pwc.chase.com^
 @@||www.pwebanner.naver.com^
@@ -42336,10 +42344,9 @@
 @@||www.zn23mecwvtuhqn9gz-careerbuilder.siteintercept.qualtrics.com^
 @@||www.zn2ith43ttzi1b8b3-sni.siteintercept.qualtrics.com^
 @@||www.zn394yygoj0zd35dd-cbs.siteintercept.qualtrics.com^
+@@||www.zn3jc0jgnpjydi0w5-scrippsmedia.siteintercept.qualtrics.com^
 @@||www.zn3owdqdlxu72cwnv-nejm.siteintercept.qualtrics.com^
 @@||www.zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com^
-@@||www.zn6nkavjyvflen0ab-uafieldtesting.siteintercept.qualtrics.com^
-@@||www.zn6qhlgucixd8r9td-scrippsmedia.siteintercept.qualtrics.com^
 @@||www.zn6s8zxrar8dc7rld-educationinsight.siteintercept.qualtrics.com^
 @@||www.zn6zitpy5escbfrch-educationinsight.siteintercept.qualtrics.com^
 @@||www.zn87b2gchqlbyp0jn-viacom.siteintercept.qualtrics.com^
@@ -42356,6 +42363,7 @@
 @@||www.zna4z7j6shnw1yaxz-equifax.siteintercept.qualtrics.com^
 @@||www.znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com^
 @@||www.zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com^
+@@||www.zne51shg48vjqbtwj-vistaprint.siteintercept.qualtrics.com^
 @@||www.znequvsn9dye3xf9b-amcci.siteintercept.qualtrics.com^
 @@||www.zobj.net^
 @@||www.zoho.com^
@@ -42580,10 +42588,9 @@
 @@||zn23mecwvtuhqn9gz-careerbuilder.siteintercept.qualtrics.com^
 @@||zn2ith43ttzi1b8b3-sni.siteintercept.qualtrics.com^
 @@||zn394yygoj0zd35dd-cbs.siteintercept.qualtrics.com^
+@@||zn3jc0jgnpjydi0w5-scrippsmedia.siteintercept.qualtrics.com^
 @@||zn3owdqdlxu72cwnv-nejm.siteintercept.qualtrics.com^
 @@||zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com^
-@@||zn6nkavjyvflen0ab-uafieldtesting.siteintercept.qualtrics.com^
-@@||zn6qhlgucixd8r9td-scrippsmedia.siteintercept.qualtrics.com^
 @@||zn6s8zxrar8dc7rld-educationinsight.siteintercept.qualtrics.com^
 @@||zn6zitpy5escbfrch-educationinsight.siteintercept.qualtrics.com^
 @@||zn87b2gchqlbyp0jn-viacom.siteintercept.qualtrics.com^
@@ -42600,6 +42607,7 @@
 @@||zna4z7j6shnw1yaxz-equifax.siteintercept.qualtrics.com^
 @@||znbovrduowqvhcbpd-logmeinvoc.siteintercept.qualtrics.com^
 @@||zncvomiueeqmfxynn-tracfone.siteintercept.qualtrics.com^
+@@||zne51shg48vjqbtwj-vistaprint.siteintercept.qualtrics.com^
 @@||znequvsn9dye3xf9b-amcci.siteintercept.qualtrics.com^
 @@||zobj.net^
 @@||zoho.com^
