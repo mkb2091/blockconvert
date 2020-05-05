@@ -10985,6 +10985,7 @@
 @@||hqq.tv^
 @@||hqq.watch^
 @@||hr.mi.com^
+@@||hrblock.com^
 @@||hrcs.huawei.com^
 @@||href.li^
 @@||hrst.ph^
@@ -32046,6 +32047,7 @@
 @@||www.hqq.tv^
 @@||www.hqq.watch^
 @@||www.hr.mi.com^
+@@||www.hrblock.com^
 @@||www.hrcs.huawei.com^
 @@||www.href.li^
 @@||www.hrst.ph^
