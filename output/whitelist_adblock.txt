@@ -1803,6 +1803,7 @@
 @@||ac0-edge-chat.facebook.com^
 @@||academia.edu^
 @@||acamica.com^
+@@||accaglobalwebsite.112.2o7.net^
 @@||access-prod.apis.anvato.n0-edge-chat.facebook.com^
 @@||access-prod.apis.anvato.net^
 @@||access.line.me^
@@ -1991,6 +1992,7 @@
 @@||aeis.alicdn.com^
 @@||aemmobile.adobe.com^
 @@||aetna.com^
+@@||aetnaaetnaprod2018.112.2o7.net^
 @@||aeu.alicdn.com^
 @@||affiliate-program.amazon.com^
 @@||affiliate.hitbtc.com^
@@ -2875,7 +2877,6 @@
 @@||api.kinja.com^
 @@||api.leanplum.com^
 @@||api.line.me^
-@@||api.livechatinc.com^
 @@||api.login.engadget.com^
 @@||api.login.techcrunch.com^
 @@||api.luftdaten.info^
@@ -3302,6 +3303,7 @@
 @@||avatars2.githubusercontent.com^
 @@||avatars3.githubusercontent.com^
 @@||avsforum.com^
+@@||avt-2.foto.mail.ru^
 @@||awards.netflix.com^
 @@||awin1.com^
 @@||aws.amazon.com^
@@ -3459,6 +3461,7 @@
 @@||bigcommerce.com^
 @@||bigfile.co.kr^
 @@||bigfile.mail.naver.com^
+@@||bigfishgamesprodesntls.112.2o7.net^
 @@||biggovernment.breitbart.com^
 @@||bighollywood.breitbart.com^
 @@||biglistofwebsites.com^
@@ -3694,6 +3697,7 @@
 @@||bt.co^
 @@||bt.com^
 @@||bt.dailycaller.com^
+@@||btg.mtvnservices.com^
 @@||btstatic.com^
 @@||buckster.soundcloud.com^
 @@||budurl.com^
@@ -4003,6 +4007,7 @@
 @@||cdn.sc.rockstargames.com^
 @@||cdn.segment.com^
 @@||cdn.segment.io^
+@@||cdn.shopify.com^
 @@||cdn.shortpixel.ai^
 @@||cdn.siftscience.com^
 @@||cdn.speedof.me^
@@ -4031,6 +4036,7 @@
 @@||cdn.wetest.qq.com^
 @@||cdn.wololo.net^
 @@||cdn01.dailycaller.com^
+@@||cdn1.affirm.com^
 @@||cdn1.digitaltrends.com^
 @@||cdn1.friendbuy.com^
 @@||cdn1.xda-developers.com^
@@ -4500,7 +4506,6 @@
 @@||content.production.cdn.art19.com^
 @@||content.samsung.com^
 @@||content.samsung.com.edgesuite.net^
-@@||content.shoprunner.com^
 @@||content.sketch.sonymobile.com^
 @@||content.swrve.com^
 @@||content.vidgyor.com^
@@ -4859,10 +4864,10 @@
 @@||devices.netflix.com^
 @@||devmate.com^
 @@||df.ly^
+@@||dfapvmql-q.global.ssl.fastly.net^
 @@||dfm-dailynews.disqus.com^
 @@||dftp.flowplayer.com^
 @@||dgit.com^
-@@||di-dtaectolog-us-prod-1.appspot.com^
 @@||di.com.pl^
 @@||dialin.qualcomm.com^
 @@||dialog.filepicker.io^
@@ -5505,7 +5510,6 @@
 @@||familydollar.com^
 @@||fan.twitch.tv^
 @@||fanat.ua^
-@@||fanatics.112.2o7.net^
 @@||fandango.com^
 @@||fandom.wikia.com^
 @@||fansonly.com^
@@ -5515,6 +5519,7 @@
 @@||farm4.staticflickr.com^
 @@||fashionista.com^
 @@||fast.com^
+@@||fast.fonts.com^
 @@||fast.fonts.net^
 @@||fast.io^
 @@||fast.wistia.com^
@@ -5781,6 +5786,7 @@
 @@||fox8.com^
 @@||foxnews.com^
 @@||foxsports.com.au^
+@@||fp-cdn.azureedge.net^
 @@||fp-eu-w1-aai.flowplayer.com^
 @@||fp.profiles.us.playstation.com^
 @@||fpdownload.adobe.com^
@@ -5879,7 +5885,6 @@
 @@||fx.cc^
 @@||fxhome.com^
 @@||fyre.co^
-@@||fyrsbckgi-c.global.ssl.fastly.net^
 @@||fz.io^
 @@||fzcdn.net^
 @@||fzmovies.net^
@@ -5904,7 +5909,6 @@
 @@||g3.net^
 @@||ga.gravatar.com^
 @@||gacollector.l.google.com^
-@@||gadasource.storage.googleapis.com^
 @@||gadgetsnow.com^
 @@||gall.dcinside.com^
 @@||gallery.cdn.pandora.xiaomi.com^
@@ -13240,6 +13244,7 @@
 @@||kr.ign.com^
 @@||kr.me^
 @@||kr.wikipedia.com^
+@@||kraken.rambler.ru^
 @@||krakow.tvp.pl^
 @@||krautchan.net^
 @@||krdic.naver.com^
@@ -15480,6 +15485,7 @@
 @@||media.viafoura.net^
 @@||media.viber.com^
 @@||media.xda-developers.com^
+@@||mediacorp.112.2o7.net^
 @@||mediafile.dcinside.com^
 @@||mediafire.com^
 @@||mediakit.breitbart.com^
@@ -15858,6 +15864,7 @@
 @@||na53.content.force.com^
 @@||na61-na62.wagbridge.alibaba.tanx.com^
 @@||nac.naver.com^
+@@||nadaguidesjdpower.112.2o7.net^
 @@||nam02.safelinks.protection.outlook.com^
 @@||nam04.safelinks.protection.outlook.com^
 @@||namebright.com^
@@ -17050,6 +17057,7 @@
 @@||recode.net^
 @@||recommendation.spot.im^
 @@||recommendationengine.googleapis.com^
+@@||recruit.112.2o7.net^
 @@||recurly.com^
 @@||redbullmediahouse.origin.typekit.com^
 @@||redcdn.pl^
@@ -17194,6 +17202,7 @@
 @@||rpg.twitch.tv^
 @@||rptrcks.walmart.com^
 @@||rpxnow.com^
+@@||rs.mail.ru^
 @@||rs.playstation.com^
 @@||rs6.net^
 @@||rsci.app.link^
@@ -17275,6 +17284,7 @@
 @@||s.spot.im^
 @@||s.to^
 @@||s.tradingview.com^
+@@||s.update.media.mtvnservices.com^
 @@||s.w-x.co^
 @@||s.w.org^
 @@||s.yimg.com^
@@ -17336,6 +17346,7 @@
 @@||saa.cbsi.com^
 @@||sacramento.cbslocal.com^
 @@||sadmin.brightcove.com^
+@@||saeiprod.112.2o7.net^
 @@||safe.txmblr.com^
 @@||safebrowsing-cache.google.com^
 @@||safebrowsing.google.com^
@@ -18059,6 +18070,7 @@
 @@||static.fontawesome.com^
 @@||static.fxhome.com^
 @@||static.game.xiaomi.com^
+@@||static.geetest.com^
 @@||static.getmonero.org^
 @@||static.gotinder.com^
 @@||static.home.mi.com^
@@ -18081,6 +18093,7 @@
 @@||static.moovitapp.com^
 @@||static.naver.com^
 @@||static.networkedblogs.com^
+@@||static.olark.com^
 @@||static.opentok.com^
 @@||static.ow.ly^
 @@||static.parastorage.com^
@@ -18260,6 +18273,7 @@
 @@||suntimes.com^
 @@||superio.diigo.com^
 @@||superitu.com^
+@@||superpagescom.122.2o7.net^
 @@||suporte.br.playstation.com^
 @@||support-ca.samsung.com^
 @@||support-cacyber.samsung.com^
@@ -18420,6 +18434,7 @@
 @@||tealium.cbsnews.com^
 @@||team.diigo.com^
 @@||team.stumbleupon.com^
+@@||teams.microsoft.com^
 @@||teamviewer.com^
 @@||teaparty.org^
 @@||techcrunch.com^
@@ -18829,6 +18844,7 @@
 @@||unitedstates.smartscreen-prod.microsoft.com^
 @@||unity3d.com^
 @@||university.rakuten.co.jp^
+@@||universityofchicagograduateschool.122.2o7.net^
 @@||univision.com^
 @@||unix.com^
 @@||unlockbootloader.sonymobile.com^
@@ -22865,6 +22881,7 @@
 @@||www.ac0-edge-chat.facebook.com^
 @@||www.academia.edu^
 @@||www.acamica.com^
+@@||www.accaglobalwebsite.112.2o7.net^
 @@||www.access-prod.apis.anvato.n0-edge-chat.facebook.com^
 @@||www.access-prod.apis.anvato.net^
 @@||www.access.line.me^
@@ -23053,6 +23070,7 @@
 @@||www.aeis.alicdn.com^
 @@||www.aemmobile.adobe.com^
 @@||www.aetna.com^
+@@||www.aetnaaetnaprod2018.112.2o7.net^
 @@||www.aeu.alicdn.com^
 @@||www.affiliate-program.amazon.com^
 @@||www.affiliate.hitbtc.com^
@@ -23937,7 +23955,6 @@
 @@||www.api.kinja.com^
 @@||www.api.leanplum.com^
 @@||www.api.line.me^
-@@||www.api.livechatinc.com^
 @@||www.api.login.engadget.com^
 @@||www.api.login.techcrunch.com^
 @@||www.api.luftdaten.info^
@@ -24364,6 +24381,7 @@
 @@||www.avatars2.githubusercontent.com^
 @@||www.avatars3.githubusercontent.com^
 @@||www.avsforum.com^
+@@||www.avt-2.foto.mail.ru^
 @@||www.awards.netflix.com^
 @@||www.awin1.com^
 @@||www.aws.amazon.com^
@@ -24521,6 +24539,7 @@
 @@||www.bigcommerce.com^
 @@||www.bigfile.co.kr^
 @@||www.bigfile.mail.naver.com^
+@@||www.bigfishgamesprodesntls.112.2o7.net^
 @@||www.biggovernment.breitbart.com^
 @@||www.bighollywood.breitbart.com^
 @@||www.biglistofwebsites.com^
@@ -24756,6 +24775,7 @@
 @@||www.bt.co^
 @@||www.bt.com^
 @@||www.bt.dailycaller.com^
+@@||www.btg.mtvnservices.com^
 @@||www.btstatic.com^
 @@||www.buckster.soundcloud.com^
 @@||www.budurl.com^
@@ -25065,6 +25085,7 @@
 @@||www.cdn.sc.rockstargames.com^
 @@||www.cdn.segment.com^
 @@||www.cdn.segment.io^
+@@||www.cdn.shopify.com^
 @@||www.cdn.shortpixel.ai^
 @@||www.cdn.siftscience.com^
 @@||www.cdn.speedof.me^
@@ -25093,6 +25114,7 @@
 @@||www.cdn.wetest.qq.com^
 @@||www.cdn.wololo.net^
 @@||www.cdn01.dailycaller.com^
+@@||www.cdn1.affirm.com^
 @@||www.cdn1.digitaltrends.com^
 @@||www.cdn1.friendbuy.com^
 @@||www.cdn1.xda-developers.com^
@@ -25562,7 +25584,6 @@
 @@||www.content.production.cdn.art19.com^
 @@||www.content.samsung.com^
 @@||www.content.samsung.com.edgesuite.net^
-@@||www.content.shoprunner.com^
 @@||www.content.sketch.sonymobile.com^
 @@||www.content.swrve.com^
 @@||www.content.vidgyor.com^
@@ -25921,10 +25942,10 @@
 @@||www.devices.netflix.com^
 @@||www.devmate.com^
 @@||www.df.ly^
+@@||www.dfapvmql-q.global.ssl.fastly.net^
 @@||www.dfm-dailynews.disqus.com^
 @@||www.dftp.flowplayer.com^
 @@||www.dgit.com^
-@@||www.di-dtaectolog-us-prod-1.appspot.com^
 @@||www.di.com.pl^
 @@||www.dialin.qualcomm.com^
 @@||www.dialog.filepicker.io^
@@ -26567,7 +26588,6 @@
 @@||www.familydollar.com^
 @@||www.fan.twitch.tv^
 @@||www.fanat.ua^
-@@||www.fanatics.112.2o7.net^
 @@||www.fandango.com^
 @@||www.fandom.wikia.com^
 @@||www.fansonly.com^
@@ -26577,6 +26597,7 @@
 @@||www.farm4.staticflickr.com^
 @@||www.fashionista.com^
 @@||www.fast.com^
+@@||www.fast.fonts.com^
 @@||www.fast.fonts.net^
 @@||www.fast.io^
 @@||www.fast.wistia.com^
@@ -26843,6 +26864,7 @@
 @@||www.fox8.com^
 @@||www.foxnews.com^
 @@||www.foxsports.com.au^
+@@||www.fp-cdn.azureedge.net^
 @@||www.fp-eu-w1-aai.flowplayer.com^
 @@||www.fp.profiles.us.playstation.com^
 @@||www.fpdownload.adobe.com^
@@ -26941,7 +26963,6 @@
 @@||www.fx.cc^
 @@||www.fxhome.com^
 @@||www.fyre.co^
-@@||www.fyrsbckgi-c.global.ssl.fastly.net^
 @@||www.fz.io^
 @@||www.fzcdn.net^
 @@||www.fzmovies.net^
@@ -26966,7 +26987,6 @@
 @@||www.g3.net^
 @@||www.ga.gravatar.com^
 @@||www.gacollector.l.google.com^
-@@||www.gadasource.storage.googleapis.com^
 @@||www.gadgetsnow.com^
 @@||www.gall.dcinside.com^
 @@||www.gallery.cdn.pandora.xiaomi.com^
@@ -34302,6 +34322,7 @@
 @@||www.kr.ign.com^
 @@||www.kr.me^
 @@||www.kr.wikipedia.com^
+@@||www.kraken.rambler.ru^
 @@||www.krakow.tvp.pl^
 @@||www.krautchan.net^
 @@||www.krdic.naver.com^
@@ -36542,6 +36563,7 @@
 @@||www.media.viafoura.net^
 @@||www.media.viber.com^
 @@||www.media.xda-developers.com^
+@@||www.mediacorp.112.2o7.net^
 @@||www.mediafile.dcinside.com^
 @@||www.mediafire.com^
 @@||www.mediakit.breitbart.com^
@@ -36920,6 +36942,7 @@
 @@||www.na53.content.force.com^
 @@||www.na61-na62.wagbridge.alibaba.tanx.com^
 @@||www.nac.naver.com^
+@@||www.nadaguidesjdpower.112.2o7.net^
 @@||www.nam02.safelinks.protection.outlook.com^
 @@||www.nam04.safelinks.protection.outlook.com^
 @@||www.namebright.com^
@@ -38112,6 +38135,7 @@
 @@||www.recode.net^
 @@||www.recommendation.spot.im^
 @@||www.recommendationengine.googleapis.com^
+@@||www.recruit.112.2o7.net^
 @@||www.recurly.com^
 @@||www.redbullmediahouse.origin.typekit.com^
 @@||www.redcdn.pl^
@@ -38256,6 +38280,7 @@
 @@||www.rpg.twitch.tv^
 @@||www.rptrcks.walmart.com^
 @@||www.rpxnow.com^
+@@||www.rs.mail.ru^
 @@||www.rs.playstation.com^
 @@||www.rs6.net^
 @@||www.rsci.app.link^
@@ -38337,6 +38362,7 @@
 @@||www.s.spot.im^
 @@||www.s.to^
 @@||www.s.tradingview.com^
+@@||www.s.update.media.mtvnservices.com^
 @@||www.s.w-x.co^
 @@||www.s.w.org^
 @@||www.s.yimg.com^
@@ -38398,6 +38424,7 @@
 @@||www.saa.cbsi.com^
 @@||www.sacramento.cbslocal.com^
 @@||www.sadmin.brightcove.com^
+@@||www.saeiprod.112.2o7.net^
 @@||www.safe.txmblr.com^
 @@||www.safebrowsing-cache.google.com^
 @@||www.safebrowsing.google.com^
@@ -39121,6 +39148,7 @@
 @@||www.static.fontawesome.com^
 @@||www.static.fxhome.com^
 @@||www.static.game.xiaomi.com^
+@@||www.static.geetest.com^
 @@||www.static.getmonero.org^
 @@||www.static.gotinder.com^
 @@||www.static.home.mi.com^
@@ -39143,6 +39171,7 @@
 @@||www.static.moovitapp.com^
 @@||www.static.naver.com^
 @@||www.static.networkedblogs.com^
+@@||www.static.olark.com^
 @@||www.static.opentok.com^
 @@||www.static.ow.ly^
 @@||www.static.parastorage.com^
@@ -39322,6 +39351,7 @@
 @@||www.suntimes.com^
 @@||www.superio.diigo.com^
 @@||www.superitu.com^
+@@||www.superpagescom.122.2o7.net^
 @@||www.suporte.br.playstation.com^
 @@||www.support-ca.samsung.com^
 @@||www.support-cacyber.samsung.com^
@@ -39482,6 +39512,7 @@
 @@||www.tealium.cbsnews.com^
 @@||www.team.diigo.com^
 @@||www.team.stumbleupon.com^
+@@||www.teams.microsoft.com^
 @@||www.teamviewer.com^
 @@||www.teaparty.org^
 @@||www.techcrunch.com^
@@ -39891,6 +39922,7 @@
 @@||www.unitedstates.smartscreen-prod.microsoft.com^
 @@||www.unity3d.com^
 @@||www.university.rakuten.co.jp^
+@@||www.universityofchicagograduateschool.122.2o7.net^
 @@||www.univision.com^
 @@||www.unix.com^
 @@||www.unlockbootloader.sonymobile.com^
