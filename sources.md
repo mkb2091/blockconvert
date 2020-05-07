@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 661704 blocked domains in each of the generated filter lists
+Theres are 661693 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -15,14 +15,14 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [uBlock filters – Privacy](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt)|-|4.0 days|GPLv3|16|0
 [uBlock filters – Badware risks](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt)|-|4.0 days|GPLv3|56|0
 [iOS Tracker Blocklist](https://jarv.is/ios-trackers/adguard.txt)|jakejarvis|10.0 days|MIT|489|0
-[hostsVN](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts)|-|1.0 days|MIT|19168|0
-[abuse.ch URLhaus Response Policy Zones](https://urlhaus.abuse.ch/downloads/rpz/)|-|1.0 days|CC0|833|0
-[abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|126|0
-[abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|626|0
+[hostsVN](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts)|-|1.0 days|MIT|19212|0
+[abuse.ch URLhaus Response Policy Zones](https://urlhaus.abuse.ch/downloads/rpz/)|-|1.0 days|CC0|871|0
+[abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|128|0
+[abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|619|0
 [😍 All-in-One Customized Adblock List 2.7](https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt)|deanoman|2.0 hours|MIT|42364|790
 [🎮 Game Console Adblock List](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt)|-|4.0 days|Dandelicence|8|0
 [❤xorcan❤ Türk ip-list](https://raw.githubusercontent.com/xorcan/hosts/master/xips.txt)|xorcan|1.0 days|GPL-3.0|13|0
-[❤xorcan❤ Türk ad-list](https://raw.githubusercontent.com/xorcan/hosts/master/xhosts.txt)|xorcan|10.0 days|GPL-3.0|8138|0
+[❤xorcan❤ Türk ad-list](https://raw.githubusercontent.com/xorcan/hosts/master/xhosts.txt)|xorcan|10.0 days|GPL-3.0|8118|0
 [WindowsSpyBlocker - Hosts spy rules](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt)|-|1.0 days|MIT|365|0
 [WindowsSpyBlocker - Hosts extra rules](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt)|-|1.0 days|MIT|214|0
 [Whitelist](https://raw.githubusercontent.com/ookangzheng/blahdns/master/hosts/whitelist.txt)|ookangzheng|1.0 days|CC BY-NC-SA 4.0(I  received permission to add to this project)|0|832
@@ -35,7 +35,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [Strappazzon's Tracking List](https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Tracking.txt)|-|3.0 days|MIT|11|0
 [Spam404](https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt)|-|2.0 days|Permission to modify, copy and distribute|7021|0
 [Skeletal Blocker](https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List)|SkeletalDemise|2.0 days|GPLv3|517|0
-[Scams and Phishing](https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt)|infinitytec|10.0 days|MIT|165|0
+[Scams and Phishing](https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt)|infinitytec|10.0 days|MIT|178|0
 [Ransomware URL Blocklist ](https://ransomwaretracker.abuse.ch/downloads/RW_URLBL.txt)|-|1.0 days|Free for use without any limitations|0|0
 [Ransomware IP Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_IPBL.txt)|-|1.0 days|Free for use without any limitations|0|0
 [Ransomware Domain Blocklist](https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt)|-|1.0 days|Free for use without any limitations|0|0
@@ -82,7 +82,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [Anudeep's Blacklist](https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt)|Anudeep <anudeep@protonmail.com>|1.0 days|MIT|5829|0
 [Annoyance Mobile Ad hosts filter](https://raw.githubusercontent.com/yowu/AnnoyanceMobileAdHosts/master/AnnoyanceMobileAdHosts.txt)|-|1.0 days|The Unlicense|274|0
 [Adware filters](https://easylist-downloads.adblockplus.org/adwarefilters.txt)|-|1.0 days|GPLv3|123|0
-[Ads and Trackers](https://raw.githubusercontent.com/infinitytec/blocklists/master/ads-and-trackers.txt)|infinitytec|10.0 days|MIT|19|0
+[Ads and Trackers](https://raw.githubusercontent.com/infinitytec/blocklists/master/ads-and-trackers.txt)|infinitytec|10.0 days|MIT|23|0
 [AdguardMobileAds](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt)|-|1.0 days|GPLv3|990|0
 [AdguardDNS](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt)|-|1.0 days|GPLv3|36435|0
 [AdguardApps](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt)|-|1.0 days|GPLv3|19|0
