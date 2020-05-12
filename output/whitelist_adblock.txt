@@ -1719,7 +1719,6 @@
 @@||9apps.com^
 @@||9gag.com^
 @@||9to5google.com^
-@@||9to5googleprod.disqus.com^
 @@||9to5maccom.disqus.com^
 @@||a-0001.a-msedge.net^
 @@||a-0002.a-msedge.net^
@@ -1787,7 +1786,6 @@
 @@||a275532918.cdn.optimizely.com^
 @@||a2900460605.cdn.optimizely.com^
 @@||a2zapk.com^
-@@||a3013110282.cdn.optimizely.com^
 @@||a304207300.cdn.optimizely.com^
 @@||a31463647.cdn.optimizely.com^
 @@||a3176660057.cdn.optimizely.com^
@@ -1850,7 +1848,7 @@
 @@||about.medium.com^
 @@||about.pinterest.com^
 @@||aboutcookies.org^
-@@||abrilcapricho.files.wordpress.com^
+@@||abrilclaudia.files.wordpress.com^
 @@||abroad.apilocate.amap.com^
 @@||abrtp1.marketo.com^
 @@||abs.twimg.com^
@@ -2723,6 +2721,7 @@
 @@||aml-gateway.cloud.vimeo.com^
 @@||amos.alicdn.com^
 @@||amp-reddit-com.cdn.ampproject.org^
+@@||amp.azure.net^
 @@||amp.businessinsider.com^
 @@||amp.dailycaller.com^
 @@||amp.pinterest.com^
@@ -2731,6 +2730,7 @@
 @@||amped.co.uk^
 @@||amplitude.com^
 @@||ampproject.net^
+@@||ampproject.org^
 @@||ams.amazon.co.jp^
 @@||ams.amazon.co.uk^
 @@||ams.amazon.com^
@@ -2774,6 +2774,7 @@
 @@||announce.xxx-tracker.com^
 @@||announcements.engadget.com^
 @@||anon.to^
+@@||anonym.to^
 @@||anonymouse.org^
 @@||anonymto.me^
 @@||anrdoezrs.net^
@@ -2951,6 +2952,7 @@
 @@||api.mapbox.com^
 @@||api.media.jio.com^
 @@||api.medium.com^
+@@||api.mega.co.nz^
 @@||api.micloud.xiaomi.net^
 @@||api.mihome.xiaomi.net^
 @@||api.mina.mi.com^
@@ -3086,8 +3088,8 @@
 @@||app-301.huawei.com^
 @@||app-ab09.marketo.com^
 @@||app-ab13.marketo.com^
-@@||app-ab14.marketo.com^
 @@||app-ab17.marketo.com^
+@@||app-ab21.marketo.com^
 @@||app-aba.marketo.com^
 @@||app-abb.marketo.com^
 @@||app-advertise.zhihuishu.com^
@@ -3394,6 +3396,7 @@
 @@||az764295.vo.msecnd.net^
 @@||az879543.vo.msecnd.net^
 @@||azadify.com^
+@@||azure.net^
 @@||azureedge.net^
 @@||b-api.facebook.com^
 @@||b-cdn.net^
@@ -3850,6 +3853,7 @@
 @@||c.o0bc.com^
 @@||c.o0bg.com^
 @@||c.ooyala.com^
+@@||c.paypal.com^
 @@||c.s-microsoft.com^
 @@||c.storage.googleapis.com^
 @@||c.t-online.de^
@@ -4123,8 +4127,8 @@
 @@||cdn.wetest.qq.com^
 @@||cdn.wololo.net^
 @@||cdn0-production-assets-kly.akamaized.net^
+@@||cdn0-production-images-kly.akamaized.net^
 @@||cdn01.dailycaller.com^
-@@||cdn1-production-images-kly.akamaized.net^
 @@||cdn1.digitaltrends.com^
 @@||cdn1.friendbuy.com^
 @@||cdn1.xda-developers.com^
@@ -4425,7 +4429,6 @@
 @@||cmail.daum.net^
 @@||cmail19.com^
 @@||cmail20.com^
-@@||cmi.disqus.com^
 @@||cms-portal.qualcomm.com^
 @@||cms.breitbart.com^
 @@||cms.techrepublic.com^
@@ -4746,6 +4749,7 @@
 @@||cybercon.com^
 @@||cybercrime-tracker.net^
 @@||cybermap.kaspersky.com^
+@@||cydia.saurik.com^
 @@||cygwin.com^
 @@||cz.playstation.com^
 @@||cz.wikipedia.com^
@@ -5078,7 +5082,6 @@
 @@||dmd.metaservices.microsoft.com.akadns.net^
 @@||dmp.adform.net^
 @@||dms.ospserver.net^
-@@||dmxleo.dailymotion.com^
 @@||dn.ospserver.net^
 @@||dn.se^
 @@||dnaindia.com^
@@ -5144,6 +5147,7 @@
 @@||down.local.sec.samsung.com.cdngc.net^
 @@||down.nbooks.naver.com^
 @@||down.sandai.net^
+@@||downdetector.com^
 @@||download-c.huawei.com^
 @@||download-c1.huawei.com^
 @@||download-psnow.playstation.com^
@@ -5217,6 +5221,7 @@
 @@||ds.download.windowsupdate.com^
 @@||ds.prod.vidible.tv^
 @@||dshield.org^
+@@||dslreports.com^
 @@||dsm.ok.ru^
 @@||dsp.brand.sogou.com^
 @@||dsw.tt.omtrdc.net^
@@ -5454,10 +5459,10 @@
 @@||ep3.performfeeds.com^
 @@||epa.gov^
 @@||epaper.dnaindia.com^
+@@||epicgames-download1.akamaized.net^
 @@||epicgames.com^
 @@||epix-ssl.xbox.com^
 @@||epix.xbox.com^
-@@||epnt.ebay.com^
 @@||epoch.com^
 @@||epochtimes.com^
 @@||epoq.de^
@@ -5473,6 +5478,7 @@
 @@||es.blog.twitch.tv^
 @@||es.digitaltrends.com^
 @@||es.engadget.com^
+@@||es.finance.yahoo.com^
 @@||es.gizmodo.com^
 @@||es.gravatar.com^
 @@||es.ign.com^
@@ -5606,6 +5612,7 @@
 @@||f1.g.mi.com^
 @@||f1.media.brightcove.com^
 @@||f2.g.mi.com^
+@@||f21scpart-customercommunity.cs18.force.com^
 @@||fa.gravatar.com^
 @@||fa.wikipedia.com^
 @@||faast.schibsted.io^
@@ -5895,7 +5902,6 @@
 @@||fox6now.com^
 @@||fox8.com^
 @@||foxnews.com^
-@@||foxnewsuni-f.akamaihd.net^
 @@||foxsports.com.au^
 @@||fp-cdn.azureedge.net^
 @@||fp-eu-w1-aai.flowplayer.com^
@@ -6025,7 +6031,6 @@
 @@||gall.dcinside.com^
 @@||gallery.cdn.pandora.xiaomi.com^
 @@||gallery.consumer.huawei.com^
-@@||gallery.mailchimp.com^
 @@||gallery.pandora.xiaomi.com^
 @@||galleryapi.micloud.xiaomi.net^
 @@||galleryfaceapi.micloud.xiaomi.net^
@@ -6051,6 +6056,7 @@
 @@||gamespot.com^
 @@||gamestore.ign.com^
 @@||gamevn.com^
+@@||gamewith.akamaized.net^
 @@||gaming.engadget.com^
 @@||gannett-cdn.com^
 @@||gannett-tv.com^
@@ -6069,6 +6075,7 @@
 @@||gazeta.pl^
 @@||gc.fe.apple-dns.net^
 @@||gcloudcs.com^
+@@||gcs-vimeo.akamaized.net^
 @@||gcs.sc-cdn.net^
 @@||gdcsite.cdnsrv.jio.com^
 @@||gds-vhs-drops-campaign-images.twitch.tv^
@@ -6220,6 +6227,7 @@
 @@||go.co^
 @@||go.com^
 @@||go.daum.net^
+@@||go.digitalocean.com^
 @@||go.energized.pro^
 @@||go.icq.com^
 @@||go.ign.com^
@@ -6248,7 +6256,6 @@
 @@||gogoanime.io^
 @@||gogousenet.com^
 @@||gokano.com^
-@@||goldmansachs.122.2o7.net^
 @@||golem.de^
 @@||golfgalaxy.com^
 @@||goo.gl^
@@ -10883,6 +10890,8 @@
 @@||gu-web.net^
 @@||guardian.co.uk^
 @@||guardianproject.info^
+@@||guc-dealer.spotify.com^
+@@||guc-spclient.spotify.com^
 @@||guce.advertising.com^
 @@||guce.engadget.com^
 @@||guce.huffingtonpost.com^
@@ -11180,6 +11189,7 @@
 @@||i.s-microsoft.com^
 @@||i.scdn.co^
 @@||i.snap.com^
+@@||i.stack.imgur.com^
 @@||i.vgy.me^
 @@||i.viafoura.co^
 @@||i.x.sndcdn.com^
@@ -11433,6 +11443,7 @@
 @@||img3.dirtywarez.com^
 @@||img3.hulu.com^
 @@||img30.360buyimg.com^
+@@||img38.pixhost.to^
 @@||imgak.mmtcdn.com^
 @@||imgbox.com^
 @@||imgcache.wechat.com^
@@ -11630,6 +11641,7 @@
 @@||irishtimes.com^
 @@||irl.com^
 @@||irs.gov^
+@@||is.alicdn.com^
 @@||is.gd^
 @@||is.hide.me^
 @@||iservice.fuzelfiles.com^
@@ -11685,6 +11697,7 @@
 @@||jellyfish.pandora.xiaomi.com^
 @@||jenkins.playstation.com^
 @@||jenkins.xda-developers.com^
+@@||jep-asset.akamaized.net^
 @@||jetpack.wordpress.com^
 @@||jfe-cdn.qualtrics.com^
 @@||jiamitu.mi.com^
@@ -13516,6 +13529,7 @@
 @@||lineageoslog.com^
 @@||lineit.line.me^
 @@||link.dailycaller.com^
+@@||link.epicgames.com^
 @@||link.medium.com^
 @@||link.nayemador.com^
 @@||link.p0.com^
@@ -13636,7 +13650,6 @@
 @@||lockurl.com^
 @@||lodz.tvp.pl^
 @@||log.entrance.sonymobile.com^
-@@||log.olark.com^
 @@||logback.qos.ch^
 @@||logbuch-netzpolitik.de^
 @@||logging.apache.org^
@@ -13698,7 +13711,6 @@
 @@||low.software.dn.naver.com^
 @@||lowendbox.com^
 @@||lowes.com^
-@@||lowyatnet.disqus.com^
 @@||lphbs.com^
 @@||lt-in-f14.1e100.net^
 @@||lt-in-f26.1e100.net^
@@ -14049,7 +14061,6 @@
 @@||mbest.aliexpress.com^
 @@||mbl.is^
 @@||mc-siderail.spot.im^
-@@||mc.us13.list-manage.com^
 @@||mc.us16.list-manage.com^
 @@||mcaf.ee^
 @@||mcafee.com^
@@ -15926,6 +15937,7 @@
 @@||mw1.google.com^
 @@||mw2.google.com^
 @@||mwbsys.com^
+@@||mwf-service.akamaized.net^
 @@||mx.freenet.de^
 @@||mx.namecoin.info^
 @@||mx1.hitbtc.com^
@@ -15983,7 +15995,7 @@
 @@||myxperia.sonymobile.com^
 @@||mzstatic.com^
 @@||n11scdn.akamaized.net^
-@@||n11scdn4.akamaized.net^
+@@||n11scdn1.akamaized.net^
 @@||n2s.us^
 @@||n6.net^
 @@||na1.documents.adobe.com^
@@ -16298,7 +16310,6 @@
 @@||nydailynews.com^
 @@||nymag.com^
 @@||nypost.com^
-@@||nyppagesix.files.wordpress.com^
 @@||nyt.com^
 @@||nytimes.com^
 @@||nyu.edu^
@@ -16466,6 +16477,7 @@
 @@||openload.pw^
 @@||openloed.co^
 @@||openmic.soundcloud.com^
+@@||openpeeps.com^
 @@||opensource.org^
 @@||opensource.samsung.com^
 @@||openspeedtest.com^
@@ -16507,6 +16519,7 @@
 @@||origin-na.ssl-images-amazon.com^
 @@||origin.com^
 @@||origin2.samsung.com^
+@@||originassets.akamaized.net^
 @@||origincache-atn.fbcdn.net^
 @@||originus.samsung.com^
 @@||orrs.de^
@@ -16760,6 +16773,7 @@
 @@||pixel.quantserve.com^
 @@||pixel.wp.com^
 @@||pixelsdesign.net^
+@@||pixhost.to^
 @@||pixietrixcomix.com^
 @@||pixinvent.com^
 @@||pixiv.net^
@@ -17049,6 +17063,7 @@
 @@||pubgmobile.com^
 @@||pubhelp.taboola.com^
 @@||public-api.wordpress.com^
+@@||public-ubiservices.ubi.com^
 @@||public-user.spot.im^
 @@||public.sandbox.exchange.coinbase.com^
 @@||public.sandbox.pro.coinbase.com^
@@ -17185,7 +17200,6 @@
 @@||rawhttp.cloudflareworkers.com^
 @@||raygun.io^
 @@||razorpay.com^
-@@||rc-portal.force.com^
 @@||rcollard.com^
 @@||rcom-eu.dynamicyield.com^
 @@||rcom.dynamicyield.com^
@@ -17393,7 +17407,6 @@
 @@||ru.wikipedia.com^
 @@||rudo.video^
 @@||rukminim1.flixcart.com^
-@@||rum.optimizely.com^
 @@||rupload.facebook.com^
 @@||rush.oneplus.com^
 @@||rutube.ru^
@@ -17550,6 +17563,7 @@
 @@||satchel-cdn.api.playstation.com^
 @@||satkurier.pl^
 @@||satterly.neocities.org^
+@@||saurik.com^
 @@||save.thoaimedia.com^
 @@||saythanks.io^
 @@||sb.hitbtc.com^
@@ -17812,7 +17826,7 @@
 @@||sh.st^
 @@||sh.wagbridge.taobao.com.gds.alibabadns.com^
 @@||shacknews.com^
-@@||shahidstatic4.akamaized.net^
+@@||shahidstatic1.akamaized.net^
 @@||shaken.rakuten.co.jp^
 @@||shang.qq.com^
 @@||share-online.biz^
@@ -17828,7 +17842,6 @@
 @@||shavar.prod.mozaws.net^
 @@||shavar.services.mozilla.com^
 @@||shawglobalnews.files.wordpress.com^
-@@||shawtelevision.112.2o7.net^
 @@||shealth.samsung.com^
 @@||shealth.samsunghealth.com^
 @@||shell-cdn.marketing.adobe.com^
@@ -18774,6 +18787,7 @@
 @@||tn.wikipedia.com^
 @@||tnaflix.com^
 @@||tnl-dash.com.edgesuite.net^
+@@||tny.im^
 @@||to-do.microsoft.com^
 @@||today.com^
 @@||today.line.me^
@@ -19082,6 +19096,7 @@
 @@||uptostream.com^
 @@||upu.samsungelectronics.com^
 @@||upwork.com^
+@@||uqload.com^
 @@||ur.ly^
 @@||ur.wikipedia.com^
 @@||urbanairship.com^
@@ -19188,6 +19203,7 @@
 @@||usher.twitch.tv^
 @@||ushuru.vzaar.com^
 @@||usis.bracu.ac.bd^
+@@||usnews.122.2o7.net^
 @@||usnews.com^
 @@||ustream.tv^
 @@||ut.by^
@@ -21199,6 +21215,7 @@
 @@||world-gen.g.aaplimg.com^
 @@||worldbank.org^
 @@||worldnow.com^
+@@||worldometers.info^
 @@||worldstar.disqus.com^
 @@||worldstream.nl^
 @@||worthpoint.disqus.com^
@@ -22986,7 +23003,6 @@
 @@||www.9apps.com^
 @@||www.9gag.com^
 @@||www.9to5google.com^
-@@||www.9to5googleprod.disqus.com^
 @@||www.9to5maccom.disqus.com^
 @@||www.a-0001.a-msedge.net^
 @@||www.a-0002.a-msedge.net^
@@ -23054,7 +23070,6 @@
 @@||www.a275532918.cdn.optimizely.com^
 @@||www.a2900460605.cdn.optimizely.com^
 @@||www.a2zapk.com^
-@@||www.a3013110282.cdn.optimizely.com^
 @@||www.a304207300.cdn.optimizely.com^
 @@||www.a31463647.cdn.optimizely.com^
 @@||www.a3176660057.cdn.optimizely.com^
@@ -23117,7 +23132,7 @@
 @@||www.about.medium.com^
 @@||www.about.pinterest.com^
 @@||www.aboutcookies.org^
-@@||www.abrilcapricho.files.wordpress.com^
+@@||www.abrilclaudia.files.wordpress.com^
 @@||www.abroad.apilocate.amap.com^
 @@||www.abrtp1.marketo.com^
 @@||www.abs.twimg.com^
@@ -23990,6 +24005,7 @@
 @@||www.aml-gateway.cloud.vimeo.com^
 @@||www.amos.alicdn.com^
 @@||www.amp-reddit-com.cdn.ampproject.org^
+@@||www.amp.azure.net^
 @@||www.amp.businessinsider.com^
 @@||www.amp.dailycaller.com^
 @@||www.amp.pinterest.com^
@@ -23998,6 +24014,7 @@
 @@||www.amped.co.uk^
 @@||www.amplitude.com^
 @@||www.ampproject.net^
+@@||www.ampproject.org^
 @@||www.ams.amazon.co.jp^
 @@||www.ams.amazon.co.uk^
 @@||www.ams.amazon.com^
@@ -24041,6 +24058,7 @@
 @@||www.announce.xxx-tracker.com^
 @@||www.announcements.engadget.com^
 @@||www.anon.to^
+@@||www.anonym.to^
 @@||www.anonymouse.org^
 @@||www.anonymto.me^
 @@||www.anrdoezrs.net^
@@ -24218,6 +24236,7 @@
 @@||www.api.mapbox.com^
 @@||www.api.media.jio.com^
 @@||www.api.medium.com^
+@@||www.api.mega.co.nz^
 @@||www.api.micloud.xiaomi.net^
 @@||www.api.mihome.xiaomi.net^
 @@||www.api.mina.mi.com^
@@ -24353,8 +24372,8 @@
 @@||www.app-301.huawei.com^
 @@||www.app-ab09.marketo.com^
 @@||www.app-ab13.marketo.com^
-@@||www.app-ab14.marketo.com^
 @@||www.app-ab17.marketo.com^
+@@||www.app-ab21.marketo.com^
 @@||www.app-aba.marketo.com^
 @@||www.app-abb.marketo.com^
 @@||www.app-advertise.zhihuishu.com^
@@ -24661,6 +24680,7 @@
 @@||www.az764295.vo.msecnd.net^
 @@||www.az879543.vo.msecnd.net^
 @@||www.azadify.com^
+@@||www.azure.net^
 @@||www.azureedge.net^
 @@||www.b-api.facebook.com^
 @@||www.b-cdn.net^
@@ -25117,6 +25137,7 @@
 @@||www.c.o0bc.com^
 @@||www.c.o0bg.com^
 @@||www.c.ooyala.com^
+@@||www.c.paypal.com^
 @@||www.c.s-microsoft.com^
 @@||www.c.storage.googleapis.com^
 @@||www.c.t-online.de^
@@ -25390,8 +25411,8 @@
 @@||www.cdn.wetest.qq.com^
 @@||www.cdn.wololo.net^
 @@||www.cdn0-production-assets-kly.akamaized.net^
+@@||www.cdn0-production-images-kly.akamaized.net^
 @@||www.cdn01.dailycaller.com^
-@@||www.cdn1-production-images-kly.akamaized.net^
 @@||www.cdn1.digitaltrends.com^
 @@||www.cdn1.friendbuy.com^
 @@||www.cdn1.xda-developers.com^
@@ -25692,7 +25713,6 @@
 @@||www.cmail.daum.net^
 @@||www.cmail19.com^
 @@||www.cmail20.com^
-@@||www.cmi.disqus.com^
 @@||www.cms-portal.qualcomm.com^
 @@||www.cms.breitbart.com^
 @@||www.cms.techrepublic.com^
@@ -26013,6 +26033,7 @@
 @@||www.cybercon.com^
 @@||www.cybercrime-tracker.net^
 @@||www.cybermap.kaspersky.com^
+@@||www.cydia.saurik.com^
 @@||www.cygwin.com^
 @@||www.cz.playstation.com^
 @@||www.cz.wikipedia.com^
@@ -26345,7 +26366,6 @@
 @@||www.dmd.metaservices.microsoft.com.akadns.net^
 @@||www.dmp.adform.net^
 @@||www.dms.ospserver.net^
-@@||www.dmxleo.dailymotion.com^
 @@||www.dn.ospserver.net^
 @@||www.dn.se^
 @@||www.dnaindia.com^
@@ -26411,6 +26431,7 @@
 @@||www.down.local.sec.samsung.com.cdngc.net^
 @@||www.down.nbooks.naver.com^
 @@||www.down.sandai.net^
+@@||www.downdetector.com^
 @@||www.download-c.huawei.com^
 @@||www.download-c1.huawei.com^
 @@||www.download-psnow.playstation.com^
@@ -26484,6 +26505,7 @@
 @@||www.ds.download.windowsupdate.com^
 @@||www.ds.prod.vidible.tv^
 @@||www.dshield.org^
+@@||www.dslreports.com^
 @@||www.dsm.ok.ru^
 @@||www.dsp.brand.sogou.com^
 @@||www.dsw.tt.omtrdc.net^
@@ -26721,10 +26743,10 @@
 @@||www.ep3.performfeeds.com^
 @@||www.epa.gov^
 @@||www.epaper.dnaindia.com^
+@@||www.epicgames-download1.akamaized.net^
 @@||www.epicgames.com^
 @@||www.epix-ssl.xbox.com^
 @@||www.epix.xbox.com^
-@@||www.epnt.ebay.com^
 @@||www.epoch.com^
 @@||www.epochtimes.com^
 @@||www.epoq.de^
@@ -26740,6 +26762,7 @@
 @@||www.es.blog.twitch.tv^
 @@||www.es.digitaltrends.com^
 @@||www.es.engadget.com^
+@@||www.es.finance.yahoo.com^
 @@||www.es.gizmodo.com^
 @@||www.es.gravatar.com^
 @@||www.es.ign.com^
@@ -26873,6 +26896,7 @@
 @@||www.f1.g.mi.com^
 @@||www.f1.media.brightcove.com^
 @@||www.f2.g.mi.com^
+@@||www.f21scpart-customercommunity.cs18.force.com^
 @@||www.fa.gravatar.com^
 @@||www.fa.wikipedia.com^
 @@||www.faast.schibsted.io^
@@ -27162,7 +27186,6 @@
 @@||www.fox6now.com^
 @@||www.fox8.com^
 @@||www.foxnews.com^
-@@||www.foxnewsuni-f.akamaihd.net^
 @@||www.foxsports.com.au^
 @@||www.fp-cdn.azureedge.net^
 @@||www.fp-eu-w1-aai.flowplayer.com^
@@ -27292,7 +27315,6 @@
 @@||www.gall.dcinside.com^
 @@||www.gallery.cdn.pandora.xiaomi.com^
 @@||www.gallery.consumer.huawei.com^
-@@||www.gallery.mailchimp.com^
 @@||www.gallery.pandora.xiaomi.com^
 @@||www.galleryapi.micloud.xiaomi.net^
 @@||www.galleryfaceapi.micloud.xiaomi.net^
@@ -27318,6 +27340,7 @@
 @@||www.gamespot.com^
 @@||www.gamestore.ign.com^
 @@||www.gamevn.com^
+@@||www.gamewith.akamaized.net^
 @@||www.gaming.engadget.com^
 @@||www.gannett-cdn.com^
 @@||www.gannett-tv.com^
@@ -27336,6 +27359,7 @@
 @@||www.gazeta.pl^
 @@||www.gc.fe.apple-dns.net^
 @@||www.gcloudcs.com^
+@@||www.gcs-vimeo.akamaized.net^
 @@||www.gcs.sc-cdn.net^
 @@||www.gdcsite.cdnsrv.jio.com^
 @@||www.gds-vhs-drops-campaign-images.twitch.tv^
@@ -27487,6 +27511,7 @@
 @@||www.go.co^
 @@||www.go.com^
 @@||www.go.daum.net^
+@@||www.go.digitalocean.com^
 @@||www.go.energized.pro^
 @@||www.go.icq.com^
 @@||www.go.ign.com^
@@ -27515,7 +27540,6 @@
 @@||www.gogoanime.io^
 @@||www.gogousenet.com^
 @@||www.gokano.com^
-@@||www.goldmansachs.122.2o7.net^
 @@||www.golem.de^
 @@||www.golfgalaxy.com^
 @@||www.goo.gl^
@@ -32150,6 +32174,8 @@
 @@||www.gu-web.net^
 @@||www.guardian.co.uk^
 @@||www.guardianproject.info^
+@@||www.guc-dealer.spotify.com^
+@@||www.guc-spclient.spotify.com^
 @@||www.guce.advertising.com^
 @@||www.guce.engadget.com^
 @@||www.guce.huffingtonpost.com^
@@ -32447,6 +32473,7 @@
 @@||www.i.s-microsoft.com^
 @@||www.i.scdn.co^
 @@||www.i.snap.com^
+@@||www.i.stack.imgur.com^
 @@||www.i.vgy.me^
 @@||www.i.viafoura.co^
 @@||www.i.x.sndcdn.com^
@@ -32700,6 +32727,7 @@
 @@||www.img3.dirtywarez.com^
 @@||www.img3.hulu.com^
 @@||www.img30.360buyimg.com^
+@@||www.img38.pixhost.to^
 @@||www.imgak.mmtcdn.com^
 @@||www.imgbox.com^
 @@||www.imgcache.wechat.com^
@@ -32897,6 +32925,7 @@
 @@||www.irishtimes.com^
 @@||www.irl.com^
 @@||www.irs.gov^
+@@||www.is.alicdn.com^
 @@||www.is.gd^
 @@||www.is.hide.me^
 @@||www.iservice.fuzelfiles.com^
@@ -32952,6 +32981,7 @@
 @@||www.jellyfish.pandora.xiaomi.com^
 @@||www.jenkins.playstation.com^
 @@||www.jenkins.xda-developers.com^
+@@||www.jep-asset.akamaized.net^
 @@||www.jetpack.wordpress.com^
 @@||www.jfe-cdn.qualtrics.com^
 @@||www.jiamitu.mi.com^
@@ -34783,6 +34813,7 @@
 @@||www.lineageoslog.com^
 @@||www.lineit.line.me^
 @@||www.link.dailycaller.com^
+@@||www.link.epicgames.com^
 @@||www.link.medium.com^
 @@||www.link.nayemador.com^
 @@||www.link.p0.com^
@@ -34903,7 +34934,6 @@
 @@||www.lockurl.com^
 @@||www.lodz.tvp.pl^
 @@||www.log.entrance.sonymobile.com^
-@@||www.log.olark.com^
 @@||www.logback.qos.ch^
 @@||www.logbuch-netzpolitik.de^
 @@||www.logging.apache.org^
@@ -34965,7 +34995,6 @@
 @@||www.low.software.dn.naver.com^
 @@||www.lowendbox.com^
 @@||www.lowes.com^
-@@||www.lowyatnet.disqus.com^
 @@||www.lphbs.com^
 @@||www.lt-in-f14.1e100.net^
 @@||www.lt-in-f26.1e100.net^
@@ -35316,7 +35345,6 @@
 @@||www.mbest.aliexpress.com^
 @@||www.mbl.is^
 @@||www.mc-siderail.spot.im^
-@@||www.mc.us13.list-manage.com^
 @@||www.mc.us16.list-manage.com^
 @@||www.mcaf.ee^
 @@||www.mcafee.com^
@@ -37193,6 +37221,7 @@
 @@||www.mw1.google.com^
 @@||www.mw2.google.com^
 @@||www.mwbsys.com^
+@@||www.mwf-service.akamaized.net^
 @@||www.mx.freenet.de^
 @@||www.mx.namecoin.info^
 @@||www.mx1.hitbtc.com^
@@ -37250,7 +37279,7 @@
 @@||www.myxperia.sonymobile.com^
 @@||www.mzstatic.com^
 @@||www.n11scdn.akamaized.net^
-@@||www.n11scdn4.akamaized.net^
+@@||www.n11scdn1.akamaized.net^
 @@||www.n2s.us^
 @@||www.n6.net^
 @@||www.na1.documents.adobe.com^
@@ -37565,7 +37594,6 @@
 @@||www.nydailynews.com^
 @@||www.nymag.com^
 @@||www.nypost.com^
-@@||www.nyppagesix.files.wordpress.com^
 @@||www.nyt.com^
 @@||www.nytimes.com^
 @@||www.nyu.edu^
@@ -37733,6 +37761,7 @@
 @@||www.openload.pw^
 @@||www.openloed.co^
 @@||www.openmic.soundcloud.com^
+@@||www.openpeeps.com^
 @@||www.opensource.org^
 @@||www.opensource.samsung.com^
 @@||www.openspeedtest.com^
@@ -37774,6 +37803,7 @@
 @@||www.origin-na.ssl-images-amazon.com^
 @@||www.origin.com^
 @@||www.origin2.samsung.com^
+@@||www.originassets.akamaized.net^
 @@||www.origincache-atn.fbcdn.net^
 @@||www.originus.samsung.com^
 @@||www.orrs.de^
@@ -38027,6 +38057,7 @@
 @@||www.pixel.quantserve.com^
 @@||www.pixel.wp.com^
 @@||www.pixelsdesign.net^
+@@||www.pixhost.to^
 @@||www.pixietrixcomix.com^
 @@||www.pixinvent.com^
 @@||www.pixiv.net^
@@ -38316,6 +38347,7 @@
 @@||www.pubgmobile.com^
 @@||www.pubhelp.taboola.com^
 @@||www.public-api.wordpress.com^
+@@||www.public-ubiservices.ubi.com^
 @@||www.public-user.spot.im^
 @@||www.public.sandbox.exchange.coinbase.com^
 @@||www.public.sandbox.pro.coinbase.com^
@@ -38452,7 +38484,6 @@
 @@||www.rawhttp.cloudflareworkers.com^
 @@||www.raygun.io^
 @@||www.razorpay.com^
-@@||www.rc-portal.force.com^
 @@||www.rcollard.com^
 @@||www.rcom-eu.dynamicyield.com^
 @@||www.rcom.dynamicyield.com^
@@ -38660,7 +38691,6 @@
 @@||www.ru.wikipedia.com^
 @@||www.rudo.video^
 @@||www.rukminim1.flixcart.com^
-@@||www.rum.optimizely.com^
 @@||www.rupload.facebook.com^
 @@||www.rush.oneplus.com^
 @@||www.rutube.ru^
@@ -38817,6 +38847,7 @@
 @@||www.satchel-cdn.api.playstation.com^
 @@||www.satkurier.pl^
 @@||www.satterly.neocities.org^
+@@||www.saurik.com^
 @@||www.save.thoaimedia.com^
 @@||www.saythanks.io^
 @@||www.sb.hitbtc.com^
@@ -39079,7 +39110,7 @@
 @@||www.sh.st^
 @@||www.sh.wagbridge.taobao.com.gds.alibabadns.com^
 @@||www.shacknews.com^
-@@||www.shahidstatic4.akamaized.net^
+@@||www.shahidstatic1.akamaized.net^
 @@||www.shaken.rakuten.co.jp^
 @@||www.shang.qq.com^
 @@||www.share-online.biz^
@@ -39095,7 +39126,6 @@
 @@||www.shavar.prod.mozaws.net^
 @@||www.shavar.services.mozilla.com^
 @@||www.shawglobalnews.files.wordpress.com^
-@@||www.shawtelevision.112.2o7.net^
 @@||www.shealth.samsung.com^
 @@||www.shealth.samsunghealth.com^
 @@||www.shell-cdn.marketing.adobe.com^
@@ -40041,6 +40071,7 @@
 @@||www.tn.wikipedia.com^
 @@||www.tnaflix.com^
 @@||www.tnl-dash.com.edgesuite.net^
+@@||www.tny.im^
 @@||www.to-do.microsoft.com^
 @@||www.today.com^
 @@||www.today.line.me^
@@ -40349,6 +40380,7 @@
 @@||www.uptostream.com^
 @@||www.upu.samsungelectronics.com^
 @@||www.upwork.com^
+@@||www.uqload.com^
 @@||www.ur.ly^
 @@||www.ur.wikipedia.com^
 @@||www.urbanairship.com^
@@ -40455,6 +40487,7 @@
 @@||www.usher.twitch.tv^
 @@||www.ushuru.vzaar.com^
 @@||www.usis.bracu.ac.bd^
+@@||www.usnews.122.2o7.net^
 @@||www.usnews.com^
 @@||www.ustream.tv^
 @@||www.ut.by^
@@ -42466,6 +42499,7 @@
 @@||www.world-gen.g.aaplimg.com^
 @@||www.worldbank.org^
 @@||www.worldnow.com^
+@@||www.worldometers.info^
 @@||www.worldstar.disqus.com^
 @@||www.worldstream.nl^
 @@||www.worthpoint.disqus.com^
@@ -42756,7 +42790,6 @@
 @@||www.zn4onyivptbyoszsh-bmo.siteintercept.qualtrics.com^
 @@||www.zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com^
 @@||www.zn5ytjsjddwlknevh-seagatecx.siteintercept.qualtrics.com^
-@@||www.zn5z45bl4kvg9ly17-sni.siteintercept.qualtrics.com^
 @@||www.zn6fetw4rxykndjoz-southwest.siteintercept.qualtrics.com^
 @@||www.zn6mcrij6xncfajof-adidastrial.siteintercept.qualtrics.com^
 @@||www.zn6qzq6caaucudesr-pluralsight.siteintercept.qualtrics.com^
@@ -42774,6 +42807,7 @@
 @@||www.zn_5u81q8n4jdu5ls9-cbs.siteintercept.qualtrics.com^
 @@||www.zn_6qberv3uhxxxrjh-gettyimages.siteintercept.qualtrics.com^
 @@||www.zn_6vxkyqywaf9f1t7-usbank.siteintercept.qualtrics.com^
+@@||www.zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com^
 @@||www.zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com^
 @@||www.zn_agburbioucamt8f-babycenter.siteintercept.qualtrics.com^
 @@||www.zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com^
@@ -43031,7 +43065,6 @@
 @@||zn4onyivptbyoszsh-bmo.siteintercept.qualtrics.com^
 @@||zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com^
 @@||zn5ytjsjddwlknevh-seagatecx.siteintercept.qualtrics.com^
-@@||zn5z45bl4kvg9ly17-sni.siteintercept.qualtrics.com^
 @@||zn6fetw4rxykndjoz-southwest.siteintercept.qualtrics.com^
 @@||zn6mcrij6xncfajof-adidastrial.siteintercept.qualtrics.com^
 @@||zn6qzq6caaucudesr-pluralsight.siteintercept.qualtrics.com^
@@ -43049,6 +43082,7 @@
 @@||zn_5u81q8n4jdu5ls9-cbs.siteintercept.qualtrics.com^
 @@||zn_6qberv3uhxxxrjh-gettyimages.siteintercept.qualtrics.com^
 @@||zn_6vxkyqywaf9f1t7-usbank.siteintercept.qualtrics.com^
+@@||zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com^
 @@||zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com^
 @@||zn_agburbioucamt8f-babycenter.siteintercept.qualtrics.com^
 @@||zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com^
