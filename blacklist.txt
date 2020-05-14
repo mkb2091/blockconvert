@@ -1,5 +1,5 @@
-*.ecology-tech403.ml
-*.sublimerevenue.com
+ecology-tech403.ml
+sublimerevenue.com
 0000mps.webpreview.dsl.net
 0001.2waky.com
 001wen.com
