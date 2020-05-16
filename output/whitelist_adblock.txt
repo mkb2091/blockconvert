@@ -1616,7 +1616,6 @@
 @@||1drv.com^
 @@||1drv.ms^
 @@||1e100.net^
-@@||1fadb6b7a65096a59ed5-6ded4dbd20a33d2f9356695bb7320f64.ssl.cf4.rackcdn.com^
 @@||1fgqfml.oloadcdn.net^
 @@||1fichier.com^
 @@||1gr.cz^
@@ -1685,7 +1684,6 @@
 @@||360.cn^
 @@||36kr.com^
 @@||39.net^
-@@||3a09223b3cd53870eeaa-7f75e5eb51943043279413a54aaa858a.ssl.cf3.rackcdn.com^
 @@||3c.co^
 @@||3d-creator.sonymobile.com^
 @@||3dns-2.adobe.com^
@@ -2127,6 +2125,7 @@
 @@||alt4.gmr-smtp-in.l.google.com^
 @@||alternativeto.net^
 @@||alternetmedia.wpengine.com^
+@@||am-a.akamaihd.net^
 @@||am-api.snapchat.com^
 @@||am.coinbase.com^
 @@||amap.com^
@@ -3263,7 +3262,6 @@
 @@||assets.inshorts.com^
 @@||assets.map.brightcove.com^
 @@||assets.nflxext.com^
-@@||assets.omny.fm^
 @@||assets.penny-arcade.com^
 @@||assets.pinterest.com^
 @@||assets.roar.media^
@@ -3459,6 +3457,7 @@
 @@||bcedns.com^
 @@||bcedns.net^
 @@||bcee.lu^
+@@||bcsecure04-a.akamaihd.net^
 @@||bd-pratidin.com^
 @@||bdg-analytics.appspot.com^
 @@||bdimg.com^
@@ -4618,6 +4617,7 @@
 @@||costco.com^
 @@||costream.twitch.tv^
 @@||cosu.sonymobile.com^
+@@||coubsecureassets-a.akamaihd.net^
 @@||count.ly^
 @@||counter-strike.net^
 @@||counter.rambler.ru^
@@ -5252,7 +5252,6 @@
 @@||e3843.g.akamaiedge.net^
 @@||e4478.a.akamaiedge.net^
 @@||e5298.g.akamaiedge.net^
-@@||e60642ba4a8859e0499c-e2ee5690958be9bdf95e879af50025cb.ssl.cf1.rackcdn.com^
 @@||e8.org^
 @@||ea.co^
 @@||ea.com^
@@ -5387,6 +5386,7 @@
 @@||embed.wistia.com^
 @@||embedcf.chia-anime.tv^
 @@||embedly.com^
+@@||embedwistia-a.akamaihd.net^
 @@||emdl.ws.microsoft.com^
 @@||emea01.safelinks.protection.outlook.com^
 @@||emjcd.com^
@@ -5437,6 +5437,7 @@
 @@||entry-at.line.me^
 @@||eo.wikipedia.com^
 @@||eonline.com^
+@@||eonlinevideos.akamaized.net^
 @@||ep3.performfeeds.com^
 @@||epa.gov^
 @@||epaper.dnaindia.com^
@@ -5635,7 +5636,6 @@
 @@||fbcdn-profile-a.akamaihd.net^
 @@||fbcdn.net^
 @@||fc2.com^
-@@||fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com^
 @@||fda.gov^
 @@||fdlvideosec.akamaized.net^
 @@||fe.apple-dns.net^
@@ -5883,7 +5883,6 @@
 @@||fox6now.com^
 @@||fox8.com^
 @@||foxnews.com^
-@@||foxnewsuni-f.akamaihd.net^
 @@||foxsports.com.au^
 @@||fp-cdn.azureedge.net^
 @@||fp-eu-w1-aai.flowplayer.com^
@@ -6239,7 +6238,6 @@
 @@||gogoanime.io^
 @@||gogousenet.com^
 @@||gokano.com^
-@@||goldmansachs.122.2o7.net^
 @@||golem.de^
 @@||golfgalaxy.com^
 @@||goo.gl^
@@ -11106,7 +11104,6 @@
 @@||hrst.ph^
 @@||hrten.com^
 @@||htm.huawei.com^
-@@||html5-player.libsyn.com^
 @@||htmlcommentbox.com^
 @@||https-animeflv-net.disqus.com^
 @@||hu.gravatar.com^
@@ -11208,6 +11205,7 @@
 @@||ibsys.com^
 @@||ibtimes.co.uk^
 @@||ibtimes.com^
+@@||ic6c76800-ds-aksb-a.akamaihd.net^
 @@||icanhazip.com^
 @@||icann.org^
 @@||icare.huawei.com^
@@ -16711,6 +16709,7 @@
 @@||photo.store.qq.com^
 @@||photobucket.com^
 @@||photolog.blog.naver.com^
+@@||photorankstatics-a.akamaihd.net^
 @@||photoreview.gotinder.com^
 @@||photos-ugc.l.googleusercontent.com^
 @@||photos.binance.com^
@@ -16931,6 +16930,7 @@
 @@||priceline.com^
 @@||pricelist.skype.com^
 @@||prime.coinbase.com^
+@@||prime.rambler.ru^
 @@||primewire.ag^
 @@||princeton.edu^
 @@||printfriendly.com^
@@ -16943,6 +16943,7 @@
 @@||prize.travel.rakuten.co.jp^
 @@||prnewswire.122.2o7.net^
 @@||prnewswire.com^
+@@||prnewswire2-a.akamaihd.net^
 @@||prnt.sc^
 @@||pro-accounts.snapchat.com^
 @@||pro.coinbase.com^
@@ -17442,6 +17443,7 @@
 @@||s.spot.im^
 @@||s.to^
 @@||s.tradingview.com^
+@@||s.update.dailymotion.com^
 @@||s.w-x.co^
 @@||s.w.org^
 @@||s.yimg.com^
@@ -17814,7 +17816,6 @@
 @@||sh.wagbridge.taobao.com.gds.alibabadns.com^
 @@||shacknews.com^
 @@||shahidstatic4.akamaized.net^
-@@||shahidstatic5.akamaized.net^
 @@||shaken.rakuten.co.jp^
 @@||shang.qq.com^
 @@||share-online.biz^
@@ -17830,7 +17831,6 @@
 @@||shavar.prod.mozaws.net^
 @@||shavar.services.mozilla.com^
 @@||shawglobalnews.files.wordpress.com^
-@@||shawtelevision.112.2o7.net^
 @@||shealth.samsung.com^
 @@||shealth.samsunghealth.com^
 @@||shell-cdn.marketing.adobe.com^
@@ -18296,6 +18296,7 @@
 @@||static2.animeseason.com^
 @@||staticamzn.com^
 @@||staticflickr.com^
+@@||staticftv-a.akamaihd.net^
 @@||statics-marketingsites-wcus-ms-com.akamaized.net^
 @@||statics-storeexp-eus-ms-com.akamaized.net^
 @@||statics-www-ssl.gingersoftware.com^
@@ -18303,6 +18304,7 @@
 @@||staticxx.facebook.com^
 @@||statig0.akamaized.net^
 @@||statig3.akamaized.net^
+@@||statig4.akamaized.net^
 @@||station-drivers.com^
 @@||station.sony.com^
 @@||stats.adobe.com^
@@ -18924,6 +18926,7 @@
 @@||tvax4.sinaimg.cn^
 @@||tvcast.naver.com^
 @@||tvdb2.plex.tv^
+@@||tvdownloaddw-a.akamaihd.net^
 @@||tve-common.nbcuni.com^
 @@||tverationalplayer.akamaized.net^
 @@||tvn24.pl^
@@ -22882,7 +22885,6 @@
 @@||www.1drv.com^
 @@||www.1drv.ms^
 @@||www.1e100.net^
-@@||www.1fadb6b7a65096a59ed5-6ded4dbd20a33d2f9356695bb7320f64.ssl.cf4.rackcdn.com^
 @@||www.1fgqfml.oloadcdn.net^
 @@||www.1fichier.com^
 @@||www.1gr.cz^
@@ -22951,7 +22953,6 @@
 @@||www.360.cn^
 @@||www.36kr.com^
 @@||www.39.net^
-@@||www.3a09223b3cd53870eeaa-7f75e5eb51943043279413a54aaa858a.ssl.cf3.rackcdn.com^
 @@||www.3c.co^
 @@||www.3d-creator.sonymobile.com^
 @@||www.3dns-2.adobe.com^
@@ -23393,6 +23394,7 @@
 @@||www.alt4.gmr-smtp-in.l.google.com^
 @@||www.alternativeto.net^
 @@||www.alternetmedia.wpengine.com^
+@@||www.am-a.akamaihd.net^
 @@||www.am-api.snapchat.com^
 @@||www.am.coinbase.com^
 @@||www.amap.com^
@@ -24529,7 +24531,6 @@
 @@||www.assets.inshorts.com^
 @@||www.assets.map.brightcove.com^
 @@||www.assets.nflxext.com^
-@@||www.assets.omny.fm^
 @@||www.assets.penny-arcade.com^
 @@||www.assets.pinterest.com^
 @@||www.assets.roar.media^
@@ -24725,6 +24726,7 @@
 @@||www.bcedns.com^
 @@||www.bcedns.net^
 @@||www.bcee.lu^
+@@||www.bcsecure04-a.akamaihd.net^
 @@||www.bd-pratidin.com^
 @@||www.bdg-analytics.appspot.com^
 @@||www.bdimg.com^
@@ -25884,6 +25886,7 @@
 @@||www.costco.com^
 @@||www.costream.twitch.tv^
 @@||www.cosu.sonymobile.com^
+@@||www.coubsecureassets-a.akamaihd.net^
 @@||www.count.ly^
 @@||www.counter-strike.net^
 @@||www.counter.rambler.ru^
@@ -26518,7 +26521,6 @@
 @@||www.e3843.g.akamaiedge.net^
 @@||www.e4478.a.akamaiedge.net^
 @@||www.e5298.g.akamaiedge.net^
-@@||www.e60642ba4a8859e0499c-e2ee5690958be9bdf95e879af50025cb.ssl.cf1.rackcdn.com^
 @@||www.e8.org^
 @@||www.ea.co^
 @@||www.ea.com^
@@ -26653,6 +26655,7 @@
 @@||www.embed.wistia.com^
 @@||www.embedcf.chia-anime.tv^
 @@||www.embedly.com^
+@@||www.embedwistia-a.akamaihd.net^
 @@||www.emdl.ws.microsoft.com^
 @@||www.emea01.safelinks.protection.outlook.com^
 @@||www.emjcd.com^
@@ -26703,6 +26706,7 @@
 @@||www.entry-at.line.me^
 @@||www.eo.wikipedia.com^
 @@||www.eonline.com^
+@@||www.eonlinevideos.akamaized.net^
 @@||www.ep3.performfeeds.com^
 @@||www.epa.gov^
 @@||www.epaper.dnaindia.com^
@@ -26901,7 +26905,6 @@
 @@||www.fbcdn-profile-a.akamaihd.net^
 @@||www.fbcdn.net^
 @@||www.fc2.com^
-@@||www.fca7603378a4e3ebeab2-4e03b1ac88f27f7b20b4cf232f717383.ssl.cf1.rackcdn.com^
 @@||www.fda.gov^
 @@||www.fdlvideosec.akamaized.net^
 @@||www.fe.apple-dns.net^
@@ -27149,7 +27152,6 @@
 @@||www.fox6now.com^
 @@||www.fox8.com^
 @@||www.foxnews.com^
-@@||www.foxnewsuni-f.akamaihd.net^
 @@||www.foxsports.com.au^
 @@||www.fp-cdn.azureedge.net^
 @@||www.fp-eu-w1-aai.flowplayer.com^
@@ -27505,7 +27507,6 @@
 @@||www.gogoanime.io^
 @@||www.gogousenet.com^
 @@||www.gokano.com^
-@@||www.goldmansachs.122.2o7.net^
 @@||www.golem.de^
 @@||www.golfgalaxy.com^
 @@||www.goo.gl^
@@ -32372,7 +32373,6 @@
 @@||www.hrst.ph^
 @@||www.hrten.com^
 @@||www.htm.huawei.com^
-@@||www.html5-player.libsyn.com^
 @@||www.htmlcommentbox.com^
 @@||www.https-animeflv-net.disqus.com^
 @@||www.hu.gravatar.com^
@@ -32474,6 +32474,7 @@
 @@||www.ibsys.com^
 @@||www.ibtimes.co.uk^
 @@||www.ibtimes.com^
+@@||www.ic6c76800-ds-aksb-a.akamaihd.net^
 @@||www.icanhazip.com^
 @@||www.icann.org^
 @@||www.icare.huawei.com^
@@ -37977,6 +37978,7 @@
 @@||www.photo.store.qq.com^
 @@||www.photobucket.com^
 @@||www.photolog.blog.naver.com^
+@@||www.photorankstatics-a.akamaihd.net^
 @@||www.photoreview.gotinder.com^
 @@||www.photos-ugc.l.googleusercontent.com^
 @@||www.photos.binance.com^
@@ -38197,6 +38199,7 @@
 @@||www.priceline.com^
 @@||www.pricelist.skype.com^
 @@||www.prime.coinbase.com^
+@@||www.prime.rambler.ru^
 @@||www.primewire.ag^
 @@||www.princeton.edu^
 @@||www.printfriendly.com^
@@ -38209,6 +38212,7 @@
 @@||www.prize.travel.rakuten.co.jp^
 @@||www.prnewswire.122.2o7.net^
 @@||www.prnewswire.com^
+@@||www.prnewswire2-a.akamaihd.net^
 @@||www.prnt.sc^
 @@||www.pro-accounts.snapchat.com^
 @@||www.pro.coinbase.com^
@@ -38708,6 +38712,7 @@
 @@||www.s.spot.im^
 @@||www.s.to^
 @@||www.s.tradingview.com^
+@@||www.s.update.dailymotion.com^
 @@||www.s.w-x.co^
 @@||www.s.w.org^
 @@||www.s.yimg.com^
@@ -39080,7 +39085,6 @@
 @@||www.sh.wagbridge.taobao.com.gds.alibabadns.com^
 @@||www.shacknews.com^
 @@||www.shahidstatic4.akamaized.net^
-@@||www.shahidstatic5.akamaized.net^
 @@||www.shaken.rakuten.co.jp^
 @@||www.shang.qq.com^
 @@||www.share-online.biz^
@@ -39096,7 +39100,6 @@
 @@||www.shavar.prod.mozaws.net^
 @@||www.shavar.services.mozilla.com^
 @@||www.shawglobalnews.files.wordpress.com^
-@@||www.shawtelevision.112.2o7.net^
 @@||www.shealth.samsung.com^
 @@||www.shealth.samsunghealth.com^
 @@||www.shell-cdn.marketing.adobe.com^
@@ -39562,6 +39565,7 @@
 @@||www.static2.animeseason.com^
 @@||www.staticamzn.com^
 @@||www.staticflickr.com^
+@@||www.staticftv-a.akamaihd.net^
 @@||www.statics-marketingsites-wcus-ms-com.akamaized.net^
 @@||www.statics-storeexp-eus-ms-com.akamaized.net^
 @@||www.statics-www-ssl.gingersoftware.com^
@@ -39569,6 +39573,7 @@
 @@||www.staticxx.facebook.com^
 @@||www.statig0.akamaized.net^
 @@||www.statig3.akamaized.net^
+@@||www.statig4.akamaized.net^
 @@||www.station-drivers.com^
 @@||www.station.sony.com^
 @@||www.stats.adobe.com^
@@ -40190,6 +40195,7 @@
 @@||www.tvax4.sinaimg.cn^
 @@||www.tvcast.naver.com^
 @@||www.tvdb2.plex.tv^
+@@||www.tvdownloaddw-a.akamaihd.net^
 @@||www.tve-common.nbcuni.com^
 @@||www.tverationalplayer.akamaized.net^
 @@||www.tvn24.pl^
@@ -42748,6 +42754,7 @@
 @@||www.zn3enozuz6nnn9nkf-tribune.siteintercept.qualtrics.com^
 @@||www.zn4ituzxtg48dutbj-houzz.siteintercept.qualtrics.com^
 @@||www.zn4onyivptbyoszsh-bmo.siteintercept.qualtrics.com^
+@@||www.zn4sjgms8pc0ssxdx-cbs.siteintercept.qualtrics.com^
 @@||www.zn5ytjsjddwlknevh-seagatecx.siteintercept.qualtrics.com^
 @@||www.zn6fetw4rxykndjoz-southwest.siteintercept.qualtrics.com^
 @@||www.zn6mcrij6xncfajof-adidastrial.siteintercept.qualtrics.com^
@@ -42759,9 +42766,11 @@
 @@||www.zn_55bdrev4af0c1yl-cbs.siteintercept.qualtrics.com^
 @@||www.zn_5u81q8n4jdu5ls9-cbs.siteintercept.qualtrics.com^
 @@||www.zn_6vxkyqywaf9f1t7-usbank.siteintercept.qualtrics.com^
+@@||www.zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com^
 @@||www.zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com^
 @@||www.zn_agburbioucamt8f-babycenter.siteintercept.qualtrics.com^
 @@||www.zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com^
+@@||www.zn_ccjokix6bpit8tr-cbs.siteintercept.qualtrics.com^
 @@||www.zn_ed65ynwxvsuk9lf-cbs.siteintercept.qualtrics.com^
 @@||www.zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com^
 @@||www.znahml1rmhxuhlsbd-psp.siteintercept.qualtrics.com^
@@ -43006,6 +43015,7 @@
 @@||zn3enozuz6nnn9nkf-tribune.siteintercept.qualtrics.com^
 @@||zn4ituzxtg48dutbj-houzz.siteintercept.qualtrics.com^
 @@||zn4onyivptbyoszsh-bmo.siteintercept.qualtrics.com^
+@@||zn4sjgms8pc0ssxdx-cbs.siteintercept.qualtrics.com^
 @@||zn5ytjsjddwlknevh-seagatecx.siteintercept.qualtrics.com^
 @@||zn6fetw4rxykndjoz-southwest.siteintercept.qualtrics.com^
 @@||zn6mcrij6xncfajof-adidastrial.siteintercept.qualtrics.com^
@@ -43017,9 +43027,11 @@
 @@||zn_55bdrev4af0c1yl-cbs.siteintercept.qualtrics.com^
 @@||zn_5u81q8n4jdu5ls9-cbs.siteintercept.qualtrics.com^
 @@||zn_6vxkyqywaf9f1t7-usbank.siteintercept.qualtrics.com^
+@@||zn_9nquvazst1xipkt-cbs.siteintercept.qualtrics.com^
 @@||zn_a9290jo7eb4diuz-mayoclinicsurveys.siteintercept.qualtrics.com^
 @@||zn_agburbioucamt8f-babycenter.siteintercept.qualtrics.com^
 @@||zn_bfrpy3eqewfugoz-siriusxm.siteintercept.qualtrics.com^
+@@||zn_ccjokix6bpit8tr-cbs.siteintercept.qualtrics.com^
 @@||zn_ed65ynwxvsuk9lf-cbs.siteintercept.qualtrics.com^
 @@||zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com^
 @@||znahml1rmhxuhlsbd-psp.siteintercept.qualtrics.com^
