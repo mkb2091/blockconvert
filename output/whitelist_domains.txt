@@ -5169,6 +5169,7 @@ dp.blog.naver.com
 dp.msnmessenger.akadns.com
 dp8hsntg6do36.cloudfront.net
 dpimg.ospserver.net
+dpreview.com
 dragoart.com
 dramafever.com
 draw.io
@@ -11630,6 +11631,7 @@ it.playstation.com
 it.statcounter.com
 it.toolbox.com
 it.wikipedia.com
+itch.io
 item.mi.com
 item.taobao.com
 itknowledgeexchange.techtarget.com
@@ -17120,6 +17122,7 @@ quantummetric.com
 query.prod.cms.rt.microsoft.com
 query.yahoo.com
 query.yahooapis.com
+quickenloans.com
 quora.com
 quotemedia.com
 qze.it
@@ -18862,6 +18865,7 @@ tripadvisor.com
 tripod.com
 trk.cp20.com
 trk.klclick.com
+trk.klclick1.com
 trophy01.np.community.playstation.net
 trowel.twitch.tv
 truecaller.com
@@ -19203,6 +19207,7 @@ va.logs.heroku.com
 va.sndcdn.com
 va.v.liveperson.net
 validatedsite.com
+validation-v2.sls.microsoft.com
 validator.cloud.vimeo.com
 valuedopinions.co.uk
 vandal.elespanol.com
@@ -26420,6 +26425,7 @@ www.dp.blog.naver.com
 www.dp.msnmessenger.akadns.com
 www.dp8hsntg6do36.cloudfront.net
 www.dpimg.ospserver.net
+www.dpreview.com
 www.dragoart.com
 www.dramafever.com
 www.draw.io
@@ -32881,6 +32887,7 @@ www.it.playstation.com
 www.it.statcounter.com
 www.it.toolbox.com
 www.it.wikipedia.com
+www.itch.io
 www.item.mi.com
 www.item.taobao.com
 www.itknowledgeexchange.techtarget.com
@@ -38371,6 +38378,7 @@ www.quantummetric.com
 www.query.prod.cms.rt.microsoft.com
 www.query.yahoo.com
 www.query.yahooapis.com
+www.quickenloans.com
 www.quora.com
 www.quotemedia.com
 www.qze.it
@@ -40113,6 +40121,7 @@ www.tripadvisor.com
 www.tripod.com
 www.trk.cp20.com
 www.trk.klclick.com
+www.trk.klclick1.com
 www.trophy01.np.community.playstation.net
 www.trowel.twitch.tv
 www.truecaller.com
@@ -40454,6 +40463,7 @@ www.va.logs.heroku.com
 www.va.sndcdn.com
 www.va.v.liveperson.net
 www.validatedsite.com
+www.validation-v2.sls.microsoft.com
 www.validator.cloud.vimeo.com
 www.valuedopinions.co.uk
 www.vandal.elespanol.com

@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 655485 blocked domains in each of the generated filter lists
+Theres are 616543 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -16,9 +16,9 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [uBlock filters – Badware risks](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt)|-|4.0 days|GPLv3|56|0
 [iOS Tracker Blocklist](https://jarv.is/ios-trackers/adguard.txt)|jakejarvis|10.0 days|MIT|489|0
 [hostsVN](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts)|-|1.0 days|MIT|19138|0
-[abuse.ch URLhaus Response Policy Zones](https://urlhaus.abuse.ch/downloads/rpz/)|-|1.0 days|CC0|787|0
-[abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|121|0
-[abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|452|0
+[abuse.ch URLhaus Response Policy Zones](https://urlhaus.abuse.ch/downloads/rpz/)|-|1.0 days|CC0|825|0
+[abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|129|0
+[abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|449|0
 [😍 All-in-One Customized Adblock List 2.7](https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/deanoman-adblocklist.txt)|deanoman|2.0 hours|MIT|42364|790
 [🎮 Game Console Adblock List](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt)|-|4.0 days|Dandelicence|8|0
 [❤xorcan❤ Türk ip-list](https://raw.githubusercontent.com/xorcan/hosts/master/xips.txt)|xorcan|1.0 days|GPL-3.0|13|0
@@ -45,7 +45,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [Pi-Hole blocklist](https://codeberg.org/spootle/blocklist/raw/branch/master/blocklist.txt)|-|1.0 days|GPL-3.0|171710|0
 [Not Good Pi](https://raw.githubusercontent.com/infinitytec/blocklists/master/not-good-pi.txt)|infinitytec|10.0 days|MIT|4|0
 [Nopelist](https://raw.githubusercontent.com/genediazjr/nopelist/master/nopelist.txt)|Gene Diaz|7.0 days|MIT|168|0
-[NoTrack Tracker Blocklist](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt)|QuidsUp|1.0 days|GPLv3|13407|0
+[NoTrack Tracker Blocklist](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt)|QuidsUp|1.0 days|GPLv3|13413|0
 [NoTrack Malware Blocklist](https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt)|QuidsUp|1.0 days|GPLv3|371|0
 [NoCoin Filter List](https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt)|-|1.0 days|MIT|688|0
 [NSA Blocklist](https://raw.githubusercontent.com/Cauchon/NSABlocklist-pi-hole-edition/master/HOSTS%20(excluding%20most%20GOV%20URLs))|Original maintainer: CHEF-KOCH, Pi-Hole Edition maintainer: Cauchon|10.0 days|MIT|2820|0
@@ -54,8 +54,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [Magneto Malware Skanner - Burner Domains](https://raw.githubusercontent.com/gwillem/magento-malware-scanner/master/rules/burner-domains.txt)|-|10.0 days|GPLv3|420|0
 [Lightswitch05's Tracking Aggressive](https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt)|Daniel White|2.0 days|Apache2|7576|0
 [Lightswitch05's Ads & Tracking](https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt)|Daniel White|2.0 days|Apache2|131917|0
-[Latvian List](https://hostsfile.mine.nu/hosts0.txt)|-|1.0 days|GPLv3|105785|0
-[KADhosts](https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt)|-|1.0 days|CC-BY-SA-4|10818|0
+[KADhosts](https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt)|-|1.0 days|CC-BY-SA-4|10876|0
 [International List](https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt)|-|3.0 days|The Unlicense|15|1
 [I Hate Tracker](https://raw.githubusercontent.com/pirat28/IHateTracker/master/iHateTracker.txt)|Pirat28|10.0 days|MIT|373|0
 [Hosty Whitelist](https://raw.githubusercontent.com/JoseGalRe/Hosty/master/bits/hosty.whitelist)|astrolince, s-nt-s, JoseGalRe|7.0 days|CCA-3.0|0|767
@@ -116,9 +115,9 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [https://raw.githubusercontent.com/ligyxy/Blocklist/master/BLOCKLIST](https://raw.githubusercontent.com/ligyxy/Blocklist/master/BLOCKLIST)|-|1.0 days|MIT|69348|0
 [https://raw.githubusercontent.com/greatis/Anti-WebMiner/master/blacklist.txt](https://raw.githubusercontent.com/greatis/Anti-WebMiner/master/blacklist.txt)|-|1.0 days|Apache2|486|0
 [https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_lists/domains_only.txt](https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_lists/domains_only.txt)|-|1.0 days|MIT|104|0
-[https://raw.githubusercontent.com/bjornstar/hosts/master/hosts](https://raw.githubusercontent.com/bjornstar/hosts/master/hosts)|-|1.0 days|The Unlicense|7220|0
+[https://raw.githubusercontent.com/bjornstar/hosts/master/hosts](https://raw.githubusercontent.com/bjornstar/hosts/master/hosts)|-|1.0 days|The Unlicense|7229|0
 [https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt](https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt)|-|1.0 days|MIT|0|194
-[https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list](https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list)|-|1.0 days|MIT|0|942
+[https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list](https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list)|-|1.0 days|MIT|0|943
 [https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts](https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts)|-|1.0 days|MIT|57731|0
 [https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt](https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt)|-|1.0 days|MIT|81|0
 [https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt](https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt)|-|1.0 days|MIT|189|0
@@ -129,11 +128,11 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json](https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json)|-|1.0 days|GPLv3|827|493
 [https://raw.githubusercontent.com/EFForg/badger-sett/master/results.json](https://raw.githubusercontent.com/EFForg/badger-sett/master/results.json)|-|1.0 days|GPLv3|500|236
 [https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt](https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt)|-|1.0 days|CC-BY-SA-4.0|53|0
-[https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt](https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt)|-|1.0 days|CC0|75239|0
+[https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt](https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt)|-|1.0 days|CC0|75364|0
 [https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt)|-|1.0 days|GPLv3|792|0
 [https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt)|-|1.0 days|GPLv3|63513|0
 [https://filtri-dns.ga/filtri.txt](https://filtri-dns.ga/filtri.txt)|-|1.0 days|GPLv3|27224|0
-[https://cybercrime-tracker.net/all.php](https://cybercrime-tracker.net/all.php)|-|1.0 days|CC0|13915|0
+[https://cybercrime-tracker.net/all.php](https://cybercrime-tracker.net/all.php)|-|1.0 days|CC0|13926|0
 [https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt](https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt)|-|10.0 days|Public Domain|2046|0
 
 ## Credits
