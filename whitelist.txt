@@ -128,6 +128,7 @@ download.electrum.org
 download.newrelic.com
 download.windowsupdate.com
 downloads.getmonero.org
+dpreview.com
 drh.img.digitalriver.com
 drh1.img.digitalriver.com
 drudgereport.com
@@ -205,6 +206,7 @@ io9.com
 ip-adress.com
 ipv4.login.msa.akadns6.net
 it.toolbox.com
+itch.io
 jarv.is
 js.t.sinajs.cn
 kasperskycontenthub.com
@@ -348,6 +350,7 @@ to-do.microsoft.com
 tracker.tvnihon.com
 tracking.epicgames.com
 transfer.sh
+trk.klclick1.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
 umich.qualtrics.com
 unitedstates.smartscreen-prod.microsoft.com
@@ -361,6 +364,7 @@ v.firebog.net
 v10.events.data.microsoft.com
 v10.vortex-win.data.microsoft.com
 v20.events.data.microsoft.com
+validation-v2.sls.microsoft.com
 vgwort.de
 vignette.wikia.nocookie.net
 vip5.afdorigin-prod-am02.afdogw.com
@@ -433,6 +437,7 @@ www.pasteboard.co
 www.pcmatic.com
 www.phishtank.com
 www.privateinternetaccess.com
+www.quickenloans.com
 www.ranker.com
 www.reddit.com
 www.semrush.com
