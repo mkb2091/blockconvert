@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 618982 blocked domains in each of the generated filter lists
+Theres are 618326 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -71,8 +71,8 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [EasyList Germany](https://easylist.to/easylistgermany/easylistgermany.txt)|-|1.0 days|GPLv3|621|13
 [EasyList Dutch](https://easylist-downloads.adblockplus.org/easylistdutch.txt)|-|4.0 days|GPLv3|84|1
 [EasyList Czech and Slovak filter list](https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt)|tomasko126, Aslanex, vobruba-martin, Moskoe, Fanboy|4.0 hours|CC-BY-SA-4.0|78|1
-[EasyList China](https://easylist-downloads.adblockplus.org/easylistchina.txt)|-|4.0 days|GPLv3|5872|23
-[Binary Defense Banlist](https://www.binarydefense.com/banlist.txt)|-|1.0 days|Public use only|1631|0
+[EasyList China](https://easylist-downloads.adblockplus.org/easylistchina.txt)|-|4.0 days|GPLv3|5891|23
+[Binary Defense Banlist](https://www.binarydefense.com/banlist.txt)|-|1.0 days|Public use only|2096|0
 [Better content blocking rules](https://better.fyi/blockerList.txt)|-|1.0 days|CC-BY-SA-4.0|747|2
 [Basic tracking list by Disconnect](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)|-|1.0 days|GPLv3|34|0
 [BarbBlock](https://ssl.bblck.me/blacklists/domain-list.txt)|-|1.0 days|MIT|544|0
@@ -82,12 +82,12 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [Annoyance Mobile Ad hosts filter](https://raw.githubusercontent.com/yowu/AnnoyanceMobileAdHosts/master/AnnoyanceMobileAdHosts.txt)|-|1.0 days|The Unlicense|274|0
 [Adware filters](https://easylist-downloads.adblockplus.org/adwarefilters.txt)|-|1.0 days|GPLv3|123|0
 [Ads and Trackers](https://raw.githubusercontent.com/infinitytec/blocklists/master/ads-and-trackers.txt)|infinitytec|10.0 days|MIT|23|0
-[AdguardMobileAds](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt)|-|1.0 days|GPLv3|990|0
-[AdguardDNS](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt)|-|1.0 days|GPLv3|36740|0
+[AdguardMobileAds](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt)|-|1.0 days|GPLv3|995|0
+[AdguardDNS](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt)|-|1.0 days|GPLv3|36829|0
 [AdguardApps](https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt)|-|1.0 days|GPLv3|19|0
 [Adblock Polska](https://raw.githubusercontent.com/adblockpolska/Adblock_PL_List/master/adblock_polska.txt)|adblockpl, tomasko126, MonztA|2.0 days|GPLv3|84|1
 [Adblock List for Finland](https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt)|-|5.0 days|The Unlicense|64|1
-[AdGuard Simplified Domain Names filter](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt)|-|1.0 days|GPLv3|36876|15
+[AdGuard Simplified Domain Names filter](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt)|-|1.0 days|GPLv3|36900|15
 [AdBlockID](https://raw.githubusercontent.com/realodix/AdBlockID/master/output/adblockid.txt)|-|4.0 days|GPLv3|292|0
 [AdBlock Farsi](https://raw.githubusercontent.com/SlashArash/adblockfa/master/adblockfa.txt)|-|5.0 days|The Beer-Ware License|136|0
 [AdAway default blocklist](https://adaway.org/hosts.txt)|-|1.0 days|CC-BY-3|12148|0
@@ -107,7 +107,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [https://raw.githubusercontent.com/nabble/semalt-blocker/master/domains/blocked](https://raw.githubusercontent.com/nabble/semalt-blocker/master/domains/blocked)|-|1.0 days|MIT|2432|0
 [https://raw.githubusercontent.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/master/wordpress-attacking-ips.txt](https://raw.githubusercontent.com/mitchellkrogza/Top-Attacking-IP-Addresses-Against-Wordpress-Sites/master/wordpress-attacking-ips.txt)|Mitchell Krog|1.0 days|MIT|148|0
 [https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list)|Mitchell Krog|1.0 days|MIT|9221|0
-[https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list)|Mitchell Krog|1.0 days|MIT|2872|0
+[https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list](https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list)|Mitchell Krog|1.0 days|MIT|2873|0
 [https://raw.githubusercontent.com/mitchellkrogza/Stop.Google.Analytics.Ghost.Spam.HOWTO/master/output/domains/ACTIVE/list](https://raw.githubusercontent.com/mitchellkrogza/Stop.Google.Analytics.Ghost.Spam.HOWTO/master/output/domains/ACTIVE/list)|Mitchell Krog|1.0 days|MIT|5399|0
 [https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt](https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt)|Mitchell Krog|1.0 days|MIT|71344|0
 [https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt](https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt)|-|1.0 days|MIT|27146|0
