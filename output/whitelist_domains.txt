@@ -1782,7 +1782,6 @@ a248.e.akamai.net
 a255008327.cdn.optimizely.com
 a275532918.cdn.optimizely.com
 a2zapk.com
-a3013110282.cdn.optimizely.com
 a304207300.cdn.optimizely.com
 a31463647.cdn.optimizely.com
 a3176660057.cdn.optimizely.com
@@ -1812,7 +1811,6 @@ a8136870131.cdn.optimizely.com
 a8306101470.cdn.optimizely.com
 a8367280580.cdn-pci.optimizely.com
 a8392411042.cdn.optimizely.com
-a8447815042.cdn-pci.optimizely.com
 a8447843426.cdn-pci.optimizely.com
 a8507201684.cdn.optimizely.com
 a8508271295.cdn.optimizely.com
@@ -2039,6 +2037,7 @@ ae01.alicdn.com
 ae911truth.org
 aeis.alicdn.com
 aemmobile.adobe.com
+aeriagames.com
 aetna.com
 aeu.alicdn.com
 affiliate-program.amazon.com
@@ -3217,6 +3216,7 @@ articles.latimes.com
 arv.us
 asahi.com
 ascii.co.uk
+ascpqnj-oam.global.ssl.fastly.net
 ash.to
 ashampoo.com
 ashiato.rakuten.co.jp
@@ -3260,6 +3260,7 @@ assets.hulu.com
 assets.ign.com
 assets.inshorts.com
 assets.map.brightcove.com
+assets.micpn.com
 assets.nflxext.com
 assets.penny-arcade.com
 assets.pinterest.com
@@ -3807,6 +3808,7 @@ buydomains.com
 buymeacoffee.com
 buzzfed.com
 buzzfeed.com
+bvds96tu7f.execute-api.us-west-2.amazonaws.com
 bwmhosting.huawei.com
 bwp.techrepublic.com
 bws.bitpay.com
@@ -4273,6 +4275,7 @@ cheatengine.org
 check.ptlogin2.wechat.com
 check4.facebook.com
 check6.facebook.com
+checkappexec.microsoft.com
 checkip.amazonaws.com
 checkout.google.com
 checkout.naver.com
@@ -4408,6 +4411,7 @@ cm3-sto1.cm.steampowered.com
 cmail.daum.net
 cmail19.com
 cmail20.com
+cmanager-prometeo.appspot.com
 cms-portal.qualcomm.com
 cms.breitbart.com
 cms.techrepublic.com
@@ -4742,6 +4746,7 @@ d.xiaomi.com
 d.yimg.com
 d1af033869koo7.cloudfront.net
 d1f8f9xcsvx3ha.cloudfront.net
+d1rv23qj5kas56.cloudfront.net
 d1z2jf7jlzjs58.cloudfront.net
 d2.naver.com
 d2405b0jymm2dk.cloudfront.net
@@ -4749,13 +4754,18 @@ d2c87l0yth4zbw.cloudfront.net
 d2c8v52ll5s99u.cloudfront.net
 d2cmedia.ca
 d2gatte9o95jao.cloudfront.net
+d2t77mnxyo7adj.cloudfront.net
 d2wy8f7a9ursnm.cloudfront.net
 d31qbv1cthcecs.cloudfront.net
+d38xvr37kwwhcm.cloudfront.net
 d395dw5zk780j2.cloudfront.net
 d3js.org
+d3miu5qzzxs1gd.cloudfront.net
 d3orhvfyxudxxq.cloudfront.net
+d3q7vxy7usqoub.cloudfront.net
 d3rt1990lpmkn.cloudfront.net
 d4.me
+d5nxst8fruw4z.cloudfront.net
 d9hhrg4mnvzow.cloudfront.net
 d9jj3mjthpub.cloudfront.net
 da.gravatar.com
@@ -4939,6 +4949,7 @@ devimages-cdn.apple.com
 devmate.com
 dezeenhq.disqus.com
 df.ly
+dfapvmql-q.global.ssl.fastly.net
 dfm-mercurynews.disqus.com
 dftp.flowplayer.com
 dgit.com
@@ -5247,6 +5258,7 @@ e3489.cd.akamaiedge.net
 e3843.g.akamaiedge.net
 e4478.a.akamaiedge.net
 e5298.g.akamaiedge.net
+e785s8hz.micpn.com
 e8.org
 ea.co
 ea.com
@@ -5529,6 +5541,7 @@ events.launchdarkly.com
 events.mapbox.com
 events.recode.net
 eventus-design.com
+everest.castbox.fm
 evergage.com
 everyaction.com
 everydayhealth.com
@@ -5976,6 +5989,7 @@ fwmrm.net
 fx.cc
 fxhome.com
 fyre.co
+fyrsbckgi-c.global.ssl.fastly.net
 fz.io
 fzcdn.net
 fzmovies.net
@@ -11510,6 +11524,8 @@ inscname.net
 insidehighered.disqus.com
 insider.sonymobile.com
 insiderdownloads.ign.com
+insight.rapid7.com
+insights.eu.newrelic.com
 insights.samsung.com
 insomniagamingfestival.com
 inspectlet.com
@@ -13625,6 +13641,7 @@ loccitane.com
 lockurl.com
 lodz.tvp.pl
 log.entrance.sonymobile.com
+log.olark.com
 logback.qos.ch
 logbuch-netzpolitik.de
 logging.apache.org
@@ -13668,6 +13685,7 @@ logout.mi.com
 logout.xiaomi.com
 logout.xiaomi.net
 logrocket.com
+logs-01.loggly.com
 logs.heroku.com
 logsss.com
 logw306.ati-host.net
@@ -15739,6 +15757,7 @@ mixin.dl.files.xiaomi.net
 mixin.xiaomi.net
 mixnews.lv
 mixpanel.com
+mjca-yijws.global.ssl.fastly.net
 mkfreedl.b-cdn.net
 mkt7185.com
 mktcloud.c.huawei.com
@@ -15826,6 +15845,7 @@ motor1dotcom.disqus.com
 motto.daisuki.net
 mouseflow.com
 movable-ink-2183.com
+movable-ink-397.com
 movie.daum.net
 movie.naver.com
 movie2k.to
@@ -17104,6 +17124,7 @@ qiniuts.com
 qiuziti.com
 qiye.xiaomi.com
 qme.mydns.jp
+qognvtzku-x.global.ssl.fastly.net
 qos.gcloud.qq.com
 qos.hk.gcloudcs.com
 qph.ec.quoracdn.net
@@ -17206,6 +17227,7 @@ recirculation.spot.im
 reckendrees.systems
 recode.net
 recommendation.spot.im
+recommendationengine.googleapis.com
 recurly.com
 redbullmediahouse.origin.typekit.com
 redcdn.pl
@@ -17351,7 +17373,6 @@ rover.ebay.it
 rpg.twitch.tv
 rptrcks.walmart.com
 rpxnow.com
-rs.mail.ru
 rs.playstation.com
 rs6.net
 rsci.app.link
@@ -18337,6 +18358,7 @@ stg1admin.citruspay.com
 stg2.shop.samsung.com
 stgweb4.samsung.com
 stgweb4.samsung.com.edgekey.net
+sthehersheycompany.122.2o7.net
 stickers-search.viber.com
 stickers.viber.com
 stileproject.com
@@ -18963,6 +18985,7 @@ uchicago.edu
 ucla.edu
 ud.me
 udacity.com
+udc-neb.kampyle.com
 udl-api.sonymobile.com
 uds.licenses.adobe.com
 udurl.com
@@ -19396,6 +19419,7 @@ vupload2.t.facebook.com
 vuukle.com
 vvvvid.it
 vwdservices.com
+vwonwkaqvq-a.global.ssl.fastly.net
 vwp.jpto.sonymobile.com
 vxvault.net
 vy.me
@@ -21176,6 +21200,7 @@ wnd-news.disqus.com
 wns.windows.com
 wnyc.org
 wololo.net
+wolterskluwer.122.2o7.net
 womenshealthmag.com
 woodpecker.uc.cn
 woopic.com
@@ -21198,6 +21223,7 @@ wp.me
 wpcomwidgets.com
 wpengine.com
 wr.com
+wrapper-api.sp-prod.net
 wrd.org
 wreg.com
 ws-api.spot.im
@@ -23038,7 +23064,6 @@ www.a248.e.akamai.net
 www.a255008327.cdn.optimizely.com
 www.a275532918.cdn.optimizely.com
 www.a2zapk.com
-www.a3013110282.cdn.optimizely.com
 www.a304207300.cdn.optimizely.com
 www.a31463647.cdn.optimizely.com
 www.a3176660057.cdn.optimizely.com
@@ -23068,7 +23093,6 @@ www.a8136870131.cdn.optimizely.com
 www.a8306101470.cdn.optimizely.com
 www.a8367280580.cdn-pci.optimizely.com
 www.a8392411042.cdn.optimizely.com
-www.a8447815042.cdn-pci.optimizely.com
 www.a8447843426.cdn-pci.optimizely.com
 www.a8507201684.cdn.optimizely.com
 www.a8508271295.cdn.optimizely.com
@@ -23295,6 +23319,7 @@ www.ae01.alicdn.com
 www.ae911truth.org
 www.aeis.alicdn.com
 www.aemmobile.adobe.com
+www.aeriagames.com
 www.aetna.com
 www.aeu.alicdn.com
 www.affiliate-program.amazon.com
@@ -24473,6 +24498,7 @@ www.articles.latimes.com
 www.arv.us
 www.asahi.com
 www.ascii.co.uk
+www.ascpqnj-oam.global.ssl.fastly.net
 www.ash.to
 www.ashampoo.com
 www.ashiato.rakuten.co.jp
@@ -24516,6 +24542,7 @@ www.assets.hulu.com
 www.assets.ign.com
 www.assets.inshorts.com
 www.assets.map.brightcove.com
+www.assets.micpn.com
 www.assets.nflxext.com
 www.assets.penny-arcade.com
 www.assets.pinterest.com
@@ -25063,6 +25090,7 @@ www.buydomains.com
 www.buymeacoffee.com
 www.buzzfed.com
 www.buzzfeed.com
+www.bvds96tu7f.execute-api.us-west-2.amazonaws.com
 www.bwmhosting.huawei.com
 www.bwp.techrepublic.com
 www.bws.bitpay.com
@@ -25529,6 +25557,7 @@ www.cheatengine.org
 www.check.ptlogin2.wechat.com
 www.check4.facebook.com
 www.check6.facebook.com
+www.checkappexec.microsoft.com
 www.checkip.amazonaws.com
 www.checkout.google.com
 www.checkout.naver.com
@@ -25664,6 +25693,7 @@ www.cm3-sto1.cm.steampowered.com
 www.cmail.daum.net
 www.cmail19.com
 www.cmail20.com
+www.cmanager-prometeo.appspot.com
 www.cms-portal.qualcomm.com
 www.cms.breitbart.com
 www.cms.techrepublic.com
@@ -25998,6 +26028,7 @@ www.d.xiaomi.com
 www.d.yimg.com
 www.d1af033869koo7.cloudfront.net
 www.d1f8f9xcsvx3ha.cloudfront.net
+www.d1rv23qj5kas56.cloudfront.net
 www.d1z2jf7jlzjs58.cloudfront.net
 www.d2.naver.com
 www.d2405b0jymm2dk.cloudfront.net
@@ -26005,13 +26036,18 @@ www.d2c87l0yth4zbw.cloudfront.net
 www.d2c8v52ll5s99u.cloudfront.net
 www.d2cmedia.ca
 www.d2gatte9o95jao.cloudfront.net
+www.d2t77mnxyo7adj.cloudfront.net
 www.d2wy8f7a9ursnm.cloudfront.net
 www.d31qbv1cthcecs.cloudfront.net
+www.d38xvr37kwwhcm.cloudfront.net
 www.d395dw5zk780j2.cloudfront.net
 www.d3js.org
+www.d3miu5qzzxs1gd.cloudfront.net
 www.d3orhvfyxudxxq.cloudfront.net
+www.d3q7vxy7usqoub.cloudfront.net
 www.d3rt1990lpmkn.cloudfront.net
 www.d4.me
+www.d5nxst8fruw4z.cloudfront.net
 www.d9hhrg4mnvzow.cloudfront.net
 www.d9jj3mjthpub.cloudfront.net
 www.da.gravatar.com
@@ -26195,6 +26231,7 @@ www.devimages-cdn.apple.com
 www.devmate.com
 www.dezeenhq.disqus.com
 www.df.ly
+www.dfapvmql-q.global.ssl.fastly.net
 www.dfm-mercurynews.disqus.com
 www.dftp.flowplayer.com
 www.dgit.com
@@ -26503,6 +26540,7 @@ www.e3489.cd.akamaiedge.net
 www.e3843.g.akamaiedge.net
 www.e4478.a.akamaiedge.net
 www.e5298.g.akamaiedge.net
+www.e785s8hz.micpn.com
 www.e8.org
 www.ea.co
 www.ea.com
@@ -26785,6 +26823,7 @@ www.events.launchdarkly.com
 www.events.mapbox.com
 www.events.recode.net
 www.eventus-design.com
+www.everest.castbox.fm
 www.evergage.com
 www.everyaction.com
 www.everydayhealth.com
@@ -27232,6 +27271,7 @@ www.fwmrm.net
 www.fx.cc
 www.fxhome.com
 www.fyre.co
+www.fyrsbckgi-c.global.ssl.fastly.net
 www.fz.io
 www.fzcdn.net
 www.fzmovies.net
@@ -32766,6 +32806,8 @@ www.inscname.net
 www.insidehighered.disqus.com
 www.insider.sonymobile.com
 www.insiderdownloads.ign.com
+www.insight.rapid7.com
+www.insights.eu.newrelic.com
 www.insights.samsung.com
 www.insomniagamingfestival.com
 www.inspectlet.com
@@ -34881,6 +34923,7 @@ www.loccitane.com
 www.lockurl.com
 www.lodz.tvp.pl
 www.log.entrance.sonymobile.com
+www.log.olark.com
 www.logback.qos.ch
 www.logbuch-netzpolitik.de
 www.logging.apache.org
@@ -34924,6 +34967,7 @@ www.logout.mi.com
 www.logout.xiaomi.com
 www.logout.xiaomi.net
 www.logrocket.com
+www.logs-01.loggly.com
 www.logs.heroku.com
 www.logsss.com
 www.logw306.ati-host.net
@@ -36995,6 +37039,7 @@ www.mixin.dl.files.xiaomi.net
 www.mixin.xiaomi.net
 www.mixnews.lv
 www.mixpanel.com
+www.mjca-yijws.global.ssl.fastly.net
 www.mkfreedl.b-cdn.net
 www.mkt7185.com
 www.mktcloud.c.huawei.com
@@ -37082,6 +37127,7 @@ www.motor1dotcom.disqus.com
 www.motto.daisuki.net
 www.mouseflow.com
 www.movable-ink-2183.com
+www.movable-ink-397.com
 www.movie.daum.net
 www.movie.naver.com
 www.movie2k.to
@@ -38360,6 +38406,7 @@ www.qiniuts.com
 www.qiuziti.com
 www.qiye.xiaomi.com
 www.qme.mydns.jp
+www.qognvtzku-x.global.ssl.fastly.net
 www.qos.gcloud.qq.com
 www.qos.hk.gcloudcs.com
 www.qph.ec.quoracdn.net
@@ -38462,6 +38509,7 @@ www.recirculation.spot.im
 www.reckendrees.systems
 www.recode.net
 www.recommendation.spot.im
+www.recommendationengine.googleapis.com
 www.recurly.com
 www.redbullmediahouse.origin.typekit.com
 www.redcdn.pl
@@ -38607,7 +38655,6 @@ www.rover.ebay.it
 www.rpg.twitch.tv
 www.rptrcks.walmart.com
 www.rpxnow.com
-www.rs.mail.ru
 www.rs.playstation.com
 www.rs6.net
 www.rsci.app.link
@@ -39593,6 +39640,7 @@ www.stg1admin.citruspay.com
 www.stg2.shop.samsung.com
 www.stgweb4.samsung.com
 www.stgweb4.samsung.com.edgekey.net
+www.sthehersheycompany.122.2o7.net
 www.stickers-search.viber.com
 www.stickers.viber.com
 www.stileproject.com
@@ -40219,6 +40267,7 @@ www.uchicago.edu
 www.ucla.edu
 www.ud.me
 www.udacity.com
+www.udc-neb.kampyle.com
 www.udl-api.sonymobile.com
 www.uds.licenses.adobe.com
 www.udurl.com
@@ -40652,6 +40701,7 @@ www.vupload2.t.facebook.com
 www.vuukle.com
 www.vvvvid.it
 www.vwdservices.com
+www.vwonwkaqvq-a.global.ssl.fastly.net
 www.vwp.jpto.sonymobile.com
 www.vxvault.net
 www.vy.me
@@ -42432,6 +42482,7 @@ www.wnd-news.disqus.com
 www.wns.windows.com
 www.wnyc.org
 www.wololo.net
+www.wolterskluwer.122.2o7.net
 www.womenshealthmag.com
 www.woodpecker.uc.cn
 www.woopic.com
@@ -42454,6 +42505,7 @@ www.wp.me
 www.wpcomwidgets.com
 www.wpengine.com
 www.wr.com
+www.wrapper-api.sp-prod.net
 www.wrd.org
 www.wreg.com
 www.ws-api.spot.im
@@ -42713,10 +42765,6 @@ www.ziplist.com
 www.zippyshare.com
 www.ziprecruiter.com
 www.zlcdn.com
-www.zn38gzupfezke4elv-anz.siteintercept.qualtrics.com
-www.zn4sjgms8pc0ssxdx-cbs.siteintercept.qualtrics.com
-www.znahml1rmhxuhlsbd-psp.siteintercept.qualtrics.com
-www.zne51shg48vjqbtwj-vistaprint.siteintercept.qualtrics.com
 www.zobj.net
 www.zoho.com
 www.zoho.eu
@@ -42935,10 +42983,6 @@ ziplist.com
 zippyshare.com
 ziprecruiter.com
 zlcdn.com
-zn38gzupfezke4elv-anz.siteintercept.qualtrics.com
-zn4sjgms8pc0ssxdx-cbs.siteintercept.qualtrics.com
-znahml1rmhxuhlsbd-psp.siteintercept.qualtrics.com
-zne51shg48vjqbtwj-vistaprint.siteintercept.qualtrics.com
 zobj.net
 zoho.com
 zoho.eu
