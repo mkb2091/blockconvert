@@ -1530,6 +1530,7 @@
 @@||*.simply.com^
 @@||*.skype.com^
 @@||*.smartscreen.microsoft.com^
+@@||*.storage.live.com^
 @@||*.telecommand.telemetry.microsoft.com.akadns.net^
 @@||*.tlu.dl.delivery.mp.microsoft.com^
 @@||*.ugc.bazaarvoice.com^
@@ -5978,6 +5979,7 @@
 @@||fullstory.com^
 @@||fund.jr.mi.com^
 @@||funimation.com^
+@@||funk.eu^
 @@||funnymp4.net^
 @@||funnyordie.com^
 @@||fur.ly^
@@ -11328,6 +11330,7 @@
 @@||images.fotmob.com^
 @@||images.google.com^
 @@||images.gotinder.com^
+@@||images.gounlimited.to^
 @@||images.hepsiburada.net^
 @@||images.huffingtonpost.com^
 @@||images.opencollective.com^
@@ -18429,6 +18432,7 @@
 @@||stripe.com^
 @@||stripe.network^
 @@||stripecdn.com^
+@@||stripecdn.map.fastly.net^
 @@||stripes.com^
 @@||strongpasswordgenerator.com^
 @@||sts.api.io.mi.com^
@@ -22812,6 +22816,7 @@
 @@||www.*.simply.com^
 @@||www.*.skype.com^
 @@||www.*.smartscreen.microsoft.com^
+@@||www.*.storage.live.com^
 @@||www.*.telecommand.telemetry.microsoft.com.akadns.net^
 @@||www.*.tlu.dl.delivery.mp.microsoft.com^
 @@||www.*.ugc.bazaarvoice.com^
@@ -27260,6 +27265,7 @@
 @@||www.fullstory.com^
 @@||www.fund.jr.mi.com^
 @@||www.funimation.com^
+@@||www.funk.eu^
 @@||www.funnymp4.net^
 @@||www.funnyordie.com^
 @@||www.fur.ly^
@@ -32610,6 +32616,7 @@
 @@||www.images.fotmob.com^
 @@||www.images.google.com^
 @@||www.images.gotinder.com^
+@@||www.images.gounlimited.to^
 @@||www.images.hepsiburada.net^
 @@||www.images.huffingtonpost.com^
 @@||www.images.opencollective.com^
@@ -39711,6 +39718,7 @@
 @@||www.stripe.com^
 @@||www.stripe.network^
 @@||www.stripecdn.com^
+@@||www.stripecdn.map.fastly.net^
 @@||www.stripes.com^
 @@||www.strongpasswordgenerator.com^
 @@||www.sts.api.io.mi.com^
