@@ -64,6 +64,10 @@ def main():
         blocklist.add_file(file.read(), is_whitelist=True, match_url=True)
     with open('whitelist.txt', 'w') as file:
         file.write('\n'.join(sorted(blocklist.whitelist)))
+    with open('blacklist.txt') as file:
+        custom_blacklist = file.read().splitlines()
+    with open('blacklist.txt', 'w') as file:
+        file.write('\n'.join(sorted([domain for domain in custom_blacklist if domain not in blocklist.whitelist])))
     download.copy_whitelist_and_clean()
     for (
         title,
