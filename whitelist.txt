@@ -18,6 +18,7 @@
 *.simply.com
 *.skype.com
 *.smartscreen.microsoft.com
+*.storage.live.com
 *.telecommand.telemetry.microsoft.com.akadns.net
 *.tlu.dl.delivery.mp.microsoft.com
 *.ugc.bazaarvoice.com
@@ -344,6 +345,7 @@ store-images.microsoft.com
 store-images.s-microsoft.com
 storecatalogrevocation.storequality.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
+stripecdn.map.fastly.net
 support.microsoft.com
 survey.euro.confirmit.com
 survey.pearsoncmg.com
