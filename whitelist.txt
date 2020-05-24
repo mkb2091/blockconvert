@@ -41,6 +41,7 @@ add0n.com
 addons.mozilla.org
 adguard.com
 adguardteam.github.io
+aeriagames.com
 aftership.com
 aka.ms
 akismet.com
@@ -58,6 +59,7 @@ apt.newrelic.com
 arc.msn.com
 arc.msn.com.nsatc.net
 ars.smartscreen.microsoft.com
+assets.micpn.com
 assets.penny-arcade.com
 attfeedback.uservoice.com
 au.download.windowsupdate.com
@@ -137,6 +139,7 @@ dsx.mp.microsoft.com
 duckdns.org
 duckduckgo.com
 e-msedge.net
+e785s8hz.micpn.com
 easylist-downloads.adblockplus.org
 easylist.to
 electrum.org
@@ -145,6 +148,7 @@ encrypted-tbn1.gstatic.com
 encrypted-tbn2.gstatic.com
 encrypted-tbn3.gstatic.com
 ev.rdtcdn.com
+everest.castbox.fm
 evoke-windowsservices-tas.msedge.net
 f.chtah.com
 faast.schibsted.io
@@ -201,6 +205,8 @@ inference.location.live.net
 informer.com
 infowars.com
 infowarsstore.com
+insight.rapid7.com
+insights.eu.newrelic.com
 instagram.com
 int.whiteboard.microsoft.com
 io9.com
@@ -239,6 +245,7 @@ mobile.twitter.com
 modern.watson.data.microsoft.com.akadns.net
 moonbit.co.in
 motherboard.vice.com
+movable-ink-397.com
 mp.microsoft.com
 mscrl.microsoft.com
 msedge.net
@@ -271,6 +278,7 @@ polyfill.io
 pool.ntp.org
 pornhub.com
 powr.io
+privateinternetaccess.com
 prod.do.dsp.mp.microsoft.com
 proofpoint.com
 pti.store.microsoft.com
@@ -390,6 +398,7 @@ wildcard.twimg.com
 windowsupdate.com
 wns.windows.com
 worldstream.nl
+wrapper-api.sp-prod.net
 wscont.apps.microsoft.com
 wscont1.apps.microsoft.com
 wscont2.apps.microsoft.com
