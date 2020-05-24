@@ -128,6 +128,8 @@ class DownloadManager():
                     file.write('\n'.join(sorted(self.bl.whitelist)))
             elif r.status_code == 304:
                 print('Not modified')
+            else:
+                print('Other status code:', r.status_code)
 
     def clean(self):
         for path in os.listdir('data'):
