@@ -3,6 +3,7 @@
 *.b.akamaiedge.net
 *.burst-alliance.org
 *.c-msedge.net
+*.coingeek.com
 *.delivery.mp.microsoft.com
 *.dl.delivery.mp.microsoft.com
 *.dsx.mp.microsoft.com
@@ -55,6 +56,7 @@ api.bing.com
 api.facebook.com
 api.mymonero.com
 api.particle.io
+api.videos.oovvuu.com
 appspot-preview.l.google.com
 apt.newrelic.com
 arc.msn.com
@@ -84,6 +86,7 @@ browser.pipe.aria.microsoft.com
 c-msedge.net
 candycrushsoda.king.com
 cdn.onenote.net
+cdn2.editmysite.com
 cdnjs.cloudflare.com
 change.org
 checkappexec.microsoft.com
@@ -379,6 +382,7 @@ v10.vortex-win.data.microsoft.com
 v20.events.data.microsoft.com
 validation-v2.sls.microsoft.com
 vgwort.de
+videos.oovvuu.com
 vignette.wikia.nocookie.net
 vip5.afdorigin-prod-am02.afdogw.com
 vip5.afdorigin-prod-ch02.afdogw.com
