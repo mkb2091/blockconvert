@@ -241,6 +241,7 @@ m.stripe.network
 mail.com
 mail.getmonero.org
 mail.google.com
+mailchi.mp
 maps.windows.com
 md.mp.microsoft.com.*
 media.pearsoncmg.com
@@ -474,6 +475,7 @@ www.yoast.com
 yahoo.co.jp
 yahoo.uservoice.com
 zdnet.com
+zerodot1.gitlab.io
 zerohedge.com
 zeustracker.abuse.ch
 zoho.com
