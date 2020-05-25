@@ -57,6 +57,7 @@ api.facebook.com
 api.mymonero.com
 api.particle.io
 api.videos.oovvuu.com
+appleid.apple.com.akadns.net
 appspot-preview.l.google.com
 apt.newrelic.com
 arc.msn.com
