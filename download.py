@@ -8,17 +8,6 @@ def url_to_path(url):
     return os.path.join('data', urllib.parse.urlencode({'': url})[1:])
 
 
-def copy_whitelist_and_clean():
-    with open('whitelist.txt') as file:
-        data = '\n'.join(sorted(set(file.read().split())))
-    with open('whitelist.txt', 'w') as file:
-        file.write(data)
-    with open('blacklist.txt') as file:
-        data = '\n'.join(sorted(set(file.read().split())))
-    with open('blacklist.txt', 'w') as file:
-        file.write(data)
-
-
 def fetch_new_tld():
     req = urllib.request.Request(
         'https://data.iana.org/TLD/tlds-alpha-by-domain.txt',
@@ -38,7 +27,6 @@ def fetch_new_tld():
 
 if not os.path.exists('data'):
     os.mkdir('data')
-copy_whitelist_and_clean()
 fetch_new_tld()
 
 

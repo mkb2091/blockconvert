@@ -60,15 +60,14 @@ def main():
     manager = download.DownloadManager(blocklist, args)
     blocklist.add_file('\n'.join(url for (_, url, _, _, _, _, _, _) in urls),
                        is_whitelist=True, match_url=True)
-    with open('whitelist.txt') as file:
+    with open('internal/whitelist.txt') as file:
         blocklist.add_file(file.read(), is_whitelist=True, match_url=True)
-    with open('whitelist.txt', 'w') as file:
+    with open('internal/whitelist.txt', 'w') as file:
         file.write('\n'.join(sorted(blocklist.whitelist)))
-    with open('blacklist.txt') as file:
+    with open('internal/blacklist.txt') as file:
         custom_blacklist = file.read().splitlines()
-    with open('blacklist.txt', 'w') as file:
+    with open('internal/blacklist.txt', 'w') as file:
         file.write('\n'.join(sorted([domain for domain in custom_blacklist if domain not in blocklist.whitelist])))
-    download.copy_whitelist_and_clean()
     for (
         title,
         url,
@@ -94,9 +93,9 @@ def main():
                     blocklist.add_file(file.read(), is_whitelist)
             except FileNotFoundError:
                 pass
-    with open('whitelist.txt') as file:
+    with open('internal/whitelist.txt') as file:
         blocklist.add_file(file.read(), True)
-    with open('blacklist.txt') as file:
+    with open('internal/blacklist.txt') as file:
         blocklist.add_file(file.read())
     print('Consolidated lists(%ss)' % (time.time() - start))
     print()
