@@ -402,6 +402,7 @@ web.tresorit.com
 webmasters.stackexchange.com
 whiteboard.microsoft.com
 whiteboard.ms
+widget-mediator.zopim.com
 wikidot.com
 wildcard.twimg.com
 windowsupdate.com
