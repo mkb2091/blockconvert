@@ -59,6 +59,7 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["EasyList Dutch", "https://easylist-downloads.adblockplus.org/easylistdutch.txt", "", 345600, "GPLv3", false, false, false]
 ["EasyList Czech and Slovak filter list", "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt", "tomasko126, Aslanex, vobruba-martin, Moskoe, Fanboy", 14400, "CC-BY-SA-4.0", false, false, false]
 ["EasyList China", "https://easylist-downloads.adblockplus.org/easylistchina.txt", "", 345600, "GPLv3", false, false, false]
+["CJX's Annoyance List", "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt", "", 345600, "LGPLv3", false, false, false]
 ["Binary Defense Banlist", "https://www.binarydefense.com/banlist.txt", "", 86400, "Public use only", false, false, true]
 ["Better content blocking rules", "https://better.fyi/blockerList.txt", "", 86400, "CC-BY-SA-4.0", false, false, false]
 ["Basic tracking list by Disconnect", "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt", "", 86400, "GPLv3", false, false, false]
