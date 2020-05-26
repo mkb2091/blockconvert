@@ -3136,6 +3136,7 @@
 @@||apple-dns.net^
 @@||apple.com^
 @@||appleid.apple.com^
+@@||appleid.apple.com.akadns.net^
 @@||appleiphonecell.com^
 @@||applesfera.com^
 @@||apply.lg.com^
@@ -4973,6 +4974,7 @@
 @@||dirtyunicorns.com^
 @@||dirtywarez.com^
 @@||disclose.tv^
+@@||discord.com^
 @@||discord.gg^
 @@||discord.me^
 @@||discordapp.com^
@@ -14980,6 +14982,7 @@
 @@||osa-indosat.lotusflare.com^
 @@||osb-apps.samsungqbe.com^
 @@||osb.samsungqbe.com^
+@@||osce11-0-en.url.trendmicro.com^
 @@||oscp.apple.com^
 @@||osint.bambenekconsulting.com^
 @@||osnews.com^
@@ -22866,6 +22869,7 @@
 @@||www.apple-dns.net^
 @@||www.apple.com^
 @@||www.appleid.apple.com^
+@@||www.appleid.apple.com.akadns.net^
 @@||www.appleiphonecell.com^
 @@||www.applesfera.com^
 @@||www.apply.lg.com^
@@ -24703,6 +24707,7 @@
 @@||www.dirtyunicorns.com^
 @@||www.dirtywarez.com^
 @@||www.disclose.tv^
+@@||www.discord.com^
 @@||www.discord.gg^
 @@||www.discord.me^
 @@||www.discordapp.com^
@@ -34710,6 +34715,7 @@
 @@||www.osa-indosat.lotusflare.com^
 @@||www.osb-apps.samsungqbe.com^
 @@||www.osb.samsungqbe.com^
+@@||www.osce11-0-en.url.trendmicro.com^
 @@||www.oscp.apple.com^
 @@||www.osint.bambenekconsulting.com^
 @@||www.osnews.com^
