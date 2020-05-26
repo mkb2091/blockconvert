@@ -24,7 +24,7 @@ Malware, advert and tracking blocklist which consolidates and improves many othe
 - Use of DNS to check if domains still exist. Many lists contain domains that have expired and no longer exist. This makes those lists larger than needed which wastes bandwidth, space and can slow blocking.
 
 ## How to use:
-- Pi-hole: Go to the web interface. Log in. Settings -> Blocklists. Copy domain list URL(Pi-hole supports hosts and domain lists, and domain list is a smaller file) from below in the links section, and paste it in the textbox. Click Save.
+- Pi-hole: Go to the web interface. Log in. Settings -> Blocklists. Copy domain list URL(Pi-hole currently only supports domain lists) from below in the links section, and paste it in the textbox. Click Save.
 
 - Blokada: Open Blokada. Click shield with black middle which says "{number} in blacklist". Click the plus in the circle at the bottom of the screen. Copy and paste hosts file from link sections. Click save
 
