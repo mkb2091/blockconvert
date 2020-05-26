@@ -121,6 +121,7 @@ delivery.mp.microsoft.com
 desktop.google.com
 digicert.com
 digitalriver.com
+discord.com
 discuss.newrelic.com
 displaycatalog.mp.microsoft.com
 disq.us
