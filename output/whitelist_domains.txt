@@ -404,7 +404,6 @@
 *.md.mp.microsoft.com.es
 *.md.mp.microsoft.com.esq
 *.md.mp.microsoft.com.estate
-*.md.mp.microsoft.com.esurance
 *.md.mp.microsoft.com.et
 *.md.mp.microsoft.com.etisalat
 *.md.mp.microsoft.com.eu
@@ -1704,7 +1703,6 @@
 58.com
 58pic.com
 6-edge-chat.facebook.com
-66.media.tumblr.com
 699pic.com
 6e.de
 6p.ru
@@ -2079,7 +2077,6 @@ akamaihd.net
 akamaitechnologies.com
 akamaized.net
 akismet.com
-alamy-livechat.secure.force.com
 alb.reddit.com
 albert.apple.com
 aldwx.com
@@ -3267,7 +3264,6 @@ assets.penny-arcade.com
 assets.pinterest.com
 assets.roar.media
 assets.software.eu.playstation.com
-assets.squarespace.com
 assets.tumblr.com
 assets.ubuntu.com
 assets.vimeo.com
@@ -4313,6 +4309,7 @@ ci5.googleusercontent.com
 cifraclub.com.br
 cimage.adobe.com
 cipater.soundcloud.com
+cis.schibsted.com
 ciscdb.sel.sony.com
 cisco.com
 citimobile.d2.sc.omtrdc.net
@@ -6888,7 +6885,6 @@ google.co.erni
 google.co.es
 google.co.esq
 google.co.estate
-google.co.esurance
 google.co.et
 google.co.etisalat
 google.co.eu
@@ -8407,7 +8403,6 @@ google.com.erni
 google.com.es
 google.com.esq
 google.com.estate
-google.com.esurance
 google.com.et
 google.com.etisalat
 google.com.eu
@@ -9647,7 +9642,6 @@ google.erni
 google.es
 google.esq
 google.estate
-google.esurance
 google.et
 google.etisalat
 google.eu
@@ -12102,6 +12096,7 @@ loccitane.com
 lockurl.com
 lodz.tvp.pl
 log.entrance.sonymobile.com
+log.olark.com
 logback.qos.ch
 logbuch-netzpolitik.de
 loggly.com
@@ -12913,7 +12908,6 @@ md.mp.microsoft.com.erni
 md.mp.microsoft.com.es
 md.mp.microsoft.com.esq
 md.mp.microsoft.com.estate
-md.mp.microsoft.com.esurance
 md.mp.microsoft.com.et
 md.mp.microsoft.com.etisalat
 md.mp.microsoft.com.eu
@@ -14162,6 +14156,7 @@ mibi.api.xiaomi.com
 mibi.xiaomi.com
 micardapi.micloud.xiaomi.net
 micdrive.openapi.xiaomi.net
+michaels.my.salesforce.com
 micloud.xiaomi.net
 micpn.com
 microbit.org
@@ -14532,7 +14527,6 @@ netlify.com
 netroam.mihome.intl.xiaomi.net
 netroam.mihome.xiaomi.net
 netstorage-nur.akamaized.net
-network-eu.bazaarvoice.com
 network.bazaarvoice.com
 networking.engadget.com
 networks.feedburner.com
@@ -14789,7 +14783,6 @@ o2o.api.xiaomi.com
 oam.huawei.com
 oas.monster.com
 oascentral.dailycaller.com
-oauth.mail.ru
 oauth.rebrandly.com
 oauth.reddit.com
 oboom.com
@@ -14906,6 +14899,7 @@ onswipe.com
 oo.gl
 ootit.com
 ooyala.com
+op-cdn.net
 op.am
 op.im
 open.account.xiaomi.com
@@ -14944,7 +14938,9 @@ opensubtitles.org
 openuserjs.org
 openwall.com
 openx.com
+opera-mini.net
 opera.com
+opera.software
 opf.ooyala.com
 opinion.latimes.com
 opinionlab.com
@@ -15838,7 +15834,6 @@ rover.ebay.it
 rpg.twitch.tv
 rptrcks.walmart.com
 rpxnow.com
-rs.mail.ru
 rs.playstation.com
 rs6.net
 rsci.app.link
@@ -17441,6 +17436,7 @@ u5.investingchannel.com
 ualberta.ca
 uaprof.sonymobile.com
 uarel.com
+uat5.investingchannel.com
 ubi.com
 ubisoft.com
 ublock.org
@@ -17564,6 +17560,7 @@ ur.wikipedia.com
 urbanairship.com
 urbandictionary.com
 urbanspoon.com
+urbn.my.salesforce.com
 url.cc
 url.ch
 url.com
@@ -17771,7 +17768,6 @@ videolan.org
 videolog.blog.naver.com
 videomate.mobi
 videopress.com
-videos-a.jwpsrv.com
 videos-rockstargames-com.akamaized.net
 videos.files.wordpress.com
 videos.oovvuu.com
@@ -18336,7 +18332,6 @@ wdcp.microsoft.erni
 wdcp.microsoft.es
 wdcp.microsoft.esq
 wdcp.microsoft.estate
-wdcp.microsoft.esurance
 wdcp.microsoft.et
 wdcp.microsoft.etisalat
 wdcp.microsoft.eu
@@ -20154,7 +20149,6 @@ www.*.md.mp.microsoft.com.erni
 www.*.md.mp.microsoft.com.es
 www.*.md.mp.microsoft.com.esq
 www.*.md.mp.microsoft.com.estate
-www.*.md.mp.microsoft.com.esurance
 www.*.md.mp.microsoft.com.et
 www.*.md.mp.microsoft.com.etisalat
 www.*.md.mp.microsoft.com.eu
@@ -21454,7 +21448,6 @@ www.500px.com
 www.58.com
 www.58pic.com
 www.6-edge-chat.facebook.com
-www.66.media.tumblr.com
 www.699pic.com
 www.6e.de
 www.6p.ru
@@ -21829,7 +21822,6 @@ www.akamaihd.net
 www.akamaitechnologies.com
 www.akamaized.net
 www.akismet.com
-www.alamy-livechat.secure.force.com
 www.alb.reddit.com
 www.albert.apple.com
 www.aldwx.com
@@ -23017,7 +23009,6 @@ www.assets.penny-arcade.com
 www.assets.pinterest.com
 www.assets.roar.media
 www.assets.software.eu.playstation.com
-www.assets.squarespace.com
 www.assets.tumblr.com
 www.assets.ubuntu.com
 www.assets.vimeo.com
@@ -24063,6 +24054,7 @@ www.ci5.googleusercontent.com
 www.cifraclub.com.br
 www.cimage.adobe.com
 www.cipater.soundcloud.com
+www.cis.schibsted.com
 www.ciscdb.sel.sony.com
 www.cisco.com
 www.citimobile.d2.sc.omtrdc.net
@@ -26638,7 +26630,6 @@ www.google.co.erni
 www.google.co.es
 www.google.co.esq
 www.google.co.estate
-www.google.co.esurance
 www.google.co.et
 www.google.co.etisalat
 www.google.co.eu
@@ -28157,7 +28148,6 @@ www.google.com.erni
 www.google.com.es
 www.google.com.esq
 www.google.com.estate
-www.google.com.esurance
 www.google.com.et
 www.google.com.etisalat
 www.google.com.eu
@@ -29397,7 +29387,6 @@ www.google.erni
 www.google.es
 www.google.esq
 www.google.estate
-www.google.esurance
 www.google.et
 www.google.etisalat
 www.google.eu
@@ -31852,6 +31841,7 @@ www.loccitane.com
 www.lockurl.com
 www.lodz.tvp.pl
 www.log.entrance.sonymobile.com
+www.log.olark.com
 www.logback.qos.ch
 www.logbuch-netzpolitik.de
 www.loggly.com
@@ -32663,7 +32653,6 @@ www.md.mp.microsoft.com.erni
 www.md.mp.microsoft.com.es
 www.md.mp.microsoft.com.esq
 www.md.mp.microsoft.com.estate
-www.md.mp.microsoft.com.esurance
 www.md.mp.microsoft.com.et
 www.md.mp.microsoft.com.etisalat
 www.md.mp.microsoft.com.eu
@@ -33912,6 +33901,7 @@ www.mibi.api.xiaomi.com
 www.mibi.xiaomi.com
 www.micardapi.micloud.xiaomi.net
 www.micdrive.openapi.xiaomi.net
+www.michaels.my.salesforce.com
 www.micloud.xiaomi.net
 www.micpn.com
 www.microbit.org
@@ -34282,7 +34272,6 @@ www.netlify.com
 www.netroam.mihome.intl.xiaomi.net
 www.netroam.mihome.xiaomi.net
 www.netstorage-nur.akamaized.net
-www.network-eu.bazaarvoice.com
 www.network.bazaarvoice.com
 www.networking.engadget.com
 www.networks.feedburner.com
@@ -34539,7 +34528,6 @@ www.o2o.api.xiaomi.com
 www.oam.huawei.com
 www.oas.monster.com
 www.oascentral.dailycaller.com
-www.oauth.mail.ru
 www.oauth.rebrandly.com
 www.oauth.reddit.com
 www.oboom.com
@@ -34656,6 +34644,7 @@ www.onswipe.com
 www.oo.gl
 www.ootit.com
 www.ooyala.com
+www.op-cdn.net
 www.op.am
 www.op.im
 www.open.account.xiaomi.com
@@ -34694,7 +34683,9 @@ www.opensubtitles.org
 www.openuserjs.org
 www.openwall.com
 www.openx.com
+www.opera-mini.net
 www.opera.com
+www.opera.software
 www.opf.ooyala.com
 www.opinion.latimes.com
 www.opinionlab.com
@@ -35588,7 +35579,6 @@ www.rover.ebay.it
 www.rpg.twitch.tv
 www.rptrcks.walmart.com
 www.rpxnow.com
-www.rs.mail.ru
 www.rs.playstation.com
 www.rs6.net
 www.rsci.app.link
@@ -37191,6 +37181,7 @@ www.u5.investingchannel.com
 www.ualberta.ca
 www.uaprof.sonymobile.com
 www.uarel.com
+www.uat5.investingchannel.com
 www.ubi.com
 www.ubisoft.com
 www.ublock.org
@@ -37314,6 +37305,7 @@ www.ur.wikipedia.com
 www.urbanairship.com
 www.urbandictionary.com
 www.urbanspoon.com
+www.urbn.my.salesforce.com
 www.url.cc
 www.url.ch
 www.url.com
@@ -37521,7 +37513,6 @@ www.videolan.org
 www.videolog.blog.naver.com
 www.videomate.mobi
 www.videopress.com
-www.videos-a.jwpsrv.com
 www.videos-rockstargames-com.akamaized.net
 www.videos.files.wordpress.com
 www.videos.oovvuu.com
@@ -38086,7 +38077,6 @@ www.wdcp.microsoft.erni
 www.wdcp.microsoft.es
 www.wdcp.microsoft.esq
 www.wdcp.microsoft.estate
-www.wdcp.microsoft.esurance
 www.wdcp.microsoft.et
 www.wdcp.microsoft.etisalat
 www.wdcp.microsoft.eu
