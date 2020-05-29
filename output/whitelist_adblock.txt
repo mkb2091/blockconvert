@@ -1082,7 +1082,6 @@
 @@||*.md.mp.microsoft.com.schwarz^
 @@||*.md.mp.microsoft.com.science^
 @@||*.md.mp.microsoft.com.scjohnson^
-@@||*.md.mp.microsoft.com.scor^
 @@||*.md.mp.microsoft.com.scot^
 @@||*.md.mp.microsoft.com.sd^
 @@||*.md.mp.microsoft.com.se^
@@ -7563,7 +7562,6 @@
 @@||google.co.schwarz^
 @@||google.co.science^
 @@||google.co.scjohnson^
-@@||google.co.scor^
 @@||google.co.scot^
 @@||google.co.sd^
 @@||google.co.se^
@@ -9081,7 +9079,6 @@
 @@||google.com.schwarz^
 @@||google.com.science^
 @@||google.com.scjohnson^
-@@||google.com.scor^
 @@||google.com.scot^
 @@||google.com.sd^
 @@||google.com.se^
@@ -10321,7 +10318,6 @@
 @@||google.schwarz^
 @@||google.science^
 @@||google.scjohnson^
-@@||google.scor^
 @@||google.scot^
 @@||google.sd^
 @@||google.se^
@@ -13586,7 +13582,6 @@
 @@||md.mp.microsoft.com.schwarz^
 @@||md.mp.microsoft.com.science^
 @@||md.mp.microsoft.com.scjohnson^
-@@||md.mp.microsoft.com.scor^
 @@||md.mp.microsoft.com.scot^
 @@||md.mp.microsoft.com.sd^
 @@||md.mp.microsoft.com.se^
@@ -19010,7 +19005,6 @@
 @@||wdcp.microsoft.schwarz^
 @@||wdcp.microsoft.science^
 @@||wdcp.microsoft.scjohnson^
-@@||wdcp.microsoft.scor^
 @@||wdcp.microsoft.scot^
 @@||wdcp.microsoft.sd^
 @@||wdcp.microsoft.se^
@@ -20827,7 +20821,6 @@
 @@||www.*.md.mp.microsoft.com.schwarz^
 @@||www.*.md.mp.microsoft.com.science^
 @@||www.*.md.mp.microsoft.com.scjohnson^
-@@||www.*.md.mp.microsoft.com.scor^
 @@||www.*.md.mp.microsoft.com.scot^
 @@||www.*.md.mp.microsoft.com.sd^
 @@||www.*.md.mp.microsoft.com.se^
@@ -27308,7 +27301,6 @@
 @@||www.google.co.schwarz^
 @@||www.google.co.science^
 @@||www.google.co.scjohnson^
-@@||www.google.co.scor^
 @@||www.google.co.scot^
 @@||www.google.co.sd^
 @@||www.google.co.se^
@@ -28826,7 +28818,6 @@
 @@||www.google.com.schwarz^
 @@||www.google.com.science^
 @@||www.google.com.scjohnson^
-@@||www.google.com.scor^
 @@||www.google.com.scot^
 @@||www.google.com.sd^
 @@||www.google.com.se^
@@ -30066,7 +30057,6 @@
 @@||www.google.schwarz^
 @@||www.google.science^
 @@||www.google.scjohnson^
-@@||www.google.scor^
 @@||www.google.scot^
 @@||www.google.sd^
 @@||www.google.se^
@@ -33331,7 +33321,6 @@
 @@||www.md.mp.microsoft.com.schwarz^
 @@||www.md.mp.microsoft.com.science^
 @@||www.md.mp.microsoft.com.scjohnson^
-@@||www.md.mp.microsoft.com.scor^
 @@||www.md.mp.microsoft.com.scot^
 @@||www.md.mp.microsoft.com.sd^
 @@||www.md.mp.microsoft.com.se^
@@ -38755,7 +38744,6 @@
 @@||www.wdcp.microsoft.schwarz^
 @@||www.wdcp.microsoft.science^
 @@||www.wdcp.microsoft.scjohnson^
-@@||www.wdcp.microsoft.scor^
 @@||www.wdcp.microsoft.scot^
 @@||www.wdcp.microsoft.sd^
 @@||www.wdcp.microsoft.se^
