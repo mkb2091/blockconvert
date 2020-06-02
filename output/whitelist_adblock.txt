@@ -5075,7 +5075,6 @@
 @@||doh.centraleu.pi-dns.com^
 @@||doh.eastus.pi-dns.com^
 @@||doh.northeu.pi-dns.com^
-@@||doh.westeu.pi-dns.com^
 @@||doh.westus.pi-dns.com^
 @@||doi.org^
 @@||dolcegabbana.com^
@@ -5097,7 +5096,6 @@
 @@||dot.gov^
 @@||dot.northeu.pi-dns.com^
 @@||dot.tk^
-@@||dot.westeu.pi-dns.com^
 @@||dot.westus.pi-dns.com^
 @@||dotcomsecrets.com^
 @@||dotsub.com^
@@ -5983,6 +5981,7 @@
 @@||g.mi.com^
 @@||g.msn.com^
 @@||g.msn.com.nsatc.net^
+@@||g.udimg.com^
 @@||g00.msn.com^
 @@||g2a.com^
 @@||g2play.com^
@@ -19543,7 +19542,6 @@
 @@||weri.com^
 @@||werl.com^
 @@||westernunion.com^
-@@||westeu.pi-dns.com^
 @@||westus.pi-dns.com^
 @@||wetransfer.com^
 @@||wetter.de^
@@ -24824,7 +24822,6 @@
 @@||www.doh.centraleu.pi-dns.com^
 @@||www.doh.eastus.pi-dns.com^
 @@||www.doh.northeu.pi-dns.com^
-@@||www.doh.westeu.pi-dns.com^
 @@||www.doh.westus.pi-dns.com^
 @@||www.doi.org^
 @@||www.dolcegabbana.com^
@@ -24846,7 +24843,6 @@
 @@||www.dot.gov^
 @@||www.dot.northeu.pi-dns.com^
 @@||www.dot.tk^
-@@||www.dot.westeu.pi-dns.com^
 @@||www.dot.westus.pi-dns.com^
 @@||www.dotcomsecrets.com^
 @@||www.dotsub.com^
@@ -25732,6 +25728,7 @@
 @@||www.g.mi.com^
 @@||www.g.msn.com^
 @@||www.g.msn.com.nsatc.net^
+@@||www.g.udimg.com^
 @@||www.g00.msn.com^
 @@||www.g2a.com^
 @@||www.g2play.com^
@@ -39292,7 +39289,6 @@
 @@||www.weri.com^
 @@||www.werl.com^
 @@||www.westernunion.com^
-@@||www.westeu.pi-dns.com^
 @@||www.westus.pi-dns.com^
 @@||www.wetransfer.com^
 @@||www.wetter.de^

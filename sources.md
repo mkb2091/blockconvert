@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 439781 blocked domains in each of the generated filter lists
+Theres are 439983 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -25,7 +25,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [WindowsSpyBlocker - Hosts spy rules](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt)|-|1.0 days|MIT|364|0
 [WindowsSpyBlocker - Hosts extra rules](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt)|-|1.0 days|MIT|225|0
 [Whitelist](https://raw.githubusercontent.com/ookangzheng/blahdns/master/hosts/whitelist.txt)|ookangzheng|1.0 days|CC BY-NC-SA 4.0(I  received permission to add to this project)|0|835
-[Whitelist](https://raw.githubusercontent.com/NoExitTV/whitelist/master/domains/whitelist.txt)|-|7.0 days|MIT|0|33
+[Whitelist](https://raw.githubusercontent.com/NoExitTV/whitelist/master/domains/whitelist.txt)|-|7.0 days|MIT|0|31
 [VX Vault last 100 Links](http://vxvault.net/URL_List.php)|Kicelo, Dominik Schuermann|1.0 days|Copyleft 2010. No rights reserved. |67|0
 [Useful Linux Shell Scripts Hosts](https://raw.githubusercontent.com/jackrabbit335/UsefulLinuxShellScripts/master/Hosts%20%26%20sourcelist/blacklist.txt)|-|10.0 days|GPL-3.0|78|0
 [Typosquatting Blocklist](https://raw.githubusercontent.com/hl2guide/DNS-Sinkhole-Lists-A2/master/typosquatting_blocklist.txt)|-|1.0 days|MIT|11159|0
@@ -71,7 +71,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [EasyList Czech and Slovak filter list](https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt)|tomasko126, Aslanex, vobruba-martin, Moskoe, Fanboy|4.0 hours|CC-BY-SA-4.0|79|1
 [EasyList China](https://easylist-downloads.adblockplus.org/easylistchina.txt)|-|4.0 days|GPLv3|5925|23
 [CJX's Annoyance List](https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt)|-|4.0 days|LGPLv3|157|0
-[Binary Defense Banlist](https://www.binarydefense.com/banlist.txt)|-|1.0 days|Public use only|2953|0
+[Binary Defense Banlist](https://www.binarydefense.com/banlist.txt)|-|1.0 days|Public use only|3369|0
 [Better content blocking rules](https://better.fyi/blockerList.txt)|-|1.0 days|CC-BY-SA-4.0|747|2
 [Basic tracking list by Disconnect](https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt)|-|1.0 days|GPLv3|34|0
 [BarbBlock](https://ssl.bblck.me/blacklists/domain-list.txt)|-|1.0 days|MIT|544|0
