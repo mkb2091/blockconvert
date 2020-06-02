@@ -239,6 +239,7 @@ login.live.com
 login.msa.akadns6.net
 login.windows.net
 lowendbox.com
+m.me
 m.stripe.network
 mail.com
 mail.getmonero.org
