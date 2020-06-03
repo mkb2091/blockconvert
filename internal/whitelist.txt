@@ -374,6 +374,7 @@ tracking.epicgames.com
 transfer.sh
 trk.klclick1.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
+uk.com
 umich.qualtrics.com
 unitedstates.smartscreen-prod.microsoft.com
 update.microsoft.com
