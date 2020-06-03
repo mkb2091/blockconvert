@@ -27,6 +27,7 @@
 *.vk.com
 *.windowsupdate.com
 *.wns.windows.com
+1.www.s81c.com
 1drv.ms
 24timezones.com
 91-cdn.com
