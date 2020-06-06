@@ -63,6 +63,7 @@ appspot-preview.l.google.com
 apt.newrelic.com
 arc.msn.com
 arc.msn.com.nsatc.net
+arizona.edu
 ars.smartscreen.microsoft.com
 assets.micpn.com
 assets.penny-arcade.com
