@@ -1639,6 +1639,7 @@ a791773171.cdn.optimizely.com
 a8136870131.cdn.optimizely.com
 a8270235338.cdn.optimizely.com
 a8306101470.cdn.optimizely.com
+a8367280580.cdn-pci.optimizely.com
 a8392411042.cdn.optimizely.com
 a8447843426.cdn-pci.optimizely.com
 a8507201684.cdn.optimizely.com
@@ -1654,7 +1655,7 @@ aax-us-east.amazon-adsystem.com
 abc.com
 abcnews.go.com
 aboo.se
-abrilcapricho.files.wordpress.com
+abrilguiadoestudante.files.wordpress.com
 abroad.apilocate.amap.com
 account.xiaomi.com
 accounts.eu1.gigya.com
@@ -1751,6 +1752,7 @@ akamaihd.net
 akamaitechnologies.com
 akamaized.net
 akismet.com
+alamy-livechat.secure.force.com
 alb.reddit.com
 albert.apple.com
 alexa.com
@@ -1855,7 +1857,6 @@ api.soundcloud.com
 api.staging.livechatinc.com
 api.target.com
 api.tiles.mapbox.com
-api.tinypass.com
 api.tw06.xlmc.sandai.net
 api.twisto.cz
 api.twisto.pl
@@ -1928,7 +1929,6 @@ assets.adobedtm.com
 assets.alicdn.com
 assets.coinbase.com
 assets.gumroad.com
-assets.map.brightcove.com
 assets.micpn.com
 assets.nflxext.com
 assets.penny-arcade.com
@@ -1969,7 +1969,6 @@ b-graph.facebook.com
 b-www.facebook.com
 b.akamaiedge.net
 b.hatena.ne.jp
-b.tiles.mapbox.com
 b2c-mlm.marketo.com
 bac-assets.com
 baconredirects-elb-eyweax7fhr0v-300945382.us-east-1.elb.amazonaws.com
@@ -2034,6 +2033,7 @@ bitlord.com
 bitly.com
 bitpay.com
 bizrate.com
+bkc20sr6ry21-a.akamaihd.net
 bleacherreport.com
 blip.bizrate.com
 blob.weather.microsoft.com
@@ -2167,6 +2167,7 @@ cdn.radiantmediatechs.com
 cdn.ravenjs.com
 cdn.rawgit.com
 cdn.samsungcloudsolution.com
+cdn.shopify.com
 cdn.siftscience.com
 cdn.sstatic.net
 cdn.static-economist.com
@@ -2193,6 +2194,7 @@ cdnpk.com
 cdns.eu1.gigya.com
 cdns.gigya.com
 cdns.us1.gigya.com
+cdns3.gigya.com
 cdnsecakmi.kaltura.com
 cdp.aliexpress.com
 cds.d2s7q6s2.hwcdn.net
@@ -2309,7 +2311,6 @@ creative.ak.fbcdn.net
 creativecommons.org
 crl.microsoft.com
 crl.verisign.net
-crowdsignal.files.wordpress.com
 crunchbase.com
 cs9.wac.phicdn.net
 csdnimg.cn
@@ -2332,7 +2333,6 @@ cy2.licensing.md.mp.microsoft.com.akadns.net
 cy2.settings.data.microsoft.com.akadns.net
 cybercrime-tracker.net
 d.dropbox.com
-d.la3-c2-phx.salesforceliveagent.com
 d.la4-c1-phx.salesforceliveagent.com
 d1af033869koo7.cloudfront.net
 d1f8f9xcsvx3ha.cloudfront.net
@@ -2482,7 +2482,6 @@ dropbox.com
 dropbox.comdl.dropbox.com
 drudgereport.com
 drugs.com
-ds-aksb-a.akamaihd.net
 dsp.brand.sogou.com
 dsw.tt.omtrdc.net
 dsx.mp.microsoft.com
@@ -2711,7 +2710,9 @@ fox59.com
 fox5sandiego.com
 fox6now.com
 fox8.com
+foxnewsuni-f.akamaihd.net
 foxsports.com.au
+foxvideo.akamaized.net
 fp-cdn.azureedge.net
 fpdownload.adobe.com
 fr.aliexpress.com
@@ -7464,8 +7465,8 @@ hotmail.com
 houston.cbslocal.com
 howtoforge.com
 howtogeek.com
-howtogeek.disqus.com
 hrblock.com
+html5-player.libsyn.com
 https-animeflv-net.disqus.com
 hub5pn.sandai.net
 hubciddata.sandai.net
@@ -7490,7 +7491,6 @@ i.loli.net
 i.pcbeta.com
 i.pinimg.com
 i.s-microsoft.com
-i.stack.imgur.com
 i.vgy.me
 i.ytimg.com
 i0.wp.com
@@ -7505,6 +7505,7 @@ i9.ytimg.com
 iadsdk.apple.com
 iadsdk.apple.com.edgekey.net
 ibsys.com
+ic6c76800-ds-aksb-a.akamaihd.net
 icanhazip.com
 icbdr.com
 ichnaea-web.netflix.com
@@ -9347,7 +9348,6 @@ md.mp.microsoft.com.zw
 mdap.alipay.com
 media-amazon.com
 media-imdb.com
-media-rockstargames-com.akamaized.net
 media.licdn.com
 media.lidl.com
 media.nu.nl
@@ -9474,7 +9474,7 @@ myportfolio.com
 myshopify.com
 mywot.com
 mzstatic.com
-n11scdn1.akamaized.net
+n11scdn3.akamaized.net
 na1r.services.adobe.com
 na2m-pr.licenses.adobe.com
 na4r.services.adobe.com
@@ -9806,6 +9806,7 @@ pp.userapi.com
 ppt.cc
 ppurifier.game.xiaomi.com
 practivate.adobe.com
+prd.jwpltx.com
 prerollads.nl
 pricegrabber.com
 pricelist.skype.com
@@ -9943,6 +9944,7 @@ rpxnow.com
 rsi.hotmail.com
 rssinclude.com
 rt.imgur.com
+rum.optimizely.com
 rupload.facebook.com
 rutube.ru
 rzeszow.tvp.pl
@@ -9963,6 +9965,7 @@ s.pinimg.com
 s.reddit.com
 s.shopify.com
 s.tradingview.com
+s.update.dailymotion.com
 s.w.org
 s.yimg.com
 s.youtube.com
@@ -10040,7 +10043,6 @@ secure.avangate.com
 secure.brightcove.com
 secure.dshield.org
 secure.gravatar.com
-secure.livechatinc.com
 secure.logmein.com
 secure.mbl.is
 secure.netflix.com
@@ -10222,9 +10224,10 @@ static0-web-prod-vidio.akamaized.net
 static1.squarespace.com
 staticamzn.com
 staticflickr.com
+statics-marketingsites-eus-ms-com.akamaized.net
 statics-marketingsites-wcus-ms-com.akamaized.net
 staticxx.facebook.com
-statig0.akamaized.net
+statig1.akamaized.net
 stats.pusher.com
 stats.stackexchange.com
 statsfe2.update.microsoft.com.akadns.net
@@ -13840,6 +13843,7 @@ www.a791773171.cdn.optimizely.com
 www.a8136870131.cdn.optimizely.com
 www.a8270235338.cdn.optimizely.com
 www.a8306101470.cdn.optimizely.com
+www.a8367280580.cdn-pci.optimizely.com
 www.a8392411042.cdn.optimizely.com
 www.a8447843426.cdn-pci.optimizely.com
 www.a8507201684.cdn.optimizely.com
@@ -13855,7 +13859,7 @@ www.aax-us-east.amazon-adsystem.com
 www.abc.com
 www.abcnews.go.com
 www.aboo.se
-www.abrilcapricho.files.wordpress.com
+www.abrilguiadoestudante.files.wordpress.com
 www.abroad.apilocate.amap.com
 www.account.xiaomi.com
 www.accounts.eu1.gigya.com
@@ -13952,6 +13956,7 @@ www.akamaihd.net
 www.akamaitechnologies.com
 www.akamaized.net
 www.akismet.com
+www.alamy-livechat.secure.force.com
 www.alb.reddit.com
 www.albert.apple.com
 www.alexa.com
@@ -14056,7 +14061,6 @@ www.api.soundcloud.com
 www.api.staging.livechatinc.com
 www.api.target.com
 www.api.tiles.mapbox.com
-www.api.tinypass.com
 www.api.tw06.xlmc.sandai.net
 www.api.twisto.cz
 www.api.twisto.pl
@@ -14129,7 +14133,6 @@ www.assets.adobedtm.com
 www.assets.alicdn.com
 www.assets.coinbase.com
 www.assets.gumroad.com
-www.assets.map.brightcove.com
 www.assets.micpn.com
 www.assets.nflxext.com
 www.assets.penny-arcade.com
@@ -14170,7 +14173,6 @@ www.b-graph.facebook.com
 www.b-www.facebook.com
 www.b.akamaiedge.net
 www.b.hatena.ne.jp
-www.b.tiles.mapbox.com
 www.b2c-mlm.marketo.com
 www.bac-assets.com
 www.baconredirects-elb-eyweax7fhr0v-300945382.us-east-1.elb.amazonaws.com
@@ -14235,6 +14237,7 @@ www.bitlord.com
 www.bitly.com
 www.bitpay.com
 www.bizrate.com
+www.bkc20sr6ry21-a.akamaihd.net
 www.bleacherreport.com
 www.blip.bizrate.com
 www.blob.weather.microsoft.com
@@ -14368,6 +14371,7 @@ www.cdn.radiantmediatechs.com
 www.cdn.ravenjs.com
 www.cdn.rawgit.com
 www.cdn.samsungcloudsolution.com
+www.cdn.shopify.com
 www.cdn.siftscience.com
 www.cdn.sstatic.net
 www.cdn.static-economist.com
@@ -14394,6 +14398,7 @@ www.cdnpk.com
 www.cdns.eu1.gigya.com
 www.cdns.gigya.com
 www.cdns.us1.gigya.com
+www.cdns3.gigya.com
 www.cdnsecakmi.kaltura.com
 www.cdp.aliexpress.com
 www.cds.d2s7q6s2.hwcdn.net
@@ -14510,7 +14515,6 @@ www.creative.ak.fbcdn.net
 www.creativecommons.org
 www.crl.microsoft.com
 www.crl.verisign.net
-www.crowdsignal.files.wordpress.com
 www.crunchbase.com
 www.cs9.wac.phicdn.net
 www.csdnimg.cn
@@ -14533,7 +14537,6 @@ www.cy2.licensing.md.mp.microsoft.com.akadns.net
 www.cy2.settings.data.microsoft.com.akadns.net
 www.cybercrime-tracker.net
 www.d.dropbox.com
-www.d.la3-c2-phx.salesforceliveagent.com
 www.d.la4-c1-phx.salesforceliveagent.com
 www.d1af033869koo7.cloudfront.net
 www.d1f8f9xcsvx3ha.cloudfront.net
@@ -14683,7 +14686,6 @@ www.dropbox.com
 www.dropbox.comdl.dropbox.com
 www.drudgereport.com
 www.drugs.com
-www.ds-aksb-a.akamaihd.net
 www.dsp.brand.sogou.com
 www.dsw.tt.omtrdc.net
 www.dsx.mp.microsoft.com
@@ -14912,7 +14914,9 @@ www.fox59.com
 www.fox5sandiego.com
 www.fox6now.com
 www.fox8.com
+www.foxnewsuni-f.akamaihd.net
 www.foxsports.com.au
+www.foxvideo.akamaized.net
 www.fp-cdn.azureedge.net
 www.fpdownload.adobe.com
 www.fr.aliexpress.com
@@ -19665,8 +19669,8 @@ www.hotmail.com
 www.houston.cbslocal.com
 www.howtoforge.com
 www.howtogeek.com
-www.howtogeek.disqus.com
 www.hrblock.com
+www.html5-player.libsyn.com
 www.https-animeflv-net.disqus.com
 www.hub5pn.sandai.net
 www.hubciddata.sandai.net
@@ -19691,7 +19695,6 @@ www.i.loli.net
 www.i.pcbeta.com
 www.i.pinimg.com
 www.i.s-microsoft.com
-www.i.stack.imgur.com
 www.i.vgy.me
 www.i.ytimg.com
 www.i0.wp.com
@@ -19706,6 +19709,7 @@ www.i9.ytimg.com
 www.iadsdk.apple.com
 www.iadsdk.apple.com.edgekey.net
 www.ibsys.com
+www.ic6c76800-ds-aksb-a.akamaihd.net
 www.icanhazip.com
 www.icbdr.com
 www.ichnaea-web.netflix.com
@@ -21549,7 +21553,6 @@ www.mdap.alipay.com
 www.me
 www.media-amazon.com
 www.media-imdb.com
-www.media-rockstargames-com.akamaized.net
 www.media.licdn.com
 www.media.lidl.com
 www.media.nu.nl
@@ -21676,7 +21679,7 @@ www.myportfolio.com
 www.myshopify.com
 www.mywot.com
 www.mzstatic.com
-www.n11scdn1.akamaized.net
+www.n11scdn3.akamaized.net
 www.na1r.services.adobe.com
 www.na2m-pr.licenses.adobe.com
 www.na4r.services.adobe.com
@@ -22008,6 +22011,7 @@ www.pp.userapi.com
 www.ppt.cc
 www.ppurifier.game.xiaomi.com
 www.practivate.adobe.com
+www.prd.jwpltx.com
 www.prerollads.nl
 www.pricegrabber.com
 www.pricelist.skype.com
@@ -22145,6 +22149,7 @@ www.rpxnow.com
 www.rsi.hotmail.com
 www.rssinclude.com
 www.rt.imgur.com
+www.rum.optimizely.com
 www.rupload.facebook.com
 www.rutube.ru
 www.rzeszow.tvp.pl
@@ -22165,6 +22170,7 @@ www.s.pinimg.com
 www.s.reddit.com
 www.s.shopify.com
 www.s.tradingview.com
+www.s.update.dailymotion.com
 www.s.w.org
 www.s.yimg.com
 www.s.youtube.com
@@ -22242,7 +22248,6 @@ www.secure.avangate.com
 www.secure.brightcove.com
 www.secure.dshield.org
 www.secure.gravatar.com
-www.secure.livechatinc.com
 www.secure.logmein.com
 www.secure.mbl.is
 www.secure.netflix.com
@@ -22424,9 +22429,10 @@ www.static0-web-prod-vidio.akamaized.net
 www.static1.squarespace.com
 www.staticamzn.com
 www.staticflickr.com
+www.statics-marketingsites-eus-ms-com.akamaized.net
 www.statics-marketingsites-wcus-ms-com.akamaized.net
 www.staticxx.facebook.com
-www.statig0.akamaized.net
+www.statig1.akamaized.net
 www.stats.pusher.com
 www.stats.stackexchange.com
 www.statsfe2.update.microsoft.com.akadns.net
@@ -24490,31 +24496,28 @@ www.zn0d4lngcjt30pwt3-sapinsights.siteintercept.qualtrics.com
 www.zn0e0bzgmz1mjcd1h-ato.siteintercept.qualtrics.com
 www.zn0gkpz4fslksg4dv-sony.siteintercept.qualtrics.com
 www.zn0gnl3th3zkiyzsb-aadigital.siteintercept.qualtrics.com
-www.zn0hyipakioaocqih-sni.siteintercept.qualtrics.com
 www.zn0lxkzethotizctx-bahn.siteintercept.qualtrics.com
 www.zn0oer1xu4ljz0hyr-servicenowcx.siteintercept.qualtrics.com
 www.zn0thecsujsizknzd-geico.siteintercept.qualtrics.com
 www.zn0xleir6swszany9-canadapostdigital.siteintercept.qualtrics.com
 www.zn1rbh1qun86cu03b-sprintt.siteintercept.qualtrics.com
 www.zn23mecwvtuhqn9gz-careerbuilder.siteintercept.qualtrics.com
-www.zn2ith43ttzi1b8b3-sni.siteintercept.qualtrics.com
-www.zn2t6mdnujruus8jh-inc.siteintercept.qualtrics.com
 www.zn2udqakimcdqjgmx-tribune.siteintercept.qualtrics.com
-www.zn394yygoj0zd35dd-cbs.siteintercept.qualtrics.com
 www.zn3bhfdulj7vtgut3-monotype.siteintercept.qualtrics.com
 www.zn3edajdvgwonv9nr-tmobilecx.siteintercept.qualtrics.com
-www.zn3owdqdlxu72cwnv-nejm.siteintercept.qualtrics.com
+www.zn3enozuz6nnn9nkf-tribune.siteintercept.qualtrics.com
 www.zn4ioxjywbpbtj0sf-riotgames.siteintercept.qualtrics.com
 www.zn4ituzxtg48dutbj-houzz.siteintercept.qualtrics.com
 www.zn4onyivptbyoszsh-bmo.siteintercept.qualtrics.com
+www.zn56wxpnaaclnug9f-hpexm.siteintercept.qualtrics.com
 www.zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com
 www.zn5hsliyrlhlj7ndr-abcotv.siteintercept.qualtrics.com
 www.zn5ytjsjddwlknevh-seagatecx.siteintercept.qualtrics.com
+www.zn5z45bl4kvg9ly17-sni.siteintercept.qualtrics.com
 www.zn6f2dqzcp8g2xbub-cbs.siteintercept.qualtrics.com
 www.zn6fetw4rxykndjoz-southwest.siteintercept.qualtrics.com
 www.zn6mcrij6xncfajof-adidastrial.siteintercept.qualtrics.com
 www.zn6qzq6caaucudesr-pluralsight.siteintercept.qualtrics.com
-www.zn6sdb0uwojrglmmn-fandango.siteintercept.qualtrics.com
 www.zn6zitpy5escbfrch-educationinsight.siteintercept.qualtrics.com
 www.zn87b2gchqlbyp0jn-viacom.siteintercept.qualtrics.com
 www.zn9yauo1hia5mptaj-sni.siteintercept.qualtrics.com
@@ -24531,11 +24534,9 @@ www.zn_ed65ynwxvsuk9lf-cbs.siteintercept.qualtrics.com
 www.zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com
 www.zna4z7j6shnw1yaxz-equifax.siteintercept.qualtrics.com
 www.znahml1rmhxuhlsbd-psp.siteintercept.qualtrics.com
-www.znavrrbuaasua7fbz-trulia.siteintercept.qualtrics.com
 www.znbjvid3e9uzwugn3-urbanoutfitters.siteintercept.qualtrics.com
 www.znbkhvqf0zrgtvrlt-tribune.siteintercept.qualtrics.com
-www.znbsk4yipsnfkyadd-mlb.siteintercept.qualtrics.com
-www.zncvgjh8lmjxbkyln-fmrpi.siteintercept.qualtrics.com
+www.znbl8rufo7atiirtn-unitysoftware.siteintercept.qualtrics.com
 www.zndht60lr86rx6rmb-tribune.siteintercept.qualtrics.com
 www.zne4xezpqtojz3uql-wiley.siteintercept.qualtrics.com
 www.zne51shg48vjqbtwj-vistaprint.siteintercept.qualtrics.com
@@ -24640,31 +24641,28 @@ zn0d4lngcjt30pwt3-sapinsights.siteintercept.qualtrics.com
 zn0e0bzgmz1mjcd1h-ato.siteintercept.qualtrics.com
 zn0gkpz4fslksg4dv-sony.siteintercept.qualtrics.com
 zn0gnl3th3zkiyzsb-aadigital.siteintercept.qualtrics.com
-zn0hyipakioaocqih-sni.siteintercept.qualtrics.com
 zn0lxkzethotizctx-bahn.siteintercept.qualtrics.com
 zn0oer1xu4ljz0hyr-servicenowcx.siteintercept.qualtrics.com
 zn0thecsujsizknzd-geico.siteintercept.qualtrics.com
 zn0xleir6swszany9-canadapostdigital.siteintercept.qualtrics.com
 zn1rbh1qun86cu03b-sprintt.siteintercept.qualtrics.com
 zn23mecwvtuhqn9gz-careerbuilder.siteintercept.qualtrics.com
-zn2ith43ttzi1b8b3-sni.siteintercept.qualtrics.com
-zn2t6mdnujruus8jh-inc.siteintercept.qualtrics.com
 zn2udqakimcdqjgmx-tribune.siteintercept.qualtrics.com
-zn394yygoj0zd35dd-cbs.siteintercept.qualtrics.com
 zn3bhfdulj7vtgut3-monotype.siteintercept.qualtrics.com
 zn3edajdvgwonv9nr-tmobilecx.siteintercept.qualtrics.com
-zn3owdqdlxu72cwnv-nejm.siteintercept.qualtrics.com
+zn3enozuz6nnn9nkf-tribune.siteintercept.qualtrics.com
 zn4ioxjywbpbtj0sf-riotgames.siteintercept.qualtrics.com
 zn4ituzxtg48dutbj-houzz.siteintercept.qualtrics.com
 zn4onyivptbyoszsh-bmo.siteintercept.qualtrics.com
+zn56wxpnaaclnug9f-hpexm.siteintercept.qualtrics.com
 zn5aocakgjj2uagxj-nintendoofamerica.siteintercept.qualtrics.com
 zn5hsliyrlhlj7ndr-abcotv.siteintercept.qualtrics.com
 zn5ytjsjddwlknevh-seagatecx.siteintercept.qualtrics.com
+zn5z45bl4kvg9ly17-sni.siteintercept.qualtrics.com
 zn6f2dqzcp8g2xbub-cbs.siteintercept.qualtrics.com
 zn6fetw4rxykndjoz-southwest.siteintercept.qualtrics.com
 zn6mcrij6xncfajof-adidastrial.siteintercept.qualtrics.com
 zn6qzq6caaucudesr-pluralsight.siteintercept.qualtrics.com
-zn6sdb0uwojrglmmn-fandango.siteintercept.qualtrics.com
 zn6zitpy5escbfrch-educationinsight.siteintercept.qualtrics.com
 zn87b2gchqlbyp0jn-viacom.siteintercept.qualtrics.com
 zn9yauo1hia5mptaj-sni.siteintercept.qualtrics.com
@@ -24681,11 +24679,9 @@ zn_ed65ynwxvsuk9lf-cbs.siteintercept.qualtrics.com
 zna3geekgi4zqwwfn-viacom.siteintercept.qualtrics.com
 zna4z7j6shnw1yaxz-equifax.siteintercept.qualtrics.com
 znahml1rmhxuhlsbd-psp.siteintercept.qualtrics.com
-znavrrbuaasua7fbz-trulia.siteintercept.qualtrics.com
 znbjvid3e9uzwugn3-urbanoutfitters.siteintercept.qualtrics.com
 znbkhvqf0zrgtvrlt-tribune.siteintercept.qualtrics.com
-znbsk4yipsnfkyadd-mlb.siteintercept.qualtrics.com
-zncvgjh8lmjxbkyln-fmrpi.siteintercept.qualtrics.com
+znbl8rufo7atiirtn-unitysoftware.siteintercept.qualtrics.com
 zndht60lr86rx6rmb-tribune.siteintercept.qualtrics.com
 zne4xezpqtojz3uql-wiley.siteintercept.qualtrics.com
 zne51shg48vjqbtwj-vistaprint.siteintercept.qualtrics.com
