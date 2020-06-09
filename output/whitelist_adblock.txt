@@ -2138,6 +2138,7 @@
 @@||cdn.cnetcontent.com^
 @@||cdn.connect.mail.ru^
 @@||cdn.cpnscdn.com^
+@@||cdn.datatables.net^
 @@||cdn.discordapp.com^
 @@||cdn.discourse.org^
 @@||cdn.dynamicyield.com^
@@ -9544,6 +9545,7 @@
 @@||node.plexapp.com^
 @@||noexit.tv^
 @@||nola.com^
+@@||nordichardware.se^
 @@||nordvpn.com^
 @@||nordvpn.nanorep.co^
 @@||northeu.pi-dns.com^
@@ -9906,6 +9908,7 @@
 @@||redditstatic.com^
 @@||redefine.pl^
 @@||redfin.com^
+@@||redir.diamond.synacor.com^
 @@||redirect.viglink.com^
 @@||redirectingat.com^
 @@||redirector.googlevideo.com^
@@ -14342,6 +14345,7 @@
 @@||www.cdn.cnetcontent.com^
 @@||www.cdn.connect.mail.ru^
 @@||www.cdn.cpnscdn.com^
+@@||www.cdn.datatables.net^
 @@||www.cdn.discordapp.com^
 @@||www.cdn.discourse.org^
 @@||www.cdn.dynamicyield.com^
@@ -21749,6 +21753,7 @@
 @@||www.node.plexapp.com^
 @@||www.noexit.tv^
 @@||www.nola.com^
+@@||www.nordichardware.se^
 @@||www.nordvpn.com^
 @@||www.nordvpn.nanorep.co^
 @@||www.northeu.pi-dns.com^
@@ -22111,6 +22116,7 @@
 @@||www.redditstatic.com^
 @@||www.redefine.pl^
 @@||www.redfin.com^
+@@||www.redir.diamond.synacor.com^
 @@||www.redirect.viglink.com^
 @@||www.redirectingat.com^
 @@||www.redirector.googlevideo.com^
