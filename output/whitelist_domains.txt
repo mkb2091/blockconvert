@@ -7727,7 +7727,6 @@ latimes.com
 latimesblogs.latimes.com
 lcdn-locator-usnkq.apple.com.akadns.net
 lcdn-locator.apple.com.akadns.net
-league-funny.com
 leagueoflegends.com
 leanplum.com
 leifsex.com
@@ -19964,7 +19963,6 @@ www.latimes.com
 www.latimesblogs.latimes.com
 www.lcdn-locator-usnkq.apple.com.akadns.net
 www.lcdn-locator.apple.com.akadns.net
-www.league-funny.com
 www.leagueoflegends.com
 www.leanplum.com
 www.leifsex.com
