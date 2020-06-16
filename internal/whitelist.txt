@@ -351,6 +351,7 @@ star-mini.c10r.facebook.com
 static-dot-virustotalcloud.appspot.com
 static.getmonero.org
 static.zdassets.com
+statics.streamable.com
 stats.stackexchange.com
 statsfe2.update.microsoft.com.akadns.net
 status.newrelic.com
