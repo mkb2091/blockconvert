@@ -10253,6 +10253,7 @@
 @@||staticflickr.com^
 @@||statics-marketingsites-eus-ms-com.akamaized.net^
 @@||statics-marketingsites-wcus-ms-com.akamaized.net^
+@@||statics.streamable.com^
 @@||staticxx.facebook.com^
 @@||statig0.akamaized.net^
 @@||statig4.akamaized.net^
@@ -22490,6 +22491,7 @@
 @@||www.staticflickr.com^
 @@||www.statics-marketingsites-eus-ms-com.akamaized.net^
 @@||www.statics-marketingsites-wcus-ms-com.akamaized.net^
+@@||www.statics.streamable.com^
 @@||www.staticxx.facebook.com^
 @@||www.statig0.akamaized.net^
 @@||www.statig4.akamaized.net^
