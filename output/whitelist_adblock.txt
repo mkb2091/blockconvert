@@ -1528,6 +1528,7 @@
 @@||*.mp.microsoft.com^
 @@||*.prod.do.dsp.mp.microsoft.com^
 @@||*.s-msedge.net^
+@@||*.safelinks.protection.outlook.com^
 @@||*.search.msn.com^
 @@||*.simply.com^
 @@||*.skype.com^
@@ -13765,6 +13766,7 @@
 @@||www.*.mp.microsoft.com^
 @@||www.*.prod.do.dsp.mp.microsoft.com^
 @@||www.*.s-msedge.net^
+@@||www.*.safelinks.protection.outlook.com^
 @@||www.*.search.msn.com^
 @@||www.*.simply.com^
 @@||www.*.skype.com^
