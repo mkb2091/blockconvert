@@ -2325,6 +2325,7 @@ crl.microsoft.com
 crl.verisign.net
 crowdsignal.files.wordpress.com
 crunchbase.com
+crunchyroll.com
 cs9.wac.phicdn.net
 csdnimg.cn
 cse.google.com
@@ -2548,6 +2549,7 @@ edgetipscdn.microsoft.com
 editmysite.com
 eds.xboxlive.com
 education-week.disqus.com
+eec.crunchyroll.com
 ehc.com
 elasticbeanstalk.com
 electrum.org
@@ -14562,6 +14564,7 @@ www.crl.microsoft.com
 www.crl.verisign.net
 www.crowdsignal.files.wordpress.com
 www.crunchbase.com
+www.crunchyroll.com
 www.cs9.wac.phicdn.net
 www.csdnimg.cn
 www.cse.google.com
@@ -14785,6 +14788,7 @@ www.edgetipscdn.microsoft.com
 www.editmysite.com
 www.eds.xboxlive.com
 www.education-week.disqus.com
+www.eec.crunchyroll.com
 www.ehc.com
 www.elasticbeanstalk.com
 www.electrum.org

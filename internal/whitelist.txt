@@ -111,6 +111,7 @@ completion.amazon.com
 config.edge.skype.com
 confirmit.com
 content.invisioncic.com
+crunchyroll.com
 ct.sendgrid.net
 ctldl.windowsupdate.com
 cv.rdtcdn.com
@@ -151,6 +152,7 @@ e-msedge.net
 e785s8hz.micpn.com
 easylist-downloads.adblockplus.org
 easylist.to
+eec.crunchyroll.com
 electrum.org
 emdl.ws.microsoft.com
 encrypted-tbn1.gstatic.com
