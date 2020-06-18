@@ -10485,7 +10485,6 @@
 @@||unix.com^
 @@||unpkg.com^
 @@||unsplash.com^
-@@||unsubscribe.mailerlite.com^
 @@||uob.sc.omtrdc.net^
 @@||up.anv.bz^
 @@||update.avlyun.sec.miui.com^
@@ -22724,7 +22723,6 @@
 @@||www.unix.com^
 @@||www.unpkg.com^
 @@||www.unsplash.com^
-@@||www.unsubscribe.mailerlite.com^
 @@||www.uob.sc.omtrdc.net^
 @@||www.up.anv.bz^
 @@||www.update.avlyun.sec.miui.com^
