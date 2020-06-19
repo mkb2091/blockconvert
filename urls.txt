@@ -78,6 +78,7 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["AdAway default blocklist", "https://adaway.org/hosts.txt", "", 86400, "CC-BY-3", false, false, false]
 ["Ad filter list by Disconnect", "https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt", "", 86400, "GPLv3", false, false, false]
 ["AakList (Anti-Adblock Killer)", "https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt", "Reek - http://reeksite.com/", 86400, "CC-BY-SA-4.0", false, false, false]
+["AZORult Tracker", "https://azorult-tracker.net/api/list/domain?format=plain", "", 86400, "Open Database License", false, false, false]
 ["ABPindo", "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt", "", 345600, "GPLv3", false, false, false]
 ["ABP Japanese filters (ONLY FOR Japanese and experienced users: READ Support Policy)", "https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf.txt", "k2japan", 21600, "GPLv3", false, false, false]
 ["ABP Japanese Paranoid filters (ONLY FOR Japanese and experienced users: READ Support Policy)", "https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf_paranoid.txt", "k2japan", 21600, "GPLv3", false, false, false]

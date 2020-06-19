@@ -73,6 +73,7 @@ au.download.windowsupdate.com
 auth.gfx.ms
 awin1.com
 ay.gy
+azorult-tracker.net
 b-graph.facebook.com
 b.akamaiedge.net
 baidu.com
