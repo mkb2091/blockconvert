@@ -2376,6 +2376,7 @@
 @@||data.iana.org^
 @@||data.mistat.intl.xiaomi.com^
 @@||data.mistat.xiaomi.com^
+@@||datadoghq-browser-agent.com^
 @@||datafilehost.com^
 @@||dataplicity.com^
 @@||datei.to^
@@ -7788,6 +7789,7 @@
 @@||login.microsoftonline.us^
 @@||login.msa.akadns6.net^
 @@||login.windows.net^
+@@||logincdn.msauth.net^
 @@||logitechlogitechglobal.112.2o7.net^
 @@||logmein-gateway.com^
 @@||logmein.com^
@@ -9925,6 +9927,7 @@
 @@||realestate.nj.com^
 @@||recaptcha.net^
 @@||recommendationengine.googleapis.com^
+@@||recruitics.com^
 @@||recurly.com^
 @@||redcdn.pl^
 @@||reddit.app.link^
@@ -10163,6 +10166,7 @@
 @@||software.informer.com^
 @@||sohu.com^
 @@||solidfiles.com^
+@@||som.aeroplan.com^
 @@||someonewhocares.org^
 @@||sonygs.112.2o7.net^
 @@||soundcloud.com^
@@ -10573,6 +10577,7 @@
 @@||visa.com^
 @@||visitor-services.boldchat.com^
 @@||vitalia.pl^
+@@||vivo.com.br^
 @@||vjs.zencdn.net^
 @@||vk.com^
 @@||vkontakte.ru^
@@ -14615,6 +14620,7 @@
 @@||www.data.iana.org^
 @@||www.data.mistat.intl.xiaomi.com^
 @@||www.data.mistat.xiaomi.com^
+@@||www.datadoghq-browser-agent.com^
 @@||www.datafilehost.com^
 @@||www.dataplicity.com^
 @@||www.datei.to^
@@ -20027,6 +20033,7 @@
 @@||www.login.microsoftonline.us^
 @@||www.login.msa.akadns6.net^
 @@||www.login.windows.net^
+@@||www.logincdn.msauth.net^
 @@||www.logitechlogitechglobal.112.2o7.net^
 @@||www.logmein-gateway.com^
 @@||www.logmein.com^
@@ -22165,6 +22172,7 @@
 @@||www.realestate.nj.com^
 @@||www.recaptcha.net^
 @@||www.recommendationengine.googleapis.com^
+@@||www.recruitics.com^
 @@||www.recurly.com^
 @@||www.redcdn.pl^
 @@||www.reddit.app.link^
@@ -22403,6 +22411,7 @@
 @@||www.software.informer.com^
 @@||www.sohu.com^
 @@||www.solidfiles.com^
+@@||www.som.aeroplan.com^
 @@||www.someonewhocares.org^
 @@||www.sonygs.112.2o7.net^
 @@||www.soundcloud.com^
@@ -22813,6 +22822,7 @@
 @@||www.visa.com^
 @@||www.visitor-services.boldchat.com^
 @@||www.vitalia.pl^
+@@||www.vivo.com.br^
 @@||www.vjs.zencdn.net^
 @@||www.vk.com^
 @@||www.vkontakte.ru^

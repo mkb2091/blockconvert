@@ -243,6 +243,7 @@ location.services.mozilla.com
 login.live.com
 login.msa.akadns6.net
 login.windows.net
+logincdn.msauth.net
 lowendbox.com
 m.me
 m.stripe.network
@@ -307,6 +308,7 @@ rakuten.com
 ransomwaretracker.abuse.ch
 raw.githubusercontent.com
 readcomiconline.to
+recruitics.com
 reddit.app.link
 reddit.com
 redtube.com
@@ -344,6 +346,7 @@ smartscreen-sn3p.smartscreen.microsoft.com
 smartscreen.microsoft.com
 software.informer.com
 sohu.com
+som.aeroplan.com
 soundcloud.com
 sourceforge.net
 ssl.bblck.me
@@ -402,6 +405,7 @@ vignette.wikia.nocookie.net
 vip5.afdorigin-prod-am02.afdogw.com
 vip5.afdorigin-prod-ch02.afdogw.com
 virustotalcloud.appspot.com
+vivo.com.br
 vortex.accuweather.com
 vxvault.net
 wac.phicdn.net
@@ -436,6 +440,7 @@ www.binarydefense.com
 www.bing.com
 www.bitlord.com
 www.cnet.com
+www.datadoghq-browser-agent.com
 www.digicert.com
 www.distilnetworks.com
 www.ecdinterface.philips.com

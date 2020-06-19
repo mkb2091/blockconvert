@@ -93,7 +93,6 @@ Title|URL|Author|Expires|License|Is Whitelist|match url|perform reverse dns
 ["", "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list", "Mitchell Krog", 86400, "MIT", false, true, true]
 ["", "https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list", "Mitchell Krog", 86400, "MIT", false, true, true]
 ["", "https://raw.githubusercontent.com/mitchellkrogza/Stop.Google.Analytics.Ghost.Spam.HOWTO/master/output/domains/ACTIVE/list", "Mitchell Krog", 86400, "MIT", false, false, false]
-["", "https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt", "Mitchell Krog", 86400, "MIT", false, true, true]
 ["", "https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt", "", 86400, "MIT", false, false, false]
 ["", "https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt", "", 86400, "Public Domain", false, false, false]
 ["", "https://raw.githubusercontent.com/ligyxy/Blocklist/master/BLOCKLIST", "", 86400, "MIT", false, false, false]
