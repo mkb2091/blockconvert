@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 416653 blocked domains in each of the generated filter lists
+Theres are 415648 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -91,7 +91,6 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [AakList (Anti-Adblock Killer)](https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt)|Reek - http://reeksite.com/|1.0 days|CC-BY-SA-4.0|26|0
 [AZORult Tracker](https://azorult-tracker.net/api/list/domain?format=plain)|-|1.0 days|Open Database License|659|0
 [ABPindo](https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt)|-|4.0 days|GPLv3|713|2
-[ABP Japanese filters (ONLY FOR Japanese and experienced users: READ Support Policy)](https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf.txt)|k2japan|6.0 hours|GPLv3|4285|2
 [ABP Japanese Paranoid filters (ONLY FOR Japanese and experienced users: READ Support Policy)](https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf_paranoid.txt)|k2japan|6.0 hours|GPLv3|147|2
 [ABP Japanese 3rd party SNS filters (ONLY FOR Japanese and experienced users: READ Support Policy)](https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf_3rd_party_sns.txt)|k2japan|6.0 hours|GPLv3|18|0
 [https://zerodot1.gitlab.io/CoinBlockerLists/list_browser.txt](https://zerodot1.gitlab.io/CoinBlockerLists/list_browser.txt)|-|1.0 days|GPLv3|3594|0

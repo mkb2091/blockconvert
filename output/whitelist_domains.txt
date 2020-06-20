@@ -1562,6 +1562,7 @@
 3dns-2.adobe.com
 3dns-3.adobe.com
 3gdl.tcdn.qq.com
+3p.ampproject.net
 4-edge-chat.facebook.com
 4chan.org
 4shared.com
@@ -1744,7 +1745,6 @@ aeriagames.com
 aeu.alicdn.com
 affirm.com
 aftership.com
-aguse.jp
 ajax.aspnetcdn.com
 ajax.cloudflare.com
 ajax.googleapis.com
@@ -13808,6 +13808,7 @@ www.3-edge-chat.facebook.com
 www.3dns-2.adobe.com
 www.3dns-3.adobe.com
 www.3gdl.tcdn.qq.com
+www.3p.ampproject.net
 www.4-edge-chat.facebook.com
 www.4chan.org
 www.4shared.com
@@ -13990,7 +13991,6 @@ www.aeriagames.com
 www.aeu.alicdn.com
 www.affirm.com
 www.aftership.com
-www.aguse.jp
 www.ajax.aspnetcdn.com
 www.ajax.cloudflare.com
 www.ajax.googleapis.com
