@@ -39,8 +39,7 @@ class BuildRegex():
             tld_regex.append('(?:%s(?:%s))' % (re.escape(first_letter), now))
         tld_regex = r'(?:%s|\*)' % '|'.join(tld_regex)
         ip_v4 = '[12]?[0-9]{,2}[.][12]?[0-9]{,2}[.][12]?[0-9]{,2}[.][12]?[0-9]{,2}'
-        ip_v6 = '[0-9a-f]{,4}(?:[:][0-9a-f]{,4}){2,8}'
-        ip = '(?:{ip_v4}|{ip_v6})'.format(**locals())
+        ip = '(?:{ip_v4})'.format(**locals())
         self.IP_REGEX = re.compile(ip)
         segment = r'(?:[a-z0-9_](?:[a-z0-9_-]*[a-z0-9_])?)'
         self.DOMAIN_STRING = r'[.]?((?:(?:\*[.])?{segment}(?:[.]{segment})*[.]{tld_regex})|{ip})[.]?'.format(
