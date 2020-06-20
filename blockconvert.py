@@ -230,7 +230,7 @@ class BlockList():
             homepage=self.homepage,
             license=self.license,
             bitcoin=self.bitcoin)
-        return header + '\n'.join(sorted(self.blacklist))
+        return header + '\n'.join(sorted(self.blacklist)) + '\n'
 
     def to_adblock(self):
         header = ADBLOCK_PLUS_HEADER.format(
@@ -242,7 +242,7 @@ class BlockList():
             license=self.license,
             bitcoin=self.bitcoin)
         domains = list(self.blacklist) + list(self.ip_blocklist)
-        return header + '\n'.join(['||%s^' % i for i in sorted(domains)])
+        return header + '\n'.join(['||%s^' % i for i in sorted(domains)]) + '\n'
 
     def to_hosts(self):
         header = HOSTS_HEADER.format(
@@ -256,21 +256,21 @@ class BlockList():
             '\n'.join(['0.0.0.0 ' + i for i in sorted(self.blacklist)])
 
     def to_rpz(self):
-        return '\n'.join(['%s CNAME .' % i for i in sorted(self.blacklist)])
+        return '\n'.join(['%s CNAME .' % i for i in sorted(self.blacklist)]) + '\n'
 
     def to_ip_blocklist(self):
-        return '\n'.join(sorted(self.ip_blocklist))
+        return '\n'.join(sorted(self.ip_blocklist)) + '\n'
 
     def to_ipset_blocklist(self):
         data = 'create %s hash:ip family inet hashsize 4096 maxelem 65536\n' % self.title
         return data + '\n'.join(['add %s %s' % (self.title, ip)
-                                 for ip in sorted(self.ip_blocklist)])
+                                 for ip in sorted(self.ip_blocklist)]) + '\n'
 
     def to_domain_whitelist(self):
-        return '\n'.join(sorted(self.whitelist))
+        return '\n'.join(sorted(self.whitelist)) + '\n'
 
     def to_adblock_whitelist(self):
-        return '\n'.join(['@@||%s^' % i for i in sorted(self.whitelist)])
+        return '\n'.join(['@@||%s^' % i for i in sorted(self.whitelist)]) + '\n'
 
     def clear(self):
         self.blacklist = set()
