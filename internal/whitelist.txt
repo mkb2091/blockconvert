@@ -1,4 +1,3 @@
-eloqua.com
 *.a-msedge.net
 *.adafruit.com
 *.b.akamaiedge.net
@@ -158,6 +157,7 @@ easylist-downloads.adblockplus.org
 easylist.to
 eec.crunchyroll.com
 electrum.org
+eloqua.com
 emdl.ws.microsoft.com
 encrypted-tbn1.gstatic.com
 encrypted-tbn2.gstatic.com
