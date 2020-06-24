@@ -2792,6 +2792,7 @@
 @@||gawker.com^
 @@||gawkerassets.com^
 @@||gazeta.pl^
+@@||gcs.sc-cdn.net^
 @@||geekwire.disqus.com^
 @@||geenstijl.nl^
 @@||geetest.com^
@@ -15041,6 +15042,7 @@
 @@||www.gawker.com^
 @@||www.gawkerassets.com^
 @@||www.gazeta.pl^
+@@||www.gcs.sc-cdn.net^
 @@||www.geekwire.disqus.com^
 @@||www.geenstijl.nl^
 @@||www.geetest.com^
