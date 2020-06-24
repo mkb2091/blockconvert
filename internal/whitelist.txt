@@ -199,6 +199,7 @@ gamespot.com
 gannettdigital.com
 gardenstatehelicopters.com
 gateway.reddit.com
+gcs.sc-cdn.net
 geo-prod.do.dsp.mp.microsoft.com
 geo-prod.dodsp.mp.microsoft.com.nsatc.net
 github.com
