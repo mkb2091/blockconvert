@@ -9490,6 +9490,7 @@ mts1.google.com
 mtv.com
 mtvnservices.com
 multiup.org
+mvaali1.ws.byteoversea.net
 mw1.google.com
 mw2.google.com
 my.aliexpress.com
@@ -10163,6 +10164,7 @@ snaptu-mini.c10r.facebook.com
 snaptu-mini.facebook.com
 sndcdn.com
 snippets.cdn.mozilla.net
+social.krunker.io
 socialize.eu1.gigya.com
 socialize.us1.gigya.com
 socialmedia.by
@@ -21738,6 +21740,7 @@ www.mts1.google.com
 www.mtv.com
 www.mtvnservices.com
 www.multiup.org
+www.mvaali1.ws.byteoversea.net
 www.mw1.google.com
 www.mw2.google.com
 www.my.aliexpress.com
@@ -22411,6 +22414,7 @@ www.snaptu-mini.c10r.facebook.com
 www.snaptu-mini.facebook.com
 www.sndcdn.com
 www.snippets.cdn.mozilla.net
+www.social.krunker.io
 www.socialize.eu1.gigya.com
 www.socialize.us1.gigya.com
 www.socialmedia.by
