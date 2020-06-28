@@ -45,7 +45,6 @@
 @@||*.md.mp.microsoft.com.agency^
 @@||*.md.mp.microsoft.com.ai^
 @@||*.md.mp.microsoft.com.aig^
-@@||*.md.mp.microsoft.com.aigo^
 @@||*.md.mp.microsoft.com.airbus^
 @@||*.md.mp.microsoft.com.airforce^
 @@||*.md.mp.microsoft.com.airtel^
@@ -1429,7 +1428,6 @@
 @@||*.md.mp.microsoft.com.xn--kcrx77d1x4a^
 @@||*.md.mp.microsoft.com.xn--kprw13d^
 @@||*.md.mp.microsoft.com.xn--kpry57d^
-@@||*.md.mp.microsoft.com.xn--kpu716f^
 @@||*.md.mp.microsoft.com.xn--kput3i^
 @@||*.md.mp.microsoft.com.xn--l1acc^
 @@||*.md.mp.microsoft.com.xn--lgbbat1ad8j^
@@ -1470,7 +1468,6 @@
 @@||*.md.mp.microsoft.com.xn--otu796d^
 @@||*.md.mp.microsoft.com.xn--p1acf^
 @@||*.md.mp.microsoft.com.xn--p1ai^
-@@||*.md.mp.microsoft.com.xn--pbt977c^
 @@||*.md.mp.microsoft.com.xn--pgbs0dh^
 @@||*.md.mp.microsoft.com.xn--pssy2u^
 @@||*.md.mp.microsoft.com.xn--q7ce6a^
@@ -2834,7 +2831,6 @@
 @@||google.agency^
 @@||google.ai^
 @@||google.aig^
-@@||google.aigo^
 @@||google.airbus^
 @@||google.airforce^
 @@||google.airtel^
@@ -3102,7 +3098,6 @@
 @@||google.co.agency^
 @@||google.co.ai^
 @@||google.co.aig^
-@@||google.co.aigo^
 @@||google.co.airbus^
 @@||google.co.airforce^
 @@||google.co.airtel^
@@ -4486,7 +4481,6 @@
 @@||google.co.xn--kcrx77d1x4a^
 @@||google.co.xn--kprw13d^
 @@||google.co.xn--kpry57d^
-@@||google.co.xn--kpu716f^
 @@||google.co.xn--kput3i^
 @@||google.co.xn--l1acc^
 @@||google.co.xn--lgbbat1ad8j^
@@ -4527,7 +4521,6 @@
 @@||google.co.xn--otu796d^
 @@||google.co.xn--p1acf^
 @@||google.co.xn--p1ai^
-@@||google.co.xn--pbt977c^
 @@||google.co.xn--pgbs0dh^
 @@||google.co.xn--pssy2u^
 @@||google.co.xn--q7ce6a^
@@ -4622,7 +4615,6 @@
 @@||google.com.agency^
 @@||google.com.ai^
 @@||google.com.aig^
-@@||google.com.aigo^
 @@||google.com.airbus^
 @@||google.com.airforce^
 @@||google.com.airtel^
@@ -6006,7 +5998,6 @@
 @@||google.com.xn--kcrx77d1x4a^
 @@||google.com.xn--kprw13d^
 @@||google.com.xn--kpry57d^
-@@||google.com.xn--kpu716f^
 @@||google.com.xn--kput3i^
 @@||google.com.xn--l1acc^
 @@||google.com.xn--lgbbat1ad8j^
@@ -6047,7 +6038,6 @@
 @@||google.com.xn--otu796d^
 @@||google.com.xn--p1acf^
 @@||google.com.xn--p1ai^
-@@||google.com.xn--pbt977c^
 @@||google.com.xn--pgbs0dh^
 @@||google.com.xn--pssy2u^
 @@||google.com.xn--q7ce6a^
@@ -7247,7 +7237,6 @@
 @@||google.xn--kcrx77d1x4a^
 @@||google.xn--kprw13d^
 @@||google.xn--kpry57d^
-@@||google.xn--kpu716f^
 @@||google.xn--kput3i^
 @@||google.xn--l1acc^
 @@||google.xn--lgbbat1ad8j^
@@ -7288,7 +7277,6 @@
 @@||google.xn--otu796d^
 @@||google.xn--p1acf^
 @@||google.xn--p1ai^
-@@||google.xn--pbt977c^
 @@||google.xn--pgbs0dh^
 @@||google.xn--pssy2u^
 @@||google.xn--q7ce6a^
@@ -7819,7 +7807,6 @@
 @@||md.mp.microsoft.com.agency^
 @@||md.mp.microsoft.com.ai^
 @@||md.mp.microsoft.com.aig^
-@@||md.mp.microsoft.com.aigo^
 @@||md.mp.microsoft.com.airbus^
 @@||md.mp.microsoft.com.airforce^
 @@||md.mp.microsoft.com.airtel^
@@ -9203,7 +9190,6 @@
 @@||md.mp.microsoft.com.xn--kcrx77d1x4a^
 @@||md.mp.microsoft.com.xn--kprw13d^
 @@||md.mp.microsoft.com.xn--kpry57d^
-@@||md.mp.microsoft.com.xn--kpu716f^
 @@||md.mp.microsoft.com.xn--kput3i^
 @@||md.mp.microsoft.com.xn--l1acc^
 @@||md.mp.microsoft.com.xn--lgbbat1ad8j^
@@ -9244,7 +9230,6 @@
 @@||md.mp.microsoft.com.xn--otu796d^
 @@||md.mp.microsoft.com.xn--p1acf^
 @@||md.mp.microsoft.com.xn--p1ai^
-@@||md.mp.microsoft.com.xn--pbt977c^
 @@||md.mp.microsoft.com.xn--pgbs0dh^
 @@||md.mp.microsoft.com.xn--pssy2u^
 @@||md.mp.microsoft.com.xn--q7ce6a^
@@ -10524,7 +10509,6 @@
 @@||wdcp.microsoft.agency^
 @@||wdcp.microsoft.ai^
 @@||wdcp.microsoft.aig^
-@@||wdcp.microsoft.aigo^
 @@||wdcp.microsoft.airbus^
 @@||wdcp.microsoft.airforce^
 @@||wdcp.microsoft.airtel^
@@ -11908,7 +11892,6 @@
 @@||wdcp.microsoft.xn--kcrx77d1x4a^
 @@||wdcp.microsoft.xn--kprw13d^
 @@||wdcp.microsoft.xn--kpry57d^
-@@||wdcp.microsoft.xn--kpu716f^
 @@||wdcp.microsoft.xn--kput3i^
 @@||wdcp.microsoft.xn--l1acc^
 @@||wdcp.microsoft.xn--lgbbat1ad8j^
@@ -11949,7 +11932,6 @@
 @@||wdcp.microsoft.xn--otu796d^
 @@||wdcp.microsoft.xn--p1acf^
 @@||wdcp.microsoft.xn--p1ai^
-@@||wdcp.microsoft.xn--pbt977c^
 @@||wdcp.microsoft.xn--pgbs0dh^
 @@||wdcp.microsoft.xn--pssy2u^
 @@||wdcp.microsoft.xn--q7ce6a^
@@ -12158,7 +12140,6 @@
 @@||www.*.md.mp.microsoft.com.agency^
 @@||www.*.md.mp.microsoft.com.ai^
 @@||www.*.md.mp.microsoft.com.aig^
-@@||www.*.md.mp.microsoft.com.aigo^
 @@||www.*.md.mp.microsoft.com.airbus^
 @@||www.*.md.mp.microsoft.com.airforce^
 @@||www.*.md.mp.microsoft.com.airtel^
@@ -13542,7 +13523,6 @@
 @@||www.*.md.mp.microsoft.com.xn--kcrx77d1x4a^
 @@||www.*.md.mp.microsoft.com.xn--kprw13d^
 @@||www.*.md.mp.microsoft.com.xn--kpry57d^
-@@||www.*.md.mp.microsoft.com.xn--kpu716f^
 @@||www.*.md.mp.microsoft.com.xn--kput3i^
 @@||www.*.md.mp.microsoft.com.xn--l1acc^
 @@||www.*.md.mp.microsoft.com.xn--lgbbat1ad8j^
@@ -13583,7 +13563,6 @@
 @@||www.*.md.mp.microsoft.com.xn--otu796d^
 @@||www.*.md.mp.microsoft.com.xn--p1acf^
 @@||www.*.md.mp.microsoft.com.xn--p1ai^
-@@||www.*.md.mp.microsoft.com.xn--pbt977c^
 @@||www.*.md.mp.microsoft.com.xn--pgbs0dh^
 @@||www.*.md.mp.microsoft.com.xn--pssy2u^
 @@||www.*.md.mp.microsoft.com.xn--q7ce6a^
@@ -14947,7 +14926,6 @@
 @@||www.google.agency^
 @@||www.google.ai^
 @@||www.google.aig^
-@@||www.google.aigo^
 @@||www.google.airbus^
 @@||www.google.airforce^
 @@||www.google.airtel^
@@ -15215,7 +15193,6 @@
 @@||www.google.co.agency^
 @@||www.google.co.ai^
 @@||www.google.co.aig^
-@@||www.google.co.aigo^
 @@||www.google.co.airbus^
 @@||www.google.co.airforce^
 @@||www.google.co.airtel^
@@ -16599,7 +16576,6 @@
 @@||www.google.co.xn--kcrx77d1x4a^
 @@||www.google.co.xn--kprw13d^
 @@||www.google.co.xn--kpry57d^
-@@||www.google.co.xn--kpu716f^
 @@||www.google.co.xn--kput3i^
 @@||www.google.co.xn--l1acc^
 @@||www.google.co.xn--lgbbat1ad8j^
@@ -16640,7 +16616,6 @@
 @@||www.google.co.xn--otu796d^
 @@||www.google.co.xn--p1acf^
 @@||www.google.co.xn--p1ai^
-@@||www.google.co.xn--pbt977c^
 @@||www.google.co.xn--pgbs0dh^
 @@||www.google.co.xn--pssy2u^
 @@||www.google.co.xn--q7ce6a^
@@ -16735,7 +16710,6 @@
 @@||www.google.com.agency^
 @@||www.google.com.ai^
 @@||www.google.com.aig^
-@@||www.google.com.aigo^
 @@||www.google.com.airbus^
 @@||www.google.com.airforce^
 @@||www.google.com.airtel^
@@ -18119,7 +18093,6 @@
 @@||www.google.com.xn--kcrx77d1x4a^
 @@||www.google.com.xn--kprw13d^
 @@||www.google.com.xn--kpry57d^
-@@||www.google.com.xn--kpu716f^
 @@||www.google.com.xn--kput3i^
 @@||www.google.com.xn--l1acc^
 @@||www.google.com.xn--lgbbat1ad8j^
@@ -18160,7 +18133,6 @@
 @@||www.google.com.xn--otu796d^
 @@||www.google.com.xn--p1acf^
 @@||www.google.com.xn--p1ai^
-@@||www.google.com.xn--pbt977c^
 @@||www.google.com.xn--pgbs0dh^
 @@||www.google.com.xn--pssy2u^
 @@||www.google.com.xn--q7ce6a^
@@ -19360,7 +19332,6 @@
 @@||www.google.xn--kcrx77d1x4a^
 @@||www.google.xn--kprw13d^
 @@||www.google.xn--kpry57d^
-@@||www.google.xn--kpu716f^
 @@||www.google.xn--kput3i^
 @@||www.google.xn--l1acc^
 @@||www.google.xn--lgbbat1ad8j^
@@ -19401,7 +19372,6 @@
 @@||www.google.xn--otu796d^
 @@||www.google.xn--p1acf^
 @@||www.google.xn--p1ai^
-@@||www.google.xn--pbt977c^
 @@||www.google.xn--pgbs0dh^
 @@||www.google.xn--pssy2u^
 @@||www.google.xn--q7ce6a^
@@ -19932,7 +19902,6 @@
 @@||www.md.mp.microsoft.com.agency^
 @@||www.md.mp.microsoft.com.ai^
 @@||www.md.mp.microsoft.com.aig^
-@@||www.md.mp.microsoft.com.aigo^
 @@||www.md.mp.microsoft.com.airbus^
 @@||www.md.mp.microsoft.com.airforce^
 @@||www.md.mp.microsoft.com.airtel^
@@ -21316,7 +21285,6 @@
 @@||www.md.mp.microsoft.com.xn--kcrx77d1x4a^
 @@||www.md.mp.microsoft.com.xn--kprw13d^
 @@||www.md.mp.microsoft.com.xn--kpry57d^
-@@||www.md.mp.microsoft.com.xn--kpu716f^
 @@||www.md.mp.microsoft.com.xn--kput3i^
 @@||www.md.mp.microsoft.com.xn--l1acc^
 @@||www.md.mp.microsoft.com.xn--lgbbat1ad8j^
@@ -21357,7 +21325,6 @@
 @@||www.md.mp.microsoft.com.xn--otu796d^
 @@||www.md.mp.microsoft.com.xn--p1acf^
 @@||www.md.mp.microsoft.com.xn--p1ai^
-@@||www.md.mp.microsoft.com.xn--pbt977c^
 @@||www.md.mp.microsoft.com.xn--pgbs0dh^
 @@||www.md.mp.microsoft.com.xn--pssy2u^
 @@||www.md.mp.microsoft.com.xn--q7ce6a^
@@ -22638,7 +22605,6 @@
 @@||www.wdcp.microsoft.agency^
 @@||www.wdcp.microsoft.ai^
 @@||www.wdcp.microsoft.aig^
-@@||www.wdcp.microsoft.aigo^
 @@||www.wdcp.microsoft.airbus^
 @@||www.wdcp.microsoft.airforce^
 @@||www.wdcp.microsoft.airtel^
@@ -24022,7 +23988,6 @@
 @@||www.wdcp.microsoft.xn--kcrx77d1x4a^
 @@||www.wdcp.microsoft.xn--kprw13d^
 @@||www.wdcp.microsoft.xn--kpry57d^
-@@||www.wdcp.microsoft.xn--kpu716f^
 @@||www.wdcp.microsoft.xn--kput3i^
 @@||www.wdcp.microsoft.xn--l1acc^
 @@||www.wdcp.microsoft.xn--lgbbat1ad8j^
@@ -24063,7 +24028,6 @@
 @@||www.wdcp.microsoft.xn--otu796d^
 @@||www.wdcp.microsoft.xn--p1acf^
 @@||www.wdcp.microsoft.xn--p1ai^
-@@||www.wdcp.microsoft.xn--pbt977c^
 @@||www.wdcp.microsoft.xn--pgbs0dh^
 @@||www.wdcp.microsoft.xn--pssy2u^
 @@||www.wdcp.microsoft.xn--q7ce6a^
