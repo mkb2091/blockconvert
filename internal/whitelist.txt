@@ -374,6 +374,7 @@ store-images.s-microsoft.com
 storecatalogrevocation.storequality.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 stripecdn.map.fastly.net
+substrate.office.com
 support.microsoft.com
 survey.euro.confirmit.com
 survey.pearsoncmg.com
