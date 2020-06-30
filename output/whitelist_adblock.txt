@@ -1658,6 +1658,7 @@
 @@||aboo.se^
 @@||abrilguiadoestudante.files.wordpress.com^
 @@||abroad.apilocate.amap.com^
+@@||acast.com^
 @@||account.xiaomi.com^
 @@||accounts.eu1.gigya.com^
 @@||accounts.google.com^
@@ -7382,6 +7383,7 @@
 @@||hblock.molinero.dev^
 @@||hbogo.com^
 @@||hbogo.pl^
+@@||hcaptcha.com^
 @@||he.net^
 @@||healthyadvertising.es^
 @@||heapanalytics.com^
@@ -9943,6 +9945,7 @@
 @@||scrapinghub.com^
 @@||screendoor.dobt.co^
 @@||screenshots.firefox.com^
+@@||scribblelive.com^
 @@||scribd.com^
 @@||scribdassets.com^
 @@||script.google.com^
@@ -10171,6 +10174,7 @@
 @@||stripe.network^
 @@||stripecdn.com^
 @@||stripecdn.map.fastly.net^
+@@||substrate.office.com^
 @@||suggestqueries.google.com^
 @@||support.coinbase.com^
 @@||support.microsoft.com^
@@ -13755,6 +13759,7 @@
 @@||www.aboo.se^
 @@||www.abrilguiadoestudante.files.wordpress.com^
 @@||www.abroad.apilocate.amap.com^
+@@||www.acast.com^
 @@||www.account.xiaomi.com^
 @@||www.accounts.eu1.gigya.com^
 @@||www.accounts.google.com^
@@ -19479,6 +19484,7 @@
 @@||www.hblock.molinero.dev^
 @@||www.hbogo.com^
 @@||www.hbogo.pl^
+@@||www.hcaptcha.com^
 @@||www.he.net^
 @@||www.healthyadvertising.es^
 @@||www.heapanalytics.com^
@@ -22041,6 +22047,7 @@
 @@||www.scrapinghub.com^
 @@||www.screendoor.dobt.co^
 @@||www.screenshots.firefox.com^
+@@||www.scribblelive.com^
 @@||www.scribd.com^
 @@||www.scribdassets.com^
 @@||www.script.google.com^
@@ -22269,6 +22276,7 @@
 @@||www.stripe.network^
 @@||www.stripecdn.com^
 @@||www.stripecdn.map.fastly.net^
+@@||www.substrate.office.com^
 @@||www.suggestqueries.google.com^
 @@||www.support.coinbase.com^
 @@||www.support.microsoft.com^
