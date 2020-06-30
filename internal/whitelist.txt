@@ -60,6 +60,7 @@ api.bing.com
 api.facebook.com
 api.mymonero.com
 api.particle.io
+api.vanilla.futurecdn.net
 api.videos.oovvuu.com
 appleid.apple.com.akadns.net
 appspot-preview.l.google.com
@@ -405,6 +406,7 @@ v10.events.data.microsoft.com
 v10.vortex-win.data.microsoft.com
 v20.events.data.microsoft.com
 validation-v2.sls.microsoft.com
+vanilla.futurecdn.net
 vgwort.de
 videos.oovvuu.com
 vignette.wikia.nocookie.net
