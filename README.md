@@ -54,23 +54,27 @@ As well as generating blocklists, this project also generates whitelists which a
 
 ## The Process
 
-1. Download file
+1. Download expired blocklist data and extract domains and IP addresses into whitelist and blacklist
 
-2. Extract domains into whitelist and blacklist
+2. Combine all the blacklists and the whitelists
 
-3. Use passive dns and reverse dns on all of the ip addresses in the whitelist and blacklist
+3. Filter out all the IPv4 addresses from each list and use passive dns lookup APIs to find domains which resolve to those IP addresses
 
-4. For any domains which have "\*" in tld field replace it with every tld in downloaded list
+4. Store all the IP addresses that were in the blacklist in a seperate list
 
-5. For each domain which starts with "www" or "m" add a copy of that domain without the subdomain
+5. For each domain that has "\*" for its TLD (e.g. "tracker.\*"), replace the "\*" with every TLD in the TLD file
 
-6. For each domain with "\*" as subdomain replace it with every subdomain in top 1000 subdomains file, and add a copy without any subdomain
+5. Remove all the domains in the whitelist from the blacklist
 
-7. For every domain in the whitelist, remove it from the blacklist
+6. For each domain in each list that starts with either "m." or "www.", add a version of the domain without the subdomain
 
-8. For all remaining domains in blacklist, use dns to check if the domain is still registered, remove those that are not
+7. For each domain in the whitelist, if there isn't a version of the domain starting with a "www.", then add one
 
-9. Remove all invalid domains
+8. For each domain in the blacklist that starts with a "\*.", remove the start
+
+9. For each domain in the blacklist that is in the whitelist, or is a subdomain of a domain in the whitelist starting with a "\*.", remove that domain from the blacklist
+
+10. For all the domains left, check that they have a valid DNS record, and remove the ones that do not
 
 Sources: [Sources](https://github.com/mkb2091/blockconvert/blob/master/sources.md)
 
