@@ -9771,6 +9771,7 @@
 @@||pti.store.microsoft.com^
 @@||public-api.wordpress.com^
 @@||public.slidesharecdn.com^
+@@||public.tableau.com^
 @@||public.tableausoftware.com^
 @@||publicsuffix.org^
 @@||publiekeomroep.nl^
@@ -21873,6 +21874,7 @@
 @@||www.pti.store.microsoft.com^
 @@||www.public-api.wordpress.com^
 @@||www.public.slidesharecdn.com^
+@@||www.public.tableau.com^
 @@||www.public.tableausoftware.com^
 @@||www.publicsuffix.org^
 @@||www.publiekeomroep.nl^
