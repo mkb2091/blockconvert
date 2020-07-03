@@ -2161,6 +2161,7 @@ cdn.syndication.twitter.com
 cdn.viblast.com
 cdn.vidible.tv
 cdn2.editmysite.com
+cdn2.hometogo.net
 cdn2.hubspot.net
 cdn2.optimizely.com
 cdn3.nflxext.com
@@ -2180,6 +2181,7 @@ cds.s5x3j6q5.hwcdn.net
 centaurpublications.122.2o7.net
 centraleu.pi-dns.com
 cern.ch
+ceros.com
 cert.mgt.xboxlive.com
 cf.hamreus.com
 cf.iadsdk.apple.com
@@ -14263,6 +14265,7 @@ www.cdn.syndication.twitter.com
 www.cdn.viblast.com
 www.cdn.vidible.tv
 www.cdn2.editmysite.com
+www.cdn2.hometogo.net
 www.cdn2.hubspot.net
 www.cdn2.optimizely.com
 www.cdn3.nflxext.com
@@ -14282,6 +14285,7 @@ www.cds.s5x3j6q5.hwcdn.net
 www.centaurpublications.122.2o7.net
 www.centraleu.pi-dns.com
 www.cern.ch
+www.ceros.com
 www.cert.mgt.xboxlive.com
 www.cf.hamreus.com
 www.cf.iadsdk.apple.com
@@ -24249,6 +24253,7 @@ www.yellowpages.com
 www.yelpcdn.com
 www.yerl.org
 www.yimg.com
+www.yimg.jp
 www.ynuf.aliapp.org
 www.yoast.com
 www.yottaa.net
@@ -24343,6 +24348,7 @@ yellowpages.com
 yelpcdn.com
 yerl.org
 yimg.com
+yimg.jp
 ynuf.aliapp.org
 yoast.com
 yottaa.net
