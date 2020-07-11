@@ -1,6 +1,6 @@
 ## Last Commit Infomation
 
-Theres are 587988 blocked domains in each of the generated filter lists
+Theres are 588258 blocked domains in each of the generated filter lists
 
 ## Sources
 
@@ -15,10 +15,10 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [uBlock filters – Privacy](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt)|-|4.0 days|GPLv3|16|0
 [uBlock filters – Badware risks](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt)|-|4.0 days|GPLv3|56|0
 [iOS Tracker Blocklist](https://jarv.is/ios-trackers/adguard.txt)|jakejarvis|10.0 days|MIT|507|0
-[hostsVN](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts)|-|1.0 days|MIT|18885|0
-[abuse.ch URLhaus Response Policy Zones](https://urlhaus.abuse.ch/downloads/rpz/)|-|1.0 days|CC0|546|0
-[abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|196|0
-[abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|527|0
+[hostsVN](https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts)|-|1.0 days|MIT|18890|0
+[abuse.ch URLhaus Response Policy Zones](https://urlhaus.abuse.ch/downloads/rpz/)|-|1.0 days|CC0|533|0
+[abuse.ch SSLBL Botnet C2 IP Blacklist](https://sslbl.abuse.ch/blacklist/sslipblacklist.txt)|-|1.0 days|CC0|198|0
+[abuse.ch Feodo Tracker Botnet C2 IP Blocklist](https://feodotracker.abuse.ch/downloads/ipblocklist.txt)|-|1.0 days|CC0|539|0
 [🎮 Game Console Adblock List](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt)|-|4.0 days|Dandelicence|8|0
 [❤xorcan❤ Türk ip-list](https://raw.githubusercontent.com/xorcan/hosts/master/xips.txt)|xorcan|1.0 days|GPL-3.0|13|0
 [❤xorcan❤ Türk ad-list](https://raw.githubusercontent.com/xorcan/hosts/master/xhosts.txt)|xorcan|10.0 days|GPL-3.0|8125|0
@@ -26,11 +26,11 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [WindowsSpyBlocker - Hosts extra rules](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt)|-|1.0 days|MIT|226|0
 [Whitelist](https://raw.githubusercontent.com/ookangzheng/blahdns/master/hosts/whitelist.txt)|ookangzheng|1.0 days|CC BY-NC-SA 4.0(I  received permission to add to this project)|0|835
 [Whitelist](https://raw.githubusercontent.com/NoExitTV/whitelist/master/domains/whitelist.txt)|-|7.0 days|MIT|0|34
-[VX Vault last 100 Links](http://vxvault.net/URL_List.php)|Kicelo, Dominik Schuermann|1.0 days|Copyleft 2010. No rights reserved. |60|0
+[VX Vault last 100 Links](http://vxvault.net/URL_List.php)|Kicelo, Dominik Schuermann|1.0 days|Copyleft 2010. No rights reserved. |58|0
 [Useful Linux Shell Scripts Hosts](https://raw.githubusercontent.com/jackrabbit335/UsefulLinuxShellScripts/master/Hosts%20%26%20sourcelist/blacklist.txt)|-|10.0 days|GPL-3.0|78|0
 [Typosquatting Blocklist](https://raw.githubusercontent.com/hl2guide/DNS-Sinkhole-Lists-A2/master/typosquatting_blocklist.txt)|-|1.0 days|MIT|11159|0
 [Toshiya's Filter List - Experimental](https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt)|Toshiya|4.0 days|GPLv3|2118|2
-[The Hosts File Project](https://hblock.molinero.dev/hosts)|Héctor Molinero Fernández <hector@molinero.dev>|1.0 days|MIT|303674|0
+[The Hosts File Project](https://hblock.molinero.dev/hosts)|Héctor Molinero Fernández <hector@molinero.dev>|1.0 days|MIT|304231|0
 [Strappazzon's Tracking List](https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Tracking.txt)|-|3.0 days|MIT|11|0
 [Spam404](https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt)|-|2.0 days|Permission to modify, copy and distribute|7022|0
 [Skeletal Blocker](https://raw.githubusercontent.com/SkeletalDemise/Skeletal-Blocker/master/Skeletal%20Blocker%20List)|SkeletalDemise|2.0 days|GPLv3|517|0
@@ -52,7 +52,7 @@ Link|Author|Expires|License|Blacklist Size|Whitelist Size
 [Magneto Malware Skanner - Burner Domains](https://raw.githubusercontent.com/gwillem/magento-malware-scanner/master/rules/burner-domains.txt)|-|10.0 days|GPLv3|420|0
 [Lightswitch05's Tracking Aggressive](https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt)|Daniel White|2.0 days|Apache2|8816|0
 [Lightswitch05's Ads & Tracking](https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt)|Daniel White|2.0 days|Apache2|165457|0
-[KADhosts](https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt)|-|1.0 days|CC-BY-SA-4|11072|0
+[KADhosts](https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt)|-|1.0 days|CC-BY-SA-4|11098|0
 [International List](https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt)|-|3.0 days|The Unlicense|15|1
 [I Hate Tracker](https://raw.githubusercontent.com/pirat28/IHateTracker/master/iHateTracker.txt)|Pirat28|10.0 days|MIT|372|0
 [Hosty Blacklist](https://raw.githubusercontent.com/JoseGalRe/Hosty/master/bits/hosty.blacklist)|astrolince, s-nt-s, JoseGalRe|7.0 days|CCA-3.0|536|0
