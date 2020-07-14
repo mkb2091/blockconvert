@@ -117,3 +117,8 @@ dns_cache.txt
 data/
 db/
 config.json
+
+
+#Added by cargo
+
+/target

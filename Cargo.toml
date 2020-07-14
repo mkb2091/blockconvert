@@ -1,0 +1,14 @@
+[package]
+name = "blockconvert"
+version = "0.1.0"
+authors = ["Alex Williams <hughaw64@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = {version = "0.10", features = ["rustls-tls", "gzip", "brotli", "json"]}
+futures = {version = "0.3.5"}
+tokio = "0.2.21"
+rand = "0.7"
+serde = {version = "1.0", features = ["derive"]}
