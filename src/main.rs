@@ -7,7 +7,13 @@ fn main() {
     ];
     let mut rng = rand::thread_rng();
     let attempts = 3;
-    let dns_result = blockconvert::doh::lookup_domain(&servers, &mut client, &mut rng, attempts, "analytics.google.com");
+    let dns_result = blockconvert::doh::lookup_domain(
+        &servers,
+        &mut client,
+        &mut rng,
+        attempts,
+        "analytics.google.com",
+    );
     let output = rt.block_on(dns_result);
     println!("Result: {:?}", output);
 }
