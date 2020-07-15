@@ -18,10 +18,12 @@ impl DomainFilterBuilder {
     }
 
     pub fn add_allow_subdomain(&mut self, base_domain: &str) {
-        self.allow_subdomains.insert(base_domain.to_string());
+        self.allow_subdomains
+            .insert(base_domain.trim_start_matches("*.").to_string());
     }
     pub fn add_disallow_subdomain(&mut self, base_domain: &str) {
-        self.disallow_subdomains.insert(base_domain.to_string());
+        self.disallow_subdomains
+            .insert(base_domain.trim_start_matches("*.").to_string());
     }
 
     pub fn add_adblock_rule(&mut self, rule: &str) {

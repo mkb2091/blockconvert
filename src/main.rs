@@ -24,16 +24,25 @@ fn read_csv() -> Result<Vec<Record>, csv::Error> {
     Ok(records)
 }
 
-fn main() {
+async fn generate() {
     let client = reqwest::Client::new();
-    let mut rt = tokio::runtime::Runtime::new().unwrap();
     if let Ok(records) = read_csv() {
-        let downloaded = rt.block_on(blockconvert::list_downloader::download_all(
-            &client, &records,
-        ));
-    } else {
-        println!("Failed to open filterlists.csv")
+        let downloaded = blockconvert::list_downloader::download_all(&client, &records).await;
+        let mut bc = blockconvert::BlockConvert::from(&downloaded);
+        let _ = bc
+            .write_all(
+                &std::path::Path::new("output/blocked_domains.txt"),
+                &std::path::Path::new("output/allowed_domains.txt"),
+                &std::path::Path::new("output/blocked_ips.txt"),
+                &std::path::Path::new("output/allowed_ips.txt"),
+            )
+            .await;
     }
+}
+
+fn main() {
+    let mut rt = tokio::runtime::Runtime::new().unwrap();
+    rt.block_on(generate());
 
     return;
     let mut client = reqwest::Client::new();
