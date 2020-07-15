@@ -1,7 +1,6 @@
 use crate::{FilterListType, Record};
 
-use std::io::Read;
-use std::io::Write;
+use tokio::prelude::*;
 
 fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error::Error>> {
     let mut path = std::path::PathBuf::from("data");
@@ -13,8 +12,8 @@ fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error:
     Ok(path)
 }
 
-fn needs_updating(path: &std::path::Path, expires: u64) -> bool {
-    if let Ok(metadata) = std::fs::metadata(path) {
+async fn needs_updating(path: &std::path::Path, expires: u64) -> bool {
+    if let Ok(metadata) = tokio::fs::metadata(path).await {
         if let Ok(modified) = metadata.modified().or(metadata.created()) {
             let now = std::time::SystemTime::now();
             if let Ok(duration_since) = now.duration_since(modified) {
@@ -32,19 +31,19 @@ async fn download_list_if_expired(
     list_type: FilterListType,
 ) -> Result<(FilterListType, String), Box<dyn std::error::Error>> {
     let path = get_path_for_url(url)?;
-    if needs_updating(&path, expires) {
+    if needs_updating(&path, expires).await {
         if let Ok(response) = client.get(url).send().await {
             if let Ok(text) = response.text().await {
                 println!("Downloaded: {:?}", url);
-                let mut file = std::fs::File::create(path).unwrap();
-                file.write_all(text.as_bytes()).unwrap();
+                let mut file = tokio::fs::File::create(path).await?;
+                file.write_all(text.as_bytes()).await?;
                 return Ok((list_type, text));
             }
         }
     }
-    let mut file = std::fs::File::open(path)?;
+    let mut file = tokio::fs::File::open(path).await?;
     let mut text = String::new();
-    file.read_to_string(&mut text)?;
+    file.read_to_string(&mut text).await?;
     Ok((list_type, text))
 }
 
