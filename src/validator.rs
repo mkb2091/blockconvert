@@ -4,7 +4,15 @@ use std::str::FromStr;
 pub struct InvalidDomain {}
 
 #[derive(PartialEq, PartialOrd, Eq, Ord, Hash, Clone, Debug)]
-pub struct Domain(String);
+pub struct Domain(Box<str>);
+
+impl Domain {
+    pub fn iter_parent_domains(&self) -> impl Iterator<Item = Domain> + '_ {
+        self.0
+            .match_indices(|c| c == '.')
+            .map(move |(i, _)| Domain(self.0.split_at(i + 1).1.to_string().into_boxed_str()))
+    }
+}
 
 impl FromStr for Domain {
     type Err = InvalidDomain;
@@ -29,7 +37,7 @@ impl FromStr for Domain {
         if label_count <= 1 || s.chars().all(|c| c == '.' || c.is_digit(10)) {
             return Err(Self::Err::default());
         }
-        Ok(Domain(s.to_string()))
+        Ok(Domain(s.to_string().into_boxed_str()))
     }
 }
 

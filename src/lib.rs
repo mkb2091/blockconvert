@@ -161,7 +161,7 @@ impl BlockConvert {
         self.blocked_ip_addrs = self
             .blocked_ip_addrs
             .difference(&self.allowed_ip_addrs)
-            .filter(|ip| self.filter.allowed(&ip.to_string()).unwrap_or(false) == false)
+            .filter(|ip| self.filter.allowed_ip(**ip).unwrap_or(false) == false)
             .cloned()
             .collect();
     }
@@ -170,7 +170,7 @@ impl BlockConvert {
     where
         T: Iterator<Item = &'a String>,
     {
-        for domain in domains.filter_map(|domain| domain.parse::<Domain>().ok()) {
+        for domain in domains.filter_map(|domain| domain.as_str().parse::<Domain>().ok()) {
             if let Some(allowed) = self.filter.allowed(&domain) {
                 if allowed {
                     self.blocked_domains.remove(&domain);
