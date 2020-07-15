@@ -1,28 +1,6 @@
-use serde::*;
+use blockconvert::Record;
 
 const LIST_CSV: &'static str = "filterlists.csv";
-
-#[derive(Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord)]
-struct Record {
-    name: String,
-    url: String,
-    author: String,
-    license: String,
-    expires: usize,
-    list_type: FilterListType,
-}
-
-#[derive(Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord)]
-enum FilterListType {
-    Adblock,
-    DomainBlocklist,
-    DomainAllowlist,
-    IPBlocklist,
-    IPAllowlist,
-    Hostfile,
-    DNSRPZ,
-    PrivacyBadger,
-}
 
 fn read_csv() -> Result<Vec<Record>, csv::Error> {
     let path = std::path::Path::new(LIST_CSV);
@@ -47,10 +25,17 @@ fn read_csv() -> Result<Vec<Record>, csv::Error> {
 }
 
 fn main() {
-    println!("Result: {:?}", read_csv());
+    let client = reqwest::Client::new();
+    let mut rt = tokio::runtime::Runtime::new().unwrap();
+    if let Ok(records) = read_csv() {
+        let downloaded = rt.block_on(blockconvert::list_downloader::download_all(
+            &client, &records,
+        ));
+    } else {
+        println!("Failed to open filterlists.csv")
+    }
 
     return;
-    let mut rt = tokio::runtime::Runtime::new().unwrap();
     let mut client = reqwest::Client::new();
     let servers = [
         "https://dns.google.com/resolve".to_string(),
