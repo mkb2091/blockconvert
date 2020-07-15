@@ -9,7 +9,7 @@ edition = "2018"
 [dependencies]
 reqwest = {version = "0.10", features = ["rustls-tls", "gzip", "brotli", "json"]}
 futures = {version = "0.3"}
-tokio = "0.2"
+tokio = {version = "0.2", features = ["fs"]}
 rand = "0.7"
 serde = {version = "1.0", features = ["derive"]}
 
