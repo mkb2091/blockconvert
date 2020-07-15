@@ -1,6 +1,8 @@
+use crate::Domain;
+
 pub struct DomainFilterBuilder {
-    allow_subdomains: std::collections::HashSet<String>,
-    disallow_subdomains: std::collections::HashSet<String>,
+    allow_subdomains: std::collections::HashSet<Domain>,
+    disallow_subdomains: std::collections::HashSet<Domain>,
     adblock: std::collections::HashSet<String>,
     allow_regex: std::collections::HashSet<String>,
     disallow_regex: std::collections::HashSet<String>,
@@ -18,12 +20,14 @@ impl DomainFilterBuilder {
     }
 
     pub fn add_allow_subdomain(&mut self, base_domain: &str) {
-        self.allow_subdomains
-            .insert(base_domain.trim_start_matches("*.").to_string());
+        if let Ok(domain) = base_domain.trim_start_matches("*.").parse::<Domain>() {
+            self.allow_subdomains.insert(domain);
+        }
     }
     pub fn add_disallow_subdomain(&mut self, base_domain: &str) {
-        self.disallow_subdomains
-            .insert(base_domain.trim_start_matches("*.").to_string());
+        if let Ok(domain) = base_domain.trim_start_matches("*.").parse::<Domain>() {
+            self.disallow_subdomains.insert(domain);
+        }
     }
 
     pub fn add_adblock_rule(&mut self, rule: &str) {
@@ -54,41 +58,58 @@ impl DomainFilterBuilder {
     }
 }
 
-fn is_subdomain(domain: &str, filter_list: &std::collections::HashSet<String>) -> bool {
-    for (i, _) in domain.match_indices(|c| c == '.') {
-        if filter_list.contains(&domain.split_at(i + 1).1.to_string()) {
-            return true;
-        }
-    }
-    false
+fn is_subdomain(domain: &Domain, filter_list: &std::collections::HashSet<Domain>) -> bool {
+    domain
+        .iter_parent_domains()
+        .any(|part| filter_list.contains(&part))
 }
 
 #[allow(dead_code)]
 pub struct DomainFilter {
-    allow_subdomains: std::collections::HashSet<String>,
-    disallow_subdomains: std::collections::HashSet<String>,
+    allow_subdomains: std::collections::HashSet<Domain>,
+    disallow_subdomains: std::collections::HashSet<Domain>,
     adblock: adblock::engine::Engine,
     allow_regex: regex::RegexSet,
     disallow_regex: regex::RegexSet,
 }
 #[allow(dead_code)]
 impl DomainFilter {
-    pub fn allowed(&self, domain: &str) -> Option<bool> {
-        if self.allow_regex.is_match(domain) || is_subdomain(domain, &self.allow_subdomains) {
+    pub fn allowed<'b>(&self, domain: &Domain) -> Option<bool> {
+        if self.allow_regex.is_match(domain) || is_subdomain(&*domain, &self.allow_subdomains) {
             return Some(true);
         }
         let url = format!("https://{}", domain);
         let blocker_result = self.adblock.check_network_urls(&url, &url, "");
         if blocker_result.exception.is_some() {
             // Adblock exception rule
-            return Some(true);
+            Some(true)
         } else if blocker_result.matched
             || self.disallow_regex.is_match(domain)
-            || is_subdomain(domain, &self.disallow_subdomains)
+            || is_subdomain(&*domain, &self.disallow_subdomains)
         {
-            return Some(false);
+            Some(false)
+        } else {
+            None
         }
-        None
+    }
+    pub fn allowed_str(&self, domain: &str) -> Option<bool> {
+        if let Ok(domain) = domain.parse::<Domain>() {
+            self.allowed(&domain)
+        } else {
+            None
+        }
+    }
+    pub fn allowed_ip(&self, ip: std::net::IpAddr) -> Option<bool> {
+        let url = format!("http://{}", ip);
+        let blocker_result = self.adblock.check_network_urls(&url, &url, "");
+        if blocker_result.exception.is_some() {
+            // Adblock exception rule
+            Some(true)
+        } else if blocker_result.matched {
+            Some(false)
+        } else {
+            None
+        }
     }
 }
 
@@ -97,7 +118,7 @@ fn default_unblocked() {
     assert_eq!(
         DomainFilterBuilder::new()
             .to_domain_filter()
-            .allowed("example.org"),
+            .allowed_str("example.org"),
         None
     )
 }
@@ -107,7 +128,7 @@ fn regex_disallow_all_blocks_domain() {
     let mut filter = DomainFilterBuilder::new();
     filter.add_disallow_regex(".");
     let filter = filter.to_domain_filter();
-    assert_eq!(filter.allowed("example.org"), Some(false))
+    assert_eq!(filter.allowed_str("example.org"), Some(false))
 }
 #[test]
 fn regex_allow_overrules_regex_disallow() {
@@ -115,7 +136,7 @@ fn regex_allow_overrules_regex_disallow() {
     filter.add_disallow_regex(".");
     filter.add_allow_regex(".");
     let filter = filter.to_domain_filter();
-    assert_eq!(filter.allowed("example.org"), Some(true))
+    assert_eq!(filter.allowed_str("example.org"), Some(true))
 }
 
 #[test]
@@ -123,7 +144,7 @@ fn adblock_can_block_domain() {
     let mut filter = DomainFilterBuilder::new();
     filter.add_adblock_rule("||example.com^");
     let filter = filter.to_domain_filter();
-    assert_eq!(filter.allowed("example.com"), Some(false))
+    assert_eq!(filter.allowed_str("example.com"), Some(false))
 }
 
 #[test]
@@ -135,7 +156,7 @@ fn adblock_can_whitelist_blocked_domain() {
     filter.add_adblock_rule("||example.com^");
     filter.add_adblock_rule("@@||example.com^");
     let filter = filter.to_domain_filter();
-    assert_eq!(filter.allowed("example.com"), Some(true))
+    assert_eq!(filter.allowed_str("example.com"), Some(true))
 }
 
 #[test]
@@ -143,7 +164,7 @@ fn subdomain_disallow_blocks() {
     let mut filter = DomainFilterBuilder::new();
     filter.add_disallow_subdomain("example.com");
     let filter = filter.to_domain_filter();
-    assert_eq!(filter.allowed("www.example.com"), Some(false))
+    assert_eq!(filter.allowed_str("www.example.com"), Some(false))
 }
 
 #[test]
@@ -152,7 +173,7 @@ fn subdomain_allow_whitelists_domains() {
     filter.add_disallow_regex(".");
     filter.add_allow_subdomain("example.com");
     let filter = filter.to_domain_filter();
-    assert_eq!(filter.allowed("www.example.com"), Some(true))
+    assert_eq!(filter.allowed_str("www.example.com"), Some(true))
 }
 
 #[test]
@@ -160,5 +181,5 @@ fn subdomain_disallow_does_not_block_domain() {
     let mut filter = DomainFilterBuilder::new();
     filter.add_disallow_subdomain("example.com");
     let filter = filter.to_domain_filter();
-    assert_eq!(filter.allowed("example.com"), None)
+    assert_eq!(filter.allowed_str("example.com"), None)
 }
