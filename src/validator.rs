@@ -1,9 +1,10 @@
+use serde::*;
 use std::str::FromStr;
 
 #[derive(Default, Debug)]
 pub struct InvalidDomain {}
 
-#[derive(PartialEq, PartialOrd, Eq, Ord, Hash, Clone, Debug)]
+#[derive(Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord, Hash, Clone, Debug)]
 pub struct Domain(Box<str>);
 
 impl Domain {

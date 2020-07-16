@@ -1,4 +1,3 @@
-use rand::seq::SliceRandom;
 use serde::Deserialize;
 
 #[derive(Deserialize, Debug)]
@@ -39,19 +38,17 @@ struct DoHResult {
 
 #[derive(Debug, Default)]
 pub struct DNSLookupResults {
-    ip_addresses: Vec<std::net::IpAddr>,
-    cnames: Vec<String>,
+    pub ip_addresses: Vec<std::net::IpAddr>,
+    pub cnames: Vec<String>,
 }
 
 async fn lookup_domain_(
-    servers: &[String],
+    server: &str,
     client: &reqwest::Client,
-    rng: &mut dyn rand::RngCore,
     domain: &str,
 ) -> Result<Option<DNSLookupResults>, reqwest::Error> {
-    let server = servers.choose(rng).unwrap();
-    let request = client.get(server);
-    let json: DoHResult = request
+    let json: DoHResult = client
+        .get(server)
         .query(&[("name", domain), ("type", "1")])
         .send()
         .await?
@@ -78,14 +75,13 @@ async fn lookup_domain_(
     }
 }
 pub async fn lookup_domain(
-    servers: &[String],
+    server: &str,
     client: &reqwest::Client,
-    rng: &mut dyn rand::RngCore,
     attempts: usize,
     domain: &str,
 ) -> Option<DNSLookupResults> {
     for _ in 0..attempts {
-        if let Ok(result) = lookup_domain_(servers, client, rng, domain).await {
+        if let Ok(result) = lookup_domain_(server, client, domain).await {
             return result;
         }
     }

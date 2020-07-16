@@ -1,4 +1,4 @@
-use crate::{FilterListType, Record};
+use crate::{FilterListRecord, FilterListType};
 
 use tokio::prelude::*;
 
@@ -49,7 +49,7 @@ async fn download_list_if_expired(
 
 pub async fn download_all(
     client: &reqwest::Client,
-    records: &[Record],
+    records: &[FilterListRecord],
 ) -> Vec<(FilterListType, String)> {
     let downloads: Vec<_> = records
         .iter()
