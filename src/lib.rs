@@ -1,6 +1,7 @@
 #[macro_use]
 extern crate lazy_static;
 
+pub mod dns_lookup;
 pub mod doh;
 pub mod domain_filter;
 pub mod list_downloader;
@@ -19,7 +20,7 @@ lazy_static! {
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord)]
-pub struct Record {
+pub struct FilterListRecord {
     pub name: String,
     pub url: String,
     pub author: String,
@@ -179,6 +180,16 @@ impl BlockConvert {
             allowed_ip_addrs: Default::default(),
             extracted_domains,
         }
+    }
+
+    pub async fn check_dns(&mut self, servers: &[String], client: &reqwest::Client) {
+        let _ = dns_lookup::lookup_domains(
+            self.extracted_domains.clone(),
+            |domain, cnames, ips| self.process_domain(domain, cnames, ips),
+            servers,
+            client,
+        )
+        .await;
     }
 
     fn process_domain(&mut self, domain: &Domain, cnames: &[Domain], ips: &[std::net::IpAddr]) {
