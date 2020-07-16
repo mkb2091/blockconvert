@@ -79,11 +79,11 @@ pub async fn lookup_domain(
     client: &reqwest::Client,
     attempts: usize,
     domain: &str,
-) -> Option<DNSLookupResults> {
+) -> Result<Option<DNSLookupResults>, reqwest::Error> {
     for _ in 0..attempts {
         if let Ok(result) = lookup_domain_(server, client, domain).await {
-            return result;
+            return Ok(result);
         }
     }
-    None
+    lookup_domain_(server, client, domain).await
 }
