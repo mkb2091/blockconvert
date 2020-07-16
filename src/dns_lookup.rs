@@ -2,12 +2,9 @@ use std::str::FromStr;
 
 use std::io::BufRead;
 
-use async_std::fs::File;
 use async_std::fs::OpenOptions;
 use async_std::io::BufWriter;
 use async_std::prelude::*;
-
-use futures::stream::Stream;
 
 use crate::{doh, Domain};
 
