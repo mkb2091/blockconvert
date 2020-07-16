@@ -1,6 +1,7 @@
 use crate::{FilterListRecord, FilterListType};
 
-use tokio::prelude::*;
+use async_std::fs::File;
+use async_std::prelude::*;
 
 fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error::Error>> {
     let mut path = std::path::PathBuf::from("data");
@@ -13,7 +14,7 @@ fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error:
 }
 
 async fn needs_updating(path: &std::path::Path, expires: u64) -> bool {
-    if let Ok(metadata) = tokio::fs::metadata(path).await {
+    if let Ok(metadata) = async_std::fs::metadata(path).await {
         if let Ok(modified) = metadata.modified().or(metadata.created()) {
             let now = std::time::SystemTime::now();
             if let Ok(duration_since) = now.duration_since(modified) {
@@ -35,13 +36,13 @@ async fn download_list_if_expired(
         if let Ok(response) = client.get(url).send().await {
             if let Ok(text) = response.text().await {
                 println!("Downloaded: {:?}", url);
-                let mut file = tokio::fs::File::create(path).await?;
+                let mut file = File::create(path).await?;
                 file.write_all(text.as_bytes()).await?;
                 return Ok((list_type, text));
             }
         }
     }
-    let mut file = tokio::fs::File::open(path).await?;
+    let mut file = File::open(path).await?;
     let mut text = String::new();
     file.read_to_string(&mut text).await?;
     Ok((list_type, text))
