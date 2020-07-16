@@ -14,7 +14,8 @@ use async_std::io::BufWriter;
 use async_std::prelude::*;
 
 lazy_static! {
-    static ref DOMAIN_REGEX: regex::Regex = regex::Regex::new("...").unwrap();
+    static ref DOMAIN_REGEX: regex::Regex =
+        regex::Regex::new("(?:[0-9A-Za-z-]+[.])+[0-9A-Za-z-]+").unwrap();
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord)]
@@ -47,19 +48,19 @@ pub struct BlockConvert {
     allowed_domains: std::collections::HashSet<Domain>,
     blocked_ip_addrs: std::collections::HashSet<std::net::IpAddr>,
     allowed_ip_addrs: std::collections::HashSet<std::net::IpAddr>,
+    extracted_domains: std::collections::HashSet<Domain>,
 }
 
 impl BlockConvert {
     pub fn from(filter_lists: &[(FilterListType, String)]) -> Self {
         let mut builder = domain_filter::DomainFilterBuilder::new();
-        let mut extracted_domains: std::collections::HashSet<String> = Default::default();
-        let mut blocked_domains: std::collections::HashSet<Domain> = Default::default();
-        let mut allowed_domains: std::collections::HashSet<Domain> = Default::default();
-        let mut blocked_ip_addrs: std::collections::HashSet<std::net::IpAddr> = Default::default();
-        let mut allowed_ip_addrs: std::collections::HashSet<std::net::IpAddr> = Default::default();
+        let mut extracted_domains: std::collections::HashSet<Domain> = Default::default();
         for (list_type, data) in filter_lists.iter() {
-            for domain in DOMAIN_REGEX.find_iter(data) {
-                extracted_domains.insert(domain.as_str().to_string());
+            for domain in DOMAIN_REGEX
+                .find_iter(data)
+                .filter_map(|domain| domain.as_str().parse::<Domain>().ok())
+            {
+                extracted_domains.insert(domain);
             }
             if *list_type != FilterListType::PrivacyBadger {
                 for line in data.lines() {
@@ -68,23 +69,45 @@ impl BlockConvert {
                         FilterListType::RegexAllowlist => builder.add_allow_regex(line),
                         FilterListType::RegexBlocklist => builder.add_disallow_regex(line),
                         FilterListType::DomainBlocklist => {
-                            if let Some(domain) = line
+                            if let Some((domain, is_star_subdomain)) = line
                                 .split_whitespace()
                                 .next()
                                 .and_then(|domain| domain.split_terminator('#').next())
-                                .and_then(|domain| domain.parse::<Domain>().ok())
+                                .and_then(|unprocessed| {
+                                    unprocessed
+                                        .trim_start_matches("*.")
+                                        .parse::<Domain>()
+                                        .ok()
+                                        .map(|domain| (domain, unprocessed.starts_with("*.")))
+                                })
                             {
-                                blocked_domains.insert(domain);
+                                extracted_domains.insert(domain.clone());
+                                if is_star_subdomain {
+                                    builder.add_disallow_subdomain(domain)
+                                } else {
+                                    builder.add_disallow_domain(domain);
+                                }
                             }
                         }
                         FilterListType::DomainAllowlist => {
-                            if let Some(domain) = line
+                            if let Some((domain, is_star_subdomain)) = line
                                 .split_whitespace()
                                 .next()
                                 .and_then(|domain| domain.split_terminator('#').next())
-                                .and_then(|domain| domain.parse::<Domain>().ok())
+                                .and_then(|unprocessed| {
+                                    unprocessed
+                                        .trim_start_matches("*.")
+                                        .parse::<Domain>()
+                                        .ok()
+                                        .map(|domain| (domain, unprocessed.starts_with("*.")))
+                                })
                             {
-                                allowed_domains.insert(domain);
+                                extracted_domains.insert(domain.clone());
+                                if is_star_subdomain {
+                                    builder.add_allow_subdomain(domain)
+                                } else {
+                                    builder.add_allow_domain(domain);
+                                }
                             }
                         }
                         FilterListType::IPBlocklist => {
@@ -94,7 +117,7 @@ impl BlockConvert {
                                 .and_then(|ip| ip.split_terminator('#').next())
                                 .and_then(|ip| ip.parse::<std::net::IpAddr>().ok())
                             {
-                                blocked_ip_addrs.insert(ip);
+                                builder.add_disallow_ip_addr(ip);
                             }
                         }
                         FilterListType::IPAllowlist => {
@@ -104,7 +127,7 @@ impl BlockConvert {
                                 .and_then(|ip| ip.split_terminator('#').next())
                                 .and_then(|ip| ip.parse::<std::net::IpAddr>().ok())
                             {
-                                allowed_ip_addrs.insert(ip);
+                                builder.add_allow_ip_addr(ip);
                             }
                         }
                         FilterListType::Hostfile => {
@@ -116,14 +139,24 @@ impl BlockConvert {
                                     "::1" => true,
                                     _ => false,
                                 } {
-                                    if let Some(second_part) = parts
+                                    if let Some((domain, is_star_subdomain)) = parts
                                         .next()
                                         .and_then(|domain| domain.split_terminator('#').next())
+                                        .and_then(|unprocessed| {
+                                            unprocessed
+                                                .trim_start_matches("*.")
+                                                .parse::<Domain>()
+                                                .ok()
+                                                .map(|domain| {
+                                                    (domain, unprocessed.starts_with("*."))
+                                                })
+                                        })
                                     {
-                                        if second_part.starts_with("*.") {
-                                            builder.add_disallow_subdomain(second_part)
-                                        } else if let Ok(domain) = second_part.parse::<Domain>() {
-                                            blocked_domains.insert(domain);
+                                        extracted_domains.insert(domain.clone());
+                                        if is_star_subdomain {
+                                            builder.add_disallow_subdomain(domain)
+                                        } else {
+                                            builder.add_disallow_domain(domain);
                                         }
                                     }
                                 }
@@ -138,47 +171,26 @@ impl BlockConvert {
                 }
             }
         }
-        let mut generated = Self {
+        Self {
             filter: builder.to_domain_filter(),
-            blocked_domains,
-            allowed_domains,
-            blocked_ip_addrs,
-            allowed_ip_addrs,
-        };
-        generated.remove_allowed_from_blocked();
-        generated.apply_filter_to_domains(extracted_domains.iter());
-        generated
+            blocked_domains: Default::default(),
+            allowed_domains: Default::default(),
+            blocked_ip_addrs: Default::default(),
+            allowed_ip_addrs: Default::default(),
+            extracted_domains,
+        }
     }
 
-    fn remove_allowed_from_blocked(&mut self) {
-        self.blocked_domains = self
-            .blocked_domains
-            .difference(&self.allowed_domains)
-            .filter(|domain| self.filter.allowed(domain).unwrap_or(false) == false)
-            .cloned()
-            .collect();
-
-        self.blocked_ip_addrs = self
-            .blocked_ip_addrs
-            .difference(&self.allowed_ip_addrs)
-            .filter(|ip| self.filter.allowed_ip(**ip).unwrap_or(false) == false)
-            .cloned()
-            .collect();
-    }
-
-    pub fn apply_filter_to_domains<'a, T>(&mut self, domains: T)
-    where
-        T: Iterator<Item = &'a String>,
-    {
-        for domain in domains.filter_map(|domain| domain.as_str().parse::<Domain>().ok()) {
-            if let Some(allowed) = self.filter.allowed(&domain) {
-                if allowed {
-                    self.blocked_domains.remove(&domain);
-                    self.allowed_domains.insert(domain.clone());
-                } else {
-                    self.blocked_domains.insert(domain.clone());
-                }
-            }
+    fn process_domain(&mut self, domain: &Domain, cnames: &[Domain], ips: &[std::net::IpAddr]) {
+        if ips.is_empty() {
+            return;
+        }
+        if let Some(allowed) = self.filter.allowed(domain, cnames, ips) {
+            if allowed {
+                self.allowed_domains.insert(domain.clone())
+            } else {
+                self.blocked_domains.insert(domain.clone())
+            };
         }
     }
 
