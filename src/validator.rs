@@ -1,6 +1,6 @@
 use std::str::FromStr;
 
-#[derive(Default)]
+#[derive(Default, Debug)]
 pub struct InvalidDomain {}
 
 #[derive(PartialEq, PartialOrd, Eq, Ord, Hash, Clone, Debug)]
