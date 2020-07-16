@@ -23,19 +23,28 @@ impl DomainFilterBuilder {
     }
 
     pub fn add_allow_domain(&mut self, domain: Domain) {
+        let _ = self.disallow_domains.remove(&domain);
         self.allow_domains.insert(domain);
     }
     pub fn add_disallow_domain(&mut self, domain: Domain) {
-        self.disallow_domains.insert(domain);
+        if !self.allow_domains.contains(&domain)
+            && !is_subdomain_of_list(&domain, &self.allow_subdomains)
+        {
+            self.disallow_domains.insert(domain);
+        }
     }
     pub fn add_allow_subdomain(&mut self, domain: Domain) {
+        let _ = self.disallow_subdomains.remove(&domain);
         self.allow_subdomains.insert(domain);
     }
     pub fn add_disallow_subdomain(&mut self, domain: Domain) {
-        self.disallow_subdomains.insert(domain);
+        if !self.allow_subdomains.contains(&domain) {
+            self.disallow_subdomains.insert(domain);
+        }
     }
 
     pub fn add_allow_ip_addr(&mut self, ip: std::net::IpAddr) {
+        let _ = self.disallow_ips.remove(&ip);
         self.allow_ips.insert(ip);
     }
     pub fn add_disallow_ip_addr(&mut self, ip: std::net::IpAddr) {
@@ -43,6 +52,7 @@ impl DomainFilterBuilder {
     }
 
     pub fn add_allow_ip_subnet(&mut self, net: ipnet::IpNet) {
+        let _ = self.disallow_ip_net.remove(&net);
         self.allow_ip_net.insert(net);
     }
 
@@ -84,7 +94,7 @@ impl DomainFilterBuilder {
     }
 }
 
-fn is_subdomain(domain: &Domain, filter_list: &std::collections::HashSet<Domain>) -> bool {
+fn is_subdomain_of_list(domain: &Domain, filter_list: &std::collections::HashSet<Domain>) -> bool {
     domain
         .iter_parent_domains()
         .any(|part| filter_list.contains(&part))
@@ -128,7 +138,7 @@ impl DomainFilter {
 
     fn domain_is_allowed(&self, domain: &Domain) -> Option<bool> {
         if self.allow_domains.contains(domain)
-            || is_subdomain(&*domain, &self.allow_subdomains)
+            || is_subdomain_of_list(&*domain, &self.allow_subdomains)
             || self.allow_regex.is_match(domain)
         {
             return Some(true);
@@ -140,7 +150,7 @@ impl DomainFilter {
             Some(true)
         } else if blocker_result.matched
             || self.disallow_domains.contains(domain)
-            || is_subdomain(&*domain, &self.disallow_subdomains)
+            || is_subdomain_of_list(&*domain, &self.disallow_subdomains)
             || self.disallow_regex.is_match(domain)
         {
             Some(false)
