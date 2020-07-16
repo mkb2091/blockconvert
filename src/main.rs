@@ -33,6 +33,15 @@ async fn generate() {
     if let Ok(records) = read_csv() {
         let downloaded = blockconvert::list_downloader::download_all(&client, &records).await;
         let mut bc = blockconvert::BlockConvert::from(&downloaded);
+        let mut headers = reqwest::header::HeaderMap::new();
+        headers.insert(
+            reqwest::header::ACCEPT,
+            "application/dns-json".parse().unwrap(),
+        );
+        let client = reqwest::Client::builder()
+            .default_headers(headers)
+            .build()
+            .unwrap();
         bc.check_dns(&servers, &client).await;
         let _ = bc
             .write_all(

@@ -70,13 +70,13 @@ async fn get_dns_results(
     client: &reqwest::Client,
     server: &str,
     domain: Domain,
-) -> DNSResultRecord {
+) -> Result<DNSResultRecord, Box<dyn std::error::Error>> {
     let mut record = DNSResultRecord {
         domain: domain.clone(),
         cnames: Vec::new(),
         ips: Vec::new(),
     };
-    if let Some(result) = doh::lookup_domain(&server, &client, 3, &domain).await {
+    if let Some(result) = doh::lookup_domain(&server, &client, 3, &domain).await? {
         for cname in result
             .cnames
             .iter()
@@ -88,7 +88,7 @@ async fn get_dns_results(
             record.ips.push(*ip);
         }
     };
-    record
+    Ok(record)
 }
 
 pub async fn lookup_domains<F>(
@@ -161,19 +161,25 @@ where
     }
     let now = std::time::Instant::now();
     let mut i = 0;
+    let mut error_count = 0;
     while let Some(record) = tasks.next().await {
-        if i % 100 == 0 {
-            println!(
-                "{}/{} {}/s Got response for {}",
-                i,
-                total_length,
-                i as f32 / now.elapsed().as_secs_f32(),
-                &record.domain
-            );
+        if let Ok(record) = record {
+            if i % 100 == 0 {
+                println!(
+                    "{}/{} {}/s with {} errors: Got response for {}",
+                    i,
+                    total_length,
+                    i as f32 / now.elapsed().as_secs_f32(),
+                    error_count,
+                    &record.domain
+                );
+            }
+            f(&record.domain, &record.cnames, &record.ips);
+            wtr.write_all(record.to_string().as_bytes()).await?;
+            wtr.write_all(b"\n").await?;
+        } else {
+            error_count += 1;
         }
-        f(&record.domain, &record.cnames, &record.ips);
-        wtr.write_all(record.to_string().as_bytes()).await?;
-        wtr.write_all(b"\n").await?;
         if let Some(next_domain) = domain_iter.next() {
             tasks.push(get_dns_results(
                 &client,
