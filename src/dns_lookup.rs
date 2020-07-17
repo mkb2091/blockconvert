@@ -12,7 +12,7 @@ const DNS_RECORD_DIR: &'static str = "dns_db";
 const MAX_AGE: u64 = 7 * 86400;
 
 #[derive(Clone, Debug)]
-struct DNSResultRecord {
+pub struct DNSResultRecord {
     pub domain: Domain,
     pub cnames: Vec<Domain>,
     pub ips: Vec<std::net::IpAddr>,
@@ -68,24 +68,13 @@ async fn get_dns_results(
     server: &str,
     domain: Domain,
 ) -> Result<DNSResultRecord, Box<dyn std::error::Error>> {
-    let mut record = DNSResultRecord {
-        domain: domain.clone(),
-        cnames: Vec::new(),
-        ips: Vec::new(),
-    };
-    if let Some(result) = doh::lookup_domain(&server, &client, 3, &domain).await? {
-        for cname in result
-            .cnames
-            .iter()
-            .filter_map(|cname| cname.parse::<Domain>().ok())
-        {
-            record.cnames.push(cname);
-        }
-        for ip in result.ip_addresses.iter() {
-            record.ips.push(*ip);
-        }
-    };
-    Ok(record)
+    Ok(doh::lookup_domain(&server, &client, 3, &domain)
+        .await?
+        .unwrap_or_else(|| DNSResultRecord {
+            domain: domain,
+            cnames: Vec::new(),
+            ips: Vec::new(),
+        }))
 }
 
 pub async fn lookup_domains<F>(
