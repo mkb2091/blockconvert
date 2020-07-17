@@ -19,6 +19,12 @@ lazy_static! {
         regex::Regex::new("(?:[0-9A-Za-z-]+[.])+[0-9A-Za-z-]+").unwrap();
 }
 
+lazy_static! {
+    static ref IP_REGEX: regex::Regex =
+        regex::Regex::new("[12]?[0-9]{0,2}[.][12]?[0-9]{0,2}[.][12]?[0-9]{0,2}[.][12]?[0-9]{0,2}")
+            .unwrap();
+}
+
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord)]
 pub struct FilterListRecord {
     pub name: String,
@@ -47,6 +53,7 @@ pub enum FilterListType {
 pub struct BlockConvertBuilder {
     filter_builder: domain_filter::DomainFilterBuilder,
     extracted_domains: std::collections::HashSet<Domain>,
+    extracted_ips: std::collections::HashSet<std::net::IpAddr>,
 }
 
 impl BlockConvertBuilder {
@@ -81,6 +88,12 @@ impl BlockConvertBuilder {
             .filter_map(|domain| domain.as_str().parse::<Domain>().ok())
         {
             self.extracted_domains.insert(domain);
+        }
+        for ip in IP_REGEX
+            .find_iter(data)
+            .filter_map(|domain| domain.as_str().parse::<std::net::IpAddr>().ok())
+        {
+            self.extracted_ips.insert(ip);
         }
         match list_type {
             FilterListType::Adblock => data
@@ -146,6 +159,15 @@ impl BlockConvertBuilder {
             allowed_ip_addrs: Default::default(),
         };
         bc.extracted_domains.shrink_to_fit();
+        for ip in self.extracted_ips.into_iter() {
+            if let Some(allowed) = bc.filter.ip_is_allowed(&ip) {
+                if allowed {
+                    bc.allowed_ip_addrs.insert(ip);
+                } else {
+                    bc.blocked_ip_addrs.insert(ip);
+                }
+            }
+        }
         bc
     }
 }
