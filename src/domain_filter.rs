@@ -168,10 +168,17 @@ impl DomainFilter {
         }
     }
 
-    fn ip_is_allowed(&self, ip: &std::net::IpAddr) -> Option<bool> {
+    pub fn ip_is_allowed(&self, ip: &std::net::IpAddr) -> Option<bool> {
         if self.allow_ips.contains(ip) || self.allow_ip_net.iter().any(|net| net.contains(ip)) {
+            return Some(true);
+        }
+        let url = format!("https://{}", ip);
+        let blocker_result = self.adblock.check_network_urls(&url, &url, "");
+        if blocker_result.exception.is_some() {
+            // Adblock exception rule
             Some(true)
-        } else if self.disallow_ips.contains(ip)
+        } else if blocker_result.matched
+            || self.disallow_ips.contains(ip)
             || self.disallow_ip_net.iter().any(|net| net.contains(ip))
         {
             Some(false)
