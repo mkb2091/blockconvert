@@ -75,14 +75,14 @@ impl DomainFilterBuilder {
         }
     }
 
-    pub fn to_domain_filter(&self) -> DomainFilter {
-        DomainFilter {
-            allow_domains: self.allow_domains.clone(),
-            disallow_domains: self.disallow_domains.clone(),
-            allow_subdomains: self.allow_subdomains.clone(),
-            disallow_subdomains: self.disallow_subdomains.clone(),
-            allow_ips: self.allow_ips.clone(),
-            disallow_ips: self.disallow_ips.clone(),
+    pub fn to_domain_filter(self) -> DomainFilter {
+        let mut filter = DomainFilter {
+            allow_domains: self.allow_domains,
+            disallow_domains: self.disallow_domains,
+            allow_subdomains: self.allow_subdomains,
+            disallow_subdomains: self.disallow_subdomains,
+            allow_ips: self.allow_ips,
+            disallow_ips: self.disallow_ips,
             allow_ip_net: self.allow_ip_net.iter().cloned().collect(),
             disallow_ip_net: self.disallow_ip_net.iter().cloned().collect(),
             adblock: adblock::engine::Engine::from_rules(
@@ -90,7 +90,16 @@ impl DomainFilterBuilder {
             ),
             allow_regex: regex::RegexSet::new(&self.allow_regex).unwrap(),
             disallow_regex: regex::RegexSet::new(&self.disallow_regex).unwrap(),
-        }
+        };
+        filter.allow_domains.shrink_to_fit();
+        filter.disallow_domains.shrink_to_fit();
+        filter.allow_subdomains.shrink_to_fit();
+        filter.disallow_subdomains.shrink_to_fit();
+        filter.allow_ips.shrink_to_fit();
+        filter.disallow_ips.shrink_to_fit();
+        filter.allow_ip_net.shrink_to_fit();
+        filter.disallow_ip_net.shrink_to_fit();
+        filter
     }
 }
 
