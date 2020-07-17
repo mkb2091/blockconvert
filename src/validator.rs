@@ -38,7 +38,7 @@ impl FromStr for Domain {
         if label_count <= 1 || s.chars().all(|c| c == '.' || c.is_digit(10)) {
             return Err(Self::Err::default());
         }
-        Ok(Domain(s.to_string().into_boxed_str()))
+        Ok(Domain(s.to_ascii_lowercase().into_boxed_str()))
     }
 }
 
