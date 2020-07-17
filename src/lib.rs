@@ -43,6 +43,113 @@ pub enum FilterListType {
     PrivacyBadger,
 }
 
+#[derive(Default)]
+pub struct BlockConvertBuilder {
+    filter_builder: domain_filter::DomainFilterBuilder,
+    extracted_domains: std::collections::HashSet<Domain>,
+}
+
+impl BlockConvertBuilder {
+    pub fn new() -> Self {
+        Self::default()
+    }
+    fn add_domain_list(&mut self, data: &str, is_allow_list: bool) {
+        for (domain, is_star_subdomain) in data
+            .lines()
+            .filter_map(|line| line.split_whitespace().next())
+            .filter_map(|line| line.split_terminator('#').next())
+            .filter_map(|unprocessed| {
+                unprocessed
+                    .trim_start_matches("*.")
+                    .parse::<Domain>()
+                    .ok()
+                    .map(|domain| (domain, unprocessed.starts_with("*.")))
+            })
+        {
+            match (is_allow_list, is_star_subdomain) {
+                (true, true) => self.filter_builder.add_allow_subdomain(domain),
+                (true, false) => self.filter_builder.add_allow_domain(domain),
+                (false, true) => self.filter_builder.add_disallow_subdomain(domain),
+                (false, false) => self.filter_builder.add_disallow_domain(domain),
+            }
+        }
+    }
+
+    pub fn add_list(&mut self, list_type: FilterListType, data: &str) {
+        for domain in DOMAIN_REGEX
+            .find_iter(data)
+            .filter_map(|domain| domain.as_str().parse::<Domain>().ok())
+        {
+            self.extracted_domains.insert(domain);
+        }
+        match list_type {
+            FilterListType::Adblock => data
+                .lines()
+                .for_each(|line| self.filter_builder.add_adblock_rule(line)),
+            FilterListType::RegexAllowlist => data
+                .lines()
+                .for_each(|line| self.filter_builder.add_allow_regex(line)),
+            FilterListType::RegexBlocklist => data
+                .lines()
+                .for_each(|line| self.filter_builder.add_disallow_regex(line)),
+            FilterListType::DomainAllowlist => self.add_domain_list(data, true),
+            FilterListType::DomainBlocklist => self.add_domain_list(data, false),
+            FilterListType::IPBlocklist => data
+                .lines()
+                .filter_map(|line| line.split_whitespace().next())
+                .filter_map(|ip| ip.split_terminator('#').next())
+                .filter_map(|ip| ip.parse::<std::net::IpAddr>().ok())
+                .for_each(|ip| self.filter_builder.add_disallow_ip_addr(ip)),
+            FilterListType::IPAllowlist => data
+                .lines()
+                .filter_map(|line| line.split_whitespace().next())
+                .filter_map(|ip| ip.split_terminator('#').next())
+                .filter_map(|ip| ip.parse::<std::net::IpAddr>().ok())
+                .for_each(|ip| self.filter_builder.add_allow_ip_addr(ip)),
+            FilterListType::Hostfile => data
+                .lines()
+                .filter_map(|line| {
+                    let mut parts = line.split_whitespace();
+                    Some((parts.next()?, parts.next()?))
+                })
+                .filter(|(ip, _)| match *ip {
+                    "0.0.0.0" => true,
+                    "127.0.0.1" => true,
+                    "::1" => true,
+                    _ => false,
+                })
+                .filter_map(|(_, domain)| domain.split_terminator('#').next())
+                .filter_map(|unprocessed| {
+                    unprocessed
+                        .trim_start_matches("*.")
+                        .parse::<Domain>()
+                        .ok()
+                        .map(|domain| (domain, unprocessed.starts_with("*.")))
+                })
+                .for_each(|(domain, is_star_subdomain)| {
+                    if is_star_subdomain {
+                        self.filter_builder.add_disallow_subdomain(domain)
+                    } else {
+                        self.filter_builder.add_disallow_domain(domain)
+                    }
+                }),
+            list_type => println!("Unsupported list type: {:?}", list_type),
+        }
+    }
+    pub fn to_blockconvert(self) -> BlockConvert {
+        let mut bc = BlockConvert {
+            filter: self.filter_builder.to_domain_filter(),
+            extracted_domains: self.extracted_domains,
+            blocked_domains: Default::default(),
+            allowed_domains: Default::default(),
+            blocked_ip_addrs: Default::default(),
+            allowed_ip_addrs: Default::default(),
+        };
+        bc.extracted_domains.shrink_to_fit();
+        bc
+    }
+}
+
 pub struct BlockConvert {
     filter: domain_filter::DomainFilter,
     blocked_domains: std::collections::HashSet<Domain>,
@@ -54,132 +161,11 @@ pub struct BlockConvert {
 
 impl BlockConvert {
     pub fn from(filter_lists: &[(FilterListType, String)]) -> Self {
-        let mut builder = domain_filter::DomainFilterBuilder::new();
-        let mut extracted_domains: std::collections::HashSet<Domain> = Default::default();
+        let mut builder = BlockConvertBuilder::new();
         for (list_type, data) in filter_lists.iter() {
-            for domain in DOMAIN_REGEX
-                .find_iter(data)
-                .filter_map(|domain| domain.as_str().parse::<Domain>().ok())
-            {
-                extracted_domains.insert(domain);
-            }
-            if *list_type != FilterListType::PrivacyBadger {
-                for line in data.lines() {
-                    match list_type {
-                        FilterListType::Adblock => builder.add_adblock_rule(line),
-                        FilterListType::RegexAllowlist => builder.add_allow_regex(line),
-                        FilterListType::RegexBlocklist => builder.add_disallow_regex(line),
-                        FilterListType::DomainBlocklist => {
-                            if let Some((domain, is_star_subdomain)) = line
-                                .split_whitespace()
-                                .next()
-                                .and_then(|domain| domain.split_terminator('#').next())
-                                .and_then(|unprocessed| {
-                                    unprocessed
-                                        .trim_start_matches("*.")
-                                        .parse::<Domain>()
-                                        .ok()
-                                        .map(|domain| (domain, unprocessed.starts_with("*.")))
-                                })
-                            {
-                                extracted_domains.insert(domain.clone());
-                                if is_star_subdomain {
-                                    builder.add_disallow_subdomain(domain)
-                                } else {
-                                    builder.add_disallow_domain(domain);
-                                }
-                            }
-                        }
-                        FilterListType::DomainAllowlist => {
-                            if let Some((domain, is_star_subdomain)) = line
-                                .split_whitespace()
-                                .next()
-                                .and_then(|domain| domain.split_terminator('#').next())
-                                .and_then(|unprocessed| {
-                                    unprocessed
-                                        .trim_start_matches("*.")
-                                        .parse::<Domain>()
-                                        .ok()
-                                        .map(|domain| (domain, unprocessed.starts_with("*.")))
-                                })
-                            {
-                                extracted_domains.insert(domain.clone());
-                                if is_star_subdomain {
-                                    builder.add_allow_subdomain(domain)
-                                } else {
-                                    builder.add_allow_domain(domain);
-                                }
-                            }
-                        }
-                        FilterListType::IPBlocklist => {
-                            if let Some(ip) = line
-                                .split_whitespace()
-                                .next()
-                                .and_then(|ip| ip.split_terminator('#').next())
-                                .and_then(|ip| ip.parse::<std::net::IpAddr>().ok())
-                            {
-                                builder.add_disallow_ip_addr(ip);
-                            }
-                        }
-                        FilterListType::IPAllowlist => {
-                            if let Some(ip) = line
-                                .split_whitespace()
-                                .next()
-                                .and_then(|ip| ip.split_terminator('#').next())
-                                .and_then(|ip| ip.parse::<std::net::IpAddr>().ok())
-                            {
-                                builder.add_allow_ip_addr(ip);
-                            }
-                        }
-                        FilterListType::Hostfile => {
-                            let mut parts = line.split_whitespace();
-                            if let Some(ip) = parts.next() {
-                                if match ip {
-                                    "0.0.0.0" => true,
-                                    "127.0.0.1" => true,
-                                    "::1" => true,
-                                    _ => false,
-                                } {
-                                    if let Some((domain, is_star_subdomain)) = parts
-                                        .next()
-                                        .and_then(|domain| domain.split_terminator('#').next())
-                                        .and_then(|unprocessed| {
-                                            unprocessed
-                                                .trim_start_matches("*.")
-                                                .parse::<Domain>()
-                                                .ok()
-                                                .map(|domain| {
-                                                    (domain, unprocessed.starts_with("*."))
-                                                })
-                                        })
-                                    {
-                                        extracted_domains.insert(domain.clone());
-                                        if is_star_subdomain {
-                                            builder.add_disallow_subdomain(domain)
-                                        } else {
-                                            builder.add_disallow_domain(domain);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        FilterListType::DNSRPZ => {
-                            println!("Currently DNSRPZ is not supported");
-                            break;
-                        }
-                        _ => unimplemented!(),
-                    }
-                }
-            }
+            builder.add_list(*list_type, data)
         }
-        Self {
-            filter: builder.to_domain_filter(),
-            blocked_domains: Default::default(),
-            allowed_domains: Default::default(),
-            blocked_ip_addrs: Default::default(),
-            allowed_ip_addrs: Default::default(),
-            extracted_domains,
-        }
+        return builder.to_blockconvert();
     }
 
     pub async fn check_dns(&mut self, servers: &[String], client: &reqwest::Client) {
