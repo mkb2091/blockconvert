@@ -183,8 +183,10 @@ impl BlockConvert {
     }
 
     pub async fn check_dns(&mut self, servers: &[String], client: &reqwest::Client) {
+        let mut extracted_domains = Default::default();
+        std::mem::swap(&mut extracted_domains, &mut self.extracted_domains);
         let _ = dns_lookup::lookup_domains(
-            self.extracted_domains.clone(),
+            extracted_domains,
             |domain, cnames, ips| self.process_domain(domain, cnames, ips),
             servers,
             client,
