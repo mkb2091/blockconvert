@@ -5,7 +5,7 @@ use async_std::fs::File;
 
 use async_std::prelude::*;
 
-use blockconvert::{FilterListRecord, FilterListType};
+use blockconvert::{list_downloader, BlockConvertBuilder, FilterListRecord, FilterListType};
 
 const LIST_CSV: &'static str = "filterlists.csv";
 
@@ -38,23 +38,25 @@ async fn generate() {
         "https://cloudflare-dns.com/dns-query".to_string(),
     ];
     if let Ok(records) = read_csv() {
-        let mut bc = {
-            let mut filter_lists =
-                blockconvert::list_downloader::download_all(&client, &records).await;
-            for (file_path, list_type) in &[
-                ("blocklist.txt", FilterListType::DomainBlocklist),
-                ("allowlist.txt", FilterListType::DomainAllowlist),
-            ] {
-                let mut path = std::path::PathBuf::from("internal");
-                path.push(file_path);
-                if let Ok(mut file) = File::open(path).await {
-                    let mut text = String::new();
-                    let _ = file.read_to_string(&mut text).await;
-                    filter_lists.push((*list_type, text))
-                }
+        let mut builder = BlockConvertBuilder::new();
+        list_downloader::download_all(&client, &records, |list_type, data| {
+            builder.add_list(list_type, data)
+        })
+        .await;
+
+        for (file_path, list_type) in &[
+            ("blocklist.txt", FilterListType::DomainBlocklist),
+            ("allowlist.txt", FilterListType::DomainAllowlist),
+        ] {
+            let mut path = std::path::PathBuf::from("internal");
+            path.push(file_path);
+            if let Ok(mut file) = File::open(path).await {
+                let mut text = String::new();
+                let _ = file.read_to_string(&mut text).await;
+                builder.add_list(*list_type, &text)
             }
-            blockconvert::BlockConvert::from(&filter_lists)
-        };
+        }
+        let mut bc = builder.to_blockconvert();
         let mut headers = reqwest::header::HeaderMap::new();
         headers.insert(
             reqwest::header::ACCEPT,

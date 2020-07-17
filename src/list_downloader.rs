@@ -48,19 +48,20 @@ async fn download_list_if_expired(
     Ok((list_type, text))
 }
 
-pub async fn download_all(
-    client: &reqwest::Client,
-    records: &[FilterListRecord],
-) -> Vec<(FilterListType, String)> {
-    let downloads: Vec<_> = records
-        .iter()
-        .map(|record| {
-            download_list_if_expired(client, &record.url, record.expires, record.list_type)
-        })
-        .collect();
-    futures::future::join_all(downloads)
-        .await
-        .into_iter()
-        .filter_map(|x| x.ok())
-        .collect()
+pub async fn download_all<F>(client: &reqwest::Client, records: &[FilterListRecord], mut f: F)
+where
+    F: FnMut(FilterListType, &str) -> (),
+{
+    let mut downloads = futures::stream::FuturesUnordered::new();
+    for record in records {
+        downloads.push(download_list_if_expired(
+            client,
+            &record.url,
+            record.expires,
+            record.list_type,
+        ))
+    }
+    while let Some(Ok((list_type, data))) = downloads.next().await {
+        f(list_type, &data)
+    }
 }
