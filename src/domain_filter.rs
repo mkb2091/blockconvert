@@ -173,9 +173,8 @@ impl DomainFilter {
         } else if cnames
             .iter()
             .any(|cname| self.domain_is_allowed(cname) == Some(false))
+            || ips.iter().any(|ip| self.ip_is_allowed(ip) == Some(false))
         {
-            Some(false)
-        } else if ips.iter().any(|ip| self.ip_is_allowed(ip) == Some(false)) {
             Some(false)
         } else {
             None

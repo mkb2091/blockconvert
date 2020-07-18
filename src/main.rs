@@ -11,7 +11,7 @@ use blockconvert::{
     list_downloader, BlockConvert, BlockConvertBuilder, Domain, FilterListRecord, FilterListType,
 };
 
-const LIST_CSV: &'static str = "filterlists.csv";
+const LIST_CSV: &str = "filterlists.csv";
 
 use clap::Clap;
 
@@ -176,17 +176,17 @@ async fn query(q: Query) {
         }
     }
     for (file_path, list_type) in &[
-            ("blocklist.txt", FilterListType::DomainBlocklist),
-            ("allowlist.txt", FilterListType::DomainAllowlist),
-        ] {
-            let mut path = std::path::PathBuf::from("internal");
-            path.push(&file_path);
-            if let Ok(mut file) = File::open(path).await {
-                let mut text = String::new();
-                let _ = file.read_to_string(&mut text).await;
-                check_filter_list(&file_path, *list_type, &text);
-            }
+        ("blocklist.txt", FilterListType::DomainBlocklist),
+        ("allowlist.txt", FilterListType::DomainAllowlist),
+    ] {
+        let mut path = std::path::PathBuf::from("internal");
+        path.push(&file_path);
+        if let Ok(mut file) = File::open(path).await {
+            let mut text = String::new();
+            let _ = file.read_to_string(&mut text).await;
+            check_filter_list(&file_path, *list_type, &text);
         }
+    }
 }
 
 fn main() {

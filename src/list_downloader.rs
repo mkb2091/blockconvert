@@ -6,7 +6,10 @@ use async_std::prelude::*;
 fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error::Error>> {
     let mut path = std::path::PathBuf::from("data");
     path.push(std::path::PathBuf::from(url));
-    path = path.with_file_name(path.file_name().unwrap_or(std::ffi::OsStr::new("data.txt")));
+    path = path.with_file_name(
+        path.file_name()
+            .unwrap_or_else(|| std::ffi::OsStr::new("data.txt")),
+    );
     if let Some(parent) = path.parent() {
         std::fs::create_dir_all(parent)?
     }
@@ -15,7 +18,7 @@ fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error:
 
 async fn needs_updating(path: &std::path::Path, expires: u64) -> bool {
     if let Ok(metadata) = async_std::fs::metadata(path).await {
-        if let Ok(modified) = metadata.modified().or(metadata.created()) {
+        if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
             let now = std::time::SystemTime::now();
             if let Ok(duration_since) = now.duration_since(modified) {
                 return duration_since.as_secs() > expires;
@@ -50,7 +53,7 @@ pub async fn download_list_if_expired(
 
 pub async fn download_all<F>(client: &reqwest::Client, records: &[FilterListRecord], mut f: F)
 where
-    F: FnMut(FilterListType, &str) -> (),
+    F: FnMut(FilterListType, &str),
 {
     let mut downloads = futures::stream::FuturesUnordered::new();
     for record in records {

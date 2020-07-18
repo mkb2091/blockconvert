@@ -190,7 +190,7 @@ impl BlockConvert {
         for (list_type, data) in filter_lists.iter() {
             builder.add_list(*list_type, data)
         }
-        return builder.to_blockconvert();
+        builder.to_blockconvert()
     }
     pub fn allowed(
         &self,

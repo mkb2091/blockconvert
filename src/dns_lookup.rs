@@ -8,7 +8,7 @@ use async_std::prelude::*;
 
 use crate::{doh, Domain};
 
-const DNS_RECORD_DIR: &'static str = "dns_db";
+const DNS_RECORD_DIR: &str = "dns_db";
 const MAX_AGE: u64 = 7 * 86400;
 
 #[derive(Clone, Debug)]
@@ -16,24 +16,6 @@ pub struct DNSResultRecord {
     pub domain: Domain,
     pub cnames: Vec<Domain>,
     pub ips: Vec<std::net::IpAddr>,
-}
-
-impl DNSResultRecord {
-    fn to_string(&self) -> String {
-        let mut output = String::new();
-        output.push_str(&self.domain);
-        output.push(';');
-        for cname in self.cnames.iter() {
-            output.push_str(&cname);
-            output.push(',');
-        }
-        output.push(';');
-        for ip in self.ips.iter() {
-            output.push_str(&ip.to_string());
-            output.push(',');
-        }
-        output
-    }
 }
 
 impl FromStr for DNSResultRecord {
@@ -63,6 +45,24 @@ impl FromStr for DNSResultRecord {
     }
 }
 
+impl std::fmt::Display for DNSResultRecord {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        let mut output = String::new();
+        output.push_str(&self.domain);
+        output.push(';');
+        for cname in self.cnames.iter() {
+            output.push_str(&cname);
+            output.push(',');
+        }
+        output.push(';');
+        for ip in self.ips.iter() {
+            output.push_str(&ip.to_string());
+            output.push(',');
+        }
+        write!(f, "{}", output)
+    }
+}
+
 async fn get_dns_results(
     client: &reqwest::Client,
     server: &str,
@@ -71,7 +71,7 @@ async fn get_dns_results(
     Ok(doh::lookup_domain(&server, &client, 3, &domain)
         .await?
         .unwrap_or_else(|| DNSResultRecord {
-            domain: domain,
+            domain,
             cnames: Vec::new(),
             ips: Vec::new(),
         }))
@@ -85,13 +85,13 @@ pub async fn lookup_domains<F>(
     client: &reqwest::Client,
 ) -> Result<(), Box<dyn std::error::Error>>
 where
-    F: FnMut(&Domain, &[Domain], &[std::net::IpAddr]) -> (),
+    F: FnMut(&Domain, &[Domain], &[std::net::IpAddr]),
 {
     let _ = std::fs::create_dir(DNS_RECORD_DIR);
     for entry in std::fs::read_dir(DNS_RECORD_DIR)? {
         let entry = entry?;
         let metadata = entry.metadata()?;
-        if let Ok(modified) = metadata.modified().or(metadata.created()) {
+        if let Ok(modified) = metadata.modified().or_else(|_|metadata.created()) {
             let now = std::time::SystemTime::now();
             if let Ok(duration_since) = now.duration_since(modified) {
                 if duration_since.as_secs() < MAX_AGE {
