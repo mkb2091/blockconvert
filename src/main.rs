@@ -5,9 +5,35 @@ use async_std::fs::File;
 
 use async_std::prelude::*;
 
-use blockconvert::{list_downloader, BlockConvertBuilder, FilterListRecord, FilterListType};
+use rand::prelude::*;
+
+use blockconvert::{
+    list_downloader, BlockConvert, BlockConvertBuilder, Domain, FilterListRecord, FilterListType,
+};
 
 const LIST_CSV: &'static str = "filterlists.csv";
+
+use clap::Clap;
+
+/// Blockconvert
+#[derive(Clap)]
+#[clap(version = "0.1")]
+struct Opts {
+    #[clap(subcommand)]
+    mode: Mode,
+}
+
+#[derive(Clap)]
+enum Mode {
+    Generate,
+    Query(Query),
+}
+#[derive(Clap)]
+struct Query {
+    query: String,
+    #[clap(short, long)]
+    ignore_dns: bool,
+}
 
 fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
     let path = std::path::Path::new(LIST_CSV);
@@ -78,7 +104,84 @@ async fn generate() {
     }
 }
 
+async fn query(q: Query) {
+    let servers = [
+        "https://dns.google.com/resolve".to_string(),
+        "https://cloudflare-dns.com/dns-query".to_string(),
+    ];
+    let mut headers = reqwest::header::HeaderMap::new();
+    headers.insert(
+        reqwest::header::ACCEPT,
+        "application/dns-json".parse().unwrap(),
+    );
+    let client = reqwest::Client::builder()
+        .default_headers(headers)
+        .build()
+        .unwrap();
+    let domain = if let Ok(domain) = q.query.parse::<Domain>() {
+        domain
+    } else {
+        println!("Failed to parse domain");
+        return;
+    };
+    let (cnames, ips): (Vec<Domain>, Vec<std::net::IpAddr>) = if !q.ignore_dns {
+        if let Ok(dns_result) = blockconvert::doh::lookup_domain(
+            servers.choose(&mut rand::thread_rng()).unwrap(),
+            &client,
+            3_usize,
+            &domain,
+        )
+        .await
+        {
+            if let Some(result) = dns_result {
+                println!("CNames: {:?}", result.cnames);
+                println!("IPs: {:?}", result.ips);
+                (result.cnames, result.ips)
+            } else {
+                Default::default()
+            }
+        } else {
+            println!("Failed to lookup DNS");
+            return;
+        }
+    } else {
+        Default::default()
+    };
+
+    let client = reqwest::Client::new();
+    if let Ok(records) = read_csv() {
+        for record in records.iter() {
+            if let Ok((list_type, data)) = blockconvert::list_downloader::download_list_if_expired(
+                &client,
+                &record.url,
+                record.expires,
+                record.list_type,
+            )
+            .await
+            {
+                let bc = BlockConvert::from(&[(list_type, &data)]);
+                for part in std::iter::once(domain.clone()).chain(domain.iter_parent_domains()) {
+                    if let Some(allowed) = bc.allowed(&part, &cnames, &ips) {
+                        if allowed {
+                            println!("ALLOW: {} allowed {}", record.url, part)
+                        } else {
+                            println!("BLOCK: {} blocked {}", record.url, part)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 fn main() {
     let mut rt = tokio::runtime::Runtime::new().unwrap();
-    rt.block_on(generate());
+
+    let opts: Opts = Opts::parse();
+    rt.block_on(async {
+        match opts.mode {
+            Mode::Generate => generate().await,
+            Mode::Query(q) => query(q).await,
+        }
+    })
 }

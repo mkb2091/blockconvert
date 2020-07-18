@@ -7,7 +7,7 @@ pub mod domain_filter;
 pub mod list_downloader;
 pub mod validator;
 
-use validator::Domain;
+pub use validator::Domain;
 
 use serde::*;
 
@@ -185,12 +185,20 @@ pub struct BlockConvert {
 }
 
 impl BlockConvert {
-    pub fn from(filter_lists: &[(FilterListType, String)]) -> Self {
+    pub fn from(filter_lists: &[(FilterListType, &str)]) -> Self {
         let mut builder = BlockConvertBuilder::new();
         for (list_type, data) in filter_lists.iter() {
             builder.add_list(*list_type, data)
         }
         return builder.to_blockconvert();
+    }
+    pub fn allowed(
+        &self,
+        domain: &Domain,
+        cnames: &[Domain],
+        ips: &[std::net::IpAddr],
+    ) -> Option<bool> {
+        self.filter.allowed(domain, cnames, ips)
     }
 
     pub async fn check_dns(&mut self, servers: &[String], client: &reqwest::Client) {
@@ -209,7 +217,7 @@ impl BlockConvert {
         if ips.is_empty() {
             return;
         }
-        if let Some(allowed) = self.filter.allowed(domain, cnames, ips) {
+        if let Some(allowed) = self.allowed(domain, cnames, ips) {
             if allowed {
                 self.allowed_domains.insert(domain.clone())
             } else {

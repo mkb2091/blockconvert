@@ -25,7 +25,7 @@ async fn needs_updating(path: &std::path::Path, expires: u64) -> bool {
     true
 }
 
-async fn download_list_if_expired(
+pub async fn download_list_if_expired(
     client: &reqwest::Client,
     url: &str,
     expires: u64,
