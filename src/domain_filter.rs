@@ -79,12 +79,12 @@ impl DomainFilterBuilder {
     }
 
     pub fn add_allow_regex(&mut self, re: &str) {
-        if regex::Regex::new(re).is_ok() {
+        if !re.is_empty() && regex::Regex::new(re).is_ok() {
             self.allow_regex.insert(re.to_string());
         }
     }
     pub fn add_disallow_regex(&mut self, re: &str) {
-        if regex::Regex::new(re).is_ok() {
+        if !re.is_empty() && regex::Regex::new(re).is_ok() {
             self.disallow_regex.insert(re.to_string());
         }
     }
