@@ -24,6 +24,7 @@ Scams and Phishing,https://raw.githubusercontent.com/infinitytec/blocklists/mast
 Privacy filters,https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt,,The Unlicense,86400,Adblock
 Possibilities,https://raw.githubusercontent.com/infinitytec/blocklists/master/possibilities.txt,infinitytec,MIT,864000,Hostfile
 Pi-Hole blocklist,https://codeberg.org/spootle/blocklist/raw/branch/master/blocklist.txt,,GPL-3.0,86400,DomainBlocklist
+Perflyst's SmartTV Blocklist for Pi-hole - RegEx extension,https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/regex.list,,MIT,86400,RegexBlocklist
 Not Good Pi,https://raw.githubusercontent.com/infinitytec/blocklists/master/not-good-pi.txt,infinitytec,MIT,864000,Hostfile
 Nopelist,https://raw.githubusercontent.com/genediazjr/nopelist/master/nopelist.txt,Gene Diaz,MIT,604800,DomainBlocklist
 NoTrack Tracker Blocklist,https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt,QuidsUp,GPLv3,86400,DomainBlocklist
