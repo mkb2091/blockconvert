@@ -9,9 +9,14 @@ use rand::prelude::*;
 
 use blockconvert::{
     list_downloader, BlockConvert, BlockConvertBuilder, Domain, FilterListRecord, FilterListType,
+    EXTRACTED_DOMAINS_DIR,
 };
 
+use std::io::BufRead;
+
 const LIST_CSV: &str = "filterlists.csv";
+
+const MAX_AGE: u64 = 7 * 86400;
 
 use clap::Clap;
 
@@ -27,6 +32,7 @@ struct Opts {
 enum Mode {
     Generate,
     Query(Query),
+    FindDomains,
 }
 #[derive(Clap)]
 struct Query {
@@ -57,7 +63,7 @@ fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
     Ok(records)
 }
 
-async fn generate() {
+async fn generate() -> Result<(), Box<dyn std::error::Error>> {
     let client = reqwest::Client::new();
     let servers = [
         "https://dns.google.com/resolve".to_string(),
@@ -83,6 +89,35 @@ async fn generate() {
             }
         }
         let mut bc = builder.to_blockconvert();
+
+        let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);
+        for entry in std::fs::read_dir(EXTRACTED_DOMAINS_DIR)? {
+            let entry = entry?;
+            let metadata = entry.metadata()?;
+            if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
+                let now = std::time::SystemTime::now();
+                if let Ok(duration_since) = now.duration_since(modified) {
+                    if duration_since.as_secs() < MAX_AGE {
+                        if let Ok(file) = std::fs::File::open(entry.path()) {
+                            let mut file = std::io::BufReader::new(file);
+                            let mut line = String::new();
+                            while let Ok(len) = file.read_line(&mut line) {
+                                if len == 0 {
+                                    break;
+                                }
+                                if let Ok(domain) = line.trim().parse::<Domain>() {
+                                    bc.add_extracted_domain(domain);
+                                }
+                                line.clear();
+                            }
+                        }
+
+                        continue;
+                    }
+                }
+            }
+            println!("Removing expired record");
+        }
         let mut headers = reqwest::header::HeaderMap::new();
         headers.insert(
             reqwest::header::ACCEPT,
@@ -102,9 +137,10 @@ async fn generate() {
             )
             .await;
     }
+    Ok(())
 }
 
-async fn query(q: Query) {
+async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
     let servers = [
         "https://dns.google.com/resolve".to_string(),
         "https://cloudflare-dns.com/dns-query".to_string(),
@@ -118,31 +154,21 @@ async fn query(q: Query) {
         .default_headers(headers)
         .build()
         .unwrap();
-    let domain = if let Ok(domain) = q.query.parse::<Domain>() {
-        domain
-    } else {
-        println!("Failed to parse domain");
-        return;
-    };
+    let domain = q.query.parse::<Domain>()?;
     let (cnames, ips): (Vec<Domain>, Vec<std::net::IpAddr>) = if !q.ignore_dns {
-        if let Ok(dns_result) = blockconvert::doh::lookup_domain(
+        if let Some(result) = blockconvert::doh::lookup_domain(
             servers.choose(&mut rand::thread_rng()).unwrap(),
             &client,
             3_usize,
             &domain,
         )
-        .await
+        .await?
         {
-            if let Some(result) = dns_result {
-                println!("CNames: {:?}", result.cnames);
-                println!("IPs: {:?}", result.ips);
-                (result.cnames, result.ips)
-            } else {
-                Default::default()
-            }
+            println!("CNames: {:?}", result.cnames);
+            println!("IPs: {:?}", result.ips);
+            (result.cnames, result.ips)
         } else {
-            println!("Failed to lookup DNS");
-            return;
+            Default::default()
         }
     } else {
         Default::default()
@@ -187,16 +213,20 @@ async fn query(q: Query) {
             check_filter_list(&file_path, *list_type, &text);
         }
     }
+    Ok(())
 }
 
-fn main() {
-    let mut rt = tokio::runtime::Runtime::new().unwrap();
+async fn find_domains() -> Result<(), Box<dyn std::error::Error>> {
+    blockconvert::certstream::certstream().await.unwrap();
+    Ok(())
+}
 
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let opts: Opts = Opts::parse();
-    rt.block_on(async {
-        match opts.mode {
-            Mode::Generate => generate().await,
-            Mode::Query(q) => query(q).await,
-        }
-    })
+    match opts.mode {
+        Mode::Generate => generate().await,
+        Mode::Query(q) => query(q).await,
+        Mode::FindDomains => find_domains().await,
+    }
 }

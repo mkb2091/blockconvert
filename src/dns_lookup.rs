@@ -91,7 +91,7 @@ where
     for entry in std::fs::read_dir(DNS_RECORD_DIR)? {
         let entry = entry?;
         let metadata = entry.metadata()?;
-        if let Ok(modified) = metadata.modified().or_else(|_|metadata.created()) {
+        if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
             let now = std::time::SystemTime::now();
             if let Ok(duration_since) = now.duration_since(modified) {
                 if duration_since.as_secs() < MAX_AGE {
