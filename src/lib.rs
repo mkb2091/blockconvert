@@ -1,6 +1,7 @@
 #[macro_use]
 extern crate lazy_static;
 
+pub mod certstream;
 pub mod dns_lookup;
 pub mod doh;
 pub mod domain_filter;
@@ -24,6 +25,8 @@ lazy_static! {
         regex::Regex::new("[12]?[0-9]{0,2}[.][12]?[0-9]{0,2}[.][12]?[0-9]{0,2}[.][12]?[0-9]{0,2}")
             .unwrap();
 }
+
+pub const EXTRACTED_DOMAINS_DIR: &str = "extracted";
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord)]
 pub struct FilterListRecord {
@@ -224,6 +227,9 @@ impl BlockConvert {
                 self.blocked_domains.insert(domain.clone())
             };
         }
+    }
+    pub fn add_extracted_domain(&mut self, domain: Domain) {
+        self.extracted_domains.insert(domain);
     }
 
     pub async fn write_all(

@@ -4,6 +4,14 @@ use std::str::FromStr;
 #[derive(Default, Debug)]
 pub struct InvalidDomain {}
 
+impl std::error::Error for InvalidDomain {}
+
+impl std::fmt::Display for InvalidDomain {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(f, "{:?}", self)
+    }
+}
+
 #[derive(Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord, Hash, Clone, Debug)]
 pub struct Domain(Box<str>);
 
