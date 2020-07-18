@@ -149,6 +149,18 @@ async fn query(q: Query) {
     };
 
     let client = reqwest::Client::new();
+    let check_filter_list = |url: &str, list_type: FilterListType, data: &str| {
+        let bc = BlockConvert::from(&[(list_type, &data)]);
+        for part in std::iter::once(domain.clone()).chain(domain.iter_parent_domains()) {
+            if let Some(allowed) = bc.allowed(&part, &cnames, &ips) {
+                if allowed {
+                    println!("ALLOW: {} allowed {}", url, part)
+                } else {
+                    println!("BLOCK: {} blocked {}", url, part)
+                }
+            }
+        }
+    };
     if let Ok(records) = read_csv() {
         for record in records.iter() {
             if let Ok((list_type, data)) = blockconvert::list_downloader::download_list_if_expired(
@@ -159,19 +171,22 @@ async fn query(q: Query) {
             )
             .await
             {
-                let bc = BlockConvert::from(&[(list_type, &data)]);
-                for part in std::iter::once(domain.clone()).chain(domain.iter_parent_domains()) {
-                    if let Some(allowed) = bc.allowed(&part, &cnames, &ips) {
-                        if allowed {
-                            println!("ALLOW: {} allowed {}", record.url, part)
-                        } else {
-                            println!("BLOCK: {} blocked {}", record.url, part)
-                        }
-                    }
-                }
+                check_filter_list(&record.url, list_type, &data);
             }
         }
     }
+    for (file_path, list_type) in &[
+            ("blocklist.txt", FilterListType::DomainBlocklist),
+            ("allowlist.txt", FilterListType::DomainAllowlist),
+        ] {
+            let mut path = std::path::PathBuf::from("internal");
+            path.push(&file_path);
+            if let Ok(mut file) = File::open(path).await {
+                let mut text = String::new();
+                let _ = file.read_to_string(&mut text).await;
+                check_filter_list(&file_path, *list_type, &text);
+            }
+        }
 }
 
 fn main() {
