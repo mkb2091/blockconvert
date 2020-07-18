@@ -262,9 +262,6 @@ fn adblock_can_block_domain() {
 fn adblock_can_whitelist_blocked_domain() {
     let mut filter = DomainFilterBuilder::new();
     filter.add_disallow_regex(".");
-    // Due to the adblock rule optimiser,
-    // exception rules which don't overlap with block rules are ignored
-    filter.add_adblock_rule("||example.com^");
     filter.add_adblock_rule("@@||example.com^");
     let filter = filter.to_domain_filter();
     assert_eq!(
