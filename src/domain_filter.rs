@@ -61,6 +61,20 @@ impl DomainFilterBuilder {
     }
 
     pub fn add_adblock_rule(&mut self, rule: &str) {
+        if let Some(inner) = rule
+            .strip_prefix("||")
+            .and_then(|rule| rule.strip_suffix("^"))
+        {
+            if let Ok(domain) = inner.parse::<Domain>() {
+                self.add_disallow_domain(domain.clone());
+                self.add_disallow_subdomain(domain);
+                return;
+            }
+            if let Ok(ip) = inner.parse::<std::net::IpAddr>() {
+                self.add_disallow_ip_addr(ip);
+                return;
+            }
+        }
         self.adblock.insert(rule.to_string());
     }
 
@@ -83,10 +97,14 @@ impl DomainFilterBuilder {
             disallow_subdomains: self.disallow_subdomains,
             allow_ips: self.allow_ips,
             disallow_ips: self.disallow_ips,
-            allow_ip_net: self.allow_ip_net.iter().cloned().collect(),
-            disallow_ip_net: self.disallow_ip_net.iter().cloned().collect(),
-            adblock: adblock::engine::Engine::from_rules(
-                &self.adblock.iter().cloned().collect::<Vec<String>>(),
+            allow_ip_net: self.allow_ip_net.into_iter().collect(),
+            disallow_ip_net: self.disallow_ip_net.into_iter().collect(),
+            adblock: adblock::engine::Engine::from_rules_parametrised(
+                &self.adblock.into_iter().collect::<Vec<String>>(),
+                true,  // Network filters
+                false, // Cosmetic filter
+                false,  // Debug mode
+                false, // Optimise, enabling increases total program performance by ~10% but uses ~200MB
             ),
             allow_regex: regex::RegexSet::new(&self.allow_regex).unwrap(),
             disallow_regex: regex::RegexSet::new(&self.disallow_regex).unwrap(),
@@ -125,6 +143,25 @@ pub struct DomainFilter {
 }
 #[allow(dead_code)]
 impl DomainFilter {
+    fn is_allowed_by_adblock(&self, location: &str) -> Option<bool> {
+        let url = format!("https://{}", location);
+        if let Ok(request) = adblock::request::Request::from_urls(&url, &url, "") {
+            let blocker_result = self
+                .adblock
+                .blocker
+                .check_parameterised(&request, false, true);
+            if blocker_result.exception.is_some() {
+                Some(true)
+            } else if blocker_result.matched {
+                Some(false)
+            } else {
+                None
+            }
+        } else {
+            None
+        }
+    }
+
     pub fn allowed(
         &self,
         domain: &Domain,
@@ -150,15 +187,10 @@ impl DomainFilter {
             || is_subdomain_of_list(&*domain, &self.allow_subdomains)
             || self.allow_regex.is_match(domain)
         {
-            return Some(true);
-        }
-        let url = format!("https://{}", domain);
-        let blocker_result = self.adblock.check_network_urls(&url, &url, "");
-        if blocker_result.exception.is_some() {
-            // Adblock exception rule
             Some(true)
-        } else if blocker_result.matched
-            || self.disallow_domains.contains(domain)
+        } else if let Some(blocker_result) = self.is_allowed_by_adblock(&domain) {
+            Some(blocker_result)
+        } else if self.disallow_domains.contains(domain)
             || is_subdomain_of_list(&*domain, &self.disallow_subdomains)
             || self.disallow_regex.is_match(domain)
         {
@@ -170,15 +202,10 @@ impl DomainFilter {
 
     pub fn ip_is_allowed(&self, ip: &std::net::IpAddr) -> Option<bool> {
         if self.allow_ips.contains(ip) || self.allow_ip_net.iter().any(|net| net.contains(ip)) {
-            return Some(true);
-        }
-        let url = format!("https://{}", ip);
-        let blocker_result = self.adblock.check_network_urls(&url, &url, "");
-        if blocker_result.exception.is_some() {
-            // Adblock exception rule
             Some(true)
-        } else if blocker_result.matched
-            || self.disallow_ips.contains(ip)
+        } else if let Some(blocker_result) = self.is_allowed_by_adblock(&ip.to_string()) {
+            Some(blocker_result)
+        } else if self.disallow_ips.contains(ip)
             || self.disallow_ip_net.iter().any(|net| net.contains(ip))
         {
             Some(false)
