@@ -103,7 +103,7 @@ impl DomainFilterBuilder {
                 &self.adblock.into_iter().collect::<Vec<String>>(),
                 true,  // Network filters
                 false, // Cosmetic filter
-                false,  // Debug mode
+                false, // Debug mode
                 false, // Optimise, enabling increases total program performance by ~10% but uses ~200MB
             ),
             allow_regex: regex::RegexSet::new(&self.allow_regex).unwrap(),

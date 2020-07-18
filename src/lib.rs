@@ -87,6 +87,9 @@ impl BlockConvertBuilder {
             .find_iter(data)
             .filter_map(|domain| domain.as_str().parse::<Domain>().ok())
         {
+            for part in domain.iter_parent_domains() {
+                self.extracted_domains.insert(part);
+            }
             self.extracted_domains.insert(domain);
         }
         for ip in IP_REGEX

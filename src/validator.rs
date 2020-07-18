@@ -11,7 +11,10 @@ impl Domain {
     pub fn iter_parent_domains(&self) -> impl Iterator<Item = Domain> + '_ {
         self.0
             .match_indices(|c| c == '.')
-            .map(move |(i, _)| Domain(self.0.split_at(i + 1).1.to_string().into_boxed_str()))
+            .map(move |(i, _)| self.0.split_at(i + 1).1)
+            .filter(|domain| domain.contains('.'))
+            .inspect(|domain| debug_assert!(domain.parse::<Domain>().is_ok())) // Check that all the returned parent domains would be valid
+            .map(move |domain| Domain(domain.to_string().into_boxed_str()))
     }
 }
 
@@ -37,7 +40,13 @@ impl FromStr for Domain {
                 return Err(Self::Err::default());
             }
         }
-        if label_count <= 1 || s.chars().all(|c| c == '.' || c.is_digit(10)) {
+        if label_count <= 1
+            || s.rsplit('.')
+                .next()
+                .unwrap_or(s)
+                .chars()
+                .all(|c| c == '.' || c.is_digit(10))
+        {
             return Err(Self::Err::default());
         }
         Ok(Domain(s.to_ascii_lowercase().into_boxed_str()))
@@ -83,4 +92,17 @@ fn with_example_invalids() {
     for domain in &invalid {
         assert!(domain.parse::<Domain>().is_err())
     }
+}
+
+#[test]
+fn iter_parent_domains() {
+    let domain = "adwords.l.google.com".parse::<Domain>().unwrap();
+    let expected = vec![
+        "l.google.com".parse::<Domain>().unwrap(),
+        "google.com".parse().unwrap(),
+    ];
+    assert_eq!(
+        expected,
+        domain.iter_parent_domains().collect::<Vec<Domain>>()
+    )
 }
