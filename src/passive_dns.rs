@@ -7,6 +7,17 @@ use async_std::io::BufWriter;
 
 const PASSIVE_DNS_RECORD_DIR: &str = "passive_dns_db";
 
+#[derive(Default, Debug)]
+pub struct InvalidResponseCode {}
+
+impl std::error::Error for InvalidResponseCode {}
+
+impl std::fmt::Display for InvalidResponseCode {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(f, "{:?}", self)
+    }
+}
+
 pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
     let mut ips: std::collections::HashSet<std::net::IpAddr> = {
         let mut file = async_std::fs::File::open(&get_blocked_ips_path()).await?;
@@ -59,6 +70,12 @@ pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
             .await
         {
             if let Ok(json) = response.json::<serde_json::Value>().await {
+                if json.pointer("/responseCode")
+                    != Some(&serde_json::Value::Number(serde_json::Number::from(200)))
+                {
+                    println!("ARGUS: Non 200 response code: {:?}", json.pointer("/responseCode"));
+                    return Err(Box::new(InvalidResponseCode::default()));
+                }
                 if let Some(data) = json.pointer("/data").and_then(|data| data.as_array()) {
                     for domain in data.iter().filter_map(|item| {
                         item.pointer("/query").and_then(|domain| domain.as_str())
@@ -71,6 +88,9 @@ pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
                             println!("ARGUS: Failed to parse: {}", domain)
                         }
                     }
+                } else {
+                    println!("No data field: {:?}", json);
+                    errors += 1;
                 }
             } else {
                 println!("ARGUS: Failed to parse as json");
@@ -81,7 +101,7 @@ pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
             errors += 1;
             async_std::task::sleep(std::time::Duration::from_secs(15_u64)).await
         }
-        async_std::task::sleep(std::time::Duration::from_millis(100_u64)).await;
+        async_std::task::sleep(std::time::Duration::from_secs(1_u64)).await;
         if ips_checked % 10 == 0 {
             println!(
                 "ARGUS: Checked {}/{} ips ({}/s), found {} domains with {} errors",
