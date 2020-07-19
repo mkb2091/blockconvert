@@ -54,27 +54,13 @@ As well as generating blocklists, this project also generates whitelists which a
 
 ## The Process
 
-1. Download expired blocklist data and extract domains and IP addresses into whitelist and blacklist
+1. Download all expired filterlists
 
-2. Combine all the blacklists and the whitelists
+2. Combine and split all the filterlists based on their type. This splits the lines into seperate groups: Adblock rules, blocked domains, regexes of blocked domains, allowed domains, regex of allowed domains, ips which are blocked, ips which are allowed, subnets which are blocked, subnets which are allowed.
 
-3. Filter out all the IPv4 addresses from each list and use passive dns lookup APIs to find domains which resolve to those IP addresses
+3. Apply a regex to all the filterlists to extract domains and combine with other domains found via other means.
 
-4. Store all the IP addresses that were in the blacklist in a seperate list
-
-5. For each domain that has "\*" for its TLD (e.g. "tracker.\*"), replace the "\*" with every TLD in the TLD file
-
-5. Remove all the domains in the whitelist from the blacklist
-
-6. For each domain in each list that starts with either "m." or "www.", add a version of the domain without the subdomain
-
-7. For each domain in the whitelist, if there isn't a version of the domain starting with a "www.", then add one
-
-8. For each domain in the blacklist that starts with a "\*.", remove the start
-
-9. For each domain in the blacklist that is in the whitelist, or is a subdomain of a domain in the whitelist starting with a "\*.", remove that domain from the blacklist
-
-10. For all the domains left, check that they have a valid DNS record, and remove the ones that do not
+4. For each of those domains, use DNS to check if the domain is still active. If the domain isn't in the allowed domains list, doesn't match any of the allowed regexes, isn't in allowed by an adblock exception rule and it is blocked, or one of its cnames/ips is blocked then add it to the output.
 
 Sources: [Sources](https://github.com/mkb2091/blockconvert/blob/master/sources.md)
 
