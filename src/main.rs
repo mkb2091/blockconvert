@@ -189,7 +189,11 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
 }
 
 async fn find_domains() -> Result<(), Box<dyn std::error::Error>> {
-    let _result = futures::join!(certstream::certstream(), passive_dns::argus_passive_dns());
+    let _result = futures::join!(
+        certstream::certstream(),
+        passive_dns::argus_passive_dns(),
+        passive_dns::threatminer_passive_dns()
+    );
     Ok(())
 }
 
