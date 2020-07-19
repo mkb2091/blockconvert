@@ -7,16 +7,9 @@ use async_std::prelude::*;
 
 use rand::prelude::*;
 
-use blockconvert::{
-    list_downloader, BlockConvert, BlockConvertBuilder, Domain, FilterListRecord, FilterListType,
-    EXTRACTED_DOMAINS_DIR,
-};
-
-use std::io::BufRead;
+use ::blockconvert::*;
 
 const LIST_CSV: &str = "filterlists.csv";
-
-const MAX_AGE: u64 = 7 * 86400;
 
 use clap::Clap;
 
@@ -90,34 +83,13 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
         }
         let mut bc = builder.to_blockconvert();
 
-        let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);
-        for entry in std::fs::read_dir(EXTRACTED_DOMAINS_DIR)? {
-            let entry = entry?;
-            let metadata = entry.metadata()?;
-            if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
-                let now = std::time::SystemTime::now();
-                if let Ok(duration_since) = now.duration_since(modified) {
-                    if duration_since.as_secs() < MAX_AGE {
-                        if let Ok(file) = std::fs::File::open(entry.path()) {
-                            let mut file = std::io::BufReader::new(file);
-                            let mut line = String::new();
-                            while let Ok(len) = file.read_line(&mut line) {
-                                if len == 0 {
-                                    break;
-                                }
-                                if let Ok(domain) = line.trim().parse::<Domain>() {
-                                    bc.add_extracted_domain(domain);
-                                }
-                                line.clear();
-                            }
-                        }
-
-                        continue;
-                    }
-                }
+        let db = DirectoryDB::new(&std::path::Path::new(EXTRACTED_DOMAINS_DIR)).await?;
+        db.read(|line| {
+            if let Ok(domain) = line.trim().parse::<Domain>() {
+                bc.add_extracted_domain(domain);
             }
-            println!("Removing expired record");
-        }
+        })
+        .await?;
         let mut headers = reqwest::header::HeaderMap::new();
         headers.insert(
             reqwest::header::ACCEPT,
@@ -130,10 +102,10 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
         bc.check_dns(&servers, &client).await;
         let _ = bc
             .write_all(
-                &std::path::Path::new("output/blocked_domains.txt"),
-                &std::path::Path::new("output/allowed_domains.txt"),
-                &std::path::Path::new("output/blocked_ips.txt"),
-                &std::path::Path::new("output/allowed_ips.txt"),
+                &get_blocked_domain_path(),
+                &get_allowed_domain_path(),
+                &get_blocked_ips_path(),
+                &get_allowed_ips_path(),
             )
             .await;
     }
@@ -156,7 +128,7 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
         .unwrap();
     let domain = q.query.parse::<Domain>()?;
     let (cnames, ips): (Vec<Domain>, Vec<std::net::IpAddr>) = if !q.ignore_dns {
-        if let Some(result) = blockconvert::doh::lookup_domain(
+        if let Some(result) = doh::lookup_domain(
             servers.choose(&mut rand::thread_rng()).unwrap(),
             &client,
             3_usize,
@@ -189,7 +161,7 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
     };
     if let Ok(records) = read_csv() {
         for record in records.iter() {
-            if let Ok((list_type, data)) = blockconvert::list_downloader::download_list_if_expired(
+            if let Ok((list_type, data)) = list_downloader::download_list_if_expired(
                 &client,
                 &record.url,
                 record.expires,
@@ -217,7 +189,7 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
 }
 
 async fn find_domains() -> Result<(), Box<dyn std::error::Error>> {
-    blockconvert::certstream::certstream().await.unwrap();
+    let _result = futures::join!(certstream::certstream(), passive_dns::argus_passive_dns());
     Ok(())
 }
 
