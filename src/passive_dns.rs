@@ -73,7 +73,10 @@ pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
                 if json.pointer("/responseCode")
                     != Some(&serde_json::Value::Number(serde_json::Number::from(200)))
                 {
-                    println!("ARGUS: Non 200 response code: {:?}", json.pointer("/responseCode"));
+                    println!(
+                        "ARGUS: Non 200 response code: {:?}",
+                        json.pointer("/responseCode")
+                    );
                     return Err(Box::new(InvalidResponseCode::default()));
                 }
                 if let Some(data) = json.pointer("/data").and_then(|data| data.as_array()) {
