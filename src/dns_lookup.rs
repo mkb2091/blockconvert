@@ -131,8 +131,8 @@ where
                 &servers[i % servers.len()],
                 next_domain,
             ));
-            i += 1;
         }
+        i += 1;
     }
     db.flush().await?;
     Ok(())

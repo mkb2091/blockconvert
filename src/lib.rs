@@ -117,8 +117,10 @@ impl DirectoryDB {
         I: FnMut(&str),
     {
         let _ = async_std::fs::create_dir_all(&self.path).await;
-        for entry in async_std::fs::read_dir(&self.path).await?.next().await {
+        let mut entries = async_std::fs::read_dir(&self.path).await?;
+        while let Some(entry) = entries.next().await {
             let entry = entry?;
+            println!("Reading from file: {:?}", entry.path());
             let metadata = entry.metadata().await?;
             if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
                 let now = std::time::SystemTime::now();
@@ -134,8 +136,9 @@ impl DirectoryDB {
                                 handle_input(&line);
                                 line.clear();
                             }
+                        } else {
+                            println!("Failed to read file: {:?}", entry.path());
                         }
-
                         continue;
                     }
                 }
