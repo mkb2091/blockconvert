@@ -18,15 +18,19 @@ impl std::fmt::Display for InvalidResponseCode {
     }
 }
 
+async fn get_ips() -> Result<std::collections::HashSet<std::net::IpAddr>, Box<dyn std::error::Error>>
+{
+    let mut file = async_std::fs::File::open(&get_blocked_ips_path()).await?;
+    let mut text = String::new();
+    file.read_to_string(&mut text).await?;
+    Ok(text
+        .lines()
+        .filter_map(|line| line.parse::<std::net::IpAddr>().ok())
+        .collect())
+}
+
 pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
-    let mut ips: std::collections::HashSet<std::net::IpAddr> = {
-        let mut file = async_std::fs::File::open(&get_blocked_ips_path()).await?;
-        let mut text = String::new();
-        file.read_to_string(&mut text).await?;
-        text.lines()
-            .filter_map(|line| line.parse::<std::net::IpAddr>().ok())
-            .collect()
-    };
+    let mut ips = get_ips().await?;
 
     let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
     path.push("argus");
