@@ -1,15 +1,10 @@
 use std::str::FromStr;
 
-use std::io::BufRead;
-
-use async_std::fs::OpenOptions;
-use async_std::io::BufWriter;
 use async_std::prelude::*;
 
-use crate::{doh, Domain};
+use crate::{doh, DirectoryDB, Domain};
 
 const DNS_RECORD_DIR: &str = "dns_db";
-const MAX_AGE: u64 = 7 * 86400;
 
 #[derive(Clone, Debug)]
 pub struct DNSResultRecord {
@@ -87,54 +82,19 @@ pub async fn lookup_domains<F>(
 where
     F: FnMut(&Domain, &[Domain], &[std::net::IpAddr]),
 {
-    let _ = std::fs::create_dir(DNS_RECORD_DIR);
-    for entry in std::fs::read_dir(DNS_RECORD_DIR)? {
-        let entry = entry?;
-        let metadata = entry.metadata()?;
-        if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
-            let now = std::time::SystemTime::now();
-            if let Ok(duration_since) = now.duration_since(modified) {
-                if duration_since.as_secs() < MAX_AGE {
-                    if let Ok(file) = std::fs::File::open(entry.path()) {
-                        let mut file = std::io::BufReader::new(file);
-                        let mut line = String::new();
-                        while let Ok(len) = file.read_line(&mut line) {
-                            if len == 0 {
-                                break;
-                            }
-                            if let Ok(record) = line.parse::<DNSResultRecord>() {
-                                domains.remove(&record.domain);
-                                f(&record.domain, &record.cnames, &record.ips)
-                            }
-                            line.clear();
-                        }
-                    }
-
-                    continue;
-                }
-            }
+    let mut db = DirectoryDB::new(&std::path::Path::new(DNS_RECORD_DIR)).await?;
+    db.read(|line| {
+        if let Ok(record) = line.parse::<DNSResultRecord>() {
+            domains.remove(&record.domain);
+            f(&record.domain, &record.cnames, &record.ips)
         }
-        println!("Removing expired record");
-    }
+    })
+    .await?;
 
     println!("Looking up {} domains", domains.len());
     if domains.is_empty() {
         return Ok(());
     }
-
-    let mut path = std::path::PathBuf::from(DNS_RECORD_DIR);
-    path.push(std::path::PathBuf::from(format!(
-        "{:?}",
-        chrono::Utc::today()
-    )));
-    let mut wtr = BufWriter::new(
-        OpenOptions::new()
-            .append(true)
-            .create(true)
-            .open(path)
-            .await?,
-    );
-    wtr.write_all(b"\n").await?;
     let total_length = domains.len();
     let mut domain_iter = domains.into_iter();
     let mut tasks = futures::stream::FuturesUnordered::new();
@@ -147,10 +107,10 @@ where
     }
     let now = std::time::Instant::now();
     let mut i = 0;
-    let mut error_count = 0;
+    let mut error_count: u64 = 0;
     while let Some(record) = tasks.next().await {
         if let Ok(record) = record {
-            if i % 100 == 0 {
+            if i % 1000 == 0 {
                 println!(
                     "{}/{} {}/s with {} errors: Got response for {}",
                     i,
@@ -161,8 +121,7 @@ where
                 );
             }
             f(&record.domain, &record.cnames, &record.ips);
-            wtr.write_all(record.to_string().as_bytes()).await?;
-            wtr.write_all(b"\n").await?;
+            db.write_line(record.to_string().as_bytes()).await?;
         } else {
             error_count += 1;
         }
@@ -175,6 +134,6 @@ where
             i += 1;
         }
     }
-    wtr.flush().await?;
+    db.flush().await?;
     Ok(())
 }

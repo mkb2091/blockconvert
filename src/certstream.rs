@@ -38,7 +38,7 @@ pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
                                 .filter_map(|domain| domain.as_str())
                                 .filter_map(|domain| domain.parse::<Domain>().ok())
                             {
-                                if counter % 100 == 0 {
+                                if counter % 500 == 0 {
                                     println!(
                                         "Found {} domains ({}/s) via CertStream. Current domain: {}",
                                         counter, (counter as f32 / now.elapsed().as_secs_f32()), domain
