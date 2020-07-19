@@ -180,6 +180,9 @@ impl BlockConvert {
         }
     }
     pub fn add_extracted_domain(&mut self, domain: Domain) {
+        for part in domain.iter_parent_domains() {
+            self.extracted_domains.insert(part);
+        }
         self.extracted_domains.insert(domain);
     }
 
