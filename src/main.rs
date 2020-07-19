@@ -25,13 +25,19 @@ struct Opts {
 enum Mode {
     Generate,
     Query(Query),
-    FindDomains,
+    FindDomains(FindDomains),
 }
 #[derive(Clap)]
 struct Query {
     query: String,
     #[clap(short, long)]
     ignore_dns: bool,
+}
+
+#[derive(Clap)]
+struct FindDomains {
+    #[clap(short, long)]
+    virus_total_api: Option<String>,
 }
 
 fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
@@ -188,12 +194,22 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-async fn find_domains() -> Result<(), Box<dyn std::error::Error>> {
-    let _result = futures::join!(
-        certstream::certstream(),
-        passive_dns::argus_passive_dns(),
-        passive_dns::threatminer_passive_dns()
-    );
+async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> {
+    if let Some(vt_api) = f.virus_total_api {
+        let _result = futures::join!(
+            certstream::certstream(),
+            passive_dns::argus_passive_dns(),
+            passive_dns::threatminer_passive_dns(),
+            passive_dns::virus_total_passive_dns(vt_api)
+        );
+    } else {
+        let _result = futures::join!(
+            certstream::certstream(),
+            passive_dns::argus_passive_dns(),
+            passive_dns::threatminer_passive_dns()
+        );
+    }
+
     Ok(())
 }
 
@@ -203,6 +219,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     match opts.mode {
         Mode::Generate => generate().await,
         Mode::Query(q) => query(q).await,
-        Mode::FindDomains => find_domains().await,
+        Mode::FindDomains(f) => find_domains(f).await,
     }
 }
