@@ -66,7 +66,7 @@ async fn lookup_domain_(
                         println!("Failed with IP: {}", answer.data);
                     }
                 }
-                5 => {
+                5 | 39 => {
                     if let Ok(cname) = answer.data.trim_end_matches('.').parse::<Domain>() {
                         result.cnames.push(cname)
                     } else {
