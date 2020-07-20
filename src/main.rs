@@ -87,14 +87,14 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
             }
         }
         let mut bc = builder.to_blockconvert();
-
-        let db = DirectoryDB::new(&std::path::Path::new(EXTRACTED_DOMAINS_DIR)).await?;
-        db.read(|line| {
-            if let Ok(domain) = line.trim().parse::<Domain>() {
-                bc.add_extracted_domain(domain);
-            }
-        })
-        .await?;
+        DirectoryDB::new(&std::path::Path::new(EXTRACTED_DOMAINS_DIR))
+            .await?
+            .read(|line| {
+                if let Ok(domain) = line.trim().parse::<Domain>() {
+                    bc.add_extracted_domain(domain);
+                }
+            })
+            .await?;
         let mut headers = reqwest::header::HeaderMap::new();
         headers.insert(
             reqwest::header::ACCEPT,
@@ -105,14 +105,16 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
             .build()
             .unwrap();
         bc.check_dns(&servers, &client).await;
-        let _ = bc
-            .write_all(
-                &get_blocked_domain_path(),
-                &get_allowed_domain_path(),
-                &get_blocked_ips_path(),
-                &get_allowed_ips_path(),
-            )
-            .await;
+        bc.write_all(
+            &get_blocked_domain_path(),
+            &get_hostfile_path(),
+            &get_rpz_path(),
+            &get_adblock_path(),
+            &get_allowed_domain_path(),
+            &get_blocked_ips_path(),
+            &get_allowed_ips_path(),
+        )
+        .await?;
     }
     Ok(())
 }
