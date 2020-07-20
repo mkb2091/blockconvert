@@ -792,6 +792,7 @@ code.google.com
 code.highcharts.com
 code.jquery.com
 code.responsivevoice.org
+code.tidio.co
 codeberg.org
 codecanyon.net
 codeload.github.com
@@ -3047,6 +3048,7 @@ static.networkedblogs.com
 static.template.pcbeta.com
 static.tianya.cn
 static.tianyaui.com
+static.tidiochat.com
 static.twisto.cz
 static.vk.com
 static.ws.126.net

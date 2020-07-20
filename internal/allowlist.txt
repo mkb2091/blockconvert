@@ -84,6 +84,7 @@ cmail20.com
 c-msedge.net
 codeberg.org
 code.jquery.com
+code.tidio.co
 *.coingeek.com
 coinpot.co
 cointraffic.io
@@ -359,6 +360,7 @@ star-mini.c10r.facebook.com
 static-dot-virustotalcloud.appspot.com
 static.getmonero.org
 statics.streamable.com
+static.tidiochat.com
 static.zdassets.com
 statsfe2.update.microsoft.com.akadns.net
 stats.stackexchange.com
