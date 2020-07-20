@@ -134,29 +134,34 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
         .build()
         .unwrap();
     let domain = q.query.parse::<Domain>()?;
-    let (cnames, ips): (Vec<Domain>, Vec<std::net::IpAddr>) = if !q.ignore_dns {
-        if let Some(result) = doh::lookup_domain(
-            servers.choose(&mut rand::thread_rng()).unwrap(),
-            &client,
-            3_usize,
-            &domain,
-        )
-        .await?
-        {
-            println!("CNames: {:?}", result.cnames);
-            println!("IPs: {:?}", result.ips);
-            (result.cnames, result.ips)
+    let mut parts: Vec<(Domain, Vec<Domain>, Vec<std::net::IpAddr>)> = Vec::new();
+    for part in std::iter::once(domain.clone()).chain(domain.iter_parent_domains()) {
+        let (cnames, ips): (Vec<Domain>, Vec<std::net::IpAddr>) = if !q.ignore_dns {
+            if let Some(result) = doh::lookup_domain(
+                servers.choose(&mut rand::thread_rng()).unwrap(),
+                &client,
+                3_usize,
+                &part,
+            )
+            .await?
+            {
+                println!("Domain: {:?}", part);
+                println!("CNames: {:?}", result.cnames);
+                println!("IPs: {:?}", result.ips);
+                (result.cnames, result.ips)
+            } else {
+                Default::default()
+            }
         } else {
             Default::default()
-        }
-    } else {
-        Default::default()
-    };
+        };
+        parts.push((part, cnames, ips));
+    }
 
     let client = reqwest::Client::new();
     let check_filter_list = |url: &str, list_type: FilterListType, data: &str| {
         let bc = BlockConvert::from(&[(list_type, &data)]);
-        for part in std::iter::once(domain.clone()).chain(domain.iter_parent_domains()) {
+        for (part, cnames, ips) in parts.iter() {
             if let Some(allowed) = bc.allowed(&part, &cnames, &ips) {
                 if allowed {
                     println!("ALLOW: {} allowed {}", url, part)
