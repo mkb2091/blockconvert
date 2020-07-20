@@ -62,7 +62,7 @@ As well as generating blocklists, this project also generates whitelists which a
 
 4. For each of those domains, use DNS to check if the domain is still active. If the domain isn't in the allowed domains list, doesn't match any of the allowed regexes, isn't in allowed by an adblock exception rule and it is blocked, or one of its cnames/ips is blocked then add it to the output.
 
-Sources: [Sources](https://github.com/mkb2091/blockconvert/blob/master/sources.md)
+Sources: [Sources](https://github.com/mkb2091/blockconvert/blob/master/filterlists.csv)
 
 ## Donation
 
