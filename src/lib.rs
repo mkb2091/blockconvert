@@ -42,6 +42,24 @@ pub fn get_blocked_domain_path() -> std::path::PathBuf {
     path
 }
 
+pub fn get_adblock_path() -> std::path::PathBuf {
+    let mut path = std::path::PathBuf::from("output");
+    path.push("adblock");
+    path
+}
+
+pub fn get_hostfile_path() -> std::path::PathBuf {
+    let mut path = std::path::PathBuf::from("output");
+    path.push("hostfile.txt");
+    path
+}
+
+pub fn get_rpz_path() -> std::path::PathBuf {
+    let mut path = std::path::PathBuf::from("output");
+    path.push("rpz.txt");
+    path
+}
+
 pub fn get_allowed_domain_path() -> std::path::PathBuf {
     let mut path = std::path::PathBuf::from("output");
     path.push("allowed_domains.txt");

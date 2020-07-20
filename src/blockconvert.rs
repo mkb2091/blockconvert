@@ -189,30 +189,56 @@ impl BlockConvert {
     pub async fn write_all(
         &self,
         blocked_domains: &std::path::Path,
+        hostfile: &std::path::Path,
+        rpz: &std::path::Path,
+        adblock: &std::path::Path,
         allowed_domains: &std::path::Path,
         blocked_ip_addrs: &std::path::Path,
         allowed_ip_addrs: &std::path::Path,
     ) -> Result<(), Box<dyn std::error::Error>> {
-        async fn write_to_file<T: std::fmt::Display + Ord>(
+        async fn write_to_file<T: std::fmt::Display + Ord, F: Fn(&T) -> String>(
             data: &std::collections::HashSet<T>,
             path: &std::path::Path,
+            f: F,
         ) -> Result<(), Box<dyn std::error::Error>> {
             let file = async_std::fs::File::create(path).await?;
             let mut buf = BufWriter::new(file);
             let mut sorted: Vec<_> = data.iter().collect();
             sorted.sort_unstable();
-            for item in sorted.iter() {
-                buf.write_all(format!("{}\n", item).as_bytes()).await?;
+            for item in sorted.into_iter() {
+                buf.write_all(f(item).as_bytes()).await?;
+                buf.write_all(b"\n").await?;
             }
+            buf.flush().await?;
             Ok(())
         }
 
-        futures::try_join!(
-            write_to_file(&self.blocked_domains, blocked_domains),
-            write_to_file(&self.allowed_domains, allowed_domains),
-            write_to_file(&self.blocked_ip_addrs, blocked_ip_addrs),
-            write_to_file(&self.allowed_ip_addrs, allowed_ip_addrs),
-        )
-        .map(|_| ())
+        let domains = futures::future::try_join5(
+            write_to_file(&self.blocked_domains, blocked_domains, |item| {
+                item.to_string()
+            }),
+            write_to_file(&self.blocked_domains, hostfile, |item| {
+                format!("0.0.0.0 {}", item)
+            }),
+            write_to_file(&self.blocked_domains, rpz, |item| {
+                format!("{} CNAME .", item)
+            }),
+            write_to_file(&self.blocked_domains, adblock, |item| {
+                format!("||{}^", item)
+            }),
+            write_to_file(&self.allowed_domains, allowed_domains, |item| {
+                item.to_string()
+            }),
+        );
+        let ips = futures::future::try_join(
+            write_to_file(&self.blocked_ip_addrs, blocked_ip_addrs, |item| {
+                item.to_string()
+            }),
+            write_to_file(&self.allowed_ip_addrs, allowed_ip_addrs, |item| {
+                item.to_string()
+            }),
+        );
+
+        futures::future::try_join(domains, ips).await.map(|_| ())
     }
 }
