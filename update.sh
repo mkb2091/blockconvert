@@ -1,11 +1,6 @@
 set -e
-git checkout -- .
-git pull
-python3 main.py
-git pull
-git commit -a -m "Ran Quick Autoupdate"
+cargo run --release generate
+git commit -a -m "Ran Autoupdate"
 git push
-python3 main.py -u
-git pull
-git commit -a -m "Ran Full Autoupdate"
-git push
+cargo run --release find-domains --virus-total-api $1
+
