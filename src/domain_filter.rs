@@ -23,7 +23,10 @@ impl DomainFilterBuilder {
     }
 
     pub fn add_allow_domain(&mut self, domain: Domain) {
-        if let Some(without_www) = domain.strip_prefix("www.").and_then(|domain|domain.parse::<Domain>().ok()) {
+        if let Some(without_www) = domain
+            .strip_prefix("www.")
+            .and_then(|domain| domain.parse::<Domain>().ok())
+        {
             let _ = self.disallow_domains.remove(&without_www);
             self.allow_domains.insert(without_www);
         }
