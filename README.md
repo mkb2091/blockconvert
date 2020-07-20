@@ -30,8 +30,6 @@ Malware, advert and tracking blocklist which consolidates and improves many othe
 
 - uBlock Origin: Click the uBlock Origin logo/uBlock Origin extension. Click open dashboard(3 horizontal lines under the disable uBlock Origin button, on the right). Click Filter lists. Scroll to the bottom, and click Import(in custom section). Copy and paste either Adblock style blocklist or domain blocklist from the link section below.
 
-- IPset + iptables: Run `sudo ipset create BlockConvert` to create the ipset where the blocklist will be. Pick a directory to store file, then set the following script to run on reboot(eg via cron, or via init system) and also create a regular script to download new version(eg weekly/daily cron which runs wget): `sudo ipset -exist -file $PATH_TO_FILE restore && sudo iptables -I INPUT -m set --match-set BlockConvert src -j DROP && sudo iptables -I FORWARD -m set --match-set BlockConvert src -j DROP`
-
 ## Links
 
 [Adblock Plus format](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/adblock.txt)
