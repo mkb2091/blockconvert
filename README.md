@@ -48,8 +48,6 @@ As well as generating blocklists, this project also generates whitelists which a
 
 [Whitelisted domains](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/whitelist_domains.txt)
 
-[Whitelist in AdBlock Plus format](https://raw.githubusercontent.com/mkb2091/blockconvert/master/output/whitelist_adblock.txt)
-
 ## The Process
 
 1. Download all expired filterlists
