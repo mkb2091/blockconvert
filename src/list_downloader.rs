@@ -1,4 +1,4 @@
-use crate::{FilterListRecord, FilterListType};
+use crate::FilterListRecord;
 
 use async_std::fs::File;
 use async_std::prelude::*;
@@ -30,41 +30,34 @@ async fn needs_updating(path: &std::path::Path, expires: u64) -> bool {
 
 pub async fn download_list_if_expired(
     client: &reqwest::Client,
-    url: &str,
-    expires: u64,
-    list_type: FilterListType,
-) -> Result<(FilterListType, String), Box<dyn std::error::Error>> {
-    let path = get_path_for_url(url)?;
-    if needs_updating(&path, expires).await {
-        if let Ok(response) = client.get(url).send().await {
+    record: FilterListRecord,
+) -> Result<(FilterListRecord, String), Box<dyn std::error::Error>> {
+    let path = get_path_for_url(&record.url)?;
+    if needs_updating(&path, record.expires).await {
+        if let Ok(response) = client.get(&record.url).send().await {
             if let Ok(text) = response.text().await {
-                println!("Downloaded: {:?}", url);
+                println!("Downloaded: {:?}", record.url);
                 let mut file = File::create(path).await?;
                 file.write_all(text.as_bytes()).await?;
-                return Ok((list_type, text));
+                return Ok((record, text));
             }
         }
     }
     let mut file = File::open(path).await?;
     let mut text = String::new();
     file.read_to_string(&mut text).await?;
-    Ok((list_type, text))
+    Ok((record, text))
 }
 
 pub async fn download_all<F>(client: &reqwest::Client, records: &[FilterListRecord], mut f: F)
 where
-    F: FnMut(FilterListType, &str),
+    F: FnMut(FilterListRecord, &str),
 {
     let mut downloads = futures::stream::FuturesUnordered::new();
     for record in records {
-        downloads.push(download_list_if_expired(
-            client,
-            &record.url,
-            record.expires,
-            record.list_type,
-        ))
+        downloads.push(download_list_if_expired(client, record.clone()))
     }
-    while let Some(Ok((list_type, data))) = downloads.next().await {
-        f(list_type, &data)
+    while let Some(Ok((record, data))) = downloads.next().await {
+        f(record, &data)
     }
 }
