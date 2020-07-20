@@ -38,37 +38,37 @@ pub const MAX_AGE: u64 = 7 * 86400;
 
 pub fn get_blocked_domain_path() -> std::path::PathBuf {
     let mut path = std::path::PathBuf::from("output");
-    path.push("blocked_domains.txt");
+    path.push("domains.txt");
     path
 }
 
 pub fn get_adblock_path() -> std::path::PathBuf {
     let mut path = std::path::PathBuf::from("output");
-    path.push("adblock");
+    path.push("adblock.txt");
     path
 }
 
 pub fn get_hostfile_path() -> std::path::PathBuf {
     let mut path = std::path::PathBuf::from("output");
-    path.push("hostfile.txt");
+    path.push("hosts.txt");
     path
 }
 
 pub fn get_rpz_path() -> std::path::PathBuf {
     let mut path = std::path::PathBuf::from("output");
-    path.push("rpz.txt");
+    path.push("domains.rpz");
     path
 }
 
 pub fn get_allowed_domain_path() -> std::path::PathBuf {
     let mut path = std::path::PathBuf::from("output");
-    path.push("allowed_domains.txt");
+    path.push("whitelist_domains.txt");
     path
 }
 
 pub fn get_blocked_ips_path() -> std::path::PathBuf {
     let mut path = std::path::PathBuf::from("output");
-    path.push("blocked_ips.txt");
+    path.push("ip_blocklist.txt");
     path
 }
 
