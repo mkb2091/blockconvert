@@ -70,11 +70,10 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
     ];
     if let Ok(records) = read_csv() {
         let mut builder = BlockConvertBuilder::new();
-        list_downloader::download_all(&client, &records, |list_type, data| {
-            builder.add_list(list_type, data)
+        list_downloader::download_all(&client, &records, |record, data| {
+            builder.add_list(record.list_type, data);
         })
         .await;
-
         for (file_path, list_type) in &[
             ("blocklist.txt", FilterListType::DomainBlocklist),
             ("allowlist.txt", FilterListType::DomainAllowlist),
@@ -166,18 +165,10 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
         }
     };
     if let Ok(records) = read_csv() {
-        for record in records.iter() {
-            if let Ok((list_type, data)) = list_downloader::download_list_if_expired(
-                &client,
-                &record.url,
-                record.expires,
-                record.list_type,
-            )
-            .await
-            {
-                check_filter_list(&record.url, list_type, &data);
-            }
-        }
+        list_downloader::download_all(&client, &records, |record, data| {
+            check_filter_list(&record.url, record.list_type, &data);
+        })
+        .await;
     }
     for (file_path, list_type) in &[
         ("blocklist.txt", FilterListType::DomainBlocklist),
