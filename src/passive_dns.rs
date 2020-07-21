@@ -109,7 +109,11 @@ pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
             async_std::task::sleep(std::time::Duration::from_secs(15_u64)).await
         }
         async_std::task::sleep(std::time::Duration::from_secs(1_u64)).await;
-        if ips_checked % 10 == 0 {
+        db.write_line(ip.to_string().as_bytes()).await?;
+        if last_flushed.elapsed().as_secs() > 10 {
+            db.flush().await?;
+            wtr.flush().await?;
+            last_flushed = std::time::Instant::now();
             println!(
                 "ARGUS: Checked {}/{} ips ({}/s), found {} domains with {} errors",
                 ips_checked,
@@ -118,12 +122,6 @@ pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
                 domains_found,
                 errors
             );
-        }
-        db.write_line(ip.to_string().as_bytes()).await?;
-        if last_flushed.elapsed().as_secs() > 10 {
-            db.flush().await?;
-            wtr.flush().await?;
-            last_flushed = std::time::Instant::now();
         }
     }
     db.flush().await?;
@@ -213,7 +211,11 @@ pub async fn threatminer_passive_dns() -> Result<(), Box<dyn std::error::Error>>
             async_std::task::sleep(std::time::Duration::from_secs(15_u64)).await
         }
         async_std::task::sleep(std::time::Duration::from_secs(6_u64)).await;
-        if ips_checked % 10 == 0 {
+        db.write_line(ip.to_string().as_bytes()).await?;
+        if last_flushed.elapsed().as_secs() > 10 {
+            db.flush().await?;
+            wtr.flush().await?;
+            last_flushed = std::time::Instant::now();
             println!(
                 "THREATMINER: Checked {}/{} ips ({}/s), found {} domains with {} errors",
                 ips_checked,
@@ -222,12 +224,6 @@ pub async fn threatminer_passive_dns() -> Result<(), Box<dyn std::error::Error>>
                 domains_found,
                 errors
             );
-        }
-        db.write_line(ip.to_string().as_bytes()).await?;
-        if last_flushed.elapsed().as_secs() > 10 {
-            db.flush().await?;
-            wtr.flush().await?;
-            last_flushed = std::time::Instant::now();
         }
     }
     db.flush().await?;
