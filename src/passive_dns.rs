@@ -108,7 +108,7 @@ pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
             errors += 1;
             async_std::task::sleep(std::time::Duration::from_secs(15_u64)).await
         }
-        async_std::task::sleep(std::time::Duration::from_secs(1_u64)).await;
+        async_std::task::sleep(std::time::Duration::from_secs_f32(60.0 / 100.0)).await; // Unauthenticated users are limited to 100 requests per minute, and 1000 requests per day.
         db.write_line(ip.to_string().as_bytes()).await?;
         if last_flushed.elapsed().as_secs() > 10 {
             db.flush().await?;
