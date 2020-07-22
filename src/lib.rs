@@ -1,6 +1,7 @@
 #[macro_use]
 extern crate lazy_static;
 
+pub mod certstream;
 pub mod dns_lookup;
 pub mod doh;
 pub mod domain_filter;
