@@ -29,51 +29,118 @@ async fn get_ips() -> Result<std::collections::HashSet<std::net::IpAddr>, Box<dy
         .collect())
 }
 
-pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
-    let mut ips = get_ips().await?;
+struct PassiveDNS {
+    ips: Vec<std::net::IpAddr>,
+    db: DirectoryDB,
+    wtr: BufWriter<async_std::fs::File>,
+    sleep_time: f32,
+    total_length: u64,
+    last_flushed: std::time::Instant,
+    last_fetched: std::time::Instant,
+}
 
-    let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
-    path.push("argus");
-    let mut db = DirectoryDB::new(&path).await?;
-    db.read(|line| {
-        if let Ok(ip) = line.trim().parse::<std::net::IpAddr>() {
-            ips.remove(&ip);
+impl PassiveDNS {
+    async fn new(name: &str, sleep_time: f32) -> Result<Self, Box<dyn std::error::Error>> {
+        let mut ips = get_ips().await?;
+
+        let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
+        path.push(name);
+        let db = DirectoryDB::new(&path).await?;
+        db.read(|line| {
+            if let Ok(ip) = line.trim().parse::<std::net::IpAddr>() {
+                ips.remove(&ip);
+            }
+        })
+        .await?;
+        let total_length = ips.len() as u64;
+
+        let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);
+        let mut path = std::path::PathBuf::from(EXTRACTED_DOMAINS_DIR);
+        path.push(std::path::PathBuf::from(format!(
+            "{}_{:?}",
+            name,
+            chrono::Utc::today()
+        )));
+        let wtr = BufWriter::new(
+            OpenOptions::new()
+                .append(true)
+                .create(true)
+                .open(path)
+                .await?,
+        );
+
+        Ok(Self {
+            ips: ips.into_iter().collect(),
+            db,
+            wtr,
+            sleep_time,
+            total_length,
+            last_flushed: std::time::Instant::now(),
+            last_fetched: std::time::Instant::now(),
+        })
+    }
+    async fn flush(&mut self) -> Result<(), Box<dyn std::error::Error>> {
+        self.wtr.flush().await?;
+        self.db.flush().await?;
+        self.last_flushed = std::time::Instant::now();
+        Ok(())
+    }
+    async fn check_flush(&mut self) -> Result<(), Box<dyn std::error::Error>> {
+        if self.last_flushed.elapsed().as_secs() > 10 {
+            self.flush().await?;
         }
-    })
-    .await?;
-    let total_length = ips.len();
-    println!("Argus: {} ips remaining", total_length);
+        Ok(())
+    }
+    async fn next_ip(&mut self) -> Option<std::net::IpAddr> {
+        let sleep_time = self.sleep_time - self.last_fetched.elapsed().as_secs_f32();
+        if sleep_time > 0.0 {
+            async_std::task::sleep(std::time::Duration::from_secs_f32(sleep_time)).await;
+        }
+        self.check_flush().await.ok()?;
+        self.ips.pop()
+    }
+    async fn add_domain(&mut self, domain: &Domain) -> Result<(), Box<dyn std::error::Error>> {
+        self.wtr.write_all(domain.to_string().as_bytes()).await?;
+        self.wtr.write_all(b"\n").await?;
+        self.check_flush().await?;
+        Ok(())
+    }
+    async fn finished_ip(
+        &mut self,
+        ip: std::net::IpAddr,
+    ) -> Result<(), Box<dyn std::error::Error>> {
+        self.db.write_line(ip.to_string().as_bytes()).await?;
+        self.check_flush().await?;
+        Ok(())
+    }
+}
+
+pub async fn argus() -> Result<(), Box<dyn std::error::Error>> {
+    let mut pd = PassiveDNS::new("argus", 60.0 / 100.0).await?;
+    // Unauthenticated users are limited to 100 requests per minute, and 1000 requests per day.
+
     let client = reqwest::Client::new();
+
     let mut ips_checked: u64 = 0;
     let mut domains_found: u64 = 0;
     let mut errors: u64 = 0;
-
-    let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);
-    let mut path = std::path::PathBuf::from(EXTRACTED_DOMAINS_DIR);
-    path.push(std::path::PathBuf::from(format!(
-        "argus_{:?}",
-        chrono::Utc::today()
-    )));
-    let mut wtr = BufWriter::new(
-        OpenOptions::new()
-            .append(true)
-            .create(true)
-            .open(path)
-            .await?,
-    );
-    let now = std::time::Instant::now();
-    let mut last_flushed = std::time::Instant::now();
-    for ip in ips.into_iter() {
+    let mut errors_in_a_row: u64 = 0;
+    let start = std::time::Instant::now();
+    let mut last_output = std::time::Instant::now();
+    while let Some(ip) = pd.next_ip().await {
         ips_checked += 1;
-        if let Ok(response) = client
+        let mut errored = false;
+        if let Ok(text) = client
             .get(&format!(
                 "https://api.mnemonic.no/pdns/v3/{}?limit=100000",
                 ip
             ))
             .send()
+            .await?
+            .text()
             .await
         {
-            if let Ok(json) = response.json::<serde_json::Value>().await {
+            if let Ok(json) = serde_json::from_str::<serde_json::Value>(&text) {
                 if json.pointer("/responseCode")
                     != Some(&serde_json::Value::Number(serde_json::Number::from(200)))
                 {
@@ -81,6 +148,7 @@ pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
                         "ARGUS: Non 200 response code: {:?}",
                         json.pointer("/responseCode")
                     );
+                    pd.check_flush().await?;
                     return Err(Box::new(InvalidResponseCode::default()));
                 }
                 if let Some(data) = json.pointer("/data").and_then(|data| data.as_array()) {
@@ -89,91 +157,77 @@ pub async fn argus_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
                     }) {
                         if let Ok(domain) = domain.parse::<Domain>() {
                             domains_found += 1;
-                            wtr.write_all(domain.to_string().as_bytes()).await?;
-                            wtr.write_all(b"\n").await?;
+                            pd.add_domain(&domain).await?;
                         } else {
                             println!("ARGUS: Failed to parse: {}", domain)
                         }
                     }
                 } else {
                     println!("No data field: {:?}", json);
-                    errors += 1;
+                    errored = true;
                 }
             } else {
-                println!("ARGUS: Failed to parse as json");
-                errors += 1;
+                println!("ARGUS: Failed to parse as json: {}", text);
+                errored = true;
             }
         } else {
             println!("ARGUS: Connection failed");
-            errors += 1;
+            errored = true;
             async_std::task::sleep(std::time::Duration::from_secs(15_u64)).await
         }
-        async_std::task::sleep(std::time::Duration::from_secs_f32(60.0 / 100.0)).await; // Unauthenticated users are limited to 100 requests per minute, and 1000 requests per day.
-        db.write_line(ip.to_string().as_bytes()).await?;
-        if last_flushed.elapsed().as_secs() > 10 {
-            db.flush().await?;
-            wtr.flush().await?;
-            last_flushed = std::time::Instant::now();
-            println!(
-                "ARGUS: Checked {}/{} ips ({}/s), found {} domains with {} errors",
-                ips_checked,
-                total_length,
-                (ips_checked as f32 / now.elapsed().as_secs_f32()),
-                domains_found,
-                errors
-            );
+        if errored {
+            errors += 1;
+            errors_in_a_row += 1;
+            if errors_in_a_row > 10 {
+                println!("ARGUS: Exceeded max errors in a row");
+                pd.flush().await?;
+                return Err(Box::new(InvalidResponseCode::default()));
+            }
+        } else {
+            errors_in_a_row = 0;
+            pd.finished_ip(ip).await?;
+            if last_output.elapsed().as_secs() > 30 {
+                last_output = std::time::Instant::now();
+                println!(
+                    "ARGUS: Checked {}/{} ips ({}/s), found {} domains with {} errors",
+                    ips_checked,
+                    pd.total_length,
+                    (ips_checked as f32 / start.elapsed().as_secs_f32()),
+                    domains_found,
+                    errors
+                );
+            }
         }
     }
-    db.flush().await?;
-    wtr.flush().await?;
+    pd.flush().await?;
     Ok(())
 }
 
-pub async fn threatminer_passive_dns() -> Result<(), Box<dyn std::error::Error>> {
-    let mut ips = get_ips().await?;
+pub async fn threatminer() -> Result<(), Box<dyn std::error::Error>> {
+    let mut pd = PassiveDNS::new("threatminer", 6.0).await?;
 
-    let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
-    path.push("threatminer");
-    let mut db = DirectoryDB::new(&path).await?;
-    db.read(|line| {
-        if let Ok(ip) = line.trim().parse::<std::net::IpAddr>() {
-            ips.remove(&ip);
-        }
-    })
-    .await?;
-    let total_length = ips.len();
-    println!("THREATMINER: {} ips remaining", total_length);
     let client = reqwest::Client::new();
+
     let mut ips_checked: u64 = 0;
     let mut domains_found: u64 = 0;
     let mut errors: u64 = 0;
-
-    let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);
-    let mut path = std::path::PathBuf::from(EXTRACTED_DOMAINS_DIR);
-    path.push(std::path::PathBuf::from(format!(
-        "threatminer_{:?}",
-        chrono::Utc::today()
-    )));
-    let mut wtr = BufWriter::new(
-        OpenOptions::new()
-            .append(true)
-            .create(true)
-            .open(path)
-            .await?,
-    );
-    let now = std::time::Instant::now();
-    let mut last_flushed = std::time::Instant::now();
-    for ip in ips.into_iter() {
+    let mut errors_in_a_row: u64 = 0;
+    let start = std::time::Instant::now();
+    let mut last_output = std::time::Instant::now();
+    while let Some(ip) = pd.next_ip().await {
         ips_checked += 1;
-        if let Ok(response) = client
+        let mut errored = false;
+        if let Ok(text) = client
             .get(&format!(
                 "https://api.threatminer.org/v2/host.php?q={}&rt=2",
                 ip
             ))
             .send()
+            .await?
+            .text()
             .await
         {
-            if let Ok(json) = response.json::<serde_json::Value>().await {
+            if let Ok(json) = serde_json::from_str::<serde_json::Value>(&text) {
                 if json.pointer("/status_code")
                     != Some(&serde_json::Value::String("200".to_string()))
                     && json.pointer("/status_code")
@@ -183,6 +237,7 @@ pub async fn threatminer_passive_dns() -> Result<(), Box<dyn std::error::Error>>
                         "THREATMINER: Non 200 response code: {:?}",
                         json.pointer("/status_code")
                     );
+                    pd.check_flush().await?;
                     return Err(Box::new(InvalidResponseCode::default()));
                 }
                 if let Some(data) = json.pointer("/results").and_then(|data| data.as_array()) {
@@ -191,91 +246,75 @@ pub async fn threatminer_passive_dns() -> Result<(), Box<dyn std::error::Error>>
                     }) {
                         if let Ok(domain) = domain.parse::<Domain>() {
                             domains_found += 1;
-                            wtr.write_all(domain.to_string().as_bytes()).await?;
-                            wtr.write_all(b"\n").await?;
+                            pd.add_domain(&domain).await?;
                         } else {
                             println!("THREATMINER: Failed to parse: {}", domain)
                         }
                     }
                 } else {
                     println!("THREATMINER: No data field: {:?}", json);
-                    errors += 1;
+                    errored = true;
                 }
             } else {
-                println!("THREATMINER: Failed to parse as json");
-                errors += 1;
+                println!("THREATMINER: Failed to parse as json: {}", text);
+                errored = true;
             }
         } else {
             println!("THREATMINER: Connection failed");
-            errors += 1;
+            errored = true;
             async_std::task::sleep(std::time::Duration::from_secs(15_u64)).await
         }
-        async_std::task::sleep(std::time::Duration::from_secs(6_u64)).await;
-        db.write_line(ip.to_string().as_bytes()).await?;
-        if last_flushed.elapsed().as_secs() > 10 {
-            db.flush().await?;
-            wtr.flush().await?;
-            last_flushed = std::time::Instant::now();
-            println!(
-                "THREATMINER: Checked {}/{} ips ({}/s), found {} domains with {} errors",
-                ips_checked,
-                total_length,
-                (ips_checked as f32 / now.elapsed().as_secs_f32()),
-                domains_found,
-                errors
-            );
+        if errored {
+            errors += 1;
+            errors_in_a_row += 1;
+            if errors_in_a_row > 10 {
+                println!("THREATMINER: Exceeded max errors in a row");
+                pd.flush().await?;
+                return Err(Box::new(InvalidResponseCode::default()));
+            }
+        } else {
+            errors_in_a_row = 0;
+            pd.finished_ip(ip).await?;
+            if last_output.elapsed().as_secs() > 30 {
+                last_output = std::time::Instant::now();
+                println!(
+                    "THREATMINER: Checked {}/{} ips ({}/s), found {} domains with {} errors",
+                    ips_checked,
+                    pd.total_length,
+                    (ips_checked as f32 / start.elapsed().as_secs_f32()),
+                    domains_found,
+                    errors
+                );
+            }
         }
     }
-    db.flush().await?;
-    wtr.flush().await?;
+    pd.flush().await?;
     Ok(())
 }
 
-pub async fn virus_total_passive_dns(key: String) -> Result<(), Box<dyn std::error::Error>> {
-    let mut ips = get_ips().await?;
+pub async fn virus_total(key: String) -> Result<(), Box<dyn std::error::Error>> {
+    let mut pd = PassiveDNS::new("virustotal", 15.0).await?;
 
-    let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
-    path.push("virustotal");
-    let mut db = DirectoryDB::new(&path).await?;
-    db.read(|line| {
-        if let Ok(ip) = line.trim().parse::<std::net::IpAddr>() {
-            ips.remove(&ip);
-        }
-    })
-    .await?;
-    let total_length = ips.len();
-    println!("VIRUSTOTAL: {} ips remaining", total_length);
     let client = reqwest::Client::new();
+
     let mut ips_checked: u64 = 0;
     let mut domains_found: u64 = 0;
     let mut errors: u64 = 0;
-
-    let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);
-    let mut path = std::path::PathBuf::from(EXTRACTED_DOMAINS_DIR);
-    path.push(std::path::PathBuf::from(format!(
-        "virustotal_{:?}",
-        chrono::Utc::today()
-    )));
-    let mut wtr = BufWriter::new(
-        OpenOptions::new()
-            .append(true)
-            .create(true)
-            .open(path)
-            .await?,
-    );
-    let now = std::time::Instant::now();
-    let mut last_flushed = std::time::Instant::now();
-    for ip in ips.into_iter() {
+    let mut errors_in_a_row: u64 = 0;
+    let start = std::time::Instant::now();
+    let mut last_output = std::time::Instant::now();
+    while let Some(ip) = pd.next_ip().await {
         ips_checked += 1;
-        if let Ok(response) = client
+        let mut errored = false;
+        if let Ok(text) = client
             .get("https://www.virustotal.com/vtapi/v2/ip-address/report")
             .query(&[("apikey", &key), ("ip", &ip.to_string())])
             .send()
+            .await?
+            .text()
             .await
         {
-            /*println!("response: {:?}", response.text().await?);
-            loop {};*/
-            if let Ok(json) = response.json::<serde_json::Value>().await {
+            if let Ok(json) = serde_json::from_str::<serde_json::Value>(&text) {
                 if json.pointer("/response_code")
                     != Some(&serde_json::Value::Number(serde_json::Number::from(1)))
                 {
@@ -283,6 +322,7 @@ pub async fn virus_total_passive_dns(key: String) -> Result<(), Box<dyn std::err
                         "VIRUSTOTAL: Non 1 response code: {:?}",
                         json.pointer("/status_code")
                     );
+                    pd.flush().await?;
                     return Err(Box::new(InvalidResponseCode::default()));
                 }
                 if let Some(data) = json
@@ -294,43 +334,48 @@ pub async fn virus_total_passive_dns(key: String) -> Result<(), Box<dyn std::err
                     }) {
                         if let Ok(domain) = domain.parse::<Domain>() {
                             domains_found += 1;
-                            wtr.write_all(domain.to_string().as_bytes()).await?;
-                            wtr.write_all(b"\n").await?;
+                            pd.add_domain(&domain).await?;
                         } else {
                             println!("VIRUSTOTAL: Failed to parse: {}", domain)
                         }
                     }
                 } else {
                     println!("VIRUSTOTAL: No data field: {:?}", json);
-                    errors += 1;
+                    errored = true;
                 }
             } else {
-                println!("VIRUSTOTAL: Failed to parse as json");
-                errors += 1;
+                println!("VIRUSTOTAL: Failed to parse as json: {}", text);
+                errored = true;
             }
         } else {
             println!("VIRUSTOTAL: Connection failed");
-            errors += 1;
+            errored = true;
             async_std::task::sleep(std::time::Duration::from_secs(15_u64)).await
         }
-        async_std::task::sleep(std::time::Duration::from_secs(15_u64)).await;
-
-        db.write_line(ip.to_string().as_bytes()).await?;
-        if last_flushed.elapsed().as_secs() > 10 {
-            db.flush().await?;
-            wtr.flush().await?;
-            last_flushed = std::time::Instant::now();
-            println!(
-                "VIRUSTOTAL: Checked {}/{} ips ({}/s), found {} domains with {} errors",
-                ips_checked,
-                total_length,
-                (ips_checked as f32 / now.elapsed().as_secs_f32()),
-                domains_found,
-                errors
-            );
+        if errored {
+            errors += 1;
+            errors_in_a_row += 1;
+            if errors_in_a_row > 10 {
+                println!("VIRUSTOTAL: Exceeded max errors in a row");
+                pd.flush().await?;
+                return Err(Box::new(InvalidResponseCode::default()));
+            }
+        } else {
+            errors_in_a_row = 0;
+            pd.finished_ip(ip).await?;
+            if last_output.elapsed().as_secs() > 30 {
+                last_output = std::time::Instant::now();
+                println!(
+                    "VIRUSTOTAL: Checked {}/{} ips ({}/s), found {} domains with {} errors",
+                    ips_checked,
+                    pd.total_length,
+                    (ips_checked as f32 / start.elapsed().as_secs_f32()),
+                    domains_found,
+                    errors
+                );
+            }
         }
     }
-    db.flush().await?;
-    wtr.flush().await?;
+    pd.flush().await?;
     Ok(())
 }

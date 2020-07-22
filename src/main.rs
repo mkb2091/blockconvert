@@ -196,15 +196,15 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
     if let Some(vt_api) = f.virus_total_api {
         let _result = futures::join!(
             certstream::certstream(),
-            passive_dns::argus_passive_dns(),
-            passive_dns::threatminer_passive_dns(),
-            passive_dns::virus_total_passive_dns(vt_api)
+            passive_dns::argus(),
+            passive_dns::threatminer(),
+            passive_dns::virus_total(vt_api)
         );
     } else {
         let _result = futures::join!(
             certstream::certstream(),
-            passive_dns::argus_passive_dns(),
-            passive_dns::threatminer_passive_dns()
+            passive_dns::argus(),
+            passive_dns::threatminer()
         );
     }
 
