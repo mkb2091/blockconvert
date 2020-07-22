@@ -97,6 +97,7 @@ impl PassiveDNS {
             async_std::task::sleep(std::time::Duration::from_secs_f32(sleep_time)).await;
         }
         self.check_flush().await.ok()?;
+        self.last_fetched = std::time::Instant::now();
         self.ips.pop()
     }
     async fn add_domain(&mut self, domain: &Domain) -> Result<(), Box<dyn std::error::Error>> {
