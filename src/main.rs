@@ -40,6 +40,12 @@ struct FindDomains {
     virus_total_api: Option<String>,
 }
 
+const INERNAL_LISTS: &[(&str, FilterListType)] = &[
+    ("blocklist.txt", FilterListType::DomainBlocklist),
+    ("block_regex.txt", FilterListType::RegexBlocklist),
+    ("allowlist.txt", FilterListType::DomainAllowlist),
+];
+
 fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
     let path = std::path::Path::new(LIST_CSV);
     let mut records: Vec<FilterListRecord> = csv::Reader::from_path(path)?
@@ -74,10 +80,7 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
             builder.add_list(record.list_type, data);
         })
         .await;
-        for (file_path, list_type) in &[
-            ("blocklist.txt", FilterListType::DomainBlocklist),
-            ("allowlist.txt", FilterListType::DomainAllowlist),
-        ] {
+        for (file_path, list_type) in INERNAL_LISTS.iter() {
             let mut path = std::path::PathBuf::from("internal");
             path.push(file_path);
             if let Ok(mut file) = File::open(path).await {
@@ -177,10 +180,7 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
         })
         .await;
     }
-    for (file_path, list_type) in &[
-        ("blocklist.txt", FilterListType::DomainBlocklist),
-        ("allowlist.txt", FilterListType::DomainAllowlist),
-    ] {
+    for (file_path, list_type) in INERNAL_LISTS.iter() {
         let mut path = std::path::PathBuf::from("internal");
         path.push(&file_path);
         if let Ok(mut file) = File::open(path).await {
