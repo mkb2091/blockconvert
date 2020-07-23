@@ -29,6 +29,9 @@ impl DomainFilterBuilder {
         {
             let _ = self.disallow_domains.remove(&without_www);
             self.allow_domains.insert(without_www);
+        } else if let Ok(with_www) = format!("www.{}", &domain).parse::<Domain>() {
+            let _ = self.disallow_domains.remove(&with_www);
+            self.allow_domains.insert(with_www);
         }
         let _ = self.disallow_domains.remove(&domain);
         self.allow_domains.insert(domain);
