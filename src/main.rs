@@ -214,9 +214,13 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let opts: Opts = Opts::parse();
-    match opts.mode {
+    let result = match opts.mode {
         Mode::Generate => generate().await,
         Mode::Query(q) => query(q).await,
         Mode::FindDomains(f) => find_domains(f).await,
+    };
+    if let Err(error) = &result {
+        println!("Failed with error: {:?}", error);
     }
+    result
 }

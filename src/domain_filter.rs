@@ -370,3 +370,18 @@ fn unblocked_ips_do_not_allow() {
         None
     )
 }
+
+#[test]
+fn adblock_third_party_does_not_block_domain() {
+    let mut filter = DomainFilterBuilder::new();
+    filter.add_adblock_rule("||example.com$third-party");
+    let filter = filter.to_domain_filter();
+    assert_eq!(
+        filter.domain_is_allowed(&"example.com".parse().unwrap()),
+        None
+    );
+    assert_eq!(
+        filter.domain_is_allowed(&"www.example.com".parse().unwrap()),
+        None
+    )
+}

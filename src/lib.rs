@@ -11,7 +11,7 @@ pub mod validator;
 
 pub mod blockconvert;
 
-pub use blockconvert::{BlockConvert, BlockConvertBuilder};
+pub use crate::blockconvert::{BlockConvert, BlockConvertBuilder};
 
 pub use validator::Domain;
 
