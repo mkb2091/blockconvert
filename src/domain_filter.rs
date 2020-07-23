@@ -111,7 +111,7 @@ impl DomainFilterBuilder {
                 true,  // Network filters
                 false, // Cosmetic filter
                 false, // Debug mode
-                false, // Optimise, enabling increases total program performance by ~10% but uses ~200MB
+                true, // Optimise, enabling increases total program performance by ~10% but uses ~200MB
             ),
             allow_regex: regex::RegexSet::new(&self.allow_regex).unwrap(),
             disallow_regex: regex::RegexSet::new(&self.disallow_regex).unwrap(),
