@@ -6,6 +6,8 @@ use crate::{doh, DirectoryDB, Domain};
 
 const DNS_RECORD_DIR: &str = "dns_db";
 
+const DNS_MAX_AGE: u64 = 7 * 86400;
+
 #[derive(Clone, Debug)]
 pub struct DNSResultRecord {
     pub domain: Domain,
@@ -82,7 +84,7 @@ pub async fn lookup_domains<F>(
 where
     F: FnMut(&Domain, &[Domain], &[std::net::IpAddr]),
 {
-    let mut db = DirectoryDB::new(&std::path::Path::new(DNS_RECORD_DIR)).await?;
+    let mut db = DirectoryDB::new(&std::path::Path::new(DNS_RECORD_DIR), DNS_MAX_AGE).await?;
     db.read(|line| {
         if let Ok(record) = line.parse::<DNSResultRecord>() {
             domains.remove(&record.domain);

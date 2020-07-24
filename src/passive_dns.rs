@@ -1,4 +1,4 @@
-use crate::{get_blocked_ips_path, DirectoryDB, Domain, EXTRACTED_DOMAINS_DIR};
+use crate::{get_blocked_ips_path, DirectoryDB, Domain, EXTRACTED_DOMAINS_DIR, EXTRACTED_MAX_AGE};
 
 use async_std::prelude::*;
 
@@ -45,7 +45,7 @@ impl PassiveDNS {
 
         let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
         path.push(name);
-        let db = DirectoryDB::new(&path).await?;
+        let db = DirectoryDB::new(&path, EXTRACTED_MAX_AGE).await?;
         db.read(|line| {
             if let Ok(ip) = line.trim().parse::<std::net::IpAddr>() {
                 ips.remove(&ip);

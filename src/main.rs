@@ -90,14 +90,17 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
             }
         }
         let mut bc = builder.to_blockconvert();
-        DirectoryDB::new(&std::path::Path::new(EXTRACTED_DOMAINS_DIR))
-            .await?
-            .read(|line| {
-                if let Ok(domain) = line.trim().parse::<Domain>() {
-                    bc.add_extracted_domain(domain);
-                }
-            })
-            .await?;
+        DirectoryDB::new(
+            &std::path::Path::new(EXTRACTED_DOMAINS_DIR),
+            EXTRACTED_MAX_AGE,
+        )
+        .await?
+        .read(|line| {
+            if let Ok(domain) = line.trim().parse::<Domain>() {
+                bc.add_extracted_domain(domain);
+            }
+        })
+        .await?;
         let mut headers = reqwest::header::HeaderMap::new();
         headers.insert(
             reqwest::header::ACCEPT,

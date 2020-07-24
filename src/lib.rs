@@ -34,7 +34,7 @@ lazy_static! {
 
 pub const EXTRACTED_DOMAINS_DIR: &str = "extracted";
 
-pub const MAX_AGE: u64 = 7 * 86400;
+pub const EXTRACTED_MAX_AGE: u64 = 30 * 86400;
 
 pub fn get_blocked_domain_path() -> std::path::PathBuf {
     let mut path = std::path::PathBuf::from("output");
@@ -105,10 +105,14 @@ pub enum FilterListType {
 pub struct DirectoryDB {
     path: std::path::PathBuf,
     wtr: BufWriter<async_std::fs::File>,
+    max_age: u64,
 }
 
 impl DirectoryDB {
-    pub async fn new(path: &std::path::Path) -> Result<Self, Box<dyn std::error::Error>> {
+    pub async fn new(
+        path: &std::path::Path,
+        max_age: u64,
+    ) -> Result<Self, Box<dyn std::error::Error>> {
         let dir_path = std::path::PathBuf::from(path);
         let _ = async_std::fs::create_dir_all(&dir_path).await;
 
@@ -128,6 +132,7 @@ impl DirectoryDB {
         Ok(Self {
             path: dir_path,
             wtr,
+            max_age,
         })
     }
     pub async fn read<I>(&self, mut handle_input: I) -> Result<(), Box<dyn std::error::Error>>
@@ -143,7 +148,7 @@ impl DirectoryDB {
             if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
                 let now = std::time::SystemTime::now();
                 if let Ok(duration_since) = now.duration_since(modified) {
-                    if duration_since.as_secs() < MAX_AGE {
+                    if duration_since.as_secs() < self.max_age {
                         if let Ok(file) = async_std::fs::File::open(entry.path()).await {
                             let mut file = async_std::io::BufReader::new(file);
                             let mut line = String::new();
