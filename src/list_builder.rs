@@ -1,16 +1,16 @@
-use crate::{dns_lookup, domain_filter, Domain, FilterListType, DOMAIN_REGEX, IP_REGEX};
+use crate::{dns_lookup, Domain, FilterListType, DOMAIN_REGEX, IP_REGEX};
 
 use async_std::io::BufWriter;
 use async_std::prelude::*;
 
 #[derive(Default)]
-pub struct BlockConvertBuilder {
-    filter_builder: domain_filter::DomainFilterBuilder,
+pub struct FilterListBuilder {
+    filter_builder: blockconvert::DomainFilterBuilder,
     extracted_domains: std::collections::HashSet<Domain>,
     extracted_ips: std::collections::HashSet<std::net::IpAddr>,
 }
 
-impl BlockConvertBuilder {
+impl FilterListBuilder {
     pub fn new() -> Self {
         Self::default()
     }
@@ -106,8 +106,8 @@ impl BlockConvertBuilder {
             list_type => println!("Unsupported list type: {:?}", list_type),
         }
     }
-    pub fn to_blockconvert(self) -> BlockConvert {
-        let mut bc = BlockConvert {
+    pub fn to_filterlist(self) -> FilterList {
+        let mut bc = FilterList {
             filter: self.filter_builder.to_domain_filter(),
             extracted_domains: self.extracted_domains,
             blocked_domains: Default::default(),
@@ -129,8 +129,8 @@ impl BlockConvertBuilder {
     }
 }
 
-pub struct BlockConvert {
-    filter: domain_filter::DomainFilter,
+pub struct FilterList {
+    filter: blockconvert::DomainFilter,
     blocked_domains: std::collections::HashSet<Domain>,
     allowed_domains: std::collections::HashSet<Domain>,
     blocked_ip_addrs: std::collections::HashSet<std::net::IpAddr>,
@@ -138,13 +138,13 @@ pub struct BlockConvert {
     extracted_domains: std::collections::HashSet<Domain>,
 }
 
-impl BlockConvert {
+impl FilterList {
     pub fn from(filter_lists: &[(FilterListType, &str)]) -> Self {
-        let mut builder = BlockConvertBuilder::new();
+        let mut builder = FilterListBuilder::new();
         for (list_type, data) in filter_lists.iter() {
             builder.add_list(*list_type, data)
         }
-        builder.to_blockconvert()
+        builder.to_filterlist()
     }
     pub fn allowed(
         &self,

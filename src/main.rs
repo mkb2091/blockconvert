@@ -7,7 +7,7 @@ use async_std::prelude::*;
 
 use rand::prelude::*;
 
-use ::blockconvert::*;
+use domain_list_builder::*;
 
 const LIST_CSV: &str = "filterlists.csv";
 
@@ -75,7 +75,7 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
         "https://cloudflare-dns.com/dns-query".to_string(),
     ];
     if let Ok(records) = read_csv() {
-        let mut builder = BlockConvertBuilder::new();
+        let mut builder = FilterListBuilder::new();
         list_downloader::download_all(&client, &records, |record, data| {
             builder.add_list(record.list_type, data);
         })
@@ -89,7 +89,7 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
                 builder.add_list(*list_type, &text)
             }
         }
-        let mut bc = builder.to_blockconvert();
+        let mut bc = builder.to_filterlist();
         DirectoryDB::new(
             &std::path::Path::new(EXTRACTED_DOMAINS_DIR),
             EXTRACTED_MAX_AGE,
@@ -166,7 +166,7 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
 
     let client = reqwest::Client::new();
     let check_filter_list = |url: &str, list_type: FilterListType, data: &str| {
-        let bc = BlockConvert::from(&[(list_type, &data)]);
+        let bc = FilterList::from(&[(list_type, &data)]);
         for (part, cnames, ips) in parts.iter() {
             if let Some(allowed) = bc.allowed(&part, &cnames, &ips) {
                 if allowed {

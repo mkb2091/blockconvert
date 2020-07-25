@@ -4,16 +4,14 @@ extern crate lazy_static;
 pub mod certstream;
 pub mod dns_lookup;
 pub mod doh;
-pub mod domain_filter;
 pub mod list_downloader;
 pub mod passive_dns;
-pub mod validator;
 
-pub mod blockconvert;
+mod list_builder;
 
-pub use crate::blockconvert::{BlockConvert, BlockConvertBuilder};
+pub use list_builder::{FilterList, FilterListBuilder};
 
-pub use validator::Domain;
+pub use blockconvert::Domain;
 
 use serde::*;
 

@@ -1,5 +1,5 @@
 use crate::dns_lookup::DNSResultRecord;
-use crate::validator::Domain;
+use crate::Domain;
 
 use serde::Deserialize;
 
