@@ -188,13 +188,13 @@ impl BlockConvert {
 
     pub async fn write_all(
         &self,
-        blocked_domains: &std::path::Path,
-        hostfile: &std::path::Path,
-        rpz: &std::path::Path,
-        adblock: &std::path::Path,
-        allowed_domains: &std::path::Path,
-        blocked_ip_addrs: &std::path::Path,
-        allowed_ip_addrs: &std::path::Path,
+        blocked_domains_path: &std::path::Path,
+        hostfile_path: &std::path::Path,
+        rpz_path: &std::path::Path,
+        adblock_path: &std::path::Path,
+        allowed_domains_path: &std::path::Path,
+        blocked_ip_addrs_path: &std::path::Path,
+        allowed_ip_addrs_path: &std::path::Path,
     ) -> Result<(), Box<dyn std::error::Error>> {
         async fn write_to_file<T: std::fmt::Display + Ord, F: Fn(&T) -> String>(
             data: &std::collections::HashSet<T>,
@@ -212,29 +212,87 @@ impl BlockConvert {
             buf.flush().await?;
             Ok(())
         }
-
+        let adblock_header: String = format!(
+            "[Adblock Plus 2.0]
+! Version: {:?}
+! Title: BlockConvert
+! Last modified: {:?}
+! Expires: 1 days (update frequency)
+! Homepage: https://github.com/mkb2091/blockconvert
+! Licence: GPL-3.0
+!
+!-----------------------Filters-----------------------!
+",
+            chrono::Utc::today(),
+            chrono::Utc::today(),
+        );
+        let other_header: String = format!(
+            "# Title: BlockConvert
+# Last modified: {:?}
+# Expires: 1 days (update frequency)
+# Homepage: https://github.com/mkb2091/blockconvert
+# Licence: GPL-3.0
+",
+            chrono::Utc::today()
+        );
+        let mut blocked_domains: Vec<_> = self.blocked_domains.iter().collect();
+        blocked_domains.sort_unstable();
         let domains = futures::future::try_join5(
-            write_to_file(&self.blocked_domains, blocked_domains, |item| {
-                item.to_string()
-            }),
-            write_to_file(&self.blocked_domains, hostfile, |item| {
-                format!("0.0.0.0 {}", item)
-            }),
-            write_to_file(&self.blocked_domains, rpz, |item| {
-                format!("{} CNAME .", item)
-            }),
-            write_to_file(&self.blocked_domains, adblock, |item| {
-                format!("||{}^", item)
-            }),
-            write_to_file(&self.allowed_domains, allowed_domains, |item| {
+            async {
+                let file = async_std::fs::File::create(blocked_domains_path).await?;
+                let mut buf = BufWriter::new(file);
+                buf.write_all(other_header.as_bytes()).await?;
+                for item in blocked_domains.iter() {
+                    buf.write_all(item.to_string().as_bytes()).await?;
+                    buf.write_all(b"\n").await?;
+                }
+                buf.flush().await?;
+                Ok(())
+            },
+            async {
+                let file = async_std::fs::File::create(hostfile_path).await?;
+                let mut buf = BufWriter::new(file);
+                buf.write_all(other_header.as_bytes()).await?;
+                for item in blocked_domains.iter() {
+                    buf.write_all(format!("0.0.0.0 {}", item).as_bytes())
+                        .await?;
+                    buf.write_all(b"\n").await?;
+                }
+                buf.flush().await?;
+                Ok(())
+            },
+            async {
+                let file = async_std::fs::File::create(rpz_path).await?;
+                let mut buf = BufWriter::new(file);
+                buf.write_all(other_header.as_bytes()).await?;
+                for item in blocked_domains.iter() {
+                    buf.write_all(format!("{} CNAME .", item).as_bytes())
+                        .await?;
+                    buf.write_all(b"\n").await?;
+                }
+                buf.flush().await?;
+                Ok(())
+            },
+            async {
+                let file = async_std::fs::File::create(adblock_path).await?;
+                let mut buf = BufWriter::new(file);
+                buf.write_all(adblock_header.as_bytes()).await?;
+                for item in blocked_domains.iter() {
+                    buf.write_all(format!("||{}^", item).as_bytes()).await?;
+                    buf.write_all(b"\n").await?;
+                }
+                buf.flush().await?;
+                Ok(())
+            },
+            write_to_file(&self.allowed_domains, allowed_domains_path, |item| {
                 item.to_string()
             }),
         );
         let ips = futures::future::try_join(
-            write_to_file(&self.blocked_ip_addrs, blocked_ip_addrs, |item| {
+            write_to_file(&self.blocked_ip_addrs, blocked_ip_addrs_path, |item| {
                 item.to_string()
             }),
-            write_to_file(&self.allowed_ip_addrs, allowed_ip_addrs, |item| {
+            write_to_file(&self.allowed_ip_addrs, allowed_ip_addrs_path, |item| {
                 item.to_string()
             }),
         );

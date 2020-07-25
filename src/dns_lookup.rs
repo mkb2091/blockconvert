@@ -110,13 +110,15 @@ where
     let now = std::time::Instant::now();
     let mut i: usize = 0;
     let mut error_count: usize = 0;
-    let display_status = |i:usize, error_count: usize, now: &std::time::Instant| println!(
-        "{}/{} {}/s with {} errors",
-        i,
-        total_length,
-        i as f32 / now.elapsed().as_secs_f32(),
-        error_count,
-    );
+    let display_status = |i: usize, error_count: usize, now: &std::time::Instant| {
+        println!(
+            "{}/{} {}/s with {} errors",
+            i,
+            total_length,
+            i as f32 / now.elapsed().as_secs_f32(),
+            error_count,
+        )
+    };
     while let Some(record) = tasks.next().await {
         if let Ok(record) = record {
             if i % 1000 == 0 {
