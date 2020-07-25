@@ -108,19 +108,19 @@ where
         ));
     }
     let now = std::time::Instant::now();
-    let mut i = 0;
-    let mut error_count: u64 = 0;
+    let mut i: usize = 0;
+    let mut error_count: usize = 0;
+    let display_status = |i:usize, error_count: usize, now: &std::time::Instant| println!(
+        "{}/{} {}/s with {} errors",
+        i,
+        total_length,
+        i as f32 / now.elapsed().as_secs_f32(),
+        error_count,
+    );
     while let Some(record) = tasks.next().await {
         if let Ok(record) = record {
             if i % 1000 == 0 {
-                println!(
-                    "{}/{} {}/s with {} errors: Got response for {}",
-                    i,
-                    total_length,
-                    i as f32 / now.elapsed().as_secs_f32(),
-                    error_count,
-                    &record.domain
-                );
+                display_status(i, error_count, &now);
             }
             f(&record.domain, &record.cnames, &record.ips);
             db.write_line(record.to_string().as_bytes()).await?;
@@ -137,5 +137,6 @@ where
         i += 1;
     }
     db.flush().await?;
+    display_status(i, error_count, &now);
     Ok(())
 }

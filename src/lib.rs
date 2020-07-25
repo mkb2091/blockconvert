@@ -167,6 +167,7 @@ impl DirectoryDB {
                 }
             }
             println!("Removing expired record");
+            std::fs::remove_file(entry.path())?;
         }
         Ok(())
     }
