@@ -141,7 +141,7 @@ impl DirectoryDB {
         let mut entries = async_std::fs::read_dir(&self.path).await?;
         while let Some(entry) = entries.next().await {
             let entry = entry?;
-            println!("Reading from file: {:?}", entry.path());
+            println!("Reading from file: {}", entry.path().to_string_lossy());
             let metadata = entry.metadata().await?;
             if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
                 let now = std::time::SystemTime::now();
