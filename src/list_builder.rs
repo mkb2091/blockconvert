@@ -237,6 +237,8 @@ impl FilterList {
         );
         let mut blocked_domains: Vec<_> = self.blocked_domains.iter().collect();
         blocked_domains.sort_unstable();
+        let mut blocked_ips: Vec<_> = self.blocked_ip_addrs.iter().collect();
+        blocked_ips.sort_unstable();
         let domains = futures::future::try_join5(
             async {
                 let file = async_std::fs::File::create(blocked_domains_path).await?;
@@ -277,7 +279,18 @@ impl FilterList {
                 let file = async_std::fs::File::create(adblock_path).await?;
                 let mut buf = BufWriter::new(file);
                 buf.write_all(adblock_header.as_bytes()).await?;
-                for item in blocked_domains.iter() {
+                'outer: for item in blocked_domains.iter() {
+                    for parent in item.iter_parent_domains() {
+                        if self.blocked_domains.contains(&parent) {
+                            continue 'outer;
+                            // As adblock blocks all subdomains,
+                            // if parent domain is blocked then filter is redundant
+                        }
+                    }
+                    buf.write_all(format!("||{}^", item).as_bytes()).await?;
+                    buf.write_all(b"\n").await?;
+                }
+                for item in blocked_ips.iter() {
                     buf.write_all(format!("||{}^", item).as_bytes()).await?;
                     buf.write_all(b"\n").await?;
                 }
