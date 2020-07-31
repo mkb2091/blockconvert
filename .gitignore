@@ -116,7 +116,9 @@ dmypy.json
 dns_cache.txt
 data/
 db/
-config.json
+extracted/
+passive_dns_db/
+dns_db/
 
 
 #Added by cargo
