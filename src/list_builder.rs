@@ -103,6 +103,26 @@ impl FilterListBuilder {
                         self.filter_builder.add_disallow_domain(domain)
                     }
                 }),
+            FilterListType::PrivacyBadger => {
+                if let Ok(json) = serde_json::from_str::<serde_json::Value>(&data) {
+                    if let Some(action_map) =
+                        json.get("action_map").and_then(|data| data.as_object())
+                    {
+                        for (domain, info) in action_map {
+                            if info
+                                .get("heuristicAction")
+                                .and_then(|item| item.as_str())
+                                .map(|item| item == "block")
+                                .unwrap_or(false)
+                            {
+                                if let Ok(domain) = domain.parse() {
+                                    self.filter_builder.add_disallow_domain(domain);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             list_type => println!("Unsupported list type: {:?}", list_type),
         }
     }
