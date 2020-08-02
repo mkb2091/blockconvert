@@ -76,6 +76,11 @@ impl FilterListBuilder {
                 .filter_map(|ip| ip.split_terminator('#').next())
                 .filter_map(|ip| ip.parse::<std::net::IpAddr>().ok())
                 .for_each(|ip| self.filter_builder.add_allow_ip_addr(ip)),
+            FilterListType::DenyHosts => data
+                .lines()
+                .filter_map(|line| line.strip_prefix("sshd: "))
+                .filter_map(|line| line.parse().ok())
+                .for_each(|ip| self.filter_builder.add_disallow_ip_addr(ip)),
             FilterListType::Hostfile => data
                 .lines()
                 .filter_map(|line| {
