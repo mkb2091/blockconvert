@@ -1,4 +1,4 @@
-use crate::{get_blocked_ips_path, DirectoryDB, Domain, EXTRACTED_DOMAINS_DIR, EXTRACTED_MAX_AGE};
+use crate::{DirectoryDB, Domain, EXTRACTED_DOMAINS_DIR, EXTRACTED_MAX_AGE};
 
 use async_std::prelude::*;
 
@@ -18,17 +18,6 @@ impl std::fmt::Display for InvalidResponseCode {
     }
 }
 
-async fn get_ips() -> Result<std::collections::HashSet<std::net::IpAddr>, Box<dyn std::error::Error>>
-{
-    let mut file = async_std::fs::File::open(&get_blocked_ips_path()).await?;
-    let mut text = String::new();
-    file.read_to_string(&mut text).await?;
-    Ok(text
-        .lines()
-        .filter_map(|line| line.parse::<std::net::IpAddr>().ok())
-        .collect())
-}
-
 struct PassiveDNS {
     ips: Vec<std::net::IpAddr>,
     db: DirectoryDB,
@@ -40,9 +29,7 @@ struct PassiveDNS {
 }
 
 impl PassiveDNS {
-    async fn new(name: &str, sleep_time: f32) -> Result<Self, Box<dyn std::error::Error>> {
-        let mut ips = get_ips().await?;
-
+    async fn new(mut ips: std::collections::HashSet<std::net::IpAddr>, name: &str, sleep_time: f32) -> Result<Self, Box<dyn std::error::Error>> {
         let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
         path.push(name);
         let db = DirectoryDB::new(&path, EXTRACTED_MAX_AGE).await?;
@@ -68,7 +55,6 @@ impl PassiveDNS {
                 .open(path)
                 .await?,
         );
-
         Ok(Self {
             ips: ips.into_iter().collect(),
             db,
@@ -116,8 +102,8 @@ impl PassiveDNS {
     }
 }
 
-pub async fn argus() -> Result<(), Box<dyn std::error::Error>> {
-    let mut pd = PassiveDNS::new("argus", 60.0 / 100.0).await?;
+pub async fn argus(ips: std::collections::HashSet<std::net::IpAddr>) -> Result<(), Box<dyn std::error::Error>> {
+    let mut pd = PassiveDNS::new(ips, "argus", 60.0 / 100.0).await?;
     // Unauthenticated users are limited to 100 requests per minute, and 1000 requests per day.
 
     let client = reqwest::Client::new();
@@ -200,12 +186,20 @@ pub async fn argus() -> Result<(), Box<dyn std::error::Error>> {
             }
         }
     }
+    println!(
+        "ARGUS: Checked {}/{} ips ({}/s), found {} domains with {} errors",
+        ips_checked,
+        pd.total_length,
+        (ips_checked as f32 / start.elapsed().as_secs_f32()),
+        domains_found,
+        errors
+    );
     pd.flush().await?;
     Ok(())
 }
 
-pub async fn threatminer() -> Result<(), Box<dyn std::error::Error>> {
-    let mut pd = PassiveDNS::new("threatminer", 6.0).await?;
+pub async fn threatminer(ips: std::collections::HashSet<std::net::IpAddr>) -> Result<(), Box<dyn std::error::Error>> {
+    let mut pd = PassiveDNS::new(ips, "threatminer", 6.0).await?;
 
     let client = reqwest::Client::new();
 
@@ -289,12 +283,20 @@ pub async fn threatminer() -> Result<(), Box<dyn std::error::Error>> {
             }
         }
     }
+    println!(
+        "THREATMINER: Checked {}/{} ips ({}/s), found {} domains with {} errors",
+        ips_checked,
+        pd.total_length,
+        (ips_checked as f32 / start.elapsed().as_secs_f32()),
+        domains_found,
+        errors
+    );
     pd.flush().await?;
     Ok(())
 }
 
-pub async fn virus_total(key: String) -> Result<(), Box<dyn std::error::Error>> {
-    let mut pd = PassiveDNS::new("virustotal", 15.0).await?;
+pub async fn virus_total(ips: std::collections::HashSet<std::net::IpAddr>, key: String) -> Result<(), Box<dyn std::error::Error>> {
+    let mut pd = PassiveDNS::new(ips, "virustotal", 15.0).await?;
 
     let client = reqwest::Client::new();
 
@@ -377,6 +379,14 @@ pub async fn virus_total(key: String) -> Result<(), Box<dyn std::error::Error>> 
             }
         }
     }
+    println!(
+        "VIRUSTOTAL: Checked {}/{} ips ({}/s), found {} domains with {} errors",
+        ips_checked,
+        pd.total_length,
+        (ips_checked as f32 / start.elapsed().as_secs_f32()),
+        domains_found,
+        errors
+    );
     pd.flush().await?;
     Ok(())
 }

@@ -197,18 +197,39 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
 }
 
 async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> {
+    let ips = if let Ok(records) = read_csv() {
+        let client = reqwest::Client::new();
+        let mut builder = FilterListBuilder::new();
+        list_downloader::download_all(&client, &records, |record, data| {
+            builder.add_list(record.list_type, data);
+        })
+        .await;
+        for (file_path, list_type) in INTERNAL_LISTS.iter() {
+            let mut path = std::path::PathBuf::from("internal");
+            path.push(file_path);
+            if let Ok(mut file) = File::open(path).await {
+                let mut text = String::new();
+                let _ = file.read_to_string(&mut text).await;
+                builder.add_list(*list_type, &text)
+            }
+        }
+        builder.extracted_ips
+    } else {
+        Default::default()
+    };
+
     if let Some(vt_api) = f.virus_total_api {
         let _result = futures::join!(
             certstream::certstream(),
-            passive_dns::argus(),
-            passive_dns::threatminer(),
-            passive_dns::virus_total(vt_api)
+            passive_dns::argus(ips.clone()),
+            passive_dns::threatminer(ips.clone()),
+            passive_dns::virus_total(ips.clone(), vt_api)
         );
     } else {
         let _result = futures::join!(
             certstream::certstream(),
-            passive_dns::argus(),
-            passive_dns::threatminer()
+            passive_dns::argus(ips.clone()),
+            passive_dns::threatminer(ips.clone())
         );
     }
 

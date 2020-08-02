@@ -6,8 +6,8 @@ use async_std::prelude::*;
 #[derive(Default)]
 pub struct FilterListBuilder {
     filter_builder: blockconvert::DomainFilterBuilder,
-    extracted_domains: std::collections::HashSet<Domain>,
-    extracted_ips: std::collections::HashSet<std::net::IpAddr>,
+    pub extracted_domains: std::collections::HashSet<Domain>,
+    pub extracted_ips: std::collections::HashSet<std::net::IpAddr>,
 }
 
 impl FilterListBuilder {
