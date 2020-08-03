@@ -29,7 +29,11 @@ struct PassiveDNS {
 }
 
 impl PassiveDNS {
-    async fn new(mut ips: std::collections::HashSet<std::net::IpAddr>, name: &str, sleep_time: f32) -> Result<Self, Box<dyn std::error::Error>> {
+    async fn new(
+        mut ips: std::collections::HashSet<std::net::IpAddr>,
+        name: &str,
+        sleep_time: f32,
+    ) -> Result<Self, Box<dyn std::error::Error>> {
         let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
         path.push(name);
         let db = DirectoryDB::new(&path, EXTRACTED_MAX_AGE).await?;
@@ -102,7 +106,9 @@ impl PassiveDNS {
     }
 }
 
-pub async fn argus(ips: std::collections::HashSet<std::net::IpAddr>) -> Result<(), Box<dyn std::error::Error>> {
+pub async fn argus(
+    ips: std::collections::HashSet<std::net::IpAddr>,
+) -> Result<(), Box<dyn std::error::Error>> {
     let mut pd = PassiveDNS::new(ips, "argus", 60.0 / 100.0).await?;
     // Unauthenticated users are limited to 100 requests per minute, and 1000 requests per day.
 
@@ -135,8 +141,7 @@ pub async fn argus(ips: std::collections::HashSet<std::net::IpAddr>) -> Result<(
                         "ARGUS: Non 200 response code: {:?}",
                         json.pointer("/responseCode")
                     );
-                    pd.check_flush().await?;
-                    return Err(Box::new(InvalidResponseCode::default()));
+                    errored = true;
                 }
                 if let Some(data) = json.pointer("/data").and_then(|data| data.as_array()) {
                     for domain in data.iter().filter_map(|item| {
@@ -198,7 +203,9 @@ pub async fn argus(ips: std::collections::HashSet<std::net::IpAddr>) -> Result<(
     Ok(())
 }
 
-pub async fn threatminer(ips: std::collections::HashSet<std::net::IpAddr>) -> Result<(), Box<dyn std::error::Error>> {
+pub async fn threatminer(
+    ips: std::collections::HashSet<std::net::IpAddr>,
+) -> Result<(), Box<dyn std::error::Error>> {
     let mut pd = PassiveDNS::new(ips, "threatminer", 6.0).await?;
 
     let client = reqwest::Client::new();
@@ -232,8 +239,7 @@ pub async fn threatminer(ips: std::collections::HashSet<std::net::IpAddr>) -> Re
                         "THREATMINER: Non 200 response code: {:?}",
                         json.pointer("/status_code")
                     );
-                    pd.check_flush().await?;
-                    return Err(Box::new(InvalidResponseCode::default()));
+                    errored = true;
                 }
                 if let Some(data) = json.pointer("/results").and_then(|data| data.as_array()) {
                     for domain in data.iter().filter_map(|item| {
@@ -295,7 +301,10 @@ pub async fn threatminer(ips: std::collections::HashSet<std::net::IpAddr>) -> Re
     Ok(())
 }
 
-pub async fn virus_total(ips: std::collections::HashSet<std::net::IpAddr>, key: String) -> Result<(), Box<dyn std::error::Error>> {
+pub async fn virus_total(
+    ips: std::collections::HashSet<std::net::IpAddr>,
+    key: String,
+) -> Result<(), Box<dyn std::error::Error>> {
     let mut pd = PassiveDNS::new(ips, "virustotal", 15.0).await?;
 
     let client = reqwest::Client::new();
@@ -325,8 +334,7 @@ pub async fn virus_total(ips: std::collections::HashSet<std::net::IpAddr>, key: 
                         "VIRUSTOTAL: Non 1 response code: {:?}",
                         json.pointer("/status_code")
                     );
-                    pd.flush().await?;
-                    return Err(Box::new(InvalidResponseCode::default()));
+                    errored = true;
                 }
                 if let Some(data) = json
                     .pointer("/resolutions")
