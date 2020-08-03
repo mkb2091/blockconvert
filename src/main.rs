@@ -80,7 +80,7 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
         list_downloader::download_all(&client, &records, |record, data| {
             builder.add_list(record.list_type, data);
         })
-        .await;
+        .await?;
         for (file_path, list_type) in INTERNAL_LISTS.iter() {
             let mut path = std::path::PathBuf::from("internal");
             path.push(file_path);
@@ -182,7 +182,7 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
         list_downloader::download_all(&client, &records, |record, data| {
             check_filter_list(&record.url, record.list_type, &data);
         })
-        .await;
+        .await?;
     }
     for (file_path, list_type) in INTERNAL_LISTS.iter() {
         let mut path = std::path::PathBuf::from("internal");
@@ -203,7 +203,7 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
         list_downloader::download_all(&client, &records, |record, data| {
             builder.add_list(record.list_type, data);
         })
-        .await;
+        .await?;
         for (file_path, list_type) in INTERNAL_LISTS.iter() {
             let mut path = std::path::PathBuf::from("internal");
             path.push(file_path);

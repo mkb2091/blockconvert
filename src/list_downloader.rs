@@ -28,19 +28,57 @@ async fn needs_updating(path: &std::path::Path, expires: u64) -> bool {
     true
 }
 
-pub async fn download_list_if_expired(
+fn date_string_to_filetime(data: &str) -> Result<filetime::FileTime, Box<dyn std::error::Error>> {
+    let date: chrono::DateTime<chrono::FixedOffset> = chrono::DateTime::parse_from_rfc2822(data)
+        .or_else(|_| chrono::DateTime::parse_from_rfc3339(data))
+        .or_else(|_| data.parse())?;
+    Ok(filetime::FileTime::from_unix_time(
+        date.timestamp(),
+        date.timestamp_subsec_nanos(),
+    ))
+}
+
+#[test]
+fn test_date_string_to_filetime() {
+    assert!(date_string_to_filetime("Mon, 03 Aug 2020 05:46:53 GMT").is_ok())
+}
+
+async fn download_list_if_expired(
     client: &reqwest::Client,
     record: FilterListRecord,
 ) -> Result<(FilterListRecord, String), Box<dyn std::error::Error>> {
     let path = get_path_for_url(&record.url)?;
     if needs_updating(&path, record.expires).await {
         if let Ok(response) = client.get(&record.url).send().await {
+            let headers = response.headers();
+            // let etag = headers.get("etag").clone();
+            let last_modified: Option<String> = headers
+                .get("last-modified")
+                .and_then(|item| item.to_str().ok())
+                .map(|item| item.to_string());
             if let Ok(text) = response.text().await {
                 println!("Downloaded: {:?}", record.url);
-                let mut file = File::create(path).await?;
+                // println!("Etag: {:?}", etag);
+                // println!("last_modified: {:?}", last_modified);
+                let mut file = File::create(&path).await?;
                 file.write_all(text.as_bytes()).await?;
+                file.flush().await?;
+                drop(file);
+                if let Some(last_modified) = last_modified {
+                    if let Ok(target_time) = date_string_to_filetime(&last_modified) {
+                        if filetime::set_file_times(&path, target_time, target_time).is_err() {
+                            println!("Failed to set file time for {:?}", record.url)
+                        }
+                    } else {
+                        println!("Failed to decode date: {:?}", last_modified);
+                    }
+                }
                 return Ok((record, text));
+            } else {
+                println!("Failed to decode response for {}", record.url);
             }
+        } else {
+            println!("Failed to fetch {}", record.url)
         }
     }
     let mut file = File::open(path).await?;
@@ -49,7 +87,11 @@ pub async fn download_list_if_expired(
     Ok((record, text))
 }
 
-pub async fn download_all<F>(client: &reqwest::Client, records: &[FilterListRecord], mut f: F)
+pub async fn download_all<F>(
+    client: &reqwest::Client,
+    records: &[FilterListRecord],
+    mut f: F,
+) -> Result<(), Box<dyn std::error::Error>>
 where
     F: FnMut(FilterListRecord, &str),
 {
@@ -57,7 +99,9 @@ where
     for record in records {
         downloads.push(download_list_if_expired(client, record.clone()))
     }
-    while let Some(Ok((record, data))) = downloads.next().await {
+    while let Some(data) = downloads.next().await {
+        let (record, data) = data?;
         f(record, &data)
     }
+    Ok(())
 }
