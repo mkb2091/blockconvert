@@ -93,10 +93,9 @@ async fn download_list_if_expired(
             println!("Failed to fetch {}", record.url)
         }
     }
-    let mut file = File::open(path).await?;
-    let mut text = String::new();
-    file.read_to_string(&mut text).await?;
-    Ok((record, text))
+    Ok(async_std::fs::read_to_string(&path)
+        .await
+        .map(|text| (record, text))?)
 }
 
 pub async fn download_all<F>(
