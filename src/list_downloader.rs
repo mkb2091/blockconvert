@@ -16,16 +16,9 @@ fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error:
     Ok(path)
 }
 
-async fn needs_updating(path: &std::path::Path, expires: u64) -> bool {
-    if let Ok(metadata) = async_std::fs::metadata(path).await {
-        if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
-            let now = std::time::SystemTime::now();
-            if let Ok(duration_since) = now.duration_since(modified) {
-                return duration_since.as_secs() > expires;
-            }
-        }
-    }
-    true
+async fn get_last_update(path: &std::path::Path) -> Option<std::time::SystemTime> {
+    let metadata = async_std::fs::metadata(path).await.ok()?;
+    metadata.modified().or_else(|_| metadata.created()).ok()
 }
 
 fn date_string_to_filetime(data: &str) -> Result<filetime::FileTime, Box<dyn std::error::Error>> {
@@ -48,22 +41,24 @@ async fn download_list_if_expired(
     record: FilterListRecord,
 ) -> Result<(FilterListRecord, String), Box<dyn std::error::Error>> {
     let path = get_path_for_url(&record.url)?;
-    if needs_updating(&path, record.expires).await {
-        if let Ok(response) = client.get(&record.url).send().await {
+    let last_update = get_last_update(&path).await;
+    if last_update
+        .and_then(|modified| std::time::SystemTime::now().duration_since(modified).ok())
+        .map(|duration_since| duration_since.as_secs() > record.expires)
+        .unwrap_or(true)
+    {
+        let mut req = client.get(&record.url);
+        if let Some(last_update) = last_update {
+            let date = chrono::DateTime::<chrono::Utc>::from(last_update);
+            req = req.header("if-modified-since", date.to_rfc2822());
+        }
+        if let Ok(response) = req.send().await {
             let headers = response.headers();
-            // let etag = headers.get("etag").clone();
             let last_modified: Option<String> = headers
                 .get("last-modified")
                 .and_then(|item| item.to_str().ok())
                 .map(|item| item.to_string());
-            if let Ok(text) = response.text().await {
-                println!("Downloaded: {:?}", record.url);
-                // println!("Etag: {:?}", etag);
-                // println!("last_modified: {:?}", last_modified);
-                let mut file = File::create(&path).await?;
-                file.write_all(text.as_bytes()).await?;
-                file.flush().await?;
-                drop(file);
+            let set_last_modified = |last_modified: &Option<String>| {
                 if let Some(last_modified) = last_modified {
                     if let Ok(target_time) = date_string_to_filetime(&last_modified) {
                         if filetime::set_file_times(&path, target_time, target_time).is_err() {
@@ -73,9 +68,26 @@ async fn download_list_if_expired(
                         println!("Failed to decode date: {:?}", last_modified);
                     }
                 }
-                return Ok((record, text));
-            } else {
-                println!("Failed to decode response for {}", record.url);
+            };
+            match response.status() {
+                reqwest::StatusCode::OK => {
+                    if let Ok(text) = response.text().await {
+                        println!("Downloaded: {:?}", record.url);
+                        let mut file = File::create(&path).await?;
+                        file.write_all(text.as_bytes()).await?;
+                        file.flush().await?;
+                        drop(file);
+                        set_last_modified(&last_modified);
+                        return Ok((record, text));
+                    } else {
+                        println!("Failed to decode response for {}", record.url);
+                    }
+                }
+                reqwest::StatusCode::NOT_MODIFIED => {
+                    println!("304 NOT MODIFIED: {}", record.url);
+                    set_last_modified(&last_modified)
+                }
+                status => println!("Unexpected status code: {:?}", status),
             }
         } else {
             println!("Failed to fetch {}", record.url)
