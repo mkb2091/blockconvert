@@ -176,7 +176,7 @@ pub async fn argus(
                 return Err(Box::new(InvalidResponseCode::default()));
             }
         } else {
-            errors_in_a_row = 0;
+            errors_in_a_row = errors_in_a_row.saturating_sub(1);
             pd.finished_ip(ip).await?;
             if last_output.elapsed().as_secs() > 30 {
                 last_output = std::time::Instant::now();
@@ -274,7 +274,7 @@ pub async fn threatminer(
                 return Err(Box::new(InvalidResponseCode::default()));
             }
         } else {
-            errors_in_a_row = 0;
+            errors_in_a_row = errors_in_a_row.saturating_sub(1);
             pd.finished_ip(ip).await?;
             if last_output.elapsed().as_secs() > 30 {
                 last_output = std::time::Instant::now();
@@ -372,7 +372,7 @@ pub async fn virus_total(
                 return Err(Box::new(InvalidResponseCode::default()));
             }
         } else {
-            errors_in_a_row = 0;
+            errors_in_a_row = errors_in_a_row.saturating_sub(1);
             pd.finished_ip(ip).await?;
             if last_output.elapsed().as_secs() > 30 {
                 last_output = std::time::Instant::now();
