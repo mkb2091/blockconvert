@@ -5,7 +5,7 @@ use async_std::prelude::*;
 
 fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error::Error>> {
     let mut path = std::path::PathBuf::from("data");
-    path.push(std::path::PathBuf::from(url));
+    path.push(std::path::PathBuf::from(url.replace(':', "").replace('?', "").replace('=',"")));
     path = path.with_file_name(
         path.file_name()
             .unwrap_or_else(|| std::ffi::OsStr::new("data.txt")),

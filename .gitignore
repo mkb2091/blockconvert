@@ -124,3 +124,4 @@ dns_db/
 #Added by cargo
 
 /target
+Cargo.lock

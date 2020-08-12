@@ -1,6 +1,3 @@
-#[global_allocator]
-static GLOBAL: jemallocator::Jemalloc = jemallocator::Jemalloc;
-
 use async_std::fs::File;
 
 use async_std::prelude::*;
