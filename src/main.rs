@@ -42,6 +42,7 @@ const INTERNAL_LISTS: &[(&str, FilterListType)] = &[
     ("block_ips.txt", FilterListType::IPBlocklist),
     ("block_regex.txt", FilterListType::RegexBlocklist),
     ("allowlist.txt", FilterListType::DomainAllowlist),
+    ("allow_regex.txt", FilterListType::RegexAllowlist),
 ];
 
 fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
