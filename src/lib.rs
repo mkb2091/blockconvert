@@ -64,6 +64,12 @@ pub fn get_allowed_domain_path() -> std::path::PathBuf {
     path
 }
 
+pub fn get_allowed_adblock_path() -> std::path::PathBuf {
+    let mut path = std::path::PathBuf::from("output");
+    path.push("whitelist_adblock.txt");
+    path
+}
+
 pub fn get_blocked_ips_path() -> std::path::PathBuf {
     let mut path = std::path::PathBuf::from("output");
     path.push("ip_blocklist.txt");

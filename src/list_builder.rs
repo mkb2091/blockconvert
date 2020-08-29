@@ -217,6 +217,7 @@ impl FilterList {
         hostfile_path: &std::path::Path,
         rpz_path: &std::path::Path,
         adblock_path: &std::path::Path,
+        allowed_adblock_path: &std::path::Path,
         allowed_domains_path: &std::path::Path,
         blocked_ip_addrs_path: &std::path::Path,
         allowed_ip_addrs_path: &std::path::Path,
@@ -251,6 +252,21 @@ impl FilterList {
             chrono::Utc::today(),
             chrono::Utc::today(),
         );
+        let adblock_whitelist_header: String = format!(
+            "[Adblock Plus 2.0]
+! Version: {:?}
+! Title: BlockConvert Exception Filters
+! Last modified: {:?}
+! Expires: 1 days (update frequency)
+! Homepage: https://github.com/mkb2091/blockconvert
+! Licence: GPL-3.0
+!
+!-----------------------Filters-----------------------!
+",
+            chrono::Utc::today(),
+            chrono::Utc::today(),
+        );
+
         let other_header: String = format!(
             "# Title: BlockConvert
 # Last modified: {:?}
@@ -264,7 +280,9 @@ impl FilterList {
         blocked_domains.sort_unstable();
         let mut blocked_ips: Vec<_> = self.blocked_ip_addrs.iter().collect();
         blocked_ips.sort_unstable();
-        let domains = futures::future::try_join5(
+        let mut allowed_domains: Vec<_> = self.allowed_domains.iter().collect();
+        allowed_domains.sort_unstable();
+        let domains = futures::future::try_join4(
             async {
                 let file = async_std::fs::File::create(blocked_domains_path).await?;
                 let mut buf = BufWriter::new(file);
@@ -322,6 +340,19 @@ impl FilterList {
                 buf.flush().await?;
                 Ok(())
             },
+        );
+        let whitelist = futures::future::try_join(
+            async {
+                let file = async_std::fs::File::create(allowed_adblock_path).await?;
+                let mut buf = BufWriter::new(file);
+                buf.write_all(adblock_whitelist_header.as_bytes()).await?;
+                for item in allowed_domains.iter() {
+                    buf.write_all(format!("@@||{}^", item).as_bytes()).await?;
+                    buf.write_all(b"\n").await?;
+                }
+                buf.flush().await?;
+                Ok(())
+            },
             write_to_file(&self.allowed_domains, allowed_domains_path, |item| {
                 item.to_string()
             }),
@@ -335,6 +366,8 @@ impl FilterList {
             }),
         );
 
-        futures::future::try_join(domains, ips).await.map(|_| ())
+        futures::future::try_join3(domains, whitelist, ips)
+            .await
+            .map(|_| ())
     }
 }

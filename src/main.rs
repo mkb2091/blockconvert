@@ -115,6 +115,7 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
             &get_hostfile_path(),
             &get_rpz_path(),
             &get_adblock_path(),
+            &get_allowed_adblock_path(),
             &get_allowed_domain_path(),
             &get_blocked_ips_path(),
             &get_allowed_ips_path(),
