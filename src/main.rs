@@ -126,8 +126,8 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
 
 async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
     let servers = [
-        "https://dns.google.com/resolve".to_string(),
-        "https://cloudflare-dns.com/dns-query".to_string(),
+        "https://dns.google/resolve".to_string(),
+        "https://1.1.1.1/dns-query".to_string(),
     ];
     let mut headers = reqwest::header::HeaderMap::new();
     headers.insert(
