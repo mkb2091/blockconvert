@@ -107,8 +107,8 @@ where
             domain,
         ));
     }
-	println!("Created initial tasks");
-	println!("Stack left: {:?}", stacker::remaining_stack());
+    println!("Created initial tasks");
+    println!("Stack left: {:?}", stacker::remaining_stack());
     let now = std::time::Instant::now();
     let mut i: usize = 0;
     let mut error_count: usize = 0;
