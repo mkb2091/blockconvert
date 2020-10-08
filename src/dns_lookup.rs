@@ -1,6 +1,6 @@
 use std::str::FromStr;
 
-use async_std::prelude::*;
+use tokio::stream::StreamExt;
 
 use crate::{doh, DirectoryDB, Domain};
 

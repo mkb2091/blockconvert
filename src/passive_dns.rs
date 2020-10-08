@@ -1,9 +1,9 @@
 use crate::{DirectoryDB, Domain, EXTRACTED_DOMAINS_DIR, EXTRACTED_MAX_AGE};
 
-use async_std::prelude::*;
+use tokio::prelude::*;
 
-use async_std::fs::OpenOptions;
-use async_std::io::BufWriter;
+use tokio::fs::OpenOptions;
+use tokio::io::BufWriter;
 
 const PASSIVE_DNS_RECORD_DIR: &str = "passive_dns_db";
 
@@ -21,7 +21,7 @@ impl std::fmt::Display for InvalidResponseCode {
 struct PassiveDNS {
     ips: Vec<std::net::IpAddr>,
     db: DirectoryDB,
-    wtr: BufWriter<async_std::fs::File>,
+    wtr: BufWriter<tokio::fs::File>,
     sleep_time: f32,
     total_length: u64,
     last_flushed: std::time::Instant,
@@ -84,7 +84,7 @@ impl PassiveDNS {
     async fn next_ip(&mut self) -> Option<std::net::IpAddr> {
         let sleep_time = self.sleep_time - self.last_fetched.elapsed().as_secs_f32();
         if sleep_time > 0.0 {
-            async_std::task::sleep(std::time::Duration::from_secs_f32(sleep_time)).await;
+            tokio::time::delay_for(std::time::Duration::from_secs_f32(sleep_time)).await;
         }
         self.check_flush().await.ok()?;
         self.last_fetched = std::time::Instant::now();
@@ -165,7 +165,7 @@ pub async fn argus(
         } else {
             println!("ARGUS: Connection failed");
             errored = true;
-            async_std::task::sleep(std::time::Duration::from_secs(15_u64)).await
+            tokio::time::delay_for(std::time::Duration::from_secs(15_u64)).await
         }
         if errored {
             errors += 1;
@@ -263,7 +263,7 @@ pub async fn threatminer(
         } else {
             println!("THREATMINER: Connection failed");
             errored = true;
-            async_std::task::sleep(std::time::Duration::from_secs(15_u64)).await
+            tokio::time::delay_for(std::time::Duration::from_secs(15_u64)).await
         }
         if errored {
             errors += 1;
@@ -361,7 +361,7 @@ pub async fn virus_total(
         } else {
             println!("VIRUSTOTAL: Connection failed");
             errored = true;
-            async_std::task::sleep(std::time::Duration::from_secs(15_u64)).await
+            tokio::time::delay_for(std::time::Duration::from_secs(15_u64)).await
         }
         if errored {
             errors += 1;

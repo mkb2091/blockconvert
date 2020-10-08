@@ -15,9 +15,9 @@ pub use blockconvert::Domain;
 
 use serde::*;
 
-use async_std::fs::OpenOptions;
-use async_std::io::BufWriter;
-use async_std::prelude::*;
+use tokio::fs::OpenOptions;
+use tokio::io::BufWriter;
+use tokio::prelude::*;
 
 lazy_static! {
     static ref DOMAIN_REGEX: regex::Regex =
@@ -109,7 +109,7 @@ pub enum FilterListType {
 
 pub struct DirectoryDB {
     path: std::path::PathBuf,
-    wtr: BufWriter<async_std::fs::File>,
+    wtr: BufWriter<tokio::fs::File>,
     max_age: u64,
 }
 
@@ -119,7 +119,7 @@ impl DirectoryDB {
         max_age: u64,
     ) -> Result<Self, Box<dyn std::error::Error>> {
         let dir_path = std::path::PathBuf::from(path);
-        let _ = async_std::fs::create_dir_all(&dir_path).await;
+        let _ = tokio::fs::create_dir_all(&dir_path).await;
 
         let mut path = std::path::PathBuf::from(&dir_path);
         path.push(std::path::PathBuf::from(format!(
@@ -144,18 +144,17 @@ impl DirectoryDB {
     where
         I: FnMut(&str),
     {
-        let _ = async_std::fs::create_dir_all(&self.path).await;
-        let mut entries = async_std::fs::read_dir(&self.path).await?;
-        while let Some(entry) = entries.next().await {
-            let entry = entry?;
+        let _ = tokio::fs::create_dir_all(&self.path).await;
+        let mut entries = tokio::fs::read_dir(&self.path).await?;
+        while let Some(entry) = entries.next_entry().await? {
             println!("Reading from file: {}", entry.path().to_string_lossy());
             let metadata = entry.metadata().await?;
             if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
                 let now = std::time::SystemTime::now();
                 if let Ok(duration_since) = now.duration_since(modified) {
                     if duration_since.as_secs() < self.max_age {
-                        if let Ok(file) = async_std::fs::File::open(entry.path()).await {
-                            let mut file = async_std::io::BufReader::new(file);
+                        if let Ok(file) = tokio::fs::File::open(entry.path()).await {
+                            let mut file = tokio::io::BufReader::new(file);
                             let mut line = String::new();
                             while let Ok(len) = file.read_line(&mut line).await {
                                 if len == 0 {

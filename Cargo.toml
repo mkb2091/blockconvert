@@ -11,11 +11,10 @@ blockconvert = "0.1"
 
 reqwest = {version = "0.10", features = ["rustls-tls", "gzip", "brotli", "json"]}
 futures = {version = "0.3"}
-tokio = {version = "0.2", features =["macros"]}
+tokio = {version = "0.2", features =["macros", "fs", "io-util", "time", "stream"]}
 rand = "0.7"
 serde = {version = "1.0", features = ["derive"]}
 lazy_static = "1.4"
-async-std = "1.6"
 tokio-tungstenite = {version = "0.10", features = ["tls"]}
 
 csv = "1.1"

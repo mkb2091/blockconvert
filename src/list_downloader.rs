@@ -1,7 +1,9 @@
 use crate::FilterListRecord;
 
-use async_std::fs::File;
-use async_std::prelude::*;
+use tokio::fs::File;
+use tokio::prelude::*;
+
+use tokio::stream::StreamExt;
 
 fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error::Error>> {
     let mut path = std::path::PathBuf::from("data");
@@ -19,7 +21,7 @@ fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error:
 }
 
 async fn get_last_update(path: &std::path::Path) -> Option<std::time::SystemTime> {
-    let metadata = async_std::fs::metadata(path).await.ok()?;
+    let metadata = tokio::fs::metadata(path).await.ok()?;
     metadata.modified().or_else(|_| metadata.created()).ok()
 }
 
@@ -95,7 +97,7 @@ async fn download_list_if_expired(
             println!("Failed to fetch {}", record.url)
         }
     }
-    Ok(async_std::fs::read_to_string(&path)
+    Ok(tokio::fs::read_to_string(&path)
         .await
         .map(|text| (record, text))?)
 }

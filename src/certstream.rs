@@ -1,9 +1,9 @@
 use crate::{Domain, EXTRACTED_DOMAINS_DIR};
 
-use async_std::fs::OpenOptions;
-use async_std::io::BufWriter;
-use async_std::prelude::*;
 use futures::StreamExt;
+use tokio::fs::OpenOptions;
+use tokio::io::BufWriter;
+use tokio::prelude::*;
 
 const URL: &str = "wss://certstream.calidog.io/";
 

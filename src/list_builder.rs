@@ -1,7 +1,7 @@
 use crate::{dns_lookup, Domain, FilterListType, DOMAIN_REGEX, IP_REGEX};
 
-use async_std::io::BufWriter;
-use async_std::prelude::*;
+use tokio::io::BufWriter;
+use tokio::prelude::*;
 
 #[derive(Default)]
 pub struct FilterListBuilder {
@@ -227,7 +227,7 @@ impl FilterList {
             path: &std::path::Path,
             f: F,
         ) -> Result<(), Box<dyn std::error::Error>> {
-            let file = async_std::fs::File::create(path).await?;
+            let file = tokio::fs::File::create(path).await?;
             let mut buf = BufWriter::new(file);
             let mut sorted: Vec<_> = data.iter().collect();
             sorted.sort_unstable();
@@ -284,7 +284,7 @@ impl FilterList {
         allowed_domains.sort_unstable();
         let domains = futures::future::try_join4(
             async {
-                let file = async_std::fs::File::create(blocked_domains_path).await?;
+                let file = tokio::fs::File::create(blocked_domains_path).await?;
                 let mut buf = BufWriter::new(file);
                 buf.write_all(other_header.as_bytes()).await?;
                 for item in blocked_domains.iter() {
@@ -295,7 +295,7 @@ impl FilterList {
                 Ok(())
             },
             async {
-                let file = async_std::fs::File::create(hostfile_path).await?;
+                let file = tokio::fs::File::create(hostfile_path).await?;
                 let mut buf = BufWriter::new(file);
                 buf.write_all(other_header.as_bytes()).await?;
                 for item in blocked_domains.iter() {
@@ -307,7 +307,7 @@ impl FilterList {
                 Ok(())
             },
             async {
-                let file = async_std::fs::File::create(rpz_path).await?;
+                let file = tokio::fs::File::create(rpz_path).await?;
                 let mut buf = BufWriter::new(file);
                 buf.write_all(other_header.as_bytes()).await?;
                 for item in blocked_domains.iter() {
@@ -319,7 +319,7 @@ impl FilterList {
                 Ok(())
             },
             async {
-                let file = async_std::fs::File::create(adblock_path).await?;
+                let file = tokio::fs::File::create(adblock_path).await?;
                 let mut buf = BufWriter::new(file);
                 buf.write_all(adblock_header.as_bytes()).await?;
                 'outer: for item in blocked_domains.iter() {
@@ -343,7 +343,7 @@ impl FilterList {
         );
         let whitelist = futures::future::try_join(
             async {
-                let file = async_std::fs::File::create(allowed_adblock_path).await?;
+                let file = tokio::fs::File::create(allowed_adblock_path).await?;
                 let mut buf = BufWriter::new(file);
                 buf.write_all(adblock_whitelist_header.as_bytes()).await?;
                 for item in allowed_domains.iter() {

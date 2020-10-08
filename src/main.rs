@@ -1,6 +1,6 @@
-use async_std::fs::File;
+use tokio::fs::File;
 
-use async_std::prelude::*;
+use tokio::prelude::*;
 
 use rand::prelude::*;
 
@@ -216,20 +216,19 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
     } else {
         Default::default()
     };
-
     if let Some(vt_api) = f.virus_total_api {
-        let _result = futures::join!(
+        let _result = futures::future::join4(
             certstream::certstream(),
             passive_dns::argus(ips.clone()),
             passive_dns::threatminer(ips.clone()),
-            passive_dns::virus_total(ips.clone(), vt_api)
-        );
+            passive_dns::virus_total(ips, vt_api)
+        ).await;
     } else {
-        let _result = futures::join!(
+        let _result = futures::future::join3(
             certstream::certstream(),
             passive_dns::argus(ips.clone()),
-            passive_dns::threatminer(ips.clone())
-        );
+            passive_dns::threatminer(ips)
+        ).await;
     }
 
     Ok(())
