@@ -221,14 +221,16 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
             certstream::certstream(),
             passive_dns::argus(ips.clone()),
             passive_dns::threatminer(ips.clone()),
-            passive_dns::virus_total(ips, vt_api)
-        ).await;
+            passive_dns::virus_total(ips, vt_api),
+        )
+        .await;
     } else {
         let _result = futures::future::join3(
             certstream::certstream(),
             passive_dns::argus(ips.clone()),
-            passive_dns::threatminer(ips)
-        ).await;
+            passive_dns::threatminer(ips),
+        )
+        .await;
     }
 
     Ok(())

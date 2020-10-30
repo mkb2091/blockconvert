@@ -110,10 +110,10 @@ pub async fn download_all<F>(
 where
     F: FnMut(FilterListRecord, &str),
 {
-    let mut downloads = futures::stream::FuturesUnordered::new();
-    for record in records {
-        downloads.push(download_list_if_expired(client, record.clone()))
-    }
+    let mut downloads: futures::stream::FuturesUnordered<_> = records
+        .iter()
+        .map(|record| download_list_if_expired(client, record.clone()))
+        .collect();
     while let Some(data) = downloads.next().await {
         let (record, data) = data?;
         f(record, &data)
