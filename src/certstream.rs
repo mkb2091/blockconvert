@@ -34,7 +34,7 @@ pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
                             .and_then(|data| data.as_array())
                         {
                             for domain in all_domains
-                                .into_iter()
+                                .iter()
                                 .filter_map(|domain| domain.as_str())
                                 .filter_map(|domain| domain.parse::<Domain>().ok())
                             {
