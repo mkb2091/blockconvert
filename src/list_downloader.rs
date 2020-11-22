@@ -91,7 +91,7 @@ async fn download_list_if_expired(
                     println!("304 NOT MODIFIED: {}", record.url);
                     set_last_modified(&last_modified)
                 }
-                status => println!("Unexpected status code: {:?}", status),
+                status => println!("Unexpected status code: {:?} for {:?}", status, record.url),
             }
         } else {
             println!("Failed to fetch {}", record.url)
