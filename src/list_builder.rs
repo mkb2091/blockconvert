@@ -183,6 +183,7 @@ impl FilterList {
     pub async fn check_dns(&mut self, servers: &[String], client: &reqwest::Client) {
         let mut extracted_domains = Default::default();
         std::mem::swap(&mut extracted_domains, &mut self.extracted_domains);
+		extracted_domains.shrink_to_fit();
         let _ = dns_lookup::lookup_domains(
             extracted_domains,
             |domain, cnames, ips| self.process_domain(domain, cnames, ips),
