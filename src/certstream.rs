@@ -5,7 +5,7 @@ use tokio::fs::OpenOptions;
 use tokio::io::BufWriter;
 use tokio::prelude::*;
 
-const URL: &str = "wss://certstream.calidog.io/";
+const URL: &str = "wss://certstream.calidog.io/domains-only";
 
 pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
     let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);
@@ -23,6 +23,7 @@ pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
     );
     let mut counter: u64 = 0;
     let now = std::time::Instant::now();
+	let mut last_output = std::time::Instant::now();
     loop {
         let (mut ws_stream, _response) = tokio_tungstenite::connect_async(URL).await?;
         while let Some(Ok(next)) = ws_stream.next().await {
@@ -30,7 +31,7 @@ pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
                 match serde_json::from_str::<serde_json::Value>(&data) {
                     Ok(decoded) => {
                         if let Some(all_domains) = decoded
-                            .pointer("/data/leaf_cert/all_domains")
+                            .pointer("/data")
                             .and_then(|data| data.as_array())
                         {
                             for domain in all_domains
@@ -38,11 +39,12 @@ pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
                                 .filter_map(|domain| domain.as_str())
                                 .filter_map(|domain| domain.parse::<Domain>().ok())
                             {
-                                if counter % 10000 == 0 {
+                                if last_output.elapsed().as_secs_f32() > 10.0  {
                                     println!(
                                         "Found {} domains ({}/s) via CertStream. Current domain: {}",
                                         counter, (counter as f32 / now.elapsed().as_secs_f32()), domain
                                     );
+									last_output = std::time::Instant::now();
                                 }
                                 counter += 1;
                                 wtr.write_all(domain.as_bytes()).await?;
@@ -61,5 +63,6 @@ pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
                 println!("Unknown type: {:?}", next)
             }
         }
+		println!("CertStream connection ended");
     }
 }
