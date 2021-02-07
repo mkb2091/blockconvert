@@ -6,7 +6,7 @@ use tokio::prelude::*;
 #[derive(Default)]
 pub struct FilterListBuilder {
     filter_builder: blockconvert::DomainFilterBuilder,
-    pub extracted_domains: std::collections::HashSet<Domain>,
+    pub extracted_domains: std::collections::BTreeSet<Domain>,
     pub extracted_ips: std::collections::HashSet<std::net::IpAddr>,
 }
 
@@ -140,7 +140,6 @@ impl FilterListBuilder {
             blocked_ip_addrs: Default::default(),
             allowed_ip_addrs: Default::default(),
         };
-        bc.extracted_domains.shrink_to_fit();
         for ip in self.extracted_ips.into_iter() {
             if let Some(allowed) = bc.filter.ip_is_allowed(&ip) {
                 if allowed {
@@ -160,7 +159,7 @@ pub struct FilterList {
     allowed_domains: std::collections::HashSet<Domain>,
     blocked_ip_addrs: std::collections::HashSet<std::net::IpAddr>,
     allowed_ip_addrs: std::collections::HashSet<std::net::IpAddr>,
-    extracted_domains: std::collections::HashSet<Domain>,
+    extracted_domains: std::collections::BTreeSet<Domain>,
 }
 
 impl FilterList {
@@ -183,7 +182,6 @@ impl FilterList {
     pub async fn check_dns(&mut self, servers: &[String], client: &reqwest::Client) {
         let mut extracted_domains = Default::default();
         std::mem::swap(&mut extracted_domains, &mut self.extracted_domains);
-		extracted_domains.shrink_to_fit();
         let _ = dns_lookup::lookup_domains(
             extracted_domains,
             |domain, cnames, ips| self.process_domain(domain, cnames, ips),

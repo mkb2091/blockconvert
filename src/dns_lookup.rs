@@ -75,7 +75,7 @@ async fn get_dns_results(
 }
 
 pub async fn lookup_domains<F>(
-    mut domains: std::collections::HashSet<Domain>,
+    mut domains: std::collections::BTreeSet<Domain>,
     mut f: F,
 
     servers: &[String],
@@ -98,7 +98,7 @@ where
         return Ok(());
     }
     let total_length = domains.len();
-    let mut domain_iter = domains.drain();
+    let mut domain_iter = domains.into_iter();
     let mut tasks = futures::stream::FuturesUnordered::new();
     for (i, domain) in (0..500).zip(&mut domain_iter) {
         tasks.push(get_dns_results(
