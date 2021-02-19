@@ -1,9 +1,9 @@
 use crate::FilterListRecord;
 
 use tokio::fs::File;
-use tokio::prelude::*;
 
-use tokio::stream::StreamExt;
+use tokio::io::AsyncWriteExt;
+use tokio_stream::StreamExt;
 
 fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error::Error>> {
     let mut path = std::path::PathBuf::from("data");
@@ -41,9 +41,9 @@ fn test_date_string_to_filetime() {
 }
 
 async fn download_list_if_expired(
-    client: &reqwest::Client,
+    client: reqwest::Client,
     record: FilterListRecord,
-) -> Result<(FilterListRecord, String), Box<dyn std::error::Error>> {
+) -> Result<String, Box<dyn std::error::Error>> {
     let path = get_path_for_url(&record.url)?;
     let last_update = get_last_update(&path).await;
     if last_update
@@ -82,7 +82,7 @@ async fn download_list_if_expired(
                         file.flush().await?;
                         drop(file);
                         set_last_modified(&last_modified);
-                        return Ok((record, text));
+                        return Ok(text);
                     } else {
                         println!("Failed to decode response for {}", record.url);
                     }
@@ -97,26 +97,37 @@ async fn download_list_if_expired(
             println!("Failed to fetch {}", record.url)
         }
     }
-    Ok(tokio::fs::read_to_string(&path)
-        .await
-        .map(|text| (record, text))?)
+    Ok(tokio::fs::read_to_string(&path).await?)
 }
 
-pub async fn download_all<F>(
-    client: &reqwest::Client,
-    records: &[FilterListRecord],
-    mut f: F,
-) -> Result<(), Box<dyn std::error::Error>>
-where
-    F: FnMut(FilterListRecord, &str),
-{
-    let mut downloads: futures::stream::FuturesUnordered<_> = records
-        .iter()
-        .map(|record| download_list_if_expired(client, record.clone()))
-        .collect();
-    while let Some(data) = downloads.next().await {
-        let (record, data) = data?;
-        f(record, &data)
+pub trait FilterListHandler: Send + Sync + Clone {
+    fn handle_filter_list(&self, record: FilterListRecord, data: &str);
+}
+
+pub async fn download_all<T: 'static + FilterListHandler>(
+    client: reqwest::Client,
+    records: Vec<FilterListRecord>,
+    handler: T,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let mut downloads: futures::stream::FuturesUnordered<_> =
+        futures::stream::FuturesUnordered::new();
+
+    for record in records {
+        let handler = handler.clone();
+        let client = client.clone();
+        let task = tokio::task::spawn(async move {
+            match download_list_if_expired(client, record.clone()).await {
+                Ok(data) => {
+                    tokio::task::block_in_place(|| handler.handle_filter_list(record, &data))
+                }
+                Err(error) => println!(
+                    "Failed to download filter list: {:?} with error {:?}",
+                    record, error
+                ),
+            }
+        });
+        downloads.push(task);
     }
+    while downloads.next().await.is_some() {}
     Ok(())
 }

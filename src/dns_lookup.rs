@@ -1,8 +1,10 @@
 use std::str::FromStr;
 
-use tokio::stream::StreamExt;
+use tokio_stream::StreamExt;
 
-use crate::{doh, DirectoryDB, Domain};
+use crate::{doh, DBReadHandler, DirectoryDB, Domain, DomainSetConcurrent};
+
+use std::sync::Arc;
 
 const DNS_RECORD_DIR: &str = "dns_db";
 
@@ -60,38 +62,62 @@ impl std::fmt::Display for DNSResultRecord {
     }
 }
 
-async fn get_dns_results(
-    client: &reqwest::Client,
-    server: &str,
-    domain: Domain,
-) -> Result<DNSResultRecord, Box<dyn std::error::Error>> {
-    Ok(doh::lookup_domain(&server, &client, 3, &domain)
-        .await?
-        .unwrap_or_else(|| DNSResultRecord {
-            domain,
-            cnames: Vec::new(),
-            ips: Vec::new(),
-        }))
+pub trait DomainRecordHandler: Send + Sync + Clone {
+    fn handle_domain_record(&self, record: &DNSResultRecord);
 }
 
-pub async fn lookup_domains<F>(
-    mut domains: std::collections::BTreeSet<Domain>,
-    mut f: F,
+#[derive(Clone)]
+struct DNSDBReader<T: DomainRecordHandler> {
+    domains: DomainSetConcurrent,
+    record_handler: T,
+}
 
-    servers: &[String],
-    client: &reqwest::Client,
-) -> Result<(), Box<dyn std::error::Error>>
-where
-    F: FnMut(&Domain, &[Domain], &[std::net::IpAddr]),
-{
-    let mut db = DirectoryDB::new(&std::path::Path::new(DNS_RECORD_DIR), DNS_MAX_AGE).await?;
-    db.read(|line| {
-        if let Ok(record) = line.parse::<DNSResultRecord>() {
-            domains.remove(&record.domain);
-            f(&record.domain, &record.cnames, &record.ips)
+impl<T: DomainRecordHandler> DNSDBReader<T> {
+    fn new(record_handler: T, domains: DomainSetConcurrent) -> Self {
+        DNSDBReader {
+            domains,
+            record_handler,
         }
-    })
-    .await?;
+    }
+}
+
+impl<T: DomainRecordHandler> DBReadHandler for DNSDBReader<T> {
+    fn handle_input(&self, data: &str) {
+        if let Ok(record) = data.parse::<DNSResultRecord>() {
+            self.domains.remove(&record.domain);
+            self.record_handler.handle_domain_record(&record)
+        }
+    }
+}
+
+async fn get_dns_results<T: 'static + DomainRecordHandler>(
+    dns_record_handler: T,
+    client: reqwest::Client,
+    server: Arc<String>,
+    domain: Domain,
+) -> Option<DNSResultRecord> {
+    let result = doh::lookup_domain(server, client, 3, &domain).await.ok()?;
+    if let Some(record) = &result {
+		dns_record_handler.handle_domain_record(&record);
+    }
+    Some(result.unwrap_or_else(|| DNSResultRecord {
+        domain,
+        cnames: Vec::new(),
+        ips: Vec::new(),
+    }))
+}
+
+pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
+    domains: DomainSetConcurrent,
+    dns_record_handler: T,
+    servers: &[Arc<String>],
+    client: &reqwest::Client,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let db_record_handler = DNSDBReader::new(dns_record_handler.clone(), domains.clone());
+    let mut db = DirectoryDB::new(&std::path::Path::new(DNS_RECORD_DIR), DNS_MAX_AGE).await?;
+    db.read(db_record_handler).await?;
+
+    let domains = domains.into_single_threaded();
 
     println!("Looking up {} domains", domains.len());
     if domains.is_empty() {
@@ -100,10 +126,11 @@ where
     let total_length = domains.len();
     let mut domain_iter = domains.into_iter();
     let mut tasks = futures::stream::FuturesUnordered::new();
-    for (i, domain) in (0..500).zip(&mut domain_iter) {
+    for (i, domain) in (0..100).zip(&mut domain_iter) {
         tasks.push(get_dns_results(
-            &client,
-            &servers[i % servers.len()],
+            dns_record_handler.clone(),
+            client.clone(),
+            servers[i % servers.len()].clone(),
             domain,
         ));
     }
@@ -122,19 +149,19 @@ where
         )
     };
     while let Some(record) = tasks.next().await {
-        if let Ok(record) = record {
+        if let Some(record) = record {
             if i % 1000 == 0 {
                 display_status(i, error_count, &now);
             }
-            f(&record.domain, &record.cnames, &record.ips);
             db.write_line(record.to_string().as_bytes()).await?;
         } else {
             error_count += 1;
         }
         if let Some(next_domain) = domain_iter.next() {
             tasks.push(get_dns_results(
-                &client,
-                &servers[i % servers.len()],
+                dns_record_handler.clone(),
+                client.clone(),
+                servers[i % servers.len()].clone(),
                 next_domain,
             ));
         }

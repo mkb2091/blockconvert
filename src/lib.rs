@@ -11,13 +11,17 @@ mod list_builder;
 
 pub use list_builder::{FilterList, FilterListBuilder};
 
-pub use blockconvert::Domain;
+pub use blockconvert::{Domain, DomainSet, DomainSetConcurrent};
 
 use serde::*;
 
 use tokio::fs::OpenOptions;
 use tokio::io::BufWriter;
-use tokio::prelude::*;
+
+use tokio::io::AsyncBufReadExt;
+use tokio::io::AsyncWriteExt;
+
+use tokio_stream::StreamExt;
 
 lazy_static! {
     static ref DOMAIN_REGEX: regex::Regex =
@@ -92,6 +96,19 @@ pub struct FilterListRecord {
     pub list_type: FilterListType,
 }
 
+impl FilterListRecord {
+    pub fn from_type(list_type: FilterListType) -> Self {
+        Self {
+            name: Default::default(),
+            url: Default::default(),
+            author: Default::default(),
+            license: Default::default(),
+            expires: Default::default(),
+            list_type,
+        }
+    }
+}
+
 #[derive(Copy, Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord)]
 pub enum FilterListType {
     Adblock,
@@ -105,6 +122,10 @@ pub enum FilterListType {
     Hostfile,
     DNSRPZ,
     PrivacyBadger,
+}
+
+pub trait DBReadHandler: Send + Sync + Clone {
+    fn handle_input(&self, data: &str);
 }
 
 pub struct DirectoryDB {
@@ -140,39 +161,64 @@ impl DirectoryDB {
             max_age,
         })
     }
-    pub async fn read<I>(&self, mut handle_input: I) -> Result<(), Box<dyn std::error::Error>>
-    where
-        I: FnMut(&str),
-    {
+    pub async fn read<T: 'static + DBReadHandler>(
+        &self,
+        handle_input: T,
+    ) -> Result<(), Box<dyn std::error::Error>> {
+        let max_age = self.max_age;
         let _ = tokio::fs::create_dir_all(&self.path).await;
-        let mut entries = tokio::fs::read_dir(&self.path).await?;
-        while let Some(entry) = entries.next_entry().await? {
-            println!("Reading from file: {}", entry.path().to_string_lossy());
+        let mut entries =
+            tokio_stream::wrappers::ReadDirStream::new(tokio::fs::read_dir(&self.path).await?);
+
+        let mut tasks: futures::stream::FuturesUnordered<_> =
+            futures::stream::FuturesUnordered::new();
+        println!("Started reading from files");
+        while let Some(entry) = entries.next().await {
+            let entry = entry?;
             let metadata = entry.metadata().await?;
-            if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
-                let now = std::time::SystemTime::now();
-                if let Ok(duration_since) = now.duration_since(modified) {
-                    if duration_since.as_secs() < self.max_age {
-                        if let Ok(file) = tokio::fs::File::open(entry.path()).await {
-                            let mut file = tokio::io::BufReader::new(file);
-                            let mut line = String::new();
-                            while let Ok(len) = file.read_line(&mut line).await {
-                                if len == 0 {
-                                    break;
+            let path = entry.path();
+            let handle_input = handle_input.clone();
+            let task = tokio::task::spawn(async move {
+                let mut record_count: usize = 0;
+                if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
+                    let now = std::time::SystemTime::now();
+                    if let Ok(duration_since) = now.duration_since(modified) {
+                        if duration_since.as_secs() < max_age {
+                            if let Ok(file) = tokio::fs::File::open(&path).await {
+                                let mut file = tokio::io::BufReader::new(file);
+                                let mut line = String::new();
+                                while let Ok(len) = file.read_line(&mut line).await {
+                                    if len == 0 {
+                                        break;
+                                    }
+                                    tokio::task::block_in_place(|| {
+                                        handle_input.handle_input(&line)
+                                    });
+                                    line.clear();
+                                    record_count += 1;
                                 }
-                                handle_input(&line);
-                                line.clear();
+                            } else {
+                                println!("Failed to read file: {:?}", &path);
                             }
-                        } else {
-                            println!("Failed to read file: {:?}", entry.path());
+                            if record_count != 0 {
+                                println!(
+                                    "Finished with file: {} with {} records",
+                                    path.to_string_lossy(),
+                                    record_count
+                                );
+                            }
+                            return;
                         }
-                        continue;
                     }
                 }
-            }
-            println!("Removing expired record");
-            std::fs::remove_file(entry.path())?;
+                println!("Removing expired record");
+                if std::fs::remove_file(&path).is_err() {
+                    println!("Failed to remove file: {:?}", path);
+                };
+            });
+            tasks.push(task);
         }
+        while tasks.next().await.is_some() {}
         Ok(())
     }
 

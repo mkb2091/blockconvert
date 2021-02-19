@@ -1,6 +1,6 @@
 use tokio::fs::File;
 
-use tokio::prelude::*;
+use tokio::io::AsyncReadExt;
 
 use rand::prelude::*;
 
@@ -9,6 +9,10 @@ use domain_list_builder::*;
 const LIST_CSV: &str = "filterlists.csv";
 
 use clap::Clap;
+
+use std::sync::Arc;
+
+use crate::list_downloader::FilterListHandler;
 
 /// Blockconvert
 #[derive(Clap)]
@@ -74,11 +78,11 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
         "https://1.1.1.1/dns-query".to_string(),
     ];
     if let Ok(records) = read_csv() {
-        let mut builder = FilterListBuilder::new();
-        list_downloader::download_all(&client, &records, |record, data| {
-            builder.add_list(record.list_type, data);
-        })
-        .await?;
+        println!("Read CSV");
+        let builder = FilterListBuilder::new();
+        println!("Initialised FilterListBuilder");
+        list_downloader::download_all(client, records, builder.clone()).await?;
+        println!("Downloaded lists");
         for (file_path, list_type) in INTERNAL_LISTS.iter() {
             let mut path = std::path::PathBuf::from("internal");
             path.push(file_path);
@@ -94,12 +98,9 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
             EXTRACTED_MAX_AGE,
         )
         .await?
-        .read(|line| {
-            if let Ok(domain) = line.trim().parse::<Domain>() {
-                bc.add_extracted_domain(domain);
-            }
-        })
+        .read(bc.clone())
         .await?;
+        bc.finished_extracting();
         let mut headers = reqwest::header::HeaderMap::new();
         headers.insert(
             reqwest::header::ACCEPT,
@@ -109,7 +110,9 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
             .default_headers(headers)
             .build()
             .unwrap();
+        println!("Checking DNS");
         bc.check_dns(&servers, &client).await;
+        println!("Writing to file");
         bc.write_all(
             &get_blocked_domain_path(),
             &get_hostfile_path(),
@@ -123,6 +126,26 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
         .await?;
     }
     Ok(())
+}
+
+#[derive(Clone)]
+struct QueryFilterListHandler {
+    parts: Arc<Vec<(Domain, Vec<Domain>, Vec<std::net::IpAddr>)>>,
+}
+
+impl FilterListHandler for QueryFilterListHandler {
+    fn handle_filter_list(&self, record: FilterListRecord, data: &str) {
+        let bc = FilterList::from(&[(record.list_type, &data)]);
+        for (part, cnames, ips) in self.parts.iter() {
+            if let Some(allowed) = bc.allowed(&part, &cnames, &ips) {
+                if allowed {
+                    println!("ALLOW: {} allowed {}", record.url, part)
+                } else {
+                    println!("BLOCK: {} blocked {}", record.url, part)
+                }
+            }
+        }
+    }
 }
 
 async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
@@ -144,8 +167,8 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
     for part in std::iter::once(domain.clone()).chain(domain.iter_parent_domains()) {
         let (cnames, ips): (Vec<Domain>, Vec<std::net::IpAddr>) = if !q.ignore_dns {
             if let Some(result) = doh::lookup_domain(
-                servers.choose(&mut rand::thread_rng()).unwrap(),
-                &client,
+                Arc::new(servers.choose(&mut rand::thread_rng()).unwrap().clone()),
+                client.clone(),
                 3_usize,
                 &part,
             )
@@ -163,25 +186,12 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
         };
         parts.push((part, cnames, ips));
     }
-
-    let client = reqwest::Client::new();
-    let check_filter_list = |url: &str, list_type: FilterListType, data: &str| {
-        let bc = FilterList::from(&[(list_type, &data)]);
-        for (part, cnames, ips) in parts.iter() {
-            if let Some(allowed) = bc.allowed(&part, &cnames, &ips) {
-                if allowed {
-                    println!("ALLOW: {} allowed {}", url, part)
-                } else {
-                    println!("BLOCK: {} blocked {}", url, part)
-                }
-            }
-        }
+    let query_handler = QueryFilterListHandler {
+        parts: Arc::new(parts),
     };
+    let client = reqwest::Client::new();
     if let Ok(records) = read_csv() {
-        list_downloader::download_all(&client, &records, |record, data| {
-            check_filter_list(&record.url, record.list_type, &data);
-        })
-        .await?;
+        list_downloader::download_all(client, records, query_handler.clone()).await?;
     }
     for (file_path, list_type) in INTERNAL_LISTS.iter() {
         let mut path = std::path::PathBuf::from("internal");
@@ -189,20 +199,20 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
         if let Ok(mut file) = File::open(path).await {
             let mut text = String::new();
             let _ = file.read_to_string(&mut text).await;
-            check_filter_list(&file_path, *list_type, &text);
+            let mut record = FilterListRecord::from_type(*list_type);
+            record.url = file_path.to_string();
+            query_handler.handle_filter_list(record, &text);
         }
     }
     Ok(())
 }
 
 async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> {
-    let ips = if let Ok(records) = read_csv() {
+    let mut ips = Default::default();
+    if let Ok(records) = read_csv() {
         let client = reqwest::Client::new();
-        let mut builder = FilterListBuilder::new();
-        list_downloader::download_all(&client, &records, |record, data| {
-            builder.add_list(record.list_type, data);
-        })
-        .await?;
+        let builder = FilterListBuilder::new();
+        list_downloader::download_all(client, records, builder.clone()).await?;
         for (file_path, list_type) in INTERNAL_LISTS.iter() {
             let mut path = std::path::PathBuf::from("internal");
             path.push(file_path);
@@ -212,27 +222,22 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
                 builder.add_list(*list_type, &text)
             }
         }
-        builder.extracted_ips
-    } else {
-        Default::default()
+        let ips_lock = builder.extracted_ips.lock();
+        ips = ips_lock.clone()
     };
+    println!("Started finding domains");
+    let base = futures::future::join3(
+        certstream::certstream(),
+        passive_dns::argus(ips.clone()),
+        passive_dns::threatminer(ips.clone()),
+    );
     if let Some(vt_api) = f.virus_total_api {
-        let _result = futures::future::join4(
-            certstream::certstream(),
-            passive_dns::argus(ips.clone()),
-            passive_dns::threatminer(ips.clone()),
-            passive_dns::virus_total(ips, vt_api),
-        )
-        .await;
+        let _result =
+            futures::future::join(base, passive_dns::virus_total(ips.clone(), vt_api)).await;
     } else {
-        let _result = futures::future::join3(
-            certstream::certstream(),
-            passive_dns::argus(ips.clone()),
-            passive_dns::threatminer(ips),
-        )
-        .await;
+        let _result = base.await;
     }
-
+    println!("Finished finding domains");
     Ok(())
 }
 

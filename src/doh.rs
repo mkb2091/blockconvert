@@ -3,6 +3,8 @@ use crate::Domain;
 
 use serde::Deserialize;
 
+use std::sync::Arc;
+
 #[derive(Deserialize, Debug)]
 struct Question {
     name: String,
@@ -40,12 +42,12 @@ struct DoHResult {
 }
 
 async fn lookup_domain_(
-    server: &str,
+    server: Arc<String>,
     client: &reqwest::Client,
     domain: &Domain,
 ) -> Result<Option<DNSResultRecord>, reqwest::Error> {
     let json: DoHResult = client
-        .get(server)
+        .get(&*server)
         .query(&[("name", &**domain), ("type", "1")])
         .send()
         .await?
@@ -82,15 +84,15 @@ async fn lookup_domain_(
     }
 }
 pub async fn lookup_domain(
-    server: &str,
-    client: &reqwest::Client,
+    server: Arc<String>,
+    client: reqwest::Client,
     attempts: usize,
     domain: &Domain,
 ) -> Result<Option<DNSResultRecord>, reqwest::Error> {
     for _ in 0..attempts {
-        if let Ok(result) = lookup_domain_(server, client, domain).await {
+        if let Ok(result) = lookup_domain_(server.clone(), &client, domain).await {
             return Ok(result);
         }
     }
-    lookup_domain_(server, client, domain).await
+    lookup_domain_(server, &client, domain).await
 }
