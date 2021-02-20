@@ -98,7 +98,7 @@ async fn get_dns_results<T: 'static + DomainRecordHandler>(
 ) -> Option<DNSResultRecord> {
     let result = doh::lookup_domain(server, client, 3, &domain).await.ok()?;
     if let Some(record) = &result {
-		dns_record_handler.handle_domain_record(&record);
+        dns_record_handler.handle_domain_record(&record);
     }
     Some(result.unwrap_or_else(|| DNSResultRecord {
         domain,
@@ -135,7 +135,6 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
         ));
     }
     println!("Created initial tasks");
-    println!("Stack left: {:?}", stacker::remaining_stack());
     let now = std::time::Instant::now();
     let mut i: usize = 0;
     let mut error_count: usize = 0;

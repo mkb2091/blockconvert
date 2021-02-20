@@ -95,18 +95,25 @@ impl FilterListBuilder {
                 .for_each(|ip| self.filter_builder.add_disallow_ip_addr(ip)),
             FilterListType::Hostfile => data
                 .lines()
+                .filter_map(|line| line.split('#').next())
                 .filter_map(|line| {
                     let mut parts = line.split_whitespace();
                     Some((parts.next()?, parts.next()?))
                 })
                 .filter(|(ip, _)| matches!(*ip, "0.0.0.0" | "127.0.0.1" | "::1"))
-                .filter_map(|(_, domain)| domain.split_terminator('#').next())
+                .map(|(_, domain)| domain)
                 .filter_map(|unprocessed| {
                     unprocessed
-                        .trim_start_matches("*.")
-                        .parse::<Domain>()
-                        .ok()
-                        .map(|domain| (domain, unprocessed.starts_with("*.")))
+                        .strip_prefix("*.")
+                        .and_then(|domain| {
+                            domain.parse::<Domain>().ok().map(|domain| (domain, true))
+                        })
+                        .or_else(|| {
+                            unprocessed
+                                .parse::<Domain>()
+                                .ok()
+                                .map(|domain| (domain, false))
+                        })
                 })
                 .for_each(|(domain, is_star_subdomain)| {
                     if is_star_subdomain {
