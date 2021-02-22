@@ -2,7 +2,7 @@ use std::str::FromStr;
 
 use tokio_stream::StreamExt;
 
-use crate::{doh, DBReadHandler, DirectoryDB, Domain, DomainSetConcurrent};
+use crate::{doh, DBReadHandler, DirectoryDB, Domain, DomainSetShardedDefault};
 
 use std::sync::Arc;
 
@@ -68,12 +68,12 @@ pub trait DomainRecordHandler: Send + Sync + Clone {
 
 #[derive(Clone)]
 struct DNSDBReader<T: DomainRecordHandler> {
-    domains: DomainSetConcurrent,
+    domains: DomainSetShardedDefault,
     record_handler: T,
 }
 
 impl<T: DomainRecordHandler> DNSDBReader<T> {
-    fn new(record_handler: T, domains: DomainSetConcurrent) -> Self {
+    fn new(record_handler: T, domains: DomainSetShardedDefault) -> Self {
         DNSDBReader {
             domains,
             record_handler,
@@ -84,7 +84,7 @@ impl<T: DomainRecordHandler> DNSDBReader<T> {
 impl<T: DomainRecordHandler> DBReadHandler for DNSDBReader<T> {
     fn handle_input(&self, data: &str) {
         if let Ok(record) = data.parse::<DNSResultRecord>() {
-            self.domains.remove(&record.domain);
+            self.domains.remove_str(&record.domain);
             self.record_handler.handle_domain_record(&record)
         }
     }
@@ -96,19 +96,23 @@ async fn get_dns_results<T: 'static + DomainRecordHandler>(
     server: Arc<String>,
     domain: Domain,
 ) -> Option<DNSResultRecord> {
-    let result = doh::lookup_domain(server, client, 3, &domain).await.ok()?;
-    if let Some(record) = &result {
-        dns_record_handler.handle_domain_record(&record);
-    }
-    Some(result.unwrap_or_else(|| DNSResultRecord {
-        domain,
-        cnames: Vec::new(),
-        ips: Vec::new(),
-    }))
+    tokio::spawn(async move {
+        let result = doh::lookup_domain(server, client, 3, &domain).await.ok()?;
+        if let Some(record) = &result {
+            dns_record_handler.handle_domain_record(&record);
+        }
+        Some(result.unwrap_or_else(|| DNSResultRecord {
+            domain,
+            cnames: Vec::new(),
+            ips: Vec::new(),
+        }))
+    })
+    .await
+    .ok()?
 }
 
 pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
-    domains: DomainSetConcurrent,
+    domains: DomainSetShardedDefault,
     dns_record_handler: T,
     servers: &[Arc<String>],
     client: &reqwest::Client,
@@ -117,14 +121,12 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
     let mut db = DirectoryDB::new(&std::path::Path::new(DNS_RECORD_DIR), DNS_MAX_AGE).await?;
     db.read(db_record_handler).await?;
 
-    let domains = domains.into_single_threaded();
-
     println!("Looking up {} domains", domains.len());
     if domains.is_empty() {
         return Ok(());
     }
     let total_length = domains.len();
-    let mut domain_iter = domains.into_iter();
+    let mut domain_iter = domains.into_iter_domains();
     let mut tasks = futures::stream::FuturesUnordered::new();
     for (i, domain) in (0..100).zip(&mut domain_iter) {
         tasks.push(get_dns_results(

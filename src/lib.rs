@@ -11,7 +11,7 @@ mod list_builder;
 
 pub use list_builder::{FilterList, FilterListBuilder};
 
-pub use blockconvert::{Domain, DomainSet, DomainSetConcurrent};
+pub use blockconvert::{Domain, DomainSetShardedDefault};
 
 use serde::*;
 

@@ -1,5 +1,5 @@
 use crate::{
-    dns_lookup, DBReadHandler, Domain, DomainSetConcurrent, FilterListRecord, FilterListType,
+    dns_lookup, DBReadHandler, Domain, DomainSetShardedDefault, FilterListRecord, FilterListType,
     DOMAIN_REGEX, IP_REGEX,
 };
 
@@ -16,13 +16,17 @@ use tokio::io::AsyncWriteExt;
 #[derive(Default, Clone)]
 pub struct FilterListBuilder {
     filter_builder: blockconvert::DomainFilterBuilder,
-    pub extracted_domains: DomainSetConcurrent,
+    pub extracted_domains: DomainSetShardedDefault,
     pub extracted_ips: Arc<Mutex<std::collections::HashSet<std::net::IpAddr>>>,
 }
 
 impl FilterListBuilder {
     pub fn new() -> Self {
-        Self::default()
+        Self {
+            filter_builder: Default::default(),
+            extracted_domains: DomainSetShardedDefault::with_shards(8192),
+            extracted_ips: Default::default(),
+        }
     }
     fn add_domain_list(&self, data: &str, is_allow_list: bool) {
         for (domain, is_star_subdomain) in data
@@ -52,9 +56,9 @@ impl FilterListBuilder {
             .filter_map(|domain| domain.as_str().parse::<Domain>().ok())
         {
             for part in domain.iter_parent_domains() {
-                self.extracted_domains.insert(part);
+                self.extracted_domains.insert_str(&part);
             }
-            self.extracted_domains.insert(domain);
+            self.extracted_domains.insert_str(&domain);
         }
         let mut extracted_ips = self.extracted_ips.lock();
         for ip in IP_REGEX
@@ -178,11 +182,11 @@ impl FilterListHandler for FilterListBuilder {
 #[derive(Clone)]
 pub struct FilterList {
     filter: Arc<blockconvert::DomainFilter>,
-    blocked_domains: DomainSetConcurrent,
-    allowed_domains: DomainSetConcurrent,
+    blocked_domains: DomainSetShardedDefault,
+    allowed_domains: DomainSetShardedDefault,
     blocked_ip_addrs: Arc<Mutex<std::collections::HashSet<std::net::IpAddr>>>,
     allowed_ip_addrs: Arc<Mutex<std::collections::HashSet<std::net::IpAddr>>>,
-    extracted_domains: DomainSetConcurrent,
+    extracted_domains: DomainSetShardedDefault,
 }
 
 impl FilterList {
@@ -204,6 +208,7 @@ impl FilterList {
     }
 
     pub async fn check_dns(&mut self, servers: &[String], client: &reqwest::Client) {
+        self.extracted_domains.shrink_to_fit();
         let servers: Vec<Arc<String>> = servers
             .iter()
             .map(|server| Arc::new(server.clone()))
@@ -217,25 +222,12 @@ impl FilterList {
         .await;
     }
 
-    fn process_domain(&self, domain: &Domain, cnames: &[Domain], ips: &[std::net::IpAddr]) {
-        if ips.is_empty() {
-            return;
-        }
-        if let Some(allowed) = self.filter.allowed(domain, cnames, ips) {
-            if allowed {
-                self.allowed_domains.insert_str_unchecked(&domain)
-            } else {
-                self.blocked_domains.insert_str_unchecked(&domain)
-            };
-        }
-    }
-
     pub fn finished_extracting(&self) {
         println!("Extracted domains: {:?}", self.extracted_domains.len());
     }
 
     pub async fn write_all(
-        &self,
+        self,
         blocked_domains_path: &std::path::Path,
         hostfile_path: &std::path::Path,
         rpz_path: &std::path::Path,
@@ -297,12 +289,12 @@ impl FilterList {
 ",
             chrono::Utc::today()
         );
-        let blocked_domains_base = self.blocked_domains.clone().into_single_threaded();
+        let blocked_domains_base: std::collections::HashSet<_> =
+            self.blocked_domains.into_iter_domains().collect();
         let mut blocked_domains: Vec<_> = blocked_domains_base.iter().collect();
         blocked_domains.sort_unstable();
 
-        let allowed_domains_base = self.allowed_domains.clone().into_single_threaded();
-        let mut allowed_domains: Vec<_> = allowed_domains_base.iter().collect();
+        let mut allowed_domains: Vec<_> = self.allowed_domains.into_iter_domains().collect();
         allowed_domains.sort_unstable();
 
         let blocked_ip_addrs_base = self.blocked_ip_addrs.lock();
@@ -413,11 +405,11 @@ impl DBReadHandler for FilterList {
     fn handle_input(&self, data: &str) {
         let data = data.trim_end();
         if Domain::str_is_valid_domain(data).is_ok() {
-            if !self.extracted_domains.insert_str_unchecked(data) {
+            if !self.extracted_domains.insert_str(data) {
                 return; // Already contains parent domain, no need to continue inserting children
             }
             for sub_domain in Domain::str_iter_parent_domains(data) {
-                if !self.extracted_domains.insert_str_unchecked(sub_domain) {
+                if !self.extracted_domains.insert_str(sub_domain) {
                     return;
                 }
             }
@@ -427,7 +419,19 @@ impl DBReadHandler for FilterList {
 
 impl DomainRecordHandler for FilterList {
     fn handle_domain_record(&self, record: &DNSResultRecord) {
-        self.process_domain(&record.domain, &record.cnames, &record.ips);
+        if record.ips.is_empty() {
+            return;
+        }
+        if let Some(allowed) = self
+            .filter
+            .allowed(&record.domain, &record.cnames, &record.ips)
+        {
+            if allowed {
+                self.allowed_domains.insert_str(&record.domain)
+            } else {
+                self.blocked_domains.insert_str(&record.domain)
+            };
+        }
     }
 }
 
