@@ -1,5 +1,6 @@
 use crate::{Domain, EXTRACTED_DOMAINS_DIR};
 
+use futures::SinkExt;
 use futures::StreamExt;
 use tokio::fs::OpenOptions;
 use tokio::io::BufWriter;
@@ -7,6 +8,8 @@ use tokio::io::BufWriter;
 use tokio::io::AsyncWriteExt;
 
 const URL: &str = "wss://certstream.calidog.io/domains-only";
+
+const KEEPALIVE_INTERVAL: u64 = 20;
 
 pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
     let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);
@@ -23,8 +26,9 @@ pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
             .await?,
     );
     let mut counter: u64 = 0;
-    let now = std::time::Instant::now();
+    let start = std::time::Instant::now();
     let mut last_output = std::time::Instant::now();
+    let mut last_keepalive = std::time::Instant::now();
     loop {
         let (mut ws_stream, _response) = tokio_tungstenite::connect_async(URL).await?;
         while let Some(Ok(next)) = ws_stream.next().await {
@@ -39,10 +43,10 @@ pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
                                 .filter_map(|domain| domain.as_str())
                                 .filter_map(|domain| domain.parse::<Domain>().ok())
                             {
-                                if last_output.elapsed().as_secs_f32() > 10.0 {
+                                if last_output.elapsed().as_secs_f32() > 5.0 {
                                     println!(
                                         "Found {} domains ({}/s) via CertStream. Current domain: {}",
-                                        counter, (counter as f32 / now.elapsed().as_secs_f32()), domain
+                                        counter, (counter as f32 / start.elapsed().as_secs_f32()), domain
                                     );
                                     last_output = std::time::Instant::now();
                                 }
@@ -61,6 +65,17 @@ pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
                 }
             } else {
                 println!("Unknown type: {:?}", next)
+            }
+            if last_keepalive.elapsed().as_secs() > KEEPALIVE_INTERVAL {
+                if let Err(error) = ws_stream
+                    .send(tokio_tungstenite::tungstenite::protocol::Message::Text(
+                        String::new(),
+                    ))
+                    .await
+                {
+                    println!("Failed to send keepalive: {:?}", error);
+                }
+                last_keepalive = std::time::Instant::now();
             }
         }
         println!("CertStream connection ended");
