@@ -146,11 +146,20 @@ pub async fn argus(
                 if json.pointer("/responseCode")
                     != Some(&serde_json::Value::Number(serde_json::Number::from(200)))
                 {
-                    println!(
-                        "ARGUS: Non 200 response code: {:?}",
-                        json.pointer("/responseCode")
-                    );
-                    errored = true;
+                    if let Some(sleep_time) = json
+                        .pointer("/metaData/millisUntilResourcesAvailable")
+                        .and_then(|value| value.as_u64())
+                    {
+                        let duration = std::time::Duration::from_millis(sleep_time);
+                        println!("ARGUS: sleeping for {} seconds", duration.as_secs_f32());
+                        tokio::time::sleep(duration).await;
+                    } else {
+                        println!(
+                            "ARGUS: Non 200 response code: {:?}",
+                            json.pointer("/responseCode")
+                        );
+                        errored = true;
+                    }
                 }
                 if let Some(data) = json.pointer("/data").and_then(|data| data.as_array()) {
                     for domain in data.iter().filter_map(|item| {
