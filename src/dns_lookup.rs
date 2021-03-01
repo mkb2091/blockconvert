@@ -97,7 +97,7 @@ async fn get_dns_results<T: 'static + DomainRecordHandler>(
     domain: Domain,
 ) -> Option<DNSResultRecord> {
     tokio::spawn(async move {
-        let result = doh::lookup_domain(server, client, 3, &domain).await.ok()?;
+        let result = doh::lookup_domain(server, client, 1, &domain).await.ok()?;
         if let Some(record) = &result {
             dns_record_handler.handle_domain_record(&record);
         }

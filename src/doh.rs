@@ -50,9 +50,17 @@ async fn lookup_domain_(
         .get(&*server)
         .query(&[("name", &**domain), ("type", "1")])
         .send()
-        .await?
+        .await
+        .map_err(|err| {
+            println!("Error: {:?}", err);
+            err
+        })?
         .json()
-        .await?;
+        .await
+        .map_err(|err| {
+            println!("Error: {:?}", err);
+            err
+        })?;
     if json.Status == 0 {
         let mut result = DNSResultRecord {
             domain: domain.clone(),
