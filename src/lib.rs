@@ -11,7 +11,7 @@ mod list_builder;
 
 pub use list_builder::{FilterList, FilterListBuilder};
 
-pub use blockconvert::{Domain, DomainSetShardedDefault};
+pub use blockconvert::{ipnet, Domain, DomainSetShardedDefault};
 
 use serde::*;
 
@@ -116,6 +116,7 @@ pub enum FilterListType {
     DomainAllowlist,
     IPBlocklist,
     IPAllowlist,
+    IPNetBlocklist,
     DenyHosts,
     RegexAllowlist,
     RegexBlocklist,
@@ -126,6 +127,7 @@ pub enum FilterListType {
 
 pub trait DBReadHandler: Send + Sync + Clone {
     fn handle_input(&self, data: &str);
+    fn finished_with_file(&self) {}
 }
 
 pub struct DirectoryDB {
@@ -191,9 +193,7 @@ impl DirectoryDB {
                                     if len == 0 {
                                         break;
                                     }
-                                    tokio::task::block_in_place(|| {
-                                        handle_input.handle_input(&line)
-                                    });
+                                    handle_input.handle_input(&line);
                                     line.clear();
                                     record_count += 1;
                                 }
@@ -207,6 +207,7 @@ impl DirectoryDB {
                                     record_count
                                 );
                             }
+                            handle_input.finished_with_file();
                             return;
                         }
                     }

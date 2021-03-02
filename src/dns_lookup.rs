@@ -88,10 +88,13 @@ impl<T: DomainRecordHandler> DBReadHandler for DNSDBReader<T> {
             self.record_handler.handle_domain_record(&record)
         }
     }
+    fn finished_with_file(&self) {
+        self.domains.shrink_to_fit();
+    }
 }
 
 async fn get_dns_results<T: 'static + DomainRecordHandler>(
-    dns_record_handler: T,
+    dns_record_handler: Arc<T>,
     client: reqwest::Client,
     server: Arc<String>,
     domain: Domain,
@@ -128,7 +131,8 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
     let total_length = domains.len();
     let mut domain_iter = domains.into_iter_domains();
     let mut tasks = futures::stream::FuturesUnordered::new();
-    for (i, domain) in (0..100).zip(&mut domain_iter) {
+    let dns_record_handler = Arc::new(dns_record_handler);
+    for (i, domain) in (&mut domain_iter).take(100).enumerate() {
         tasks.push(get_dns_results(
             dns_record_handler.clone(),
             client.clone(),

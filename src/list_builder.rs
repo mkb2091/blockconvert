@@ -1,6 +1,6 @@
 use crate::{
-    dns_lookup, DBReadHandler, Domain, DomainSetShardedDefault, FilterListRecord, FilterListType,
-    DOMAIN_REGEX, IP_REGEX,
+    dns_lookup, ipnet, DBReadHandler, Domain, DomainSetShardedDefault, FilterListRecord,
+    FilterListType, DOMAIN_REGEX, IP_REGEX,
 };
 
 use crate::dns_lookup::{DNSResultRecord, DomainRecordHandler};
@@ -92,6 +92,12 @@ impl FilterListBuilder {
                 .filter_map(|ip| ip.split_terminator('#').next())
                 .filter_map(|ip| ip.parse::<std::net::IpAddr>().ok())
                 .for_each(|ip| self.filter_builder.add_allow_ip_addr(ip)),
+            FilterListType::IPNetBlocklist => data
+                .lines()
+                .filter_map(|line| line.split_whitespace().next())
+                .filter_map(|ip| ip.split_terminator('#').next())
+                .filter_map(|ip| ip.parse::<ipnet::IpNet>().ok())
+                .for_each(|ip| self.filter_builder.add_disallow_ip_subnet(ip)),
             FilterListType::DenyHosts => data
                 .lines()
                 .filter_map(|line| line.strip_prefix("sshd: "))
@@ -153,8 +159,8 @@ impl FilterListBuilder {
         let bc = FilterList {
             filter: Arc::new(self.filter_builder.to_domain_filter()),
             extracted_domains: self.extracted_domains,
-            blocked_domains: Default::default(),
-            allowed_domains: Default::default(),
+            blocked_domains: DomainSetShardedDefault::with_shards(1024),
+            allowed_domains: DomainSetShardedDefault::with_shards(128),
             blocked_ip_addrs: Default::default(),
             allowed_ip_addrs: Default::default(),
         };

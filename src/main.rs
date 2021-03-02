@@ -44,6 +44,7 @@ struct FindDomains {
 const INTERNAL_LISTS: &[(&str, FilterListType)] = &[
     ("blocklist.txt", FilterListType::DomainBlocklist),
     ("block_ips.txt", FilterListType::IPBlocklist),
+    ("block_ipnets.txt", FilterListType::IPNetBlocklist),
     ("block_regex.txt", FilterListType::RegexBlocklist),
     ("adblock.txt", FilterListType::Adblock),
     ("allowlist.txt", FilterListType::DomainAllowlist),
