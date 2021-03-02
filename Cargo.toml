@@ -7,9 +7,9 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-blockconvert = "0.4"
+blockconvert = "^0.4.3"
 
-reqwest = {version = "0.11", features = ["rustls-tls", "gzip", "brotli", "json"]}
+reqwest = {version = "0.11", features = ["rustls-tls", "json"]}
 futures = {version = "0.3"}
 tokio = {version = "1.2", features = ["macros", "rt", "rt-multi-thread", "fs", "io-util", "time", "net", "sync"]}
 tokio-stream = {version = "0.1", features = ["fs"]}
