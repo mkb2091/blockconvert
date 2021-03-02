@@ -249,7 +249,11 @@ impl FilterList {
         ) -> Result<(), Box<dyn std::error::Error>> {
             let file = tokio::fs::File::create(path).await?;
             let mut buf = BufWriter::new(file);
-            data.sort_unstable();
+            data.sort_unstable_by(|domain1, domain2| {
+                Domain::str_iter_parent_domains(domain1)
+                    .rev()
+                    .cmp(Domain::str_iter_parent_domains(domain2).rev())
+            });
             for item in data.into_iter() {
                 buf.write_all(item.as_bytes()).await?;
                 buf.write_all(b"\n").await?;
@@ -298,10 +302,18 @@ impl FilterList {
         let blocked_domains_base: std::collections::HashSet<_> =
             self.blocked_domains.into_iter_domains().collect();
         let mut blocked_domains: Vec<_> = blocked_domains_base.iter().collect();
-        blocked_domains.sort_unstable();
+        blocked_domains.sort_unstable_by(|domain1, domain2| {
+            Domain::str_iter_parent_domains(domain1)
+                .rev()
+                .cmp(Domain::str_iter_parent_domains(domain2).rev())
+        });
 
         let mut allowed_domains: Vec<_> = self.allowed_domains.into_iter_domains().collect();
-        allowed_domains.sort_unstable();
+        allowed_domains.sort_unstable_by(|domain1, domain2| {
+            Domain::str_iter_parent_domains(domain1)
+                .rev()
+                .cmp(Domain::str_iter_parent_domains(domain2).rev())
+        });
 
         let blocked_ip_addrs_base = self.blocked_ip_addrs.lock();
         let mut blocked_ips: Vec<_> = blocked_ip_addrs_base.iter().collect();
