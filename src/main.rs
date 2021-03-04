@@ -81,7 +81,7 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
     ];
     if let Ok(records) = read_csv() {
         println!("Read CSV");
-        let builder = FilterListBuilder::new();
+        let builder = Arc::new(FilterListBuilder::new());
         println!("Initialised FilterListBuilder");
         list_downloader::download_all(client, records, builder.clone()).await?;
         println!("Downloaded lists");
@@ -94,7 +94,8 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
                 builder.add_list(*list_type, &text)
             }
         }
-        let mut bc = builder.to_filterlist();
+        let builder = Arc::try_unwrap(builder).ok().expect("Failed to unwrap Arc");
+        let bc = Arc::new(builder.to_filterlist());
         DirectoryDB::new(
             &std::path::Path::new(EXTRACTED_DOMAINS_DIR),
             EXTRACTED_MAX_AGE,
@@ -103,6 +104,7 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
         .read(bc.clone())
         .await?;
         bc.finished_extracting();
+        let mut bc = Arc::try_unwrap(bc).ok().expect("Failed to unwrap Arc");
         let mut headers = reqwest::header::HeaderMap::new();
         headers.insert(
             reqwest::header::ACCEPT,
@@ -132,7 +134,7 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
 
 #[derive(Clone)]
 struct QueryFilterListHandler {
-    parts: Arc<Vec<(Domain, Vec<Domain>, Vec<std::net::IpAddr>)>>,
+    parts: Vec<(Domain, Vec<Domain>, Vec<std::net::IpAddr>)>,
 }
 
 impl FilterListHandler for QueryFilterListHandler {
@@ -188,9 +190,7 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
         };
         parts.push((part, cnames, ips));
     }
-    let query_handler = QueryFilterListHandler {
-        parts: Arc::new(parts),
-    };
+    let query_handler = Arc::new(QueryFilterListHandler { parts });
     let client = reqwest::Client::new();
     if let Ok(records) = read_csv() {
         list_downloader::download_all(client, records, query_handler.clone()).await?;
@@ -213,7 +213,7 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
     let mut ips = Default::default();
     if let Ok(records) = read_csv() {
         let client = reqwest::Client::new();
-        let builder = FilterListBuilder::new();
+        let builder = Arc::new(FilterListBuilder::new());
         list_downloader::download_all(client, records, builder.clone()).await?;
         for (file_path, list_type) in INTERNAL_LISTS.iter() {
             let mut path = std::path::PathBuf::from("internal");

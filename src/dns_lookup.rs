@@ -2,7 +2,7 @@ use std::str::FromStr;
 
 use tokio_stream::StreamExt;
 
-use crate::{doh, DBReadHandler, DirectoryDB, Domain, DomainSetShardedDefault};
+use crate::{doh, DBReadHandler, DirectoryDB, Domain, DomainSetShardedFX};
 
 use std::sync::Arc;
 
@@ -62,18 +62,18 @@ impl std::fmt::Display for DNSResultRecord {
     }
 }
 
-pub trait DomainRecordHandler: Send + Sync + Clone {
+pub trait DomainRecordHandler: Send + Sync {
     fn handle_domain_record(&self, record: &DNSResultRecord);
 }
 
 #[derive(Clone)]
 struct DNSDBReader<T: DomainRecordHandler> {
-    domains: DomainSetShardedDefault,
-    record_handler: T,
+    domains: Arc<DomainSetShardedFX>,
+    record_handler: Arc<T>,
 }
 
 impl<T: DomainRecordHandler> DNSDBReader<T> {
-    fn new(record_handler: T, domains: DomainSetShardedDefault) -> Self {
+    fn new(record_handler: Arc<T>, domains: Arc<DomainSetShardedFX>) -> Self {
         DNSDBReader {
             domains,
             record_handler,
@@ -115,31 +115,37 @@ async fn get_dns_results<T: 'static + DomainRecordHandler>(
 }
 
 pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
-    domains: DomainSetShardedDefault,
-    dns_record_handler: T,
+    domains: DomainSetShardedFX,
+    dns_record_handler: Arc<T>,
     servers: &[Arc<String>],
     client: &reqwest::Client,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let db_record_handler = DNSDBReader::new(dns_record_handler.clone(), domains.clone());
+    let domains_arc = Arc::new(domains);
+    let db_record_handler = DNSDBReader::new(dns_record_handler.clone(), domains_arc.clone());
     let mut db = DirectoryDB::new(&std::path::Path::new(DNS_RECORD_DIR), DNS_MAX_AGE).await?;
-    db.read(db_record_handler).await?;
+    db.read(Arc::new(db_record_handler)).await?;
 
+    let domains = Arc::try_unwrap(domains_arc)
+        .ok()
+        .expect("Failed to unwrap Arc");
     println!("Looking up {} domains", domains.len());
     if domains.is_empty() {
         return Ok(());
     }
     let total_length = domains.len();
     let mut domain_iter = domains.into_iter_domains();
-    let mut tasks = futures::stream::FuturesUnordered::new();
-    let dns_record_handler = Arc::new(dns_record_handler);
-    for (i, domain) in (&mut domain_iter).take(100).enumerate() {
-        tasks.push(get_dns_results(
-            dns_record_handler.clone(),
-            client.clone(),
-            servers[i % servers.len()].clone(),
-            domain,
-        ));
-    }
+    let mut tasks: futures::stream::FuturesUnordered<_> = (&mut domain_iter)
+        .take(400)
+        .enumerate()
+        .map(|(i, domain)| {
+            get_dns_results(
+                dns_record_handler.clone(),
+                client.clone(),
+                servers[i % servers.len()].clone(),
+                domain,
+            )
+        })
+        .collect();
     println!("Created initial tasks");
     let now = std::time::Instant::now();
     let mut i: usize = 0;

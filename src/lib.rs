@@ -11,7 +11,8 @@ mod list_builder;
 
 pub use list_builder::{FilterList, FilterListBuilder};
 
-pub use blockconvert::{ipnet, Domain, DomainSetShardedDefault};
+pub use blockconvert::{ipnet, Domain, DomainSetSharded};
+pub type DomainSetShardedFX = DomainSetSharded<fxhash::FxBuildHasher>;
 
 use serde::*;
 
@@ -22,6 +23,8 @@ use tokio::io::AsyncBufReadExt;
 use tokio::io::AsyncWriteExt;
 
 use tokio_stream::StreamExt;
+
+use std::sync::Arc;
 
 lazy_static! {
     static ref DOMAIN_REGEX: regex::Regex =
@@ -125,7 +128,7 @@ pub enum FilterListType {
     PrivacyBadger,
 }
 
-pub trait DBReadHandler: Send + Sync + Clone {
+pub trait DBReadHandler: Send + Sync {
     fn handle_input(&self, data: &str);
     fn finished_with_file(&self) {}
 }
@@ -165,7 +168,7 @@ impl DirectoryDB {
     }
     pub async fn read<T: 'static + DBReadHandler>(
         &self,
-        handle_input: T,
+        handle_input: Arc<T>,
     ) -> Result<(), Box<dyn std::error::Error>> {
         let max_age = self.max_age;
         let _ = tokio::fs::create_dir_all(&self.path).await;

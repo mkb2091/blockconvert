@@ -1,6 +1,6 @@
 use crate::{
-    dns_lookup, ipnet, DBReadHandler, Domain, DomainSetShardedDefault, FilterListRecord,
-    FilterListType, DOMAIN_REGEX, IP_REGEX,
+    dns_lookup, ipnet, DBReadHandler, Domain, DomainSetShardedFX, FilterListRecord, FilterListType,
+    DOMAIN_REGEX, IP_REGEX,
 };
 
 use crate::dns_lookup::{DNSResultRecord, DomainRecordHandler};
@@ -13,18 +13,19 @@ use tokio::io::BufWriter;
 
 use tokio::io::AsyncWriteExt;
 
-#[derive(Default, Clone)]
+type DomainFilterBuilderFX = blockconvert::DomainFilterBuilder<fxhash::FxBuildHasher>;
+
 pub struct FilterListBuilder {
-    filter_builder: blockconvert::DomainFilterBuilder,
-    pub extracted_domains: DomainSetShardedDefault,
-    pub extracted_ips: Arc<Mutex<std::collections::HashSet<std::net::IpAddr>>>,
+    filter_builder: DomainFilterBuilderFX,
+    pub extracted_domains: DomainSetShardedFX,
+    pub extracted_ips: Mutex<std::collections::HashSet<std::net::IpAddr>>,
 }
 
 impl FilterListBuilder {
     pub fn new() -> Self {
         Self {
             filter_builder: Default::default(),
-            extracted_domains: DomainSetShardedDefault::with_shards(8192),
+            extracted_domains: DomainSetShardedFX::with_shards(8192),
             extracted_ips: Default::default(),
         }
     }
@@ -157,10 +158,10 @@ impl FilterListBuilder {
     }
     pub fn to_filterlist(self) -> FilterList {
         let bc = FilterList {
-            filter: Arc::new(self.filter_builder.to_domain_filter()),
+            filter: self.filter_builder.to_domain_filter(),
             extracted_domains: self.extracted_domains,
-            blocked_domains: DomainSetShardedDefault::with_shards(1024),
-            allowed_domains: DomainSetShardedDefault::with_shards(128),
+            blocked_domains: DomainSetShardedFX::with_shards(1024),
+            allowed_domains: DomainSetShardedFX::with_shards(128),
             blocked_ip_addrs: Default::default(),
             allowed_ip_addrs: Default::default(),
         };
@@ -185,14 +186,14 @@ impl FilterListHandler for FilterListBuilder {
     }
 }
 
-#[derive(Clone)]
+#[derive(Default)]
 pub struct FilterList {
-    filter: Arc<blockconvert::DomainFilter>,
-    blocked_domains: DomainSetShardedDefault,
-    allowed_domains: DomainSetShardedDefault,
-    blocked_ip_addrs: Arc<Mutex<std::collections::HashSet<std::net::IpAddr>>>,
-    allowed_ip_addrs: Arc<Mutex<std::collections::HashSet<std::net::IpAddr>>>,
-    extracted_domains: DomainSetShardedDefault,
+    filter: blockconvert::DomainFilter<fxhash::FxBuildHasher>,
+    blocked_domains: DomainSetShardedFX,
+    allowed_domains: DomainSetShardedFX,
+    blocked_ip_addrs: Mutex<std::collections::HashSet<std::net::IpAddr>>,
+    allowed_ip_addrs: Mutex<std::collections::HashSet<std::net::IpAddr>>,
+    extracted_domains: DomainSetShardedFX,
 }
 
 impl FilterList {
@@ -219,13 +220,25 @@ impl FilterList {
             .iter()
             .map(|server| Arc::new(server.clone()))
             .collect();
+        let extracted_domains = std::mem::replace(
+            &mut self.extracted_domains,
+            DomainSetShardedFX::with_shards(0),
+        );
+        let mem_take_self = Arc::new(std::mem::take(self));
+
         let _ = dns_lookup::lookup_domains(
-            self.extracted_domains.clone(),
-            self.clone(),
+            extracted_domains,
+            mem_take_self.clone(),
             &servers[..],
             client,
         )
         .await;
+        let _ = std::mem::replace(
+            self,
+            Arc::try_unwrap(mem_take_self)
+                .ok()
+                .expect("Failed to unwrap Arc"),
+        );
     }
 
     pub fn finished_extracting(&self) {
@@ -252,7 +265,12 @@ impl FilterList {
             data.sort_unstable_by(|domain1, domain2| {
                 Domain::str_iter_parent_domains(domain1)
                     .rev()
-                    .cmp(Domain::str_iter_parent_domains(domain2).rev())
+                    .chain(std::iter::once(domain1.as_str()))
+                    .cmp(
+                        Domain::str_iter_parent_domains(domain2)
+                            .rev()
+                            .chain(std::iter::once(domain2.as_str())),
+                    )
             });
             for item in data.into_iter() {
                 buf.write_all(item.as_bytes()).await?;
@@ -299,20 +317,30 @@ impl FilterList {
 ",
             chrono::Utc::today()
         );
-        let blocked_domains_base: std::collections::HashSet<_> =
+        let blocked_domains_base: std::collections::HashSet<Domain> =
             self.blocked_domains.into_iter_domains().collect();
-        let mut blocked_domains: Vec<_> = blocked_domains_base.iter().collect();
+        let mut blocked_domains: Vec<Domain> = blocked_domains_base.iter().cloned().collect();
         blocked_domains.sort_unstable_by(|domain1, domain2| {
             Domain::str_iter_parent_domains(domain1)
                 .rev()
-                .cmp(Domain::str_iter_parent_domains(domain2).rev())
+                .chain(std::iter::once(domain1.as_str()))
+                .cmp(
+                    Domain::str_iter_parent_domains(domain2)
+                        .rev()
+                        .chain(std::iter::once(domain2.as_str())),
+                )
         });
 
-        let mut allowed_domains: Vec<_> = self.allowed_domains.into_iter_domains().collect();
+        let mut allowed_domains: Vec<Domain> = self.allowed_domains.into_iter_domains().collect();
         allowed_domains.sort_unstable_by(|domain1, domain2| {
             Domain::str_iter_parent_domains(domain1)
                 .rev()
-                .cmp(Domain::str_iter_parent_domains(domain2).rev())
+                .chain(std::iter::once(domain1.as_str()))
+                .cmp(
+                    Domain::str_iter_parent_domains(domain2)
+                        .rev()
+                        .chain(std::iter::once(domain2.as_str())),
+                )
         });
 
         let blocked_ip_addrs_base = self.blocked_ip_addrs.lock();

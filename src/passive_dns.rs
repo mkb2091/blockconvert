@@ -5,6 +5,8 @@ use tokio::io::BufWriter;
 
 use tokio::io::AsyncWriteExt;
 
+use parking_lot::Mutex;
+
 const PASSIVE_DNS_RECORD_DIR: &str = "passive_dns_db";
 
 #[derive(Default, Debug)]
@@ -32,10 +34,10 @@ struct PassiveDNSDBHandler {
     ips: std::collections::HashSet<std::net::IpAddr>,
 }
 
-impl DBReadHandler for std::sync::Arc<std::sync::Mutex<PassiveDNSDBHandler>> {
+impl DBReadHandler for Mutex<PassiveDNSDBHandler> {
     fn handle_input(&self, data: &str) {
         if let Ok(ip) = data.trim().parse::<std::net::IpAddr>() {
-            self.lock().unwrap().ips.remove(&ip);
+            self.lock().ips.remove(&ip);
         }
     }
 }
@@ -48,10 +50,10 @@ impl PassiveDNS {
     ) -> Result<Self, Box<dyn std::error::Error>> {
         let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
         path.push(name);
-        let ips_remaining = std::sync::Arc::new(std::sync::Mutex::new(PassiveDNSDBHandler { ips }));
+        let ips_remaining = std::sync::Arc::new(Mutex::new(PassiveDNSDBHandler { ips }));
         let db = DirectoryDB::new(&path, EXTRACTED_MAX_AGE).await?;
         db.read(ips_remaining.clone()).await?;
-        ips = std::mem::take(&mut ips_remaining.lock().unwrap().ips);
+        ips = std::mem::take(&mut ips_remaining.lock().ips);
         let total_length = ips.len() as u64;
 
         let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);

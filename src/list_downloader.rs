@@ -5,6 +5,8 @@ use tokio::fs::File;
 use tokio::io::AsyncWriteExt;
 use tokio_stream::StreamExt;
 
+use std::sync::Arc;
+
 fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error::Error>> {
     let mut path = std::path::PathBuf::from("data");
     path.push(std::path::PathBuf::from(
@@ -100,14 +102,14 @@ async fn download_list_if_expired(
     Ok(tokio::fs::read_to_string(&path).await?)
 }
 
-pub trait FilterListHandler: Send + Sync + Clone {
+pub trait FilterListHandler: Send + Sync {
     fn handle_filter_list(&self, record: FilterListRecord, data: &str);
 }
 
 pub async fn download_all<T: 'static + FilterListHandler>(
     client: reqwest::Client,
     records: Vec<FilterListRecord>,
-    handler: T,
+    handler: Arc<T>,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let mut downloads: futures::stream::FuturesUnordered<_> =
         futures::stream::FuturesUnordered::new();
