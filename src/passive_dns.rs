@@ -47,7 +47,7 @@ impl PassiveDNS {
         mut ips: std::collections::HashSet<std::net::IpAddr>,
         name: &str,
         sleep_time: f32,
-    ) -> Result<Self, Box<dyn std::error::Error>> {
+    ) -> Result<Self, std::io::Error> {
         let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
         path.push(name);
         let ips_remaining = std::sync::Arc::new(Mutex::new(PassiveDNSDBHandler { ips }));
@@ -80,13 +80,13 @@ impl PassiveDNS {
             last_fetched: std::time::Instant::now(),
         })
     }
-    async fn flush(&mut self) -> Result<(), Box<dyn std::error::Error>> {
+    async fn flush(&mut self) -> Result<(), std::io::Error> {
         self.wtr.flush().await?;
         self.db.flush().await?;
         self.last_flushed = std::time::Instant::now();
         Ok(())
     }
-    async fn check_flush(&mut self) -> Result<(), Box<dyn std::error::Error>> {
+    async fn check_flush(&mut self) -> Result<(), std::io::Error> {
         if self.last_flushed.elapsed().as_secs() > 10 {
             self.flush().await?;
         }
@@ -101,7 +101,7 @@ impl PassiveDNS {
         self.last_fetched = std::time::Instant::now();
         self.ips.pop()
     }
-    async fn add_domain(&mut self, domain: &Domain) -> Result<(), Box<dyn std::error::Error>> {
+    async fn add_domain(&mut self, domain: &Domain) -> Result<(), std::io::Error> {
         self.wtr.write_all(domain.to_string().as_bytes()).await?;
         self.wtr.write_all(b"\n").await?;
         self.check_flush().await?;
@@ -110,7 +110,7 @@ impl PassiveDNS {
     async fn finished_ip(
         &mut self,
         ip: std::net::IpAddr,
-    ) -> Result<(), Box<dyn std::error::Error>> {
+    ) -> Result<(), std::io::Error> {
         self.db.write_line(ip.to_string().as_bytes()).await?;
         self.check_flush().await?;
         Ok(())

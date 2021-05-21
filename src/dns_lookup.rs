@@ -119,7 +119,7 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
     dns_record_handler: Arc<T>,
     servers: &[Arc<String>],
     client: &reqwest::Client,
-) -> Result<(), Box<dyn std::error::Error>> {
+) -> Result<(), std::io::Error> {
     let domains_arc = Arc::new(domains);
     let db_record_handler = DNSDBReader::new(dns_record_handler.clone(), domains_arc.clone());
     let mut db = DirectoryDB::new(&std::path::Path::new(DNS_RECORD_DIR), DNS_MAX_AGE).await?;

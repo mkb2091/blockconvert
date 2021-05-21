@@ -143,7 +143,7 @@ impl DirectoryDB {
     pub async fn new(
         path: &std::path::Path,
         max_age: u64,
-    ) -> Result<Self, Box<dyn std::error::Error>> {
+    ) -> Result<Self, std::io::Error> {
         let dir_path = std::path::PathBuf::from(path);
         let _ = tokio::fs::create_dir_all(&dir_path).await;
 
@@ -169,7 +169,7 @@ impl DirectoryDB {
     pub async fn read<T: 'static + DBReadHandler>(
         &self,
         handle_input: Arc<T>,
-    ) -> Result<(), Box<dyn std::error::Error>> {
+    ) -> Result<(), std::io::Error> {
         let max_age = self.max_age;
         let _ = tokio::fs::create_dir_all(&self.path).await;
         let mut entries =
@@ -226,12 +226,12 @@ impl DirectoryDB {
         Ok(())
     }
 
-    pub async fn write_line(&mut self, line: &[u8]) -> Result<(), Box<dyn std::error::Error>> {
+    pub async fn write_line(&mut self, line: &[u8]) -> Result<(), std::io::Error> {
         self.wtr.write_all(line).await?;
         self.wtr.write_all(b"\n").await?;
         Ok(())
     }
-    pub async fn flush(&mut self) -> Result<(), Box<dyn std::error::Error>> {
+    pub async fn flush(&mut self) -> Result<(), std::io::Error> {
         self.wtr.flush().await?;
         Ok(())
     }

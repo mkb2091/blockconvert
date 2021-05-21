@@ -7,7 +7,7 @@ use tokio_stream::StreamExt;
 
 use std::sync::Arc;
 
-fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, Box<dyn std::error::Error>> {
+fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, std::io::Error> {
     let mut path = std::path::PathBuf::from("data");
     path.push(std::path::PathBuf::from(
         url.replace(':', "").replace('?', "").replace('=', ""),
@@ -27,7 +27,7 @@ async fn get_last_update(path: &std::path::Path) -> Option<std::time::SystemTime
     metadata.modified().or_else(|_| metadata.created()).ok()
 }
 
-fn date_string_to_filetime(data: &str) -> Result<filetime::FileTime, Box<dyn std::error::Error>> {
+fn date_string_to_filetime(data: &str) -> Result<filetime::FileTime, chrono::format::ParseError> {
     let date: chrono::DateTime<chrono::FixedOffset> = chrono::DateTime::parse_from_rfc2822(data)
         .or_else(|_| chrono::DateTime::parse_from_rfc3339(data))
         .or_else(|_| data.parse())?;
@@ -45,7 +45,7 @@ fn test_date_string_to_filetime() {
 async fn download_list_if_expired(
     client: reqwest::Client,
     record: FilterListRecord,
-) -> Result<String, Box<dyn std::error::Error>> {
+) -> Result<String, std::io::Error> {
     let path = get_path_for_url(&record.url)?;
     let last_update = get_last_update(&path).await;
     if last_update
