@@ -21,6 +21,12 @@ pub struct FilterListBuilder {
     pub extracted_ips: Mutex<std::collections::HashSet<std::net::IpAddr>>,
 }
 
+impl Default for FilterListBuilder {
+	fn default() -> Self {
+		Self::new()
+	}
+}
+
 impl FilterListBuilder {
     pub fn new() -> Self {
         Self {
