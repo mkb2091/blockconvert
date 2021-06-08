@@ -44,7 +44,7 @@ fn test_date_string_to_filetime() {
 
 async fn download_list_if_expired(
     client: reqwest::Client,
-    record: FilterListRecord,
+    record: &FilterListRecord,
 ) -> Result<String, std::io::Error> {
     let path = get_path_for_url(&record.url)?;
     let last_update = get_last_update(&path).await;
@@ -118,7 +118,7 @@ pub async fn download_all<T: 'static + FilterListHandler>(
         let handler = handler.clone();
         let client = client.clone();
         let task = tokio::task::spawn(async move {
-            match download_list_if_expired(client, record.clone()).await {
+            match download_list_if_expired(client, &record).await {
                 Ok(data) => handler.handle_filter_list(record, &data),
                 Err(error) => println!(
                     "Failed to download filter list: {:?} with error {:?}",
