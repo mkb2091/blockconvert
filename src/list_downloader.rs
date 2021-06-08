@@ -27,19 +27,17 @@ async fn get_last_update(path: &std::path::Path) -> Option<std::time::SystemTime
     metadata.modified().or_else(|_| metadata.created()).ok()
 }
 
-fn date_string_to_filetime(data: &str) -> Result<filetime::FileTime, chrono::format::ParseError> {
-    let date: chrono::DateTime<chrono::FixedOffset> = chrono::DateTime::parse_from_rfc2822(data)
+fn parse_date(
+    data: &str,
+) -> Result<chrono::DateTime<chrono::FixedOffset>, chrono::format::ParseError> {
+    chrono::DateTime::parse_from_rfc2822(data)
         .or_else(|_| chrono::DateTime::parse_from_rfc3339(data))
-        .or_else(|_| data.parse())?;
-    Ok(filetime::FileTime::from_unix_time(
-        date.timestamp(),
-        date.timestamp_subsec_nanos(),
-    ))
+        .or_else(|_| data.parse())
 }
 
 #[test]
 fn test_date_string_to_filetime() {
-    assert!(date_string_to_filetime("Mon, 03 Aug 2020 05:46:53 GMT").is_ok())
+    assert!(parse_date("Mon, 03 Aug 2020 05:46:53 GMT").is_ok())
 }
 
 async fn download_list_if_expired(
@@ -60,24 +58,36 @@ async fn download_list_if_expired(
         }
         if let Ok(response) = req.send().await {
             let headers = response.headers();
-            let last_modified: Option<String> = headers
+            let last_modified: Option<chrono::DateTime<chrono::FixedOffset>> = headers
                 .get("last-modified")
                 .and_then(|item| item.to_str().ok())
-                .map(|item| item.to_string());
-            let set_last_modified = |last_modified: &Option<String>| {
-                if let Some(last_modified) = last_modified {
-                    if let Ok(target_time) = date_string_to_filetime(&last_modified) {
+                .and_then(|last_modified| parse_date(last_modified).ok());
+
+            let set_last_modified =
+                |last_modified: &Option<chrono::DateTime<chrono::FixedOffset>>| {
+                    if let Some(last_modified) = last_modified {
+                        let target_time = filetime::FileTime::from_unix_time(
+                            last_modified.timestamp(),
+                            last_modified.timestamp_subsec_nanos(),
+                        );
+
                         if filetime::set_file_times(&path, target_time, target_time).is_err() {
                             println!("Failed to set file time for {:?}", record.url)
                         }
-                    } else {
-                        println!("Failed to decode date: {:?}", last_modified);
                     }
-                }
-            };
+                };
             match response.status() {
                 reqwest::StatusCode::OK => {
-                    if let Ok(text) = response.text().await {
+                    if last_modified
+                        .as_ref()
+                        .zip(last_update)
+                        .map(|(last_modified, last_update)| {
+                            last_modified <= &chrono::DateTime::<chrono::Utc>::from(last_update)
+                        })
+                        .unwrap_or(false)
+                    {
+                        println!("File unmodified: {}", record.url);
+                    } else if let Ok(text) = response.text().await {
                         println!("Downloaded: {:?}", record.url);
                         let mut file = File::create(&path).await?;
                         file.write_all(text.as_bytes()).await?;
