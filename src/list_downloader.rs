@@ -54,7 +54,7 @@ async fn download_list_if_expired(
         let mut req = client.get(&record.url);
         if let Some(last_update) = last_update {
             let date = chrono::DateTime::<chrono::Utc>::from(last_update);
-            req = req.header("if-modified-since", date.to_rfc2822());
+            req = req.header("if-modified-since", date.format("%a, %d %b %Y %H:%M:%S GMT").to_string());
         }
         if let Ok(response) = req.send().await {
             let headers = response.headers();
