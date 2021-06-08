@@ -22,9 +22,9 @@ pub struct FilterListBuilder {
 }
 
 impl Default for FilterListBuilder {
-	fn default() -> Self {
-		Self::new()
-	}
+    fn default() -> Self {
+        Self::new()
+    }
 }
 
 impl FilterListBuilder {

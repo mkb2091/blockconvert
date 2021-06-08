@@ -140,10 +140,7 @@ pub struct DirectoryDB {
 }
 
 impl DirectoryDB {
-    pub async fn new(
-        path: &std::path::Path,
-        max_age: u64,
-    ) -> Result<Self, std::io::Error> {
+    pub async fn new(path: &std::path::Path, max_age: u64) -> Result<Self, std::io::Error> {
         let dir_path = std::path::PathBuf::from(path);
         let _ = tokio::fs::create_dir_all(&dir_path).await;
 

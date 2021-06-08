@@ -109,6 +109,7 @@ pub trait FilterListHandler: Send + Sync {
 pub async fn download_all<T: 'static + FilterListHandler>(
     client: reqwest::Client,
     records: Vec<FilterListRecord>,
+    local_filters: Vec<(std::path::PathBuf, FilterListRecord)>,
     handler: Arc<T>,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let mut downloads: futures::stream::FuturesUnordered<_> =
@@ -130,6 +131,23 @@ pub async fn download_all<T: 'static + FilterListHandler>(
         });
         downloads.push(task);
     }
-    while downloads.next().await.is_some() {}
+
+    let mut from_disk: futures::stream::FuturesUnordered<_> =
+        futures::stream::FuturesUnordered::new();
+
+    for (file_path, record) in local_filters.into_iter() {
+        let handler = handler.clone();
+        let task = tokio::spawn(async move {
+            match tokio::fs::read_to_string(&file_path).await {
+                Ok(data) => handler.handle_filter_list(record, &data),
+                Err(error) => println!("Failed to read list from disk with error: {:?}", error),
+            }
+        });
+        from_disk.push(task);
+    }
+    let download_task = tokio::spawn(async move { while downloads.next().await.is_some() {} });
+    let from_disk_task = tokio::spawn(async move { while from_disk.next().await.is_some() {} });
+    futures::future::try_join(download_task, from_disk_task).await?;
+
     Ok(())
 }

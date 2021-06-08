@@ -107,10 +107,7 @@ impl PassiveDNS {
         self.check_flush().await?;
         Ok(())
     }
-    async fn finished_ip(
-        &mut self,
-        ip: std::net::IpAddr,
-    ) -> Result<(), std::io::Error> {
+    async fn finished_ip(&mut self, ip: std::net::IpAddr) -> Result<(), std::io::Error> {
         self.db.write_line(ip.to_string().as_bytes()).await?;
         self.check_flush().await?;
         Ok(())

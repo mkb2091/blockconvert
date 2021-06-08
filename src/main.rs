@@ -1,7 +1,3 @@
-use tokio::fs::File;
-
-use tokio::io::AsyncReadExt;
-
 use rand::prelude::*;
 
 use domain_list_builder::*;
@@ -51,6 +47,24 @@ const INTERNAL_LISTS: &[(&str, FilterListType)] = &[
     ("allow_regex.txt", FilterListType::RegexAllowlist),
 ];
 
+fn get_internal_lists() -> Vec<(std::path::PathBuf, FilterListRecord)> {
+    let mut internal = Vec::new();
+    for (file_path, list_type) in INTERNAL_LISTS.iter() {
+        let mut path = std::path::PathBuf::from("internal");
+        path.push(file_path);
+        let record = FilterListRecord {
+            name: file_path.to_string(),
+            url: file_path.to_string(),
+            author: Default::default(),
+            license: Default::default(),
+            expires: Default::default(),
+            list_type: *list_type,
+        };
+        internal.push((path, record));
+    }
+    internal
+}
+
 fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
     let path = std::path::Path::new(LIST_CSV);
     let mut records: Vec<FilterListRecord> = csv::Reader::from_path(path)?
@@ -83,17 +97,12 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
         println!("Read CSV");
         let builder = Arc::new(FilterListBuilder::new());
         println!("Initialised FilterListBuilder");
-        list_downloader::download_all(client, records, builder.clone()).await?;
-        println!("Downloaded lists");
-        for (file_path, list_type) in INTERNAL_LISTS.iter() {
-            let mut path = std::path::PathBuf::from("internal");
-            path.push(file_path);
-            if let Ok(mut file) = File::open(path).await {
-                let mut text = String::new();
-                let _ = file.read_to_string(&mut text).await;
-                builder.add_list(*list_type, &text)
-            }
-        }
+
+        list_downloader::download_all(client, records, get_internal_lists(), builder.clone())
+            .await?;
+
+        println!("Downloaded Lists");
+
         let builder = Arc::try_unwrap(builder).ok().expect("Failed to unwrap Arc");
         let bc = Arc::new(builder.to_filterlist());
         DirectoryDB::new(
@@ -192,20 +201,10 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
     }
     let query_handler = Arc::new(QueryFilterListHandler { parts });
     let client = reqwest::Client::new();
-    if let Ok(records) = read_csv() {
-        list_downloader::download_all(client, records, query_handler.clone()).await?;
-    }
-    for (file_path, list_type) in INTERNAL_LISTS.iter() {
-        let mut path = std::path::PathBuf::from("internal");
-        path.push(&file_path);
-        if let Ok(mut file) = File::open(path).await {
-            let mut text = String::new();
-            let _ = file.read_to_string(&mut text).await;
-            let mut record = FilterListRecord::from_type(*list_type);
-            record.url = file_path.to_string();
-            query_handler.handle_filter_list(record, &text);
-        }
-    }
+    let records = read_csv()?;
+
+    list_downloader::download_all(client, records, get_internal_lists(), query_handler.clone())
+        .await?;
     Ok(())
 }
 
@@ -214,16 +213,8 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
     if let Ok(records) = read_csv() {
         let client = reqwest::Client::new();
         let builder = Arc::new(FilterListBuilder::new());
-        list_downloader::download_all(client, records, builder.clone()).await?;
-        for (file_path, list_type) in INTERNAL_LISTS.iter() {
-            let mut path = std::path::PathBuf::from("internal");
-            path.push(file_path);
-            if let Ok(mut file) = File::open(path).await {
-                let mut text = String::new();
-                let _ = file.read_to_string(&mut text).await;
-                builder.add_list(*list_type, &text)
-            }
-        }
+        list_downloader::download_all(client, records, get_internal_lists(), builder.clone())
+            .await?;
         let ips_lock = builder.extracted_ips.lock();
         ips = ips_lock.clone()
     };
