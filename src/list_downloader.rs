@@ -112,28 +112,22 @@ pub async fn download_all<T: 'static + FilterListHandler>(
     local_filters: Vec<(std::path::PathBuf, FilterListRecord)>,
     handler: Arc<T>,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let mut downloads: futures::stream::FuturesUnordered<_> =
-        futures::stream::FuturesUnordered::new();
+    let mut tasks: futures::stream::FuturesUnordered<_> = futures::stream::FuturesUnordered::new();
 
     for record in records {
         let handler = handler.clone();
         let client = client.clone();
         let task = tokio::task::spawn(async move {
             match download_list_if_expired(client, record.clone()).await {
-                Ok(data) => {
-                    tokio::task::block_in_place(|| handler.handle_filter_list(record, &data))
-                }
+                Ok(data) => handler.handle_filter_list(record, &data),
                 Err(error) => println!(
                     "Failed to download filter list: {:?} with error {:?}",
                     record, error
                 ),
             }
         });
-        downloads.push(task);
+        tasks.push(task);
     }
-
-    let mut from_disk: futures::stream::FuturesUnordered<_> =
-        futures::stream::FuturesUnordered::new();
 
     for (file_path, record) in local_filters.into_iter() {
         let handler = handler.clone();
@@ -143,11 +137,9 @@ pub async fn download_all<T: 'static + FilterListHandler>(
                 Err(error) => println!("Failed to read list from disk with error: {:?}", error),
             }
         });
-        from_disk.push(task);
+        tasks.push(task);
     }
-    let download_task = tokio::spawn(async move { while downloads.next().await.is_some() {} });
-    let from_disk_task = tokio::spawn(async move { while from_disk.next().await.is_some() {} });
-    futures::future::try_join(download_task, from_disk_task).await?;
+    while tasks.next().await.is_some() {}
 
     Ok(())
 }
