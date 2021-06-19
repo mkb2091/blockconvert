@@ -54,7 +54,10 @@ async fn download_list_if_expired(
         let mut req = client.get(&record.url);
         if let Some(last_update) = last_update {
             let date = chrono::DateTime::<chrono::Utc>::from(last_update);
-            req = req.header("if-modified-since", date.format("%a, %d %b %Y %H:%M:%S GMT").to_string());
+            req = req.header(
+                "if-modified-since",
+                date.format("%a, %d %b %Y %H:%M:%S GMT").to_string(),
+            );
         }
         if let Ok(response) = req.send().await {
             let headers = response.headers();
@@ -65,15 +68,14 @@ async fn download_list_if_expired(
 
             let set_last_modified =
                 |last_modified: &Option<chrono::DateTime<chrono::FixedOffset>>| {
-                    if let Some(last_modified) = last_modified {
-                        let target_time = filetime::FileTime::from_unix_time(
-                            last_modified.timestamp(),
-                            last_modified.timestamp_subsec_nanos(),
-                        );
+                    let last_modified = last_modified.unwrap_or_else(|| chrono::Utc::now().into());
+                    let target_time = filetime::FileTime::from_unix_time(
+                        last_modified.timestamp(),
+                        last_modified.timestamp_subsec_nanos(),
+                    );
 
-                        if filetime::set_file_times(&path, target_time, target_time).is_err() {
-                            println!("Failed to set file time for {:?}", record.url)
-                        }
+                    if filetime::set_file_times(&path, target_time, target_time).is_err() {
+                        println!("Failed to set file time for {:?}", record.url)
                     }
                 };
             match response.status() {
@@ -101,7 +103,7 @@ async fn download_list_if_expired(
                 }
                 reqwest::StatusCode::NOT_MODIFIED => {
                     println!("304 NOT MODIFIED: {}", record.url);
-                    set_last_modified(&last_modified)
+                    set_last_modified(&None)
                 }
                 status => println!("Unexpected status code: {:?} for {:?}", status, record.url),
             }

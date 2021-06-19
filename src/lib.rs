@@ -39,8 +39,6 @@ lazy_static! {
 
 pub const EXTRACTED_DOMAINS_DIR: &str = "extracted";
 
-pub const EXTRACTED_MAX_AGE: u64 = 30 * 86400;
-
 pub fn get_blocked_domain_path() -> std::path::PathBuf {
     let mut path = std::path::PathBuf::from("output");
     path.push("domains.txt");
@@ -145,10 +143,9 @@ impl DirectoryDB {
         let _ = tokio::fs::create_dir_all(&dir_path).await;
 
         let mut path = std::path::PathBuf::from(&dir_path);
-        path.push(std::path::PathBuf::from(format!(
-            "{:?}",
-            chrono::Utc::today()
-        )));
+        path.push(std::path::PathBuf::from(
+            chrono::Utc::now().format("%Y-%m-%d %H-%M-%S").to_string(),
+        ));
         let mut wtr = BufWriter::new(
             OpenOptions::new()
                 .append(true)

@@ -220,7 +220,13 @@ impl FilterList {
         self.filter.allowed(domain, cnames, ips)
     }
 
-    pub async fn check_dns(&mut self, servers: &[String], client: &reqwest::Client) {
+    pub async fn check_dns(
+        &mut self,
+        servers: &[String],
+        client: &reqwest::Client,
+        concurrent_requests: usize,
+        dns_max_age: u64,
+    ) {
         self.extracted_domains.shrink_to_fit();
         let servers: Vec<Arc<String>> = servers
             .iter()
@@ -237,6 +243,8 @@ impl FilterList {
             mem_take_self.clone(),
             &servers[..],
             client,
+            concurrent_requests,
+            dns_max_age,
         )
         .await;
         let _ = std::mem::replace(

@@ -15,8 +15,8 @@ pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
     let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);
     let mut path = std::path::PathBuf::from(EXTRACTED_DOMAINS_DIR);
     path.push(std::path::PathBuf::from(format!(
-        "certstream_{:?}",
-        chrono::Utc::today()
+        "certstream_{}",
+        chrono::Utc::now().format("%Y-%m-%d %H-%M-%S")
     )));
     let mut wtr = BufWriter::new(
         OpenOptions::new()

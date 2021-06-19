@@ -8,8 +8,6 @@ use std::sync::Arc;
 
 const DNS_RECORD_DIR: &str = "dns_db";
 
-const DNS_MAX_AGE: u64 = 7 * 86400;
-
 #[derive(Clone, Debug)]
 pub struct DNSResultRecord {
     pub domain: Domain,
@@ -119,10 +117,12 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
     dns_record_handler: Arc<T>,
     servers: &[Arc<String>],
     client: &reqwest::Client,
+    concurrent_requests: usize,
+    dns_max_age: u64,
 ) -> Result<(), std::io::Error> {
     let domains_arc = Arc::new(domains);
     let db_record_handler = DNSDBReader::new(dns_record_handler.clone(), domains_arc.clone());
-    let mut db = DirectoryDB::new(&std::path::Path::new(DNS_RECORD_DIR), DNS_MAX_AGE).await?;
+    let mut db = DirectoryDB::new(&std::path::Path::new(DNS_RECORD_DIR), dns_max_age).await?;
     db.read(Arc::new(db_record_handler)).await?;
 
     let domains = Arc::try_unwrap(domains_arc)
@@ -135,7 +135,7 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
     let total_length = domains.len();
     let mut domain_iter = domains.into_iter_domains();
     let mut tasks: futures::stream::FuturesUnordered<_> = (&mut domain_iter)
-        .take(400)
+        .take(concurrent_requests)
         .enumerate()
         .map(|(i, domain)| {
             get_dns_results(
@@ -159,10 +159,12 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
             error_count,
         )
     };
+    let mut since_last_output = std::time::Instant::now();
     while let Some(record) = tasks.next().await {
         if let Some(record) = record {
-            if i % 1000 == 0 {
+            if since_last_output.elapsed().as_secs() > 1 {
                 display_status(i, error_count, &now);
+                since_last_output = std::time::Instant::now();
             }
             db.write_line(record.to_string().as_bytes()).await?;
         } else {
