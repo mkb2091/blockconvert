@@ -2,29 +2,24 @@
 extern crate lazy_static;
 
 pub mod certstream;
+pub mod db;
 pub mod dns_lookup;
 pub mod doh;
+mod list_builder;
 pub mod list_downloader;
 pub mod passive_dns;
 
-mod list_builder;
-
-pub use list_builder::{FilterList, FilterListBuilder};
-
 pub use blockconvert::{ipnet, Domain, DomainSetSharded};
-pub type DomainSetShardedFX = DomainSetSharded<fxhash::FxBuildHasher>;
-
+pub use list_builder::{FilterList, FilterListBuilder};
 use serde::*;
-
+use std::sync::Arc;
 use tokio::fs::OpenOptions;
-use tokio::io::BufWriter;
-
 use tokio::io::AsyncBufReadExt;
 use tokio::io::AsyncWriteExt;
-
+use tokio::io::BufWriter;
 use tokio_stream::StreamExt;
 
-use std::sync::Arc;
+pub type DomainSetShardedFX = DomainSetSharded<fxhash::FxBuildHasher>;
 
 lazy_static! {
     static ref DOMAIN_REGEX: regex::Regex =

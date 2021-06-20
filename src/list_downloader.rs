@@ -1,11 +1,8 @@
 use crate::FilterListRecord;
-
+use std::sync::Arc;
 use tokio::fs::File;
-
 use tokio::io::AsyncWriteExt;
 use tokio_stream::StreamExt;
-
-use std::sync::Arc;
 
 fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, std::io::Error> {
     let mut path = std::path::PathBuf::from("data");

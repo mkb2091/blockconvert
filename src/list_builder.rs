@@ -1,17 +1,12 @@
-use crate::{
-    dns_lookup, ipnet, DBReadHandler, Domain, DomainSetShardedFX, FilterListRecord, FilterListType,
-    DOMAIN_REGEX, IP_REGEX,
-};
-
 use crate::dns_lookup::{DNSResultRecord, DomainRecordHandler};
-use crate::list_downloader::FilterListHandler;
-
+use crate::{
+    dns_lookup, ipnet, list_downloader::FilterListHandler, DBReadHandler, Domain,
+    DomainSetShardedFX, FilterListRecord, FilterListType, DOMAIN_REGEX, IP_REGEX,
+};
 use parking_lot::Mutex;
 use std::sync::Arc;
-
-use tokio::io::BufWriter;
-
 use tokio::io::AsyncWriteExt;
+use tokio::io::BufWriter;
 
 type DomainFilterBuilderFX = blockconvert::DomainFilterBuilder<fxhash::FxBuildHasher>;
 
@@ -226,6 +221,7 @@ impl FilterList {
         client: &reqwest::Client,
         concurrent_requests: usize,
         dns_max_age: u64,
+        file_max_size: usize,
     ) {
         self.extracted_domains.shrink_to_fit();
         let servers: Vec<Arc<String>> = servers
@@ -245,6 +241,7 @@ impl FilterList {
             client,
             concurrent_requests,
             dns_max_age,
+            file_max_size,
         )
         .await;
         let _ = std::mem::replace(

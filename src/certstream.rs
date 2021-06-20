@@ -1,30 +1,17 @@
-use crate::{Domain, EXTRACTED_DOMAINS_DIR};
-
+use crate::{db, Domain, EXTRACTED_DOMAINS_DIR};
 use futures::SinkExt;
 use futures::StreamExt;
-use tokio::fs::OpenOptions;
-use tokio::io::BufWriter;
-
-use tokio::io::AsyncWriteExt;
 
 const URL: &str = "wss://certstream.calidog.io/domains-only";
-
 const KEEPALIVE_INTERVAL: u64 = 20;
 
-pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
-    let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);
-    let mut path = std::path::PathBuf::from(EXTRACTED_DOMAINS_DIR);
-    path.push(std::path::PathBuf::from(format!(
-        "certstream_{}",
-        chrono::Utc::now().format("%Y-%m-%d %H-%M-%S")
-    )));
-    let mut wtr = BufWriter::new(
-        OpenOptions::new()
-            .append(true)
-            .create(true)
-            .open(path)
-            .await?,
-    );
+pub async fn certstream(file_max_size: usize) -> Result<(), Box<dyn std::error::Error>> {
+    let mut wtr = db::DirDbWriter::new(
+        &std::path::Path::new(EXTRACTED_DOMAINS_DIR),
+        file_max_size,
+        Some("certstream".to_string()),
+    )
+    .await?;
     let mut counter: u64 = 0;
     let start = std::time::Instant::now();
     let mut last_output = std::time::Instant::now();
@@ -51,8 +38,7 @@ pub async fn certstream() -> Result<(), Box<dyn std::error::Error>> {
                                     last_output = std::time::Instant::now();
                                 }
                                 counter += 1;
-                                wtr.write_all(domain.as_bytes()).await?;
-                                wtr.write_all(b"\n").await?;
+                                wtr.write_line(domain.as_bytes()).await?;
                             }
                         } else {
                             println!("Failed to extract `all_domain`");

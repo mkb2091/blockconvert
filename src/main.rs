@@ -1,14 +1,10 @@
-use rand::prelude::*;
-
-use domain_list_builder::*;
-
-const LIST_CSV: &str = "filterlists.csv";
-
+use crate::list_downloader::FilterListHandler;
 use clap::Clap;
-
+use domain_list_builder::*;
+use rand::prelude::*;
 use std::sync::Arc;
 
-use crate::list_downloader::FilterListHandler;
+const LIST_CSV: &str = "filterlists.csv";
 
 /// Blockconvert
 #[derive(Clap)]
@@ -37,6 +33,8 @@ struct FindDomains {
     virus_total_api: Option<String>,
     #[clap(short, long)]
     extracted_max_age: u64,
+    #[clap(short, long)]
+    file_max_size: usize,
 }
 
 #[derive(Clap)]
@@ -47,6 +45,8 @@ struct Generate {
     dns_max_age: u64,
     #[clap(short, long)]
     extracted_max_age: u64,
+    #[clap(short, long)]
+    file_max_size: usize,
 }
 
 const INTERNAL_LISTS: &[(&str, FilterListType)] = &[
@@ -141,6 +141,7 @@ async fn generate(opts: Generate) -> Result<(), Box<dyn std::error::Error>> {
             &client,
             opts.concurrent_requests,
             opts.dns_max_age,
+            opts.file_max_size,
         )
         .await;
         println!("Writing to file");
@@ -238,7 +239,7 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
     };
     println!("Started finding domains");
     let base = futures::future::join3(
-        certstream::certstream(),
+        certstream::certstream(f.file_max_size),
         passive_dns::argus(ips.clone(), f.extracted_max_age),
         passive_dns::threatminer(ips.clone(), f.extracted_max_age),
     );

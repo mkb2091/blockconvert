@@ -1,10 +1,7 @@
+use crate::{db, doh, Domain, DomainSetShardedFX};
 use std::str::FromStr;
-
-use tokio_stream::StreamExt;
-
-use crate::{doh, DBReadHandler, DirectoryDB, Domain, DomainSetShardedFX};
-
 use std::sync::Arc;
+use tokio_stream::StreamExt;
 
 const DNS_RECORD_DIR: &str = "dns_db";
 
@@ -79,7 +76,7 @@ impl<T: DomainRecordHandler> DNSDBReader<T> {
     }
 }
 
-impl<T: DomainRecordHandler> DBReadHandler for DNSDBReader<T> {
+impl<T: DomainRecordHandler> db::DBReadHandler for DNSDBReader<T> {
     fn handle_input(&self, data: &str) {
         if let Ok(record) = data.parse::<DNSResultRecord>() {
             self.domains.remove_str(&record.domain);
@@ -119,11 +116,17 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
     client: &reqwest::Client,
     concurrent_requests: usize,
     dns_max_age: u64,
+    file_max_size: usize,
 ) -> Result<(), std::io::Error> {
     let domains_arc = Arc::new(domains);
     let db_record_handler = DNSDBReader::new(dns_record_handler.clone(), domains_arc.clone());
-    let mut db = DirectoryDB::new(&std::path::Path::new(DNS_RECORD_DIR), dns_max_age).await?;
-    db.read(Arc::new(db_record_handler)).await?;
+
+    db::dir_db_read(
+        Arc::new(db_record_handler),
+        &std::path::Path::new(DNS_RECORD_DIR),
+        dns_max_age,
+    )
+    .await?;
 
     let domains = Arc::try_unwrap(domains_arc)
         .ok()
@@ -159,6 +162,10 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
             error_count,
         )
     };
+
+    let mut wtr =
+        db::DirDbWriter::new(&std::path::Path::new(DNS_RECORD_DIR), file_max_size, None).await?;
+
     let mut since_last_output = std::time::Instant::now();
     while let Some(record) = tasks.next().await {
         if let Some(record) = record {
@@ -166,7 +173,7 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
                 display_status(i, error_count, &now);
                 since_last_output = std::time::Instant::now();
             }
-            db.write_line(record.to_string().as_bytes()).await?;
+            wtr.write_line(record.to_string().as_bytes()).await?;
         } else {
             error_count += 1;
         }
@@ -180,7 +187,7 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
         }
         i += 1;
     }
-    db.flush().await?;
+    wtr.flush().await?;
     display_status(i, error_count, &now);
     Ok(())
 }
