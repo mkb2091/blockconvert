@@ -117,13 +117,14 @@ async fn generate(opts: Generate) -> Result<(), Box<dyn std::error::Error>> {
 
         let builder = Arc::try_unwrap(builder).ok().expect("Failed to unwrap Arc");
         let bc = Arc::new(builder.to_filterlist());
-        DirectoryDB::new(
+
+        db::dir_db_read(
+            bc.clone(),
             &std::path::Path::new(EXTRACTED_DOMAINS_DIR),
             opts.extracted_max_age,
         )
-        .await?
-        .read(bc.clone())
         .await?;
+
         bc.finished_extracting();
         let mut bc = Arc::try_unwrap(bc).ok().expect("Failed to unwrap Arc");
         let mut headers = reqwest::header::HeaderMap::new();

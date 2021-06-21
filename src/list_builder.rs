@@ -1,7 +1,7 @@
 use crate::dns_lookup::{DNSResultRecord, DomainRecordHandler};
 use crate::{
-    dns_lookup, ipnet, list_downloader::FilterListHandler, DBReadHandler, Domain,
-    DomainSetShardedFX, FilterListRecord, FilterListType, DOMAIN_REGEX, IP_REGEX,
+    db, dns_lookup, ipnet, list_downloader::FilterListHandler, Domain, DomainSetShardedFX,
+    FilterListRecord, FilterListType, DOMAIN_REGEX, IP_REGEX,
 };
 use parking_lot::Mutex;
 use std::sync::Arc;
@@ -458,7 +458,7 @@ impl FilterList {
     }
 }
 
-impl DBReadHandler for FilterList {
+impl db::DBReadHandler for FilterList {
     fn handle_input(&self, data: &str) {
         let data = data.trim_end();
         if Domain::str_is_valid_domain(data).is_ok() {
