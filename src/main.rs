@@ -12,41 +12,21 @@ const LIST_CSV: &str = "filterlists.csv";
 struct Opts {
     #[clap(subcommand)]
     mode: Mode,
+    #[clap(short, long, default_value = "config.toml")]
+    config: String,
 }
 
 #[derive(Clap)]
 enum Mode {
-    Generate(Generate),
+    Generate,
     Query(Query),
-    FindDomains(FindDomains),
+    FindDomains,
 }
 #[derive(Clap)]
 struct Query {
     query: String,
     #[clap(short, long)]
     ignore_dns: bool,
-}
-
-#[derive(Clap)]
-struct FindDomains {
-    #[clap(short, long)]
-    virus_total_api: Option<String>,
-    #[clap(short, long)]
-    extracted_max_age: u64,
-    #[clap(short, long)]
-    file_max_size: usize,
-}
-
-#[derive(Clap)]
-struct Generate {
-    #[clap(short, long)]
-    concurrent_requests: usize,
-    #[clap(short, long)]
-    dns_max_age: u64,
-    #[clap(short, long)]
-    extracted_max_age: u64,
-    #[clap(short, long)]
-    file_max_size: usize,
 }
 
 const INTERNAL_LISTS: &[(&str, FilterListType)] = &[
@@ -99,15 +79,11 @@ fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
     Ok(records)
 }
 
-async fn generate(opts: Generate) -> Result<(), Box<dyn std::error::Error>> {
+async fn generate(config: Config) -> Result<(), Box<dyn std::error::Error>> {
     let client = reqwest::Client::new();
-    let servers = [
-        "https://dns.google/resolve".to_string(),
-        "https://1.1.1.1/dns-query".to_string(),
-    ];
     if let Ok(records) = read_csv() {
         println!("Read CSV");
-        let builder = Arc::new(FilterListBuilder::new());
+        let builder = Arc::new(FilterListBuilder::new(Arc::new(config.clone())));
         println!("Initialised FilterListBuilder");
 
         list_downloader::download_all(client, records, get_internal_lists(), builder.clone())
@@ -121,7 +97,7 @@ async fn generate(opts: Generate) -> Result<(), Box<dyn std::error::Error>> {
         db::dir_db_read(
             bc.clone(),
             &std::path::Path::new(EXTRACTED_DOMAINS_DIR),
-            opts.extracted_max_age,
+            config.max_extracted_age,
         )
         .await?;
 
@@ -137,14 +113,7 @@ async fn generate(opts: Generate) -> Result<(), Box<dyn std::error::Error>> {
             .build()
             .unwrap();
         println!("Checking DNS");
-        bc.check_dns(
-            &servers,
-            &client,
-            opts.concurrent_requests,
-            opts.dns_max_age,
-            opts.file_max_size,
-        )
-        .await;
+        bc.check_dns(&client).await;
         println!("Writing to file");
         bc.write_all(
             &get_blocked_domain_path(),
@@ -163,12 +132,13 @@ async fn generate(opts: Generate) -> Result<(), Box<dyn std::error::Error>> {
 
 #[derive(Clone)]
 struct QueryFilterListHandler {
+    config: Arc<Config>,
     parts: Vec<(Domain, Vec<Domain>, Vec<std::net::IpAddr>)>,
 }
 
 impl FilterListHandler for QueryFilterListHandler {
     fn handle_filter_list(&self, record: FilterListRecord, data: &str) {
-        let bc = FilterList::from(&[(record.list_type, &data)]);
+        let bc = FilterList::from(self.config.clone(), &[(record.list_type, &data)]);
         for (part, cnames, ips) in self.parts.iter() {
             if let Some(allowed) = bc.allowed(&part, &cnames, &ips) {
                 if allowed {
@@ -181,11 +151,7 @@ impl FilterListHandler for QueryFilterListHandler {
     }
 }
 
-async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
-    let servers = [
-        "https://dns.google/resolve".to_string(),
-        "https://1.1.1.1/dns-query".to_string(),
-    ];
+async fn query(config: Config, q: Query) -> Result<(), Box<dyn std::error::Error>> {
     let mut headers = reqwest::header::HeaderMap::new();
     headers.insert(
         reqwest::header::ACCEPT,
@@ -200,7 +166,13 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
     for part in std::iter::once(domain.clone()).chain(domain.iter_parent_domains()) {
         let (cnames, ips): (Vec<Domain>, Vec<std::net::IpAddr>) = if !q.ignore_dns {
             if let Some(result) = doh::lookup_domain(
-                Arc::new(servers.choose(&mut rand::thread_rng()).unwrap().clone()),
+                Arc::new(
+                    config
+                        .dns_servers
+                        .choose(&mut rand::thread_rng())
+                        .unwrap()
+                        .clone(),
+                ),
                 client.clone(),
                 3_usize,
                 &part,
@@ -219,7 +191,10 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
         };
         parts.push((part, cnames, ips));
     }
-    let query_handler = Arc::new(QueryFilterListHandler { parts });
+    let query_handler = Arc::new(QueryFilterListHandler {
+        config: Arc::new(config),
+        parts,
+    });
     let client = reqwest::Client::new();
     let records = read_csv()?;
 
@@ -228,31 +203,24 @@ async fn query(q: Query) -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> {
+async fn find_domains(config: Config) -> Result<(), Box<dyn std::error::Error>> {
     let mut ips = Default::default();
     if let Ok(records) = read_csv() {
         let client = reqwest::Client::new();
-        let builder = Arc::new(FilterListBuilder::new());
+        let builder = Arc::new(FilterListBuilder::new(Arc::new(config.clone())));
         list_downloader::download_all(client, records, get_internal_lists(), builder.clone())
             .await?;
         let ips_lock = builder.extracted_ips.lock();
         ips = ips_lock.clone()
     };
     println!("Started finding domains");
-    let base = futures::future::join3(
-        certstream::certstream(f.file_max_size),
-        passive_dns::argus(ips.clone(), f.extracted_max_age),
-        passive_dns::threatminer(ips.clone(), f.extracted_max_age),
-    );
-    if let Some(vt_api) = f.virus_total_api {
-        let _result = futures::future::join(
-            base,
-            passive_dns::virus_total(ips.clone(), vt_api, f.extracted_max_age),
-        )
-        .await;
-    } else {
-        let _result = base.await;
-    }
+    let _result = futures::future::join4(
+        certstream::certstream(config.clone()),
+        passive_dns::argus(ips.clone(), config.clone()),
+        passive_dns::threatminer(ips.clone(), config.clone()),
+        passive_dns::virus_total(ips.clone(), config.clone()),
+    )
+    .await;
     println!("Finished finding domains");
     Ok(())
 }
@@ -260,10 +228,11 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let opts: Opts = Opts::parse();
+    let config: Config = toml::from_str(&tokio::fs::read_to_string(&opts.config).await?)?;
     let result = match opts.mode {
-        Mode::Generate(g) => generate(g).await,
-        Mode::Query(q) => query(q).await,
-        Mode::FindDomains(f) => find_domains(f).await,
+        Mode::Generate => generate(config).await,
+        Mode::Query(q) => query(config, q).await,
+        Mode::FindDomains => find_domains(config).await,
     };
     if let Err(error) = &result {
         println!("Failed with error: {:?}", error);

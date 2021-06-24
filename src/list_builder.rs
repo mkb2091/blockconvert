@@ -1,6 +1,6 @@
 use crate::dns_lookup::{DNSResultRecord, DomainRecordHandler};
 use crate::{
-    db, dns_lookup, ipnet, list_downloader::FilterListHandler, Domain, DomainSetShardedFX,
+    db, dns_lookup, ipnet, list_downloader::FilterListHandler, Config, Domain, DomainSetShardedFX,
     FilterListRecord, FilterListType, DOMAIN_REGEX, IP_REGEX,
 };
 use parking_lot::Mutex;
@@ -11,6 +11,7 @@ use tokio::io::BufWriter;
 type DomainFilterBuilderFX = blockconvert::DomainFilterBuilder<fxhash::FxBuildHasher>;
 
 pub struct FilterListBuilder {
+    config: Arc<Config>,
     filter_builder: DomainFilterBuilderFX,
     pub extracted_domains: DomainSetShardedFX,
     pub extracted_ips: Mutex<std::collections::HashSet<std::net::IpAddr>>,
@@ -18,13 +19,14 @@ pub struct FilterListBuilder {
 
 impl Default for FilterListBuilder {
     fn default() -> Self {
-        Self::new()
+        Self::new(Arc::new(Default::default()))
     }
 }
 
 impl FilterListBuilder {
-    pub fn new() -> Self {
+    pub fn new(config: Arc<Config>) -> Self {
         Self {
+            config,
             filter_builder: Default::default(),
             extracted_domains: DomainSetShardedFX::with_shards(8192),
             extracted_ips: Default::default(),
@@ -159,6 +161,7 @@ impl FilterListBuilder {
     }
     pub fn to_filterlist(self) -> FilterList {
         let bc = FilterList {
+            config: self.config.clone(),
             filter: self.filter_builder.to_domain_filter(),
             extracted_domains: self.extracted_domains,
             blocked_domains: DomainSetShardedFX::with_shards(1024),
@@ -189,6 +192,7 @@ impl FilterListHandler for FilterListBuilder {
 
 #[derive(Default)]
 pub struct FilterList {
+    config: Arc<Config>,
     filter: blockconvert::DomainFilter<fxhash::FxBuildHasher>,
     blocked_domains: DomainSetShardedFX,
     allowed_domains: DomainSetShardedFX,
@@ -198,8 +202,8 @@ pub struct FilterList {
 }
 
 impl FilterList {
-    pub fn from(filter_lists: &[(FilterListType, &str)]) -> Self {
-        let builder = FilterListBuilder::new();
+    pub fn from(config: Arc<Config>, filter_lists: &[(FilterListType, &str)]) -> Self {
+        let builder = FilterListBuilder::new(config);
         for (list_type, data) in filter_lists.iter() {
             builder.add_list(*list_type, data)
         }
@@ -215,16 +219,11 @@ impl FilterList {
         self.filter.allowed(domain, cnames, ips)
     }
 
-    pub async fn check_dns(
-        &mut self,
-        servers: &[String],
-        client: &reqwest::Client,
-        concurrent_requests: usize,
-        dns_max_age: u64,
-        file_max_size: usize,
-    ) {
+    pub async fn check_dns(&mut self, client: &reqwest::Client) {
         self.extracted_domains.shrink_to_fit();
-        let servers: Vec<Arc<String>> = servers
+        let servers: Vec<Arc<String>> = self
+            .config
+            .dns_servers
             .iter()
             .map(|server| Arc::new(server.clone()))
             .collect();
@@ -239,9 +238,9 @@ impl FilterList {
             mem_take_self.clone(),
             &servers[..],
             client,
-            concurrent_requests,
-            dns_max_age,
-            file_max_size,
+            self.config.concurrent_requests,
+            self.config.max_dns_age,
+            self.config.max_file_size,
         )
         .await;
         let _ = std::mem::replace(

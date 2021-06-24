@@ -1,4 +1,4 @@
-use crate::{db, DirectoryDB, Domain, EXTRACTED_DOMAINS_DIR};
+use crate::{db, Config, DirectoryDB, Domain, EXTRACTED_DOMAINS_DIR};
 use parking_lot::Mutex;
 use tokio::fs::OpenOptions;
 use tokio::io::AsyncWriteExt;
@@ -44,15 +44,15 @@ impl PassiveDNS {
         mut ips: std::collections::HashSet<std::net::IpAddr>,
         name: &str,
         sleep_time: f32,
-        extracted_max_age: u64,
+        config: Config,
     ) -> Result<Self, std::io::Error> {
         let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
         path.push(name);
         let ips_remaining = std::sync::Arc::new(Mutex::new(PassiveDNSDBHandler { ips }));
 
-        db::dir_db_read(ips_remaining.clone(), &path, extracted_max_age).await?;
+        db::dir_db_read(ips_remaining.clone(), &path, config.max_extracted_age).await?;
 
-        let db = DirectoryDB::new(&path, extracted_max_age).await?;
+        let db = DirectoryDB::new(&path, config.max_extracted_age).await?;
 
         ips = std::mem::take(&mut ips_remaining.lock().ips);
         let total_length = ips.len() as u64;
@@ -117,9 +117,9 @@ impl PassiveDNS {
 
 pub async fn argus(
     ips: std::collections::HashSet<std::net::IpAddr>,
-    extracted_max_age: u64,
+    config: Config,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let mut pd = PassiveDNS::new(ips, "argus", 60.0 / 100.0, extracted_max_age).await?;
+    let mut pd = PassiveDNS::new(ips, "argus", 60.0 / 100.0, config).await?;
     // Unauthenticated users are limited to 100 requests per minute, and 1000 requests per day.
 
     let client = reqwest::Client::new();
@@ -224,9 +224,9 @@ pub async fn argus(
 
 pub async fn threatminer(
     ips: std::collections::HashSet<std::net::IpAddr>,
-    extracted_max_age: u64,
+    config: Config,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let mut pd = PassiveDNS::new(ips, "threatminer", 6.0, extracted_max_age).await?;
+    let mut pd = PassiveDNS::new(ips, "threatminer", 6.0, config).await?;
 
     let client = reqwest::Client::new();
 
@@ -321,12 +321,27 @@ pub async fn threatminer(
     Ok(())
 }
 
+#[derive(Debug)]
+pub struct MissingKey {}
+
+impl std::fmt::Display for MissingKey {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "MissingKey")
+    }
+}
+
+impl std::error::Error for MissingKey {}
+
 pub async fn virus_total(
     ips: std::collections::HashSet<std::net::IpAddr>,
-    key: String,
-    extracted_max_age: u64,
+    config: Config,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let mut pd = PassiveDNS::new(ips, "virustotal", 15.0, extracted_max_age).await?;
+    let key = if let Some(key) = config.virus_total_api.clone() {
+        key
+    } else {
+        return Err(Box::new(MissingKey {}));
+    };
+    let mut pd = PassiveDNS::new(ips, "virustotal", 15.0, config).await?;
 
     let client = reqwest::Client::new();
 

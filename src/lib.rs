@@ -32,6 +32,31 @@ lazy_static! {
             .unwrap();
 }
 
+use serde_derive::Deserialize;
+
+#[derive(Clone, Deserialize)]
+pub struct Config {
+    pub dns_servers: Vec<String>,
+    pub virus_total_api: Option<String>,
+    pub concurrent_requests: usize,
+    pub max_dns_age: u64,
+    pub max_extracted_age: u64,
+    pub max_file_size: usize,
+}
+
+impl Default for Config {
+    fn default() -> Self {
+        Self {
+            dns_servers: Vec::new(),
+            virus_total_api: None,
+            concurrent_requests: 1,
+            max_dns_age: 86400,
+            max_extracted_age: 86400,
+            max_file_size: 1_000_000,
+        }
+    }
+}
+
 pub const EXTRACTED_DOMAINS_DIR: &str = "extracted";
 
 pub fn get_blocked_domain_path() -> std::path::PathBuf {
