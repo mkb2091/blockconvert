@@ -1,17 +1,12 @@
-use crate::{
-    dns_lookup, ipnet, DBReadHandler, Domain, DomainSetShardedFX, FilterListRecord, FilterListType,
-    DOMAIN_REGEX, IP_REGEX,
-};
-
 use crate::dns_lookup::{DNSResultRecord, DomainRecordHandler};
-use crate::list_downloader::FilterListHandler;
-
+use crate::{
+    db, dns_lookup, ipnet, list_downloader::FilterListHandler, Domain, DomainSetShardedFX,
+    FilterListRecord, FilterListType, DOMAIN_REGEX, IP_REGEX,
+};
 use parking_lot::Mutex;
 use std::sync::Arc;
-
-use tokio::io::BufWriter;
-
 use tokio::io::AsyncWriteExt;
+use tokio::io::BufWriter;
 
 type DomainFilterBuilderFX = blockconvert::DomainFilterBuilder<fxhash::FxBuildHasher>;
 
@@ -220,7 +215,14 @@ impl FilterList {
         self.filter.allowed(domain, cnames, ips)
     }
 
-    pub async fn check_dns(&mut self, servers: &[String], client: &reqwest::Client) {
+    pub async fn check_dns(
+        &mut self,
+        servers: &[String],
+        client: &reqwest::Client,
+        concurrent_requests: usize,
+        dns_max_age: u64,
+        file_max_size: usize,
+    ) {
         self.extracted_domains.shrink_to_fit();
         let servers: Vec<Arc<String>> = servers
             .iter()
@@ -237,6 +239,9 @@ impl FilterList {
             mem_take_self.clone(),
             &servers[..],
             client,
+            concurrent_requests,
+            dns_max_age,
+            file_max_size,
         )
         .await;
         let _ = std::mem::replace(
@@ -453,7 +458,7 @@ impl FilterList {
     }
 }
 
-impl DBReadHandler for FilterList {
+impl db::DBReadHandler for FilterList {
     fn handle_input(&self, data: &str) {
         let data = data.trim_end();
         if Domain::str_is_valid_domain(data).is_ok() {

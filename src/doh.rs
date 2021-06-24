@@ -1,8 +1,6 @@
 use crate::dns_lookup::DNSResultRecord;
 use crate::Domain;
-
 use serde::Deserialize;
-
 use std::sync::Arc;
 
 #[derive(Deserialize, Debug)]

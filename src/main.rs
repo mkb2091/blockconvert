@@ -1,14 +1,10 @@
-use rand::prelude::*;
-
-use domain_list_builder::*;
-
-const LIST_CSV: &str = "filterlists.csv";
-
+use crate::list_downloader::FilterListHandler;
 use clap::Clap;
-
+use domain_list_builder::*;
+use rand::prelude::*;
 use std::sync::Arc;
 
-use crate::list_downloader::FilterListHandler;
+const LIST_CSV: &str = "filterlists.csv";
 
 /// Blockconvert
 #[derive(Clap)]
@@ -20,7 +16,7 @@ struct Opts {
 
 #[derive(Clap)]
 enum Mode {
-    Generate,
+    Generate(Generate),
     Query(Query),
     FindDomains(FindDomains),
 }
@@ -35,6 +31,22 @@ struct Query {
 struct FindDomains {
     #[clap(short, long)]
     virus_total_api: Option<String>,
+    #[clap(short, long)]
+    extracted_max_age: u64,
+    #[clap(short, long)]
+    file_max_size: usize,
+}
+
+#[derive(Clap)]
+struct Generate {
+    #[clap(short, long)]
+    concurrent_requests: usize,
+    #[clap(short, long)]
+    dns_max_age: u64,
+    #[clap(short, long)]
+    extracted_max_age: u64,
+    #[clap(short, long)]
+    file_max_size: usize,
 }
 
 const INTERNAL_LISTS: &[(&str, FilterListType)] = &[
@@ -87,7 +99,7 @@ fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
     Ok(records)
 }
 
-async fn generate() -> Result<(), Box<dyn std::error::Error>> {
+async fn generate(opts: Generate) -> Result<(), Box<dyn std::error::Error>> {
     let client = reqwest::Client::new();
     let servers = [
         "https://dns.google/resolve".to_string(),
@@ -105,13 +117,14 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
 
         let builder = Arc::try_unwrap(builder).ok().expect("Failed to unwrap Arc");
         let bc = Arc::new(builder.to_filterlist());
-        DirectoryDB::new(
+
+        db::dir_db_read(
+            bc.clone(),
             &std::path::Path::new(EXTRACTED_DOMAINS_DIR),
-            EXTRACTED_MAX_AGE,
+            opts.extracted_max_age,
         )
-        .await?
-        .read(bc.clone())
         .await?;
+
         bc.finished_extracting();
         let mut bc = Arc::try_unwrap(bc).ok().expect("Failed to unwrap Arc");
         let mut headers = reqwest::header::HeaderMap::new();
@@ -124,7 +137,14 @@ async fn generate() -> Result<(), Box<dyn std::error::Error>> {
             .build()
             .unwrap();
         println!("Checking DNS");
-        bc.check_dns(&servers, &client).await;
+        bc.check_dns(
+            &servers,
+            &client,
+            opts.concurrent_requests,
+            opts.dns_max_age,
+            opts.file_max_size,
+        )
+        .await;
         println!("Writing to file");
         bc.write_all(
             &get_blocked_domain_path(),
@@ -220,13 +240,16 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
     };
     println!("Started finding domains");
     let base = futures::future::join3(
-        certstream::certstream(),
-        passive_dns::argus(ips.clone()),
-        passive_dns::threatminer(ips.clone()),
+        certstream::certstream(f.file_max_size),
+        passive_dns::argus(ips.clone(), f.extracted_max_age),
+        passive_dns::threatminer(ips.clone(), f.extracted_max_age),
     );
     if let Some(vt_api) = f.virus_total_api {
-        let _result =
-            futures::future::join(base, passive_dns::virus_total(ips.clone(), vt_api)).await;
+        let _result = futures::future::join(
+            base,
+            passive_dns::virus_total(ips.clone(), vt_api, f.extracted_max_age),
+        )
+        .await;
     } else {
         let _result = base.await;
     }
@@ -238,7 +261,7 @@ async fn find_domains(f: FindDomains) -> Result<(), Box<dyn std::error::Error>> 
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let opts: Opts = Opts::parse();
     let result = match opts.mode {
-        Mode::Generate => generate().await,
+        Mode::Generate(g) => generate(g).await,
         Mode::Query(q) => query(q).await,
         Mode::FindDomains(f) => find_domains(f).await,
     };

@@ -1,11 +1,8 @@
-use crate::{DBReadHandler, DirectoryDB, Domain, EXTRACTED_DOMAINS_DIR, EXTRACTED_MAX_AGE};
-
-use tokio::fs::OpenOptions;
-use tokio::io::BufWriter;
-
-use tokio::io::AsyncWriteExt;
-
+use crate::{db, DirectoryDB, Domain, EXTRACTED_DOMAINS_DIR};
 use parking_lot::Mutex;
+use tokio::fs::OpenOptions;
+use tokio::io::AsyncWriteExt;
+use tokio::io::BufWriter;
 
 const PASSIVE_DNS_RECORD_DIR: &str = "passive_dns_db";
 
@@ -34,7 +31,7 @@ struct PassiveDNSDBHandler {
     ips: std::collections::HashSet<std::net::IpAddr>,
 }
 
-impl DBReadHandler for Mutex<PassiveDNSDBHandler> {
+impl db::DBReadHandler for Mutex<PassiveDNSDBHandler> {
     fn handle_input(&self, data: &str) {
         if let Ok(ip) = data.trim().parse::<std::net::IpAddr>() {
             self.lock().ips.remove(&ip);
@@ -47,12 +44,16 @@ impl PassiveDNS {
         mut ips: std::collections::HashSet<std::net::IpAddr>,
         name: &str,
         sleep_time: f32,
+        extracted_max_age: u64,
     ) -> Result<Self, std::io::Error> {
         let mut path = std::path::PathBuf::from(PASSIVE_DNS_RECORD_DIR);
         path.push(name);
         let ips_remaining = std::sync::Arc::new(Mutex::new(PassiveDNSDBHandler { ips }));
-        let db = DirectoryDB::new(&path, EXTRACTED_MAX_AGE).await?;
-        db.read(ips_remaining.clone()).await?;
+
+        db::dir_db_read(ips_remaining.clone(), &path, extracted_max_age).await?;
+
+        let db = DirectoryDB::new(&path, extracted_max_age).await?;
+
         ips = std::mem::take(&mut ips_remaining.lock().ips);
         let total_length = ips.len() as u64;
 
@@ -61,7 +62,7 @@ impl PassiveDNS {
         path.push(std::path::PathBuf::from(format!(
             "{}_{:?}",
             name,
-            chrono::Utc::today()
+            chrono::Utc::now().format("%Y-%m-%d %H-%M-%S")
         )));
         let wtr = BufWriter::new(
             OpenOptions::new()
@@ -116,8 +117,9 @@ impl PassiveDNS {
 
 pub async fn argus(
     ips: std::collections::HashSet<std::net::IpAddr>,
+    extracted_max_age: u64,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let mut pd = PassiveDNS::new(ips, "argus", 60.0 / 100.0).await?;
+    let mut pd = PassiveDNS::new(ips, "argus", 60.0 / 100.0, extracted_max_age).await?;
     // Unauthenticated users are limited to 100 requests per minute, and 1000 requests per day.
 
     let client = reqwest::Client::new();
@@ -222,8 +224,9 @@ pub async fn argus(
 
 pub async fn threatminer(
     ips: std::collections::HashSet<std::net::IpAddr>,
+    extracted_max_age: u64,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let mut pd = PassiveDNS::new(ips, "threatminer", 6.0).await?;
+    let mut pd = PassiveDNS::new(ips, "threatminer", 6.0, extracted_max_age).await?;
 
     let client = reqwest::Client::new();
 
@@ -321,8 +324,9 @@ pub async fn threatminer(
 pub async fn virus_total(
     ips: std::collections::HashSet<std::net::IpAddr>,
     key: String,
+    extracted_max_age: u64,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let mut pd = PassiveDNS::new(ips, "virustotal", 15.0).await?;
+    let mut pd = PassiveDNS::new(ips, "virustotal", 15.0, extracted_max_age).await?;
 
     let client = reqwest::Client::new();
 
