@@ -1,4 +1,4 @@
-use crate::{db, doh, Domain, DomainSetShardedFX};
+use crate::{config, db, doh, Domain, DomainSetShardedFX};
 use std::str::FromStr;
 use std::sync::Arc;
 use tokio_stream::StreamExt;
@@ -91,7 +91,7 @@ impl<T: DomainRecordHandler> db::DBReadHandler for DNSDBReader<T> {
 async fn get_dns_results<T: 'static + DomainRecordHandler>(
     dns_record_handler: Arc<T>,
     client: reqwest::Client,
-    server: Arc<String>,
+    server: Arc<str>,
     domain: Domain,
 ) -> Option<DNSResultRecord> {
     tokio::spawn(async move {
@@ -112,11 +112,8 @@ async fn get_dns_results<T: 'static + DomainRecordHandler>(
 pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
     domains: DomainSetShardedFX,
     dns_record_handler: Arc<T>,
-    servers: &[Arc<String>],
     client: &reqwest::Client,
-    concurrent_requests: usize,
-    dns_max_age: u64,
-    file_max_size: usize,
+    mut config: config::Config,
 ) -> Result<(), std::io::Error> {
     let domains_arc = Arc::new(domains);
     let db_record_handler = DNSDBReader::new(dns_record_handler.clone(), domains_arc.clone());
@@ -124,27 +121,34 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
     db::dir_db_read(
         Arc::new(db_record_handler),
         &std::path::Path::new(DNS_RECORD_DIR),
-        dns_max_age,
+        config.get_max_dns_age(),
     )
     .await?;
 
     let domains = Arc::try_unwrap(domains_arc)
         .ok()
         .expect("Failed to unwrap Arc");
-    println!("Looking up {} domains", domains.len());
+    println!(
+        "Looking up {} domains with {} concurrent_requests",
+        domains.len(),
+        config.get_concurrent_requests()
+    );
     if domains.is_empty() {
         return Ok(());
     }
     let total_length = domains.len();
     let mut domain_iter = domains.into_iter_domains();
     let mut tasks: futures::stream::FuturesUnordered<_> = (&mut domain_iter)
-        .take(concurrent_requests)
+        .take(config.get_concurrent_requests())
         .enumerate()
         .map(|(i, domain)| {
             get_dns_results(
                 dns_record_handler.clone(),
                 client.clone(),
-                servers[i % servers.len()].clone(),
+                {
+                    let servers = config.get_dns_servers();
+                    servers[i % servers.len()].clone()
+                },
                 domain,
             )
         })
@@ -163,8 +167,12 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
         )
     };
 
-    let mut wtr =
-        db::DirDbWriter::new(&std::path::Path::new(DNS_RECORD_DIR), file_max_size, None).await?;
+    let mut wtr = db::DirDbWriter::new(
+        &std::path::Path::new(DNS_RECORD_DIR),
+        config.clone(),
+        None,
+    )
+    .await?;
 
     let mut since_last_output = std::time::Instant::now();
     while let Some(record) = tasks.next().await {
@@ -177,14 +185,22 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
         } else {
             error_count += 1;
         }
-        if let Some(next_domain) = domain_iter.next() {
-            tasks.push(get_dns_results(
-                dns_record_handler.clone(),
-                client.clone(),
-                servers[i % servers.len()].clone(),
-                next_domain,
-            ));
+        while tasks.len() < config.get_concurrent_requests() {
+            if let Some(next_domain) = domain_iter.next() {
+                tasks.push(get_dns_results(
+                    dns_record_handler.clone(),
+                    client.clone(),
+                    {
+                        let servers = config.get_dns_servers();
+                        servers[i % servers.len()].clone()
+                    },
+                    next_domain,
+                ));
+            } else {
+                break;
+            }
         }
+
         i += 1;
     }
     wtr.flush().await?;

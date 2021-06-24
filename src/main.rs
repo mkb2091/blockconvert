@@ -79,11 +79,11 @@ fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
     Ok(records)
 }
 
-async fn generate(config: Config) -> Result<(), Box<dyn std::error::Error>> {
+async fn generate(mut config: config::Config) -> Result<(), Box<dyn std::error::Error>> {
     let client = reqwest::Client::new();
     if let Ok(records) = read_csv() {
         println!("Read CSV");
-        let builder = Arc::new(FilterListBuilder::new(Arc::new(config.clone())));
+        let builder = Arc::new(FilterListBuilder::new(config.clone()));
         println!("Initialised FilterListBuilder");
 
         list_downloader::download_all(client, records, get_internal_lists(), builder.clone())
@@ -97,7 +97,7 @@ async fn generate(config: Config) -> Result<(), Box<dyn std::error::Error>> {
         db::dir_db_read(
             bc.clone(),
             &std::path::Path::new(EXTRACTED_DOMAINS_DIR),
-            config.max_extracted_age,
+            config.get_max_extracted_age(),
         )
         .await?;
 
@@ -132,7 +132,7 @@ async fn generate(config: Config) -> Result<(), Box<dyn std::error::Error>> {
 
 #[derive(Clone)]
 struct QueryFilterListHandler {
-    config: Arc<Config>,
+    config: config::Config,
     parts: Vec<(Domain, Vec<Domain>, Vec<std::net::IpAddr>)>,
 }
 
@@ -151,7 +151,7 @@ impl FilterListHandler for QueryFilterListHandler {
     }
 }
 
-async fn query(config: Config, q: Query) -> Result<(), Box<dyn std::error::Error>> {
+async fn query(mut config: config::Config, q: Query) -> Result<(), Box<dyn std::error::Error>> {
     let mut headers = reqwest::header::HeaderMap::new();
     headers.insert(
         reqwest::header::ACCEPT,
@@ -166,13 +166,11 @@ async fn query(config: Config, q: Query) -> Result<(), Box<dyn std::error::Error
     for part in std::iter::once(domain.clone()).chain(domain.iter_parent_domains()) {
         let (cnames, ips): (Vec<Domain>, Vec<std::net::IpAddr>) = if !q.ignore_dns {
             if let Some(result) = doh::lookup_domain(
-                Arc::new(
-                    config
-                        .dns_servers
-                        .choose(&mut rand::thread_rng())
-                        .unwrap()
-                        .clone(),
-                ),
+                config
+                    .get_dns_servers()
+                    .choose(&mut rand::thread_rng())
+                    .unwrap()
+                    .clone(),
                 client.clone(),
                 3_usize,
                 &part,
@@ -192,7 +190,7 @@ async fn query(config: Config, q: Query) -> Result<(), Box<dyn std::error::Error
         parts.push((part, cnames, ips));
     }
     let query_handler = Arc::new(QueryFilterListHandler {
-        config: Arc::new(config),
+        config: config,
         parts,
     });
     let client = reqwest::Client::new();
@@ -203,11 +201,11 @@ async fn query(config: Config, q: Query) -> Result<(), Box<dyn std::error::Error
     Ok(())
 }
 
-async fn find_domains(config: Config) -> Result<(), Box<dyn std::error::Error>> {
+async fn find_domains(config: config::Config) -> Result<(), Box<dyn std::error::Error>> {
     let mut ips = Default::default();
     if let Ok(records) = read_csv() {
         let client = reqwest::Client::new();
-        let builder = Arc::new(FilterListBuilder::new(Arc::new(config.clone())));
+        let builder = Arc::new(FilterListBuilder::new(config.clone()));
         list_downloader::download_all(client, records, get_internal_lists(), builder.clone())
             .await?;
         let ips_lock = builder.extracted_ips.lock();
@@ -228,7 +226,8 @@ async fn find_domains(config: Config) -> Result<(), Box<dyn std::error::Error>> 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let opts: Opts = Opts::parse();
-    let config: Config = toml::from_str(&tokio::fs::read_to_string(&opts.config).await?)?;
+    let config = config::Config::open(opts.config.clone())?;
+    println!("Using config: {:?}", config);
     let result = match opts.mode {
         Mode::Generate => generate(config).await,
         Mode::Query(q) => query(config, q).await,

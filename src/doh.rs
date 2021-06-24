@@ -40,7 +40,7 @@ struct DoHResult {
 }
 
 async fn lookup_domain_(
-    server: Arc<String>,
+    server: Arc<str>,
     client: &reqwest::Client,
     domain: &Domain,
 ) -> Result<Option<DNSResultRecord>, reqwest::Error> {
@@ -90,7 +90,7 @@ async fn lookup_domain_(
     }
 }
 pub async fn lookup_domain(
-    server: Arc<String>,
+    server: Arc<str>,
     client: reqwest::Client,
     attempts: usize,
     domain: &Domain,

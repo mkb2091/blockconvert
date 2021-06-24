@@ -1,6 +1,6 @@
 use crate::dns_lookup::{DNSResultRecord, DomainRecordHandler};
 use crate::{
-    db, dns_lookup, ipnet, list_downloader::FilterListHandler, Config, Domain, DomainSetShardedFX,
+    config, db, dns_lookup, ipnet, list_downloader::FilterListHandler, Domain, DomainSetShardedFX,
     FilterListRecord, FilterListType, DOMAIN_REGEX, IP_REGEX,
 };
 use parking_lot::Mutex;
@@ -11,20 +11,14 @@ use tokio::io::BufWriter;
 type DomainFilterBuilderFX = blockconvert::DomainFilterBuilder<fxhash::FxBuildHasher>;
 
 pub struct FilterListBuilder {
-    config: Arc<Config>,
+    config: config::Config,
     filter_builder: DomainFilterBuilderFX,
     pub extracted_domains: DomainSetShardedFX,
     pub extracted_ips: Mutex<std::collections::HashSet<std::net::IpAddr>>,
 }
 
-impl Default for FilterListBuilder {
-    fn default() -> Self {
-        Self::new(Arc::new(Default::default()))
-    }
-}
-
 impl FilterListBuilder {
-    pub fn new(config: Arc<Config>) -> Self {
+    pub fn new(config: config::Config) -> Self {
         Self {
             config,
             filter_builder: Default::default(),
@@ -192,7 +186,7 @@ impl FilterListHandler for FilterListBuilder {
 
 #[derive(Default)]
 pub struct FilterList {
-    config: Arc<Config>,
+    config: config::Config,
     filter: blockconvert::DomainFilter<fxhash::FxBuildHasher>,
     blocked_domains: DomainSetShardedFX,
     allowed_domains: DomainSetShardedFX,
@@ -202,7 +196,7 @@ pub struct FilterList {
 }
 
 impl FilterList {
-    pub fn from(config: Arc<Config>, filter_lists: &[(FilterListType, &str)]) -> Self {
+    pub fn from(config: config::Config, filter_lists: &[(FilterListType, &str)]) -> Self {
         let builder = FilterListBuilder::new(config);
         for (list_type, data) in filter_lists.iter() {
             builder.add_list(*list_type, data)
@@ -221,28 +215,16 @@ impl FilterList {
 
     pub async fn check_dns(&mut self, client: &reqwest::Client) {
         self.extracted_domains.shrink_to_fit();
-        let servers: Vec<Arc<String>> = self
-            .config
-            .dns_servers
-            .iter()
-            .map(|server| Arc::new(server.clone()))
-            .collect();
+        let config = self.config.clone();
         let extracted_domains = std::mem::replace(
             &mut self.extracted_domains,
             DomainSetShardedFX::with_shards(0),
         );
         let mem_take_self = Arc::new(std::mem::take(self));
 
-        let _ = dns_lookup::lookup_domains(
-            extracted_domains,
-            mem_take_self.clone(),
-            &servers[..],
-            client,
-            self.config.concurrent_requests,
-            self.config.max_dns_age,
-            self.config.max_file_size,
-        )
-        .await;
+        let _ =
+            dns_lookup::lookup_domains(extracted_domains, mem_take_self.clone(), client, config)
+                .await;
         let _ = std::mem::replace(
             self,
             Arc::try_unwrap(mem_take_self)
@@ -493,7 +475,7 @@ impl DomainRecordHandler for FilterList {
 
 #[test]
 fn normal_is_ok() {
-    let builder = FilterListBuilder::default();
+    let builder = FilterListBuilder::new(Arc::new(Default::default()));
     let filter_list = builder.to_filterlist();
     assert_eq!(filter_list.extracted_domains.len(), 0);
 }

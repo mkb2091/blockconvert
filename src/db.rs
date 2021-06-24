@@ -4,6 +4,7 @@ use tokio::io::AsyncBufReadExt;
 use tokio::io::AsyncWriteExt;
 use tokio::io::BufWriter;
 use tokio_stream::StreamExt;
+use crate::config;
 
 pub trait DBReadHandler: Send + Sync {
     fn handle_input(&self, data: &str);
@@ -92,7 +93,7 @@ async fn open_writer(
 pub struct DirDbWriter {
     path: std::path::PathBuf,
     wtr: BufWriter<tokio::fs::File>,
-    max_size: usize,
+	config: config::Config,
     current_size: usize,
     prefix: Option<String>,
 }
@@ -100,20 +101,20 @@ pub struct DirDbWriter {
 impl DirDbWriter {
     pub async fn new(
         path: &std::path::Path,
-        max_size: usize,
+        config: config::Config,
         prefix: Option<String>,
     ) -> Result<Self, std::io::Error> {
         let _ = tokio::fs::create_dir_all(&path).await;
         Ok(Self {
             wtr: open_writer(&path, prefix.as_ref()).await?,
             path: std::path::PathBuf::from(path),
-            max_size,
+            config,
             current_size: 0,
             prefix,
         })
     }
     pub async fn write_line(&mut self, line: &[u8]) -> Result<(), std::io::Error> {
-        if self.current_size + line.len() > self.max_size {
+        if self.current_size + line.len() > self.config.get_max_file_size() {
             self.wtr.flush().await?;
             self.wtr = open_writer(&self.path, self.prefix.as_ref()).await?;
             self.current_size = 0;
