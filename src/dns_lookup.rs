@@ -92,10 +92,13 @@ async fn get_dns_results<T: 'static + DomainRecordHandler>(
     dns_record_handler: Arc<T>,
     client: reqwest::Client,
     server: Arc<str>,
+    timeout: Option<std::time::Duration>,
     domain: Domain,
 ) -> Option<DNSResultRecord> {
     tokio::spawn(async move {
-        let result = doh::lookup_domain(server, client, 1, &domain).await.ok()?;
+        let result = doh::lookup_domain(server, client, 1, timeout, &domain)
+            .await
+            .ok()?;
         if let Some(record) = &result {
             dns_record_handler.handle_domain_record(&record);
         }
@@ -149,36 +152,37 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
                     let servers = config.get_dns_servers();
                     servers[i % servers.len()].clone()
                 },
+                config.get_timeout(),
                 domain,
             )
         })
         .collect();
     println!("Created initial tasks");
-    let now = std::time::Instant::now();
+    let mut rate_data: ((_, usize), (_, usize)) = (
+        (std::time::Instant::now(), 0),
+        (std::time::Instant::now(), 0),
+    );
     let mut i: usize = 0;
     let mut error_count: usize = 0;
-    let display_status = |i: usize, error_count: usize, now: &std::time::Instant| {
-        println!(
-            "{}/{} {}/s with {} errors",
-            i,
-            total_length,
-            i as f32 / now.elapsed().as_secs_f32(),
-            error_count,
-        )
-    };
+    let display_status =
+        |i: usize, error_count: usize, recent: usize, recent_start: &std::time::Instant| {
+            println!(
+                "{}/{} {}/s with {} errors",
+                i,
+                total_length,
+                recent as f32 / recent_start.elapsed().as_secs_f32(),
+                error_count,
+            )
+        };
 
-    let mut wtr = db::DirDbWriter::new(
-        &std::path::Path::new(DNS_RECORD_DIR),
-        config.clone(),
-        None,
-    )
-    .await?;
+    let mut wtr =
+        db::DirDbWriter::new(&std::path::Path::new(DNS_RECORD_DIR), config.clone(), None).await?;
 
     let mut since_last_output = std::time::Instant::now();
     while let Some(record) = tasks.next().await {
         if let Some(record) = record {
             if since_last_output.elapsed().as_secs() > 1 {
-                display_status(i, error_count, &now);
+                display_status(i, error_count, rate_data.0 .1, &rate_data.0 .0);
                 since_last_output = std::time::Instant::now();
             }
             wtr.write_line(record.to_string().as_bytes()).await?;
@@ -194,6 +198,7 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
                         let servers = config.get_dns_servers();
                         servers[i % servers.len()].clone()
                     },
+                    config.get_timeout(),
                     next_domain,
                 ));
             } else {
@@ -202,8 +207,13 @@ pub async fn lookup_domains<T: 'static + DomainRecordHandler>(
         }
 
         i += 1;
+        rate_data.0 .1 += 1;
+        rate_data.1 .1 += 1;
+        if rate_data.1 .0.elapsed().as_secs() > 10 {
+            rate_data = (rate_data.1, (std::time::Instant::now(), 0));
+        }
     }
     wtr.flush().await?;
-    display_status(i, error_count, &now);
+    display_status(i, error_count, rate_data.0 .1, &rate_data.0 .0);
     Ok(())
 }

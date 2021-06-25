@@ -13,6 +13,7 @@ struct InternalConfig {
     max_dns_age: u64,
     max_extracted_age: u64,
     max_file_size: usize,
+    timeout: Option<std::time::Duration>,
 }
 
 #[derive(Debug)]
@@ -55,6 +56,7 @@ pub struct Config {
     max_dns_age: u64,
     max_extracted_age: u64,
     max_file_size: usize,
+    timeout: Option<std::time::Duration>,
 }
 
 impl Config {
@@ -100,6 +102,7 @@ impl Config {
             max_dns_age: config.max_dns_age,
             max_extracted_age: config.max_extracted_age,
             max_file_size: config.max_file_size,
+            timeout: config.timeout,
         })
     }
 
@@ -127,6 +130,7 @@ impl Config {
         self.max_dns_age = base.0.max_dns_age;
         self.max_extracted_age = base.0.max_extracted_age;
         self.max_file_size = base.0.max_file_size;
+        self.timeout = base.0.timeout;
     }
     pub fn get_dns_servers(&mut self) -> &'_ [Arc<str>] {
         self.check_for_updates();
@@ -152,6 +156,10 @@ impl Config {
     pub fn get_virus_total_api(&mut self) -> &'_ Option<String> {
         self.check_for_updates();
         &self.virus_total_api
+    }
+    pub fn get_timeout(&mut self) -> Option<core::time::Duration> {
+        self.check_for_updates();
+        self.timeout
     }
 }
 

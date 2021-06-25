@@ -86,8 +86,14 @@ async fn generate(mut config: config::Config) -> Result<(), Box<dyn std::error::
         let builder = Arc::new(FilterListBuilder::new(config.clone()));
         println!("Initialised FilterListBuilder");
 
-        list_downloader::download_all(client, records, get_internal_lists(), builder.clone())
-            .await?;
+        list_downloader::download_all(
+            config.clone(),
+            client,
+            records,
+            get_internal_lists(),
+            builder.clone(),
+        )
+        .await?;
 
         println!("Downloaded Lists");
 
@@ -173,6 +179,7 @@ async fn query(mut config: config::Config, q: Query) -> Result<(), Box<dyn std::
                     .clone(),
                 client.clone(),
                 3_usize,
+                config.get_timeout(),
                 &part,
             )
             .await?
@@ -190,14 +197,20 @@ async fn query(mut config: config::Config, q: Query) -> Result<(), Box<dyn std::
         parts.push((part, cnames, ips));
     }
     let query_handler = Arc::new(QueryFilterListHandler {
-        config: config,
+        config: config.clone(),
         parts,
     });
     let client = reqwest::Client::new();
     let records = read_csv()?;
 
-    list_downloader::download_all(client, records, get_internal_lists(), query_handler.clone())
-        .await?;
+    list_downloader::download_all(
+        config,
+        client,
+        records,
+        get_internal_lists(),
+        query_handler.clone(),
+    )
+    .await?;
     Ok(())
 }
 
@@ -206,8 +219,14 @@ async fn find_domains(config: config::Config) -> Result<(), Box<dyn std::error::
     if let Ok(records) = read_csv() {
         let client = reqwest::Client::new();
         let builder = Arc::new(FilterListBuilder::new(config.clone()));
-        list_downloader::download_all(client, records, get_internal_lists(), builder.clone())
-            .await?;
+        list_downloader::download_all(
+            config.clone(),
+            client,
+            records,
+            get_internal_lists(),
+            builder.clone(),
+        )
+        .await?;
         let ips_lock = builder.extracted_ips.lock();
         ips = ips_lock.clone()
     };

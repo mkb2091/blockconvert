@@ -42,11 +42,16 @@ struct DoHResult {
 async fn lookup_domain_(
     server: Arc<str>,
     client: &reqwest::Client,
+    timeout: Option<std::time::Duration>,
     domain: &Domain,
 ) -> Result<Option<DNSResultRecord>, reqwest::Error> {
-    let json: DoHResult = client
+    let mut req = client
         .get(&*server)
-        .query(&[("name", &**domain), ("type", "1")])
+        .query(&[("name", &**domain), ("type", "1")]);
+    if let Some(timeout) = timeout {
+        req = req.timeout(timeout);
+    }
+    let json: DoHResult = req
         .send()
         .await
         .map_err(|err| {
@@ -93,12 +98,14 @@ pub async fn lookup_domain(
     server: Arc<str>,
     client: reqwest::Client,
     attempts: usize,
+    timeout: Option<std::time::Duration>,
     domain: &Domain,
 ) -> Result<Option<DNSResultRecord>, reqwest::Error> {
     for _ in 0..attempts {
-        if let Ok(result) = lookup_domain_(server.clone(), &client, domain).await {
+        if let Ok(result) = lookup_domain_(server.clone(), &client, timeout, domain).await {
             return Ok(result);
         }
+        tokio::time::sleep(std::time::Duration::from_secs(5)).await;
     }
-    lookup_domain_(server, &client, domain).await
+    lookup_domain_(server, &client, timeout, domain).await
 }

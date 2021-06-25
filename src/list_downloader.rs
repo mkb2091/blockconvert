@@ -1,4 +1,4 @@
-use crate::FilterListRecord;
+use crate::{config, FilterListRecord};
 use std::sync::Arc;
 use tokio::fs::File;
 use tokio::io::AsyncWriteExt;
@@ -38,6 +38,7 @@ fn test_date_string_to_filetime() {
 }
 
 async fn download_list_if_expired(
+    timeout: Option<std::time::Duration>,
     client: reqwest::Client,
     record: &FilterListRecord,
 ) -> Result<String, std::io::Error> {
@@ -49,6 +50,9 @@ async fn download_list_if_expired(
         .unwrap_or(true)
     {
         let mut req = client.get(&record.url);
+        if let Some(timeout) = timeout {
+            req = req.timeout(timeout);
+        }
         if let Some(last_update) = last_update {
             let date = chrono::DateTime::<chrono::Utc>::from(last_update);
             req = req.header(
@@ -116,6 +120,7 @@ pub trait FilterListHandler: Send + Sync {
 }
 
 pub async fn download_all<T: 'static + FilterListHandler>(
+    mut config: config::Config,
     client: reqwest::Client,
     records: Vec<FilterListRecord>,
     local_filters: Vec<(std::path::PathBuf, FilterListRecord)>,
@@ -126,8 +131,9 @@ pub async fn download_all<T: 'static + FilterListHandler>(
     for record in records {
         let handler = handler.clone();
         let client = client.clone();
+        let timeout = config.get_timeout();
         let task = tokio::task::spawn(async move {
-            match download_list_if_expired(client, &record).await {
+            match download_list_if_expired(timeout, client, &record).await {
                 Ok(data) => handler.handle_filter_list(record, &data),
                 Err(error) => println!(
                     "Failed to download filter list: {:?} with error {:?}",

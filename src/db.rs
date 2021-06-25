@@ -1,10 +1,10 @@
+use crate::config;
 use std::sync::Arc;
 use tokio::fs::OpenOptions;
 use tokio::io::AsyncBufReadExt;
 use tokio::io::AsyncWriteExt;
 use tokio::io::BufWriter;
 use tokio_stream::StreamExt;
-use crate::config;
 
 pub trait DBReadHandler: Send + Sync {
     fn handle_input(&self, data: &str);
@@ -93,7 +93,7 @@ async fn open_writer(
 pub struct DirDbWriter {
     path: std::path::PathBuf,
     wtr: BufWriter<tokio::fs::File>,
-	config: config::Config,
+    config: config::Config,
     current_size: usize,
     prefix: Option<String>,
 }
