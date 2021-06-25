@@ -1,13 +1,13 @@
-use crate::{config, db, Domain, EXTRACTED_DOMAINS_DIR};
+use crate::{config, db, Domain};
 use futures::SinkExt;
 use futures::StreamExt;
 
 const URL: &str = "wss://certstream.calidog.io/domains-only";
 const KEEPALIVE_INTERVAL: u64 = 20;
 
-pub async fn certstream(config: config::Config) -> Result<(), Box<dyn std::error::Error>> {
+pub async fn certstream(mut config: config::Config) -> Result<(), Box<dyn std::error::Error>> {
     let mut wtr = db::DirDbWriter::new(
-        &std::path::Path::new(EXTRACTED_DOMAINS_DIR),
+        &std::path::Path::new(&config.get_paths().extracted.clone()),
         config,
         Some("certstream".to_string()),
     )

@@ -1,4 +1,4 @@
-use crate::{config, db, DirectoryDB, Domain, EXTRACTED_DOMAINS_DIR};
+use crate::{config, db, DirectoryDB, Domain};
 use parking_lot::Mutex;
 use tokio::fs::OpenOptions;
 use tokio::io::AsyncWriteExt;
@@ -56,9 +56,9 @@ impl PassiveDNS {
 
         ips = std::mem::take(&mut ips_remaining.lock().ips);
         let total_length = ips.len() as u64;
-
-        let _ = std::fs::create_dir(EXTRACTED_DOMAINS_DIR);
-        let mut path = std::path::PathBuf::from(EXTRACTED_DOMAINS_DIR);
+        let extracted_path = &config.get_paths().extracted;
+        let _ = std::fs::create_dir(extracted_path);
+        let mut path = std::path::PathBuf::from(extracted_path);
         path.push(std::path::PathBuf::from(format!(
             "{}_{:?}",
             name,

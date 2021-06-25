@@ -237,17 +237,7 @@ impl FilterList {
         println!("Extracted domains: {:?}", self.extracted_domains.len());
     }
 
-    pub async fn write_all(
-        self,
-        blocked_domains_path: &std::path::Path,
-        hostfile_path: &std::path::Path,
-        rpz_path: &std::path::Path,
-        adblock_path: &std::path::Path,
-        allowed_adblock_path: &std::path::Path,
-        allowed_domains_path: &std::path::Path,
-        blocked_ip_addrs_path: &std::path::Path,
-        allowed_ip_addrs_path: &std::path::Path,
-    ) -> Result<(), Box<dyn std::error::Error>> {
+    pub async fn write_all(mut self) -> Result<(), Box<dyn std::error::Error>> {
         async fn write_to_file(
             mut data: Vec<String>,
             path: &std::path::Path,
@@ -271,6 +261,34 @@ impl FilterList {
             buf.flush().await?;
             Ok(())
         }
+        let paths = self.config.get_paths();
+        let blocked_domains_path: std::path::PathBuf =
+            [&paths.output_base, &paths.output.blocked_domains]
+                .iter()
+                .collect();
+        let allowed_domains_path: std::path::PathBuf =
+            [&paths.output_base, &paths.output.allowed_domains]
+                .iter()
+                .collect();
+        let hostfile_path: std::path::PathBuf = [&paths.output_base, &paths.output.hostfile]
+            .iter()
+            .collect();
+        let adblock_path: std::path::PathBuf =
+            [&paths.output_base, &paths.output.adblock].iter().collect();
+        let allowed_adblock_path: std::path::PathBuf =
+            [&paths.output_base, &paths.output.allowed_adblock]
+                .iter()
+                .collect();
+        let blocked_ip_addrs_path: std::path::PathBuf =
+            [&paths.output_base, &paths.output.blocked_ips]
+                .iter()
+                .collect();
+        let allowed_ip_addrs_path: std::path::PathBuf =
+            [&paths.output_base, &paths.output.allowed_ips]
+                .iter()
+                .collect();
+        let rpz_path: std::path::PathBuf = [&paths.output_base, &paths.output.rpz].iter().collect();
+
         let adblock_header: String = format!(
             "[Adblock Plus 2.0]
 ! Version: {:?}
@@ -419,17 +437,17 @@ impl FilterList {
                     .iter()
                     .map(|item| item.to_string())
                     .collect(),
-                allowed_domains_path,
+                &allowed_domains_path,
             ),
         );
         let ips = futures::future::try_join(
             write_to_file(
                 blocked_ips.iter().map(|item| item.to_string()).collect(),
-                blocked_ip_addrs_path,
+                &blocked_ip_addrs_path,
             ),
             write_to_file(
                 allowed_ips.iter().map(|item| item.to_string()).collect(),
-                allowed_ip_addrs_path,
+                &allowed_ip_addrs_path,
             ),
         );
 
@@ -475,7 +493,7 @@ impl DomainRecordHandler for FilterList {
 
 #[test]
 fn normal_is_ok() {
-    let builder = FilterListBuilder::new(Arc::new(Default::default()));
+    let builder = FilterListBuilder::new(Default::default());
     let filter_list = builder.to_filterlist();
     assert_eq!(filter_list.extracted_domains.len(), 0);
 }

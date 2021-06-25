@@ -33,56 +33,6 @@ lazy_static! {
             .unwrap();
 }
 
-pub const EXTRACTED_DOMAINS_DIR: &str = "extracted";
-
-pub fn get_blocked_domain_path() -> std::path::PathBuf {
-    let mut path = std::path::PathBuf::from("output");
-    path.push("domains.txt");
-    path
-}
-
-pub fn get_adblock_path() -> std::path::PathBuf {
-    let mut path = std::path::PathBuf::from("output");
-    path.push("adblock.txt");
-    path
-}
-
-pub fn get_hostfile_path() -> std::path::PathBuf {
-    let mut path = std::path::PathBuf::from("output");
-    path.push("hosts.txt");
-    path
-}
-
-pub fn get_rpz_path() -> std::path::PathBuf {
-    let mut path = std::path::PathBuf::from("output");
-    path.push("domains.rpz");
-    path
-}
-
-pub fn get_allowed_domain_path() -> std::path::PathBuf {
-    let mut path = std::path::PathBuf::from("output");
-    path.push("whitelist_domains.txt");
-    path
-}
-
-pub fn get_allowed_adblock_path() -> std::path::PathBuf {
-    let mut path = std::path::PathBuf::from("output");
-    path.push("whitelist_adblock.txt");
-    path
-}
-
-pub fn get_blocked_ips_path() -> std::path::PathBuf {
-    let mut path = std::path::PathBuf::from("output");
-    path.push("ip_blocklist.txt");
-    path
-}
-
-pub fn get_allowed_ips_path() -> std::path::PathBuf {
-    let mut path = std::path::PathBuf::from("output");
-    path.push("allowed_ips.txt");
-    path
-}
-
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord)]
 pub struct FilterListRecord {
     pub name: String,

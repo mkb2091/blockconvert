@@ -102,7 +102,7 @@ async fn generate(mut config: config::Config) -> Result<(), Box<dyn std::error::
 
         db::dir_db_read(
             bc.clone(),
-            &std::path::Path::new(EXTRACTED_DOMAINS_DIR),
+            &std::path::Path::new(&config.get_paths().extracted),
             config.get_max_extracted_age(),
         )
         .await?;
@@ -121,17 +121,7 @@ async fn generate(mut config: config::Config) -> Result<(), Box<dyn std::error::
         println!("Checking DNS");
         bc.check_dns(&client).await;
         println!("Writing to file");
-        bc.write_all(
-            &get_blocked_domain_path(),
-            &get_hostfile_path(),
-            &get_rpz_path(),
-            &get_adblock_path(),
-            &get_allowed_adblock_path(),
-            &get_allowed_domain_path(),
-            &get_blocked_ips_path(),
-            &get_allowed_ips_path(),
-        )
-        .await?;
+        bc.write_all().await?;
     }
     Ok(())
 }
