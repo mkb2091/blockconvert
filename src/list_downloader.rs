@@ -90,16 +90,25 @@ async fn download_list_if_expired(
                         .unwrap_or(false)
                     {
                         println!("File unmodified: {}", record.url);
-                    } else if let Ok(text) = response.text().await {
-                        println!("Downloaded: {:?}", record.url);
-                        let mut file = File::create(&path).await?;
-                        file.write_all(text.as_bytes()).await?;
-                        file.flush().await?;
-                        drop(file);
-                        set_last_modified(&last_modified);
-                        return Ok(text);
                     } else {
-                        println!("Failed to decode response for {}", record.url);
+                        match response.bytes().await {
+                            Ok(bytes) => {
+                                println!("Downloaded: {:?}", record.url);
+                                let text = String::from_utf8_lossy(&bytes).to_string();
+                                let mut file = File::create(&path).await?;
+                                file.write_all(text.as_bytes()).await?;
+                                file.flush().await?;
+                                drop(file);
+                                set_last_modified(&last_modified);
+                                return Ok(text);
+                            }
+                            Err(error) => {
+                                println!(
+                                    "Failed to decode response for {} with error: {:?}",
+                                    record.url, error
+                                );
+                            }
+                        }
                     }
                 }
                 reqwest::StatusCode::NOT_MODIFIED => {
@@ -126,13 +135,13 @@ pub async fn download_all<T: 'static + FilterListHandler>(
     local_filters: Vec<(std::path::PathBuf, FilterListRecord)>,
     handler: Arc<T>,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let mut tasks: futures::stream::FuturesUnordered<_> = futures::stream::FuturesUnordered::new();
+    let mut to_download = Vec::new();
 
     for record in records {
         let handler = handler.clone();
         let client = client.clone();
-        let timeout = config.get_timeout();
-        let task = tokio::task::spawn(async move {
+        let timeout = config.get_download_timeout();
+        let task = async move {
             match download_list_if_expired(timeout, client, &record).await {
                 Ok(data) => handler.handle_filter_list(record, &data),
                 Err(error) => println!(
@@ -140,21 +149,30 @@ pub async fn download_all<T: 'static + FilterListHandler>(
                     record, error
                 ),
             }
-        });
-        tasks.push(task);
+        };
+        to_download.push(task);
     }
+
+    let mut tasks: futures::stream::FuturesUnordered<_> = futures::stream::FuturesUnordered::new();
 
     for (file_path, record) in local_filters.into_iter() {
         let handler = handler.clone();
-        let task = tokio::spawn(async move {
+        let task = async move {
             match tokio::fs::read_to_string(&file_path).await {
                 Ok(data) => handler.handle_filter_list(record, &data),
                 Err(error) => println!("Failed to read list from disk with error: {:?}", error),
             }
-        });
-        tasks.push(task);
+        };
+        tasks.push(tokio::spawn(task));
     }
-    while tasks.next().await.is_some() {}
+
+    while tasks.next().await.is_some() || !to_download.is_empty() {
+        if tasks.len() < config.get_concurrent_requests() {
+            if let Some(next) = to_download.pop() {
+                tasks.push(tokio::spawn(next));
+            }
+        }
+    }
 
     Ok(())
 }
