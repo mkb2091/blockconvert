@@ -9,7 +9,7 @@ edition = "2018"
 [dependencies]
 blockconvert = "^0.5.1"
 
-reqwest = {version = "0.11", default-features = false, features = ["rustls-tls", "json"]}
+reqwest = {version = "0.11", default-features = false, features = ["rustls-tls", "json", "brotli", "gzip", "deflate"]}
 futures = {version = "0.3"}
 tokio = {version = "1.2", features = ["macros", "rt", "rt-multi-thread", "fs", "io-util", "time", "net", "sync"]}
 tokio-stream = {version = "0.1", features = ["fs"]}
