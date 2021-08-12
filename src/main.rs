@@ -119,9 +119,13 @@ async fn generate(mut config: config::Config) -> Result<(), Box<dyn std::error::
             .build()
             .unwrap();
         println!("Checking DNS");
+        let now = std::time::Instant::now();
         bc.check_dns(&client).await;
+        println!("Checked DNS in {}s", now.elapsed().as_secs_f32());
         println!("Writing to file");
+        let now = std::time::Instant::now();
         bc.write_all().await?;
+        println!("Wrote to file in {}s", now.elapsed().as_secs_f32());
     }
     Ok(())
 }

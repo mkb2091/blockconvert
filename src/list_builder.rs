@@ -239,24 +239,17 @@ impl FilterList {
     }
 
     pub async fn write_all(mut self) -> Result<(), std::io::Error> {
-        async fn write_to_file<P: AsRef<std::path::Path>>(
-            mut data: Vec<String>,
+        async fn write_to_file<P: AsRef<std::path::Path>, T, F: Fn(&T) -> String>(
+            data: Arc<Vec<T>>,
+            header: String,
             path: P,
+            f: F,
         ) -> Result<(), std::io::Error> {
             let file = tokio::fs::File::create(path).await?;
             let mut buf = BufWriter::new(file);
-            data.sort_unstable_by(|domain1, domain2| {
-                Domain::str_iter_parent_domains(domain1)
-                    .rev()
-                    .chain(std::iter::once(domain1.as_str()))
-                    .cmp(
-                        Domain::str_iter_parent_domains(domain2)
-                            .rev()
-                            .chain(std::iter::once(domain2.as_str())),
-                    )
-            });
-            for item in data.into_iter() {
-                buf.write_all(item.as_bytes()).await?;
+            buf.write_all(header.as_bytes()).await?;
+            for item in data.iter() {
+                buf.write_all(f(item).as_bytes()).await?;
                 buf.write_all(b"\n").await?;
             }
             buf.flush().await?;
@@ -377,49 +370,25 @@ impl FilterList {
             tokio::spawn({
                 let blocked_domains = blocked_domains.clone();
                 let other_header = other_header.clone();
-                async move {
-                    let file = tokio::fs::File::create(blocked_domains_path).await?;
-                    let mut buf = BufWriter::new(file);
-                    buf.write_all(other_header.as_bytes()).await?;
-                    for item in blocked_domains.iter() {
-                        buf.write_all(item.to_string().as_bytes()).await?;
-                        buf.write_all(b"\n").await?;
-                    }
-                    buf.flush().await?;
-                    Ok::<(), std::io::Error>(())
-                }
+                write_to_file(blocked_domains, other_header, blocked_domains_path, |item| {
+                    item.to_string()
+                })
             }),
             tokio::spawn({
                 let blocked_domains = blocked_domains.clone();
                 let other_header = other_header.clone();
-                async move {
-                    let file = tokio::fs::File::create(hostfile_path).await?;
-                    let mut buf = BufWriter::new(file);
-                    buf.write_all(other_header.as_bytes()).await?;
-                    for item in blocked_domains.iter() {
-                        buf.write_all(format!("0.0.0.0 {}", item).as_bytes())
-                            .await?;
-                        buf.write_all(b"\n").await?;
-                    }
-                    buf.flush().await?;
-                    Ok::<(), std::io::Error>(())
-                }
+
+                write_to_file(blocked_domains, other_header, hostfile_path, |item| {
+                    format!("0.0.0.0 {}", item)
+                })
             }),
             tokio::spawn({
                 let blocked_domains = blocked_domains.clone();
                 let other_header = other_header.clone();
-                async move {
-                    let file = tokio::fs::File::create(rpz_path).await?;
-                    let mut buf = BufWriter::new(file);
-                    buf.write_all(other_header.as_bytes()).await?;
-                    for item in blocked_domains.iter() {
-                        buf.write_all(format!("{} CNAME .", item).as_bytes())
-                            .await?;
-                        buf.write_all(b"\n").await?;
-                    }
-                    buf.flush().await?;
-                    Ok::<(), std::io::Error>(())
-                }
+
+                write_to_file(blocked_domains, other_header, rpz_path, |item| {
+                    format!("{} CNAME .", item)
+                })
             }),
             tokio::spawn({
                 let blocked_ips = blocked_ips.clone();
@@ -456,25 +425,22 @@ impl FilterList {
         let whitelist = futures::future::try_join(
             tokio::spawn({
                 let allowed_domains = allowed_domains.clone();
-                async move {
-                    let file = tokio::fs::File::create(allowed_adblock_path).await?;
-                    let mut buf = BufWriter::new(file);
-                    buf.write_all(adblock_whitelist_header.as_bytes()).await?;
-                    for item in allowed_domains.iter() {
-                        buf.write_all(format!("@@||{}^", item).as_bytes()).await?;
-                        buf.write_all(b"\n").await?;
-                    }
-                    buf.flush().await?;
-                    Ok::<(), std::io::Error>(())
-                }
+                write_to_file(
+                    allowed_domains,
+                    adblock_whitelist_header,
+                    allowed_adblock_path,
+                    |item| format!("@@||{}^", item),
+                )
             }),
-            tokio::spawn(write_to_file(
-                allowed_domains
-                    .iter()
-                    .map(|item| item.to_string())
-                    .collect(),
-                allowed_domains_path,
-            )),
+            tokio::spawn({
+                let allowed_domains = allowed_domains.clone();
+                write_to_file(
+                    allowed_domains,
+                    String::new(),
+                    allowed_domains_path,
+                    |item| item.to_string(),
+                )
+            }),
         )
         .map(|x| x.unwrap())
         .map(|result| {
@@ -482,14 +448,12 @@ impl FilterList {
             Ok::<(), std::io::Error>(())
         });
         let ips = futures::future::try_join(
-            write_to_file(
-                blocked_ips.iter().map(|item| item.to_string()).collect(),
-                &blocked_ip_addrs_path,
-            ),
-            write_to_file(
-                allowed_ips.iter().map(|item| item.to_string()).collect(),
-                &allowed_ip_addrs_path,
-            ),
+            write_to_file(blocked_ips, String::new(), &blocked_ip_addrs_path, |item| {
+                item.to_string()
+            }),
+            write_to_file(allowed_ips, String::new(), &allowed_ip_addrs_path, |item| {
+                item.to_string()
+            }),
         );
 
         futures::future::try_join3(domains, whitelist, ips)
