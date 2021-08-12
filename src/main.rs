@@ -209,8 +209,7 @@ async fn query(mut config: config::Config, q: Query) -> Result<(), Box<dyn std::
 }
 
 async fn find_domains(config: config::Config) -> Result<(), Box<dyn std::error::Error>> {
-    let mut ips = Default::default();
-    if let Ok(records) = read_csv() {
+    let ips = if let Ok(records) = read_csv() {
         let client = reqwest::Client::new();
         let builder = Arc::new(FilterListBuilder::new(config.clone()));
         list_downloader::download_all(
@@ -221,8 +220,9 @@ async fn find_domains(config: config::Config) -> Result<(), Box<dyn std::error::
             builder.clone(),
         )
         .await?;
-        let ips_lock = builder.extracted_ips.lock();
-        ips = ips_lock.clone()
+        builder.take_extracted_ips()
+    } else {
+        Default::default()
     };
     println!("Started finding domains");
     let _result = futures::future::join4(

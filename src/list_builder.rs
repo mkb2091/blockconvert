@@ -14,8 +14,8 @@ type DomainFilterBuilderFX = blockconvert::DomainFilterBuilder<fxhash::FxBuildHa
 pub struct FilterListBuilder {
     config: config::Config,
     filter_builder: DomainFilterBuilderFX,
-    pub extracted_domains: DomainSetShardedFX,
-    pub extracted_ips: Mutex<std::collections::HashSet<std::net::IpAddr>>,
+    extracted_domains: DomainSetShardedFX,
+    extracted_ips: Mutex<std::collections::HashSet<std::net::IpAddr>>,
 }
 
 impl FilterListBuilder {
@@ -154,6 +154,11 @@ impl FilterListBuilder {
             list_type => println!("Unsupported list type: {:?}", list_type),
         }
     }
+
+    pub fn take_extracted_ips(&self) -> std::collections::HashSet<std::net::IpAddr> {
+        std::mem::take(&mut *self.extracted_ips.lock())
+    }
+
     pub fn to_filterlist(self) -> FilterList {
         let bc = FilterList {
             config: self.config.clone(),
@@ -370,9 +375,12 @@ impl FilterList {
             tokio::spawn({
                 let blocked_domains = blocked_domains.clone();
                 let other_header = other_header.clone();
-                write_to_file(blocked_domains, other_header, blocked_domains_path, |item| {
-                    item.to_string()
-                })
+                write_to_file(
+                    blocked_domains,
+                    other_header,
+                    blocked_domains_path,
+                    |item| item.to_string(),
+                )
             }),
             tokio::spawn({
                 let blocked_domains = blocked_domains.clone();
