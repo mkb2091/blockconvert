@@ -1,0 +1,27 @@
+af.congressosiv-isv2018.it
+ag.bud-info.com.pl
+all-prize-giveaway.life
+an-geburtstag.fun # Spam
+app0973.vnbue32.live
+awfulcruelty9.live
+bestprizesday4.life
+bs.newlifecampania.it # Spam
+cd.nestwood.it
+cf.spettinatidautore.it # Spam
+cl.folignobenecomune.it
+competition4138.redirect-servers52.live
+converseboom24.live
+cp.milano2000.it
+*.ct.sendgrid.net # Tracking https://github.com/mkb2091/blockconvert/issues/70
+dxnp7918p5axx.cloudfront.net
+ee.caleidoscopio-singoli-pisa.it
+*.getemails.com # De-anonymization
+getemails.com # De-anonymization
+installflash-s3.com
+mobile-global-app-market1.life
+noireblur2.live
+nonamedvlp49.live
+reward7978.nonamedvlp49.live
+rododesk.pl
+ysmk.pclatorre.it
+zmusic-online.com

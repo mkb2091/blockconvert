@@ -1,0 +1,1 @@
+^gsp[0-9][0-9]-ssl\.ls\.apple\.com$

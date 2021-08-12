@@ -1,0 +1,106 @@
+name,url,author,license,expires,list_type
+🎮 Game Console Adblock List,https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt,,Dandelicence,345600,Adblock
+❤xorcan❤ Türk ip-list,https://raw.githubusercontent.com/xorcan/hosts/master/xips.txt,xorcan,GPL-3.0,86400,IPBlocklist
+❤xorcan❤ Türk ad-list,https://raw.githubusercontent.com/xorcan/hosts/master/xhosts.txt,xorcan,GPL-3.0,864000,Hostfile
+uBlock filters – Resource abuse,https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt,,GPLv3,345600,Adblock
+uBlock filters – Privacy,https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt,,GPLv3,345600,Adblock
+uBlock filters – Badware risks,https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt,,GPLv3,345600,Adblock
+uBlock filters,https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt,,GPLv3,345600,Adblock
+mobiletrackers,https://raw.githubusercontent.com/craiu/mobiletrackers/master/list.txt,,GPLv3,604800,DomainBlocklist
+mkb2091's Honeypot host.deny,http://192.243.103.198/hosts.deny,mkb2091,CC0,30,DenyHosts
+iOS Tracker Blocklist,https://jarv.is/ios-trackers/blocklist.txt,jakejarvis,MIT,864000,DomainBlocklist
+hostsVN,https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts,,MIT,86400,Hostfile
+abuse.ch URLhaus Response Policy Zones,https://urlhaus.abuse.ch/downloads/hostfile,,CC0,86400,Hostfile
+abuse.ch SSLBL Botnet C2 IP Blacklist,https://sslbl.abuse.ch/blacklist/sslipblacklist.txt,,CC0,86400,IPBlocklist
+abuse.ch Feodo Tracker Botnet C2 IP Blocklist,https://feodotracker.abuse.ch/downloads/ipblocklist.txt,,CC0,86400,IPBlocklist
+Xiaomi DNS Blocklist,https://raw.githubusercontent.com/unknownFalleN/xiaomi-dns-blocklist/master/xiaomi_dns_block.lst,,GPLv3,604800,DomainBlocklist
+WindowsSpyBlocker - Hosts spy rules,https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt,,MIT,86400,Hostfile
+Whitelist,https://raw.githubusercontent.com/ookangzheng/blahdns/master/hosts/whitelist.txt,ookangzheng,CC BY-NC-SA 4.0(I  received permission to add to this project),86400,DomainAllowlist
+Whitelist,https://raw.githubusercontent.com/NoExitTV/whitelist/master/domains/whitelist.txt,,MIT,604800,DomainAllowlist
+Useful Linux Shell Scripts Hosts,https://raw.githubusercontent.com/jackrabbit335/UsefulLinuxShellScripts/master/Hosts%20%26%20sourcelist/blacklist.txt,,GPL-3.0,864000,Hostfile
+Trackers,https://raw.githubusercontent.com/herrbischoff/trackers/master/trackers.txt,,The Unlicense,864000,DomainBlocklist
+The Ultimate Hosts Blacklist whitelist,https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list,,MIT,86400,DomainAllowlist
+The Hosts File Project,https://hblock.molinero.dev/hosts,Héctor Molinero Fernández <hector@molinero.dev>,MIT,86400,Hostfile
+The Block List Project Tracking,https://raw.githubusercontent.com/blocklistproject/Lists/master/tracking.txt,,The Unlicense,86400,Hostfile
+The Block List Project Phishing,https://raw.githubusercontent.com/blocklistproject/Lists/master/phishing.txt,,The Unlicense,86400,Hostfile
+The Block List Project Malware,https://raw.githubusercontent.com/blocklistproject/Lists/master/malware.txt,,The Unlicense,86400,Hostfile
+The Block List Project Ads,https://raw.githubusercontent.com/blocklistproject/Lists/master/ads.txt,,The Unlicense,86400,Hostfile
+StevenBlack/hosts,https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts,,MIT,86400,Hostfile
+Slovenian List,https://raw.githubusercontent.com/betterwebleon/slovenian-list/master/filters.txt,,The Unlicense,259200,Adblock
+Scams and Phishing,https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt,infinitytec,MIT,864000,Hostfile
+Scam Blocklist by DurableNapkin,https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt,DurableNapkin,MIT,86400,Hostfile
+Regex Filters for Pi-hole Whitelist,https://raw.githubusercontent.com/mmotti/pihole-regex/master/whitelist.list,,With Permission from https://github.com/mmotti/pihole-regex/issues/30,864000,DomainAllowlist
+Regex Filters for Pi-hole,https://raw.githubusercontent.com/mmotti/pihole-regex/master/regex.list,,With Permission from https://github.com/mmotti/pihole-regex/issues/30,864000,RegexBlocklist
+Privacy filters,https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt,,The Unlicense,86400,Adblock
+Possibilities,https://raw.githubusercontent.com/infinitytec/blocklists/master/possibilities.txt,infinitytec,MIT,864000,Hostfile
+PiHoleBlocklist - SmartTV,https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt,,MIT,86400,DomainBlocklist
+PiHoleBlocklist - SessionReplay,https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SessionReplay.txt,,MIT,86400,DomainBlocklist
+PiHoleBlocklist - AndroidTracking,https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt,,MIT,86400,DomainBlocklist
+PiHoleBlocklist - AmazonFireTV,https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt,,MIT,86400,DomainBlocklist
+Pi-Hole blocklist,https://codeberg.org/spootle/blocklist/raw/branch/master/blocklist.txt,,GPL-3.0,86400,DomainBlocklist
+Perflyst's SmartTV Blocklist for Pi-hole - RegEx extension,https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/regex.list,,MIT,86400,RegexBlocklist
+Nopelist,https://raw.githubusercontent.com/genediazjr/nopelist/master/nopelist.txt,Gene Diaz,MIT,604800,DomainBlocklist
+NoTrack Tracker Blocklist,https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt,QuidsUp,GPLv3,86400,DomainBlocklist
+NoTrack Malware Blocklist,https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt,QuidsUp,GPLv3,86400,DomainBlocklist
+NoCoin Filter List,https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt,,MIT,86400,Hostfile
+MinerBlock Filters,https://raw.githubusercontent.com/xd4rker/MinerBlock/master/assets/filters.txt,,MIT,86400,Adblock
+Malicious URL Blocklist,https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-agh.txt,,CC0,86400,Adblock
+Magneto Malware Skanner - Burner Domains,https://raw.githubusercontent.com/gwillem/magento-malware-scanner/master/rules/burner-domains.txt,,GPLv3,864000,DomainBlocklist
+Lightswitch05's Ads & Tracking,https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt,Daniel White,Apache2,172800,Hostfile
+Latvian List,https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt,,CC-BY-SA-4.0,86400,Adblock
+KADhosts,https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt,,CC-BY-SA-4,86400,Hostfile
+International List,https://raw.githubusercontent.com/betterwebleon/international-list/master/filters.txt,,The Unlicense,259200,Adblock
+I Hate Tracker,https://raw.githubusercontent.com/pirat28/IHateTracker/master/iHateTracker.txt,Pirat28,MIT,864000,DomainBlocklist
+Herm's Ad Black List,https://raw.githubusercontent.com/hermanjustinm/Herms-Blacklist/master/HermsAdBlacklist.txt,,MPL-2.0,864000,Adblock
+GOODBYE ADS,https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt,Jerryn70 (XDA Senior Member),MIT,86400,Hostfile
+Frellwit's Swedish Hosts File,https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt,,GPL-3.0,86400,Hostfile
+First-party trackers host list,https://hostfiles.frogeye.fr/multiparty-trackers.txt,,MIT,604800,DomainBlocklist
+Fanboy's Annoyance List,https://easylist.to/easylist/fanboy-annoyance.txt,,GPLv3,345600,Adblock
+Eesti saitidele kohandatud filter,https://adblock.ee/list.php,,CC0,86400,Adblock
+EasyPrivacy,https://easylist.to/easylist/easyprivacy.txt,,GPLv3,345600,Adblock
+EasyList Italy,https://easylist-downloads.adblockplus.org/easylistitaly.txt,,GPLv3,86400,Adblock
+EasyList Hebrew,https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt,,GPLv3,86400,Adblock
+EasyList Germany,https://easylist.to/easylistgermany/easylistgermany.txt,,GPLv3,86400,Adblock
+EasyList Dutch,https://easylist-downloads.adblockplus.org/easylistdutch.txt,,GPLv3,345600,Adblock
+EasyList China,https://easylist-downloads.adblockplus.org/easylistchina.txt,,GPLv3,345600,Adblock
+EasyList,https://easylist.to/easylist/easylist.txt,,GPLv3,345600,Adblock
+Commonly white listed domains for Pi-Hole,https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt,,MIT,86400,DomainAllowlist
+COVID19 Cyber Threat Coalition blocklist,https://blocklist.cyberthreatcoalition.org/vetted/domain.txt,,You can download these data sets and use them however you want,86400,DomainBlocklist
+CJX's Annoyance List,https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt,,LGPLv3,345600,Adblock
+CB-Malicious-Domains,https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_lists/domains_only.txt,,MIT,86400,DomainBlocklist
+Binary Defense Banlist,https://www.binarydefense.com/banlist.txt,,Public use only,86400,IPBlocklist
+Better content blocking rules,https://better.fyi/blockerList.txt,,CC-BY-SA-4.0,86400,Adblock
+Basic tracking list by Disconnect,https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt,,GPLv3,86400,DomainBlocklist
+BarbBlock,https://paulgb.github.io/BarbBlock/blacklists/hosts-file.txt,,MIT,86400,DomainBlocklist
+BAR-list,https://raw.githubusercontent.com/zznidar/BAR/master/BAR-list,,GPL-3.0,864000,DomainBlocklist
+Anudeep's Blacklist,https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt,Anudeep <anudeep@protonmail.com>,MIT,86400,Hostfile
+Anti-WebMiner,https://raw.githubusercontent.com/greatis/Anti-WebMiner/master/blacklist.txt,,Apache2,86400,DomainBlocklist
+Ads and Trackers,https://raw.githubusercontent.com/infinitytec/blocklists/master/ads-and-trackers.txt,infinitytec,MIT,864000,Hostfile
+AdguardMobileAds,https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileAds.txt,,GPLv3,86400,Hostfile
+AdguardDNS,https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt,,GPLv3,86400,Hostfile
+AdguardApps,https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt,,GPLv3,86400,Hostfile
+Adblock List for Finland,https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt,,The Unlicense,432000,Adblock
+AdGuard Simplified Domain Names filter,https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt,,GPLv3,86400,Adblock
+AdBlockID,https://raw.githubusercontent.com/realodix/AdBlockID/master/output/adblockid.txt,,GPLv3,345600,Adblock
+AdBlock Farsi,https://raw.githubusercontent.com/SlashArash/adblockfa/master/adblockfa.txt,,The Beer-Ware License,432000,Adblock
+AdAway default blocklist,https://adaway.org/hosts.txt,,CC-BY-3,86400,Hostfile
+Ad filter list by Disconnect,https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt,,GPLv3,86400,DomainBlocklist
+AZORult Tracker,https://azorult-tracker.net/api/list/domain?format=plain,,Open Database License,86400,DomainBlocklist
+ABPindo,https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt,,GPLv3,345600,Adblock
+,https://zerodot1.gitlab.io/CoinBlockerLists/list_browser.txt,,GPLv3,86400,DomainBlocklist
+,https://v.firebog.net/hosts/BillStearns.txt,,GPLv3,86400,DomainBlocklist
+,https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt,,GPLv3,86400,DomainBlocklist
+,https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt,,GPLv3,86400,Hostfile
+,https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list,Mitchell Krog,MIT,86400,DomainBlocklist
+,https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list,Mitchell Krog,MIT,86400,IPBlocklist
+,https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt,,Public Domain,86400,DomainBlocklist
+,https://raw.githubusercontent.com/ligyxy/Blocklist/master/BLOCKLIST,,MIT,86400,DomainBlocklist
+,https://raw.githubusercontent.com/bjornstar/hosts/master/hosts,,The Unlicense,86400,Hostfile
+,https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt,,GPLv3+,86400,DomainAllowlist
+,https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json,,GPLv3,86400,PrivacyBadger
+,https://raw.githubusercontent.com/EFForg/badger-sett/master/results.json,,GPLv3,86400,PrivacyBadger
+,https://filtri-dns.ga/filtri.txt,,GPLv3,86400,Hostfile
+,https://blocklists.kitsapcreator.com/scam-spam.txt,,The Unlicense,86400,DomainBlocklist
+,https://blocklists.kitsapcreator.com/malware-malicious.txt,,The Unlicense,86400,DomainBlocklist
+,https://blocklists.kitsapcreator.com/general.txt,,The Unlicense,86400,DomainBlocklist
+,https://blocklists.kitsapcreator.com/ads.txt,,The Unlicense,86400,DomainBlocklist
