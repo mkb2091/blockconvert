@@ -1273,6 +1273,7 @@ faucethub.io
 fb.com
 fb.me
 fbcdn.net
+www.fbcdn.net
 external-lhr8-1.xx.fbcdn.net
 external.xx.fbcdn.net
 scontent-nrt1-1.xx.fbcdn.net
