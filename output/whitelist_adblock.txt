@@ -403,7 +403,6 @@
 @@||wd-prod-cp-us-west-1-fe.westus.cloudapp.azure.com^
 @@||api.monitor.azure.com^
 @@||en.bab.la^
-@@||www.bac-assets.com^
 @@||baidu.com^
 @@||hiphotos.baidu.com^
 @@||imgsa.baidu.com^
@@ -815,10 +814,8 @@
 @@||db.local.clamav.net^
 @@||cleanprint.net^
 @@||cleveland.com^
-@@||www.cleveland.com^
 @@||elinkeu.clickdimensions.com^
 @@||clickondetroit.com^
-@@||www.clickondetroit.com^
 @@||location-inference-westus.cloudapp.net^
 @@||skypeecs-prod-usw-0-b.cloudapp.net^
 @@||cloudflare-dns.com^
@@ -2048,7 +2045,6 @@
 @@||luckyorange.com^
 @@||www.luckyorange.com^
 @@||lwn.net^
-@@||www.lwn.net^
 @@||m.me^
 @@||forums.macrumors.com^
 @@||macys.com^
@@ -2076,7 +2072,6 @@
 @@||s.marketwatch.com^
 @@||mashable.com^
 @@||masslive.com^
-@@||www.masslive.com^
 @@||mathjax.org^
 @@||matterport.com^
 @@||my.matterport.com^
@@ -2226,7 +2221,6 @@
 @@||sj14.mktossl.com^
 @@||mlb.com^
 @@||mlive.com^
-@@||www.mlive.com^
 @@||mls.com^
 @@||gm.gds.mmstat.com^
 @@||gm.mmstat.com^
@@ -2374,7 +2368,6 @@
 @@||nj.com^
 @@||businessfinder.nj.com^
 @@||realestate.nj.com^
-@@||www.nj.com^
 @@||nk.pl^
 @@||nmcdn.us^
 @@||www.nmcdn.us^
@@ -2498,7 +2491,6 @@
 @@||webmail.orange.fr^
 @@||orbitz.com^
 @@||oregonlive.com^
-@@||www.oregonlive.com^
 @@||s7.orientaltrading.com^
 @@||fr.osdn.net^
 @@||osnews.com^
@@ -2549,7 +2541,6 @@
 @@||survey.pearsoncmg.com^
 @@||intersport.peerius.com^
 @@||pennlive.com^
-@@||www.pennlive.com^
 @@||assets.penny-arcade.com^
 @@||people.com^
 @@||performgroup.com^
