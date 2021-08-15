@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-08-12Z
+! Version: 2021-08-15Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-08-12Z
+! Last modified: 2021-08-15Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -111,7 +111,6 @@
 @@||vip5.afdorigin-prod-am02.afdogw.com^
 @@||vip5.afdorigin-prod-ch02.afdogw.com^
 @@||affirm.com^
-@@||www.affirm.com^
 @@||afi-b.com^
 @@||t.afi-b.com^
 @@||www.afi-b.com^
@@ -1029,7 +1028,6 @@
 @@||blog.csdn.net^
 @@||csdnimg.cn^
 @@||cstv.com^
-@@||www.cstv.com^
 @@||cst.cstwpush.com^
 @@||cursecdn.com^
 @@||curvesncombatboots.com^
@@ -2145,18 +2143,15 @@
 @@||xbox.ipv6.microsoft.com^
 @@||ris.api.iris.microsoft.com^
 @@||dmd.metaservices.microsoft.com^
-@@||collections-int.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
 @@||fe3.delivery.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
 @@||composerweb.dps.mp.microsoft.com^
-@@||discrequest.dps.mp.microsoft.com^
 @@||listingsweb-int.dps.mp.microsoft.com^
 @@||productsummary.dps.mp.microsoft.com^
 @@||stitchapi-int.dps.mp.microsoft.com^
 @@||variant.dps.mp.microsoft.com^
-@@||workflowservice-int.dps.mp.microsoft.com^
 @@||cmd-tip.dcat.dsp.mp.microsoft.com^
 @@||phx.sfs-prod.dcat.dsp.mp.microsoft.com^
 @@||phx.sfs-tip.dcat.dsp.mp.microsoft.com^
@@ -2164,39 +2159,14 @@
 @@||glb.adminportalapi-prod.trafficshaping.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
-@@||entitlements-int.mp.microsoft.com^
-@@||entitlements.mp.microsoft.com^
-@@||entitlementsfederation-int.mp.microsoft.com^
-@@||entitlementsfederation.mp.microsoft.com^
-@@||entitlementsfederationinternal-int.mp.microsoft.com^
-@@||entitlementsfederationinternal.mp.microsoft.com^
-@@||entitlementsinternal.mp.microsoft.com^
-@@||entitlementssubscriptionnotifications-int.mp.microsoft.com^
-@@||entitlementssubscriptionnotifications.mp.microsoft.com^
-@@||firstparty-collections-int.mp.microsoft.com^
-@@||firstparty-collections.mp.microsoft.com^
-@@||firstparty-entitlements-int.mp.microsoft.com^
-@@||firstparty-entitlements.mp.microsoft.com^
-@@||licensing-entitlements-int.mp.microsoft.com^
-@@||licensing-entitlements.mp.microsoft.com^
-@@||licensing-int.mp.microsoft.com^
 @@||licensing.mp.microsoft.com^
-@@||licensingphone-int.mp.microsoft.com^
-@@||licensingphone.mp.microsoft.com^
-@@||licensingwindows-int.mp.microsoft.com^
-@@||licensingwindows.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
-@@||licensing-entitlements-int.md.mp.microsoft.com^
-@@||licensing-entitlements.md.mp.microsoft.com^
-@@||licensingphone.md.mp.microsoft.com^
-@@||licensingwindows.md.mp.microsoft.com^
 @@||purchase.md.mp.microsoft.com^
 @@||uwpproc.mix.mp.microsoft.com^
 @@||purchase-int.mp.microsoft.com^
 @@||promopolicy.purchase-int.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
 @@||stagingretrieval-dcatbackend.mp.microsoft.com^
-@@||xbox-collections-int.mp.microsoft.com^
 @@||mscrl.microsoft.com^
 @@||officeclient.microsoft.com^
 @@||query.prod.cms.rt.microsoft.com^
@@ -2255,7 +2225,6 @@
 @@||mixnews.lv^
 @@||sj14.mktossl.com^
 @@||mlb.com^
-@@||www.mlb.com^
 @@||mlive.com^
 @@||www.mlive.com^
 @@||mls.com^
@@ -2354,6 +2323,7 @@
 @@||netbsd.org^
 @@||netdna-ssl.com^
 @@||nos.netease.com^
+@@||www.nos.netease.com^
 @@||netflix.com^
 @@||api-global.netflix.com^
 @@||appboot.netflix.com^
@@ -2947,8 +2917,6 @@
 @@||appinspect.splunk.com^
 @@||banner.splunk.com^
 @@||boo.splunk.com^
-@@||class.splunk.com^
-@@||instructorhub.class.splunk.com^
 @@||wbtbosh.class.splunk.com^
 @@||wbttest.class.splunk.com^
 @@||cloud.splunk.com^
@@ -2995,6 +2963,8 @@
 @@||spclient.wg.spotify.com^
 @@||wl.spotify.com^
 @@||www.spotify.com^
+@@||api.spreaker.com^
+@@||widget.spreaker.com^
 @@||springboardplatform.com^
 @@||www.springboardplatform.com^
 @@||squarespace.com^
@@ -3069,7 +3039,6 @@
 @@||taleo.net^
 @@||talkbusiness.net^
 @@||ads.talkbusiness.net^
-@@||www.talkbusiness.net^
 @@||tampermonkey.net^
 @@||na61-na62.wagbridge.alibaba.tanx.com^
 @@||phs.tanx.com^
@@ -3178,7 +3147,6 @@
 @@||web.tresorit.com^
 @@||go.trouter.io^
 @@||trumba.com^
-@@||www.trumba.com^
 @@||trustarc.com^
 @@||privacy-policy.truste.com^
 @@||trustkeeper.net^
