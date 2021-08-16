@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-08-15Z
+! Version: 2021-08-16Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-08-15Z
+! Last modified: 2021-08-16Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -75,7 +75,6 @@
 @@||adidas.com^
 @@||imagesrv.adition.com^
 @@||app.adjust.com^
-@@||crunchyroll.adnetasia.com^
 @@||yahoo.adnetasia.com^
 @@||3dns-3.adobe.com^
 @@||activate-sea.adobe.com^
@@ -1196,7 +1195,6 @@
 @@||epoch.com^
 @@||epoq.de^
 @@||espn.com^
-@@||www.espn.com^
 @@||a.espncdn.com^
 @@||et4.de^
 @@||ethn.io^
@@ -1451,7 +1449,6 @@
 @@||www.gleam.io^
 @@||ocsp.globalsign.com^
 @@||gmail.com^
-@@||www.gmail.com^
 @@||gmodules.com^
 @@||www.gmodules.com^
 @@||gmx.at^
@@ -1476,7 +1473,6 @@
 @@||google.com^
 @@||accounts.google.com^
 @@||adwords.google.com^
-@@||www.adwords.google.com^
 @@||apis.google.com^
 @@||appengine.google.com^
 @@||books.google.com^
@@ -1594,6 +1590,7 @@
 @@||meshtelemetry.googleapis.com^
 @@||mobilenetworkscoring-pa.googleapis.com^
 @@||monitoring.googleapis.com^
+@@||people-pa.googleapis.com^
 @@||play.googleapis.com^
 @@||serviceusage.googleapis.com^
 @@||stackdriver.googleapis.com^
@@ -2147,9 +2144,6 @@
 @@||productsummary.dps.mp.microsoft.com^
 @@||stitchapi-int.dps.mp.microsoft.com^
 @@||variant.dps.mp.microsoft.com^
-@@||cmd-tip.dcat.dsp.mp.microsoft.com^
-@@||phx.sfs-prod.dcat.dsp.mp.microsoft.com^
-@@||phx.sfs-tip.dcat.dsp.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||glb.adminportalapi-prod.trafficshaping.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
@@ -2853,7 +2847,6 @@
 @@||campaign.consumer.entitlement.skype.com^
 @@||secure.consumer.entitlement.skype.com^
 @@||login.skype.com^
-@@||notifications.skype.com^
 @@||peoplerecommendations.skype.com^
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
@@ -2913,8 +2906,6 @@
 @@||cloud.splunk.com^
 @@||conf.splunk.com^
 @@||dc10-gw2.splunk.com^
-@@||dev.splunk.com^
-@@||playground.dev.splunk.com^
 @@||api.playground.dev.splunk.com^
 @@||events.splunk.com^
 @@||guides.splunk.com^
@@ -2926,7 +2917,6 @@
 @@||dsp.playground.scp.splunk.com^
 @@||dsp.staging.scp.splunk.com^
 @@||region-iad10.api.scs.splunk.com^
-@@||app.scs.splunk.com^
 @@||auth.scs.splunk.com^
 @@||region-iad10.auth.scs.splunk.com^
 @@||admin.playground.scs.splunk.com^
@@ -2934,8 +2924,6 @@
 @@||auth.playground.scs.splunk.com^
 @@||region-dub10.auth.playground.scs.splunk.com^
 @@||pulsar.playground.scs.splunk.com^
-@@||api.staging.scs.splunk.com^
-@@||region-iad10.api.staging.scs.splunk.com^
 @@||app-admin.staging.scs.splunk.com^
 @@||services.splunk.com^
 @@||signatures.splunk.com^
