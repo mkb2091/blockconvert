@@ -363,7 +363,6 @@
 @@||cdn.arstechnica.net^
 @@||art19.com^
 @@||asics.com^
-@@||www.asics.com^
 @@||ask.fm^
 @@||askubuntu.com^
 @@||ajax.aspnetcdn.com^
@@ -942,7 +941,6 @@
 @@||theregister.co.uk^
 @@||www.theregister.co.uk^
 @@||codeberg.org^
-@@||www.codeberg.org^
 @@||codecanyon.net^
 @@||codepen.io^
 @@||codesandbox.io^
@@ -978,7 +976,6 @@
 @@||ocsp.comodoca4.com^
 @@||confirmit.com^
 @@||survey.euro.confirmit.com^
-@@||www.confirmit.com^
 @@||cws.conviva.com^
 @@||www.cws.conviva.com^
 @@||zee.cws.conviva.com^
@@ -1094,7 +1091,6 @@
 @@||forum.dobreprogramy.pl^
 @@||screendoor.dobt.co^
 @@||documentcloud.org^
-@@||www.documentcloud.org^
 @@||donorbox.org^
 @@||forum.doom9.org^
 @@||cdn.dopc.cz^
@@ -1668,7 +1664,6 @@
 @@||version.hybrid.api.here.com^
 @@||herokuapp.com^
 @@||us-east-1-a.route.herokuapp.com^
-@@||www.herokuapp.com^
 @@||heureka.cz^
 @@||highcharts.com^
 @@||code.highcharts.com^
@@ -1886,7 +1881,6 @@
 @@||kickapps.com^
 @@||kickstarter.com^
 @@||static.kickstarter.com^
-@@||www.kickstarter.com^
 @@||kickstatic.com^
 @@||kidsfootlocker.com^
 @@||candycrushsoda.king.com^
@@ -1990,7 +1984,6 @@
 @@||data.logentries.com^
 @@||heroku.data.logentries.com^
 @@||eu.logentries.com^
-@@||data.eu.logentries.com^
 @@||heroku.logentries.com^
 @@||info.logentries.com^
 @@||js.logentries.com^
@@ -2139,9 +2132,7 @@
 @@||fe3.delivery.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
 @@||composerweb.dps.mp.microsoft.com^
-@@||listingsweb-int.dps.mp.microsoft.com^
 @@||productsummary.dps.mp.microsoft.com^
-@@||stitchapi-int.dps.mp.microsoft.com^
 @@||variant.dps.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
@@ -2892,7 +2883,6 @@
 @@||api.splunk.com^
 @@||appinspect.splunk.com^
 @@||banner.splunk.com^
-@@||boo.splunk.com^
 @@||wbtbosh.class.splunk.com^
 @@||cloud.splunk.com^
 @@||conf.splunk.com^
@@ -2903,7 +2893,6 @@
 @@||lhr2-gw2.splunk.com^
 @@||mint.splunk.com^
 @@||response.splunk.com^
-@@||dsp.playground.scp.splunk.com^
 @@||dsp.staging.scp.splunk.com^
 @@||region-iad10.api.scs.splunk.com^
 @@||auth.scs.splunk.com^
@@ -2912,8 +2901,6 @@
 @@||api.playground.scs.splunk.com^
 @@||auth.playground.scs.splunk.com^
 @@||region-dub10.auth.playground.scs.splunk.com^
-@@||pulsar.playground.scs.splunk.com^
-@@||app-admin.staging.scs.splunk.com^
 @@||services.splunk.com^
 @@||signatures.splunk.com^
 @@||splunkbase.splunk.com^
@@ -2939,7 +2926,6 @@
 @@||squaretrade.com^
 @@||www.squaretrade.com^
 @@||squareup.com^
-@@||www.squareup.com^
 @@||squidblacklist.org^
 @@||squirt.io^
 @@||email.ssdnodes.com^
@@ -3028,6 +3014,7 @@
 @@||radiofrance.targetspot.com^
 @@||tarteaucitron.io^
 @@||tawk.to^
+@@||tmx.td.com^
 @@||my.tealiumiq.com^
 @@||teamviewer.com^
 @@||techguy.org^
@@ -4536,7 +4523,6 @@
 @@||sports.yahoo.com^
 @@||www.yahoo.com^
 @@||yahoo.net^
-@@||www.yahoo.net^
 @@||yahooapis.com^
 @@||geo-applefinance-cache.internal.query.g03.yahoodns.net^
 @@||redirect.appmetrica.yandex.com^

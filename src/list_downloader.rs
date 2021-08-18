@@ -75,9 +75,7 @@ async fn download_list_if_expired(
                         last_modified.timestamp_subsec_nanos(),
                     );
 
-                    if filetime::set_file_times(&path, target_time, target_time).is_err() {
-                        println!("Failed to set file time for {:?}", record.url)
-                    }
+                    let _ = filetime::set_file_times(&path, target_time, target_time);
                 };
             match response.status() {
                 reqwest::StatusCode::OK => {

@@ -580,6 +580,7 @@ time.samsungcloudsolution.com # Issues #3, blocks services like Plex, YouTube an
 time.windows.com
 *.tlu.dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
+tmx.td.com # https://github.com/mkb2091/blockconvert/issues/102 Breaks Canadian finance website
 to-do.microsoft.com
 toptenreviews.com
 tracker.tvnihon.com
