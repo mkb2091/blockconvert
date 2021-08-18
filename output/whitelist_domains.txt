@@ -249,7 +249,6 @@ aax-us-east.amazon-adsystem.com
 s.amazon-adsystem.com
 amazon.at
 amazon.ca
-www.amazon.ca
 amazon.cn
 amazon.com
 arcus-uswest.amazon.com
@@ -2136,15 +2135,12 @@ productsummary.dps.mp.microsoft.com
 stitchapi-int.dps.mp.microsoft.com
 variant.dps.mp.microsoft.com
 geo-prod.do.dsp.mp.microsoft.com
-glb.adminportalapi-prod.trafficshaping.dsp.mp.microsoft.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 licensing.mp.microsoft.com
 collections.md.mp.microsoft.com
 purchase.md.mp.microsoft.com
 uwpproc.mix.mp.microsoft.com
-purchase-int.mp.microsoft.com
-promopolicy.purchase-int.mp.microsoft.com
 purchase.mp.microsoft.com
 stagingretrieval-dcatbackend.mp.microsoft.com
 mscrl.microsoft.com
@@ -2166,7 +2162,6 @@ support.microsoft.com
 watson.telemetry.microsoft.com
 to-do.microsoft.com
 update.microsoft.com
-catalog.update.microsoft.com
 fe2.update.microsoft.com
 sls.update.microsoft.com
 wallet.microsoft.com
@@ -2412,7 +2407,6 @@ okta.com
 olark.com
 www.olark.com
 old-games.org
-mercury.old-games.org
 omny.fm
 omroep.nl
 amazoncustomerservice.d2.sc.omtrdc.net
@@ -2611,7 +2605,6 @@ postimg.cc
 powerreviews.com
 powr.io
 ppt.cc
-www.ppt.cc
 full.pr0gramm.com
 pricegrabber.com
 printfriendly.com
@@ -2713,7 +2706,6 @@ www.redirectingat.com
 redtube.com
 www.redtube.com
 reebok.com
-www.reebok.com
 refinery29.com
 cdngeneral.rentcafe.com
 report-uri.com
@@ -2893,18 +2885,15 @@ appinspect.splunk.com
 banner.splunk.com
 boo.splunk.com
 wbtbosh.class.splunk.com
-wbttest.class.splunk.com
 cloud.splunk.com
 conf.splunk.com
 dc10-gw2.splunk.com
-api.playground.dev.splunk.com
 events.splunk.com
 guides.splunk.com
 hk2-gw2.splunk.com
 lhr2-gw2.splunk.com
 mint.splunk.com
 response.splunk.com
-playground.scp.splunk.com
 dsp.playground.scp.splunk.com
 dsp.staging.scp.splunk.com
 region-iad10.api.scs.splunk.com
@@ -3060,7 +3049,6 @@ thefreethoughtproject.com
 thehill.com
 thenextweb.com
 theoldnet.com
-www.theoldnet.com
 thepiratebay.org
 theplatform.com
 thetvdb.com
