@@ -1018,7 +1018,6 @@ custhelp.com
 track.customer.io
 e.customeriomail.com
 cutcaptcha.com
-www.cutcaptcha.com
 cvs.com
 cybercrime-tracker.net
 d3js.org
@@ -1102,7 +1101,6 @@ dl-web.dropbox.com
 dl.dropbox.com
 ns1.dropbox.com
 ns2.dropbox.com
-www.dropbox.com
 dl.dropboxusercontent.com
 drudgereport.com
 secure.dshield.org
@@ -1183,6 +1181,7 @@ epoq.de
 espn.com
 a.espncdn.com
 et4.de
+ethermine.org
 ethn.io
 www.ethn.io
 eventbrite.com
@@ -1744,7 +1743,6 @@ thumbs2.imgbox.com
 imgchili.com
 imgfarm.com
 imgspice.com
-www.imgspice.com
 imgur.com
 i.imgur.com
 p.imgur.com
@@ -2080,7 +2078,6 @@ megaphone.fm
 menshealth.com
 merriam-webster.com
 mesh.com
-www.mesh.com
 messenger.com
 mfstatic.cz
 f1.g.mi.com
@@ -2122,18 +2119,12 @@ dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 fe3.delivery.mp.microsoft.com
 displaycatalog.mp.microsoft.com
-composerweb.dps.mp.microsoft.com
-productsummary.dps.mp.microsoft.com
-variant.dps.mp.microsoft.com
 geo-prod.do.dsp.mp.microsoft.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 licensing.mp.microsoft.com
 collections.md.mp.microsoft.com
-purchase.md.mp.microsoft.com
-uwpproc.mix.mp.microsoft.com
 purchase.mp.microsoft.com
-stagingretrieval-dcatbackend.mp.microsoft.com
 mscrl.microsoft.com
 officeclient.microsoft.com
 query.prod.cms.rt.microsoft.com
@@ -2333,7 +2324,6 @@ nflximg.com
 ngpvan.com
 nhl.com
 nike.com
-www.nike.com
 ning.com
 nitroflare.com
 nj.com
@@ -2619,7 +2609,6 @@ subscriptions.pstmrk.it
 publicsuffix.org
 publiekeomroep.nl
 publix.com
-www.publix.com
 img.purch.com
 api.pushbullet.com
 widget.pushbullet.com
@@ -2836,7 +2825,6 @@ public.slidesharecdn.com
 smallseotools.com
 smugmug.com
 snapchat.com
-www.snapchat.com
 snapengage.com
 www.snapengage.com
 sndcdn.com
@@ -2874,27 +2862,12 @@ spiegel-de.spiegel.de
 api.splunk.com
 appinspect.splunk.com
 banner.splunk.com
-wbtbosh.class.splunk.com
 cloud.splunk.com
 conf.splunk.com
-dc10-gw2.splunk.com
 events.splunk.com
-guides.splunk.com
-hk2-gw2.splunk.com
-lhr2-gw2.splunk.com
 mint.splunk.com
 response.splunk.com
-dsp.staging.scp.splunk.com
-region-iad10.api.scs.splunk.com
-auth.scs.splunk.com
-region-iad10.auth.scs.splunk.com
-admin.playground.scs.splunk.com
-api.playground.scs.splunk.com
-auth.playground.scs.splunk.com
-region-dub10.auth.playground.scs.splunk.com
 services.splunk.com
-signatures.splunk.com
-splunkbase.splunk.com
 post.spmailtechnol.com
 sport.pl
 spot.im
@@ -3057,7 +3030,6 @@ www.tinypass.com
 tinypic.com
 tinyurl.com
 tlaol.com
-www.tlaol.com
 tlc.com
 tld-list.com
 tmblr.co
@@ -3190,6 +3162,7 @@ amp.usatoday.com
 api.usebutton.com
 userapi.com
 pp.userapi.com
+usercentrics.eu
 userscloud.com
 userscripts-mirror.org
 ocsp.usertrust.com
@@ -3229,7 +3202,6 @@ videos.vidible.tv
 www.vidible.tv
 viduki.com
 vidyard.com
-www.vidyard.com
 viglink.com
 redirect.viglink.com
 www.viglink.com
@@ -4396,7 +4368,6 @@ fast.wistia.net
 wix.com
 tg1.premium.db4.wix.com
 tg1.premium.dc11.wix.com
-www.wix.com
 balancer.wixdns.net
 www17.wixdns.net
 static.wixstatic.com
