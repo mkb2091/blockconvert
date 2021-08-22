@@ -2614,6 +2614,7 @@ api.pushbullet.com
 widget.pushbullet.com
 js.pusher.com
 stats.pusher.com
+ws-eu.pusher.com
 ws-mt1.pusher.com
 ws-zeplin.pusher.com
 ws.pusherapp.com
@@ -4495,7 +4496,6 @@ redirect.appmetrica.yandex.com
 174640.redirect.appmetrica.yandex.com
 19531.redirect.appmetrica.yandex.com
 19534.redirect.appmetrica.yandex.com
-2.redirect.appmetrica.yandex.com
 2171938.redirect.appmetrica.yandex.com
 21925.redirect.appmetrica.yandex.com
 25378.redirect.appmetrica.yandex.com

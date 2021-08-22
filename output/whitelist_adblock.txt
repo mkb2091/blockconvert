@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-08-20Z
+! Version: 2021-08-22Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-08-20Z
+! Last modified: 2021-08-22Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -2623,6 +2623,7 @@
 @@||widget.pushbullet.com^
 @@||js.pusher.com^
 @@||stats.pusher.com^
+@@||ws-eu.pusher.com^
 @@||ws-mt1.pusher.com^
 @@||ws-zeplin.pusher.com^
 @@||ws.pusherapp.com^
@@ -4504,7 +4505,6 @@
 @@||174640.redirect.appmetrica.yandex.com^
 @@||19531.redirect.appmetrica.yandex.com^
 @@||19534.redirect.appmetrica.yandex.com^
-@@||2.redirect.appmetrica.yandex.com^
 @@||2171938.redirect.appmetrica.yandex.com^
 @@||21925.redirect.appmetrica.yandex.com^
 @@||25378.redirect.appmetrica.yandex.com^
