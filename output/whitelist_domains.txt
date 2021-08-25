@@ -1165,7 +1165,6 @@ i-cdn.embed.ly
 i.embed.ly
 cdn.embedly.com
 www.emjcd.com
-watchdog-ultimate.energized.pro
 watchdog.energized.pro
 engadget.com
 www.engadget.com
@@ -1275,7 +1274,6 @@ feedly.com
 fide.com
 filefactory.com
 filepicker.io
-www.filepicker.io
 filesmonster.com
 fili.cc
 www.fili.cc
@@ -1994,7 +1992,6 @@ mx03.logentries.com
 nx.logentries.com
 partners.logentries.com
 platform.logentries.com
-pull.logentries.com
 rep.logentries.com
 rest.logentries.com
 us.logentries.com
@@ -2015,6 +2012,7 @@ loki.network
 i.loli.net
 plugins.longtailvideo.com
 securel.longtailvideo.com
+secureplugins.longtailvideo.com
 lowendbox.com
 lowes.com
 cindyholbrook.lpages.co
@@ -2649,7 +2647,6 @@ player.radio.com
 radiofrance.fr
 radiostacja.pl
 rakuten.com
-www.rakuten.com
 rambler.ru
 ranker.com
 images.rapgenius.com
@@ -2685,7 +2682,6 @@ redirectingat.com
 go.redirectingat.com
 www.redirectingat.com
 redtube.com
-www.redtube.com
 reebok.com
 refinery29.com
 cdngeneral.rentcafe.com
