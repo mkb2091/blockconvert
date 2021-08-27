@@ -42,6 +42,7 @@ accuweather.com
 vortex.accuweather.com
 www.accuweather.com
 acehardware.com
+www.acehardware.com
 delivery.acm.org
 actionnetwork.org
 valimail.actonservice.com
@@ -1259,7 +1260,6 @@ faucethub.io
 fb.com
 fb.me
 fbcdn.net
-www.fbcdn.net
 external-lhr8-1.xx.fbcdn.net
 external.xx.fbcdn.net
 scontent-nrt1-1.xx.fbcdn.net
@@ -2822,6 +2822,7 @@ public.slidesharecdn.com
 smallseotools.com
 smugmug.com
 snapchat.com
+www.snapchat.com
 snapengage.com
 www.snapengage.com
 sndcdn.com

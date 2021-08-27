@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-08-25Z
+! Version: 2021-08-27Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-08-25Z
+! Last modified: 2021-08-27Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -51,6 +51,7 @@
 @@||vortex.accuweather.com^
 @@||www.accuweather.com^
 @@||acehardware.com^
+@@||www.acehardware.com^
 @@||delivery.acm.org^
 @@||actionnetwork.org^
 @@||valimail.actonservice.com^
@@ -1268,7 +1269,6 @@
 @@||fb.com^
 @@||fb.me^
 @@||fbcdn.net^
-@@||www.fbcdn.net^
 @@||external-lhr8-1.xx.fbcdn.net^
 @@||external.xx.fbcdn.net^
 @@||scontent-nrt1-1.xx.fbcdn.net^
@@ -2831,6 +2831,7 @@
 @@||smallseotools.com^
 @@||smugmug.com^
 @@||snapchat.com^
+@@||www.snapchat.com^
 @@||snapengage.com^
 @@||www.snapengage.com^
 @@||sndcdn.com^
