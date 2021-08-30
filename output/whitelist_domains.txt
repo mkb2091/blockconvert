@@ -1173,6 +1173,7 @@ nexus.ensighten.com
 entireweb.com
 playerstatic.entropymedia.com
 envato.com
+1.envato.market
 eonline.com
 pp.ephapay.net
 tracking.epicgames.com
@@ -1260,6 +1261,7 @@ faucethub.io
 fb.com
 fb.me
 fbcdn.net
+www.fbcdn.net
 external-lhr8-1.xx.fbcdn.net
 external.xx.fbcdn.net
 scontent-nrt1-1.xx.fbcdn.net
@@ -1453,6 +1455,7 @@ gogousenet.com
 www.gogousenet.com
 goo.gl
 play.app.goo.gl
+www.goo.gl
 google.com
 accounts.google.com
 adwords.google.com
@@ -1614,6 +1617,7 @@ gravatar.com
 secure.gravatar.com
 pistachio-cdn.graze.com
 greasyfork.org
+www.greasyfork.org
 greenhouse.io
 groupon.com
 rest.growinginteractive.com
@@ -1711,6 +1715,7 @@ icanhazip.com
 archive.icann.org
 icbdr.com
 icloud.com
+www.icloud.com
 idg.se
 mpsnare.iesnare.com
 ifmo.ru
@@ -2048,6 +2053,7 @@ marketwatch.com
 s.marketwatch.com
 mashable.com
 masslive.com
+www.masslive.com
 mathjax.org
 matterport.com
 my.matterport.com
@@ -2113,16 +2119,34 @@ win10.ipv6.microsoft.com
 xbox.ipv6.microsoft.com
 ris.api.iris.microsoft.com
 dmd.metaservices.microsoft.com
+productcatalogservice-df.dce.mp.microsoft.com
 dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 fe3.delivery.mp.microsoft.com
 displaycatalog.mp.microsoft.com
+commercial.displaycatalog.mp.microsoft.com
+composerapi-int.dps.mp.microsoft.com
 geo-prod.do.dsp.mp.microsoft.com
+geover-int.do.dsp.mp.microsoft.com
+geover-prod.do.dsp.mp.microsoft.com
+orgeover-int.do.dsp.mp.microsoft.com
+orgeover-prod.do.dsp.mp.microsoft.com
+glb.adminportalapi-dev.trafficshaping.dsp.mp.microsoft.com
+glb.adminportalapi-int.trafficshaping.dsp.mp.microsoft.com
+glb.adminportalapi-prod.trafficshaping.dsp.mp.microsoft.com
+auar.trafficshaping.dsp.mp.microsoft.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 licensing.mp.microsoft.com
 collections.md.mp.microsoft.com
+displaycatalog.md.mp.microsoft.com
+uwpproc-int.mix.mp.microsoft.com
 purchase.mp.microsoft.com
+staging-dcatbackend-int.mp.microsoft.com
+wus2.staging-dcatbackend-int.mp.microsoft.com
+stagingretrieval-dcatbackend-int.mp.microsoft.com
+wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com
+xbox-displaycatalog.mp.microsoft.com
 mscrl.microsoft.com
 officeclient.microsoft.com
 query.prod.cms.rt.microsoft.com
@@ -2181,6 +2205,7 @@ mixnews.lv
 sj14.mktossl.com
 mlb.com
 mlive.com
+www.mlive.com
 mls.com
 gm.gds.mmstat.com
 gm.mmstat.com
@@ -2277,7 +2302,6 @@ news.ebc.net.tw
 netbsd.org
 netdna-ssl.com
 nos.netease.com
-www.nos.netease.com
 netflix.com
 api-global.netflix.com
 appboot.netflix.com
@@ -2327,6 +2351,7 @@ nitroflare.com
 nj.com
 businessfinder.nj.com
 realestate.nj.com
+www.nj.com
 nk.pl
 nmcdn.us
 www.nmcdn.us
@@ -2354,6 +2379,7 @@ arc.msn.com.nsatc.net
 g.msn.com.nsatc.net
 pool.ntp.org
 2.android.pool.ntp.org
+www.pool.ntp.org
 media.nu.nl
 ota-downloads.nvidia.com
 ny.com
@@ -2449,6 +2475,7 @@ orange.fr
 webmail.orange.fr
 orbitz.com
 oregonlive.com
+www.oregonlive.com
 s7.orientaltrading.com
 fr.osdn.net
 osnews.com
@@ -2499,6 +2526,7 @@ media.pearsoncmg.com
 survey.pearsoncmg.com
 intersport.peerius.com
 pennlive.com
+www.pennlive.com
 assets.penny-arcade.com
 people.com
 performgroup.com
@@ -2860,11 +2888,19 @@ spiegel-de.spiegel.de
 api.splunk.com
 appinspect.splunk.com
 banner.splunk.com
+lab.manager.class.splunk.com
 cloud.splunk.com
 conf.splunk.com
 events.splunk.com
 mint.splunk.com
 response.splunk.com
+admin.scs.splunk.com
+scs001-dub10.admin.scs.splunk.com
+api.scs.splunk.com
+region-dub10.api.scs.splunk.com
+auth.scs.splunk.com
+region-dub10.auth.scs.splunk.com
+forwarders.scs.splunk.com
 services.splunk.com
 post.spmailtechnol.com
 sport.pl
@@ -3189,6 +3225,7 @@ viddler.com
 videocopilot.net
 videodelivery.net
 videolan.org
+www.videolan.org
 videopress.com
 thumbs.videopress.com
 videos.videopress.com
@@ -4493,6 +4530,7 @@ redirect.appmetrica.yandex.com
 174640.redirect.appmetrica.yandex.com
 19531.redirect.appmetrica.yandex.com
 19534.redirect.appmetrica.yandex.com
+2.redirect.appmetrica.yandex.com
 2171938.redirect.appmetrica.yandex.com
 21925.redirect.appmetrica.yandex.com
 25378.redirect.appmetrica.yandex.com
