@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-08-30Z
+! Version: 2021-09-01Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-08-30Z
+! Last modified: 2021-09-01Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -1985,6 +1985,7 @@
 @@||data.logentries.com^
 @@||heroku.data.logentries.com^
 @@||eu.logentries.com^
+@@||rest.eu.logentries.com^
 @@||heroku.logentries.com^
 @@||info.logentries.com^
 @@||js.logentries.com^
@@ -2132,9 +2133,11 @@
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
 @@||fe3.delivery.mp.microsoft.com^
+@@||digitalattach.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
 @@||commercial.displaycatalog.mp.microsoft.com^
 @@||composerapi-int.dps.mp.microsoft.com^
+@@||workflowservice.dps.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||geover-int.do.dsp.mp.microsoft.com^
 @@||geover-prod.do.dsp.mp.microsoft.com^
@@ -2146,6 +2149,7 @@
 @@||auar.trafficshaping.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
+@@||inv-int.mp.microsoft.com^
 @@||licensing.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
 @@||displaycatalog.md.mp.microsoft.com^
@@ -2437,7 +2441,6 @@
 @@||onet.pl^
 @@||sport.onet.pl^
 @@||onetrust.com^
-@@||www.onetrust.com^
 @@||onion.to^
 @@||h-ebay.online-metrix.net^
 @@||h-sdk.online-metrix.net^
@@ -2482,6 +2485,7 @@
 @@||oracle.com^
 @@||orange.fr^
 @@||webmail.orange.fr^
+@@||www.orange.fr^
 @@||orbitz.com^
 @@||oregonlive.com^
 @@||www.oregonlive.com^
@@ -2847,6 +2851,14 @@
 @@||peoplerecommendations.skype.com^
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
+@@||rps.skype.com^
+@@||skypetoken.skype.com^
+@@||rps-asea.skypetoken.skype.com^
+@@||rps-euno.skypetoken.skype.com^
+@@||rps-euwe.skypetoken.skype.com^
+@@||rps-usea.skypetoken.skype.com^
+@@||rps-uswe.skypetoken.skype.com^
+@@||rps.skypetoken.skype.com^
 @@||trap.skype.com^
 @@||slack-redir.net^
 @@||files.slack.com^
@@ -2903,6 +2915,10 @@
 @@||events.splunk.com^
 @@||mint.splunk.com^
 @@||response.splunk.com^
+@@||scp.splunk.com^
+@@||playground.scp.splunk.com^
+@@||admin.playground.scp.splunk.com^
+@@||legacy.admin.playground.scp.splunk.com^
 @@||admin.scs.splunk.com^
 @@||scs001-dub10.admin.scs.splunk.com^
 @@||api.scs.splunk.com^
@@ -4440,6 +4456,7 @@
 @@||wpengine.com^
 @@||www.wshifen.com^
 @@||wsj.com^
+@@||www.wsj.com^
 @@||mw1.wsj.net^
 @@||wtkr.com^
 @@||wufoo.com^
