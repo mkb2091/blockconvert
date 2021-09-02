@@ -730,6 +730,7 @@ bowercdn.net
 boxrec.com
 braintreegateway.com
 brakrock.be
+www.brcdn.com
 breakingburner.com
 brightcove.com
 admin.brightcove.com
@@ -785,6 +786,7 @@ scontent-iad3-1.cdninstagram.com
 scontent.cdninstagram.com
 cdnpk.com
 2-01-2c3e-003d.cdx.cedexis.net
+2-01-2c3e-005c.cdx.cedexis.net
 cern.ch
 ceros.com
 cesanta.com
@@ -3089,6 +3091,7 @@ tomshardware.com
 it.toolbox.com
 toptenreviews.com
 torbit.com
+www.torbit.com
 torrentfreak.com
 townnews.com
 toysrus.com
