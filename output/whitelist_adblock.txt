@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-09-02Z
+! Version: 2021-09-05Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-09-02Z
+! Last modified: 2021-09-05Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -21,6 +21,8 @@
 @@||viarnd.112.2o7.net^
 @@||www.112.2o7.net^
 @@||122.2o7.net^
+@@||citiintl.122.2o7.net^
+@@||www.citiintl.122.2o7.net^
 @@||cdn.gigya.commes.122.2o7.net^
 @@||www.122.2o7.net^
 @@||2shared.com^
@@ -111,6 +113,7 @@
 @@||vip5.afdorigin-prod-am02.afdogw.com^
 @@||vip5.afdorigin-prod-ch02.afdogw.com^
 @@||affirm.com^
+@@||www.affirm.com^
 @@||afi-b.com^
 @@||t.afi-b.com^
 @@||www.afi-b.com^
@@ -425,7 +428,6 @@
 @@||battle.net^
 @@||bazaarvoice.com^
 @@||007jamesbondfragrances.ugc.bazaarvoice.com^
-@@||adidas.ugc.bazaarvoice.com^
 @@||adidasjp.ugc.bazaarvoice.com^
 @@||adobe.ugc.bazaarvoice.com^
 @@||ae.ugc.bazaarvoice.com^
@@ -445,19 +447,14 @@
 @@||att.ugc.bazaarvoice.com^
 @@||aviva.ugc.bazaarvoice.com^
 @@||avon-ru.ugc.bazaarvoice.com^
-@@||bandaid.ugc.bazaarvoice.com^
 @@||bandaidca.ugc.bazaarvoice.com^
-@@||bebe.ugc.bazaarvoice.com^
-@@||benadryl.ugc.bazaarvoice.com^
 @@||benadrylca.ugc.bazaarvoice.com^
 @@||bengay.ugc.bazaarvoice.com^
 @@||benylinca.ugc.bazaarvoice.com^
 @@||bestbuy.ugc.bazaarvoice.com^
 @@||bettaelectrical.ugc.bazaarvoice.com^
 @@||bhldn.ugc.bazaarvoice.com^
-@@||bigfishgames.ugc.bazaarvoice.com^
 @@||bol.ugc.bazaarvoice.com^
-@@||bonmarche.ugc.bazaarvoice.com^
 @@||boscovs.ugc.bazaarvoice.com^
 @@||boulanger.ugc.bazaarvoice.com^
 @@||brother-emea.ugc.bazaarvoice.com^
@@ -490,7 +487,6 @@
 @@||cubesmart.ugc.bazaarvoice.com^
 @@||cvspharmacydrugs.ugc.bazaarvoice.com^
 @@||cyberport.ugc.bazaarvoice.com^
-@@||dabao.ugc.bazaarvoice.com^
 @@||danmurphys.ugc.bazaarvoice.com^
 @@||davidsbridal.ugc.bazaarvoice.com^
 @@||disneystore.ugc.bazaarvoice.com^
@@ -500,7 +496,6 @@
 @@||display-test.ugc.bazaarvoice.com^
 @@||display.ugc.bazaarvoice.com^
 @@||dorothyperkins.ugc.bazaarvoice.com^
-@@||douglas.ugc.bazaarvoice.com^
 @@||dutchboy.ugc.bazaarvoice.com^
 @@||dyson.ugc.bazaarvoice.com^
 @@||electrolux.ugc.bazaarvoice.com^
@@ -508,12 +503,10 @@
 @@||epson-store.ugc.bazaarvoice.com^
 @@||epsonenau.ugc.bazaarvoice.com^
 @@||ernestjones.ugc.bazaarvoice.com^
-@@||escentual.ugc.bazaarvoice.com^
 @@||esteelauder.ugc.bazaarvoice.com^
 @@||evans.ugc.bazaarvoice.com^
 @@||evanscycles-uk.ugc.bazaarvoice.com^
 @@||express.ugc.bazaarvoice.com^
-@@||exxonmobil.ugc.bazaarvoice.com^
 @@||fatface.ugc.bazaarvoice.com^
 @@||fellowes.ugc.bazaarvoice.com^
 @@||furniturerow.ugc.bazaarvoice.com^
@@ -542,7 +535,6 @@
 @@||johnfrieda.ugc.bazaarvoice.com^
 @@||karstadt.ugc.bazaarvoice.com^
 @@||katespade.ugc.bazaarvoice.com^
-@@||kbb.ugc.bazaarvoice.com^
 @@||kiehls-us.ugc.bazaarvoice.com^
 @@||kiehlscanada-en-ca.ugc.bazaarvoice.com^
 @@||kodakeurope.ugc.bazaarvoice.com^
@@ -576,7 +568,6 @@
 @@||nikon.ugc.bazaarvoice.com^
 @@||nizoral.ugc.bazaarvoice.com^
 @@||norauto.ugc.bazaarvoice.com^
-@@||nordstrom.ugc.bazaarvoice.com^
 @@||ob.ugc.bazaarvoice.com^
 @@||odysseygolf.ugc.bazaarvoice.com^
 @@||officedesigns.ugc.bazaarvoice.com^
@@ -585,7 +576,6 @@
 @@||orange.ugc.bazaarvoice.com^
 @@||orchardbrands.ugc.bazaarvoice.com^
 @@||oriflame.ugc.bazaarvoice.com^
-@@||orion.ugc.bazaarvoice.com^
 @@||pacificcoast.ugc.bazaarvoice.com^
 @@||painton.ugc.bazaarvoice.com^
 @@||pediasure.ugc.bazaarvoice.com^
@@ -593,11 +583,9 @@
 @@||poetryfashion.ugc.bazaarvoice.com^
 @@||puma.ugc.bazaarvoice.com^
 @@||pumajapan.ugc.bazaarvoice.com^
-@@||purdy.ugc.bazaarvoice.com^
 @@||qvc.ugc.bazaarvoice.com^
 @@||reebokglobal.ugc.bazaarvoice.com^
 @@||reebokjp.ugc.bazaarvoice.com^
-@@||restaurant.ugc.bazaarvoice.com^
 @@||ryka.ugc.bazaarvoice.com^
 @@||sainsburysgrocery.ugc.bazaarvoice.com^
 @@||scan.ugc.bazaarvoice.com^
@@ -625,10 +613,8 @@
 @@||thebodyshopca.ugc.bazaarvoice.com^
 @@||theentertainer.ugc.bazaarvoice.com^
 @@||toppstiles.ugc.bazaarvoice.com^
-@@||toro.ugc.bazaarvoice.com^
 @@||toryburch.ugc.bazaarvoice.com^
 @@||toyo.ugc.bazaarvoice.com^
-@@||toyota.ugc.bazaarvoice.com^
 @@||truevalueprojects.ugc.bazaarvoice.com^
 @@||turbotax.ugc.bazaarvoice.com^
 @@||tvsn.ugc.bazaarvoice.com^
@@ -836,11 +822,9 @@
 @@||1dot1dot1dot2.cloudflare-dns.com^
 @@||1dot1dot1dot3.cloudflare-dns.com^
 @@||28mozilla.cloudflare-dns.com^
-@@||api.cloudflare-dns.com^
 @@||azure.cloudflare-dns.com^
 @@||bc81c677f335277f324c3ce13a.cloudflare-dns.com^
 @@||chrome-security.cloudflare-dns.com^
-@@||chrome.cloudflare-dns.com^
 @@||claro.cloudflare-dns.com^
 @@||cloudflare.cloudflare-dns.com^
 @@||com.cloudflare-dns.com^
@@ -1035,6 +1019,7 @@
 @@||d3js.org^
 @@||admin.dable.io^
 @@||dailymotion.com^
+@@||www.dailymotion.com^
 @@||danid.dk^
 @@||www.datadoghq-browser-agent.com^
 @@||datafilehost.com^
@@ -1117,7 +1102,6 @@
 @@||drudgereport.com^
 @@||secure.dshield.org^
 @@||duckdns.org^
-@@||www.duckdns.org^
 @@||duckduckgo.com^
 @@||duken.nl^
 @@||www.duken.nl^
@@ -2485,6 +2469,7 @@
 @@||cdn3.optimizely.com^
 @@||www.optimizely.com^
 @@||oracle.com^
+@@||www.oracle.com^
 @@||orange.fr^
 @@||webmail.orange.fr^
 @@||www.orange.fr^
@@ -3126,6 +3111,7 @@
 @@||web.tresorit.com^
 @@||go.trouter.io^
 @@||trumba.com^
+@@||www.trumba.com^
 @@||trustarc.com^
 @@||privacy-policy.truste.com^
 @@||trustkeeper.net^
@@ -3280,7 +3266,6 @@
 @@||update.code.visualstudio.com^
 @@||vitalia.pl^
 @@||vk.com^
-@@||0-109.vk.com^
 @@||0-11-213-95.vk.com^
 @@||0-11.vk.com^
 @@||0-118-213-95.vk.com^
@@ -3300,9 +3285,7 @@
 @@||6456456-62.6457447.1z.vk.com^
 @@||63.6456456-62.6457447.1z.vk.com^
 @@||place.63.6456456-62.6457447.1z.vk.com^
-@@||com.place.63.6456456-62.6457447.1z.vk.com^
 @@||google.com.place.63.6456456-62.6457447.1z.vk.com^
-@@||maps.google.com.place.63.6456456-62.6457447.1z.vk.com^
 @@||2.vk.com^
 @@||21321.vk.com^
 @@||22m.vk.com^
@@ -3315,7 +3298,6 @@
 @@||2foauth.vk.com^
 @@||2fwww.vk.com^
 @@||31.vk.com^
-@@||3213.vk.com^
 @@||38.vk.com^
 @@||www.38.vk.com^
 @@||43.vk.com^
@@ -3350,7 +3332,6 @@
 @@||backend.vk.com^
 @@||bangkoknanpa.vk.com^
 @@||bbrnyc.vk.com^
-@@||bebebrillits4cc.vk.com^
 @@||belmiroaraujo.vk.com^
 @@||biblio.vk.com^
 @@||com.biblio.vk.com^
@@ -3368,7 +3349,6 @@
 @@||quarantine.cc.vk.com^
 @@||cdn-ads.vk.com^
 @@||cevoi.vk.com^
-@@||check.vk.com^
 @@||chinook-persistence.vk.com^
 @@||click.vk.com^
 @@||clicks.vk.com^
@@ -3381,10 +3361,8 @@
 @@||www.yahoo.comwww.vk.com^
 @@||connect.vk.com^
 @@||coo-m-mark.vk.com^
-@@||coronagolf.vk.com^
 @@||corp.vk.com^
 @@||autodiscover.corp.vk.com^
-@@||u.corp.vk.com^
 @@||corradocorona.vk.com^
 @@||cs.vk.com^
 @@||cs00000000000000000000000000000000.vk.com^
@@ -3397,7 +3375,6 @@
 @@||roslin.www.cs001.vk.com^
 @@||ris-lx09.roslin.www.cs001.vk.com^
 @@||lmd.ris-lx09.roslin.www.cs001.vk.com^
-@@||cs01.vk.com^
 @@||cs03.vk.com^
 @@||cs06660.vk.com^
 @@||leroymerlin.cs06660.vk.com^
@@ -3408,13 +3385,11 @@
 @@||cs10269.vk.com^
 @@||cs10315.vk.com^
 @@||cs10320.vk.com^
-@@||cs10373.vk.com^
 @@||cs10376.vk.com^
 @@||cs10421.vk.com^
 @@||cs10478.vk.com^
 @@||cs10501.vk.com^
 @@||cs10599.vk.com^
-@@||cs10647.vk.com^
 @@||cs10692.vk.com^
 @@||cs10694.vk.com^
 @@||cs10787.vk.com^
@@ -3433,7 +3408,6 @@
 @@||cs12.vk.com^
 @@||cs123.vk.com^
 @@||cs126.vk.com^
-@@||cs135.vk.com^
 @@||cs140.vk.com^
 @@||cs141.vk.com^
 @@||cs143.vk.com^
@@ -3446,7 +3420,6 @@
 @@||cs303100.vk.com^
 @@||cs303205.vk.com^
 @@||cs303800.vk.com^
-@@||cs304108.vk.com^
 @@||cs304110.vk.com^
 @@||web5913.cs304110.vk.com^
 @@||theagency.web5913.cs304110.vk.com^
@@ -3472,7 +3445,6 @@
 @@||cs380.vk.com^
 @@||cs4111.vk.com^
 @@||cs4125.vk.com^
-@@||cs4218.vk.com^
 @@||cs4230.vk.com^
 @@||cs4239.vk.com^
 @@||cs4340.vk.com^
@@ -3521,26 +3493,17 @@
 @@||cs5903.vk.com^
 @@||cs5920.vk.com^
 @@||cs5931.vk.com^
-@@||cs5941.vk.com^
 @@||cs5954.vk.com^
 @@||cs604531.vk.com^
-@@||cs605220.vk.com^
 @@||cs605230.vk.com^
 @@||cs605320.vk.com^
 @@||cs605330.vk.com^
 @@||cs605420.vk.com^
-@@||cs605430.vk.com^
 @@||cs605520.vk.com^
 @@||cs605530.vk.com^
-@@||cs605620.vk.com^
 @@||cs605720.vk.com^
 @@||cs605820.vk.com^
 @@||cs605830.vk.com^
-@@||cs605920.vk.com^
-@@||cs605930.vk.com^
-@@||cs606020.vk.com^
-@@||cs606030.vk.com^
-@@||cs606130.vk.com^
 @@||cs606220.vk.com^
 @@||cs606230.vk.com^
 @@||cs606320.vk.com^
@@ -3560,8 +3523,6 @@
 @@||cs609400-20.vk.com^
 @@||cs609400-30.vk.com^
 @@||cs609400-40.vk.com^
-@@||cs611100-10.vk.com^
-@@||cs611100-20.vk.com^
 @@||cs611100-30.vk.com^
 @@||cs611100-40.vk.com^
 @@||cs612324.vk.com^
@@ -3596,10 +3557,8 @@
 @@||cs636421.vk.com^
 @@||cs636430.vk.com^
 @@||cs636521.vk.com^
-@@||billing1.cs636521.vk.com^
 @@||ccns.cs636521.vk.com^
 @@||cs637920.vk.com^
-@@||cs7014.vk.com^
 @@||cs763.vk.com^
 @@||cs7777.vk.com^
 @@||aaculovich.cs7777.vk.com^
@@ -3608,7 +3567,6 @@
 @@||rk-master.admin.cs7777.vk.com^
 @@||akolnogorov.cs7777.vk.com^
 @@||m.akolnogorov.cs7777.vk.com^
-@@||anabiullin.cs7777.vk.com^
 @@||api.cs7777.vk.com^
 @@||agoglev.api.cs7777.vk.com^
 @@||ayakushev.api.cs7777.vk.com^
@@ -3621,14 +3579,12 @@
 @@||ccmip.connect.cs7777.vk.com^
 @@||dev.cs7777.vk.com^
 @@||igfedorov.cs7777.vk.com^
-@@||isterekhov.cs7777.vk.com^
 @@||k-daniilpopov.cs7777.vk.com^
 @@||login.cs7777.vk.com^
 @@||rk-master.login.cs7777.vk.com^
 @@||m.cs7777.vk.com^
 @@||tk-aloha.m.cs7777.vk.com^
 @@||tk-inch.m.cs7777.vk.com^
-@@||tk-karma.m.cs7777.vk.com^
 @@||ms.cs7777.vk.com^
 @@||oauth.cs7777.vk.com^
 @@||rvest.oauth.cs7777.vk.com^
@@ -3646,7 +3602,6 @@
 @@||tk-hammer.cs7777.vk.com^
 @@||tk-honey.cs7777.vk.com^
 @@||tk-inch.cs7777.vk.com^
-@@||tk-judge.cs7777.vk.com^
 @@||tk-karma.cs7777.vk.com^
 @@||tk-lion.cs7777.vk.com^
 @@||tk-navy.cs7777.vk.com^
@@ -3690,14 +3645,12 @@
 @@||cs9657.vk.com^
 @@||cs9681.vk.com^
 @@||cs9710.vk.com^
-@@||cs9731.vk.com^
 @@||cs975.vk.com^
 @@||cs9763.vk.com^
 @@||cs9767.vk.com^
 @@||cs9813.vk.com^
 @@||cs9846.vk.com^
 @@||cs9916.vk.com^
-@@||cs9947.vk.com^
 @@||cs9960.vk.com^
 @@||cs9970.vk.com^
 @@||cs9989.vk.com^
@@ -3708,7 +3661,6 @@
 @@||cu.vk.com^
 @@||cvbvgr.vk.com^
 @@||cvc.vk.com^
-@@||cvfyui.vk.com^
 @@||damaskus.vk.com^
 @@||dapk.vk.com^
 @@||dddd.vk.com^
@@ -3746,7 +3698,6 @@
 @@||ew-manutention-sh.vk.com^
 @@||ew.vk.com^
 @@||example.vk.com^
-@@||expovaccins.vk.com^
 @@||faway.vk.com^
 @@||fcbqwq.vk.com^
 @@||fcqnru.vk.com^
@@ -3767,7 +3718,6 @@
 @@||gyysek.vk.com^
 @@||gzip.vk.com^
 @@||ha3virus.vk.com^
-@@||halkalit31maskot41.vk.com^
 @@||happymasksalesman.vk.com^
 @@||hb.vk.com^
 @@||hotmail.vk.com^
@@ -3783,20 +3733,16 @@
 @@||im48v4.vk.com^
 @@||im81.vk.com^
 @@||hl3qye.im81.vk.com^
-@@||indianapolis.hl3qye.im81.vk.com^
 @@||im84v4.vk.com^
 @@||www.im84v4.vk.com^
 @@||im89v4.vk.com^
 @@||imap.vk.com^
-@@||img251.vk.com^
 @@||imv0.vk.com^
 @@||imv1.vk.com^
-@@||imv2.vk.com^
 @@||imv3.vk.com^
 @@||imv4.vk.com^
 @@||indianapolis.vk.com^
 @@||infeccionvaginal.vk.com^
-@@||ivs458.vk.com^
 @@||iybbhm.vk.com^
 @@||izcaz.vk.com^
 @@||javascript-events.vk.com^
@@ -3805,10 +3751,8 @@
 @@||jhyzck.vk.com^
 @@||juscelinofranca.vk.com^
 @@||justtofresh.vk.com^
-@@||jwxes.vk.com^
 @@||khromovskikh.vk.com^
 @@||kiss.vk.com^
-@@||koronaekszerkft-hu.vk.com^
 @@||krasa.vk.com^
 @@||kseniia-ermakova.vk.com^
 @@||kulinovich.vk.com^
@@ -3816,7 +3760,6 @@
 @@||li.vk.com^
 @@||ljrnmiqx.vk.com^
 @@||lnsyyc.vk.com^
-@@||localhost.vk.com^
 @@||lp.vk.com^
 @@||lxfbbo.vk.com^
 @@||m.vk.com^
@@ -3825,7 +3768,6 @@
 @@||imap4.www.m.vk.com^
 @@||mx.www.m.vk.com^
 @@||pop3.www.m.vk.com^
-@@||smtp.www.m.vk.com^
 @@||mx.smtp.www.m.vk.com^
 @@||www.www.m.vk.com^
 @@||makecart.vk.com^
@@ -3854,14 +3796,11 @@
 @@||myllurmanagement.vk.com^
 @@||new.vk.com^
 @@||newimv4.vk.com^
-@@||newsletter-html.vk.com^
-@@||nfdhsz.vk.com^
 @@||nhibernate.vk.com^
 @@||nm.vk.com^
 @@||nolesfootball.vk.com^
 @@||noreply.vk.com^
 @@||notevil.vk.com^
-@@||notify.vk.com^
 @@||ntoss.vk.com^
 @@||nuegfb.vk.com^
 @@||nwww.vk.com^
@@ -3889,7 +3828,6 @@
 @@||pi.vk.com^
 @@||pirate.vk.com^
 @@||piter-ix.vk.com^
-@@||estimulos-y-respuestas.piter-ix.vk.com^
 @@||linebinevaskemaskine.piter-ix.vk.com^
 @@||lockdownteam.piter-ix.vk.com^
 @@||pj-masks.vk.com^
@@ -3899,14 +3837,12 @@
 @@||podarki.vk.com^
 @@||porno.vk.com^
 @@||post.vk.com^
-@@||provacinema.vk.com^
 @@||ps.vk.com^
 @@||pt.vk.com^
 @@||pu.vk.com^
 @@||publicvoidlife.vk.com^
 @@||push.vk.com^
 @@||www.push.vk.com^
-@@||puskesmaskota.vk.com^
 @@||pycaaf.vk.com^
 @@||qapi.vk.com^
 @@||qrvsas.vk.com^
@@ -3947,7 +3883,6 @@
 @@||smtp.vk.com^
 @@||spb-children-infection.vk.com^
 @@||srv0-128-240-87.vk.com^
-@@||www.srv0-128-240-87.vk.com^
 @@||srv0-224-186-93.vk.com^
 @@||srv1-167-240-87.vk.com^
 @@||srv10-34-213-95.vk.com^
@@ -3976,7 +3911,6 @@
 @@||srv151-6-213-95microsoft-excel-2016.vk.com^
 @@||srv157-185-240-87.vk.com^
 @@||srv157-189-240-87.vk.com^
-@@||srv158-137-240-87.vk.com^
 @@||ftp.srv158-137-240-87.vk.com^
 @@||mail.srv158-137-240-87.vk.com^
 @@||pop.srv158-137-240-87.vk.com^
@@ -3995,7 +3929,6 @@
 @@||srv181-129-240-87.vk.com^
 @@||srv191-137-240-87.vk.com^
 @@||srv193-113-213-95.vk.com^
-@@||srv193-139-240-87.vk.com^
 @@||srv194-139-240-87.vk.com^
 @@||imap.srv194-139-240-87.vk.com^
 @@||imap4.srv194-139-240-87.vk.com^
@@ -4006,7 +3939,6 @@
 @@||srv205-157-240-87.vk.com^
 @@||srv206-137-240-87.vk.com^
 @@||srv207-137-240-87.vk.com^
-@@||srv207-228-186-93.vk.com^
 @@||srv208-137-240-87.vk.com^
 @@||srv218-0-213-95.vk.com^
 @@||srv220-151-240-87.vk.com^
@@ -4027,7 +3959,6 @@
 @@||srv41-129-240-87.vk.com^
 @@||srv41-139-240-87.vk.com^
 @@||srv43-64-213-95.vk.com^
-@@||srv49-5-213-95.vk.com^
 @@||srv61-176-240-87.vk.com^
 @@||srv64-61-213-95.vk.com^
 @@||srv66-139-137-79.vk.com^
@@ -4073,7 +4004,6 @@
 @@||srv79-43-213-95.vk.com^
 @@||srv9-4-213-95.vk.com^
 @@||srv92-117-213-95.vk.com^
-@@||sstakk.vk.com^
 @@||st.vk.com^
 @@||st1-14.vk.com^
 @@||st1-15.vk.com^
@@ -4110,9 +4040,7 @@
 @@||st1-93.vk.com^
 @@||st1-94.vk.com^
 @@||st1-95.vk.com^
-@@||st1-96.vk.com^
 @@||st1-97.vk.com^
-@@||st1-98.vk.com^
 @@||st1-99.vk.com^
 @@||st2-10.vk.com^
 @@||st2-11.vk.com^
@@ -4130,8 +4058,6 @@
 @@||st4-11.vk.com^
 @@||st4-12.vk.com^
 @@||st4-15.vk.com^
-@@||st4-16.vk.com^
-@@||st4-17.vk.com^
 @@||st5-3.vk.com^
 @@||st5-4.vk.com^
 @@||st6-20.vk.com^
@@ -4172,7 +4098,6 @@
 @@||autodiscover.team.vk.com^
 @@||teamask.vk.com^
 @@||th.vk.com^
-@@||themaskofafox.vk.com^
 @@||tim.vk.com^
 @@||tinyendian.vk.com^
 @@||tippytests.vk.com^
@@ -4190,15 +4115,12 @@
 @@||umaskimages.vk.com^
 @@||unmaskdigitaltruth.vk.com^
 @@||userapi.vk.com^
-@@||uth.vk.com^
 @@||uuvkmm.vk.com^
-@@||vb64z9th8faec4b0.vk.com^
 @@||polis.vb64z9th8faec4b0.vk.com^
 @@||video-list-player.vk.com^
 @@||viruscheck1.vk.com^
 @@||virusisrbija.vk.com^
 @@||viruswriter.vk.com^
-@@||visu.vk.com^
 @@||vk.vk.com^
 @@||vk.vk.vk.com^
 @@||www.vk.vk.com^
@@ -4217,7 +4139,6 @@
 @@||wip3.vk.com^
 @@||wn.vk.com^
 @@||wsfrgc.vk.com^
-@@||wvhtzh.vk.com^
 @@||ww.vk.com^
 @@||www.ww.vk.com^
 @@||wyfyc.vk.com^
@@ -4231,14 +4152,11 @@
 @@||xthpd.vk.com^
 @@||xwizft.vk.com^
 @@||xxxxxxxxxxm.vk.com^
-@@||xygvkb.vk.com^
 @@||xznvtz.vk.com^
-@@||yeastinfection.vk.com^
 @@||yfncqe.vk.com^
 @@||yvjnex.vk.com^
 @@||yvoqgv.vk.com^
 @@||yzzusk.vk.com^
-@@||zakaz1570.vk.com^
 @@||zbzazq.vk.com^
 @@||zjujbt.vk.com^
 @@||zqtqyq.vk.com^
