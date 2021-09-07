@@ -1262,6 +1262,7 @@ feedly.com
 fide.com
 filefactory.com
 filepicker.io
+www.filepicker.io
 filesmonster.com
 fili.cc
 www.fili.cc
@@ -1564,6 +1565,7 @@ mobilenetworkscoring-pa.googleapis.com
 monitoring.googleapis.com
 people-pa.googleapis.com
 play.googleapis.com
+pubsub.googleapis.com
 serviceusage.googleapis.com
 stackdriver.googleapis.com
 storage.googleapis.com
@@ -2666,6 +2668,7 @@ player.radio.com
 radiofrance.fr
 radiostacja.pl
 rakuten.com
+www.rakuten.com
 rambler.ru
 ranker.com
 images.rapgenius.com
