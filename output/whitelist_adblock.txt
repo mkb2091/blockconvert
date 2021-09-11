@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-09-09Z
+! Version: 2021-09-11Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-09-09Z
+! Last modified: 2021-09-11Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -52,7 +52,6 @@
 @@||vortex.accuweather.com^
 @@||www.accuweather.com^
 @@||acehardware.com^
-@@||www.acehardware.com^
 @@||delivery.acm.org^
 @@||actionnetwork.org^
 @@||valimail.actonservice.com^
@@ -595,8 +594,6 @@
 @@||location-inference-westus.cloudapp.net^
 @@||skypeecs-prod-usw-0-b.cloudapp.net^
 @@||cloudflare-dns.com^
-@@||claro.cloudflare-dns.com^
-@@||families.cloudflare-dns.com^
 @@||cloudflare.com^
 @@||ajax.cloudflare.com^
 @@||cdnjs.cloudflare.com^
@@ -2562,6 +2559,7 @@
 @@||edge.skype.com^
 @@||config.edge.skype.com^
 @@||login.skype.com^
+@@||presence.skype.com^
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
 @@||rps.skype.com^
@@ -2572,6 +2570,27 @@
 @@||rps-usea.skypetoken.skype.com^
 @@||rps-uswe.skypetoken.skype.com^
 @@||rps.skypetoken.skype.com^
+@@||translatorv2.skype.com^
+@@||asse-a.translatorv2.skype.com^
+@@||asse-b.translatorv2.skype.com^
+@@||asse-c.translatorv2.skype.com^
+@@||asse.translatorv2.skype.com^
+@@||euno-a.translatorv2.skype.com^
+@@||euno-b.translatorv2.skype.com^
+@@||euno-c.translatorv2.skype.com^
+@@||euno.translatorv2.skype.com^
+@@||euwe-a.translatorv2.skype.com^
+@@||euwe-b.translatorv2.skype.com^
+@@||euwe-c.translatorv2.skype.com^
+@@||euwe.translatorv2.skype.com^
+@@||usea2-a.translatorv2.skype.com^
+@@||usea2-b.translatorv2.skype.com^
+@@||usea2-c.translatorv2.skype.com^
+@@||usea2.translatorv2.skype.com^
+@@||uswe-a.translatorv2.skype.com^
+@@||uswe-b.translatorv2.skype.com^
+@@||uswe-c.translatorv2.skype.com^
+@@||uswe.translatorv2.skype.com^
 @@||trap.skype.com^
 @@||slack-redir.net^
 @@||files.slack.com^
@@ -2584,7 +2603,6 @@
 @@||smallseotools.com^
 @@||smugmug.com^
 @@||snapchat.com^
-@@||www.snapchat.com^
 @@||snapengage.com^
 @@||www.snapengage.com^
 @@||sndcdn.com^
@@ -2706,6 +2724,7 @@
 @@||m.stripe.network^
 @@||stripecdn.com^
 @@||surveygizmo.com^
+@@||www.surveygizmo.com^
 @@||surveymonkey.com^
 @@||secure.surveymonkey.com^
 @@||sweclockers.com^
@@ -2990,46 +3009,8 @@
 @@||update.code.visualstudio.com^
 @@||vitalia.pl^
 @@||vk.com^
-@@||asar.vk.com^
-@@||c.vk.com^
-@@||canada.vk.com^
-@@||cs5077.vk.com^
-@@||cs5541.vk.com^
-@@||cs763.vk.com^
-@@||m.cs92612.vk.com^
-@@||cs9846.vk.com^
-@@||notevil.vk.com^
 @@||oauth.vk.com^
-@@||odn.vk.com^
-@@||pycaaf.vk.com^
-@@||vkontakte.rucs5422.vk.com^
-@@||srv108-26-213-95.vk.com^
-@@||srv138-177-240-87.vk.com^
-@@||srv15-132-240-87.vk.com^
-@@||srv151-164-137-79.vk.com^
-@@||srv171-21-213-95.vk.com^
-@@||srv191-137-240-87.vk.com^
-@@||srv222-51-213-95.vk.com^
-@@||srv230-165-240-87.vk.com^
-@@||srv246-164-240-87.vk.com^
-@@||srv28-156-240-87.vk.com^
-@@||srv41-139-240-87.vk.com^
-@@||srv61-176-240-87.vk.com^
-@@||srv92-117-213-95.vk.com^
-@@||st1-54.vk.com^
-@@||st1-55.vk.com^
-@@||st1-56.vk.com^
-@@||st1-57.vk.com^
-@@||st2-11.vk.com^
-@@||st2-12.vk.com^
-@@||st3-16.vk.com^
-@@||st3-17.vk.com^
 @@||st6-22.vk.com^
-@@||st7-13.vk.com^
-@@||vk.vk.vk.com^
-@@||web17046.vk.com^
-@@||web18026.vk.com^
-@@||web6524.vk.com^
 @@||vkontakte.ru^
 @@||vmixcore.com^
 @@||vmn.net^
