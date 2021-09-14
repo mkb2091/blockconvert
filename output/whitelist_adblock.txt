@@ -1,13 +1,14 @@
 [Adblock Plus 2.0]
-! Version: 2021-09-13Z
+! Version: 2021-09-14Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-09-13Z
+! Last modified: 2021-09-14Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
 !
 !-----------------------Filters-----------------------!
 @@||ad.10010.com^
+@@||m1.ad.10010.com^
 @@||static.ws.126.net^
 @@||bnet.163.com^
 @@||1drv.com^
@@ -304,6 +305,7 @@
 @@||androidauthority.com^
 @@||androidforums.com^
 @@||angularjs.org^
+@@||www.angularjs.org^
 @@||www.anrdoezrs.net^
 @@||answers.com^
 @@||www.answers.com^
@@ -985,6 +987,7 @@
 @@||fb.com^
 @@||fb.me^
 @@||fbcdn.net^
+@@||www.fbcdn.net^
 @@||external-lhr8-1.xx.fbcdn.net^
 @@||external.xx.fbcdn.net^
 @@||scontent-nrt1-1.xx.fbcdn.net^
@@ -1077,6 +1080,7 @@
 @@||build.origami.ft.com^
 @@||fundraiseup.com^
 @@||funk.eu^
+@@||www.funk.eu^
 @@||funnyordie.com^
 @@||fuseservice.com^
 @@||vanilla.futurecdn.net^
@@ -1158,6 +1162,7 @@
 @@||www.gleam.io^
 @@||ocsp.globalsign.com^
 @@||gmail.com^
+@@||www.gmail.com^
 @@||gmodules.com^
 @@||www.gmodules.com^
 @@||gmx.at^
@@ -1179,9 +1184,11 @@
 @@||www.gogousenet.com^
 @@||goo.gl^
 @@||play.app.goo.gl^
+@@||www.goo.gl^
 @@||google.com^
 @@||accounts.google.com^
 @@||adwords.google.com^
+@@||www.adwords.google.com^
 @@||apis.google.com^
 @@||appengine.google.com^
 @@||books.google.com^
@@ -1600,6 +1607,7 @@
 @@||kinja-static.com^
 @@||kinja.com^
 @@||klarna.com^
+@@||www.klarna.com^
 @@||trk.klclick1.com^
 @@||klm.com^
 @@||kmart.com^
@@ -1720,10 +1728,12 @@
 @@||platform.logentries.com^
 @@||rep.logentries.com^
 @@||rest.logentries.com^
+@@||static.logentries.com^
 @@||us.logentries.com^
 @@||gzip.us.logentries.com^
 @@||rest.us.logentries.com^
 @@||webhook.logentries.com^
+@@||webstatic.logentries.com^
 @@||www.logentries.com^
 @@||loggly.com^
 @@||www.loggly.com^
@@ -1839,11 +1849,17 @@
 @@||xbox.ipv6.microsoft.com^
 @@||ris.api.iris.microsoft.com^
 @@||dmd.metaservices.microsoft.com^
+@@||coordinator-dcatbackend-int.mp.microsoft.com^
+@@||coordinator-dcatbackend.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
 @@||fe3.delivery.mp.microsoft.com^
 @@||digitalattach.mp.microsoft.com^
+@@||displaycatalog-int.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
+@@||displaycatalog1p-int.mp.microsoft.com^
+@@||displaycatalog1p.mp.microsoft.com^
+@@||product-int.dps.mp.microsoft.com^
 @@||workflowservice.dps.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
@@ -1852,6 +1868,11 @@
 @@||licensing.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
+@@||staging-dcatbackend-int.mp.microsoft.com^
+@@||stagingretrieval-dcatbackend-int.mp.microsoft.com^
+@@||stagingretrieval-dcatbackend.mp.microsoft.com^
+@@||xbox-displaycatalog-int.mp.microsoft.com^
+@@||xbox-displaycatalog.mp.microsoft.com^
 @@||mscrl.microsoft.com^
 @@||officeclient.microsoft.com^
 @@||query.prod.cms.rt.microsoft.com^
@@ -2112,6 +2133,7 @@
 @@||okta.com^
 @@||olark.com^
 @@||old-games.org^
+@@||mercury.old-games.org^
 @@||omny.fm^
 @@||omroep.nl^
 @@||amazoncustomerservice.d2.sc.omtrdc.net^
@@ -2294,6 +2316,7 @@
 @@||nine.plugins.plexapp.com^
 @@||tvthemes.plexapp.com^
 @@||pling.com^
+@@||www.pling.com^
 @@||plot.ly^
 @@||cdn.plyr.io^
 @@||pochta.ru^
@@ -2446,6 +2469,7 @@
 @@||salsalabs.org^
 @@||samsung.com^
 @@||shop.samsung.com^
+@@||www.samsung.com^
 @@||cdn.samsungcloudsolution.com^
 @@||time.samsungcloudsolution.com^
 @@||down.sandai.net^
@@ -2525,8 +2549,10 @@
 @@||skimresources.com^
 @@||www.skimresources.com^
 @@||skype.com^
+@@||pes.asm.skype.com^
 @@||blogs.skype.com^
 @@||c1.skype.com^
+@@||contentapi.skype.com^
 @@||download.skype.com^
 @@||edge.skype.com^
 @@||config.edge.skype.com^
@@ -2534,14 +2560,6 @@
 @@||presence.skype.com^
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
-@@||rps.skype.com^
-@@||skypetoken.skype.com^
-@@||rps-asea.skypetoken.skype.com^
-@@||rps-euno.skypetoken.skype.com^
-@@||rps-euwe.skypetoken.skype.com^
-@@||rps-usea.skypetoken.skype.com^
-@@||rps-uswe.skypetoken.skype.com^
-@@||rps.skypetoken.skype.com^
 @@||translatorv2.skype.com^
 @@||asse-a.translatorv2.skype.com^
 @@||asse-b.translatorv2.skype.com^
@@ -2845,6 +2863,7 @@
 @@||tvn24.pl^
 @@||tracker.tvnihon.com^
 @@||tvnstyle.pl^
+@@||www.tvnstyle.pl^
 @@||tvp.pl^
 @@||bialystok.tvp.pl^
 @@||bydgoszcz.tvp.pl^
@@ -2990,6 +3009,7 @@
 @@||walgreens.com^
 @@||wallst.com^
 @@||walmart.com^
+@@||goto.walmart.com^
 @@||omniture.walmart.com^
 @@||rptrcks.walmart.com^
 @@||wangbase.com^
@@ -3302,6 +3322,7 @@
 @@||723003.redirect.appmetrica.yandex.com^
 @@||723009.redirect.appmetrica.yandex.com^
 @@||917433.redirect.appmetrica.yandex.com^
+@@||avatars.mds.yandex.net^
 @@||yandex.ru^
 @@||api-maps.yandex.ru^
 @@||img-fotki.yandex.ru^

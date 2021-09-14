@@ -1,4 +1,5 @@
 ad.10010.com
+m1.ad.10010.com
 static.ws.126.net
 bnet.163.com
 1drv.com
@@ -295,6 +296,7 @@ connectivitycheck.android.com
 androidauthority.com
 androidforums.com
 angularjs.org
+www.angularjs.org
 www.anrdoezrs.net
 answers.com
 www.answers.com
@@ -976,6 +978,7 @@ faucethub.io
 fb.com
 fb.me
 fbcdn.net
+www.fbcdn.net
 external-lhr8-1.xx.fbcdn.net
 external.xx.fbcdn.net
 scontent-nrt1-1.xx.fbcdn.net
@@ -1068,6 +1071,7 @@ a.fsdn.com
 build.origami.ft.com
 fundraiseup.com
 funk.eu
+www.funk.eu
 funnyordie.com
 fuseservice.com
 vanilla.futurecdn.net
@@ -1149,6 +1153,7 @@ gleam.io
 www.gleam.io
 ocsp.globalsign.com
 gmail.com
+www.gmail.com
 gmodules.com
 www.gmodules.com
 gmx.at
@@ -1170,9 +1175,11 @@ gogousenet.com
 www.gogousenet.com
 goo.gl
 play.app.goo.gl
+www.goo.gl
 google.com
 accounts.google.com
 adwords.google.com
+www.adwords.google.com
 apis.google.com
 appengine.google.com
 books.google.com
@@ -1591,6 +1598,7 @@ kingfeatures.com
 kinja-static.com
 kinja.com
 klarna.com
+www.klarna.com
 trk.klclick1.com
 klm.com
 kmart.com
@@ -1711,10 +1719,12 @@ partners.logentries.com
 platform.logentries.com
 rep.logentries.com
 rest.logentries.com
+static.logentries.com
 us.logentries.com
 gzip.us.logentries.com
 rest.us.logentries.com
 webhook.logentries.com
+webstatic.logentries.com
 www.logentries.com
 loggly.com
 www.loggly.com
@@ -1830,11 +1840,17 @@ win10.ipv6.microsoft.com
 xbox.ipv6.microsoft.com
 ris.api.iris.microsoft.com
 dmd.metaservices.microsoft.com
+coordinator-dcatbackend-int.mp.microsoft.com
+coordinator-dcatbackend.mp.microsoft.com
 dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 fe3.delivery.mp.microsoft.com
 digitalattach.mp.microsoft.com
+displaycatalog-int.mp.microsoft.com
 displaycatalog.mp.microsoft.com
+displaycatalog1p-int.mp.microsoft.com
+displaycatalog1p.mp.microsoft.com
+product-int.dps.mp.microsoft.com
 workflowservice.dps.mp.microsoft.com
 geo-prod.do.dsp.mp.microsoft.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
@@ -1843,6 +1859,11 @@ inv-int.mp.microsoft.com
 licensing.mp.microsoft.com
 collections.md.mp.microsoft.com
 purchase.mp.microsoft.com
+staging-dcatbackend-int.mp.microsoft.com
+stagingretrieval-dcatbackend-int.mp.microsoft.com
+stagingretrieval-dcatbackend.mp.microsoft.com
+xbox-displaycatalog-int.mp.microsoft.com
+xbox-displaycatalog.mp.microsoft.com
 mscrl.microsoft.com
 officeclient.microsoft.com
 query.prod.cms.rt.microsoft.com
@@ -2103,6 +2124,7 @@ www.ojrq.net
 okta.com
 olark.com
 old-games.org
+mercury.old-games.org
 omny.fm
 omroep.nl
 amazoncustomerservice.d2.sc.omtrdc.net
@@ -2285,6 +2307,7 @@ my.plexapp.com
 nine.plugins.plexapp.com
 tvthemes.plexapp.com
 pling.com
+www.pling.com
 plot.ly
 cdn.plyr.io
 pochta.ru
@@ -2437,6 +2460,7 @@ salsalabs.com
 salsalabs.org
 samsung.com
 shop.samsung.com
+www.samsung.com
 cdn.samsungcloudsolution.com
 time.samsungcloudsolution.com
 down.sandai.net
@@ -2516,8 +2540,10 @@ authentication-api.skimlinks.com
 skimresources.com
 www.skimresources.com
 skype.com
+pes.asm.skype.com
 blogs.skype.com
 c1.skype.com
+contentapi.skype.com
 download.skype.com
 edge.skype.com
 config.edge.skype.com
@@ -2525,14 +2551,6 @@ login.skype.com
 presence.skype.com
 api.promotions.skype.com
 bo.promotions.skype.com
-rps.skype.com
-skypetoken.skype.com
-rps-asea.skypetoken.skype.com
-rps-euno.skypetoken.skype.com
-rps-euwe.skypetoken.skype.com
-rps-usea.skypetoken.skype.com
-rps-uswe.skypetoken.skype.com
-rps.skypetoken.skype.com
 translatorv2.skype.com
 asse-a.translatorv2.skype.com
 asse-b.translatorv2.skype.com
@@ -2836,6 +2854,7 @@ img.ads.tvb.com
 tvn24.pl
 tracker.tvnihon.com
 tvnstyle.pl
+www.tvnstyle.pl
 tvp.pl
 bialystok.tvp.pl
 bydgoszcz.tvp.pl
@@ -2981,6 +3000,7 @@ w3.org
 walgreens.com
 wallst.com
 walmart.com
+goto.walmart.com
 omniture.walmart.com
 rptrcks.walmart.com
 wangbase.com
@@ -3293,6 +3313,7 @@ redirect.appmetrica.yandex.com
 723003.redirect.appmetrica.yandex.com
 723009.redirect.appmetrica.yandex.com
 917433.redirect.appmetrica.yandex.com
+avatars.mds.yandex.net
 yandex.ru
 api-maps.yandex.ru
 img-fotki.yandex.ru
