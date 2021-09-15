@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-09-14Z
+! Version: 2021-09-15Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-09-14Z
+! Last modified: 2021-09-15Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -1704,7 +1704,6 @@
 @@||data.logentries.com^
 @@||heroku.data.logentries.com^
 @@||eu.logentries.com^
-@@||rest.eu.logentries.com^
 @@||heroku.logentries.com^
 @@||info.logentries.com^
 @@||js.logentries.com^
@@ -1854,17 +1853,14 @@
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
 @@||fe3.delivery.mp.microsoft.com^
-@@||digitalattach.mp.microsoft.com^
 @@||displaycatalog-int.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
 @@||displaycatalog1p-int.mp.microsoft.com^
 @@||displaycatalog1p.mp.microsoft.com^
 @@||product-int.dps.mp.microsoft.com^
-@@||workflowservice.dps.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
-@@||inv-int.mp.microsoft.com^
 @@||licensing.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
@@ -2195,7 +2191,6 @@
 @@||www.oracle.com^
 @@||orange.fr^
 @@||webmail.orange.fr^
-@@||www.orange.fr^
 @@||orbitz.com^
 @@||oregonlive.com^
 @@||s7.orientaltrading.com^
@@ -2634,10 +2629,6 @@
 @@||events.splunk.com^
 @@||mint.splunk.com^
 @@||response.splunk.com^
-@@||scp.splunk.com^
-@@||playground.scp.splunk.com^
-@@||admin.playground.scp.splunk.com^
-@@||legacy.admin.playground.scp.splunk.com^
 @@||post.spmailtechnol.com^
 @@||sport.pl^
 @@||spot.im^
@@ -3209,7 +3200,6 @@
 @@||wpengine.com^
 @@||www.wshifen.com^
 @@||wsj.com^
-@@||www.wsj.com^
 @@||mw1.wsj.net^
 @@||wtkr.com^
 @@||wufoo.com^

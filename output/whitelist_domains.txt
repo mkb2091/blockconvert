@@ -1695,7 +1695,6 @@ autodiscover.logentries.com
 data.logentries.com
 heroku.data.logentries.com
 eu.logentries.com
-rest.eu.logentries.com
 heroku.logentries.com
 info.logentries.com
 js.logentries.com
@@ -1845,17 +1844,14 @@ coordinator-dcatbackend.mp.microsoft.com
 dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 fe3.delivery.mp.microsoft.com
-digitalattach.mp.microsoft.com
 displaycatalog-int.mp.microsoft.com
 displaycatalog.mp.microsoft.com
 displaycatalog1p-int.mp.microsoft.com
 displaycatalog1p.mp.microsoft.com
 product-int.dps.mp.microsoft.com
-workflowservice.dps.mp.microsoft.com
 geo-prod.do.dsp.mp.microsoft.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
-inv-int.mp.microsoft.com
 licensing.mp.microsoft.com
 collections.md.mp.microsoft.com
 purchase.mp.microsoft.com
@@ -2186,7 +2182,6 @@ oracle.com
 www.oracle.com
 orange.fr
 webmail.orange.fr
-www.orange.fr
 orbitz.com
 oregonlive.com
 s7.orientaltrading.com
@@ -2625,10 +2620,6 @@ conf.splunk.com
 events.splunk.com
 mint.splunk.com
 response.splunk.com
-scp.splunk.com
-playground.scp.splunk.com
-admin.playground.scp.splunk.com
-legacy.admin.playground.scp.splunk.com
 post.spmailtechnol.com
 sport.pl
 spot.im
@@ -3200,7 +3191,6 @@ tv.wp.pl
 wpengine.com
 www.wshifen.com
 wsj.com
-www.wsj.com
 mw1.wsj.net
 wtkr.com
 wufoo.com
