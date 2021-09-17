@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-09-15Z
+! Version: 2021-09-17Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-09-15Z
+! Last modified: 2021-09-17Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -259,6 +259,7 @@
 @@||abroad.apilocate.amap.com^
 @@||restapi.amap.com^
 @@||aax-us-east.amazon-adsystem.com^
+@@||c.amazon-adsystem.com^
 @@||s.amazon-adsystem.com^
 @@||amazon.at^
 @@||amazon.ca^

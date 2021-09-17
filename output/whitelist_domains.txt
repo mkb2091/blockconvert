@@ -250,6 +250,7 @@ adiu.amap.com
 abroad.apilocate.amap.com
 restapi.amap.com
 aax-us-east.amazon-adsystem.com
+c.amazon-adsystem.com
 s.amazon-adsystem.com
 amazon.at
 amazon.ca
