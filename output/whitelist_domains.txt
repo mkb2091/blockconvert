@@ -1847,6 +1847,7 @@ tlu.dl.delivery.mp.microsoft.com
 fe3.delivery.mp.microsoft.com
 displaycatalog-int.mp.microsoft.com
 displaycatalog.mp.microsoft.com
+aircapi.displaycatalog.mp.microsoft.com
 displaycatalog1p-int.mp.microsoft.com
 displaycatalog1p.mp.microsoft.com
 product-int.dps.mp.microsoft.com
@@ -1857,7 +1858,9 @@ licensing.mp.microsoft.com
 collections.md.mp.microsoft.com
 purchase.mp.microsoft.com
 staging-dcatbackend-int.mp.microsoft.com
+wus2.staging-dcatbackend-int.mp.microsoft.com
 stagingretrieval-dcatbackend-int.mp.microsoft.com
+wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com
 stagingretrieval-dcatbackend.mp.microsoft.com
 xbox-displaycatalog-int.mp.microsoft.com
 xbox-displaycatalog.mp.microsoft.com
@@ -2478,6 +2481,7 @@ schibsted.tech
 scrapinghub.com
 scribblelive.com
 scribd.com
+www.scribd.com
 sdad.guru
 www.sdad.guru
 searchanise.com
