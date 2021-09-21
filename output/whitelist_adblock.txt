@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-09-19Z
+! Version: 2021-09-21Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-09-19Z
+! Last modified: 2021-09-21Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -113,7 +113,6 @@
 @@||vip5.afdorigin-prod-am02.afdogw.com^
 @@||vip5.afdorigin-prod-ch02.afdogw.com^
 @@||affirm.com^
-@@||www.affirm.com^
 @@||afi-b.com^
 @@||t.afi-b.com^
 @@||www.afi-b.com^
@@ -754,7 +753,6 @@
 @@||d3js.org^
 @@||admin.dable.io^
 @@||dailymotion.com^
-@@||www.dailymotion.com^
 @@||danid.dk^
 @@||www.datadoghq-browser-agent.com^
 @@||datafilehost.com^
@@ -1003,7 +1001,6 @@
 @@||fide.com^
 @@||filefactory.com^
 @@||filepicker.io^
-@@||www.filepicker.io^
 @@||filesmonster.com^
 @@||fili.cc^
 @@||www.fili.cc^
@@ -2192,7 +2189,6 @@
 @@||cdn3.optimizely.com^
 @@||www.optimizely.com^
 @@||oracle.com^
-@@||www.oracle.com^
 @@||orange.fr^
 @@||webmail.orange.fr^
 @@||orbitz.com^
@@ -2396,7 +2392,6 @@
 @@||radiofrance.fr^
 @@||radiostacja.pl^
 @@||rakuten.com^
-@@||www.rakuten.com^
 @@||rambler.ru^
 @@||ranker.com^
 @@||images.rapgenius.com^
@@ -2832,7 +2827,6 @@
 @@||web.tresorit.com^
 @@||go.trouter.io^
 @@||trumba.com^
-@@||www.trumba.com^
 @@||trustarc.com^
 @@||privacy-policy.truste.com^
 @@||trustkeeper.net^
@@ -3177,6 +3171,7 @@
 @@||wix.com^
 @@||tg1.premium.db4.wix.com^
 @@||tg1.premium.dc11.wix.com^
+@@||www.wix.com^
 @@||balancer.wixdns.net^
 @@||www17.wixdns.net^
 @@||static.wixstatic.com^
