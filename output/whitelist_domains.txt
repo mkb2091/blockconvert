@@ -65,6 +65,7 @@ road.adblock.ro
 easylist-downloads.adblockplus.org
 adcolo.com
 add0n.com
+www.add0n.com
 adguard.com
 adidas.com
 imagesrv.adition.com
@@ -104,6 +105,7 @@ www.aetna.com
 vip5.afdorigin-prod-am02.afdogw.com
 vip5.afdorigin-prod-ch02.afdogw.com
 affirm.com
+www.affirm.com
 afi-b.com
 t.afi-b.com
 www.afi-b.com
@@ -253,6 +255,7 @@ c.amazon-adsystem.com
 s.amazon-adsystem.com
 amazon.at
 amazon.ca
+www.amazon.ca
 amazon.cn
 amazon.com
 arcus-uswest.amazon.com
@@ -798,6 +801,7 @@ dlvr.it
 dmcdn.com
 dmcdn.net
 dn.se
+www.dn.se
 do.co
 forum.dobreprogramy.pl
 screendoor.dobt.co
@@ -902,6 +906,7 @@ ethermine.org
 ethn.io
 www.ethn.io
 eventbrite.com
+www.eventbrite.com
 everyaction.com
 c.evidon.com
 ew.com
@@ -1693,6 +1698,7 @@ autodiscover.logentries.com
 data.logentries.com
 heroku.data.logentries.com
 eu.logentries.com
+rest.eu.logentries.com
 heroku.logentries.com
 info.logentries.com
 js.logentries.com
@@ -1848,12 +1854,15 @@ aircapi.displaycatalog.mp.microsoft.com
 displaycatalog1p-int.mp.microsoft.com
 displaycatalog1p.mp.microsoft.com
 product-int.dps.mp.microsoft.com
+pac-int.dse.mp.microsoft.com
+api-dev.dcat.dsp.mp.microsoft.com
 geo-prod.do.dsp.mp.microsoft.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 licensing.mp.microsoft.com
 collections.md.mp.microsoft.com
 purchase.mp.microsoft.com
+recurrence-int.mp.microsoft.com
 staging-dcatbackend-int.mp.microsoft.com
 wus2.staging-dcatbackend-int.mp.microsoft.com
 stagingretrieval-dcatbackend-int.mp.microsoft.com
@@ -2138,6 +2147,7 @@ www.onesignal.com
 onet.pl
 sport.onet.pl
 onetrust.com
+www.onetrust.com
 onion.to
 h-ebay.online-metrix.net
 h-sdk.online-metrix.net
@@ -2180,6 +2190,7 @@ cdn2.optimizely.com
 cdn3.optimizely.com
 www.optimizely.com
 oracle.com
+www.oracle.com
 orange.fr
 webmail.orange.fr
 orbitz.com
@@ -2214,6 +2225,7 @@ www.glb.paypal.com
 t.paypal.com
 www.paypal.com
 paypalobjects.com
+www.paypalobjects.com
 www-tc.pbs.org
 pcbeta.com
 bbs.pcbeta.com
@@ -2542,7 +2554,14 @@ contentapi.skype.com
 download.skype.com
 edge.skype.com
 config.edge.skype.com
+email.skype.com
+click.email.skype.com
+pages.email.skype.com
+view.email.skype.com
 login.skype.com
+int-client-ss.msg.skype.com
+intgeo-client-ss.msg.skype.com
+msgapi.skype.com
 presence.skype.com
 api.promotions.skype.com
 bo.promotions.skype.com
@@ -2579,6 +2598,7 @@ public.slidesharecdn.com
 smallseotools.com
 smugmug.com
 snapchat.com
+www.snapchat.com
 snapengage.com
 www.snapengage.com
 sndcdn.com
@@ -2620,6 +2640,7 @@ conf.splunk.com
 events.splunk.com
 mint.splunk.com
 response.splunk.com
+admin-rainier.playground.scs.splunk.com
 post.spmailtechnol.com
 sport.pl
 spot.im
@@ -2910,6 +2931,7 @@ unsplash.com
 uploaded.net
 uploaded.to
 uplynk.com
+www.uplynk.com
 uptobox.com
 flo.uri.sh
 usa.gov
@@ -3152,6 +3174,7 @@ au.v4.download.windowsupdate.com
 fg.v4.download.windowsupdate.com
 windy.com
 winfuture.de
+www.winfuture.de
 wired.com
 www.wired.com
 wirtualnemedia.pl
