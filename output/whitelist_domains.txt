@@ -68,6 +68,7 @@ add0n.com
 www.add0n.com
 adguard.com
 adidas.com
+www.adidas.com
 imagesrv.adition.com
 app.adjust.com
 yahoo.adnetasia.com
@@ -128,7 +129,6 @@ modern.watson.data.microsoft.com.akadns.net
 cy2.displaycatalog.md.mp.microsoft.com.akadns.net
 cy2.licensing.md.mp.microsoft.com.akadns.net
 co4.telecommand.telemetry.microsoft.com.akadns.net
-fe2.update.microsoft.com.akadns.net
 sls.update.microsoft.com.akadns.net
 login.msa.akadns6.net
 ipv4.login.msa.akadns6.net
@@ -423,6 +423,7 @@ bazaarvoice.com
 analytics-static.ugc.bazaarvoice.com
 display.ugc.bazaarvoice.com
 magpie-static.ugc.bazaarvoice.com
+www.bazaarvoice.com
 bbb.org
 bbc.com
 www.bbc.com
@@ -510,6 +511,7 @@ bowercdn.net
 boxrec.com
 braintreegateway.com
 brakrock.be
+www.brakrock.be
 www.brcdn.com
 breakingburner.com
 brightcove.com
@@ -630,6 +632,7 @@ moonbit.co.in
 www.moonbit.co.in
 cloudmail17.netcore.co.in
 amazon.co.jp
+www.amazon.co.jp
 hb.afl.rakuten.co.jp
 pt.afl.rakuten.co.jp
 grp07.ias.rakuten.co.jp
@@ -691,10 +694,12 @@ ocsp.comodoca.com
 ocsp.comodoca4.com
 confirmit.com
 survey.euro.confirmit.com
+www.confirmit.com
 cws.conviva.com
 www.cws.conviva.com
 zee.cws.conviva.com
 www.zee.cws.conviva.com
+livepassdl.conviva.com
 pings.conviva.com
 cosmopolitan.com
 costco.com
@@ -807,6 +812,7 @@ forum.dobreprogramy.pl
 screendoor.dobt.co
 documentcloud.org
 donorbox.org
+www.donorbox.org
 forum.doom9.org
 cdn.dopc.cz
 cj.dotomi.com
@@ -825,6 +831,7 @@ dl-web.dropbox.com
 dl.dropbox.com
 ns1.dropbox.com
 ns2.dropbox.com
+www.dropbox.com
 dl.dropboxusercontent.com
 drudgereport.com
 secure.dshield.org
@@ -900,6 +907,7 @@ tracking.epicgames.com
 epoch.com
 epoq.de
 espn.com
+www.espn.com
 a.espncdn.com
 et4.de
 ethermine.org
@@ -1087,6 +1095,7 @@ g.co
 gadgetsnow.com
 shop.gadgetsnow.com
 gameofbitcoins.com
+www.gameofbitcoins.com
 gamespot.com
 gannettdigital.com
 gannettonline.com
@@ -1770,6 +1779,7 @@ api.mapbox.com
 events.mapbox.com
 tiles.mapbox.com
 mapquestapi.com
+www.mapquestapi.com
 ssl.marfeelcdn.com
 margevicius.lt
 marketo.com
@@ -1845,6 +1855,7 @@ ris.api.iris.microsoft.com
 dmd.metaservices.microsoft.com
 coordinator-dcatbackend-int.mp.microsoft.com
 coordinator-dcatbackend.mp.microsoft.com
+dcc-int.mp.microsoft.com
 dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 fe3.delivery.mp.microsoft.com
@@ -1853,7 +1864,11 @@ displaycatalog.mp.microsoft.com
 aircapi.displaycatalog.mp.microsoft.com
 displaycatalog1p-int.mp.microsoft.com
 displaycatalog1p.mp.microsoft.com
+algorithmservice.dps.mp.microsoft.com
+certweb-int.dps.mp.microsoft.com
+domaindataservice.dps.mp.microsoft.com
 product-int.dps.mp.microsoft.com
+variant-int.dps.mp.microsoft.com
 pac-int.dse.mp.microsoft.com
 api-dev.dcat.dsp.mp.microsoft.com
 geo-prod.do.dsp.mp.microsoft.com
@@ -1868,6 +1883,7 @@ wus2.staging-dcatbackend-int.mp.microsoft.com
 stagingretrieval-dcatbackend-int.mp.microsoft.com
 wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com
 stagingretrieval-dcatbackend.mp.microsoft.com
+track-int.mp.microsoft.com
 xbox-displaycatalog-int.mp.microsoft.com
 xbox-displaycatalog.mp.microsoft.com
 mscrl.microsoft.com
@@ -1881,6 +1897,9 @@ unitedstates.smartscreen-prod.microsoft.com
 smartscreen.microsoft.com
 apprep.smartscreen.microsoft.com
 ars.smartscreen.microsoft.com
+fb.smartscreen.microsoft.com
+beta.fb.smartscreen.microsoft.com
+feedback.smartscreen.microsoft.com
 smartscreen-sn3p.smartscreen.microsoft.com
 store-images.microsoft.com
 pti.store.microsoft.com
@@ -1975,6 +1994,7 @@ www.msn.com
 mtv.com
 multiup.org
 winhelp2002.mvps.org
+www.winhelp2002.mvps.org
 keystone.mwbsys.com
 cdn.mxpnl.com
 mycapture.com
@@ -1994,11 +2014,11 @@ cm-widget.nakanohito.jp
 support-beacon.nakanohito.jp
 support-widget.nakanohito.jp
 namecheap.com
-www.namecheap.com
 nanopool.org
 nanorep.co
 sat1.us1-1.nanorep.co
 narkive.com
+www.narkive.com
 denis-ovs.narod.ru
 naszdziennik.pl
 nationalgeographic.com
@@ -2067,6 +2087,7 @@ nflximg.com
 ngpvan.com
 nhl.com
 nike.com
+www.nike.com
 ning.com
 nitroflare.com
 nj.com
@@ -2093,7 +2114,6 @@ npmcdn.com
 npr.org
 ns1.com
 nsatc.net
-geo-prod.dodsp.mp.microsoft.com.nsatc.net
 fe3.delivery.dsp.mp.microsoft.com.nsatc.net
 arc.msn.com.nsatc.net
 g.msn.com.nsatc.net
@@ -2125,6 +2145,7 @@ substrate.office.com
 office365.com
 outlook.office365.com
 officedepot.com
+www.officedepot.com
 ojrq.net
 www.ojrq.net
 okta.com
@@ -2395,6 +2416,7 @@ player.radio.com
 radiofrance.fr
 radiostacja.pl
 rakuten.com
+www.rakuten.com
 rambler.ru
 ranker.com
 images.rapgenius.com
@@ -2532,6 +2554,7 @@ cdn.siftscience.com
 cs.silverpop.com
 similarweb.com
 simplecast.com
+promo.simply.com
 sinaimg.cn
 ww2.sinaimg.cn
 wx2.sinaimg.cn
@@ -2562,9 +2585,11 @@ login.skype.com
 int-client-ss.msg.skype.com
 intgeo-client-ss.msg.skype.com
 msgapi.skype.com
+pipe.skype.com
 presence.skype.com
 api.promotions.skype.com
 bo.promotions.skype.com
+support.skype.com
 translatorv2.skype.com
 asse-a.translatorv2.skype.com
 asse-b.translatorv2.skype.com
@@ -2603,6 +2628,7 @@ snapengage.com
 www.snapengage.com
 sndcdn.com
 snipcart.com
+www.snipcart.com
 dsp.brand.sogou.com
 config.pinyin.sogou.com
 img.shouji.sogou.com
@@ -2639,8 +2665,21 @@ cloud.splunk.com
 conf.splunk.com
 events.splunk.com
 mint.splunk.com
+pipestorm.splunk.com
 response.splunk.com
+scp.splunk.com
+playground.scp.splunk.com
+admin.playground.scp.splunk.com
+legacy.admin.playground.scp.splunk.com
+scs002-sea10.admin.playground.scp.splunk.com
+staging.scp.splunk.com
+api.staging.scp.splunk.com
 admin-rainier.playground.scs.splunk.com
+authn-test-app.playground.scs.splunk.com
+staging.splunk.com
+api.web.staging.splunk.com
+syd-gw2.splunk.com
+api.web.splunk.com
 post.spmailtechnol.com
 sport.pl
 spot.im
@@ -2812,6 +2851,7 @@ www.tmz.com
 tomshardware.com
 it.toolbox.com
 toptenreviews.com
+www.toptenreviews.com
 torbit.com
 www.torbit.com
 torrentfreak.com
@@ -2839,6 +2879,7 @@ osce11-0-en.url.trendmicro.com
 web.tresorit.com
 go.trouter.io
 trumba.com
+www.trumba.com
 trustarc.com
 privacy-policy.truste.com
 trustkeeper.net
@@ -2945,6 +2986,7 @@ userscripts-mirror.org
 ocsp.usertrust.com
 uservoice.com
 attfeedback.uservoice.com
+www.uservoice.com
 yahoo.uservoice.com
 router.utorrent.com
 update.utorrent.com
@@ -3260,7 +3302,6 @@ data.mistat.xiaomi.com
 o.data.mistat.xiaomi.com
 wallpaper.pandora.xiaomi.com
 zhuti.xiaomi.com
-api.chat.xiaomi.net
 app.chat.xiaomi.net
 api.device.xiaomi.net
 app.chat.global.xiaomi.net
