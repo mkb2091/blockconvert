@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-09-24Z
+! Version: 2021-09-25Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-09-24Z
+! Last modified: 2021-09-25Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -2595,31 +2595,9 @@
 @@||intgeo-client-ss.msg.skype.com^
 @@||msgapi.skype.com^
 @@||pipe.skype.com^
-@@||presence.skype.com^
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
 @@||support.skype.com^
-@@||translatorv2.skype.com^
-@@||asse-a.translatorv2.skype.com^
-@@||asse-b.translatorv2.skype.com^
-@@||asse-c.translatorv2.skype.com^
-@@||asse.translatorv2.skype.com^
-@@||euno-a.translatorv2.skype.com^
-@@||euno-b.translatorv2.skype.com^
-@@||euno-c.translatorv2.skype.com^
-@@||euno.translatorv2.skype.com^
-@@||euwe-a.translatorv2.skype.com^
-@@||euwe-b.translatorv2.skype.com^
-@@||euwe-c.translatorv2.skype.com^
-@@||euwe.translatorv2.skype.com^
-@@||usea2-a.translatorv2.skype.com^
-@@||usea2-b.translatorv2.skype.com^
-@@||usea2-c.translatorv2.skype.com^
-@@||usea2.translatorv2.skype.com^
-@@||uswe-a.translatorv2.skype.com^
-@@||uswe-b.translatorv2.skype.com^
-@@||uswe-c.translatorv2.skype.com^
-@@||uswe.translatorv2.skype.com^
 @@||trap.skype.com^
 @@||slack-redir.net^
 @@||files.slack.com^
@@ -2757,7 +2735,6 @@
 @@||m.stripe.network^
 @@||stripecdn.com^
 @@||surveygizmo.com^
-@@||www.surveygizmo.com^
 @@||surveymonkey.com^
 @@||secure.surveymonkey.com^
 @@||sweclockers.com^
