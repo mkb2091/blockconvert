@@ -1,5 +1,4 @@
 ad.10010.com
-m1.ad.10010.com
 static.ws.126.net
 bnet.163.com
 1drv.com
@@ -299,7 +298,6 @@ connectivitycheck.android.com
 androidauthority.com
 androidforums.com
 angularjs.org
-www.angularjs.org
 www.anrdoezrs.net
 answers.com
 www.answers.com
@@ -703,6 +701,7 @@ livepassdl.conviva.com
 pings.conviva.com
 cosmopolitan.com
 costco.com
+www.costco.com
 countryflags.io
 platform.cloud.coveo.com
 static.cloud.coveo.com
@@ -1082,7 +1081,6 @@ a.fsdn.com
 build.origami.ft.com
 fundraiseup.com
 funk.eu
-www.funk.eu
 funnyordie.com
 fuseservice.com
 vanilla.futurecdn.net
@@ -1165,7 +1163,6 @@ gleam.io
 www.gleam.io
 ocsp.globalsign.com
 gmail.com
-www.gmail.com
 gmodules.com
 www.gmodules.com
 gmx.at
@@ -1191,7 +1188,6 @@ www.goo.gl
 google.com
 accounts.google.com
 adwords.google.com
-www.adwords.google.com
 apis.google.com
 appengine.google.com
 books.google.com
@@ -1854,7 +1850,6 @@ xbox.ipv6.microsoft.com
 ris.api.iris.microsoft.com
 dmd.metaservices.microsoft.com
 coordinator-dcatbackend-int.mp.microsoft.com
-coordinator-dcatbackend.mp.microsoft.com
 dcc-int.mp.microsoft.com
 dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
@@ -1862,12 +1857,10 @@ fe3.delivery.mp.microsoft.com
 displaycatalog-int.mp.microsoft.com
 displaycatalog.mp.microsoft.com
 aircapi.displaycatalog.mp.microsoft.com
-displaycatalog1p-int.mp.microsoft.com
 displaycatalog1p.mp.microsoft.com
 algorithmservice.dps.mp.microsoft.com
 certweb-int.dps.mp.microsoft.com
 domaindataservice.dps.mp.microsoft.com
-product-int.dps.mp.microsoft.com
 variant-int.dps.mp.microsoft.com
 pac-int.dse.mp.microsoft.com
 api-dev.dcat.dsp.mp.microsoft.com
@@ -1882,10 +1875,7 @@ staging-dcatbackend-int.mp.microsoft.com
 wus2.staging-dcatbackend-int.mp.microsoft.com
 stagingretrieval-dcatbackend-int.mp.microsoft.com
 wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com
-stagingretrieval-dcatbackend.mp.microsoft.com
 track-int.mp.microsoft.com
-xbox-displaycatalog-int.mp.microsoft.com
-xbox-displaycatalog.mp.microsoft.com
 mscrl.microsoft.com
 officeclient.microsoft.com
 query.prod.cms.rt.microsoft.com
@@ -2151,7 +2141,6 @@ www.ojrq.net
 okta.com
 olark.com
 old-games.org
-mercury.old-games.org
 omny.fm
 omroep.nl
 amazoncustomerservice.d2.sc.omtrdc.net
@@ -2335,7 +2324,6 @@ my.plexapp.com
 nine.plugins.plexapp.com
 tvthemes.plexapp.com
 pling.com
-www.pling.com
 plot.ly
 cdn.plyr.io
 pochta.ru
@@ -2570,7 +2558,6 @@ authentication-api.skimlinks.com
 skimresources.com
 www.skimresources.com
 skype.com
-pes.asm.skype.com
 blogs.skype.com
 c1.skype.com
 contentapi.skype.com
@@ -2789,6 +2776,7 @@ texashomebase.com
 www.texashomebase.com
 textalk.se
 tfaforms.com
+www.tfaforms.com
 ocsp.thawte.com
 links.e.theatlantic.com
 thebot.net
