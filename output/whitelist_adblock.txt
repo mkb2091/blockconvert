@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-09-28Z
+! Version: 2021-09-29Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-09-28Z
+! Last modified: 2021-09-29Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -116,6 +116,7 @@
 @@||affirm.com^
 @@||www.affirm.com^
 @@||afi-b.com^
+@@||finance.afi-b.com^
 @@||t.afi-b.com^
 @@||www.afi-b.com^
 @@||aftership.com^
@@ -303,6 +304,7 @@
 @@||amuniversal.com^
 @@||amzn.to^
 @@||ancestry.com^
+@@||www.ancestry.com^
 @@||connectivitycheck.android.com^
 @@||androidauthority.com^
 @@||androidforums.com^
@@ -663,6 +665,7 @@
 @@||overclockers.co.uk^
 @@||email.procook.co.uk^
 @@||securesuite.co.uk^
+@@||www.securesuite.co.uk^
 @@||theregister.co.uk^
 @@||www.theregister.co.uk^
 @@||codeberg.org^
@@ -771,7 +774,9 @@
 @@||check.ddos-guard.net^
 @@||static-pepper.dealabs.com^
 @@||dealer.com^
+@@||www.dealer.com^
 @@||dealerinspire.com^
+@@||www.dealerinspire.com^
 @@||debian.org^
 @@||delicious.com^
 @@||dell.com^
@@ -1074,6 +1079,7 @@
 @@||fox6now.com^
 @@||fox8.com^
 @@||framasoft.org^
+@@||www.framasoft.org^
 @@||frankerfacez.com^
 @@||dl.free.fr^
 @@||freebsd.org^
@@ -1615,7 +1621,6 @@
 @@||kinja-static.com^
 @@||kinja.com^
 @@||klarna.com^
-@@||www.klarna.com^
 @@||trk.klclick1.com^
 @@||klm.com^
 @@||kmart.com^
@@ -1765,6 +1770,7 @@
 @@||luckyorange.com^
 @@||www.luckyorange.com^
 @@||lwn.net^
+@@||www.lwn.net^
 @@||m.me^
 @@||forums.macrumors.com^
 @@||macys.com^
@@ -1858,24 +1864,30 @@
 @@||xbox.ipv6.microsoft.com^
 @@||ris.api.iris.microsoft.com^
 @@||dmd.metaservices.microsoft.com^
-@@||coordinator-dcatbackend-int.mp.microsoft.com^
+@@||bspmts.mp.microsoft.com^
 @@||dcc-int.mp.microsoft.com^
+@@||dcc.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
 @@||fe3.delivery.mp.microsoft.com^
 @@||displaycatalog-int.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
 @@||aircapi.displaycatalog.mp.microsoft.com^
-@@||displaycatalog1p.mp.microsoft.com^
 @@||algorithmservice.dps.mp.microsoft.com^
+@@||appxapi-int.dps.mp.microsoft.com^
 @@||certweb-int.dps.mp.microsoft.com^
 @@||domaindataservice.dps.mp.microsoft.com^
+@@||packages-int.dps.mp.microsoft.com^
+@@||packagesapi-int.dps.mp.microsoft.com^
 @@||variant-int.dps.mp.microsoft.com^
 @@||pac-int.dse.mp.microsoft.com^
 @@||api-dev.dcat.dsp.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
+@@||glb.adminportalapi-dev.trafficshaping.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
+@@||ebs.mp.microsoft.com^
+@@||label-int.mp.microsoft.com^
 @@||licensing.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
@@ -1894,12 +1906,32 @@
 @@||validation-v2.sls.microsoft.com^
 @@||unitedstates.smartscreen-prod.microsoft.com^
 @@||smartscreen.microsoft.com^
+@@||api.smartscreen.microsoft.com^
 @@||apprep.smartscreen.microsoft.com^
+@@||beta.apprep.smartscreen.microsoft.com^
+@@||i.apprep.smartscreen.microsoft.com^
+@@||w.apprep.smartscreen.microsoft.com^
+@@||beta.w.apprep.smartscreen.microsoft.com^
+@@||i.w.apprep.smartscreen.microsoft.com^
 @@||ars.smartscreen.microsoft.com^
+@@||bf.smartscreen.microsoft.com^
+@@||t.bf.smartscreen.microsoft.com^
+@@||cp.smartscreen.microsoft.com^
 @@||fb.smartscreen.microsoft.com^
 @@||beta.fb.smartscreen.microsoft.com^
 @@||feedback.smartscreen.microsoft.com^
+@@||nav.smartscreen.microsoft.com^
+@@||data.nav.smartscreen.microsoft.com^
+@@||ping.nav.smartscreen.microsoft.com^
+@@||t.nav.smartscreen.microsoft.com^
+@@||nf.smartscreen.microsoft.com^
+@@||data.nf.smartscreen.microsoft.com^
+@@||ping.nf.smartscreen.microsoft.com^
+@@||t.nf.smartscreen.microsoft.com^
+@@||ping.smartscreen.microsoft.com^
+@@||sl.smartscreen.microsoft.com^
 @@||smartscreen-sn3p.smartscreen.microsoft.com^
+@@||urs.smartscreen.microsoft.com^
 @@||store-images.microsoft.com^
 @@||pti.store.microsoft.com^
 @@||storecatalogrevocation.storequality.microsoft.com^
@@ -2111,6 +2143,7 @@
 @@||now.sh^
 @@||npmcdn.com^
 @@||npr.org^
+@@||www.npr.org^
 @@||ns1.com^
 @@||nsatc.net^
 @@||fe3.delivery.dsp.mp.microsoft.com.nsatc.net^
@@ -2569,7 +2602,7 @@
 @@||skype.com^
 @@||blogs.skype.com^
 @@||c1.skype.com^
-@@||contentapi.skype.com^
+@@||contacts.skype.com^
 @@||download.skype.com^
 @@||edge.skype.com^
 @@||config.edge.skype.com^
@@ -2637,11 +2670,21 @@
 @@||appinspect.splunk.com^
 @@||cloud.splunk.com^
 @@||conf.splunk.com^
+@@||dev.splunk.com^
+@@||api.dev.splunk.com^
+@@||api2.dev.splunk.com^
+@@||playground.dev.splunk.com^
+@@||api.playground.dev.splunk.com^
+@@||api2.playground.dev.splunk.com^
+@@||staging.dev.splunk.com^
+@@||api.staging.dev.splunk.com^
+@@||api2.staging.dev.splunk.com^
 @@||events.splunk.com^
 @@||mint.splunk.com^
 @@||pipestorm.splunk.com^
 @@||response.splunk.com^
 @@||scp.splunk.com^
+@@||app.scp.splunk.com^
 @@||playground.scp.splunk.com^
 @@||admin.playground.scp.splunk.com^
 @@||legacy.admin.playground.scp.splunk.com^
@@ -2760,6 +2803,7 @@
 @@||profile.target.com^
 @@||redsky.target.com^
 @@||weeklyad.target.com^
+@@||www.target.com^
 @@||targetimg2.com^
 @@||radiofrance.targetspot.com^
 @@||tarteaucitron.io^
@@ -2848,6 +2892,7 @@
 @@||travelocity.com^
 @@||trb.com^
 @@||trbimg.com^
+@@||www.trbimg.com^
 @@||c.trello.com^
 @@||osce11-0-en.url.trendmicro.com^
 @@||web.tresorit.com^
@@ -2880,7 +2925,6 @@
 @@||tvn24.pl^
 @@||tracker.tvnihon.com^
 @@||tvnstyle.pl^
-@@||www.tvnstyle.pl^
 @@||tvp.pl^
 @@||bialystok.tvp.pl^
 @@||bydgoszcz.tvp.pl^
@@ -2934,6 +2978,7 @@
 @@||ultimedia.com^
 @@||www.ultimedia.com^
 @@||ultraimg.com^
+@@||www.ultraimg.com^
 @@||t.umblr.com^
 @@||builder-assets.unbounce.com^
 @@||unbouncepages.com^
@@ -3316,6 +3361,7 @@
 @@||messenger.yahoo.com^
 @@||search.yahoo.com^
 @@||sports.yahoo.com^
+@@||www.yahoo.com^
 @@||yahoo.net^
 @@||yahooapis.com^
 @@||geo-applefinance-cache.internal.query.g03.yahoodns.net^
