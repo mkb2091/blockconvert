@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-09-29Z
+! Version: 2021-10-03Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-09-29Z
+! Last modified: 2021-10-03Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -52,6 +52,7 @@
 @@||vortex.accuweather.com^
 @@||www.accuweather.com^
 @@||acehardware.com^
+@@||www.acehardware.com^
 @@||delivery.acm.org^
 @@||actionnetwork.org^
 @@||valimail.actonservice.com^
@@ -308,6 +309,7 @@
 @@||connectivitycheck.android.com^
 @@||androidauthority.com^
 @@||androidforums.com^
+@@||www.androidforums.com^
 @@||angularjs.org^
 @@||www.anrdoezrs.net^
 @@||answers.com^
@@ -465,24 +467,38 @@
 @@||binarydefense.com^
 @@||www.binarydefense.com^
 @@||bing.at^
+@@||www.bing.at^
 @@||bing.ch^
+@@||www.bing.ch^
 @@||bing.com^
 @@||api.bing.com^
 @@||cn.bing.com^
 @@||r.bing.com^
 @@||www.bing.com^
 @@||bing.cz^
+@@||www.bing.cz^
 @@||bing.es^
+@@||www.bing.es^
 @@||bing.fi^
+@@||www.bing.fi^
 @@||bing.fr^
+@@||www.bing.fr^
 @@||bing.gr^
+@@||www.bing.gr^
 @@||bing.hu^
+@@||www.bing.hu^
 @@||bing.ie^
+@@||www.bing.ie^
 @@||bing.it^
+@@||www.bing.it^
 @@||bing.no^
+@@||www.bing.no^
 @@||bing.pl^
+@@||www.bing.pl^
 @@||bing.ru^
+@@||www.bing.ru^
 @@||bing.se^
+@@||www.bing.se^
 @@||bit.ly^
 @@||www.bit.ly^
 @@||bitbucket.org^
@@ -658,7 +674,9 @@
 @@||bbci.co.uk^
 @@||static.bbci.co.uk^
 @@||bing.co.uk^
+@@||www.bing.co.uk^
 @@||dailymail.co.uk^
+@@||www.dailymail.co.uk^
 @@||express.co.uk^
 @@||guardian.co.uk^
 @@||mirror.co.uk^
@@ -694,6 +712,7 @@
 @@||go.scorptec.com.au^
 @@||weatherzone.com.au^
 @@||bing.com.br^
+@@||www.bing.com.br^
 @@||vivo.com.br^
 @@||sina.com.cn^
 @@||www.sina.com.cn^
@@ -854,6 +873,7 @@
 @@||www.duken.nl^
 @@||dumpert.nl^
 @@||duosecurity.com^
+@@||www.duosecurity.com^
 @@||proto2ad.durasite.net^
 @@||dynamics.com^
 @@||cdn-eu.dynamicyield.com^
@@ -1105,6 +1125,7 @@
 @@||www.fwmrm.net^
 @@||fyre.co^
 @@||g.co^
+@@||btcpay.gab.com^
 @@||gadgetsnow.com^
 @@||shop.gadgetsnow.com^
 @@||gameofbitcoins.com^
@@ -1414,6 +1435,7 @@
 @@||hoopshype.com^
 @@||hootsuite.com^
 @@||horseanswerstoday.com^
+@@||www.horseanswerstoday.com^
 @@||hosts-file.net^
 @@||hotmail.com^
 @@||m.hotmail.com^
@@ -1763,6 +1785,7 @@
 @@||securel.longtailvideo.com^
 @@||secureplugins.longtailvideo.com^
 @@||lowendbox.com^
+@@||www.lowendbox.com^
 @@||lowes.com^
 @@||cindyholbrook.lpages.co^
 @@||lpsnmedia.net^
@@ -1782,6 +1805,7 @@
 @@||majorgeeks.com^
 @@||www.majorgeeks.com^
 @@||malwaredomainlist.com^
+@@||www.malwaredomainlist.com^
 @@||mirror1.malwaredomains.com^
 @@||manager-magazin-de.manager-magazin.de^
 @@||mandrillapp.com^
@@ -1864,9 +1888,12 @@
 @@||xbox.ipv6.microsoft.com^
 @@||ris.api.iris.microsoft.com^
 @@||dmd.metaservices.microsoft.com^
+@@||bspmgmtsvc-int.mp.microsoft.com^
 @@||bspmts.mp.microsoft.com^
 @@||dcc-int.mp.microsoft.com^
 @@||dcc.mp.microsoft.com^
+@@||accountuserservice-int.dce.mp.microsoft.com^
+@@||devcenterapi.dce.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
 @@||fe3.delivery.mp.microsoft.com^
@@ -1875,15 +1902,22 @@
 @@||aircapi.displaycatalog.mp.microsoft.com^
 @@||algorithmservice.dps.mp.microsoft.com^
 @@||appxapi-int.dps.mp.microsoft.com^
+@@||bias-int.dps.mp.microsoft.com^
 @@||certweb-int.dps.mp.microsoft.com^
+@@||composerapi-int.dps.mp.microsoft.com^
 @@||domaindataservice.dps.mp.microsoft.com^
+@@||ingestionapi.dps.mp.microsoft.com^
 @@||packages-int.dps.mp.microsoft.com^
 @@||packagesapi-int.dps.mp.microsoft.com^
+@@||schemaapi.dps.mp.microsoft.com^
+@@||survey-int.dps.mp.microsoft.com^
 @@||variant-int.dps.mp.microsoft.com^
+@@||ingestiondeveloperapi.dse.mp.microsoft.com^
 @@||pac-int.dse.mp.microsoft.com^
 @@||api-dev.dcat.dsp.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||glb.adminportalapi-dev.trafficshaping.dsp.mp.microsoft.com^
+@@||glb.auar-dev.trafficshaping.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
 @@||ebs.mp.microsoft.com^
@@ -1950,6 +1984,7 @@
 @@||whiteboard.microsoft.com^
 @@||int.whiteboard.microsoft.com^
 @@||emdl.ws.microsoft.com^
+@@||www.microsoft.com^
 @@||secure.aadcdn.microsoftonline-p.com^
 @@||login.microsoftonline.com^
 @@||login.microsoftonline.us^
@@ -2380,6 +2415,7 @@
 @@||www.pornhub.com^
 @@||postimage.org^
 @@||postimg.cc^
+@@||www.postimg.cc^
 @@||powerreviews.com^
 @@||powr.io^
 @@||ppt.cc^
@@ -2467,6 +2503,7 @@
 @@||real-debrid.com^
 @@||recaptcha.net^
 @@||recruitics.com^
+@@||www.recruitics.com^
 @@||recurly.com^
 @@||redcdn.pl^
 @@||reddit.com^
@@ -2540,7 +2577,6 @@
 @@||scrapinghub.com^
 @@||scribblelive.com^
 @@||scribd.com^
-@@||www.scribd.com^
 @@||sdad.guru^
 @@||www.sdad.guru^
 @@||searchanise.com^
@@ -2689,10 +2725,20 @@
 @@||admin.playground.scp.splunk.com^
 @@||legacy.admin.playground.scp.splunk.com^
 @@||scs002-sea10.admin.playground.scp.splunk.com^
+@@||beam.playground.scp.splunk.com^
 @@||staging.scp.splunk.com^
 @@||api.staging.scp.splunk.com^
+@@||app-admin.scs.splunk.com^
+@@||app.scs.splunk.com^
 @@||admin-rainier.playground.scs.splunk.com^
 @@||authn-test-app.playground.scs.splunk.com^
+@@||pulsar.playground.scs.splunk.com^
+@@||admin.staging.scs.splunk.com^
+@@||scs003-iad10.admin.staging.scs.splunk.com^
+@@||api.staging.scs.splunk.com^
+@@||region-iad10.api.staging.scs.splunk.com^
+@@||auth.staging.scs.splunk.com^
+@@||region-iad10.auth.staging.scs.splunk.com^
 @@||staging.splunk.com^
 @@||api.web.staging.splunk.com^
 @@||syd-gw2.splunk.com^
@@ -2752,8 +2798,10 @@
 @@||statuscake.com^
 @@||statuspage.io^
 @@||steamcommunity.com^
+@@||www.steamcommunity.com^
 @@||steampowered.com^
 @@||store.steampowered.com^
+@@||www.steampowered.com^
 @@||store.akamai.steamstatic.com^
 @@||stopklatka.pl^
 @@||statics.streamable.com^
@@ -3082,6 +3130,7 @@
 @@||wbd.ms^
 @@||weather.com^
 @@||weather.gov^
+@@||www.weather.gov^
 @@||weatherbug.com^
 @@||weathernationtv.com^
 @@||web.de^
@@ -3388,6 +3437,7 @@
 @@||723009.redirect.appmetrica.yandex.com^
 @@||917433.redirect.appmetrica.yandex.com^
 @@||avatars.mds.yandex.net^
+@@||storage.mds.yandex.net^
 @@||yandex.ru^
 @@||api-maps.yandex.ru^
 @@||img-fotki.yandex.ru^
@@ -3439,9 +3489,11 @@
 @@||zendesk.com^
 @@||assets.zendesk.com^
 @@||zerohedge.com^
+@@||www.zerohedge.com^
 @@||gc.zgo.at^
 @@||app-advertise.zhihuishu.com^
 @@||ziplist.com^
+@@||www.ziplist.com^
 @@||zippyshare.com^
 @@||ziprecruiter.com^
 @@||zlcdn.com^
