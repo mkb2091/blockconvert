@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-10-03Z
+! Version: 2021-10-05Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-10-03Z
+! Last modified: 2021-10-05Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -279,6 +279,7 @@
 @@||www.amazon.de^
 @@||amazon.es^
 @@||amazon.fr^
+@@||www.amazon.fr^
 @@||amazon.in^
 @@||amazon.it^
 @@||www.amazon.it^
@@ -1118,6 +1119,7 @@
 @@||funk.eu^
 @@||funnyordie.com^
 @@||fuseservice.com^
+@@||www.fuseservice.com^
 @@||vanilla.futurecdn.net^
 @@||api.vanilla.futurecdn.net^
 @@||fwmrm.net^
@@ -1199,6 +1201,7 @@
 @@||www.gleam.io^
 @@||ocsp.globalsign.com^
 @@||gmail.com^
+@@||www.gmail.com^
 @@||gmodules.com^
 @@||www.gmodules.com^
 @@||gmx.at^
@@ -1224,6 +1227,7 @@
 @@||google.com^
 @@||accounts.google.com^
 @@||adwords.google.com^
+@@||www.adwords.google.com^
 @@||apis.google.com^
 @@||appengine.google.com^
 @@||books.google.com^
@@ -1904,11 +1908,16 @@
 @@||appxapi-int.dps.mp.microsoft.com^
 @@||bias-int.dps.mp.microsoft.com^
 @@||certweb-int.dps.mp.microsoft.com^
+@@||ciso.dps.mp.microsoft.com^
 @@||composerapi-int.dps.mp.microsoft.com^
+@@||composerapi.dps.mp.microsoft.com^
+@@||composerweb.dps.mp.microsoft.com^
 @@||domaindataservice.dps.mp.microsoft.com^
 @@||ingestionapi.dps.mp.microsoft.com^
 @@||packages-int.dps.mp.microsoft.com^
 @@||packagesapi-int.dps.mp.microsoft.com^
+@@||payoutorderstatus.dps.mp.microsoft.com^
+@@||productweb-int.dps.mp.microsoft.com^
 @@||schemaapi.dps.mp.microsoft.com^
 @@||survey-int.dps.mp.microsoft.com^
 @@||variant-int.dps.mp.microsoft.com^
@@ -1921,9 +1930,11 @@
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
 @@||ebs.mp.microsoft.com^
+@@||fees.mp.microsoft.com^
 @@||label-int.mp.microsoft.com^
 @@||licensing.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
+@@||uwpproc.mix.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
 @@||recurrence-int.mp.microsoft.com^
 @@||staging-dcatbackend-int.mp.microsoft.com^
@@ -2612,6 +2623,7 @@
 @@||s.shopify.com^
 @@||sdks.shopifycdn.com^
 @@||shopping.com^
+@@||www.shopping.com^
 @@||shoprunner.com^
 @@||siatka.org^
 @@||sidearmsports.com^
@@ -2728,9 +2740,19 @@
 @@||beam.playground.scp.splunk.com^
 @@||staging.scp.splunk.com^
 @@||api.staging.scp.splunk.com^
+@@||api.scs.splunk.com^
+@@||region-iad10.api.scs.splunk.com^
 @@||app-admin.scs.splunk.com^
 @@||app.scs.splunk.com^
+@@||auth.scs.splunk.com^
+@@||region-iad10.auth.scs.splunk.com^
 @@||admin-rainier.playground.scs.splunk.com^
+@@||admin.playground.scs.splunk.com^
+@@||scs003-dub10.admin.playground.scs.splunk.com^
+@@||api.playground.scs.splunk.com^
+@@||region-dub10.api.playground.scs.splunk.com^
+@@||auth.playground.scs.splunk.com^
+@@||region-dub10.auth.playground.scs.splunk.com^
 @@||authn-test-app.playground.scs.splunk.com^
 @@||pulsar.playground.scs.splunk.com^
 @@||admin.staging.scs.splunk.com^
@@ -2867,6 +2889,7 @@
 @@||techrepublic.com^
 @@||www.techrepublic.com^
 @@||tecmint.com^
+@@||www.tecmint.com^
 @@||app-api.ted.com^
 @@||hls.ted.com^
 @@||teespring.com^
@@ -2888,6 +2911,7 @@
 @@||thehill.com^
 @@||thenextweb.com^
 @@||theoldnet.com^
+@@||www.theoldnet.com^
 @@||thepiratebay.org^
 @@||theplatform.com^
 @@||thetvdb.com^
@@ -2909,6 +2933,7 @@
 @@||tinypic.com^
 @@||tinyurl.com^
 @@||tlaol.com^
+@@||www.tlaol.com^
 @@||tlc.com^
 @@||tld-list.com^
 @@||tmblr.co^
