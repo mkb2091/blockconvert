@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-10-05Z
+! Version: 2021-10-07Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-10-05Z
+! Last modified: 2021-10-07Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -74,7 +74,6 @@
 @@||easylist-downloads.adblockplus.org^
 @@||adcolo.com^
 @@||add0n.com^
-@@||www.add0n.com^
 @@||adguard.com^
 @@||adidas.com^
 @@||www.adidas.com^
@@ -115,7 +114,6 @@
 @@||vip5.afdorigin-prod-am02.afdogw.com^
 @@||vip5.afdorigin-prod-ch02.afdogw.com^
 @@||affirm.com^
-@@||www.affirm.com^
 @@||afi-b.com^
 @@||finance.afi-b.com^
 @@||t.afi-b.com^
@@ -265,7 +263,6 @@
 @@||s.amazon-adsystem.com^
 @@||amazon.at^
 @@||amazon.ca^
-@@||www.amazon.ca^
 @@||amazon.cn^
 @@||amazon.com^
 @@||arcus-uswest.amazon.com^
@@ -278,6 +275,7 @@
 @@||amazon.de^
 @@||www.amazon.de^
 @@||amazon.es^
+@@||www.amazon.es^
 @@||amazon.fr^
 @@||www.amazon.fr^
 @@||amazon.in^
@@ -322,6 +320,7 @@
 @@||www.aol.com^
 @@||o.aolcdn.com^
 @@||ap.org^
+@@||www.ap.org^
 @@||apnewsregistry.com^
 @@||reddit.app.link^
 @@||in.appcenter.ms^
@@ -839,7 +838,6 @@
 @@||dmcdn.com^
 @@||dmcdn.net^
 @@||dn.se^
-@@||www.dn.se^
 @@||do.co^
 @@||forum.dobreprogramy.pl^
 @@||screendoor.dobt.co^
@@ -948,7 +946,6 @@
 @@||ethn.io^
 @@||www.ethn.io^
 @@||eventbrite.com^
-@@||www.eventbrite.com^
 @@||everyaction.com^
 @@||c.evidon.com^
 @@||ew.com^
@@ -1044,6 +1041,7 @@
 @@||www.fili.cc^
 @@||filmweb.pl^
 @@||filmyhd.net^
+@@||www.filmyhd.net^
 @@||filterlists.com^
 @@||filtri-dns.ga^
 @@||financialcontent.com^
@@ -1743,7 +1741,6 @@
 @@||data.logentries.com^
 @@||heroku.data.logentries.com^
 @@||eu.logentries.com^
-@@||rest.eu.logentries.com^
 @@||heroku.logentries.com^
 @@||info.logentries.com^
 @@||js.logentries.com^
@@ -1922,8 +1919,6 @@
 @@||survey-int.dps.mp.microsoft.com^
 @@||variant-int.dps.mp.microsoft.com^
 @@||ingestiondeveloperapi.dse.mp.microsoft.com^
-@@||pac-int.dse.mp.microsoft.com^
-@@||api-dev.dcat.dsp.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||glb.adminportalapi-dev.trafficshaping.dsp.mp.microsoft.com^
 @@||glb.auar-dev.trafficshaping.dsp.mp.microsoft.com^
@@ -1936,7 +1931,6 @@
 @@||collections.md.mp.microsoft.com^
 @@||uwpproc.mix.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
-@@||recurrence-int.mp.microsoft.com^
 @@||staging-dcatbackend-int.mp.microsoft.com^
 @@||wus2.staging-dcatbackend-int.mp.microsoft.com^
 @@||stagingretrieval-dcatbackend-int.mp.microsoft.com^
@@ -2197,6 +2191,7 @@
 @@||g.msn.com.nsatc.net^
 @@||pool.ntp.org^
 @@||2.android.pool.ntp.org^
+@@||www.pool.ntp.org^
 @@||media.nu.nl^
 @@||ota-downloads.nvidia.com^
 @@||ny.com^
@@ -2288,7 +2283,6 @@
 @@||cdn3.optimizely.com^
 @@||www.optimizely.com^
 @@||oracle.com^
-@@||www.oracle.com^
 @@||orange.fr^
 @@||webmail.orange.fr^
 @@||orbitz.com^
@@ -2323,7 +2317,6 @@
 @@||t.paypal.com^
 @@||www.paypal.com^
 @@||paypalobjects.com^
-@@||www.paypalobjects.com^
 @@||www-tc.pbs.org^
 @@||pcbeta.com^
 @@||bbs.pcbeta.com^
@@ -2425,6 +2418,7 @@
 @@||hubt.pornhub.com^
 @@||www.pornhub.com^
 @@||postimage.org^
+@@||www.postimage.org^
 @@||postimg.cc^
 @@||www.postimg.cc^
 @@||powerreviews.com^
@@ -2524,6 +2518,7 @@
 @@||www.reddit.com^
 @@||redditarchive.com^
 @@||redditmedia.com^
+@@||www.redditstatic.com^
 @@||redefine.pl^
 @@||redfin.com^
 @@||redirectingat.com^
@@ -2631,6 +2626,7 @@
 @@||cdn.siftscience.com^
 @@||cs.silverpop.com^
 @@||similarweb.com^
+@@||www.similarweb.com^
 @@||simplecast.com^
 @@||promo.simply.com^
 @@||sinaimg.cn^
@@ -2648,20 +2644,16 @@
 @@||skimresources.com^
 @@||www.skimresources.com^
 @@||skype.com^
+@@||aqs.skype.com^
+@@||bibit.skype.com^
 @@||blogs.skype.com^
 @@||c1.skype.com^
 @@||contacts.skype.com^
 @@||download.skype.com^
 @@||edge.skype.com^
 @@||config.edge.skype.com^
-@@||email.skype.com^
-@@||click.email.skype.com^
-@@||pages.email.skype.com^
-@@||view.email.skype.com^
+@@||go.skype.com^
 @@||login.skype.com^
-@@||int-client-ss.msg.skype.com^
-@@||intgeo-client-ss.msg.skype.com^
-@@||msgapi.skype.com^
 @@||pipe.skype.com^
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
@@ -2678,7 +2670,6 @@
 @@||smallseotools.com^
 @@||smugmug.com^
 @@||snapchat.com^
-@@||www.snapchat.com^
 @@||snapengage.com^
 @@||www.snapengage.com^
 @@||sndcdn.com^
@@ -2728,6 +2719,7 @@
 @@||api.staging.dev.splunk.com^
 @@||api2.staging.dev.splunk.com^
 @@||events.splunk.com^
+@@||gsuite.splunk.com^
 @@||mint.splunk.com^
 @@||pipestorm.splunk.com^
 @@||response.splunk.com^
@@ -2746,7 +2738,6 @@
 @@||app.scs.splunk.com^
 @@||auth.scs.splunk.com^
 @@||region-iad10.auth.scs.splunk.com^
-@@||admin-rainier.playground.scs.splunk.com^
 @@||admin.playground.scs.splunk.com^
 @@||scs003-dub10.admin.playground.scs.splunk.com^
 @@||api.playground.scs.splunk.com^
@@ -2754,6 +2745,7 @@
 @@||auth.playground.scs.splunk.com^
 @@||region-dub10.auth.playground.scs.splunk.com^
 @@||authn-test-app.playground.scs.splunk.com^
+@@||beam.playground.scs.splunk.com^
 @@||pulsar.playground.scs.splunk.com^
 @@||admin.staging.scs.splunk.com^
 @@||scs003-iad10.admin.staging.scs.splunk.com^
@@ -2761,6 +2753,8 @@
 @@||region-iad10.api.staging.scs.splunk.com^
 @@||auth.staging.scs.splunk.com^
 @@||region-iad10.auth.staging.scs.splunk.com^
+@@||console.staging.scs.splunk.com^
+@@||dsp.staging.scs.splunk.com^
 @@||staging.splunk.com^
 @@||api.web.staging.splunk.com^
 @@||syd-gw2.splunk.com^
@@ -2848,6 +2842,7 @@
 @@||t-online.de^
 @@||www.t-online.de^
 @@||t.co^
+@@||t.ly^
 @@||public.tableau.com^
 @@||public.tableausoftware.com^
 @@||static.tacdn.com^
@@ -3048,6 +3043,7 @@
 @@||ui-portal.de^
 @@||ce1.uicdn.net^
 @@||uk.com^
+@@||www.uk.com^
 @@||ultimedia.com^
 @@||www.ultimedia.com^
 @@||ultraimg.com^
@@ -3064,7 +3060,6 @@
 @@||uploaded.net^
 @@||uploaded.to^
 @@||uplynk.com^
-@@||www.uplynk.com^
 @@||uptobox.com^
 @@||flo.uri.sh^
 @@||usa.gov^
@@ -3309,7 +3304,6 @@
 @@||fg.v4.download.windowsupdate.com^
 @@||windy.com^
 @@||winfuture.de^
-@@||www.winfuture.de^
 @@||wired.com^
 @@||www.wired.com^
 @@||wirtualnemedia.pl^
@@ -3320,7 +3314,6 @@
 @@||wix.com^
 @@||tg1.premium.db4.wix.com^
 @@||tg1.premium.dc11.wix.com^
-@@||www.wix.com^
 @@||balancer.wixdns.net^
 @@||www17.wixdns.net^
 @@||static.wixstatic.com^
