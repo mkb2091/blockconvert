@@ -143,6 +143,7 @@ config.edge.skype.com
 confirmit.com
 content.invisioncic.com
 countryflags.io
+c.paypal.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-939979052 Breaks PayPal on some websites
 credit.finance.intuit.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-788266121 Breaks checking credit score on Mint Mobile App
 cricket.att.ada.support # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-772293993 Breaks Cricket cell phone customer support
 crunchyroll.com

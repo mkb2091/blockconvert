@@ -31,6 +31,7 @@
 @@||4shared.com^
 @@||70i.net^
 @@||8ch.net^
+@@||www.8ch.net^
 @@||91-cdn.com^
 @@||www.91-cdn.com^
 @@||91mobiles.com^
@@ -71,6 +72,7 @@
 @@||adaway.org^
 @@||adblock.dk^
 @@||adblock.ee^
+@@||www.adblock.ee^
 @@||road.adblock.ro^
 @@||easylist-downloads.adblockplus.org^
 @@||adcolo.com^
@@ -794,6 +796,7 @@
 @@||d3js.org^
 @@||admin.dable.io^
 @@||dailymotion.com^
+@@||www.dailymotion.com^
 @@||danid.dk^
 @@||www.datadoghq-browser-agent.com^
 @@||datafilehost.com^
@@ -848,6 +851,7 @@
 @@||dmcdn.com^
 @@||dmcdn.net^
 @@||dn.se^
+@@||www.dn.se^
 @@||do.co^
 @@||forum.dobreprogramy.pl^
 @@||screendoor.dobt.co^
@@ -2023,6 +2027,7 @@
 @@||help.mint.com^
 @@||links.mint.com^
 @@||mirrorservice.org^
+@@||www.mirrorservice.org^
 @@||mistrzowie.org^
 @@||api.comm.miui.com^
 @@||trial.api.huangye.miui.com^
@@ -2347,6 +2352,7 @@
 @@||www.pasteboard.co^
 @@||official.paymaya.com^
 @@||paypal.com^
+@@||c.paypal.com^
 @@||www.glb.paypal.com^
 @@||t.paypal.com^
 @@||www.paypal.com^
@@ -2693,6 +2699,7 @@
 @@||config.edge.skype.com^
 @@||go.skype.com^
 @@||heartbeat.skype.com^
+@@||x-lgw.lgw.skype.com^
 @@||logapi.skype.com^
 @@||login.skype.com^
 @@||lw.skype.com^
@@ -2712,6 +2719,7 @@
 @@||smallseotools.com^
 @@||smugmug.com^
 @@||snapchat.com^
+@@||www.snapchat.com^
 @@||snapengage.com^
 @@||www.snapengage.com^
 @@||sndcdn.com^
