@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-10-13Z
+! Version: 2021-10-15Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-10-13Z
+! Last modified: 2021-10-15Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -54,7 +54,6 @@
 @@||vortex.accuweather.com^
 @@||www.accuweather.com^
 @@||acehardware.com^
-@@||www.acehardware.com^
 @@||delivery.acm.org^
 @@||actionnetwork.org^
 @@||valimail.actonservice.com^
@@ -102,7 +101,6 @@
 @@||feed.adrelayer.com^
 @@||adsterra.com^
 @@||ads.adsterra.com^
-@@||www.ads.adsterra.com^
 @@||affiliates.adsterra.com^
 @@||beta.affiliates.adsterra.com^
 @@||help-advertisers.adsterra.com^
@@ -313,6 +311,7 @@
 @@||ocsp.sca1b.amazontrust.com^
 @@||americanexpress.com^
 @@||www.americanexpress.com^
+@@||analytics.amplitude.com^
 @@||3p.ampproject.net^
 @@||cdn-content.ampproject.org^
 @@||cdn.ampproject.org^
@@ -480,38 +479,24 @@
 @@||binarydefense.com^
 @@||www.binarydefense.com^
 @@||bing.at^
-@@||www.bing.at^
 @@||bing.ch^
-@@||www.bing.ch^
 @@||bing.com^
 @@||api.bing.com^
 @@||cn.bing.com^
 @@||r.bing.com^
 @@||www.bing.com^
 @@||bing.cz^
-@@||www.bing.cz^
 @@||bing.es^
-@@||www.bing.es^
 @@||bing.fi^
-@@||www.bing.fi^
 @@||bing.fr^
-@@||www.bing.fr^
 @@||bing.gr^
-@@||www.bing.gr^
 @@||bing.hu^
-@@||www.bing.hu^
 @@||bing.ie^
-@@||www.bing.ie^
 @@||bing.it^
-@@||www.bing.it^
 @@||bing.no^
-@@||www.bing.no^
 @@||bing.pl^
-@@||www.bing.pl^
 @@||bing.ru^
-@@||www.bing.ru^
 @@||bing.se^
-@@||www.bing.se^
 @@||bit.ly^
 @@||www.bit.ly^
 @@||bitbucket.org^
@@ -688,7 +673,6 @@
 @@||bbci.co.uk^
 @@||static.bbci.co.uk^
 @@||bing.co.uk^
-@@||www.bing.co.uk^
 @@||dailymail.co.uk^
 @@||www.dailymail.co.uk^
 @@||express.co.uk^
@@ -725,7 +709,6 @@
 @@||go.scorptec.com.au^
 @@||weatherzone.com.au^
 @@||bing.com.br^
-@@||www.bing.com.br^
 @@||vivo.com.br^
 @@||sina.com.cn^
 @@||www.sina.com.cn^
@@ -1136,7 +1119,6 @@
 @@||www.fwmrm.net^
 @@||fyre.co^
 @@||g.co^
-@@||btcpay.gab.com^
 @@||gadgetsnow.com^
 @@||shop.gadgetsnow.com^
 @@||gameofbitcoins.com^
@@ -1900,13 +1882,11 @@
 @@||ris.api.iris.microsoft.com^
 @@||dmd.metaservices.microsoft.com^
 @@||azure-ratecard-dev.mp.microsoft.com^
-@@||bspmgmtsvc-int.mp.microsoft.com^
 @@||accountmgmtservice-df.dce.mp.microsoft.com^
 @@||accountmgmtservice-int.dce.mp.microsoft.com^
 @@||accountmgmtservice.dce.mp.microsoft.com^
 @@||accountuserservice-int.dce.mp.microsoft.com^
 @@||contentservice.dce.mp.microsoft.com^
-@@||devcenterapi.dce.mp.microsoft.com^
 @@||engagement-int.dce.mp.microsoft.com^
 @@||notification-int.dce.mp.microsoft.com^
 @@||partnersegmentation.dce.mp.microsoft.com^
@@ -1916,24 +1896,19 @@
 @@||fe3.delivery.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
 @@||aircapi.displaycatalog.mp.microsoft.com^
-@@||bias-int.dps.mp.microsoft.com^
 @@||ciso.dps.mp.microsoft.com^
 @@||composerapi-int.dps.mp.microsoft.com^
 @@||composerapi.dps.mp.microsoft.com^
 @@||composerweb.dps.mp.microsoft.com^
-@@||ingestionapi.dps.mp.microsoft.com^
 @@||listingsapi-int.dps.mp.microsoft.com^
 @@||listingsapi.dps.mp.microsoft.com^
 @@||payoutorderstatus.dps.mp.microsoft.com^
 @@||productweb-int.dps.mp.microsoft.com^
-@@||schemaapi.dps.mp.microsoft.com^
 @@||submissionapi-int.dps.mp.microsoft.com^
 @@||submissioncompareapi-int.dps.mp.microsoft.com^
 @@||submissionweb-int.dps.mp.microsoft.com^
-@@||survey-int.dps.mp.microsoft.com^
 @@||engagementservice.dse.mp.microsoft.com^
 @@||engagementweb.dse.mp.microsoft.com^
-@@||ingestiondeveloperapi.dse.mp.microsoft.com^
 @@||notificationservice.dse.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||glb.auar-dev.trafficshaping.dsp.mp.microsoft.com^
@@ -2655,6 +2630,7 @@
 @@||download.skype.com^
 @@||edge.skype.com^
 @@||config.edge.skype.com^
+@@||fpt.skype.com^
 @@||go.skype.com^
 @@||heartbeat.skype.com^
 @@||x-lgw.lgw.skype.com^
@@ -2727,7 +2703,6 @@
 @@||scp.splunk.com^
 @@||playground.scp.splunk.com^
 @@||app.playground.scp.splunk.com^
-@@||beam.playground.scp.splunk.com^
 @@||staging.scp.splunk.com^
 @@||api.scs.splunk.com^
 @@||region-iad10.api.scs.splunk.com^
@@ -2743,12 +2718,6 @@
 @@||region-dub10.auth.playground.scs.splunk.com^
 @@||beam.playground.scs.splunk.com^
 @@||pulsar.playground.scs.splunk.com^
-@@||admin.staging.scs.splunk.com^
-@@||scs003-iad10.admin.staging.scs.splunk.com^
-@@||api.staging.scs.splunk.com^
-@@||region-iad10.api.staging.scs.splunk.com^
-@@||auth.staging.scs.splunk.com^
-@@||region-iad10.auth.staging.scs.splunk.com^
 @@||console.staging.scs.splunk.com^
 @@||dsp.staging.scs.splunk.com^
 @@||pulsar.staging.scs.splunk.com^
@@ -2810,10 +2779,8 @@
 @@||statuscake.com^
 @@||statuspage.io^
 @@||steamcommunity.com^
-@@||www.steamcommunity.com^
 @@||steampowered.com^
 @@||store.steampowered.com^
-@@||www.steampowered.com^
 @@||store.akamai.steamstatic.com^
 @@||stopklatka.pl^
 @@||statics.streamable.com^
@@ -3142,7 +3109,6 @@
 @@||wbd.ms^
 @@||weather.com^
 @@||weather.gov^
-@@||www.weather.gov^
 @@||weatherbug.com^
 @@||weathernationtv.com^
 @@||web.de^
