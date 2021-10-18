@@ -180,6 +180,7 @@ user-att-208-70-96-0.e8999.b.akamaiedge.net
 user-att-76-228-192-0.e8999.b.akamaiedge.net
 user-att-99-22-168-0.e8999.b.akamaiedge.net
 user-att-99-43-168-0.e8999.b.akamaiedge.net
+e9839.b.akamaiedge.net
 e3489.cd.akamaiedge.net
 e1151.e12.akamaiedge.net
 e10217.g.akamaiedge.net
@@ -312,7 +313,6 @@ ancestry.com
 connectivitycheck.android.com
 androidauthority.com
 androidforums.com
-www.androidforums.com
 angularjs.org
 www.anrdoezrs.net
 answers.com
@@ -665,7 +665,6 @@ bbci.co.uk
 static.bbci.co.uk
 bing.co.uk
 dailymail.co.uk
-www.dailymail.co.uk
 express.co.uk
 guardian.co.uk
 mirror.co.uk
@@ -855,7 +854,6 @@ duken.nl
 www.duken.nl
 dumpert.nl
 duosecurity.com
-www.duosecurity.com
 proto2ad.durasite.net
 dynamics.com
 cdn-eu.dynamicyield.com
@@ -1019,6 +1017,7 @@ feedly.com
 fide.com
 filefactory.com
 filepicker.io
+www.filepicker.io
 filesmonster.com
 fili.cc
 www.fili.cc
@@ -1420,7 +1419,6 @@ cdn2.hometogo.net
 hoopshype.com
 hootsuite.com
 horseanswerstoday.com
-www.horseanswerstoday.com
 hosts-file.net
 hotmail.com
 m.hotmail.com
@@ -1769,7 +1767,6 @@ plugins.longtailvideo.com
 securel.longtailvideo.com
 secureplugins.longtailvideo.com
 lowendbox.com
-www.lowendbox.com
 lowes.com
 www.lowes.com
 cindyholbrook.lpages.co
@@ -1784,12 +1781,12 @@ macys.com
 adblock.mahakala.is
 mail.com
 mail.ru
+r.mail.ru
 mailchi.mp
 mailchimp.com
 majorgeeks.com
 www.majorgeeks.com
 malwaredomainlist.com
-www.malwaredomainlist.com
 mirror1.malwaredomains.com
 manager-magazin-de.manager-magazin.de
 mandrillapp.com
@@ -1876,7 +1873,6 @@ azure-ratecard-dev.mp.microsoft.com
 accountmgmtservice-df.dce.mp.microsoft.com
 accountmgmtservice-int.dce.mp.microsoft.com
 accountmgmtservice.dce.mp.microsoft.com
-accountuserservice-int.dce.mp.microsoft.com
 contentservice.dce.mp.microsoft.com
 engagement-int.dce.mp.microsoft.com
 notification-int.dce.mp.microsoft.com
@@ -1886,9 +1882,7 @@ dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 fe3.delivery.mp.microsoft.com
 displaycatalog.mp.microsoft.com
-aircapi.displaycatalog.mp.microsoft.com
 ciso.dps.mp.microsoft.com
-composerapi-int.dps.mp.microsoft.com
 composerapi.dps.mp.microsoft.com
 composerweb.dps.mp.microsoft.com
 listingsapi-int.dps.mp.microsoft.com
@@ -1902,7 +1896,6 @@ engagementservice.dse.mp.microsoft.com
 engagementweb.dse.mp.microsoft.com
 notificationservice.dse.mp.microsoft.com
 geo-prod.do.dsp.mp.microsoft.com
-glb.auar-dev.trafficshaping.dsp.mp.microsoft.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 fees.mp.microsoft.com
@@ -1911,8 +1904,6 @@ collections.md.mp.microsoft.com
 licensing.md.mp.microsoft.com
 uwpproc.mix.mp.microsoft.com
 purchase.mp.microsoft.com
-wus2.staging-dcatbackend-int.mp.microsoft.com
-wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com
 mscrl.microsoft.com
 officeclient.microsoft.com
 query.prod.cms.rt.microsoft.com
@@ -1943,7 +1934,6 @@ tile-service.weather.microsoft.com
 whiteboard.microsoft.com
 int.whiteboard.microsoft.com
 emdl.ws.microsoft.com
-www.microsoft.com
 secure.aadcdn.microsoftonline-p.com
 login.microsoftonline.com
 login.microsoftonline.us
@@ -2386,7 +2376,6 @@ www.pornhub.com
 postimage.org
 www.postimage.org
 postimg.cc
-www.postimg.cc
 powerreviews.com
 powr.io
 ppt.cc
@@ -2548,6 +2537,7 @@ schibsted.tech
 scrapinghub.com
 scribblelive.com
 scribd.com
+www.scribd.com
 sdad.guru
 www.sdad.guru
 searchanise.com
@@ -2697,8 +2687,6 @@ app.playground.scp.splunk.com
 staging.scp.splunk.com
 api.scs.splunk.com
 region-iad10.api.scs.splunk.com
-app-admin.scs.splunk.com
-app.scs.splunk.com
 auth.scs.splunk.com
 region-iad10.auth.scs.splunk.com
 admin.playground.scs.splunk.com
@@ -2708,7 +2696,6 @@ region-dub10.api.playground.scs.splunk.com
 auth.playground.scs.splunk.com
 region-dub10.auth.playground.scs.splunk.com
 beam.playground.scs.splunk.com
-pulsar.playground.scs.splunk.com
 console.staging.scs.splunk.com
 dsp.staging.scs.splunk.com
 pulsar.staging.scs.splunk.com
@@ -3406,6 +3393,7 @@ avatars.mds.yandex.net
 storage.mds.yandex.net
 yandex.ru
 api-maps.yandex.ru
+clck.yandex.ru
 img-fotki.yandex.ru
 money.yandex.ru
 www.yandex.ru
@@ -3455,11 +3443,9 @@ vjs.zencdn.net
 zendesk.com
 assets.zendesk.com
 zerohedge.com
-www.zerohedge.com
 gc.zgo.at
 app-advertise.zhihuishu.com
 ziplist.com
-www.ziplist.com
 zippyshare.com
 ziprecruiter.com
 zlcdn.com
