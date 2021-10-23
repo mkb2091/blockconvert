@@ -301,7 +301,6 @@ coin-eu.amazonpay.com
 coin.amazonpay.com
 ocsp.sca1b.amazontrust.com
 americanexpress.com
-www.americanexpress.com
 analytics.amplitude.com
 3p.ampproject.net
 cdn-content.ampproject.org
@@ -600,10 +599,8 @@ www.civicscience.com
 db.local.clamav.net
 cleanprint.net
 cleveland.com
-www.cleveland.com
 elinkeu.clickdimensions.com
 clickondetroit.com
-www.clickondetroit.com
 location-inference-westus.cloudapp.net
 skypeecs-prod-usw-0-b.cloudapp.net
 cloudflare-dns.com
@@ -647,7 +644,6 @@ moonbit.co.in
 www.moonbit.co.in
 cloudmail17.netcore.co.in
 amazon.co.jp
-www.amazon.co.jp
 hb.afl.rakuten.co.jp
 pt.afl.rakuten.co.jp
 grp07.ias.rakuten.co.jp
@@ -779,7 +775,6 @@ static-pepper.dealabs.com
 dealer.com
 dealerinspire.com
 debian.org
-delicious.com
 dell.com
 delvenetworks.com
 demotywatory.pl
@@ -796,6 +791,7 @@ www.digicert.com
 digitaloceanspaces.com
 digitalriver.com
 drh.img.digitalriver.com
+drh1.img.digitalriver.com
 digitaltrends.com
 www.digitaltrends.com
 sh.docs.dingtalk.com
@@ -872,7 +868,6 @@ ebay.com
 rover.ebay.com
 www.ebay.com
 ebay.pl
-www.ebay.pl
 i.ebayimg.com
 ir.ebaystatic.com
 p.ebaystatic.com
@@ -881,6 +876,7 @@ ecwid.com
 edgecastcdn.net
 wac.edgecastcdn.net
 79423.analytics.edgekey.net
+ma135-r.analytics.edgekey.net
 help.apple.com.edgekey.net
 iadsdk.apple.com.edgekey.net
 static.www.odcdn.com.edgekey.net
@@ -1069,14 +1065,12 @@ www.forms.gle
 formstack.com
 survey.forseeresults.com
 fortune.com
-www.fortune.com
 fossbytes.com
 fox13now.com
 fox17online.com
 fox2now.com
 fox40.com
 fox43.com
-www.fox43.com
 fox4kc.com
 fox59.com
 fox5sandiego.com
@@ -1555,7 +1549,6 @@ ipredator.se
 s0.ipstatp.com
 ipv4only.arpa
 appcloud.ironbeast.io
-is.gd
 issuu.com
 istockphoto.com
 itch.io
@@ -1771,7 +1764,6 @@ securel.longtailvideo.com
 secureplugins.longtailvideo.com
 lowendbox.com
 lowes.com
-www.lowes.com
 cindyholbrook.lpages.co
 lpsnmedia.net
 www.lpsnmedia.net
@@ -1806,7 +1798,6 @@ marketwatch.com
 s.marketwatch.com
 mashable.com
 masslive.com
-www.masslive.com
 mathjax.org
 matterport.com
 my.matterport.com
@@ -1873,13 +1864,8 @@ xbox.ipv6.microsoft.com
 ris.api.iris.microsoft.com
 dmd.metaservices.microsoft.com
 collections-int.mp.microsoft.com
-accountmgmtservice-df.dce.mp.microsoft.com
-accountmgmtservice-int.dce.mp.microsoft.com
-accountmgmtservice.dce.mp.microsoft.com
-contentservice.dce.mp.microsoft.com
 devcenterapi-df.dce.mp.microsoft.com
 engagement-int.dce.mp.microsoft.com
-notification-int.dce.mp.microsoft.com
 partnersegmentation.dce.mp.microsoft.com
 productcatalogservice-df.dce.mp.microsoft.com
 ra-int.dce.mp.microsoft.com
@@ -1937,7 +1923,6 @@ displaycatalog.md.mp.microsoft.com
 inventory.md.mp.microsoft.com
 licensing-entitlements-int.md.mp.microsoft.com
 licensing-entitlements.md.mp.microsoft.com
-licensing.md.mp.microsoft.com
 licensingphone.md.mp.microsoft.com
 licensingwindows.md.mp.microsoft.com
 uwpproc-int.mix.mp.microsoft.com
@@ -2010,7 +1995,6 @@ mixnews.lv
 sj14.mktossl.com
 mlb.com
 mlive.com
-www.mlive.com
 mls.com
 gm.gds.mmstat.com
 gm.mmstat.com
@@ -2102,7 +2086,6 @@ api.b.hatena.ne.jp
 neighborsink.com
 neowin.net
 nesn.com
-www.nesn.com
 whirlpool.net.au
 forums.whirlpool.net.au
 news.ebc.net.tw
@@ -2159,7 +2142,6 @@ nitroflare.com
 nj.com
 businessfinder.nj.com
 realestate.nj.com
-www.nj.com
 nk.pl
 nmcdn.us
 www.nmcdn.us
@@ -2180,6 +2162,7 @@ now.sh
 npmcdn.com
 npr.org
 www.npr.org
+nrcdn.com
 ns1.com
 nsatc.net
 fe3.delivery.dsp.mp.microsoft.com.nsatc.net
@@ -2215,7 +2198,6 @@ office365.com
 outlook.office365.com
 www.office365.com
 officedepot.com
-www.officedepot.com
 ojrq.net
 www.ojrq.net
 okta.com
@@ -2285,7 +2267,6 @@ webmail.orange.fr
 www.orange.fr
 orbitz.com
 oregonlive.com
-www.oregonlive.com
 s7.orientaltrading.com
 fr.osdn.net
 osnews.com
@@ -2556,7 +2537,6 @@ store-images.s-microsoft.com
 token.safebrowsing.apple
 sagepay.com
 salesforce.com
-salesforceliveagent.com
 salsalabs.com
 salsalabs.org
 samsung.com
@@ -2643,7 +2623,6 @@ authentication-api.skimlinks.com
 skimresources.com
 www.skimresources.com
 skype.com
-api.skype.com
 avatar.skype.com
 blogs.skype.com
 c1.skype.com
@@ -2662,7 +2641,6 @@ inviteconnector.skype.com
 sip2.lgw.skype.com
 x-lgw.lgw.skype.com
 login.skype.com
-lw.skype.com
 profile.skype.com
 api.promotions.skype.com
 bo.promotions.skype.com
@@ -2717,8 +2695,6 @@ community.spiceworks.com
 spiegel-de.spiegel.de
 api.splunk.com
 appinspect.splunk.com
-apps.splunk.com
-prod.apps.splunk.com
 status.businessflowapp.splunk.com
 cloud.splunk.com
 conf.splunk.com
@@ -2726,22 +2702,16 @@ education.splunk.com
 events.splunk.com
 lhr2-gw1.splunk.com
 mint.splunk.com
-payment.splunk.com
 pre-release.qa.splunk.com
 response.splunk.com
 scp.splunk.com
 api.scp.splunk.com
 auth.scp.splunk.com
 playground.scp.splunk.com
-app.playground.scp.splunk.com
 pulsar-app-play1.playground.scp.splunk.com
-staging.scp.splunk.com
 api.playground.scs.splunk.com
 region-iad10.api.playground.scs.splunk.com
 testing.playground.scs.splunk.com
-pulsar.staging.scs.splunk.com
-splunkbase.splunk.com
-prod.splunkbase.splunk.com
 sso-dev.splunk.com
 sso-stg.splunk.com
 staging.splunk.com
@@ -2793,7 +2763,6 @@ stackoverflow.com
 stacksocial.com
 stanev.org
 starbucks.com
-www.starbucks.com
 startpage.com
 www.startpage.com
 statcounter.com
@@ -2856,6 +2825,7 @@ uploads.tapatalk-cdn.com
 ping.taplytics.com
 target.com
 api.target.com
+goto.target.com
 profile.target.com
 redsky.target.com
 weeklyad.target.com
@@ -2884,6 +2854,7 @@ texashomebase.com
 www.texashomebase.com
 textalk.se
 tfaforms.com
+www.tfaforms.com
 ocsp.thawte.com
 links.e.theatlantic.com
 thebot.net
@@ -3042,7 +3013,6 @@ unsplash.com
 uploaded.net
 uploaded.to
 uplynk.com
-www.uplynk.com
 uptobox.com
 flo.uri.sh
 usa.gov
@@ -3121,7 +3091,6 @@ s.w.org
 ts.w.org
 w3.org
 walgreens.com
-www.walgreens.com
 wallst.com
 walmart.com
 goto.walmart.com

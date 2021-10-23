@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-10-22Z
+! Version: 2021-10-23Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-10-22Z
+! Last modified: 2021-10-23Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -310,7 +310,6 @@
 @@||coin.amazonpay.com^
 @@||ocsp.sca1b.amazontrust.com^
 @@||americanexpress.com^
-@@||www.americanexpress.com^
 @@||analytics.amplitude.com^
 @@||3p.ampproject.net^
 @@||cdn-content.ampproject.org^
@@ -609,10 +608,8 @@
 @@||db.local.clamav.net^
 @@||cleanprint.net^
 @@||cleveland.com^
-@@||www.cleveland.com^
 @@||elinkeu.clickdimensions.com^
 @@||clickondetroit.com^
-@@||www.clickondetroit.com^
 @@||location-inference-westus.cloudapp.net^
 @@||skypeecs-prod-usw-0-b.cloudapp.net^
 @@||cloudflare-dns.com^
@@ -656,7 +653,6 @@
 @@||www.moonbit.co.in^
 @@||cloudmail17.netcore.co.in^
 @@||amazon.co.jp^
-@@||www.amazon.co.jp^
 @@||hb.afl.rakuten.co.jp^
 @@||pt.afl.rakuten.co.jp^
 @@||grp07.ias.rakuten.co.jp^
@@ -788,7 +784,6 @@
 @@||dealer.com^
 @@||dealerinspire.com^
 @@||debian.org^
-@@||delicious.com^
 @@||dell.com^
 @@||delvenetworks.com^
 @@||demotywatory.pl^
@@ -805,6 +800,7 @@
 @@||digitaloceanspaces.com^
 @@||digitalriver.com^
 @@||drh.img.digitalriver.com^
+@@||drh1.img.digitalriver.com^
 @@||digitaltrends.com^
 @@||www.digitaltrends.com^
 @@||sh.docs.dingtalk.com^
@@ -881,7 +877,6 @@
 @@||rover.ebay.com^
 @@||www.ebay.com^
 @@||ebay.pl^
-@@||www.ebay.pl^
 @@||i.ebayimg.com^
 @@||ir.ebaystatic.com^
 @@||p.ebaystatic.com^
@@ -890,6 +885,7 @@
 @@||edgecastcdn.net^
 @@||wac.edgecastcdn.net^
 @@||79423.analytics.edgekey.net^
+@@||ma135-r.analytics.edgekey.net^
 @@||help.apple.com.edgekey.net^
 @@||iadsdk.apple.com.edgekey.net^
 @@||static.www.odcdn.com.edgekey.net^
@@ -1078,14 +1074,12 @@
 @@||formstack.com^
 @@||survey.forseeresults.com^
 @@||fortune.com^
-@@||www.fortune.com^
 @@||fossbytes.com^
 @@||fox13now.com^
 @@||fox17online.com^
 @@||fox2now.com^
 @@||fox40.com^
 @@||fox43.com^
-@@||www.fox43.com^
 @@||fox4kc.com^
 @@||fox59.com^
 @@||fox5sandiego.com^
@@ -1564,7 +1558,6 @@
 @@||s0.ipstatp.com^
 @@||ipv4only.arpa^
 @@||appcloud.ironbeast.io^
-@@||is.gd^
 @@||issuu.com^
 @@||istockphoto.com^
 @@||itch.io^
@@ -1780,7 +1773,6 @@
 @@||secureplugins.longtailvideo.com^
 @@||lowendbox.com^
 @@||lowes.com^
-@@||www.lowes.com^
 @@||cindyholbrook.lpages.co^
 @@||lpsnmedia.net^
 @@||www.lpsnmedia.net^
@@ -1815,7 +1807,6 @@
 @@||s.marketwatch.com^
 @@||mashable.com^
 @@||masslive.com^
-@@||www.masslive.com^
 @@||mathjax.org^
 @@||matterport.com^
 @@||my.matterport.com^
@@ -1882,13 +1873,8 @@
 @@||ris.api.iris.microsoft.com^
 @@||dmd.metaservices.microsoft.com^
 @@||collections-int.mp.microsoft.com^
-@@||accountmgmtservice-df.dce.mp.microsoft.com^
-@@||accountmgmtservice-int.dce.mp.microsoft.com^
-@@||accountmgmtservice.dce.mp.microsoft.com^
-@@||contentservice.dce.mp.microsoft.com^
 @@||devcenterapi-df.dce.mp.microsoft.com^
 @@||engagement-int.dce.mp.microsoft.com^
-@@||notification-int.dce.mp.microsoft.com^
 @@||partnersegmentation.dce.mp.microsoft.com^
 @@||productcatalogservice-df.dce.mp.microsoft.com^
 @@||ra-int.dce.mp.microsoft.com^
@@ -1946,7 +1932,6 @@
 @@||inventory.md.mp.microsoft.com^
 @@||licensing-entitlements-int.md.mp.microsoft.com^
 @@||licensing-entitlements.md.mp.microsoft.com^
-@@||licensing.md.mp.microsoft.com^
 @@||licensingphone.md.mp.microsoft.com^
 @@||licensingwindows.md.mp.microsoft.com^
 @@||uwpproc-int.mix.mp.microsoft.com^
@@ -2019,7 +2004,6 @@
 @@||sj14.mktossl.com^
 @@||mlb.com^
 @@||mlive.com^
-@@||www.mlive.com^
 @@||mls.com^
 @@||gm.gds.mmstat.com^
 @@||gm.mmstat.com^
@@ -2111,7 +2095,6 @@
 @@||neighborsink.com^
 @@||neowin.net^
 @@||nesn.com^
-@@||www.nesn.com^
 @@||whirlpool.net.au^
 @@||forums.whirlpool.net.au^
 @@||news.ebc.net.tw^
@@ -2168,7 +2151,6 @@
 @@||nj.com^
 @@||businessfinder.nj.com^
 @@||realestate.nj.com^
-@@||www.nj.com^
 @@||nk.pl^
 @@||nmcdn.us^
 @@||www.nmcdn.us^
@@ -2189,6 +2171,7 @@
 @@||npmcdn.com^
 @@||npr.org^
 @@||www.npr.org^
+@@||nrcdn.com^
 @@||ns1.com^
 @@||nsatc.net^
 @@||fe3.delivery.dsp.mp.microsoft.com.nsatc.net^
@@ -2224,7 +2207,6 @@
 @@||outlook.office365.com^
 @@||www.office365.com^
 @@||officedepot.com^
-@@||www.officedepot.com^
 @@||ojrq.net^
 @@||www.ojrq.net^
 @@||okta.com^
@@ -2294,7 +2276,6 @@
 @@||www.orange.fr^
 @@||orbitz.com^
 @@||oregonlive.com^
-@@||www.oregonlive.com^
 @@||s7.orientaltrading.com^
 @@||fr.osdn.net^
 @@||osnews.com^
@@ -2565,7 +2546,6 @@
 @@||token.safebrowsing.apple^
 @@||sagepay.com^
 @@||salesforce.com^
-@@||salesforceliveagent.com^
 @@||salsalabs.com^
 @@||salsalabs.org^
 @@||samsung.com^
@@ -2652,7 +2632,6 @@
 @@||skimresources.com^
 @@||www.skimresources.com^
 @@||skype.com^
-@@||api.skype.com^
 @@||avatar.skype.com^
 @@||blogs.skype.com^
 @@||c1.skype.com^
@@ -2671,7 +2650,6 @@
 @@||sip2.lgw.skype.com^
 @@||x-lgw.lgw.skype.com^
 @@||login.skype.com^
-@@||lw.skype.com^
 @@||profile.skype.com^
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
@@ -2726,8 +2704,6 @@
 @@||spiegel-de.spiegel.de^
 @@||api.splunk.com^
 @@||appinspect.splunk.com^
-@@||apps.splunk.com^
-@@||prod.apps.splunk.com^
 @@||status.businessflowapp.splunk.com^
 @@||cloud.splunk.com^
 @@||conf.splunk.com^
@@ -2735,22 +2711,16 @@
 @@||events.splunk.com^
 @@||lhr2-gw1.splunk.com^
 @@||mint.splunk.com^
-@@||payment.splunk.com^
 @@||pre-release.qa.splunk.com^
 @@||response.splunk.com^
 @@||scp.splunk.com^
 @@||api.scp.splunk.com^
 @@||auth.scp.splunk.com^
 @@||playground.scp.splunk.com^
-@@||app.playground.scp.splunk.com^
 @@||pulsar-app-play1.playground.scp.splunk.com^
-@@||staging.scp.splunk.com^
 @@||api.playground.scs.splunk.com^
 @@||region-iad10.api.playground.scs.splunk.com^
 @@||testing.playground.scs.splunk.com^
-@@||pulsar.staging.scs.splunk.com^
-@@||splunkbase.splunk.com^
-@@||prod.splunkbase.splunk.com^
 @@||sso-dev.splunk.com^
 @@||sso-stg.splunk.com^
 @@||staging.splunk.com^
@@ -2802,7 +2772,6 @@
 @@||stacksocial.com^
 @@||stanev.org^
 @@||starbucks.com^
-@@||www.starbucks.com^
 @@||startpage.com^
 @@||www.startpage.com^
 @@||statcounter.com^
@@ -2865,6 +2834,7 @@
 @@||ping.taplytics.com^
 @@||target.com^
 @@||api.target.com^
+@@||goto.target.com^
 @@||profile.target.com^
 @@||redsky.target.com^
 @@||weeklyad.target.com^
@@ -2893,6 +2863,7 @@
 @@||www.texashomebase.com^
 @@||textalk.se^
 @@||tfaforms.com^
+@@||www.tfaforms.com^
 @@||ocsp.thawte.com^
 @@||links.e.theatlantic.com^
 @@||thebot.net^
@@ -3051,7 +3022,6 @@
 @@||uploaded.net^
 @@||uploaded.to^
 @@||uplynk.com^
-@@||www.uplynk.com^
 @@||uptobox.com^
 @@||flo.uri.sh^
 @@||usa.gov^
@@ -3130,7 +3100,6 @@
 @@||ts.w.org^
 @@||w3.org^
 @@||walgreens.com^
-@@||www.walgreens.com^
 @@||wallst.com^
 @@||walmart.com^
 @@||goto.walmart.com^
