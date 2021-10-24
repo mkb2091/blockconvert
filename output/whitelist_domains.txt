@@ -1879,6 +1879,7 @@ certweb-int.dps.mp.microsoft.com
 filesapi.dps.mp.microsoft.com
 imagepublishingservice-dev.dps.mp.microsoft.com
 ingestionapi-dev.dps.mp.microsoft.com
+payoutorderstatus.dps.mp.microsoft.com
 schemaapi-int.dps.mp.microsoft.com
 submissionapi-int.dps.mp.microsoft.com
 submissioncompareapi-int.dps.mp.microsoft.com
@@ -1929,6 +1930,7 @@ uwpproc-int.mix.mp.microsoft.com
 purchase.mp.microsoft.com
 staging-dcatbackend-int.mp.microsoft.com
 wus2.staging-dcatbackend-int.mp.microsoft.com
+staging-dcatbackend.mp.microsoft.com
 stagingretrieval-dcatbackend-int.mp.microsoft.com
 wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com
 xbox-collections-int.mp.microsoft.com
@@ -2388,6 +2390,7 @@ nine.plugins.plexapp.com
 tvthemes.plexapp.com
 pling.com
 plot.ly
+www.plot.ly
 cdn.plyr.io
 pochta.ru
 pocketnow.com

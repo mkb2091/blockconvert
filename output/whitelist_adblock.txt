@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-10-23Z
+! Version: 2021-10-24Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-10-23Z
+! Last modified: 2021-10-24Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -1888,6 +1888,7 @@
 @@||filesapi.dps.mp.microsoft.com^
 @@||imagepublishingservice-dev.dps.mp.microsoft.com^
 @@||ingestionapi-dev.dps.mp.microsoft.com^
+@@||payoutorderstatus.dps.mp.microsoft.com^
 @@||schemaapi-int.dps.mp.microsoft.com^
 @@||submissionapi-int.dps.mp.microsoft.com^
 @@||submissioncompareapi-int.dps.mp.microsoft.com^
@@ -1938,6 +1939,7 @@
 @@||purchase.mp.microsoft.com^
 @@||staging-dcatbackend-int.mp.microsoft.com^
 @@||wus2.staging-dcatbackend-int.mp.microsoft.com^
+@@||staging-dcatbackend.mp.microsoft.com^
 @@||stagingretrieval-dcatbackend-int.mp.microsoft.com^
 @@||wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com^
 @@||xbox-collections-int.mp.microsoft.com^
@@ -2397,6 +2399,7 @@
 @@||tvthemes.plexapp.com^
 @@||pling.com^
 @@||plot.ly^
+@@||www.plot.ly^
 @@||cdn.plyr.io^
 @@||pochta.ru^
 @@||pocketnow.com^
