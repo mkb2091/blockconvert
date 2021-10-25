@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-10-24Z
+! Version: 2021-10-25Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-10-24Z
+! Last modified: 2021-10-25Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -33,7 +33,6 @@
 @@||8ch.net^
 @@||www.8ch.net^
 @@||91-cdn.com^
-@@||www.91-cdn.com^
 @@||91mobiles.com^
 @@||a-0001.a-msedge.net^
 @@||bat-bing-com.a-0001.a-msedge.net^
@@ -290,7 +289,6 @@
 @@||amazon.es^
 @@||amazon.fr^
 @@||amazon.in^
-@@||www.amazon.in^
 @@||amazon.it^
 @@||www.amazon.it^
 @@||api.amazonalexa.com^
@@ -1083,7 +1081,6 @@
 @@||fox4kc.com^
 @@||fox59.com^
 @@||fox5sandiego.com^
-@@||www.fox5sandiego.com^
 @@||fox6now.com^
 @@||fox8.com^
 @@||framasoft.org^
@@ -1413,6 +1410,7 @@
 @@||highcharts.com^
 @@||code.highcharts.com^
 @@||history.com^
+@@||www.history.com^
 @@||hitfile.net^
 @@||hm.com^
 @@||hollywoodlife.com^
@@ -1773,6 +1771,7 @@
 @@||secureplugins.longtailvideo.com^
 @@||lowendbox.com^
 @@||lowes.com^
+@@||www.lowes.com^
 @@||cindyholbrook.lpages.co^
 @@||lpsnmedia.net^
 @@||www.lpsnmedia.net^
@@ -1874,8 +1873,6 @@
 @@||dmd.metaservices.microsoft.com^
 @@||collections-int.mp.microsoft.com^
 @@||devcenterapi-df.dce.mp.microsoft.com^
-@@||engagement-int.dce.mp.microsoft.com^
-@@||partnersegmentation.dce.mp.microsoft.com^
 @@||productcatalogservice-df.dce.mp.microsoft.com^
 @@||ra-int.dce.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
@@ -1890,14 +1887,9 @@
 @@||ingestionapi-dev.dps.mp.microsoft.com^
 @@||payoutorderstatus.dps.mp.microsoft.com^
 @@||schemaapi-int.dps.mp.microsoft.com^
-@@||submissionapi-int.dps.mp.microsoft.com^
-@@||submissioncompareapi-int.dps.mp.microsoft.com^
-@@||submissionweb-int.dps.mp.microsoft.com^
 @@||workflowservice-int.dps.mp.microsoft.com^
-@@||engagementservice.dse.mp.microsoft.com^
-@@||engagementweb.dse.mp.microsoft.com^
+@@||workflowservice.dps.mp.microsoft.com^
 @@||ingestiondeveloperapi-int.dse.mp.microsoft.com^
-@@||notificationservice.dse.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||geover-int.do.dsp.mp.microsoft.com^
 @@||geover-prod.do.dsp.mp.microsoft.com^
@@ -2059,7 +2051,6 @@
 @@||mycapture.com^
 @@||st.mycdn.me^
 @@||myfox8.com^
-@@||www.myfox8.com^
 @@||mymonero.com^
 @@||api.mymonero.com^
 @@||myportfolio.com^
@@ -2137,7 +2128,6 @@
 @@||newyorker.com^
 @@||www.newyorker.com^
 @@||nextcloud.com^
-@@||www.nextcloud.com^
 @@||oneline.nextday.media^
 @@||nextopiasoftware.com^
 @@||nfl.com^
@@ -2214,6 +2204,7 @@
 @@||okta.com^
 @@||olark.com^
 @@||old-games.org^
+@@||downloads.old-games.org^
 @@||omny.fm^
 @@||omroep.nl^
 @@||amazoncustomerservice.d2.sc.omtrdc.net^
@@ -2275,7 +2266,6 @@
 @@||www.oracle.com^
 @@||orange.fr^
 @@||webmail.orange.fr^
-@@||www.orange.fr^
 @@||orbitz.com^
 @@||oregonlive.com^
 @@||s7.orientaltrading.com^
@@ -2606,7 +2596,6 @@
 @@||www.a.shifen.com^
 @@||shop-pro.jp^
 @@||shop.app^
-@@||www.shop.app^
 @@||shopify.com^
 @@||s.shopify.com^
 @@||sdks.shopifycdn.com^
@@ -2877,6 +2866,7 @@
 @@||thehill.com^
 @@||thenextweb.com^
 @@||theoldnet.com^
+@@||www.theoldnet.com^
 @@||thepiratebay.org^
 @@||theplatform.com^
 @@||thetvdb.com^
