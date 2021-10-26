@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-10-25Z
+! Version: 2021-10-26Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-10-25Z
+! Last modified: 2021-10-26Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -31,7 +31,6 @@
 @@||4shared.com^
 @@||70i.net^
 @@||8ch.net^
-@@||www.8ch.net^
 @@||91-cdn.com^
 @@||91mobiles.com^
 @@||a-0001.a-msedge.net^
@@ -66,11 +65,12 @@
 @@||ada.support^
 @@||cricket.att.ada.support^
 @@||static.ada.support^
+@@||forums.adafruit.com^
+@@||www.forums.adafruit.com^
 @@||adapools.org^
 @@||adaway.org^
 @@||adblock.dk^
 @@||adblock.ee^
-@@||www.adblock.ee^
 @@||road.adblock.ro^
 @@||easylist-downloads.adblockplus.org^
 @@||adcolo.com^
@@ -287,6 +287,7 @@
 @@||amazon.de^
 @@||www.amazon.de^
 @@||amazon.es^
+@@||www.amazon.es^
 @@||amazon.fr^
 @@||amazon.in^
 @@||amazon.it^
@@ -611,6 +612,7 @@
 @@||location-inference-westus.cloudapp.net^
 @@||skypeecs-prod-usw-0-b.cloudapp.net^
 @@||cloudflare-dns.com^
+@@||www.cloudflare-dns.com^
 @@||cloudflare.com^
 @@||ajax.cloudflare.com^
 @@||cdnjs.cloudflare.com^
@@ -671,6 +673,7 @@
 @@||express.co.uk^
 @@||guardian.co.uk^
 @@||mirror.co.uk^
+@@||www.mirror.co.uk^
 @@||overclockers.co.uk^
 @@||email.procook.co.uk^
 @@||securesuite.co.uk^
@@ -769,10 +772,10 @@
 @@||d3js.org^
 @@||admin.dable.io^
 @@||dailymotion.com^
-@@||www.dailymotion.com^
 @@||danid.dk^
 @@||www.datadoghq-browser-agent.com^
 @@||datafilehost.com^
+@@||www.datafilehost.com^
 @@||dataplicity.com^
 @@||www.dataplicity.com^
 @@||cdn.datatables.net^
@@ -782,6 +785,7 @@
 @@||dealer.com^
 @@||dealerinspire.com^
 @@||debian.org^
+@@||www.debian.org^
 @@||dell.com^
 @@||delvenetworks.com^
 @@||demotywatory.pl^
@@ -1564,6 +1568,7 @@
 @@||www.iubenda.com^
 @@||j.mp^
 @@||jabcreations.com^
+@@||www.jabcreations.com^
 @@||jaleco.com^
 @@||www.jaleco.com^
 @@||jarv.is^
@@ -1871,6 +1876,7 @@
 @@||xbox.ipv6.microsoft.com^
 @@||ris.api.iris.microsoft.com^
 @@||dmd.metaservices.microsoft.com^
+@@||bsp.mp.microsoft.com^
 @@||collections-int.mp.microsoft.com^
 @@||devcenterapi-df.dce.mp.microsoft.com^
 @@||productcatalogservice-df.dce.mp.microsoft.com^
@@ -1887,14 +1893,19 @@
 @@||ingestionapi-dev.dps.mp.microsoft.com^
 @@||payoutorderstatus.dps.mp.microsoft.com^
 @@||schemaapi-int.dps.mp.microsoft.com^
+@@||watchdogs.dps.mp.microsoft.com^
 @@||workflowservice-int.dps.mp.microsoft.com^
 @@||workflowservice.dps.mp.microsoft.com^
 @@||ingestiondeveloperapi-int.dse.mp.microsoft.com^
+@@||cmd-tip.dcat.dsp.mp.microsoft.com^
+@@||phx.sfs-prod.dcat.dsp.mp.microsoft.com^
+@@||phx.sfs-tip.dcat.dsp.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||geover-int.do.dsp.mp.microsoft.com^
 @@||geover-prod.do.dsp.mp.microsoft.com^
 @@||orgeover-int.do.dsp.mp.microsoft.com^
 @@||orgeover-prod.do.dsp.mp.microsoft.com^
+@@||glb.adminportalapi-int.trafficshaping.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
 @@||entitlements-int.mp.microsoft.com^
@@ -1955,9 +1966,12 @@
 @@||watson.telemetry.microsoft.com^
 @@||to-do.microsoft.com^
 @@||update.microsoft.com^
+@@||catalog.update.microsoft.com^
 @@||fe1.update.microsoft.com^
 @@||fe2.update.microsoft.com^
+@@||pending.sls-tip.update.microsoft.com^
 @@||sls.update.microsoft.com^
+@@||pending.sls.update.microsoft.com^
 @@||www.update.microsoft.com^
 @@||wallet.microsoft.com^
 @@||wdcp.microsoft.com^
@@ -1979,8 +1993,8 @@
 @@||help.mint.com^
 @@||links.mint.com^
 @@||mirrorservice.org^
-@@||www.mirrorservice.org^
 @@||mistrzowie.org^
+@@||www.mistrzowie.org^
 @@||api.comm.miui.com^
 @@||trial.api.huangye.miui.com^
 @@||authbe.sec.intl.miui.com^
@@ -2171,6 +2185,7 @@
 @@||g.msn.com.nsatc.net^
 @@||pool.ntp.org^
 @@||2.android.pool.ntp.org^
+@@||www.pool.ntp.org^
 @@||media.nu.nl^
 @@||ota-downloads.nvidia.com^
 @@||ny.com^
@@ -2712,7 +2727,9 @@
 @@||pulsar-app-play1.playground.scp.splunk.com^
 @@||api.playground.scs.splunk.com^
 @@||region-iad10.api.playground.scs.splunk.com^
+@@||static-deploy-test.playground.scs.splunk.com^
 @@||testing.playground.scs.splunk.com^
+@@||show.splunk.com^
 @@||sso-dev.splunk.com^
 @@||sso-stg.splunk.com^
 @@||staging.splunk.com^
@@ -2720,6 +2737,7 @@
 @@||idp.login.staging.splunk.com^
 @@||sit1.staging.splunk.com^
 @@||idp.login.sit1.staging.splunk.com^
+@@||sit2.staging.splunk.com^
 @@||test-gw1.splunk.com^
 @@||post.spmailtechnol.com^
 @@||sport.pl^
@@ -3010,6 +3028,7 @@
 @@||www.unibytes.com^
 @@||unicornmedia.com^
 @@||unix.com^
+@@||www.unix.com^
 @@||unpkg.com^
 @@||unsplash.com^
 @@||uploaded.net^
@@ -3274,6 +3293,7 @@
 @@||gatherer.wizards.com^
 @@||wnba.com^
 @@||wnyc.org^
+@@||www.wnyc.org^
 @@||newad.mail.wo.cn^
 @@||woosmap.com^
 @@||wordpress.com^
