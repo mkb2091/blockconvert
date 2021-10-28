@@ -116,7 +116,6 @@ www.aetna.com
 vip5.afdorigin-prod-am02.afdogw.com
 vip5.afdorigin-prod-ch02.afdogw.com
 affirm.com
-www.affirm.com
 afi-b.com
 t.afi-b.com
 www.afi-b.com
@@ -347,6 +346,7 @@ phobos.apple.com
 api-glb.smoot.apple.com
 swcdn.apple.com
 trailers.apple.com
+www.apple.com
 imp.appledaily.com
 forums.appleinsider.com
 breeze.aimon.applicationinsights.io
@@ -1363,6 +1363,7 @@ gravatar.com
 secure.gravatar.com
 pistachio-cdn.graze.com
 greasyfork.org
+www.greasyfork.org
 greenhouse.io
 groupon.com
 rest.growinginteractive.com
@@ -1548,6 +1549,7 @@ www.ipify.org
 ipinfo.io
 ipla.tv
 ipredator.se
+www.ipredator.se
 s0.ipstatp.com
 ipv4only.arpa
 appcloud.ironbeast.io
@@ -1872,18 +1874,22 @@ collections-int.mp.microsoft.com
 devcenterapi-df.dce.mp.microsoft.com
 productcatalogservice-df.dce.mp.microsoft.com
 ra-int.dce.mp.microsoft.com
+ra.dce.mp.microsoft.com
 dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 fe3.delivery.mp.microsoft.com
 displaycatalog-int.mp.microsoft.com
 displaycatalog.mp.microsoft.com
+aircapi.displaycatalog.mp.microsoft.com
 commercial.displaycatalog.mp.microsoft.com
 certweb-int.dps.mp.microsoft.com
 filesapi.dps.mp.microsoft.com
 imagepublishingservice-dev.dps.mp.microsoft.com
 ingestionapi-dev.dps.mp.microsoft.com
+listingsweb-int.dps.mp.microsoft.com
 payoutorderstatus.dps.mp.microsoft.com
 schemaapi-int.dps.mp.microsoft.com
+survey.dps.mp.microsoft.com
 watchdogs.dps.mp.microsoft.com
 workflowservice-int.dps.mp.microsoft.com
 workflowservice.dps.mp.microsoft.com
@@ -1897,6 +1903,9 @@ geover-prod.do.dsp.mp.microsoft.com
 orgeover-int.do.dsp.mp.microsoft.com
 orgeover-prod.do.dsp.mp.microsoft.com
 glb.adminportalapi-int.trafficshaping.dsp.mp.microsoft.com
+glb.adminportalapi-prod.trafficshaping.dsp.mp.microsoft.com
+auar.trafficshaping.dsp.mp.microsoft.com
+glb.ingestion-prod.trafficshaping.dsp.mp.microsoft.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 entitlements-int.mp.microsoft.com
@@ -1936,6 +1945,7 @@ wus2.staging-dcatbackend-int.mp.microsoft.com
 staging-dcatbackend.mp.microsoft.com
 stagingretrieval-dcatbackend-int.mp.microsoft.com
 wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com
+stagingretrieval-dcatbackend.mp.microsoft.com
 xbox-collections-int.mp.microsoft.com
 xbox-displaycatalog.mp.microsoft.com
 mscrl.microsoft.com
@@ -2274,6 +2284,7 @@ orange.fr
 webmail.orange.fr
 orbitz.com
 oregonlive.com
+www.oregonlive.com
 s7.orientaltrading.com
 fr.osdn.net
 osnews.com
@@ -2412,6 +2423,7 @@ postimg.cc
 powerreviews.com
 powr.io
 ppt.cc
+www.ppt.cc
 full.pr0gramm.com
 pricegrabber.com
 printfriendly.com
@@ -2466,6 +2478,7 @@ google.qualtrics.com
 umich.qualtrics.com
 www.qualtrics.com
 quickenloans.com
+www.quickenloans.com
 quora.com
 www.quora.com
 quotemedia.com
@@ -2549,6 +2562,7 @@ salsalabs.com
 salsalabs.org
 samsung.com
 shop.samsung.com
+www.samsung.com
 cdn.samsungcloudsolution.com
 time.samsungcloudsolution.com
 down.sandai.net
@@ -2613,6 +2627,7 @@ api3.siftscience.com
 cdn.siftscience.com
 cs.silverpop.com
 similarweb.com
+www.similarweb.com
 simplecast.com
 leadfamly.simply.com
 sinaimg.cn
@@ -2652,6 +2667,7 @@ profile.skype.com
 api.promotions.skype.com
 bo.promotions.skype.com
 repo.skype.com
+skypegraph.skype.com
 support.skype.com
 trap.skype.com
 slack-redir.net
@@ -2700,9 +2716,11 @@ www.speedcurve.com
 spiceworks.com
 community.spiceworks.com
 spiegel-de.spiegel.de
+account.splunk.com
 api.splunk.com
 appinspect.splunk.com
 status.businessflowapp.splunk.com
+sandbox.deployer.class.splunk.com
 cloud.splunk.com
 conf.splunk.com
 education.splunk.com
@@ -2716,6 +2734,12 @@ api.scp.splunk.com
 auth.scp.splunk.com
 playground.scp.splunk.com
 pulsar-app-play1.playground.scp.splunk.com
+admin.scs.splunk.com
+scs001-dub10.admin.scs.splunk.com
+api.scs.splunk.com
+region-dub10.api.scs.splunk.com
+auth.scs.splunk.com
+region-dub10.auth.scs.splunk.com
 api.playground.scs.splunk.com
 region-iad10.api.playground.scs.splunk.com
 static-deploy-test.playground.scs.splunk.com
@@ -2729,7 +2753,9 @@ idp.login.staging.splunk.com
 sit1.staging.splunk.com
 idp.login.sit1.staging.splunk.com
 sit2.staging.splunk.com
+www.staging.splunk.com
 test-gw1.splunk.com
+usergroups.splunk.com
 post.spmailtechnol.com
 sport.pl
 spot.im
@@ -3309,6 +3335,7 @@ tv.wp.pl
 wpengine.com
 www.wshifen.com
 wsj.com
+www.wsj.com
 mw1.wsj.net
 wtkr.com
 wufoo.com
