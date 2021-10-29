@@ -8,6 +8,7 @@ i-am3p-cor003.api.p001.1drv.com
 1und1.de
 www.1und1.de
 24timezones.com
+2miners.com
 112.2o7.net
 viarnd.112.2o7.net
 www.112.2o7.net
@@ -116,6 +117,7 @@ www.aetna.com
 vip5.afdorigin-prod-am02.afdogw.com
 vip5.afdorigin-prod-ch02.afdogw.com
 affirm.com
+www.affirm.com
 afi-b.com
 t.afi-b.com
 www.afi-b.com
@@ -598,8 +600,10 @@ www.civicscience.com
 db.local.clamav.net
 cleanprint.net
 cleveland.com
+www.cleveland.com
 elinkeu.clickdimensions.com
 clickondetroit.com
+www.clickondetroit.com
 location-inference-westus.cloudapp.net
 skypeecs-prod-usw-0-b.cloudapp.net
 cloudflare-dns.com
@@ -763,6 +767,7 @@ cybercrime-tracker.net
 d3js.org
 admin.dable.io
 dailymotion.com
+www.dailymotion.com
 danid.dk
 www.datadoghq-browser-agent.com
 datafilehost.com
@@ -1804,6 +1809,7 @@ marketwatch.com
 s.marketwatch.com
 mashable.com
 masslive.com
+www.masslive.com
 mathjax.org
 matterport.com
 my.matterport.com
@@ -1883,7 +1889,9 @@ displaycatalog.mp.microsoft.com
 aircapi.displaycatalog.mp.microsoft.com
 commercial.displaycatalog.mp.microsoft.com
 certweb-int.dps.mp.microsoft.com
+certweb.dps.mp.microsoft.com
 filesapi.dps.mp.microsoft.com
+flighting-int.dps.mp.microsoft.com
 imagepublishingservice-dev.dps.mp.microsoft.com
 ingestionapi-dev.dps.mp.microsoft.com
 listingsweb-int.dps.mp.microsoft.com
@@ -1894,6 +1902,7 @@ watchdogs.dps.mp.microsoft.com
 workflowservice-int.dps.mp.microsoft.com
 workflowservice.dps.mp.microsoft.com
 ingestiondeveloperapi-int.dse.mp.microsoft.com
+pac-int.dse.mp.microsoft.com
 cmd-tip.dcat.dsp.mp.microsoft.com
 phx.sfs-prod.dcat.dsp.mp.microsoft.com
 phx.sfs-tip.dcat.dsp.mp.microsoft.com
@@ -1939,6 +1948,8 @@ licensing-entitlements.md.mp.microsoft.com
 licensingphone.md.mp.microsoft.com
 licensingwindows.md.mp.microsoft.com
 uwpproc-int.mix.mp.microsoft.com
+purchase-int.mp.microsoft.com
+promopolicy.purchase-int.mp.microsoft.com
 purchase.mp.microsoft.com
 staging-dcatbackend-int.mp.microsoft.com
 wus2.staging-dcatbackend-int.mp.microsoft.com
@@ -2013,6 +2024,7 @@ mixnews.lv
 sj14.mktossl.com
 mlb.com
 mlive.com
+www.mlive.com
 mls.com
 gm.gds.mmstat.com
 gm.mmstat.com
@@ -2158,6 +2170,7 @@ nitroflare.com
 nj.com
 businessfinder.nj.com
 realestate.nj.com
+www.nj.com
 nk.pl
 nmcdn.us
 www.nmcdn.us
@@ -2663,6 +2676,7 @@ inviteconnector.skype.com
 sip2.lgw.skype.com
 x-lgw.lgw.skype.com
 login.skype.com
+peopleimport.skype.com
 profile.skype.com
 api.promotions.skype.com
 bo.promotions.skype.com
@@ -2670,6 +2684,9 @@ repo.skype.com
 skypegraph.skype.com
 support.skype.com
 trap.skype.com
+web.skype.com
+dev.web.skype.com
+latest.web.skype.com
 slack-redir.net
 files.slack.com
 slashdot.org
@@ -2889,6 +2906,7 @@ sparta.qb.mig.tencent-cloud.net
 texashomebase.com
 www.texashomebase.com
 textalk.se
+www.textalk.se
 tfaforms.com
 www.tfaforms.com
 ocsp.thawte.com
@@ -2898,6 +2916,7 @@ www.thebot.net
 thechive.com
 theepochtimes.com
 thefreethoughtproject.com
+www.thefreethoughtproject.com
 thehill.com
 thenextweb.com
 theoldnet.com
@@ -3046,6 +3065,7 @@ www.unibytes.com
 unicornmedia.com
 unix.com
 www.unix.com
+unmineable.com
 unpkg.com
 unsplash.com
 uploaded.net
@@ -3070,6 +3090,7 @@ update.utorrent.com
 see.valimail.com
 vanityfair.com
 variety.com
+www.variety.com
 verisign.com
 ocsp.verisign.com
 crl.verisign.net

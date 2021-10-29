@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-10-28Z
+! Version: 2021-10-29Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-10-28Z
+! Last modified: 2021-10-29Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -17,6 +17,7 @@
 @@||1und1.de^
 @@||www.1und1.de^
 @@||24timezones.com^
+@@||2miners.com^
 @@||112.2o7.net^
 @@||viarnd.112.2o7.net^
 @@||www.112.2o7.net^
@@ -125,6 +126,7 @@
 @@||vip5.afdorigin-prod-am02.afdogw.com^
 @@||vip5.afdorigin-prod-ch02.afdogw.com^
 @@||affirm.com^
+@@||www.affirm.com^
 @@||afi-b.com^
 @@||t.afi-b.com^
 @@||www.afi-b.com^
@@ -607,8 +609,10 @@
 @@||db.local.clamav.net^
 @@||cleanprint.net^
 @@||cleveland.com^
+@@||www.cleveland.com^
 @@||elinkeu.clickdimensions.com^
 @@||clickondetroit.com^
+@@||www.clickondetroit.com^
 @@||location-inference-westus.cloudapp.net^
 @@||skypeecs-prod-usw-0-b.cloudapp.net^
 @@||cloudflare-dns.com^
@@ -772,6 +776,7 @@
 @@||d3js.org^
 @@||admin.dable.io^
 @@||dailymotion.com^
+@@||www.dailymotion.com^
 @@||danid.dk^
 @@||www.datadoghq-browser-agent.com^
 @@||datafilehost.com^
@@ -1813,6 +1818,7 @@
 @@||s.marketwatch.com^
 @@||mashable.com^
 @@||masslive.com^
+@@||www.masslive.com^
 @@||mathjax.org^
 @@||matterport.com^
 @@||my.matterport.com^
@@ -1892,7 +1898,9 @@
 @@||aircapi.displaycatalog.mp.microsoft.com^
 @@||commercial.displaycatalog.mp.microsoft.com^
 @@||certweb-int.dps.mp.microsoft.com^
+@@||certweb.dps.mp.microsoft.com^
 @@||filesapi.dps.mp.microsoft.com^
+@@||flighting-int.dps.mp.microsoft.com^
 @@||imagepublishingservice-dev.dps.mp.microsoft.com^
 @@||ingestionapi-dev.dps.mp.microsoft.com^
 @@||listingsweb-int.dps.mp.microsoft.com^
@@ -1903,6 +1911,7 @@
 @@||workflowservice-int.dps.mp.microsoft.com^
 @@||workflowservice.dps.mp.microsoft.com^
 @@||ingestiondeveloperapi-int.dse.mp.microsoft.com^
+@@||pac-int.dse.mp.microsoft.com^
 @@||cmd-tip.dcat.dsp.mp.microsoft.com^
 @@||phx.sfs-prod.dcat.dsp.mp.microsoft.com^
 @@||phx.sfs-tip.dcat.dsp.mp.microsoft.com^
@@ -1948,6 +1957,8 @@
 @@||licensingphone.md.mp.microsoft.com^
 @@||licensingwindows.md.mp.microsoft.com^
 @@||uwpproc-int.mix.mp.microsoft.com^
+@@||purchase-int.mp.microsoft.com^
+@@||promopolicy.purchase-int.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
 @@||staging-dcatbackend-int.mp.microsoft.com^
 @@||wus2.staging-dcatbackend-int.mp.microsoft.com^
@@ -2022,6 +2033,7 @@
 @@||sj14.mktossl.com^
 @@||mlb.com^
 @@||mlive.com^
+@@||www.mlive.com^
 @@||mls.com^
 @@||gm.gds.mmstat.com^
 @@||gm.mmstat.com^
@@ -2167,6 +2179,7 @@
 @@||nj.com^
 @@||businessfinder.nj.com^
 @@||realestate.nj.com^
+@@||www.nj.com^
 @@||nk.pl^
 @@||nmcdn.us^
 @@||www.nmcdn.us^
@@ -2672,6 +2685,7 @@
 @@||sip2.lgw.skype.com^
 @@||x-lgw.lgw.skype.com^
 @@||login.skype.com^
+@@||peopleimport.skype.com^
 @@||profile.skype.com^
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
@@ -2679,6 +2693,9 @@
 @@||skypegraph.skype.com^
 @@||support.skype.com^
 @@||trap.skype.com^
+@@||web.skype.com^
+@@||dev.web.skype.com^
+@@||latest.web.skype.com^
 @@||slack-redir.net^
 @@||files.slack.com^
 @@||slashdot.org^
@@ -2898,6 +2915,7 @@
 @@||texashomebase.com^
 @@||www.texashomebase.com^
 @@||textalk.se^
+@@||www.textalk.se^
 @@||tfaforms.com^
 @@||www.tfaforms.com^
 @@||ocsp.thawte.com^
@@ -2907,6 +2925,7 @@
 @@||thechive.com^
 @@||theepochtimes.com^
 @@||thefreethoughtproject.com^
+@@||www.thefreethoughtproject.com^
 @@||thehill.com^
 @@||thenextweb.com^
 @@||theoldnet.com^
@@ -3055,6 +3074,7 @@
 @@||unicornmedia.com^
 @@||unix.com^
 @@||www.unix.com^
+@@||unmineable.com^
 @@||unpkg.com^
 @@||unsplash.com^
 @@||uploaded.net^
@@ -3079,6 +3099,7 @@
 @@||see.valimail.com^
 @@||vanityfair.com^
 @@||variety.com^
+@@||www.variety.com^
 @@||verisign.com^
 @@||ocsp.verisign.com^
 @@||crl.verisign.net^
