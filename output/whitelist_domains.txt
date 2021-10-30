@@ -847,6 +847,7 @@ dl-web.dropbox.com
 dl.dropbox.com
 ns1.dropbox.com
 ns2.dropbox.com
+www.dropbox.com
 dl.dropboxusercontent.com
 drudgereport.com
 secure.dshield.org
@@ -1895,6 +1896,7 @@ flighting-int.dps.mp.microsoft.com
 imagepublishingservice-dev.dps.mp.microsoft.com
 ingestionapi-dev.dps.mp.microsoft.com
 listingsweb-int.dps.mp.microsoft.com
+packagesapi-intppe.dps.mp.microsoft.com
 payoutorderstatus.dps.mp.microsoft.com
 schemaapi-int.dps.mp.microsoft.com
 survey.dps.mp.microsoft.com
@@ -1932,6 +1934,7 @@ firstparty-entitlements-int.mp.microsoft.com
 firstparty-entitlements.mp.microsoft.com
 inventory-int.mp.microsoft.com
 inventory.mp.microsoft.com
+keyfulfillment.mp.microsoft.com
 licensing-entitlements-int.mp.microsoft.com
 licensing-entitlements.mp.microsoft.com
 licensing-int.mp.microsoft.com
@@ -2750,6 +2753,8 @@ scp.splunk.com
 api.scp.splunk.com
 auth.scp.splunk.com
 playground.scp.splunk.com
+admin.playground.scp.splunk.com
+legacy.admin.playground.scp.splunk.com
 pulsar-app-play1.playground.scp.splunk.com
 admin.scs.splunk.com
 scs001-dub10.admin.scs.splunk.com

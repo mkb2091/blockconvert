@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-10-29Z
+! Version: 2021-10-30Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-10-29Z
+! Last modified: 2021-10-30Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -856,6 +856,7 @@
 @@||dl.dropbox.com^
 @@||ns1.dropbox.com^
 @@||ns2.dropbox.com^
+@@||www.dropbox.com^
 @@||dl.dropboxusercontent.com^
 @@||drudgereport.com^
 @@||secure.dshield.org^
@@ -1904,6 +1905,7 @@
 @@||imagepublishingservice-dev.dps.mp.microsoft.com^
 @@||ingestionapi-dev.dps.mp.microsoft.com^
 @@||listingsweb-int.dps.mp.microsoft.com^
+@@||packagesapi-intppe.dps.mp.microsoft.com^
 @@||payoutorderstatus.dps.mp.microsoft.com^
 @@||schemaapi-int.dps.mp.microsoft.com^
 @@||survey.dps.mp.microsoft.com^
@@ -1941,6 +1943,7 @@
 @@||firstparty-entitlements.mp.microsoft.com^
 @@||inventory-int.mp.microsoft.com^
 @@||inventory.mp.microsoft.com^
+@@||keyfulfillment.mp.microsoft.com^
 @@||licensing-entitlements-int.mp.microsoft.com^
 @@||licensing-entitlements.mp.microsoft.com^
 @@||licensing-int.mp.microsoft.com^
@@ -2759,6 +2762,8 @@
 @@||api.scp.splunk.com^
 @@||auth.scp.splunk.com^
 @@||playground.scp.splunk.com^
+@@||admin.playground.scp.splunk.com^
+@@||legacy.admin.playground.scp.splunk.com^
 @@||pulsar-app-play1.playground.scp.splunk.com^
 @@||admin.scs.splunk.com^
 @@||scs001-dub10.admin.scs.splunk.com^
