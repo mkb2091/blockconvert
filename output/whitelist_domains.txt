@@ -1895,6 +1895,7 @@ filesapi.dps.mp.microsoft.com
 flighting-int.dps.mp.microsoft.com
 imagepublishingservice-dev.dps.mp.microsoft.com
 ingestionapi-dev.dps.mp.microsoft.com
+listingsapi-int.dps.mp.microsoft.com
 listingsweb-int.dps.mp.microsoft.com
 packagesapi-intppe.dps.mp.microsoft.com
 payoutorderstatus.dps.mp.microsoft.com
@@ -1984,6 +1985,7 @@ update.microsoft.com
 catalog.update.microsoft.com
 fe1.update.microsoft.com
 fe2.update.microsoft.com
+pending.sls-int.update.microsoft.com
 pending.sls-tip.update.microsoft.com
 sls.update.microsoft.com
 pending.sls.update.microsoft.com
