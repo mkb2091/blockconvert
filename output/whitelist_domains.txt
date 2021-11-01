@@ -764,6 +764,7 @@ e.customeriomail.com
 cutcaptcha.com
 cvs.com
 cybercrime-tracker.net
+www.cybercrime-tracker.net
 d3js.org
 admin.dable.io
 dailymotion.com
@@ -2589,6 +2590,7 @@ hubciddata.sandai.net
 client.update.sandai.net
 api.tw06.xlmc.sandai.net
 ec-ns.sascdn.com
+r.sascdn.com
 satkurier.pl
 sbnation.com
 gcs.sc-cdn.net
