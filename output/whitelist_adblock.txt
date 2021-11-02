@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-11-01Z
+! Version: 2021-11-02Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-11-01Z
+! Last modified: 2021-11-02Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -611,6 +611,8 @@
 @@||cleveland.com^
 @@||www.cleveland.com^
 @@||elinkeu.clickdimensions.com^
+@@||clickhouse.com^
+@@||www.clickhouse.com^
 @@||clickondetroit.com^
 @@||www.clickondetroit.com^
 @@||location-inference-westus.cloudapp.net^
@@ -727,6 +729,7 @@
 @@||cosmopolitan.com^
 @@||costco.com^
 @@||countryflags.io^
+@@||www.countryflags.io^
 @@||platform-eu.cloud.coveo.com^
 @@||platform.cloud.coveo.com^
 @@||static.cloud.coveo.com^
@@ -1032,7 +1035,6 @@
 @@||fide.com^
 @@||filefactory.com^
 @@||filepicker.io^
-@@||www.filepicker.io^
 @@||filesmonster.com^
 @@||fili.cc^
 @@||www.fili.cc^
@@ -2613,7 +2615,6 @@
 @@||scrapinghub.com^
 @@||scribblelive.com^
 @@||scribd.com^
-@@||www.scribd.com^
 @@||sdad.guru^
 @@||www.sdad.guru^
 @@||searchanise.com^
@@ -2860,6 +2861,7 @@
 @@||m.stripe.network^
 @@||stripecdn.com^
 @@||surveygizmo.com^
+@@||www.surveygizmo.com^
 @@||surveymonkey.com^
 @@||secure.surveymonkey.com^
 @@||sweclockers.com^
@@ -2996,6 +2998,7 @@
 @@||web.tresorit.com^
 @@||go.trouter.io^
 @@||trumba.com^
+@@||www.trumba.com^
 @@||trustarc.com^
 @@||privacy-policy.truste.com^
 @@||trustkeeper.net^
