@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-11-03Z
+! Version: 2021-11-04Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-11-03Z
+! Last modified: 2021-11-04Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -1546,6 +1546,7 @@
 @@||intensedebate.com^
 @@||intercom.io^
 @@||www.intercom.io^
+@@||ia.hit.interia.pl^
 @@||members.internetdefenseleague.org^
 @@||api.intsig.net^
 @@||download.intsig.net^
@@ -2370,6 +2371,7 @@
 @@||www.pennlive.com^
 @@||assets.penny-arcade.com^
 @@||people.com^
+@@||validate.perfdrive.com^
 @@||performgroup.com^
 @@||pfsense.org^
 @@||pgcdn.com^
@@ -2501,6 +2503,10 @@
 @@||sqimg.qq.com^
 @@||photo.store.qq.com^
 @@||3gdl.tcdn.qq.com^
+@@||weixin.qq.com^
+@@||minorshort.weixin.qq.com^
+@@||shminorshort.weixin.qq.com^
+@@||support.weixin.qq.com^
 @@||www.qq.com^
 @@||api.qrserver.com^
 @@||qualtrics.com^
@@ -2938,6 +2944,7 @@
 @@||thefreethoughtproject.com^
 @@||www.thefreethoughtproject.com^
 @@||thehill.com^
+@@||thumbnail.thench.net^
 @@||thenextweb.com^
 @@||theoldnet.com^
 @@||www.theoldnet.com^

@@ -1537,6 +1537,7 @@ intellicast.com
 intensedebate.com
 intercom.io
 www.intercom.io
+ia.hit.interia.pl
 members.internetdefenseleague.org
 api.intsig.net
 download.intsig.net
@@ -2361,6 +2362,7 @@ pennlive.com
 www.pennlive.com
 assets.penny-arcade.com
 people.com
+validate.perfdrive.com
 performgroup.com
 pfsense.org
 pgcdn.com
@@ -2492,6 +2494,10 @@ img1.sj.qq.com
 sqimg.qq.com
 photo.store.qq.com
 3gdl.tcdn.qq.com
+weixin.qq.com
+minorshort.weixin.qq.com
+shminorshort.weixin.qq.com
+support.weixin.qq.com
 www.qq.com
 api.qrserver.com
 qualtrics.com
@@ -2929,6 +2935,7 @@ theepochtimes.com
 thefreethoughtproject.com
 www.thefreethoughtproject.com
 thehill.com
+thumbnail.thench.net
 thenextweb.com
 theoldnet.com
 www.theoldnet.com
