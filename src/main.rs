@@ -1,5 +1,5 @@
 use crate::list_downloader::FilterListHandler;
-use clap::Clap;
+use clap::Parser;
 use domain_list_builder::*;
 use rand::prelude::*;
 use std::sync::Arc;
@@ -7,7 +7,7 @@ use std::sync::Arc;
 const LIST_CSV: &str = "filterlists.csv";
 
 /// Blockconvert
-#[derive(Clap)]
+#[derive(Parser)]
 #[clap(version = "0.1")]
 struct Opts {
     #[clap(subcommand)]
@@ -16,13 +16,13 @@ struct Opts {
     config: String,
 }
 
-#[derive(Clap)]
+#[derive(Parser)]
 enum Mode {
     Generate,
     Query(Query),
     FindDomains,
 }
-#[derive(Clap)]
+#[derive(Parser)]
 struct Query {
     query: String,
     #[clap(short, long)]
