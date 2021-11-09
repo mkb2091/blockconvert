@@ -1271,6 +1271,8 @@ maps.google.com
 mapsengine.google.com
 mt0.google.com
 mt1.google.com
+mt2.google.com
+mt3.google.com
 mts0.google.com
 mts1.google.com
 mw1.google.com
@@ -1405,7 +1407,6 @@ heureka.cz
 highcharts.com
 code.highcharts.com
 history.com
-www.history.com
 hitfile.net
 hm.com
 hollywoodlife.com
@@ -1766,7 +1767,6 @@ securel.longtailvideo.com
 secureplugins.longtailvideo.com
 lowendbox.com
 lowes.com
-www.lowes.com
 cindyholbrook.lpages.co
 lpsnmedia.net
 www.lpsnmedia.net
@@ -1881,7 +1881,6 @@ listingsweb-int.dps.mp.microsoft.com
 packagesapi-intppe.dps.mp.microsoft.com
 survey.dps.mp.microsoft.com
 watchdogs.dps.mp.microsoft.com
-workflowservice.dps.mp.microsoft.com
 pac-int.dse.mp.microsoft.com
 cmd-tip.dcat.dsp.mp.microsoft.com
 phx.sfs-prod.dcat.dsp.mp.microsoft.com
@@ -2166,7 +2165,6 @@ www.ojrq.net
 okta.com
 olark.com
 old-games.org
-downloads.old-games.org
 omny.fm
 omroep.nl
 amazoncustomerservice.d2.sc.omtrdc.net
@@ -2435,6 +2433,7 @@ player.radio.com
 radiofrance.fr
 radiostacja.pl
 rakuten.com
+www.rakuten.com
 rambler.ru
 ranker.com
 images.rapgenius.com
@@ -2819,7 +2818,6 @@ thehill.com
 thumbnail.thench.net
 thenextweb.com
 theoldnet.com
-www.theoldnet.com
 thepiratebay.org
 theplatform.com
 thetvdb.com

@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-11-07Z
+! Version: 2021-11-09Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-11-07Z
+! Last modified: 2021-11-09Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -1280,6 +1280,8 @@
 @@||mapsengine.google.com^
 @@||mt0.google.com^
 @@||mt1.google.com^
+@@||mt2.google.com^
+@@||mt3.google.com^
 @@||mts0.google.com^
 @@||mts1.google.com^
 @@||mw1.google.com^
@@ -1414,7 +1416,6 @@
 @@||highcharts.com^
 @@||code.highcharts.com^
 @@||history.com^
-@@||www.history.com^
 @@||hitfile.net^
 @@||hm.com^
 @@||hollywoodlife.com^
@@ -1775,7 +1776,6 @@
 @@||secureplugins.longtailvideo.com^
 @@||lowendbox.com^
 @@||lowes.com^
-@@||www.lowes.com^
 @@||cindyholbrook.lpages.co^
 @@||lpsnmedia.net^
 @@||www.lpsnmedia.net^
@@ -1890,7 +1890,6 @@
 @@||packagesapi-intppe.dps.mp.microsoft.com^
 @@||survey.dps.mp.microsoft.com^
 @@||watchdogs.dps.mp.microsoft.com^
-@@||workflowservice.dps.mp.microsoft.com^
 @@||pac-int.dse.mp.microsoft.com^
 @@||cmd-tip.dcat.dsp.mp.microsoft.com^
 @@||phx.sfs-prod.dcat.dsp.mp.microsoft.com^
@@ -2175,7 +2174,6 @@
 @@||okta.com^
 @@||olark.com^
 @@||old-games.org^
-@@||downloads.old-games.org^
 @@||omny.fm^
 @@||omroep.nl^
 @@||amazoncustomerservice.d2.sc.omtrdc.net^
@@ -2444,6 +2442,7 @@
 @@||radiofrance.fr^
 @@||radiostacja.pl^
 @@||rakuten.com^
+@@||www.rakuten.com^
 @@||rambler.ru^
 @@||ranker.com^
 @@||images.rapgenius.com^
@@ -2828,7 +2827,6 @@
 @@||thumbnail.thench.net^
 @@||thenextweb.com^
 @@||theoldnet.com^
-@@||www.theoldnet.com^
 @@||thepiratebay.org^
 @@||theplatform.com^
 @@||thetvdb.com^
