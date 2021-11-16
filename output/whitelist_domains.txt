@@ -114,6 +114,7 @@ www.aetna.com
 vip5.afdorigin-prod-am02.afdogw.com
 vip5.afdorigin-prod-ch02.afdogw.com
 affirm.com
+www.affirm.com
 afi-b.com
 t.afi-b.com
 www.afi-b.com
