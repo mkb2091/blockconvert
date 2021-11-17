@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-11-16Z
+! Version: 2021-11-17Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-11-16Z
+! Last modified: 2021-11-17Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -718,7 +718,6 @@
 @@||cosmopolitan.com^
 @@||costco.com^
 @@||countryflags.io^
-@@||www.countryflags.io^
 @@||platform-eu.cloud.coveo.com^
 @@||platform.cloud.coveo.com^
 @@||static.cloud.coveo.com^
@@ -2676,7 +2675,6 @@
 @@||m.stripe.network^
 @@||stripecdn.com^
 @@||surveygizmo.com^
-@@||www.surveygizmo.com^
 @@||surveymonkey.com^
 @@||secure.surveymonkey.com^
 @@||sweclockers.com^
@@ -2810,7 +2808,6 @@
 @@||web.tresorit.com^
 @@||go.trouter.io^
 @@||trumba.com^
-@@||www.trumba.com^
 @@||trustarc.com^
 @@||privacy-policy.truste.com^
 @@||trustkeeper.net^

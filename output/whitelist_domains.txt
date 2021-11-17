@@ -709,7 +709,6 @@ pings.conviva.com
 cosmopolitan.com
 costco.com
 countryflags.io
-www.countryflags.io
 platform-eu.cloud.coveo.com
 platform.cloud.coveo.com
 static.cloud.coveo.com
@@ -2667,7 +2666,6 @@ q.stripe.com
 m.stripe.network
 stripecdn.com
 surveygizmo.com
-www.surveygizmo.com
 surveymonkey.com
 secure.surveymonkey.com
 sweclockers.com
@@ -2801,7 +2799,6 @@ osce11-0-en.url.trendmicro.com
 web.tresorit.com
 go.trouter.io
 trumba.com
-www.trumba.com
 trustarc.com
 privacy-policy.truste.com
 trustkeeper.net
