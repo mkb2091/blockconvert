@@ -1769,6 +1769,7 @@ mailchimp.com
 majorgeeks.com
 www.majorgeeks.com
 malwaredomainlist.com
+www.malwaredomainlist.com
 mirror1.malwaredomains.com
 manager-magazin-de.manager-magazin.de
 mandrillapp.com
