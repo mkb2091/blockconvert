@@ -1006,7 +1006,6 @@ feedly.com
 fide.com
 filefactory.com
 filepicker.io
-www.filepicker.io
 filesmonster.com
 fili.cc
 www.fili.cc
@@ -1433,6 +1432,7 @@ cds.d2s7q6s2.hwcdn.net
 cds.j3z9t3p6.hwcdn.net
 cds.s5x3j6q5.hwcdn.net
 hypothes.is
+id.i2i.jp
 data.iana.org
 i.ibb.co
 image.ibb.co
@@ -2447,6 +2447,7 @@ widget-cdn.rpxnow.com
 www.rpxnow.com
 rssinclude.com
 rumble.com
+auth-relay-pqj6ndd4jq-uc.a.run.app
 track.rutarget.ru
 rutube.ru
 c.s-microsoft.com
