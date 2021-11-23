@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-11-22Z
+! Version: 2021-11-23Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-11-22Z
+! Last modified: 2021-11-23Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -877,6 +877,7 @@
 @@||ecwid.com^
 @@||edgecastcdn.net^
 @@||wac.edgecastcdn.net^
+@@||cs837.wac.edgecastcdn.net^
 @@||79423.analytics.edgekey.net^
 @@||ma135-r.analytics.edgekey.net^
 @@||help.apple.com.edgekey.net^
@@ -1929,9 +1930,13 @@
 @@||api.vip.miui.com^
 @@||mixcloud.com^
 @@||mixnews.lv^
+@@||mjt.lu^
+@@||www.mjt.lu^
+@@||xqqyu.mjt.lu^
 @@||sj14.mktossl.com^
 @@||mlb.com^
 @@||mlive.com^
+@@||mljt.tech^
 @@||mls.com^
 @@||gm.gds.mmstat.com^
 @@||gm.mmstat.com^
@@ -2397,7 +2402,6 @@
 @@||radiofrance.fr^
 @@||radiostacja.pl^
 @@||rakuten.com^
-@@||www.rakuten.com^
 @@||rambler.ru^
 @@||ranker.com^
 @@||images.rapgenius.com^

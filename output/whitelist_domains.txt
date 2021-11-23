@@ -868,6 +868,7 @@ secureir.ebaystatic.com
 ecwid.com
 edgecastcdn.net
 wac.edgecastcdn.net
+cs837.wac.edgecastcdn.net
 79423.analytics.edgekey.net
 ma135-r.analytics.edgekey.net
 help.apple.com.edgekey.net
@@ -1920,9 +1921,13 @@ update.miui.com
 api.vip.miui.com
 mixcloud.com
 mixnews.lv
+mjt.lu
+www.mjt.lu
+xqqyu.mjt.lu
 sj14.mktossl.com
 mlb.com
 mlive.com
+mljt.tech
 mls.com
 gm.gds.mmstat.com
 gm.mmstat.com
@@ -2388,7 +2393,6 @@ player.radio.com
 radiofrance.fr
 radiostacja.pl
 rakuten.com
-www.rakuten.com
 rambler.ru
 ranker.com
 images.rapgenius.com
