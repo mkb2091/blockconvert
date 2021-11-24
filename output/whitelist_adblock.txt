@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-11-23Z
+! Version: 2021-11-24Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-11-23Z
+! Last modified: 2021-11-24Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -116,6 +116,7 @@
 @@||trunk.guce.advertising.com^
 @@||a.adwolf.ru^
 @@||adyen.com^
+@@||www.adyen.com^
 @@||aeriagames.com^
 @@||som.aeroplan.com^
 @@||aetna.com^
@@ -457,6 +458,7 @@
 @@||bestbuy.ca^
 @@||bestbuy.com^
 @@||betanews.com^
+@@||www.betanews.com^
 @@||betfair.com^
 @@||l.betrad.com^
 @@||better.fyi^
@@ -912,6 +914,7 @@
 @@||www.engadget.com^
 @@||nexus.ensighten.com^
 @@||entireweb.com^
+@@||www.entireweb.com^
 @@||playerstatic.entropymedia.com^
 @@||envato.com^
 @@||1.envato.market^
@@ -1002,6 +1005,7 @@
 @@||fb.com^
 @@||fb.me^
 @@||fbcdn.net^
+@@||www.fbcdn.net^
 @@||external-lhr8-1.xx.fbcdn.net^
 @@||external.xx.fbcdn.net^
 @@||scontent-nrt1-1.xx.fbcdn.net^
@@ -1867,12 +1871,19 @@
 @@||fe3.delivery.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
 @@||commercial.displaycatalog.mp.microsoft.com^
+@@||productsummary-int.dps.mp.microsoft.com^
+@@||productsummary.dps.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
 @@||licensing.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
 @@||displaycatalog.md.mp.microsoft.com^
+@@||paymentinstruments.md.mp.microsoft.com^
+@@||paymentinstruments-int.mp.microsoft.com^
+@@||internal.paymentinstruments-int.mp.microsoft.com^
+@@||paymentinstruments.mp.microsoft.com^
+@@||internal.paymentinstruments.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
 @@||xbox-displaycatalog.mp.microsoft.com^
 @@||mscrl.microsoft.com^
@@ -2616,6 +2627,12 @@
 @@||events.splunk.com^
 @@||mint.splunk.com^
 @@||response.splunk.com^
+@@||scp.splunk.com^
+@@||playground.scp.splunk.com^
+@@||app-admin.playground.scp.splunk.com^
+@@||staging.scp.splunk.com^
+@@||app-admin.playground.scs.splunk.com^
+@@||app.playground.scs.splunk.com^
 @@||post.spmailtechnol.com^
 @@||sport.pl^
 @@||spot.im^
@@ -2992,6 +3009,7 @@
 @@||goto.walmart.com^
 @@||omniture.walmart.com^
 @@||rptrcks.walmart.com^
+@@||www.walmart.com^
 @@||wangbase.com^
 @@||www.wangbase.com^
 @@||washingtonpost.com^
