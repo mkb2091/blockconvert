@@ -2197,6 +2197,7 @@ cdn2.optimizely.com
 cdn3.optimizely.com
 www.optimizely.com
 oracle.com
+oraclecloud.com
 orange.fr
 webmail.orange.fr
 orbitz.com
