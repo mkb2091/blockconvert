@@ -1871,6 +1871,7 @@ licensing.mp.microsoft.com
 collections.md.mp.microsoft.com
 displaycatalog.md.mp.microsoft.com
 paymentinstruments.md.mp.microsoft.com
+uwpproc-int.mix.mp.microsoft.com
 paymentinstruments-int.mp.microsoft.com
 internal.paymentinstruments-int.mp.microsoft.com
 paymentinstruments.mp.microsoft.com

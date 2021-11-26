@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-11-25Z
+! Version: 2021-11-26Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-11-25Z
+! Last modified: 2021-11-26Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -1880,6 +1880,7 @@
 @@||collections.md.mp.microsoft.com^
 @@||displaycatalog.md.mp.microsoft.com^
 @@||paymentinstruments.md.mp.microsoft.com^
+@@||uwpproc-int.mix.mp.microsoft.com^
 @@||paymentinstruments-int.mp.microsoft.com^
 @@||internal.paymentinstruments-int.mp.microsoft.com^
 @@||paymentinstruments.mp.microsoft.com^
