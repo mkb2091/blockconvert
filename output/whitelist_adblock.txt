@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-11-29Z
+! Version: 2021-11-30Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-11-29Z
+! Last modified: 2021-11-30Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -2295,6 +2295,7 @@
 @@||dot.westus.pi-dns.com^
 @@||pi-hole.net^
 @@||piclens.com^
+@@||pico.tools^
 @@||pilkanozna.pl^
 @@||adcdn.pingan.com^
 @@||stats.pingdom.com^
@@ -2955,6 +2956,7 @@
 @@||www.vgwort.de^
 @@||vgy.me^
 @@||i.vgy.me^
+@@||viafoura.co^
 @@||viafoura.net^
 @@||cdn.viblast.com^
 @@||vice.com^

@@ -2286,6 +2286,7 @@ doh.westus.pi-dns.com
 dot.westus.pi-dns.com
 pi-hole.net
 piclens.com
+pico.tools
 pilkanozna.pl
 adcdn.pingan.com
 stats.pingdom.com
@@ -2946,6 +2947,7 @@ vgwort.de
 www.vgwort.de
 vgy.me
 i.vgy.me
+viafoura.co
 viafoura.net
 cdn.viblast.com
 vice.com
