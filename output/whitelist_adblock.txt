@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-01Z
+! Version: 2021-12-02Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-01Z
+! Last modified: 2021-12-02Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -2577,6 +2577,8 @@
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
 @@||trap.skype.com^
+@@||web.skype.com^
+@@||latest.web.skype.com^
 @@||slack-redir.net^
 @@||files.slack.com^
 @@||slashdot.org^

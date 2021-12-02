@@ -2568,6 +2568,8 @@ login.skype.com
 api.promotions.skype.com
 bo.promotions.skype.com
 trap.skype.com
+web.skype.com
+latest.web.skype.com
 slack-redir.net
 files.slack.com
 slashdot.org
