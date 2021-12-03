@@ -1859,6 +1859,7 @@ dmd.metaservices.microsoft.com
 dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 fe3.delivery.mp.microsoft.com
+displaycatalog-int.mp.microsoft.com
 displaycatalog.mp.microsoft.com
 commercial.displaycatalog.mp.microsoft.com
 productsummary-int.dps.mp.microsoft.com
@@ -2982,6 +2983,7 @@ t0.ssl.ak.dynamic.tiles.virtualearth.net
 visa.com
 code.visualstudio.com
 update.code.visualstudio.com
+marketplace.visualstudio.com
 vitalia.pl
 vk.com
 maps.vk.com
