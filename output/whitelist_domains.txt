@@ -211,11 +211,7 @@ amos.alicdn.com
 assets.alicdn.com
 at.alicdn.com
 at.alicdn.com.danuoyi.alicdn.com
-g.alicdn.com.danuoyi.alicdn.com
-img.alicdn.com.danuoyi.alicdn.com
-files.alicdn.com
 g.alicdn.com
-gtms01.alicdn.com
 gtms02.alicdn.com
 gtms03.alicdn.com
 gtms04.alicdn.com
@@ -247,8 +243,6 @@ personalweb.alipay.com
 zcbprod.alipay.com
 zht.alipay.com
 gz-lb1.internet.spanner.alipaydns.com
-gw.alipayobjects.com
-i.alipayobjects.com
 aliyuncs.com
 arms-retcode.aliyuncs.com
 adash.man.aliyuncs.com
@@ -791,9 +785,7 @@ drh1.img.digitalriver.com
 digitaltrends.com
 www.digitaltrends.com
 sh.docs.dingtalk.com
-weboffice-static.docs.dingtalk.com
 down-cdn.dingtalk.com
-file.dingtalk.com
 h5.dingtalk.com
 static.dingtalk.com
 directvnow.com
@@ -814,7 +806,6 @@ dmcdn.net
 dn.se
 do.co
 forum.dobreprogramy.pl
-screendoor.dobt.co
 documentcloud.org
 donorbox.org
 forum.doom9.org
@@ -1773,7 +1764,6 @@ mailchimp.com
 majorgeeks.com
 www.majorgeeks.com
 malwaredomainlist.com
-www.malwaredomainlist.com
 mirror1.malwaredomains.com
 manager-magazin-de.manager-magazin.de
 mandrillapp.com
@@ -1861,7 +1851,6 @@ tlu.dl.delivery.mp.microsoft.com
 fe3.delivery.mp.microsoft.com
 displaycatalog-int.mp.microsoft.com
 displaycatalog.mp.microsoft.com
-commercial.displaycatalog.mp.microsoft.com
 productsummary-int.dps.mp.microsoft.com
 productsummary.dps.mp.microsoft.com
 geo-prod.do.dsp.mp.microsoft.com
@@ -1869,7 +1858,6 @@ tsfe.trafficshaping.dsp.mp.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 licensing.mp.microsoft.com
 collections.md.mp.microsoft.com
-displaycatalog.md.mp.microsoft.com
 paymentinstruments.md.mp.microsoft.com
 uwpproc-int.mix.mp.microsoft.com
 paymentinstruments-int.mp.microsoft.com
@@ -1877,7 +1865,6 @@ internal.paymentinstruments-int.mp.microsoft.com
 paymentinstruments.mp.microsoft.com
 internal.paymentinstruments.mp.microsoft.com
 purchase.mp.microsoft.com
-xbox-displaycatalog.mp.microsoft.com
 mscrl.microsoft.com
 officeclient.microsoft.com
 query.prod.cms.rt.microsoft.com
@@ -2207,7 +2194,6 @@ s7.orientaltrading.com
 fr.osdn.net
 osnews.com
 ouo.io
-ad.ourgame.com
 outlook.com
 config.outturner.com
 ow.ly
@@ -2545,7 +2531,6 @@ cs.silverpop.com
 similarweb.com
 simplecast.com
 sinaimg.cn
-ww2.sinaimg.cn
 wx2.sinaimg.cn
 wx3.sinaimg.cn
 wx4.sinaimg.cn
@@ -2571,7 +2556,6 @@ bo.promotions.skype.com
 trap.skype.com
 web.skype.com
 latest.web.skype.com
-slack-redir.net
 files.slack.com
 slashdot.org
 slate.com
@@ -3281,7 +3265,6 @@ portal.client.xunlei.com
 smallfiles.client.xunlei.com
 xl7xml.client.xunlei.com
 stat.download.xunlei.com
-pc.xunlei.com
 static-xl9-ssl.xunlei.com
 interface.xl9.xunlei.com
 upgrade.xl9.xunlei.com

@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-03Z
+! Version: 2021-12-07Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-03Z
+! Last modified: 2021-12-07Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -220,11 +220,7 @@
 @@||assets.alicdn.com^
 @@||at.alicdn.com^
 @@||at.alicdn.com.danuoyi.alicdn.com^
-@@||g.alicdn.com.danuoyi.alicdn.com^
-@@||img.alicdn.com.danuoyi.alicdn.com^
-@@||files.alicdn.com^
 @@||g.alicdn.com^
-@@||gtms01.alicdn.com^
 @@||gtms02.alicdn.com^
 @@||gtms03.alicdn.com^
 @@||gtms04.alicdn.com^
@@ -256,8 +252,6 @@
 @@||zcbprod.alipay.com^
 @@||zht.alipay.com^
 @@||gz-lb1.internet.spanner.alipaydns.com^
-@@||gw.alipayobjects.com^
-@@||i.alipayobjects.com^
 @@||aliyuncs.com^
 @@||arms-retcode.aliyuncs.com^
 @@||adash.man.aliyuncs.com^
@@ -800,9 +794,7 @@
 @@||digitaltrends.com^
 @@||www.digitaltrends.com^
 @@||sh.docs.dingtalk.com^
-@@||weboffice-static.docs.dingtalk.com^
 @@||down-cdn.dingtalk.com^
-@@||file.dingtalk.com^
 @@||h5.dingtalk.com^
 @@||static.dingtalk.com^
 @@||directvnow.com^
@@ -823,7 +815,6 @@
 @@||dn.se^
 @@||do.co^
 @@||forum.dobreprogramy.pl^
-@@||screendoor.dobt.co^
 @@||documentcloud.org^
 @@||donorbox.org^
 @@||forum.doom9.org^
@@ -1782,7 +1773,6 @@
 @@||majorgeeks.com^
 @@||www.majorgeeks.com^
 @@||malwaredomainlist.com^
-@@||www.malwaredomainlist.com^
 @@||mirror1.malwaredomains.com^
 @@||manager-magazin-de.manager-magazin.de^
 @@||mandrillapp.com^
@@ -1870,7 +1860,6 @@
 @@||fe3.delivery.mp.microsoft.com^
 @@||displaycatalog-int.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
-@@||commercial.displaycatalog.mp.microsoft.com^
 @@||productsummary-int.dps.mp.microsoft.com^
 @@||productsummary.dps.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
@@ -1878,7 +1867,6 @@
 @@||storeedgefd.dsx.mp.microsoft.com^
 @@||licensing.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
-@@||displaycatalog.md.mp.microsoft.com^
 @@||paymentinstruments.md.mp.microsoft.com^
 @@||uwpproc-int.mix.mp.microsoft.com^
 @@||paymentinstruments-int.mp.microsoft.com^
@@ -1886,7 +1874,6 @@
 @@||paymentinstruments.mp.microsoft.com^
 @@||internal.paymentinstruments.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
-@@||xbox-displaycatalog.mp.microsoft.com^
 @@||mscrl.microsoft.com^
 @@||officeclient.microsoft.com^
 @@||query.prod.cms.rt.microsoft.com^
@@ -2216,7 +2203,6 @@
 @@||fr.osdn.net^
 @@||osnews.com^
 @@||ouo.io^
-@@||ad.ourgame.com^
 @@||outlook.com^
 @@||config.outturner.com^
 @@||ow.ly^
@@ -2554,7 +2540,6 @@
 @@||similarweb.com^
 @@||simplecast.com^
 @@||sinaimg.cn^
-@@||ww2.sinaimg.cn^
 @@||wx2.sinaimg.cn^
 @@||wx3.sinaimg.cn^
 @@||wx4.sinaimg.cn^
@@ -2580,7 +2565,6 @@
 @@||trap.skype.com^
 @@||web.skype.com^
 @@||latest.web.skype.com^
-@@||slack-redir.net^
 @@||files.slack.com^
 @@||slashdot.org^
 @@||slate.com^
@@ -3290,7 +3274,6 @@
 @@||smallfiles.client.xunlei.com^
 @@||xl7xml.client.xunlei.com^
 @@||stat.download.xunlei.com^
-@@||pc.xunlei.com^
 @@||static-xl9-ssl.xunlei.com^
 @@||interface.xl9.xunlei.com^
 @@||upgrade.xl9.xunlei.com^
