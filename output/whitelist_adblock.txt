@@ -1,13 +1,14 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-07Z
+! Version: 2021-12-08Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-07Z
+! Last modified: 2021-12-08Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
 !
 !-----------------------Filters-----------------------!
 @@||ad.10010.com^
+@@||m1.ad.10010.com^
 @@||static.ws.126.net^
 @@||bnet.163.com^
 @@||1drv.com^
@@ -1089,6 +1090,7 @@
 @@||funk.eu^
 @@||funnyordie.com^
 @@||fuseservice.com^
+@@||www.fuseservice.com^
 @@||vanilla.futurecdn.net^
 @@||api.vanilla.futurecdn.net^
 @@||fwmrm.net^
@@ -1781,6 +1783,7 @@
 @@||events.mapbox.com^
 @@||tiles.mapbox.com^
 @@||mapquestapi.com^
+@@||www.mapquestapi.com^
 @@||ssl.marfeelcdn.com^
 @@||margevicius.lt^
 @@||marketo.com^
@@ -1855,11 +1858,18 @@
 @@||xbox.ipv6.microsoft.com^
 @@||ris.api.iris.microsoft.com^
 @@||dmd.metaservices.microsoft.com^
+@@||cbsl-int.mp.microsoft.com^
+@@||coordinator-dcatbackend-int.mp.microsoft.com^
+@@||coordinator-dcatbackend.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
 @@||fe3.delivery.mp.microsoft.com^
 @@||displaycatalog-int.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
+@@||displaycatalog1p-int.mp.microsoft.com^
+@@||displaycatalog1p.mp.microsoft.com^
+@@||appxapi.dps.mp.microsoft.com^
+@@||packagesapi.dps.mp.microsoft.com^
 @@||productsummary-int.dps.mp.microsoft.com^
 @@||productsummary.dps.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
@@ -1873,7 +1883,13 @@
 @@||internal.paymentinstruments-int.mp.microsoft.com^
 @@||paymentinstruments.mp.microsoft.com^
 @@||internal.paymentinstruments.mp.microsoft.com^
+@@||product-ingestion.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
+@@||staging-dcatbackend-int.mp.microsoft.com^
+@@||stagingretrieval-dcatbackend-int.mp.microsoft.com^
+@@||stagingretrieval-dcatbackend.mp.microsoft.com^
+@@||xbox-displaycatalog-int.mp.microsoft.com^
+@@||xbox-displaycatalog.mp.microsoft.com^
 @@||mscrl.microsoft.com^
 @@||officeclient.microsoft.com^
 @@||query.prod.cms.rt.microsoft.com^
@@ -2194,6 +2210,7 @@
 @@||cdn3.optimizely.com^
 @@||www.optimizely.com^
 @@||oracle.com^
+@@||www.oracle.com^
 @@||oraclecloud.com^
 @@||orange.fr^
 @@||webmail.orange.fr^
@@ -2392,6 +2409,7 @@
 @@||umich.qualtrics.com^
 @@||www.qualtrics.com^
 @@||quickenloans.com^
+@@||www.quickenloans.com^
 @@||quora.com^
 @@||www.quora.com^
 @@||quotemedia.com^
@@ -2558,6 +2576,7 @@
 @@||download.skype.com^
 @@||edge.skype.com^
 @@||config.edge.skype.com^
+@@||sfbus.entitlement.skype.com^
 @@||fpt.skype.com^
 @@||login.skype.com^
 @@||api.promotions.skype.com^
@@ -2611,6 +2630,8 @@
 @@||spiegel-de.spiegel.de^
 @@||api.splunk.com^
 @@||appinspect.splunk.com^
+@@||apps.splunk.com^
+@@||prod.apps.splunk.com^
 @@||cloud.splunk.com^
 @@||conf.splunk.com^
 @@||events.splunk.com^
@@ -2619,9 +2640,14 @@
 @@||scp.splunk.com^
 @@||playground.scp.splunk.com^
 @@||app-admin.playground.scp.splunk.com^
+@@||app.playground.scp.splunk.com^
+@@||on-call-admin.playground.scp.splunk.com^
 @@||staging.scp.splunk.com^
 @@||app-admin.playground.scs.splunk.com^
 @@||app.playground.scs.splunk.com^
+@@||pulsar.staging.scs.splunk.com^
+@@||splunkbase.splunk.com^
+@@||prod.splunkbase.splunk.com^
 @@||post.spmailtechnol.com^
 @@||sport.pl^
 @@||spot.im^
@@ -3009,6 +3035,7 @@
 @@||wbd.ms^
 @@||weather.com^
 @@||weather.gov^
+@@||www.weather.gov^
 @@||weatherbug.com^
 @@||weathernationtv.com^
 @@||web.de^
@@ -3287,6 +3314,7 @@
 @@||messenger.yahoo.com^
 @@||search.yahoo.com^
 @@||sports.yahoo.com^
+@@||www.yahoo.com^
 @@||yahoo.net^
 @@||yahooapis.com^
 @@||geo-applefinance-cache.internal.query.g03.yahoodns.net^
@@ -3324,6 +3352,7 @@
 @@||yastatic.net^
 @@||news.ycombinator.com^
 @@||yellowpages.com^
+@@||www.yellowpages.com^
 @@||seatme.yelp.com^
 @@||yerl.org^
 @@||yimg.com^
