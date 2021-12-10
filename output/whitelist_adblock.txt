@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-09Z
+! Version: 2021-12-10Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-09Z
+! Last modified: 2021-12-10Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -2825,6 +2825,7 @@
 @@||static.tidiochat.com^
 @@||tiktok.com^
 @@||www.tiktok.com^
+@@||tildacdn.com^
 @@||time.com^
 @@||timeinc.net^
 @@||etl.tindersparks.com^
