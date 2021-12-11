@@ -755,6 +755,7 @@ cybercrime-tracker.net
 d3js.org
 admin.dable.io
 dailymotion.com
+www.dailymotion.com
 danid.dk
 www.datadoghq-browser-agent.com
 datafilehost.com
@@ -1771,6 +1772,7 @@ mailchimp.com
 majorgeeks.com
 www.majorgeeks.com
 malwaredomainlist.com
+www.malwaredomainlist.com
 mirror1.malwaredomains.com
 manager-magazin-de.manager-magazin.de
 mandrillapp.com
@@ -1857,6 +1859,7 @@ dmd.metaservices.microsoft.com
 cbsl-int.mp.microsoft.com
 coordinator-dcatbackend-int.mp.microsoft.com
 coordinator-dcatbackend.mp.microsoft.com
+actionengine-int.dce.mp.microsoft.com
 dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 fe3.delivery.mp.microsoft.com
@@ -1885,6 +1888,8 @@ purchase.mp.microsoft.com
 staging-dcatbackend-int.mp.microsoft.com
 stagingretrieval-dcatbackend-int.mp.microsoft.com
 stagingretrieval-dcatbackend.mp.microsoft.com
+storage-int.mp.microsoft.com
+storage.mp.microsoft.com
 ustrl.mp.microsoft.com
 xbox-displaycatalog-int.mp.microsoft.com
 xbox-displaycatalog.mp.microsoft.com

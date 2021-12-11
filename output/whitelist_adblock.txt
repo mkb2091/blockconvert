@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-10Z
+! Version: 2021-12-11Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-10Z
+! Last modified: 2021-12-11Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -764,6 +764,7 @@
 @@||d3js.org^
 @@||admin.dable.io^
 @@||dailymotion.com^
+@@||www.dailymotion.com^
 @@||danid.dk^
 @@||www.datadoghq-browser-agent.com^
 @@||datafilehost.com^
@@ -1780,6 +1781,7 @@
 @@||majorgeeks.com^
 @@||www.majorgeeks.com^
 @@||malwaredomainlist.com^
+@@||www.malwaredomainlist.com^
 @@||mirror1.malwaredomains.com^
 @@||manager-magazin-de.manager-magazin.de^
 @@||mandrillapp.com^
@@ -1866,6 +1868,7 @@
 @@||cbsl-int.mp.microsoft.com^
 @@||coordinator-dcatbackend-int.mp.microsoft.com^
 @@||coordinator-dcatbackend.mp.microsoft.com^
+@@||actionengine-int.dce.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
 @@||fe3.delivery.mp.microsoft.com^
@@ -1894,6 +1897,8 @@
 @@||staging-dcatbackend-int.mp.microsoft.com^
 @@||stagingretrieval-dcatbackend-int.mp.microsoft.com^
 @@||stagingretrieval-dcatbackend.mp.microsoft.com^
+@@||storage-int.mp.microsoft.com^
+@@||storage.mp.microsoft.com^
 @@||ustrl.mp.microsoft.com^
 @@||xbox-displaycatalog-int.mp.microsoft.com^
 @@||xbox-displaycatalog.mp.microsoft.com^
