@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-11Z
+! Version: 2021-12-12Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-11Z
+! Last modified: 2021-12-12Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -350,6 +350,7 @@
 @@||api-glb.smoot.apple.com^
 @@||swcdn.apple.com^
 @@||trailers.apple.com^
+@@||www.apple.com^
 @@||imp.appledaily.com^
 @@||forums.appleinsider.com^
 @@||breeze.aimon.applicationinsights.io^
@@ -752,6 +753,7 @@
 @@||blog.csdn.net^
 @@||csdnimg.cn^
 @@||cstv.com^
+@@||www.cstv.com^
 @@||cst.cstwpush.com^
 @@||cursecdn.com^
 @@||curvesncombatboots.com^
@@ -984,6 +986,7 @@
 @@||zero.facebook.com^
 @@||connect.facebook.net^
 @@||familydollar.com^
+@@||www.fansonly.com^
 @@||api.fast.com^
 @@||fc-resources.fastcompany.com^
 @@||fastly.net^
@@ -1077,6 +1080,7 @@
 @@||frankerfacez.com^
 @@||dl.free.fr^
 @@||freebsd.org^
+@@||www.freebsd.org^
 @@||freedownloadmanager.org^
 @@||files.freedownloadmanager.org^
 @@||files2.freedownloadmanager.org^
@@ -1880,6 +1884,7 @@
 @@||appxapi.dps.mp.microsoft.com^
 @@||eastus.availabilitymgmt-int.dps.mp.microsoft.com^
 @@||discrequest-int.dps.mp.microsoft.com^
+@@||manualreview-int.dps.mp.microsoft.com^
 @@||packages.dps.mp.microsoft.com^
 @@||packagesapi.dps.mp.microsoft.com^
 @@||packagesweb.dps.mp.microsoft.com^
@@ -1894,6 +1899,9 @@
 @@||ocfm.mp.microsoft.com^
 @@||product-ingestion.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
+@@||digitalattachclaims.purchase.mp.microsoft.com^
+@@||scanservice.px.mp.microsoft.com^
+@@||sonarweb.px.mp.microsoft.com^
 @@||staging-dcatbackend-int.mp.microsoft.com^
 @@||stagingretrieval-dcatbackend-int.mp.microsoft.com^
 @@||stagingretrieval-dcatbackend.mp.microsoft.com^
@@ -2283,6 +2291,7 @@
 @@||people.com^
 @@||validate.perfdrive.com^
 @@||performgroup.com^
+@@||www.performgroup.com^
 @@||pfsense.org^
 @@||pgcdn.com^
 @@||cs9.wac.phicdn.net^
@@ -2523,6 +2532,7 @@
 @@||cdn.stream.schibsted.media^
 @@||schibsted.no^
 @@||schibsted.tech^
+@@||k8s-jena.schneevonmorgen.com^
 @@||scrapinghub.com^
 @@||scribblelive.com^
 @@||scribd.com^
@@ -2531,6 +2541,7 @@
 @@||searchanise.com^
 @@||www.searchanise.com^
 @@||searchenginejournal.com^
+@@||www.searchenginejournal.com^
 @@||sears.com^
 @@||www.sears.com^
 @@||ocsp.sectigo.com^
@@ -2643,6 +2654,8 @@
 @@||spiegel-de.spiegel.de^
 @@||api.splunk.com^
 @@||appinspect.splunk.com^
+@@||dev.appinspect.splunk.com^
+@@||stage.appinspect.splunk.com^
 @@||apps.splunk.com^
 @@||prod.apps.splunk.com^
 @@||cloud.splunk.com^
@@ -2665,7 +2678,19 @@
 @@||app.playground.scp.splunk.com^
 @@||on-call-admin.playground.scp.splunk.com^
 @@||staging.scp.splunk.com^
+@@||admin.scs.splunk.com^
+@@||scs004-iad10.admin.scs.splunk.com^
+@@||api.scs.splunk.com^
+@@||region-iad10.api.scs.splunk.com^
+@@||auth.scs.splunk.com^
+@@||region-iad10.auth.scs.splunk.com^
 @@||dsp.scs.splunk.com^
+@@||admin.staging.scs.splunk.com^
+@@||scs004-dub10.admin.staging.scs.splunk.com^
+@@||api.staging.scs.splunk.com^
+@@||region-dub10.api.staging.scs.splunk.com^
+@@||auth.staging.scs.splunk.com^
+@@||region-dub10.auth.staging.scs.splunk.com^
 @@||pulsar.staging.scs.splunk.com^
 @@||splunkbase.splunk.com^
 @@||prod.splunkbase.splunk.com^
