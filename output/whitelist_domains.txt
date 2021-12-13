@@ -831,6 +831,7 @@ dl-web.dropbox.com
 dl.dropbox.com
 ns1.dropbox.com
 ns2.dropbox.com
+www.dropbox.com
 dl.dropboxusercontent.com
 drudgereport.com
 secure.dshield.org
