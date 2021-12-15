@@ -809,6 +809,7 @@ dlvr.it
 dmcdn.com
 dmcdn.net
 dn.se
+www.dn.se
 do.co
 forum.dobreprogramy.pl
 documentcloud.org
@@ -1758,6 +1759,7 @@ securel.longtailvideo.com
 secureplugins.longtailvideo.com
 lowendbox.com
 lowes.com
+www.lowes.com
 cindyholbrook.lpages.co
 classliving.lpages.co
 lpsnmedia.net
@@ -1876,6 +1878,7 @@ displaycatalog1p.mp.microsoft.com
 appxapi.dps.mp.microsoft.com
 eastus.availabilitymgmt-int.dps.mp.microsoft.com
 discrequest-int.dps.mp.microsoft.com
+filesapi.dps.mp.microsoft.com
 manualreview-int.dps.mp.microsoft.com
 packages.dps.mp.microsoft.com
 packagesapi.dps.mp.microsoft.com
@@ -2067,6 +2070,7 @@ ichnaea.netflix.com
 movies.netflix.com
 push.prod.netflix.com
 secure.netflix.com
+www.netflix.com
 netfort.com
 email.netlify.com
 deviceportal.nettvservices.com
@@ -2433,6 +2437,7 @@ player.radio.com
 radiofrance.fr
 radiostacja.pl
 rakuten.com
+www.rakuten.com
 rambler.ru
 ranker.com
 images.rapgenius.com
@@ -2589,6 +2594,7 @@ skype.com
 blogs.skype.com
 c1.skype.com
 download.skype.com
+ecs.skype.com
 edge.skype.com
 config.edge.skype.com
 sfbus.entitlement.skype.com
@@ -2604,6 +2610,7 @@ slashdot.org
 slate.com
 www.slate.com
 slickdeals.net
+www.slickdeals.net
 slidedeck.com
 public.slidesharecdn.com
 smallseotools.com
