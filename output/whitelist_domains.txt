@@ -67,6 +67,7 @@ adblock.ee
 road.adblock.ro
 easylist-downloads.adblockplus.org
 adcolo.com
+www.adcolo.com
 add0n.com
 adguard.com
 adidas.com
@@ -1577,6 +1578,7 @@ jquerytools.org
 cdn.jsdelivr.net
 jsfiddle.net
 crbcdn.jsfiddle.net
+www.jsfiddle.net
 fiddle.jshell.net
 jsonip.com
 www.jsonip.com
@@ -1991,6 +1993,7 @@ incoming.telemetry.mozilla.org
 www.mozilla.org
 mozillazine.org
 forums.mozillazine.org
+www.mozillazine.org
 mozu.com
 logincdn.msauth.net
 az416426.vo.msecnd.net
@@ -2602,6 +2605,7 @@ fpt.skype.com
 login.skype.com
 api.promotions.skype.com
 bo.promotions.skype.com
+repo.skype.com
 trap.skype.com
 web.skype.com
 latest.web.skype.com
@@ -2677,6 +2681,7 @@ playground.scp.splunk.com
 app.playground.scp.splunk.com
 on-call-admin.playground.scp.splunk.com
 staging.scp.splunk.com
+status.scp.splunk.com
 admin.scs.splunk.com
 scs004-iad10.admin.scs.splunk.com
 api.scs.splunk.com
@@ -2764,6 +2769,7 @@ q.stripe.com
 m.stripe.network
 stripecdn.com
 surveygizmo.com
+www.surveygizmo.com
 surveymonkey.com
 secure.surveymonkey.com
 sweclockers.com
@@ -3057,8 +3063,6 @@ update.code.visualstudio.com
 marketplace.visualstudio.com
 vitalia.pl
 vk.com
-maps.vk.com
-tiles.maps.vk.com
 oauth.vk.com
 st6-22.vk.com
 vkontakte.ru

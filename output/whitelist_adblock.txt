@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-15Z
+! Version: 2021-12-16Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-15Z
+! Last modified: 2021-12-16Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -76,6 +76,7 @@
 @@||road.adblock.ro^
 @@||easylist-downloads.adblockplus.org^
 @@||adcolo.com^
+@@||www.adcolo.com^
 @@||add0n.com^
 @@||adguard.com^
 @@||adidas.com^
@@ -1586,6 +1587,7 @@
 @@||cdn.jsdelivr.net^
 @@||jsfiddle.net^
 @@||crbcdn.jsfiddle.net^
+@@||www.jsfiddle.net^
 @@||fiddle.jshell.net^
 @@||jsonip.com^
 @@||www.jsonip.com^
@@ -2000,6 +2002,7 @@
 @@||www.mozilla.org^
 @@||mozillazine.org^
 @@||forums.mozillazine.org^
+@@||www.mozillazine.org^
 @@||mozu.com^
 @@||logincdn.msauth.net^
 @@||az416426.vo.msecnd.net^
@@ -2611,6 +2614,7 @@
 @@||login.skype.com^
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
+@@||repo.skype.com^
 @@||trap.skype.com^
 @@||web.skype.com^
 @@||latest.web.skype.com^
@@ -2686,6 +2690,7 @@
 @@||app.playground.scp.splunk.com^
 @@||on-call-admin.playground.scp.splunk.com^
 @@||staging.scp.splunk.com^
+@@||status.scp.splunk.com^
 @@||admin.scs.splunk.com^
 @@||scs004-iad10.admin.scs.splunk.com^
 @@||api.scs.splunk.com^
@@ -2773,6 +2778,7 @@
 @@||m.stripe.network^
 @@||stripecdn.com^
 @@||surveygizmo.com^
+@@||www.surveygizmo.com^
 @@||surveymonkey.com^
 @@||secure.surveymonkey.com^
 @@||sweclockers.com^
@@ -3066,8 +3072,6 @@
 @@||marketplace.visualstudio.com^
 @@||vitalia.pl^
 @@||vk.com^
-@@||maps.vk.com^
-@@||tiles.maps.vk.com^
 @@||oauth.vk.com^
 @@||st6-22.vk.com^
 @@||vkontakte.ru^
