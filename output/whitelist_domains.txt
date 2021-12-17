@@ -2536,6 +2536,7 @@ k8s-jena.schneevonmorgen.com
 scrapinghub.com
 scribblelive.com
 scribd.com
+www.scribd.com
 sdad.guru
 www.sdad.guru
 searchanise.com
@@ -2607,8 +2608,6 @@ api.promotions.skype.com
 bo.promotions.skype.com
 repo.skype.com
 trap.skype.com
-web.skype.com
-latest.web.skype.com
 files.slack.com
 slashdot.org
 slate.com
