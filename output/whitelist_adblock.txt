@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-17Z
+! Version: 2021-12-18Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-17Z
+! Last modified: 2021-12-18Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -1877,6 +1877,8 @@
 @@||cbsl-int.mp.microsoft.com^
 @@||coordinator-dcatbackend-int.mp.microsoft.com^
 @@||coordinator-dcatbackend.mp.microsoft.com^
+@@||accountmgmtservice-df.dce.mp.microsoft.com^
+@@||accountmgmtservice.dce.mp.microsoft.com^
 @@||actionengine-int.dce.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
@@ -1894,6 +1896,7 @@
 @@||packages.dps.mp.microsoft.com^
 @@||packagesapi.dps.mp.microsoft.com^
 @@||packagesweb.dps.mp.microsoft.com^
+@@||api-dev.dcat.dsp.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
@@ -2697,6 +2700,9 @@
 @@||auth.scs.splunk.com^
 @@||region-iad10.auth.scs.splunk.com^
 @@||dsp.scs.splunk.com^
+@@||api.playground.scs.splunk.com^
+@@||region-iad10.api.playground.scs.splunk.com^
+@@||testing.playground.scs.splunk.com^
 @@||admin.staging.scs.splunk.com^
 @@||scs004-dub10.admin.staging.scs.splunk.com^
 @@||api.staging.scs.splunk.com^
@@ -2709,6 +2715,7 @@
 @@||sso.splunk.com^
 @@||sva.splunk.com^
 @@||test-gw1.splunk.com^
+@@||uploadsvc.splunk.com^
 @@||post.spmailtechnol.com^
 @@||sport.pl^
 @@||spot.im^
@@ -3047,6 +3054,7 @@
 @@||videopress.com^
 @@||thumbs.videopress.com^
 @@||videos.videopress.com^
+@@||www.videopress.com^
 @@||vidible.tv^
 @@||cdn.vidible.tv^
 @@||delivery.vidible.tv^

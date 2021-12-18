@@ -1868,6 +1868,8 @@ dmd.metaservices.microsoft.com
 cbsl-int.mp.microsoft.com
 coordinator-dcatbackend-int.mp.microsoft.com
 coordinator-dcatbackend.mp.microsoft.com
+accountmgmtservice-df.dce.mp.microsoft.com
+accountmgmtservice.dce.mp.microsoft.com
 actionengine-int.dce.mp.microsoft.com
 dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
@@ -1885,6 +1887,7 @@ manualreview-int.dps.mp.microsoft.com
 packages.dps.mp.microsoft.com
 packagesapi.dps.mp.microsoft.com
 packagesweb.dps.mp.microsoft.com
+api-dev.dcat.dsp.mp.microsoft.com
 geo-prod.do.dsp.mp.microsoft.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
@@ -2688,6 +2691,9 @@ region-iad10.api.scs.splunk.com
 auth.scs.splunk.com
 region-iad10.auth.scs.splunk.com
 dsp.scs.splunk.com
+api.playground.scs.splunk.com
+region-iad10.api.playground.scs.splunk.com
+testing.playground.scs.splunk.com
 admin.staging.scs.splunk.com
 scs004-dub10.admin.staging.scs.splunk.com
 api.staging.scs.splunk.com
@@ -2700,6 +2706,7 @@ prod.splunkbase.splunk.com
 sso.splunk.com
 sva.splunk.com
 test-gw1.splunk.com
+uploadsvc.splunk.com
 post.spmailtechnol.com
 sport.pl
 spot.im
@@ -3038,6 +3045,7 @@ videolan.org
 videopress.com
 thumbs.videopress.com
 videos.videopress.com
+www.videopress.com
 vidible.tv
 cdn.vidible.tv
 delivery.vidible.tv
