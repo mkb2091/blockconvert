@@ -94,6 +94,7 @@ assets.adobedtm.com
 feed.adrelayer.com
 adsterra.com
 ads.adsterra.com
+www.ads.adsterra.com
 affiliates.adsterra.com
 beta.affiliates.adsterra.com
 help-advertisers.adsterra.com
@@ -775,6 +776,7 @@ debian.org
 dell.com
 delvenetworks.com
 demotywatory.pl
+www.demotywatory.pl
 github.developerdan.com
 www.github.developerdan.com
 deviantart.com
@@ -1879,9 +1881,11 @@ displaycatalog.mp.microsoft.com
 aircapi.displaycatalog.mp.microsoft.com
 displaycatalog1p-int.mp.microsoft.com
 displaycatalog1p.mp.microsoft.com
+algorithmservice.dps.mp.microsoft.com
 appxapi.dps.mp.microsoft.com
 eastus.availabilitymgmt-int.dps.mp.microsoft.com
 discrequest-int.dps.mp.microsoft.com
+domaindataservice.dps.mp.microsoft.com
 filesapi.dps.mp.microsoft.com
 manualreview-int.dps.mp.microsoft.com
 packages.dps.mp.microsoft.com
@@ -1903,7 +1907,9 @@ digitalattachclaims.purchase.mp.microsoft.com
 scanservice.px.mp.microsoft.com
 sonarweb.px.mp.microsoft.com
 staging-dcatbackend-int.mp.microsoft.com
+wus2.staging-dcatbackend-int.mp.microsoft.com
 stagingretrieval-dcatbackend-int.mp.microsoft.com
+wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com
 stagingretrieval-dcatbackend.mp.microsoft.com
 storage-int.mp.microsoft.com
 storage.mp.microsoft.com
@@ -1921,6 +1927,9 @@ unitedstates.smartscreen-prod.microsoft.com
 smartscreen.microsoft.com
 apprep.smartscreen.microsoft.com
 ars.smartscreen.microsoft.com
+fb.smartscreen.microsoft.com
+beta.fb.smartscreen.microsoft.com
+feedback.smartscreen.microsoft.com
 smartscreen-sn3p.smartscreen.microsoft.com
 store-images.microsoft.com
 pti.store.microsoft.com
@@ -2027,6 +2036,7 @@ st.mycdn.me
 myfox8.com
 mymonero.com
 api.mymonero.com
+www.mymonero.com
 myportfolio.com
 myshopify.com
 lads.myspacecdn.com
@@ -2239,6 +2249,7 @@ webmail.orange.fr
 orbitz.com
 oregonlive.com
 s7.orientaltrading.com
+cmp.osano.com
 fr.osdn.net
 osnews.com
 ouo.io
@@ -2579,6 +2590,7 @@ shopping.com
 shoprunner.com
 siatka.org
 sidearmsports.com
+www.sidearmsports.com
 api3.siftscience.com
 cdn.siftscience.com
 cs.silverpop.com
@@ -2682,6 +2694,7 @@ scp.splunk.com
 playground.scp.splunk.com
 app.playground.scp.splunk.com
 on-call-admin.playground.scp.splunk.com
+pulsar-app-play1.playground.scp.splunk.com
 staging.scp.splunk.com
 status.scp.splunk.com
 admin.scs.splunk.com
@@ -3275,6 +3288,7 @@ public-api.wordpress.com
 v0.wordpress.com
 worldnow.com
 ftpcontent.worldnow.com
+www.worldnow.com
 worldstream.nl
 wp.com
 c0.wp.com
