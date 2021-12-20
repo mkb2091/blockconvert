@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-19Z
+! Version: 2021-12-20Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-19Z
+! Last modified: 2021-12-20Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -1520,6 +1520,7 @@
 @@||www.inputdirector.com^
 @@||inq.com^
 @@||insomniagamingfestival.com^
+@@||www.insomniagamingfestival.com^
 @@||instagram.com^
 @@||platform.instagram.com^
 @@||www.instagram.com^
@@ -2070,6 +2071,7 @@
 @@||www.naver.com^
 @@||nba.com^
 @@||nbcnews.com^
+@@||www.nbcnews.com^
 @@||nbcnewyork.com^
 @@||nbcuni.com^
 @@||s.ndemiccreations.com^
@@ -2875,6 +2877,7 @@
 @@||thumbnail.thench.net^
 @@||thenextweb.com^
 @@||theoldnet.com^
+@@||www.theoldnet.com^
 @@||thepiratebay.org^
 @@||theplatform.com^
 @@||thetvdb.com^
