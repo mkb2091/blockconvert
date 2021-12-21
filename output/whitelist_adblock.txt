@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-20Z
+! Version: 2021-12-21Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-20Z
+! Last modified: 2021-12-21Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -225,7 +225,11 @@
 @@||assets.alicdn.com^
 @@||at.alicdn.com^
 @@||at.alicdn.com.danuoyi.alicdn.com^
+@@||g.alicdn.com.danuoyi.alicdn.com^
+@@||img.alicdn.com.danuoyi.alicdn.com^
+@@||files.alicdn.com^
 @@||g.alicdn.com^
+@@||gtms01.alicdn.com^
 @@||gtms02.alicdn.com^
 @@||gtms03.alicdn.com^
 @@||gtms04.alicdn.com^
@@ -257,6 +261,8 @@
 @@||zcbprod.alipay.com^
 @@||zht.alipay.com^
 @@||gz-lb1.internet.spanner.alipaydns.com^
+@@||gw.alipayobjects.com^
+@@||i.alipayobjects.com^
 @@||aliyuncs.com^
 @@||arms-retcode.aliyuncs.com^
 @@||adash.man.aliyuncs.com^
@@ -320,8 +326,7 @@
 @@||answers.com^
 @@||www.answers.com^
 @@||anti-ad.net^
-@@||tkx-acc.apis.anvato.net^
-@@||tkx2-prod.anvato.net^
+@@||anvato.net^
 @@||aol.com^
 @@||www.aol.com^
 @@||o.aolcdn.com^
@@ -453,7 +458,6 @@
 @@||bedbathandbeyond.com^
 @@||behance.net^
 @@||berush.com^
-@@||www.berush.com^
 @@||bestbuy.ca^
 @@||bestbuy.com^
 @@||betanews.com^
@@ -802,7 +806,9 @@
 @@||digitaltrends.com^
 @@||www.digitaltrends.com^
 @@||sh.docs.dingtalk.com^
+@@||weboffice-static.docs.dingtalk.com^
 @@||down-cdn.dingtalk.com^
+@@||file.dingtalk.com^
 @@||h5.dingtalk.com^
 @@||static.dingtalk.com^
 @@||directvnow.com^
@@ -824,6 +830,7 @@
 @@||www.dn.se^
 @@||do.co^
 @@||forum.dobreprogramy.pl^
+@@||screendoor.dobt.co^
 @@||documentcloud.org^
 @@||donorbox.org^
 @@||forum.doom9.org^
@@ -2140,7 +2147,6 @@
 @@||realestate.nj.com^
 @@||nk.pl^
 @@||nmcdn.us^
-@@||www.nmcdn.us^
 @@||no-ip.com^
 @@||dynupdate.no-ip.com^
 @@||www.no-ip.com^
@@ -2264,6 +2270,7 @@
 @@||fr.osdn.net^
 @@||osnews.com^
 @@||ouo.io^
+@@||ad.ourgame.com^
 @@||outlook.com^
 @@||config.outturner.com^
 @@||ow.ly^
@@ -2608,12 +2615,12 @@
 @@||similarweb.com^
 @@||simplecast.com^
 @@||sinaimg.cn^
+@@||ww2.sinaimg.cn^
 @@||wx2.sinaimg.cn^
 @@||wx3.sinaimg.cn^
 @@||wx4.sinaimg.cn^
 @@||js.t.sinajs.cn^
 @@||siteimprove.com^
-@@||www.siteimprove.com^
 @@||shield.sitelock.com^
 @@||sketchfab.com^
 @@||api-merchants.skimlinks.com^
@@ -2686,7 +2693,6 @@
 @@||stage.appinspect.splunk.com^
 @@||apps.splunk.com^
 @@||prod.apps.splunk.com^
-@@||cloud.splunk.com^
 @@||conf.splunk.com^
 @@||download.splunk.com^
 @@||education.splunk.com^
@@ -2884,7 +2890,6 @@
 @@||theverge.com^
 @@||www.theverge.com^
 @@||tile.thunderforest.com^
-@@||static.tianya.cn^
 @@||static.tianyaui.com^
 @@||pull.ticktick.com^
 @@||code.tidio.co^
@@ -3100,7 +3105,6 @@
 @@||vkontakte.ru^
 @@||vmixcore.com^
 @@||vmn.net^
-@@||www.vmn.net^
 @@||vod.pl^
 @@||void.gr^
 @@||vox.com^
@@ -3389,6 +3393,7 @@
 @@||smallfiles.client.xunlei.com^
 @@||xl7xml.client.xunlei.com^
 @@||stat.download.xunlei.com^
+@@||pc.xunlei.com^
 @@||static-xl9-ssl.xunlei.com^
 @@||interface.xl9.xunlei.com^
 @@||upgrade.xl9.xunlei.com^

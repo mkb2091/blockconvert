@@ -216,7 +216,11 @@ amos.alicdn.com
 assets.alicdn.com
 at.alicdn.com
 at.alicdn.com.danuoyi.alicdn.com
+g.alicdn.com.danuoyi.alicdn.com
+img.alicdn.com.danuoyi.alicdn.com
+files.alicdn.com
 g.alicdn.com
+gtms01.alicdn.com
 gtms02.alicdn.com
 gtms03.alicdn.com
 gtms04.alicdn.com
@@ -248,6 +252,8 @@ personalweb.alipay.com
 zcbprod.alipay.com
 zht.alipay.com
 gz-lb1.internet.spanner.alipaydns.com
+gw.alipayobjects.com
+i.alipayobjects.com
 aliyuncs.com
 arms-retcode.aliyuncs.com
 adash.man.aliyuncs.com
@@ -311,8 +317,7 @@ www.anrdoezrs.net
 answers.com
 www.answers.com
 anti-ad.net
-tkx-acc.apis.anvato.net
-tkx2-prod.anvato.net
+anvato.net
 aol.com
 www.aol.com
 o.aolcdn.com
@@ -444,7 +449,6 @@ maponline3.bdimg.com
 bedbathandbeyond.com
 behance.net
 berush.com
-www.berush.com
 bestbuy.ca
 bestbuy.com
 betanews.com
@@ -793,7 +797,9 @@ drh1.img.digitalriver.com
 digitaltrends.com
 www.digitaltrends.com
 sh.docs.dingtalk.com
+weboffice-static.docs.dingtalk.com
 down-cdn.dingtalk.com
+file.dingtalk.com
 h5.dingtalk.com
 static.dingtalk.com
 directvnow.com
@@ -815,6 +821,7 @@ dn.se
 www.dn.se
 do.co
 forum.dobreprogramy.pl
+screendoor.dobt.co
 documentcloud.org
 donorbox.org
 forum.doom9.org
@@ -2131,7 +2138,6 @@ businessfinder.nj.com
 realestate.nj.com
 nk.pl
 nmcdn.us
-www.nmcdn.us
 no-ip.com
 dynupdate.no-ip.com
 www.no-ip.com
@@ -2255,6 +2261,7 @@ cmp.osano.com
 fr.osdn.net
 osnews.com
 ouo.io
+ad.ourgame.com
 outlook.com
 config.outturner.com
 ow.ly
@@ -2599,12 +2606,12 @@ cs.silverpop.com
 similarweb.com
 simplecast.com
 sinaimg.cn
+ww2.sinaimg.cn
 wx2.sinaimg.cn
 wx3.sinaimg.cn
 wx4.sinaimg.cn
 js.t.sinajs.cn
 siteimprove.com
-www.siteimprove.com
 shield.sitelock.com
 sketchfab.com
 api-merchants.skimlinks.com
@@ -2677,7 +2684,6 @@ dev.appinspect.splunk.com
 stage.appinspect.splunk.com
 apps.splunk.com
 prod.apps.splunk.com
-cloud.splunk.com
 conf.splunk.com
 download.splunk.com
 education.splunk.com
@@ -2875,7 +2881,6 @@ thetvdb.com
 theverge.com
 www.theverge.com
 tile.thunderforest.com
-static.tianya.cn
 static.tianyaui.com
 pull.ticktick.com
 code.tidio.co
@@ -3091,7 +3096,6 @@ st6-22.vk.com
 vkontakte.ru
 vmixcore.com
 vmn.net
-www.vmn.net
 vod.pl
 void.gr
 vox.com
@@ -3380,6 +3384,7 @@ portal.client.xunlei.com
 smallfiles.client.xunlei.com
 xl7xml.client.xunlei.com
 stat.download.xunlei.com
+pc.xunlei.com
 static-xl9-ssl.xunlei.com
 interface.xl9.xunlei.com
 upgrade.xl9.xunlei.com
