@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-22Z
+! Version: 2021-12-23Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-22Z
+! Last modified: 2021-12-23Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -33,7 +33,6 @@
 @@||70i.net^
 @@||8ch.net^
 @@||91-cdn.com^
-@@||www.91-cdn.com^
 @@||91mobiles.com^
 @@||a-0001.a-msedge.net^
 @@||bat-bing-com.a-0001.a-msedge.net^
@@ -54,7 +53,6 @@
 @@||vortex.accuweather.com^
 @@||www.accuweather.com^
 @@||acehardware.com^
-@@||www.acehardware.com^
 @@||delivery.acm.org^
 @@||actionnetwork.org^
 @@||valimail.actonservice.com^
@@ -127,7 +125,6 @@
 @@||vip5.afdorigin-prod-am02.afdogw.com^
 @@||vip5.afdorigin-prod-ch02.afdogw.com^
 @@||affirm.com^
-@@||www.affirm.com^
 @@||afi-b.com^
 @@||t.afi-b.com^
 @@||www.afi-b.com^
@@ -621,6 +618,7 @@
 @@||cleanprint.net^
 @@||cleveland.com^
 @@||elinkeu.clickdimensions.com^
+@@||www.elinkeu.clickdimensions.com^
 @@||clickhouse.com^
 @@||www.clickhouse.com^
 @@||clickondetroit.com^
@@ -796,6 +794,7 @@
 @@||www.dataplicity.com^
 @@||cdn.datatables.net^
 @@||datei.to^
+@@||www.datei.to^
 @@||download.db-ip.com^
 @@||check.ddos-guard.net^
 @@||static-pepper.dealabs.com^
@@ -920,6 +919,8 @@
 @@||elasticbeanstalk.com^
 @@||electrum.org^
 @@||download.electrum.org^
+@@||elfsight.com^
+@@||www.elfsight.com^
 @@||email.elitedangerous.com^
 @@||eloqua.com^
 @@||www.eloqua.com^
@@ -1092,7 +1093,6 @@
 @@||formstack.com^
 @@||survey.forseeresults.com^
 @@||fortune.com^
-@@||www.fortune.com^
 @@||fossbytes.com^
 @@||fox13now.com^
 @@||fox17online.com^
@@ -1204,7 +1204,6 @@
 @@||www.gleam.io^
 @@||ocsp.globalsign.com^
 @@||gmail.com^
-@@||www.gmail.com^
 @@||gmodules.com^
 @@||www.gmodules.com^
 @@||gmx.at^
@@ -1215,6 +1214,7 @@
 @@||gmx.net^
 @@||nmcheck.gnome.org^
 @@||abcnews.go.com^
+@@||www.abcnews.go.com^
 @@||go.ro^
 @@||go2cloud.org^
 @@||goatcounter.com^
@@ -1226,11 +1226,9 @@
 @@||www.gogousenet.com^
 @@||goo.gl^
 @@||play.app.goo.gl^
-@@||www.goo.gl^
 @@||google.com^
 @@||accounts.google.com^
 @@||adwords.google.com^
-@@||www.adwords.google.com^
 @@||apis.google.com^
 @@||appengine.google.com^
 @@||books.google.com^
@@ -1392,7 +1390,6 @@
 @@||secure.gravatar.com^
 @@||pistachio-cdn.graze.com^
 @@||greasyfork.org^
-@@||www.greasyfork.org^
 @@||greenhouse.io^
 @@||groupon.com^
 @@||rest.growinginteractive.com^
@@ -1626,6 +1623,9 @@
 @@||entitlements.jwplayer.com^
 @@||jwpltx.com^
 @@||jwpsrv.com^
+@@||dapi.kakao.com^
+@@||developers.kakao.com^
+@@||kapi.kakao.com^
 @@||kaltura.com^
 @@||cdnapi.kaltura.com^
 @@||cdnapisec.kaltura.com^
@@ -1904,6 +1904,7 @@
 @@||accountmgmtservice-df.dce.mp.microsoft.com^
 @@||accountmgmtservice.dce.mp.microsoft.com^
 @@||actionengine-int.dce.mp.microsoft.com^
+@@||partnersegmentation-int.dce.mp.microsoft.com^
 @@||ra-int.dce.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
@@ -1912,30 +1913,24 @@
 @@||displaycatalog.mp.microsoft.com^
 @@||aircapi.displaycatalog.mp.microsoft.com^
 @@||algorithmservice.dps.mp.microsoft.com^
-@@||eastus.availabilitymgmt-int.dps.mp.microsoft.com^
 @@||certweb-int.dps.mp.microsoft.com^
 @@||certweb.dps.mp.microsoft.com^
-@@||discrequest-int.dps.mp.microsoft.com^
 @@||domaindataservice.dps.mp.microsoft.com^
 @@||filesapi.dps.mp.microsoft.com^
 @@||manualreview-int.dps.mp.microsoft.com^
 @@||packages-int.dps.mp.microsoft.com^
-@@||packages.dps.mp.microsoft.com^
 @@||packagesapi-intppe.dps.mp.microsoft.com^
-@@||packagesweb.dps.mp.microsoft.com^
 @@||restriction.dps.mp.microsoft.com^
+@@||pac-int.dse.mp.microsoft.com^
 @@||api-dev.dcat.dsp.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
 @@||ebs-int.mp.microsoft.com^
-@@||firstparty-collections-int.mp.microsoft.com^
 @@||keyfulfillment-int.mp.microsoft.com^
-@@||label.mp.microsoft.com^
 @@||licensing.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
 @@||uwpproc-int.mix.mp.microsoft.com^
-@@||ocfm.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
 @@||digitalattachclaims.purchase.mp.microsoft.com^
 @@||scanservice.px.mp.microsoft.com^
@@ -1946,7 +1941,6 @@
 @@||wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com^
 @@||storage-int.mp.microsoft.com^
 @@||storage.mp.microsoft.com^
-@@||ustrl.mp.microsoft.com^
 @@||mscrl.microsoft.com^
 @@||officeclient.microsoft.com^
 @@||query.prod.cms.rt.microsoft.com^
@@ -1956,12 +1950,32 @@
 @@||validation-v2.sls.microsoft.com^
 @@||unitedstates.smartscreen-prod.microsoft.com^
 @@||smartscreen.microsoft.com^
+@@||api.smartscreen.microsoft.com^
 @@||apprep.smartscreen.microsoft.com^
+@@||beta.apprep.smartscreen.microsoft.com^
+@@||i.apprep.smartscreen.microsoft.com^
+@@||w.apprep.smartscreen.microsoft.com^
+@@||beta.w.apprep.smartscreen.microsoft.com^
+@@||i.w.apprep.smartscreen.microsoft.com^
 @@||ars.smartscreen.microsoft.com^
+@@||bf.smartscreen.microsoft.com^
+@@||t.bf.smartscreen.microsoft.com^
+@@||cp.smartscreen.microsoft.com^
 @@||fb.smartscreen.microsoft.com^
 @@||beta.fb.smartscreen.microsoft.com^
 @@||feedback.smartscreen.microsoft.com^
+@@||nav.smartscreen.microsoft.com^
+@@||data.nav.smartscreen.microsoft.com^
+@@||ping.nav.smartscreen.microsoft.com^
+@@||t.nav.smartscreen.microsoft.com^
+@@||nf.smartscreen.microsoft.com^
+@@||data.nf.smartscreen.microsoft.com^
+@@||ping.nf.smartscreen.microsoft.com^
+@@||t.nf.smartscreen.microsoft.com^
+@@||ping.smartscreen.microsoft.com^
+@@||sl.smartscreen.microsoft.com^
 @@||smartscreen-sn3p.smartscreen.microsoft.com^
+@@||urs.smartscreen.microsoft.com^
 @@||store-images.microsoft.com^
 @@||pti.store.microsoft.com^
 @@||storecatalogrevocation.storequality.microsoft.com^
@@ -2089,6 +2103,8 @@
 @@||nationalgeographic.com^
 @@||nationbuilder.com^
 @@||naver.com^
+@@||map.naver.com^
+@@||pay.naver.com^
 @@||www.naver.com^
 @@||nba.com^
 @@||nbcnews.com^
@@ -2147,6 +2163,7 @@
 @@||oneline.nextday.media^
 @@||nextopiasoftware.com^
 @@||nfl.com^
+@@||www.nfl.com^
 @@||nflxext.com^
 @@||assets.nflxext.com^
 @@||cdn3.nflxext.com^
@@ -2663,7 +2680,6 @@
 @@||smallseotools.com^
 @@||smugmug.com^
 @@||snapchat.com^
-@@||www.snapchat.com^
 @@||snapengage.com^
 @@||www.snapengage.com^
 @@||sndcdn.com^
@@ -2698,29 +2714,20 @@
 @@||spiceworks.com^
 @@||community.spiceworks.com^
 @@||spiegel-de.spiegel.de^
+@@||admin.splunk.com^
+@@||playground.admin.splunk.com^
 @@||api.splunk.com^
 @@||appinspect.splunk.com^
 @@||dev.appinspect.splunk.com^
 @@||stage.appinspect.splunk.com^
 @@||bucketlist.splunk.com^
 @@||conf.splunk.com^
-@@||download.splunk.com^
-@@||education.splunk.com^
 @@||events.splunk.com^
-@@||legacyapi.splunk.com^
-@@||legacylogin.splunk.com^
-@@||live.splunk.com^
-@@||login.splunk.com^
-@@||idp.login.splunk.com^
 @@||mint.splunk.com^
-@@||o11yquest.splunk.com^
-@@||observability.splunk.com^
-@@||www.observability.splunk.com^
 @@||response.splunk.com^
 @@||scp.splunk.com^
 @@||playground.scp.splunk.com^
 @@||pulsar-app-play1.playground.scp.splunk.com^
-@@||staging.scp.splunk.com^
 @@||status.scp.splunk.com^
 @@||admin.scs.splunk.com^
 @@||scs004-iad10.admin.scs.splunk.com^
@@ -2728,7 +2735,6 @@
 @@||region-iad10.api.scs.splunk.com^
 @@||auth.scs.splunk.com^
 @@||region-iad10.auth.scs.splunk.com^
-@@||dsp.scs.splunk.com^
 @@||admin.playground.scs.splunk.com^
 @@||scs001-iad10.admin.playground.scs.splunk.com^
 @@||scs002-iad10.admin.playground.scs.splunk.com^
@@ -2741,9 +2747,6 @@
 @@||region-dub10.api.staging.scs.splunk.com^
 @@||auth.staging.scs.splunk.com^
 @@||region-dub10.auth.staging.scs.splunk.com^
-@@||sso.splunk.com^
-@@||sva.splunk.com^
-@@||test-gw1.splunk.com^
 @@||uploadsvc.splunk.com^
 @@||post.spmailtechnol.com^
 @@||sport.pl^
@@ -2812,6 +2815,7 @@
 @@||q.stripe.com^
 @@||m.stripe.network^
 @@||stripecdn.com^
+@@||cdn.substack.com^
 @@||surveygizmo.com^
 @@||www.surveygizmo.com^
 @@||surveymonkey.com^
@@ -2827,6 +2831,7 @@
 @@||t-online.de^
 @@||www.t-online.de^
 @@||t.co^
+@@||www.t.co^
 @@||t.ly^
 @@||public.tableau.com^
 @@||public.tableausoftware.com^
@@ -2927,7 +2932,6 @@
 @@||torrentfreak.com^
 @@||townnews.com^
 @@||toysrus.com^
-@@||www.toysrus.com^
 @@||cookieblock.trackersimulate.org^
 @@||redir.tradedoubler.com^
 @@||cname.tradepub.com^
@@ -2945,13 +2949,11 @@
 @@||travelocity.com^
 @@||trb.com^
 @@||trbimg.com^
-@@||www.trbimg.com^
 @@||c.trello.com^
 @@||osce11-0-en.url.trendmicro.com^
 @@||web.tresorit.com^
 @@||go.trouter.io^
 @@||trumba.com^
-@@||www.trumba.com^
 @@||trustarc.com^
 @@||privacy-policy.truste.com^
 @@||trustkeeper.net^
