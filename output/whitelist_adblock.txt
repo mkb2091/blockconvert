@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-23Z
+! Version: 2021-12-24Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-23Z
+! Last modified: 2021-12-24Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -1654,6 +1654,7 @@
 @@||kinja-static.com^
 @@||kinja.com^
 @@||klarna.com^
+@@||www.klarna.com^
 @@||trk.klclick1.com^
 @@||klm.com^
 @@||kmart.com^
