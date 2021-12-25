@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-24Z
+! Version: 2021-12-25Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-24Z
+! Last modified: 2021-12-25Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -786,7 +786,6 @@
 @@||d3js.org^
 @@||admin.dable.io^
 @@||dailymotion.com^
-@@||www.dailymotion.com^
 @@||danid.dk^
 @@||www.datadoghq-browser-agent.com^
 @@||datafilehost.com^
@@ -1903,8 +1902,9 @@
 @@||bspmts-int.mp.microsoft.com^
 @@||bsxbenefits-int.mp.microsoft.com^
 @@||accountmgmtservice-df.dce.mp.microsoft.com^
+@@||accountmgmtservice-int.dce.mp.microsoft.com^
 @@||accountmgmtservice.dce.mp.microsoft.com^
-@@||actionengine-int.dce.mp.microsoft.com^
+@@||accountuserservice-int.dce.mp.microsoft.com^
 @@||partnersegmentation-int.dce.mp.microsoft.com^
 @@||ra-int.dce.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
@@ -1931,7 +1931,6 @@
 @@||keyfulfillment-int.mp.microsoft.com^
 @@||licensing.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
-@@||uwpproc-int.mix.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
 @@||digitalattachclaims.purchase.mp.microsoft.com^
 @@||scanservice.px.mp.microsoft.com^
@@ -1940,8 +1939,6 @@
 @@||wus2.staging-dcatbackend-int.mp.microsoft.com^
 @@||stagingretrieval-dcatbackend-int.mp.microsoft.com^
 @@||wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com^
-@@||storage-int.mp.microsoft.com^
-@@||storage.mp.microsoft.com^
 @@||mscrl.microsoft.com^
 @@||officeclient.microsoft.com^
 @@||query.prod.cms.rt.microsoft.com^
@@ -2295,6 +2292,7 @@
 @@||orange.fr^
 @@||webmail.orange.fr^
 @@||orbitz.com^
+@@||www.orbitz.com^
 @@||oregonlive.com^
 @@||s7.orientaltrading.com^
 @@||cmp.osano.com^
@@ -2733,8 +2731,10 @@
 @@||admin.scs.splunk.com^
 @@||scs004-iad10.admin.scs.splunk.com^
 @@||api.scs.splunk.com^
+@@||region-dub10.api.scs.splunk.com^
 @@||region-iad10.api.scs.splunk.com^
 @@||auth.scs.splunk.com^
+@@||region-dub10.auth.scs.splunk.com^
 @@||region-iad10.auth.scs.splunk.com^
 @@||admin.playground.scs.splunk.com^
 @@||scs001-iad10.admin.playground.scs.splunk.com^
