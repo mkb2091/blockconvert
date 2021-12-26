@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-25Z
+! Version: 2021-12-26Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-25Z
+! Last modified: 2021-12-26Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -773,7 +773,6 @@
 @@||blog.csdn.net^
 @@||csdnimg.cn^
 @@||cstv.com^
-@@||www.cstv.com^
 @@||cst.cstwpush.com^
 @@||cursecdn.com^
 @@||curvesncombatboots.com^
@@ -800,6 +799,7 @@
 @@||dealer.com^
 @@||dealerinspire.com^
 @@||debian.org^
+@@||www.debian.org^
 @@||dell.com^
 @@||delvenetworks.com^
 @@||demotywatory.pl^
@@ -1014,7 +1014,6 @@
 @@||zero.facebook.com^
 @@||connect.facebook.net^
 @@||familydollar.com^
-@@||www.fansonly.com^
 @@||api.fast.com^
 @@||fc-resources.fastcompany.com^
 @@||fastly.net^
@@ -1107,7 +1106,6 @@
 @@||frankerfacez.com^
 @@||dl.free.fr^
 @@||freebsd.org^
-@@||www.freebsd.org^
 @@||freedownloadmanager.org^
 @@||files.freedownloadmanager.org^
 @@||files2.freedownloadmanager.org^
@@ -1389,6 +1387,7 @@
 @@||secure.gravatar.com^
 @@||pistachio-cdn.graze.com^
 @@||greasyfork.org^
+@@||www.greasyfork.org^
 @@||greenhouse.io^
 @@||groupon.com^
 @@||rest.growinginteractive.com^
@@ -1918,23 +1917,21 @@
 @@||certweb.dps.mp.microsoft.com^
 @@||domaindataservice.dps.mp.microsoft.com^
 @@||filesapi.dps.mp.microsoft.com^
-@@||manualreview-int.dps.mp.microsoft.com^
 @@||packages-int.dps.mp.microsoft.com^
 @@||packagesapi-intppe.dps.mp.microsoft.com^
 @@||restriction.dps.mp.microsoft.com^
 @@||pac-int.dse.mp.microsoft.com^
 @@||api-dev.dcat.dsp.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
+@@||glb.adminportalapi-dev.trafficshaping.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
 @@||ebs-int.mp.microsoft.com^
 @@||keyfulfillment-int.mp.microsoft.com^
+@@||label-int.mp.microsoft.com^
 @@||licensing.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
-@@||digitalattachclaims.purchase.mp.microsoft.com^
-@@||scanservice.px.mp.microsoft.com^
-@@||sonarweb.px.mp.microsoft.com^
 @@||staging-dcatbackend-int.mp.microsoft.com^
 @@||wus2.staging-dcatbackend-int.mp.microsoft.com^
 @@||stagingretrieval-dcatbackend-int.mp.microsoft.com^
@@ -2199,6 +2196,7 @@
 @@||g.msn.com.nsatc.net^
 @@||pool.ntp.org^
 @@||2.android.pool.ntp.org^
+@@||www.pool.ntp.org^
 @@||media.nu.nl^
 @@||ota-downloads.nvidia.com^
 @@||ny.com^
@@ -2351,7 +2349,6 @@
 @@||people.com^
 @@||validate.perfdrive.com^
 @@||performgroup.com^
-@@||www.performgroup.com^
 @@||pfsense.org^
 @@||pgcdn.com^
 @@||cs9.wac.phicdn.net^
@@ -2602,7 +2599,6 @@
 @@||searchanise.com^
 @@||www.searchanise.com^
 @@||searchenginejournal.com^
-@@||www.searchenginejournal.com^
 @@||sears.com^
 @@||www.sears.com^
 @@||ocsp.sectigo.com^
@@ -2664,6 +2660,7 @@
 @@||config.edge.skype.com^
 @@||fpt.skype.com^
 @@||login.skype.com^
+@@||pipe.portal.skype.com^
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
 @@||repo.skype.com^
@@ -2717,8 +2714,6 @@
 @@||playground.admin.splunk.com^
 @@||api.splunk.com^
 @@||appinspect.splunk.com^
-@@||dev.appinspect.splunk.com^
-@@||stage.appinspect.splunk.com^
 @@||bucketlist.splunk.com^
 @@||conf.splunk.com^
 @@||events.splunk.com^
@@ -2728,26 +2723,16 @@
 @@||playground.scp.splunk.com^
 @@||pulsar-app-play1.playground.scp.splunk.com^
 @@||status.scp.splunk.com^
-@@||admin.scs.splunk.com^
-@@||scs004-iad10.admin.scs.splunk.com^
 @@||api.scs.splunk.com^
 @@||region-dub10.api.scs.splunk.com^
-@@||region-iad10.api.scs.splunk.com^
 @@||auth.scs.splunk.com^
 @@||region-dub10.auth.scs.splunk.com^
-@@||region-iad10.auth.scs.splunk.com^
 @@||admin.playground.scs.splunk.com^
 @@||scs001-iad10.admin.playground.scs.splunk.com^
 @@||scs002-iad10.admin.playground.scs.splunk.com^
 @@||api.playground.scs.splunk.com^
 @@||region-iad10.api.playground.scs.splunk.com^
 @@||testing.playground.scs.splunk.com^
-@@||admin.staging.scs.splunk.com^
-@@||scs004-dub10.admin.staging.scs.splunk.com^
-@@||api.staging.scs.splunk.com^
-@@||region-dub10.api.staging.scs.splunk.com^
-@@||auth.staging.scs.splunk.com^
-@@||region-dub10.auth.staging.scs.splunk.com^
 @@||uploadsvc.splunk.com^
 @@||post.spmailtechnol.com^
 @@||sport.pl^
