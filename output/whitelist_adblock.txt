@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-26Z
+! Version: 2021-12-27Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-26Z
+! Last modified: 2021-12-27Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -372,6 +372,7 @@
 @@||arcot.com^
 @@||secure5.arcot.com^
 @@||arcpublishing.com^
+@@||www.arcpublishing.com^
 @@||arizona.edu^
 @@||arkoselabs.com^
 @@||arstechnica.com^
@@ -785,6 +786,7 @@
 @@||d3js.org^
 @@||admin.dable.io^
 @@||dailymotion.com^
+@@||www.dailymotion.com^
 @@||danid.dk^
 @@||www.datadoghq-browser-agent.com^
 @@||datafilehost.com^
@@ -865,7 +867,6 @@
 @@||dl.dropbox.com^
 @@||ns1.dropbox.com^
 @@||ns2.dropbox.com^
-@@||www.dropbox.com^
 @@||dl.dropboxusercontent.com^
 @@||drudgereport.com^
 @@||secure.dshield.org^
@@ -1201,6 +1202,7 @@
 @@||www.gleam.io^
 @@||ocsp.globalsign.com^
 @@||gmail.com^
+@@||www.gmail.com^
 @@||gmodules.com^
 @@||www.gmodules.com^
 @@||gmx.at^
@@ -1223,9 +1225,11 @@
 @@||www.gogousenet.com^
 @@||goo.gl^
 @@||play.app.goo.gl^
+@@||www.goo.gl^
 @@||google.com^
 @@||accounts.google.com^
 @@||adwords.google.com^
+@@||www.adwords.google.com^
 @@||apis.google.com^
 @@||appengine.google.com^
 @@||books.google.com^
@@ -1548,6 +1552,7 @@
 @@||instructure.com^
 @@||intellicast.com^
 @@||intensedebate.com^
+@@||ruozuwky-android.mobile-messenger.intercom.com^
 @@||intercom.io^
 @@||www.intercom.io^
 @@||ia.hit.interia.pl^
@@ -1572,6 +1577,7 @@
 @@||ipinfo.io^
 @@||ipla.tv^
 @@||ipredator.se^
+@@||www.ipredator.se^
 @@||s0.ipstatp.com^
 @@||ipv4only.arpa^
 @@||appcloud.ironbeast.io^
@@ -1656,6 +1662,7 @@
 @@||trk.klclick1.com^
 @@||klm.com^
 @@||kmart.com^
+@@||www.kmart.com^
 @@||knowyourmeme.com^
 @@||kohls.com^
 @@||komputerswiat.pl^
@@ -1920,6 +1927,7 @@
 @@||packages-int.dps.mp.microsoft.com^
 @@||packagesapi-intppe.dps.mp.microsoft.com^
 @@||restriction.dps.mp.microsoft.com^
+@@||watchdogs-int.dps.mp.microsoft.com^
 @@||pac-int.dse.mp.microsoft.com^
 @@||api-dev.dcat.dsp.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
@@ -1936,6 +1944,8 @@
 @@||wus2.staging-dcatbackend-int.mp.microsoft.com^
 @@||stagingretrieval-dcatbackend-int.mp.microsoft.com^
 @@||wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com^
+@@||wishlist-dev.mp.microsoft.com^
+@@||wishlist-int.mp.microsoft.com^
 @@||mscrl.microsoft.com^
 @@||officeclient.microsoft.com^
 @@||query.prod.cms.rt.microsoft.com^
@@ -2722,6 +2732,8 @@
 @@||scp.splunk.com^
 @@||playground.scp.splunk.com^
 @@||pulsar-app-play1.playground.scp.splunk.com^
+@@||staging.scp.splunk.com^
+@@||px.staging.scp.splunk.com^
 @@||status.scp.splunk.com^
 @@||api.scs.splunk.com^
 @@||region-dub10.api.scs.splunk.com^
@@ -2870,6 +2882,7 @@
 @@||texashomebase.com^
 @@||www.texashomebase.com^
 @@||textalk.se^
+@@||www.textalk.se^
 @@||tfaforms.com^
 @@||ocsp.thawte.com^
 @@||links.e.theatlantic.com^
@@ -3302,6 +3315,7 @@
 @@||ftpcontent.worldnow.com^
 @@||www.worldnow.com^
 @@||worldstream.nl^
+@@||www.worldstream.nl^
 @@||wp.com^
 @@||c0.wp.com^
 @@||i0.wp.com^
