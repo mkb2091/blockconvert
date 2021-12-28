@@ -1911,12 +1911,15 @@ displaycatalog-int.mp.microsoft.com
 displaycatalog.mp.microsoft.com
 aircapi.displaycatalog.mp.microsoft.com
 algorithmservice.dps.mp.microsoft.com
+availability.dps.mp.microsoft.com
+bias.dps.mp.microsoft.com
 certweb-int.dps.mp.microsoft.com
 certweb.dps.mp.microsoft.com
 domaindataservice.dps.mp.microsoft.com
 filesapi.dps.mp.microsoft.com
 packages-int.dps.mp.microsoft.com
 packagesapi-intppe.dps.mp.microsoft.com
+productweb-int.dps.mp.microsoft.com
 restriction.dps.mp.microsoft.com
 watchdogs-int.dps.mp.microsoft.com
 pac-int.dse.mp.microsoft.com
