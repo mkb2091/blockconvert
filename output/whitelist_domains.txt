@@ -834,7 +834,6 @@ dlvr.it
 dmcdn.com
 dmcdn.net
 dn.se
-www.dn.se
 do.co
 forum.dobreprogramy.pl
 screendoor.dobt.co
@@ -1793,7 +1792,6 @@ securel.longtailvideo.com
 secureplugins.longtailvideo.com
 lowendbox.com
 lowes.com
-www.lowes.com
 cindyholbrook.lpages.co
 classliving.lpages.co
 lpsnmedia.net
@@ -1916,7 +1914,6 @@ bias.dps.mp.microsoft.com
 certweb-int.dps.mp.microsoft.com
 certweb.dps.mp.microsoft.com
 domaindataservice.dps.mp.microsoft.com
-filesapi.dps.mp.microsoft.com
 packages-int.dps.mp.microsoft.com
 packagesapi-intppe.dps.mp.microsoft.com
 productweb-int.dps.mp.microsoft.com
@@ -2501,7 +2498,6 @@ player.radio.com
 radiofrance.fr
 radiostacja.pl
 rakuten.com
-www.rakuten.com
 rambler.ru
 ranker.com
 images.rapgenius.com
@@ -2659,7 +2655,6 @@ skype.com
 blogs.skype.com
 c1.skype.com
 download.skype.com
-ecs.skype.com
 edge.skype.com
 config.edge.skype.com
 fpt.skype.com
@@ -2674,7 +2669,6 @@ slashdot.org
 slate.com
 www.slate.com
 slickdeals.net
-www.slickdeals.net
 slidedeck.com
 public.slidesharecdn.com
 smallseotools.com
@@ -2725,6 +2719,7 @@ mint.splunk.com
 response.splunk.com
 scp.splunk.com
 playground.scp.splunk.com
+api.playground.scp.splunk.com
 pulsar-app-play1.playground.scp.splunk.com
 staging.scp.splunk.com
 px.staging.scp.splunk.com
@@ -3058,6 +3053,7 @@ update.utorrent.com
 see.valimail.com
 vanityfair.com
 variety.com
+www.variety.com
 verisign.com
 ocsp.verisign.com
 crl.verisign.net
@@ -3138,6 +3134,7 @@ webmd.com
 webs.com
 websimages.com
 webtype.com
+www.webtype.com
 weebly.com
 wetransfer.com
 wetter.de

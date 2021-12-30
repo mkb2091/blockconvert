@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-28Z
+! Version: 2021-12-30Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-28Z
+! Last modified: 2021-12-30Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -843,7 +843,6 @@
 @@||dmcdn.com^
 @@||dmcdn.net^
 @@||dn.se^
-@@||www.dn.se^
 @@||do.co^
 @@||forum.dobreprogramy.pl^
 @@||screendoor.dobt.co^
@@ -1802,7 +1801,6 @@
 @@||secureplugins.longtailvideo.com^
 @@||lowendbox.com^
 @@||lowes.com^
-@@||www.lowes.com^
 @@||cindyholbrook.lpages.co^
 @@||classliving.lpages.co^
 @@||lpsnmedia.net^
@@ -1925,7 +1923,6 @@
 @@||certweb-int.dps.mp.microsoft.com^
 @@||certweb.dps.mp.microsoft.com^
 @@||domaindataservice.dps.mp.microsoft.com^
-@@||filesapi.dps.mp.microsoft.com^
 @@||packages-int.dps.mp.microsoft.com^
 @@||packagesapi-intppe.dps.mp.microsoft.com^
 @@||productweb-int.dps.mp.microsoft.com^
@@ -2510,7 +2507,6 @@
 @@||radiofrance.fr^
 @@||radiostacja.pl^
 @@||rakuten.com^
-@@||www.rakuten.com^
 @@||rambler.ru^
 @@||ranker.com^
 @@||images.rapgenius.com^
@@ -2668,7 +2664,6 @@
 @@||blogs.skype.com^
 @@||c1.skype.com^
 @@||download.skype.com^
-@@||ecs.skype.com^
 @@||edge.skype.com^
 @@||config.edge.skype.com^
 @@||fpt.skype.com^
@@ -2683,7 +2678,6 @@
 @@||slate.com^
 @@||www.slate.com^
 @@||slickdeals.net^
-@@||www.slickdeals.net^
 @@||slidedeck.com^
 @@||public.slidesharecdn.com^
 @@||smallseotools.com^
@@ -2734,6 +2728,7 @@
 @@||response.splunk.com^
 @@||scp.splunk.com^
 @@||playground.scp.splunk.com^
+@@||api.playground.scp.splunk.com^
 @@||pulsar-app-play1.playground.scp.splunk.com^
 @@||staging.scp.splunk.com^
 @@||px.staging.scp.splunk.com^
@@ -3067,6 +3062,7 @@
 @@||see.valimail.com^
 @@||vanityfair.com^
 @@||variety.com^
+@@||www.variety.com^
 @@||verisign.com^
 @@||ocsp.verisign.com^
 @@||crl.verisign.net^
@@ -3147,6 +3143,7 @@
 @@||webs.com^
 @@||websimages.com^
 @@||webtype.com^
+@@||www.webtype.com^
 @@||weebly.com^
 @@||wetransfer.com^
 @@||wetter.de^
