@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-30Z
+! Version: 2021-12-31Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-30Z
+! Last modified: 2021-12-31Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -73,7 +73,6 @@
 @@||road.adblock.ro^
 @@||easylist-downloads.adblockplus.org^
 @@||adcolo.com^
-@@||www.adcolo.com^
 @@||add0n.com^
 @@||adguard.com^
 @@||adidas.com^
@@ -1442,6 +1441,7 @@
 @@||cdn2.hometogo.net^
 @@||hoopshype.com^
 @@||hootsuite.com^
+@@||www.hootsuite.com^
 @@||horseanswerstoday.com^
 @@||hosts-file.net^
 @@||hotmail.com^
@@ -1613,7 +1613,6 @@
 @@||cdn.jsdelivr.net^
 @@||jsfiddle.net^
 @@||crbcdn.jsfiddle.net^
-@@||www.jsfiddle.net^
 @@||fiddle.jshell.net^
 @@||jsonip.com^
 @@||www.jsonip.com^
@@ -2055,7 +2054,6 @@
 @@||www.mozilla.org^
 @@||mozillazine.org^
 @@||forums.mozillazine.org^
-@@||www.mozillazine.org^
 @@||mozu.com^
 @@||logincdn.msauth.net^
 @@||az416426.vo.msecnd.net^
@@ -2212,6 +2210,7 @@
 @@||ny.com^
 @@||ny1.com^
 @@||nydailynews.com^
+@@||www.nydailynews.com^
 @@||nymag.com^
 @@||nypost.com^
 @@||nyt.com^
@@ -2296,6 +2295,7 @@
 @@||cdn3.optimizely.com^
 @@||www.optimizely.com^
 @@||oracle.com^
+@@||www.oracle.com^
 @@||oraclecloud.com^
 @@||orange.fr^
 @@||webmail.orange.fr^
@@ -2586,6 +2586,7 @@
 @@||hubciddata.sandai.net^
 @@||client.update.sandai.net^
 @@||api.tw06.xlmc.sandai.net^
+@@||wup-7b4df495.santander.cl^
 @@||ec-ns.sascdn.com^
 @@||r.sascdn.com^
 @@||satkurier.pl^
@@ -2683,6 +2684,7 @@
 @@||smallseotools.com^
 @@||smugmug.com^
 @@||snapchat.com^
+@@||www.snapchat.com^
 @@||snapengage.com^
 @@||www.snapengage.com^
 @@||sndcdn.com^
@@ -2732,7 +2734,6 @@
 @@||pulsar-app-play1.playground.scp.splunk.com^
 @@||staging.scp.splunk.com^
 @@||px.staging.scp.splunk.com^
-@@||status.scp.splunk.com^
 @@||api.scs.splunk.com^
 @@||region-dub10.api.scs.splunk.com^
 @@||auth.scs.splunk.com^
@@ -2813,7 +2814,6 @@
 @@||stripecdn.com^
 @@||cdn.substack.com^
 @@||surveygizmo.com^
-@@||www.surveygizmo.com^
 @@||surveymonkey.com^
 @@||secure.surveymonkey.com^
 @@||sweclockers.com^
@@ -2837,6 +2837,7 @@
 @@||taleo.net^
 @@||talkbusiness.net^
 @@||ads.talkbusiness.net^
+@@||www.talkbusiness.net^
 @@||tampermonkey.net^
 @@||na61-na62.wagbridge.alibaba.tanx.com^
 @@||phs.tanx.com^
@@ -2958,6 +2959,7 @@
 @@||trustwave.com^
 @@||tuba.fm^
 @@||fm.tuba.pl^
+@@||www.fm.tuba.pl^
 @@||tube8.com^
 @@||blog.tube8.com^
 @@||mobile.tube8.com^
