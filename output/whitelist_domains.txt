@@ -533,7 +533,6 @@ bowercdn.net
 boxrec.com
 braintreegateway.com
 brakrock.be
-www.brcdn.com
 breakingburner.com
 brightcove.com
 admin.brightcove.com
@@ -1032,6 +1031,7 @@ feedly.com
 fide.com
 filefactory.com
 filepicker.io
+www.filepicker.io
 filesmonster.com
 fili.cc
 www.fili.cc
@@ -1899,6 +1899,7 @@ accountmgmtservice-df.dce.mp.microsoft.com
 accountmgmtservice-int.dce.mp.microsoft.com
 accountmgmtservice.dce.mp.microsoft.com
 accountuserservice-int.dce.mp.microsoft.com
+pac.dce.mp.microsoft.com
 partnersegmentation-int.dce.mp.microsoft.com
 ra-int.dce.mp.microsoft.com
 dl.delivery.mp.microsoft.com
@@ -2110,6 +2111,7 @@ ac.ebis.ne.jp
 daikoku.ebis.ne.jp
 b.hatena.ne.jp
 api.b.hatena.ne.jp
+vcentry3.valuecommerce.ne.jp
 neighborsink.com
 neowin.net
 nesn.com
@@ -2594,7 +2596,6 @@ k8s-jena.schneevonmorgen.com
 scrapinghub.com
 scribblelive.com
 scribd.com
-www.scribd.com
 sdad.guru
 www.sdad.guru
 searchanise.com
@@ -2917,7 +2918,6 @@ tomshardware.com
 it.toolbox.com
 toptenreviews.com
 torbit.com
-www.torbit.com
 torrentfreak.com
 townnews.com
 toysrus.com
@@ -3053,6 +3053,7 @@ yahoo.uservoice.com
 router.utorrent.com
 update.utorrent.com
 see.valimail.com
+clj.valuecommerce.com
 vanityfair.com
 variety.com
 www.variety.com

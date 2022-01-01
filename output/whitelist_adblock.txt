@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2021-12-31Z
+! Version: 2022-01-01Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2021-12-31Z
+! Last modified: 2022-01-01Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -542,7 +542,6 @@
 @@||boxrec.com^
 @@||braintreegateway.com^
 @@||brakrock.be^
-@@||www.brcdn.com^
 @@||breakingburner.com^
 @@||brightcove.com^
 @@||admin.brightcove.com^
@@ -1041,6 +1040,7 @@
 @@||fide.com^
 @@||filefactory.com^
 @@||filepicker.io^
+@@||www.filepicker.io^
 @@||filesmonster.com^
 @@||fili.cc^
 @@||www.fili.cc^
@@ -1908,6 +1908,7 @@
 @@||accountmgmtservice-int.dce.mp.microsoft.com^
 @@||accountmgmtservice.dce.mp.microsoft.com^
 @@||accountuserservice-int.dce.mp.microsoft.com^
+@@||pac.dce.mp.microsoft.com^
 @@||partnersegmentation-int.dce.mp.microsoft.com^
 @@||ra-int.dce.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
@@ -2119,6 +2120,7 @@
 @@||daikoku.ebis.ne.jp^
 @@||b.hatena.ne.jp^
 @@||api.b.hatena.ne.jp^
+@@||vcentry3.valuecommerce.ne.jp^
 @@||neighborsink.com^
 @@||neowin.net^
 @@||nesn.com^
@@ -2603,7 +2605,6 @@
 @@||scrapinghub.com^
 @@||scribblelive.com^
 @@||scribd.com^
-@@||www.scribd.com^
 @@||sdad.guru^
 @@||www.sdad.guru^
 @@||searchanise.com^
@@ -2926,7 +2927,6 @@
 @@||it.toolbox.com^
 @@||toptenreviews.com^
 @@||torbit.com^
-@@||www.torbit.com^
 @@||torrentfreak.com^
 @@||townnews.com^
 @@||toysrus.com^
@@ -3062,6 +3062,7 @@
 @@||router.utorrent.com^
 @@||update.utorrent.com^
 @@||see.valimail.com^
+@@||clj.valuecommerce.com^
 @@||vanityfair.com^
 @@||variety.com^
 @@||www.variety.com^
