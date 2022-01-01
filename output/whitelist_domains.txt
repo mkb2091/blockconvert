@@ -1917,10 +1917,10 @@ domaindataservice.dps.mp.microsoft.com
 packages-int.dps.mp.microsoft.com
 packagesapi-intppe.dps.mp.microsoft.com
 productweb-int.dps.mp.microsoft.com
+promotion-int.dps.mp.microsoft.com
 restriction.dps.mp.microsoft.com
 watchdogs-int.dps.mp.microsoft.com
 pac-int.dse.mp.microsoft.com
-api-dev.dcat.dsp.mp.microsoft.com
 geo-prod.do.dsp.mp.microsoft.com
 glb.adminportalapi-dev.trafficshaping.dsp.mp.microsoft.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
@@ -2733,10 +2733,6 @@ region-dub10.auth.scs.splunk.com
 admin.playground.scs.splunk.com
 scs001-iad10.admin.playground.scs.splunk.com
 scs002-iad10.admin.playground.scs.splunk.com
-api.playground.scs.splunk.com
-region-iad10.api.playground.scs.splunk.com
-testing.playground.scs.splunk.com
-uploadsvc.splunk.com
 post.spmailtechnol.com
 sport.pl
 spot.im
@@ -3078,7 +3074,6 @@ videolan.org
 videopress.com
 thumbs.videopress.com
 videos.videopress.com
-www.videopress.com
 vidible.tv
 cdn.vidible.tv
 delivery.vidible.tv
@@ -3497,6 +3492,7 @@ zippyshare.com
 ziprecruiter.com
 zlcdn.com
 zoho.com
+www.zoho.com
 zoho.eu
 zohopublic.com
 zohostatic.com
