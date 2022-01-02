@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2022-01-01Z
+! Version: 2022-01-02Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2022-01-01Z
+! Last modified: 2022-01-02Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -99,7 +99,6 @@
 @@||feed.adrelayer.com^
 @@||adsterra.com^
 @@||ads.adsterra.com^
-@@||www.ads.adsterra.com^
 @@||affiliates.adsterra.com^
 @@||beta.affiliates.adsterra.com^
 @@||help-advertisers.adsterra.com^
@@ -803,7 +802,6 @@
 @@||dell.com^
 @@||delvenetworks.com^
 @@||demotywatory.pl^
-@@||www.demotywatory.pl^
 @@||github.developerdan.com^
 @@||www.github.developerdan.com^
 @@||deviantart.com^
@@ -864,6 +862,7 @@
 @@||dl.dropbox.com^
 @@||ns1.dropbox.com^
 @@||ns2.dropbox.com^
+@@||www.dropbox.com^
 @@||dl.dropboxusercontent.com^
 @@||drudgereport.com^
 @@||secure.dshield.org^
@@ -1861,7 +1860,9 @@
 @@||medium.com^
 @@||miro.medium.com^
 @@||mega.nz^
+@@||traffic.eks.megaphone.cloud^
 @@||megaphone.fm^
+@@||traffic.megaphone.fm^
 @@||menshealth.com^
 @@||merriam-webster.com^
 @@||mesh.com^
@@ -1917,12 +1918,10 @@
 @@||displaycatalog-int.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
 @@||aircapi.displaycatalog.mp.microsoft.com^
-@@||algorithmservice.dps.mp.microsoft.com^
 @@||availability.dps.mp.microsoft.com^
 @@||bias.dps.mp.microsoft.com^
 @@||certweb-int.dps.mp.microsoft.com^
 @@||certweb.dps.mp.microsoft.com^
-@@||domaindataservice.dps.mp.microsoft.com^
 @@||packages-int.dps.mp.microsoft.com^
 @@||packagesapi-intppe.dps.mp.microsoft.com^
 @@||productweb-int.dps.mp.microsoft.com^
@@ -1941,9 +1940,7 @@
 @@||collections.md.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
 @@||staging-dcatbackend-int.mp.microsoft.com^
-@@||wus2.staging-dcatbackend-int.mp.microsoft.com^
 @@||stagingretrieval-dcatbackend-int.mp.microsoft.com^
-@@||wus2.stagingretrieval-dcatbackend-int.mp.microsoft.com^
 @@||wishlist-dev.mp.microsoft.com^
 @@||wishlist-int.mp.microsoft.com^
 @@||mscrl.microsoft.com^
@@ -1966,9 +1963,6 @@
 @@||bf.smartscreen.microsoft.com^
 @@||t.bf.smartscreen.microsoft.com^
 @@||cp.smartscreen.microsoft.com^
-@@||fb.smartscreen.microsoft.com^
-@@||beta.fb.smartscreen.microsoft.com^
-@@||feedback.smartscreen.microsoft.com^
 @@||nav.smartscreen.microsoft.com^
 @@||data.nav.smartscreen.microsoft.com^
 @@||ping.nav.smartscreen.microsoft.com^
@@ -2085,7 +2079,6 @@
 @@||myfox8.com^
 @@||mymonero.com^
 @@||api.mymonero.com^
-@@||www.mymonero.com^
 @@||myportfolio.com^
 @@||myshopify.com^
 @@||lads.myspacecdn.com^
@@ -2509,6 +2502,7 @@
 @@||radiofrance.fr^
 @@||radiostacja.pl^
 @@||rakuten.com^
+@@||www.rakuten.com^
 @@||rambler.ru^
 @@||ranker.com^
 @@||images.rapgenius.com^
@@ -2643,7 +2637,6 @@
 @@||shoprunner.com^
 @@||siatka.org^
 @@||sidearmsports.com^
-@@||www.sidearmsports.com^
 @@||api3.siftscience.com^
 @@||cdn.siftscience.com^
 @@||cs.silverpop.com^
@@ -2732,7 +2725,6 @@
 @@||scp.splunk.com^
 @@||playground.scp.splunk.com^
 @@||api.playground.scp.splunk.com^
-@@||pulsar-app-play1.playground.scp.splunk.com^
 @@||staging.scp.splunk.com^
 @@||px.staging.scp.splunk.com^
 @@||api.scs.splunk.com^
@@ -3311,7 +3303,6 @@
 @@||v0.wordpress.com^
 @@||worldnow.com^
 @@||ftpcontent.worldnow.com^
-@@||www.worldnow.com^
 @@||worldstream.nl^
 @@||www.worldstream.nl^
 @@||wp.com^
