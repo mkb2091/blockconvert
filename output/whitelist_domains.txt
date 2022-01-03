@@ -1531,7 +1531,6 @@ inputdirector.com
 www.inputdirector.com
 inq.com
 insomniagamingfestival.com
-www.insomniagamingfestival.com
 instagram.com
 platform.instagram.com
 www.instagram.com
@@ -2096,7 +2095,6 @@ pay.naver.com
 www.naver.com
 nba.com
 nbcnews.com
-www.nbcnews.com
 nbcnewyork.com
 nbcuni.com
 s.ndemiccreations.com
@@ -2716,6 +2714,7 @@ response.splunk.com
 scp.splunk.com
 playground.scp.splunk.com
 api.playground.scp.splunk.com
+skinny-demo.playground.scp.splunk.com
 staging.scp.splunk.com
 px.staging.scp.splunk.com
 api.scs.splunk.com
@@ -2875,7 +2874,6 @@ thehill.com
 thumbnail.thench.net
 thenextweb.com
 theoldnet.com
-www.theoldnet.com
 thepiratebay.org
 theplatform.com
 thetvdb.com
