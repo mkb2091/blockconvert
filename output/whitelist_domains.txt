@@ -1524,9 +1524,6 @@ informer.com
 software.informer.com
 infowars.com
 infowarsstore.com
-cdn.pcbeta.attachment.inimc.com
-cdn.pcbeta.css.inimc.com
-cdn.pcbeta.static.inimc.com
 inputdirector.com
 www.inputdirector.com
 inq.com
@@ -2319,16 +2316,6 @@ t.paypal.com
 www.paypal.com
 paypalobjects.com
 www-tc.pbs.org
-pcbeta.com
-bbs.pcbeta.com
-group.pcbeta.com
-i.pcbeta.com
-m.pcbeta.com
-mac.pcbeta.com
-static.template.pcbeta.com
-uc.pcbeta.com
-web.pcbeta.com
-www.pcbeta.com
 pcmag.com
 www.pcmag.com
 pcmatic.com
@@ -2880,6 +2867,7 @@ thetvdb.com
 theverge.com
 www.theverge.com
 tile.thunderforest.com
+static.tianya.cn
 static.tianyaui.com
 pull.ticktick.com
 code.tidio.co
@@ -3311,7 +3299,6 @@ mw1.wsj.net
 wtkr.com
 wufoo.com
 wupload.com
-www.wupload.com
 wxc.com
 wxug.com
 wykop.pl

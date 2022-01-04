@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2022-01-03Z
+! Version: 2022-01-04Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2022-01-03Z
+! Last modified: 2022-01-04Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -1533,9 +1533,6 @@
 @@||software.informer.com^
 @@||infowars.com^
 @@||infowarsstore.com^
-@@||cdn.pcbeta.attachment.inimc.com^
-@@||cdn.pcbeta.css.inimc.com^
-@@||cdn.pcbeta.static.inimc.com^
 @@||inputdirector.com^
 @@||www.inputdirector.com^
 @@||inq.com^
@@ -2328,16 +2325,6 @@
 @@||www.paypal.com^
 @@||paypalobjects.com^
 @@||www-tc.pbs.org^
-@@||pcbeta.com^
-@@||bbs.pcbeta.com^
-@@||group.pcbeta.com^
-@@||i.pcbeta.com^
-@@||m.pcbeta.com^
-@@||mac.pcbeta.com^
-@@||static.template.pcbeta.com^
-@@||uc.pcbeta.com^
-@@||web.pcbeta.com^
-@@||www.pcbeta.com^
 @@||pcmag.com^
 @@||www.pcmag.com^
 @@||pcmatic.com^
@@ -2889,6 +2876,7 @@
 @@||theverge.com^
 @@||www.theverge.com^
 @@||tile.thunderforest.com^
+@@||static.tianya.cn^
 @@||static.tianyaui.com^
 @@||pull.ticktick.com^
 @@||code.tidio.co^
@@ -3320,7 +3308,6 @@
 @@||wtkr.com^
 @@||wufoo.com^
 @@||wupload.com^
-@@||www.wupload.com^
 @@||wxc.com^
 @@||wxug.com^
 @@||wykop.pl^
