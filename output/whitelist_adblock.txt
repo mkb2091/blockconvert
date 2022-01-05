@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2022-01-04Z
+! Version: 2022-01-05Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2022-01-04Z
+! Last modified: 2022-01-05Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -377,7 +377,6 @@
 @@||cdn.arstechnica.net^
 @@||art19.com^
 @@||asics.com^
-@@||www.asics.com^
 @@||ask.fm^
 @@||askubuntu.com^
 @@||ajax.aspnetcdn.com^
@@ -472,38 +471,24 @@
 @@||binarydefense.com^
 @@||www.binarydefense.com^
 @@||bing.at^
-@@||www.bing.at^
 @@||bing.ch^
-@@||www.bing.ch^
 @@||bing.com^
 @@||api.bing.com^
 @@||cn.bing.com^
 @@||r.bing.com^
 @@||www.bing.com^
 @@||bing.cz^
-@@||www.bing.cz^
 @@||bing.es^
-@@||www.bing.es^
 @@||bing.fi^
-@@||www.bing.fi^
 @@||bing.fr^
-@@||www.bing.fr^
 @@||bing.gr^
-@@||www.bing.gr^
 @@||bing.hu^
-@@||www.bing.hu^
 @@||bing.ie^
-@@||www.bing.ie^
 @@||bing.it^
-@@||www.bing.it^
 @@||bing.no^
-@@||www.bing.no^
 @@||bing.pl^
-@@||www.bing.pl^
 @@||bing.ru^
-@@||www.bing.ru^
 @@||bing.se^
-@@||www.bing.se^
 @@||bit.ly^
 @@||www.bit.ly^
 @@||bitbucket.org^
@@ -679,7 +664,6 @@
 @@||bbci.co.uk^
 @@||static.bbci.co.uk^
 @@||bing.co.uk^
-@@||www.bing.co.uk^
 @@||dailymail.co.uk^
 @@||express.co.uk^
 @@||guardian.co.uk^
@@ -714,7 +698,6 @@
 @@||go.scorptec.com.au^
 @@||weatherzone.com.au^
 @@||bing.com.br^
-@@||www.bing.com.br^
 @@||vivo.com.br^
 @@||sina.com.cn^
 @@||www.sina.com.cn^
@@ -1119,7 +1102,6 @@
 @@||funk.eu^
 @@||funnyordie.com^
 @@||fuseservice.com^
-@@||www.fuseservice.com^
 @@||vanilla.futurecdn.net^
 @@||api.vanilla.futurecdn.net^
 @@||fwmrm.net^
@@ -1899,15 +1881,12 @@
 @@||xbox.ipv6.microsoft.com^
 @@||ris.api.iris.microsoft.com^
 @@||dmd.metaservices.microsoft.com^
-@@||bspmts-int.mp.microsoft.com^
-@@||bsxbenefits-int.mp.microsoft.com^
 @@||accountmgmtservice-df.dce.mp.microsoft.com^
 @@||accountmgmtservice-int.dce.mp.microsoft.com^
 @@||accountmgmtservice.dce.mp.microsoft.com^
 @@||accountuserservice-int.dce.mp.microsoft.com^
 @@||pac.dce.mp.microsoft.com^
 @@||partnersegmentation-int.dce.mp.microsoft.com^
-@@||ra-int.dce.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
 @@||fe3.delivery.mp.microsoft.com^
@@ -1916,27 +1895,18 @@
 @@||aircapi.displaycatalog.mp.microsoft.com^
 @@||availability.dps.mp.microsoft.com^
 @@||bias.dps.mp.microsoft.com^
-@@||certweb-int.dps.mp.microsoft.com^
-@@||certweb.dps.mp.microsoft.com^
-@@||packages-int.dps.mp.microsoft.com^
-@@||packagesapi-intppe.dps.mp.microsoft.com^
 @@||productweb-int.dps.mp.microsoft.com^
 @@||promotion-int.dps.mp.microsoft.com^
-@@||restriction.dps.mp.microsoft.com^
 @@||watchdogs-int.dps.mp.microsoft.com^
 @@||pac-int.dse.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||glb.adminportalapi-dev.trafficshaping.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
 @@||storeedgefd.dsx.mp.microsoft.com^
-@@||ebs-int.mp.microsoft.com^
-@@||keyfulfillment-int.mp.microsoft.com^
 @@||label-int.mp.microsoft.com^
 @@||licensing.mp.microsoft.com^
 @@||collections.md.mp.microsoft.com^
 @@||purchase.mp.microsoft.com^
-@@||staging-dcatbackend-int.mp.microsoft.com^
-@@||stagingretrieval-dcatbackend-int.mp.microsoft.com^
 @@||wishlist-dev.mp.microsoft.com^
 @@||wishlist-int.mp.microsoft.com^
 @@||mscrl.microsoft.com^
@@ -2702,7 +2672,6 @@
 @@||playground.admin.splunk.com^
 @@||api.splunk.com^
 @@||appinspect.splunk.com^
-@@||bucketlist.splunk.com^
 @@||conf.splunk.com^
 @@||events.splunk.com^
 @@||mint.splunk.com^
@@ -2717,9 +2686,6 @@
 @@||region-dub10.api.scs.splunk.com^
 @@||auth.scs.splunk.com^
 @@||region-dub10.auth.scs.splunk.com^
-@@||admin.playground.scs.splunk.com^
-@@||scs001-iad10.admin.playground.scs.splunk.com^
-@@||scs002-iad10.admin.playground.scs.splunk.com^
 @@||post.spmailtechnol.com^
 @@||sport.pl^
 @@||spot.im^
@@ -2846,7 +2812,6 @@
 @@||techrepublic.com^
 @@||www.techrepublic.com^
 @@||tecmint.com^
-@@||www.tecmint.com^
 @@||app-api.ted.com^
 @@||hls.ted.com^
 @@||teespring.com^
