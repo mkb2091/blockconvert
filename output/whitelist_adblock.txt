@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2022-01-05Z
+! Version: 2022-01-06Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2022-01-05Z
+! Last modified: 2022-01-06Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -774,7 +774,6 @@
 @@||www.dataplicity.com^
 @@||cdn.datatables.net^
 @@||datei.to^
-@@||www.datei.to^
 @@||download.db-ip.com^
 @@||check.ddos-guard.net^
 @@||static-pepper.dealabs.com^
@@ -1921,18 +1920,14 @@
 @@||api.smartscreen.microsoft.com^
 @@||apprep.smartscreen.microsoft.com^
 @@||beta.apprep.smartscreen.microsoft.com^
-@@||i.apprep.smartscreen.microsoft.com^
-@@||w.apprep.smartscreen.microsoft.com^
-@@||beta.w.apprep.smartscreen.microsoft.com^
 @@||i.w.apprep.smartscreen.microsoft.com^
 @@||ars.smartscreen.microsoft.com^
 @@||bf.smartscreen.microsoft.com^
 @@||t.bf.smartscreen.microsoft.com^
-@@||cp.smartscreen.microsoft.com^
-@@||nav.smartscreen.microsoft.com^
+@@||gradingservice.smartscreen.microsoft.com^
+@@||tz.gradingservice.smartscreen.microsoft.com^
 @@||data.nav.smartscreen.microsoft.com^
 @@||ping.nav.smartscreen.microsoft.com^
-@@||t.nav.smartscreen.microsoft.com^
 @@||nf.smartscreen.microsoft.com^
 @@||data.nf.smartscreen.microsoft.com^
 @@||ping.nf.smartscreen.microsoft.com^
@@ -2668,7 +2663,6 @@
 @@||spiceworks.com^
 @@||community.spiceworks.com^
 @@||spiegel-de.spiegel.de^
-@@||admin.splunk.com^
 @@||playground.admin.splunk.com^
 @@||api.splunk.com^
 @@||appinspect.splunk.com^
@@ -2768,7 +2762,6 @@
 @@||t-online.de^
 @@||www.t-online.de^
 @@||t.co^
-@@||www.t.co^
 @@||t.ly^
 @@||public.tableau.com^
 @@||public.tableausoftware.com^
