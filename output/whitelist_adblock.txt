@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 2022-01-06Z
+! Version: 2022-01-07Z
 ! Title: BlockConvert Exception Filters
-! Last modified: 2022-01-06Z
+! Last modified: 2022-01-07Z
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/mkb2091/blockconvert
 ! Licence: GPL-3.0
@@ -601,7 +601,6 @@
 @@||cleanprint.net^
 @@||cleveland.com^
 @@||elinkeu.clickdimensions.com^
-@@||www.elinkeu.clickdimensions.com^
 @@||clickhouse.com^
 @@||www.clickhouse.com^
 @@||clickondetroit.com^
@@ -1191,7 +1190,6 @@
 @@||gmx.net^
 @@||nmcheck.gnome.org^
 @@||abcnews.go.com^
-@@||www.abcnews.go.com^
 @@||go.ro^
 @@||go2cloud.org^
 @@||goatcounter.com^
@@ -1885,19 +1883,16 @@
 @@||accountmgmtservice.dce.mp.microsoft.com^
 @@||accountuserservice-int.dce.mp.microsoft.com^
 @@||pac.dce.mp.microsoft.com^
-@@||partnersegmentation-int.dce.mp.microsoft.com^
 @@||dl.delivery.mp.microsoft.com^
 @@||tlu.dl.delivery.mp.microsoft.com^
 @@||fe3.delivery.mp.microsoft.com^
 @@||displaycatalog-int.mp.microsoft.com^
 @@||displaycatalog.mp.microsoft.com^
-@@||aircapi.displaycatalog.mp.microsoft.com^
 @@||availability.dps.mp.microsoft.com^
 @@||bias.dps.mp.microsoft.com^
 @@||productweb-int.dps.mp.microsoft.com^
 @@||promotion-int.dps.mp.microsoft.com^
 @@||watchdogs-int.dps.mp.microsoft.com^
-@@||pac-int.dse.mp.microsoft.com^
 @@||geo-prod.do.dsp.mp.microsoft.com^
 @@||glb.adminportalapi-dev.trafficshaping.dsp.mp.microsoft.com^
 @@||tsfe.trafficshaping.dsp.mp.microsoft.com^
@@ -1917,25 +1912,11 @@
 @@||validation-v2.sls.microsoft.com^
 @@||unitedstates.smartscreen-prod.microsoft.com^
 @@||smartscreen.microsoft.com^
-@@||api.smartscreen.microsoft.com^
 @@||apprep.smartscreen.microsoft.com^
-@@||beta.apprep.smartscreen.microsoft.com^
-@@||i.w.apprep.smartscreen.microsoft.com^
 @@||ars.smartscreen.microsoft.com^
-@@||bf.smartscreen.microsoft.com^
-@@||t.bf.smartscreen.microsoft.com^
 @@||gradingservice.smartscreen.microsoft.com^
 @@||tz.gradingservice.smartscreen.microsoft.com^
-@@||data.nav.smartscreen.microsoft.com^
-@@||ping.nav.smartscreen.microsoft.com^
-@@||nf.smartscreen.microsoft.com^
-@@||data.nf.smartscreen.microsoft.com^
-@@||ping.nf.smartscreen.microsoft.com^
-@@||t.nf.smartscreen.microsoft.com^
-@@||ping.smartscreen.microsoft.com^
-@@||sl.smartscreen.microsoft.com^
 @@||smartscreen-sn3p.smartscreen.microsoft.com^
-@@||urs.smartscreen.microsoft.com^
 @@||store-images.microsoft.com^
 @@||pti.store.microsoft.com^
 @@||storecatalogrevocation.storequality.microsoft.com^
@@ -1944,7 +1925,9 @@
 @@||to-do.microsoft.com^
 @@||update.microsoft.com^
 @@||fe2.update.microsoft.com^
+@@||pending.sls-tip.update.microsoft.com^
 @@||sls.update.microsoft.com^
+@@||pending.sls.update.microsoft.com^
 @@||wallet.microsoft.com^
 @@||wdcp.microsoft.com^
 @@||wdcpalt.microsoft.com^
@@ -2066,6 +2049,7 @@
 @@||www.naver.com^
 @@||nba.com^
 @@||nbcnews.com^
+@@||www.nbcnews.com^
 @@||nbcnewyork.com^
 @@||nbcuni.com^
 @@||s.ndemiccreations.com^
@@ -2121,7 +2105,6 @@
 @@||oneline.nextday.media^
 @@||nextopiasoftware.com^
 @@||nfl.com^
-@@||www.nfl.com^
 @@||nflxext.com^
 @@||assets.nflxext.com^
 @@||cdn3.nflxext.com^
@@ -2617,6 +2600,7 @@
 @@||api.promotions.skype.com^
 @@||bo.promotions.skype.com^
 @@||repo.skype.com^
+@@||support.skype.com^
 @@||trap.skype.com^
 @@||files.slack.com^
 @@||slashdot.org^
@@ -2663,7 +2647,6 @@
 @@||spiceworks.com^
 @@||community.spiceworks.com^
 @@||spiegel-de.spiegel.de^
-@@||playground.admin.splunk.com^
 @@||api.splunk.com^
 @@||appinspect.splunk.com^
 @@||conf.splunk.com^
