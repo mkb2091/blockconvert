@@ -1,6 +1,7 @@
 use crate::list_downloader::FilterListHandler;
 use clap::Parser;
 use domain_list_builder::*;
+use futures::FutureExt;
 use rand::prelude::*;
 use std::sync::Arc;
 
@@ -13,20 +14,27 @@ struct Opts {
     #[clap(subcommand)]
     mode: Mode,
     #[clap(short, long, default_value = "config.toml")]
-    config: String,
+    config: std::path::PathBuf,
+    #[clap(short, long, default_value = "db")]
+    database: std::path::PathBuf,
 }
 
 #[derive(Parser)]
 enum Mode {
     Generate,
     Query(Query),
-    FindDomains,
+    FindDomains(FindDomains),
 }
 #[derive(Parser)]
 struct Query {
     query: String,
     #[clap(short, long)]
     ignore_dns: bool,
+}
+#[derive(Parser)]
+struct FindDomains {
+    #[clap(short, long, default_value = "64")]
+    concurrent_requests: std::num::NonZeroUsize,
 }
 
 const INTERNAL_LISTS: &[(&str, FilterListType)] = &[
@@ -79,7 +87,7 @@ fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
     Ok(records)
 }
 
-async fn generate(mut config: config::Config) -> Result<(), Box<dyn std::error::Error>> {
+async fn generate(mut config: config::Config) -> Result<(), anyhow::Error> {
     let client = reqwest::Client::new();
     if let Ok(records) = read_csv() {
         println!("Read CSV");
@@ -151,7 +159,7 @@ impl FilterListHandler for QueryFilterListHandler {
     }
 }
 
-async fn query(mut config: config::Config, q: Query) -> Result<(), Box<dyn std::error::Error>> {
+async fn query(mut config: config::Config, q: Query) -> Result<(), anyhow::Error> {
     let mut headers = reqwest::header::HeaderMap::new();
     headers.insert(
         reqwest::header::ACCEPT,
@@ -208,43 +216,62 @@ async fn query(mut config: config::Config, q: Query) -> Result<(), Box<dyn std::
     Ok(())
 }
 
-async fn find_domains(config: config::Config) -> Result<(), Box<dyn std::error::Error>> {
-    let ips = if let Ok(records) = read_csv() {
-        let client = reqwest::Client::new();
-        let builder = Arc::new(FilterListBuilder::new(config.clone()));
-        list_downloader::download_all(
-            config.clone(),
-            client,
-            records,
-            get_internal_lists(),
-            builder.clone(),
-        )
-        .await?;
-        builder.take_extracted_ips()
-    } else {
-        Default::default()
-    };
+async fn find_domains(find_opts: FindDomains, db: sled::Db) -> Result<(), anyhow::Error> {
     println!("Started finding domains");
-    let _result = futures::future::join4(
-        certstream::certstream(config.clone()),
-        passive_dns::argus(ips.clone(), config.clone()),
-        passive_dns::threatminer(ips.clone(), config.clone()),
-        passive_dns::virus_total(ips.clone(), config.clone()),
-    )
-    .await;
+    let (tx, rx) = std::sync::mpsc::channel::<Domain>();
+    let db_clone = db.clone();
+    let current_lookups = Arc::new(dashmap::DashSet::<Domain>::new());
+    let current_lookups_clone = current_lookups.clone();
+
+    let (resolve_tx, mut resolve_rx) = tokio::sync::mpsc::unbounded_channel::<Domain>();
+    std::thread::spawn(move || {
+        let current_lookups = current_lookups_clone;
+        while let Ok(domain) = rx.recv() {
+            if !current_lookups.contains(&domain) {
+                current_lookups.insert(domain.clone());
+
+                let old = db_clone.get(domain.as_str());
+                if old == Ok(None) {
+                    if resolve_tx.send(domain).is_err() {
+                        break;
+                    }
+                }
+            }
+        }
+    });
+    let dns_task = tokio::task::spawn(async move {
+        while let Some(domain) = resolve_rx.recv().await {
+            println!("Domain: {}", domain);
+            current_lookups.remove(&domain);
+        }
+    });
+    futures::select!(
+        _ = tokio::task::spawn(certstream::certstream(tx)).fuse() => (),
+        _ = tokio::task::spawn(async {
+            let _ = tokio::signal::ctrl_c().await;
+            println!("Recieved Ctrl-C");
+        }).fuse() => (),
+        _ = dns_task.fuse() => ()
+    );
+    db.flush_async().await?;
+
     println!("Finished finding domains");
+    println!("Disk size: {:?}", db.size_on_disk());
     Ok(())
 }
 
 #[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
+async fn main() -> Result<(), anyhow::Error> {
     let opts: Opts = Opts::parse();
-    let config = config::Config::open(opts.config.clone())?;
-    println!("Using config: {:?}", config);
+    let db = sled::Config::default()
+        .mode(sled::Mode::HighThroughput)
+        .path(opts.database)
+        .open()?;
+
     let result = match opts.mode {
-        Mode::Generate => generate(config).await,
-        Mode::Query(q) => query(config, q).await,
-        Mode::FindDomains => find_domains(config).await,
+        Mode::Generate => generate(config::Config::open(opts.config.clone())?).await,
+        Mode::Query(q) => query(config::Config::open(opts.config.clone())?, q).await,
+        Mode::FindDomains(find_opts) => find_domains(find_opts, db).await,
     };
     if let Err(error) = &result {
         println!("Failed with error: {:?}", error);

@@ -11,29 +11,37 @@ blockconvert = "^0.5.1"
 
 reqwest = {version = "0.11", default-features = false, features = ["rustls-tls", "json", "brotli", "gzip", "deflate"]}
 futures = {version = "0.3"}
-tokio = {version = "1", features = ["macros", "rt", "rt-multi-thread", "fs", "io-util", "time", "net", "sync"]}
+tokio = {version = "1", features = ["macros",  "rt-multi-thread", "fs", "io-util", "time", "net", "sync", "signal"]}
 tokio-stream = {version = "0.1", features = ["fs"]}
 rand = "0.8"
 serde = {version = "1.0", features = ["derive"]}
 lazy_static = "1.4"
-tokio-tungstenite = {version = "0.15", features = ["rustls-tls"]}
+tokio-tungstenite = {version = "0.18", features = ["rustls-tls-webpki-roots"]}
 
-csv = "1.1"
+csv = "1.2"
 serde_json = "1.0"
 
-regex = {version = "1.5", features = ["std", "perf"]}
+regex = {version = "1.7", features = ["std", "perf"]}
 
 chrono = "0.4"
 filetime = "0.2"
 
-clap = "3.0.0-beta.5"
-toml = "0.5"
-serde_derive = "1.0"
+clap = {version = "4", features = ["derive"]}
+toml = "0.7"
+serde_derive = "1"
 
-notify = "4.0"
+notify = "5"
 
-parking_lot = "0.11"
+parking_lot = "0.12"
 fxhash = "0.2"
+
+sled = "0.34.7"
+zerocopy = "0.6.1"
+thiserror = "1.0.38"
+anyhow = "1.0"
+num_cpus = "1.15.0"
+dashmap = "5.4.0"
+trust-dns-resolver = {version = "0.22.0", default-features = false, features = ["tokio-runtime"]}
 
 [profile.release]
 debug = true

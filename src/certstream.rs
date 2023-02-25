@@ -1,17 +1,12 @@
 use crate::{config, db, Domain};
+use anyhow::Error;
 use futures::SinkExt;
 use futures::StreamExt;
 
 const URL: &str = "wss://certstream.calidog.io/domains-only";
 const KEEPALIVE_INTERVAL: u64 = 20;
 
-pub async fn certstream(mut config: config::Config) -> Result<(), Box<dyn std::error::Error>> {
-    let mut wtr = db::DirDbWriter::new(
-        &std::path::Path::new(&config.get_paths().extracted.clone()),
-        config,
-        Some("certstream".to_string()),
-    )
-    .await?;
+pub async fn certstream(tx: std::sync::mpsc::Sender<Domain>) -> Result<(), anyhow::Error> {
     let mut counter: u64 = 0;
     let start = std::time::Instant::now();
     let mut last_output = std::time::Instant::now();
@@ -38,7 +33,7 @@ pub async fn certstream(mut config: config::Config) -> Result<(), Box<dyn std::e
                                     last_output = std::time::Instant::now();
                                 }
                                 counter += 1;
-                                wtr.write_line(domain.as_bytes()).await?;
+                                tx.send(domain)?;
                             }
                         } else {
                             println!("Failed to extract `all_domain`");

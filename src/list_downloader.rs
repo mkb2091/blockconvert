@@ -132,7 +132,7 @@ pub async fn download_all<T: 'static + FilterListHandler>(
     records: Vec<FilterListRecord>,
     local_filters: Vec<(std::path::PathBuf, FilterListRecord)>,
     handler: Arc<T>,
-) -> Result<(), Box<dyn std::error::Error>> {
+) -> Result<(), anyhow::Error> {
     let mut to_download = Vec::new();
 
     for record in records {
