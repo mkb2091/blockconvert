@@ -299,8 +299,8 @@ impl FilterList {
 !
 !-----------------------Filters-----------------------!
 ",
-            chrono::Utc::today(),
-            chrono::Utc::today(),
+            chrono::Utc::now(),
+            chrono::Utc::now(),
         );
         let adblock_whitelist_header: String = format!(
             "[Adblock Plus 2.0]
@@ -313,8 +313,8 @@ impl FilterList {
 !
 !-----------------------Filters-----------------------!
 ",
-            chrono::Utc::today(),
-            chrono::Utc::today(),
+            chrono::Utc::now(),
+            chrono::Utc::now(),
         );
 
         let other_header: String = format!(
@@ -324,7 +324,7 @@ impl FilterList {
 # Homepage: https://github.com/mkb2091/blockconvert
 # Licence: GPL-3.0
 ",
-            chrono::Utc::today()
+            chrono::Utc::now()
         );
         let blocked_domains_base: std::collections::HashSet<Domain> =
             self.blocked_domains.into_iter_domains().collect();

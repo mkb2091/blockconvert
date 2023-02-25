@@ -104,21 +104,19 @@ impl Config {
 
             let base = base.clone();
             let id = id.clone();
-            std::thread::spawn(move || {
-                    loop {
-                    if let Err(e) = rx.recv() {
-                        println!("watch error: {:?}", e)
+            std::thread::spawn(move || loop {
+                if let Err(e) = rx.recv() {
+                    println!("watch error: {:?}", e)
+                }
+                match Self::read_config(&path) {
+                    Ok(config) => {
+                        let dns_servers = Self::create_dns_server_list(&config.dns_servers);
+                        let paths = Arc::new(config.paths.clone());
+                        *base.lock().unwrap() = (config, dns_servers, paths);
+                        id.fetch_add(1, Ordering::Relaxed);
+                        println!("Reloaded config");
                     }
-                    match Self::read_config(&path) {
-                        Ok(config) => {
-                            let dns_servers = Self::create_dns_server_list(&config.dns_servers);
-                            let paths = Arc::new(config.paths.clone());
-                            *base.lock().unwrap() = (config, dns_servers, paths);
-                            id.fetch_add(1, Ordering::Relaxed);
-                            println!("Reloaded config");
-                        }
-                        Err(e) => println!("Failed to read config: {:?}", e),
-                    }
+                    Err(e) => println!("Failed to read config: {:?}", e),
                 }
             });
         }

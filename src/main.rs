@@ -2,7 +2,10 @@ use crate::list_downloader::FilterListHandler;
 use clap::Parser;
 use domain_list_builder::*;
 use futures::FutureExt;
+use futures::StreamExt;
 use rand::prelude::*;
+use serde::{Deserialize, Serialize};
+use std::str::FromStr;
 use std::sync::Arc;
 
 const LIST_CSV: &str = "filterlists.csv";
@@ -216,7 +219,11 @@ async fn query(mut config: config::Config, q: Query) -> Result<(), anyhow::Error
     Ok(())
 }
 
-async fn find_domains(find_opts: FindDomains, db: sled::Db) -> Result<(), anyhow::Error> {
+async fn find_domains(
+    find_opts: FindDomains,
+    db: sled::Db,
+    resolver: trust_dns_resolver::TokioAsyncResolver,
+) -> Result<(), anyhow::Error> {
     println!("Started finding domains");
     let (tx, rx) = std::sync::mpsc::channel::<Domain>();
     let db_clone = db.clone();
@@ -239,12 +246,62 @@ async fn find_domains(find_opts: FindDomains, db: sled::Db) -> Result<(), anyhow
             }
         }
     });
+    #[derive(Serialize, Deserialize)]
+    struct DnsRecord {
+        ips: Vec<std::net::IpAddr>,
+        cnames: Vec<String>,
+    }
+
+    let (write_tx, write_rx) = std::sync::mpsc::channel::<(Domain, DnsRecord)>();
     let dns_task = tokio::task::spawn(async move {
+        let mut tasks = futures::stream::FuturesUnordered::new();
         while let Some(domain) = resolve_rx.recv().await {
-            println!("Domain: {}", domain);
-            current_lookups.remove(&domain);
+            let resolver = resolver.clone();
+            let write_tx = write_tx.clone();
+            let task = tokio::spawn(async move {
+                let mut host = domain.to_string();
+                host.push('.');
+                if let Ok(response) = resolver.lookup_ip(host).await {
+                    let ips = response.iter().collect::<Vec<std::net::IpAddr>>();
+                    let cnames = response
+                        .as_lookup()
+                        .record_iter()
+                        .filter_map(|record| {
+                            if let Some(trust_dns_resolver::proto::rr::record_data::RData::CNAME(
+                                name,
+                            )) = record.data()
+                            {
+                                Domain::from_str(&name.to_string().trim_end_matches('.')).ok()
+                            } else {
+                                None
+                            }
+                        })
+                        .map(|domain| domain.to_string())
+                        .collect::<Vec<_>>();
+
+                    let record = DnsRecord { ips, cnames };
+                    write_tx.send((domain, record))?;
+                }
+                Ok::<_, anyhow::Error>(())
+            });
+            tasks.push(task);
+            if tasks.len() >= find_opts.concurrent_requests.into() {
+                let _ = tasks.next().await;
+            }
         }
+        while let Some(_) = tasks.next().await {}
     });
+    {
+        let db = db.clone();
+        std::thread::spawn(move || {
+            while let Ok((domain, record)) = write_rx.recv() {
+                let bytes = bincode::serialize(&record).unwrap();
+                db.insert(domain.as_str(), bytes).unwrap();
+
+                current_lookups.remove(&domain);
+            }
+        });
+    }
     futures::select!(
         _ = tokio::task::spawn(certstream::certstream(tx)).fuse() => (),
         _ = tokio::task::spawn(async {
@@ -268,10 +325,16 @@ async fn main() -> Result<(), anyhow::Error> {
         .path(opts.database)
         .open()?;
 
+    let resolver_config = trust_dns_resolver::config::ResolverConfig::default();
+    let mut resolver_opts = trust_dns_resolver::config::ResolverOpts::default();
+    resolver_opts.use_hosts_file = false;
+    resolver_opts.preserve_intermediates = true;
+    let resolver = trust_dns_resolver::TokioAsyncResolver::tokio(resolver_config, resolver_opts)?;
+
     let result = match opts.mode {
         Mode::Generate => generate(config::Config::open(opts.config.clone())?).await,
         Mode::Query(q) => query(config::Config::open(opts.config.clone())?, q).await,
-        Mode::FindDomains(find_opts) => find_domains(find_opts, db).await,
+        Mode::FindDomains(find_opts) => find_domains(find_opts, db, resolver).await,
     };
     if let Err(error) = &result {
         println!("Failed with error: {:?}", error);
