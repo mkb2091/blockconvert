@@ -5,6 +5,7 @@ use futures::FutureExt;
 use futures::StreamExt;
 use rand::prelude::*;
 use serde::{Deserialize, Serialize};
+use std::iter::FromIterator;
 use std::str::FromStr;
 use std::sync::Arc;
 
@@ -24,7 +25,7 @@ struct Opts {
 
 #[derive(Parser)]
 enum Mode {
-    Generate,
+    Generate(Generate),
     Query(Query),
     FindDomains(FindDomains),
 }
@@ -38,6 +39,14 @@ struct Query {
 struct FindDomains {
     #[clap(short, long, default_value = "64")]
     concurrent_requests: std::num::NonZeroUsize,
+}
+
+#[derive(Parser)]
+struct Generate {
+    #[clap(short, long, default_value = "5")]
+    concurrent_downloads: std::num::NonZeroUsize,
+    #[clap(short, long)]
+    timeout: Option<f32>,
 }
 
 const INTERNAL_LISTS: &[(&str, FilterListType)] = &[
@@ -90,25 +99,41 @@ fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
     Ok(records)
 }
 
-async fn generate(mut config: config::Config) -> Result<(), anyhow::Error> {
+async fn generate(db: sled::Db, gen_opts: Generate) -> Result<(), anyhow::Error> {
     let client = reqwest::Client::new();
     if let Ok(records) = read_csv() {
         println!("Read CSV");
-        let builder = Arc::new(FilterListBuilder::new(config.clone()));
-        println!("Initialised FilterListBuilder");
 
-        list_downloader::download_all(
-            config.clone(),
+        let mut tasks = list_downloader::download_all(
+            gen_opts
+                .timeout
+                .map(|timeout| std::time::Duration::from_secs_f32(timeout)),
             client,
             records,
             get_internal_lists(),
-            builder.clone(),
-        )
-        .await?;
+        );
 
-        println!("Downloaded Lists");
+        println!("Started download with {} tasks", tasks.len());
 
-        let builder = Arc::try_unwrap(builder).ok().expect("Failed to unwrap Arc");
+        let mut spawned = futures::stream::FuturesUnordered::new();
+        for _ in 0..gen_opts.concurrent_downloads.into() {
+            if let Some(task) = tasks.pop() {
+                spawned.push(tokio::spawn(task));
+            }
+        }
+
+        while let Some(result) = spawned.next().await {
+            let (record, data) = result?;
+            let data = data?;
+
+            if let Some(task) = tasks.pop() {
+                spawned.push(tokio::spawn(task));
+            }
+        }
+
+        /*
+
+
         let bc = Arc::new(builder.to_filterlist());
 
         db::dir_db_read(
@@ -136,7 +161,7 @@ async fn generate(mut config: config::Config) -> Result<(), anyhow::Error> {
         println!("Writing to file");
         let now = std::time::Instant::now();
         bc.write_all().await?;
-        println!("Wrote to file in {}s", now.elapsed().as_secs_f32());
+        println!("Wrote to file in {}s", now.elapsed().as_secs_f32());*/
     }
     Ok(())
 }
@@ -163,7 +188,7 @@ impl FilterListHandler for QueryFilterListHandler {
 }
 
 async fn query(mut config: config::Config, q: Query) -> Result<(), anyhow::Error> {
-    let mut headers = reqwest::header::HeaderMap::new();
+    /*let mut headers = reqwest::header::HeaderMap::new();
     headers.insert(
         reqwest::header::ACCEPT,
         "application/dns-json".parse().unwrap(),
@@ -215,7 +240,7 @@ async fn query(mut config: config::Config, q: Query) -> Result<(), anyhow::Error
         get_internal_lists(),
         query_handler.clone(),
     )
-    .await?;
+    .await?;*/
     Ok(())
 }
 
@@ -233,12 +258,15 @@ async fn find_domains(
     let (resolve_tx, mut resolve_rx) = tokio::sync::mpsc::unbounded_channel::<Domain>();
     std::thread::spawn(move || {
         let current_lookups = current_lookups_clone;
+        let mut counter: u64 = 0;
         while let Ok(domain) = rx.recv() {
             if !current_lookups.contains(&domain) {
                 current_lookups.insert(domain.clone());
 
                 let old = db_clone.get(domain.as_str());
                 if old == Ok(None) {
+                    counter += 1;
+
                     if resolve_tx.send(domain).is_err() {
                         break;
                     }
@@ -332,7 +360,7 @@ async fn main() -> Result<(), anyhow::Error> {
     let resolver = trust_dns_resolver::TokioAsyncResolver::tokio(resolver_config, resolver_opts)?;
 
     let result = match opts.mode {
-        Mode::Generate => generate(config::Config::open(opts.config.clone())?).await,
+        Mode::Generate(g) => generate(db, g).await,
         Mode::Query(q) => query(config::Config::open(opts.config.clone())?, q).await,
         Mode::FindDomains(find_opts) => find_domains(find_opts, db, resolver).await,
     };
