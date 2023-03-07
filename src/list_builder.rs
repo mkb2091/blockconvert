@@ -12,18 +12,16 @@ use tokio::io::BufWriter;
 type DomainFilterBuilderFX = blockconvert::DomainFilterBuilder<fxhash::FxBuildHasher>;
 
 pub struct FilterListBuilder {
-    config: config::Config,
     filter_builder: DomainFilterBuilderFX,
-    extracted_domains: DomainSetShardedFX,
+    extracted_domains: dashmap::DashSet<Domain>,
     extracted_ips: Mutex<std::collections::HashSet<std::net::IpAddr>>,
 }
 
 impl FilterListBuilder {
-    pub fn new(config: config::Config) -> Self {
+    pub fn new() -> Self {
         Self {
-            config,
             filter_builder: Default::default(),
-            extracted_domains: DomainSetShardedFX::with_shards(8192),
+            extracted_domains: dashmap::DashSet::new(),
             extracted_ips: Default::default(),
         }
     }
@@ -50,23 +48,6 @@ impl FilterListBuilder {
     }
 
     pub fn add_list(&self, list_type: FilterListType, data: &str) {
-        for domain in DOMAIN_REGEX
-            .find_iter(data)
-            .filter_map(|domain| domain.as_str().parse::<Domain>().ok())
-        {
-            for part in domain.iter_parent_domains() {
-                self.extracted_domains.insert_str(&part);
-            }
-            self.extracted_domains.insert_str(&domain);
-        }
-        let mut extracted_ips = self.extracted_ips.lock();
-        for ip in IP_REGEX
-            .find_iter(data)
-            .filter_map(|domain| domain.as_str().parse::<std::net::IpAddr>().ok())
-        {
-            extracted_ips.insert(ip);
-        }
-        drop(extracted_ips);
         match list_type {
             FilterListType::Adblock => data
                 .lines()
@@ -161,11 +142,10 @@ impl FilterListBuilder {
 
     pub fn to_filterlist(self) -> FilterList {
         let bc = FilterList {
-            config: self.config.clone(),
             filter: self.filter_builder.to_domain_filter(),
             extracted_domains: self.extracted_domains,
-            blocked_domains: DomainSetShardedFX::with_shards(1024),
-            allowed_domains: DomainSetShardedFX::with_shards(128),
+            blocked_domains: Default::default(),
+            allowed_domains: Default::default(),
             blocked_ip_addrs: Default::default(),
             allowed_ip_addrs: Default::default(),
         };
@@ -192,18 +172,17 @@ impl FilterListHandler for FilterListBuilder {
 
 #[derive(Default)]
 pub struct FilterList {
-    config: config::Config,
     filter: blockconvert::DomainFilter<fxhash::FxBuildHasher>,
-    blocked_domains: DomainSetShardedFX,
-    allowed_domains: DomainSetShardedFX,
+    blocked_domains: dashmap::DashSet<Domain>,
+    allowed_domains: dashmap::DashSet<Domain>,
     blocked_ip_addrs: Mutex<std::collections::HashSet<std::net::IpAddr>>,
     allowed_ip_addrs: Mutex<std::collections::HashSet<std::net::IpAddr>>,
-    extracted_domains: DomainSetShardedFX,
+    extracted_domains: dashmap::DashSet<Domain>,
 }
 
 impl FilterList {
-    pub fn from(config: config::Config, filter_lists: &[(FilterListType, &str)]) -> Self {
-        let builder = FilterListBuilder::new(config);
+    pub fn from(filter_lists: &[(FilterListType, &str)]) -> Self {
+        let builder = FilterListBuilder::new();
         for (list_type, data) in filter_lists.iter() {
             builder.add_list(*list_type, data)
         }
@@ -221,16 +200,13 @@ impl FilterList {
 
     pub async fn check_dns(&mut self, client: &reqwest::Client) {
         self.extracted_domains.shrink_to_fit();
-        let config = self.config.clone();
-        let extracted_domains = std::mem::replace(
-            &mut self.extracted_domains,
-            DomainSetShardedFX::with_shards(0),
-        );
+
+        let extracted_domains = std::mem::replace(&mut self.extracted_domains, Default::default());
         let mem_take_self = Arc::new(std::mem::take(self));
 
-        let _ =
-            dns_lookup::lookup_domains(extracted_domains, mem_take_self.clone(), client, config)
-                .await;
+        // let _ =
+        // dns_lookup::lookup_domains(extracted_domains, mem_take_self.clone(), client, config)
+        // .await;
         let _ = std::mem::replace(
             self,
             Arc::try_unwrap(mem_take_self)
@@ -260,213 +236,217 @@ impl FilterList {
             buf.flush().await?;
             Ok(())
         }
-        let paths = self.config.get_paths();
-        let blocked_domains_path: std::path::PathBuf =
-            [&paths.output_base, &paths.output.blocked_domains]
-                .iter()
-                .collect();
-        let allowed_domains_path: std::path::PathBuf =
-            [&paths.output_base, &paths.output.allowed_domains]
-                .iter()
-                .collect();
-        let hostfile_path: std::path::PathBuf = [&paths.output_base, &paths.output.hostfile]
-            .iter()
-            .collect();
-        let adblock_path: std::path::PathBuf =
-            [&paths.output_base, &paths.output.adblock].iter().collect();
-        let allowed_adblock_path: std::path::PathBuf =
-            [&paths.output_base, &paths.output.allowed_adblock]
-                .iter()
-                .collect();
-        let blocked_ip_addrs_path: std::path::PathBuf =
-            [&paths.output_base, &paths.output.blocked_ips]
-                .iter()
-                .collect();
-        let allowed_ip_addrs_path: std::path::PathBuf =
-            [&paths.output_base, &paths.output.allowed_ips]
-                .iter()
-                .collect();
-        let rpz_path: std::path::PathBuf = [&paths.output_base, &paths.output.rpz].iter().collect();
 
-        let adblock_header: String = format!(
-            "[Adblock Plus 2.0]
-! Version: {:?}
-! Title: BlockConvert
-! Last modified: {:?}
-! Expires: 1 days (update frequency)
-! Homepage: https://github.com/mkb2091/blockconvert
-! Licence: GPL-3.0
-!
-!-----------------------Filters-----------------------!
-",
-            chrono::Utc::now(),
-            chrono::Utc::now(),
-        );
-        let adblock_whitelist_header: String = format!(
-            "[Adblock Plus 2.0]
-! Version: {:?}
-! Title: BlockConvert Exception Filters
-! Last modified: {:?}
-! Expires: 1 days (update frequency)
-! Homepage: https://github.com/mkb2091/blockconvert
-! Licence: GPL-3.0
-!
-!-----------------------Filters-----------------------!
-",
-            chrono::Utc::now(),
-            chrono::Utc::now(),
-        );
+        /*
+                let paths = self.config.get_paths();
+                let blocked_domains_path: std::path::PathBuf =
+                    [&paths.output_base, &paths.output.blocked_domains]
+                        .iter()
+                        .collect();
+                let allowed_domains_path: std::path::PathBuf =
+                    [&paths.output_base, &paths.output.allowed_domains]
+                        .iter()
+                        .collect();
+                let hostfile_path: std::path::PathBuf = [&paths.output_base, &paths.output.hostfile]
+                    .iter()
+                    .collect();
+                let adblock_path: std::path::PathBuf =
+                    [&paths.output_base, &paths.output.adblock].iter().collect();
+                let allowed_adblock_path: std::path::PathBuf =
+                    [&paths.output_base, &paths.output.allowed_adblock]
+                        .iter()
+                        .collect();
+                let blocked_ip_addrs_path: std::path::PathBuf =
+                    [&paths.output_base, &paths.output.blocked_ips]
+                        .iter()
+                        .collect();
+                let allowed_ip_addrs_path: std::path::PathBuf =
+                    [&paths.output_base, &paths.output.allowed_ips]
+                        .iter()
+                        .collect();
+                let rpz_path: std::path::PathBuf = [&paths.output_base, &paths.output.rpz].iter().collect();
 
-        let other_header: String = format!(
-            "# Title: BlockConvert
-# Last modified: {:?}
-# Expires: 1 days (update frequency)
-# Homepage: https://github.com/mkb2091/blockconvert
-# Licence: GPL-3.0
-",
-            chrono::Utc::now()
-        );
-        let blocked_domains_base: std::collections::HashSet<Domain> =
-            self.blocked_domains.into_iter_domains().collect();
-        let mut blocked_domains: Vec<Domain> = blocked_domains_base.iter().cloned().collect();
-        blocked_domains.sort_unstable_by(|domain1, domain2| {
-            Domain::str_iter_parent_domains(domain1)
-                .rev()
-                .chain(std::iter::once(domain1.as_str()))
-                .cmp(
-                    Domain::str_iter_parent_domains(domain2)
+                let adblock_header: String = format!(
+                    "[Adblock Plus 2.0]
+        ! Version: {:?}
+        ! Title: BlockConvert
+        ! Last modified: {:?}
+        ! Expires: 1 days (update frequency)
+        ! Homepage: https://github.com/mkb2091/blockconvert
+        ! Licence: GPL-3.0
+        !
+        !-----------------------Filters-----------------------!
+        ",
+                    chrono::Utc::now(),
+                    chrono::Utc::now(),
+                );
+                let adblock_whitelist_header: String = format!(
+                    "[Adblock Plus 2.0]
+        ! Version: {:?}
+        ! Title: BlockConvert Exception Filters
+        ! Last modified: {:?}
+        ! Expires: 1 days (update frequency)
+        ! Homepage: https://github.com/mkb2091/blockconvert
+        ! Licence: GPL-3.0
+        !
+        !-----------------------Filters-----------------------!
+        ",
+                    chrono::Utc::now(),
+                    chrono::Utc::now(),
+                );
+
+                let other_header: String = format!(
+                    "# Title: BlockConvert
+        # Last modified: {:?}
+        # Expires: 1 days (update frequency)
+        # Homepage: https://github.com/mkb2091/blockconvert
+        # Licence: GPL-3.0
+        ",
+                    chrono::Utc::now()
+                );
+                let blocked_domains_base: std::collections::HashSet<Domain> =
+                    self.blocked_domains.into_iter_domains().collect();
+                let mut blocked_domains: Vec<Domain> = blocked_domains_base.iter().cloned().collect();
+                blocked_domains.sort_unstable_by(|domain1, domain2| {
+                    Domain::str_iter_parent_domains(domain1)
                         .rev()
-                        .chain(std::iter::once(domain2.as_str())),
-                )
-        });
+                        .chain(std::iter::once(domain1.as_str()))
+                        .cmp(
+                            Domain::str_iter_parent_domains(domain2)
+                                .rev()
+                                .chain(std::iter::once(domain2.as_str())),
+                        )
+                });
 
-        let blocked_domains = Arc::new(blocked_domains);
+                let blocked_domains = Arc::new(blocked_domains);
 
-        let mut allowed_domains: Vec<Domain> = self.allowed_domains.into_iter_domains().collect();
-        allowed_domains.sort_unstable_by(|domain1, domain2| {
-            Domain::str_iter_parent_domains(domain1)
-                .rev()
-                .chain(std::iter::once(domain1.as_str()))
-                .cmp(
-                    Domain::str_iter_parent_domains(domain2)
+                let mut allowed_domains: Vec<Domain> = self.allowed_domains.into_iter_domains().collect();
+                allowed_domains.sort_unstable_by(|domain1, domain2| {
+                    Domain::str_iter_parent_domains(domain1)
                         .rev()
-                        .chain(std::iter::once(domain2.as_str())),
-                )
-        });
-        let allowed_domains = Arc::new(allowed_domains);
+                        .chain(std::iter::once(domain1.as_str()))
+                        .cmp(
+                            Domain::str_iter_parent_domains(domain2)
+                                .rev()
+                                .chain(std::iter::once(domain2.as_str())),
+                        )
+                });
+                let allowed_domains = Arc::new(allowed_domains);
 
-        let blocked_ips = {
-            let blocked_ip_addrs_base = std::mem::take(&mut *self.blocked_ip_addrs.lock());
-            let mut blocked_ips: Vec<std::net::IpAddr> =
-                blocked_ip_addrs_base.into_iter().collect();
-            blocked_ips.sort_unstable();
-            Arc::new(blocked_ips)
-        };
+                let blocked_ips = {
+                    let blocked_ip_addrs_base = std::mem::take(&mut *self.blocked_ip_addrs.lock());
+                    let mut blocked_ips: Vec<std::net::IpAddr> =
+                        blocked_ip_addrs_base.into_iter().collect();
+                    blocked_ips.sort_unstable();
+                    Arc::new(blocked_ips)
+                };
 
-        let allowed_ips = {
-            let allowed_ip_addrs_base = std::mem::take(&mut *self.allowed_ip_addrs.lock());
-            let mut allowed_ips: Vec<std::net::IpAddr> =
-                allowed_ip_addrs_base.into_iter().collect();
-            allowed_ips.sort_unstable();
-            Arc::new(allowed_ips)
-        };
+                let allowed_ips = {
+                    let allowed_ip_addrs_base = std::mem::take(&mut *self.allowed_ip_addrs.lock());
+                    let mut allowed_ips: Vec<std::net::IpAddr> =
+                        allowed_ip_addrs_base.into_iter().collect();
+                    allowed_ips.sort_unstable();
+                    Arc::new(allowed_ips)
+                };
 
-        let domains = futures::future::try_join4(
-            tokio::spawn({
-                let blocked_domains = blocked_domains.clone();
-                let other_header = other_header.clone();
-                write_to_file(
-                    blocked_domains,
-                    other_header,
-                    blocked_domains_path,
-                    |item| item.to_string(),
-                )
-            }),
-            tokio::spawn({
-                let blocked_domains = blocked_domains.clone();
-                let other_header = other_header.clone();
+                let domains = futures::future::try_join4(
+                    tokio::spawn({
+                        let blocked_domains = blocked_domains.clone();
+                        let other_header = other_header.clone();
+                        write_to_file(
+                            blocked_domains,
+                            other_header,
+                            blocked_domains_path,
+                            |item| item.to_string(),
+                        )
+                    }),
+                    tokio::spawn({
+                        let blocked_domains = blocked_domains.clone();
+                        let other_header = other_header.clone();
 
-                write_to_file(blocked_domains, other_header, hostfile_path, |item| {
-                    format!("0.0.0.0 {}", item)
-                })
-            }),
-            tokio::spawn({
-                let blocked_domains = blocked_domains.clone();
-                let other_header = other_header.clone();
+                        write_to_file(blocked_domains, other_header, hostfile_path, |item| {
+                            format!("0.0.0.0 {}", item)
+                        })
+                    }),
+                    tokio::spawn({
+                        let blocked_domains = blocked_domains.clone();
+                        let other_header = other_header.clone();
 
-                write_to_file(blocked_domains, other_header, rpz_path, |item| {
-                    format!("{} CNAME .", item)
-                })
-            }),
-            tokio::spawn({
-                let blocked_ips = blocked_ips.clone();
-                let blocked_domains = blocked_domains.clone();
-                async move {
-                    let file = tokio::fs::File::create(adblock_path).await?;
-                    let mut buf = BufWriter::new(file);
-                    buf.write_all(adblock_header.as_bytes()).await?;
-                    'outer: for item in blocked_domains.iter() {
-                        for parent in item.iter_parent_domains() {
-                            if blocked_domains_base.contains(&parent) {
-                                continue 'outer;
-                                // As adblock blocks all subdomains,
-                                // if parent domain is blocked then filter is redundant
+                        write_to_file(blocked_domains, other_header, rpz_path, |item| {
+                            format!("{} CNAME .", item)
+                        })
+                    }),
+                    tokio::spawn({
+                        let blocked_ips = blocked_ips.clone();
+                        let blocked_domains = blocked_domains.clone();
+                        async move {
+                            let file = tokio::fs::File::create(adblock_path).await?;
+                            let mut buf = BufWriter::new(file);
+                            buf.write_all(adblock_header.as_bytes()).await?;
+                            'outer: for item in blocked_domains.iter() {
+                                for parent in item.iter_parent_domains() {
+                                    if blocked_domains_base.contains(&parent) {
+                                        continue 'outer;
+                                        // As adblock blocks all subdomains,
+                                        // if parent domain is blocked then filter is redundant
+                                    }
+                                }
+                                buf.write_all(format!("||{}^", item).as_bytes()).await?;
+                                buf.write_all(b"\n").await?;
                             }
+                            for item in blocked_ips.iter() {
+                                buf.write_all(format!("||{}^", item).as_bytes()).await?;
+                                buf.write_all(b"\n").await?;
+                            }
+                            buf.flush().await?;
+                            Ok::<(), std::io::Error>(())
                         }
-                        buf.write_all(format!("||{}^", item).as_bytes()).await?;
-                        buf.write_all(b"\n").await?;
-                    }
-                    for item in blocked_ips.iter() {
-                        buf.write_all(format!("||{}^", item).as_bytes()).await?;
-                        buf.write_all(b"\n").await?;
-                    }
-                    buf.flush().await?;
+                    }),
+                )
+                .map(|x| x.unwrap())
+                .map(|result| {
+                    (result.0?, result.1?, result.2?);
                     Ok::<(), std::io::Error>(())
-                }
-            }),
-        )
-        .map(|x| x.unwrap())
-        .map(|result| {
-            (result.0?, result.1?, result.2?);
-            Ok::<(), std::io::Error>(())
-        });
-        let whitelist = futures::future::try_join(
-            tokio::spawn({
-                let allowed_domains = allowed_domains.clone();
-                write_to_file(
-                    allowed_domains,
-                    adblock_whitelist_header,
-                    allowed_adblock_path,
-                    |item| format!("@@||{}^", item),
+                });
+                let whitelist = futures::future::try_join(
+                    tokio::spawn({
+                        let allowed_domains = allowed_domains.clone();
+                        write_to_file(
+                            allowed_domains,
+                            adblock_whitelist_header,
+                            allowed_adblock_path,
+                            |item| format!("@@||{}^", item),
+                        )
+                    }),
+                    tokio::spawn({
+                        let allowed_domains = allowed_domains.clone();
+                        write_to_file(
+                            allowed_domains,
+                            String::new(),
+                            allowed_domains_path,
+                            |item| item.to_string(),
+                        )
+                    }),
                 )
-            }),
-            tokio::spawn({
-                let allowed_domains = allowed_domains.clone();
-                write_to_file(
-                    allowed_domains,
-                    String::new(),
-                    allowed_domains_path,
-                    |item| item.to_string(),
-                )
-            }),
-        )
-        .map(|x| x.unwrap())
-        .map(|result| {
-            (result.0?, result.1?);
-            Ok::<(), std::io::Error>(())
-        });
-        let ips = futures::future::try_join(
-            write_to_file(blocked_ips, String::new(), &blocked_ip_addrs_path, |item| {
-                item.to_string()
-            }),
-            write_to_file(allowed_ips, String::new(), &allowed_ip_addrs_path, |item| {
-                item.to_string()
-            }),
-        );
+                .map(|x| x.unwrap())
+                .map(|result| {
+                    (result.0?, result.1?);
+                    Ok::<(), std::io::Error>(())
+                });
+                let ips = futures::future::try_join(
+                    write_to_file(blocked_ips, String::new(), &blocked_ip_addrs_path, |item| {
+                        item.to_string()
+                    }),
+                    write_to_file(allowed_ips, String::new(), &allowed_ip_addrs_path, |item| {
+                        item.to_string()
+                    }),
+                );
 
-        futures::future::try_join3(domains, whitelist, ips)
-            .await
-            .map(|_| ())?;
+                futures::future::try_join3(domains, whitelist, ips)
+                    .await
+                    .map(|_| ())?;
+
+                    */
         Ok(())
     }
 }
@@ -475,11 +455,17 @@ impl db::DBReadHandler for FilterList {
     fn handle_input(&self, data: &str) {
         let data = data.trim_end();
         if Domain::str_is_valid_domain(data).is_ok() {
-            if !self.extracted_domains.insert_str(data) {
+            if !self
+                .extracted_domains
+                .insert(Domain::from_str_unchecked(data))
+            {
                 return; // Already contains parent domain, no need to continue inserting children
             }
             for sub_domain in Domain::str_iter_parent_domains(data) {
-                if !self.extracted_domains.insert_str(sub_domain) {
+                if !self
+                    .extracted_domains
+                    .insert(Domain::from_str_unchecked(sub_domain))
+                {
                     return;
                 }
             }
@@ -497,9 +483,9 @@ impl DomainRecordHandler for FilterList {
             .allowed(&record.domain, &record.cnames, &record.ips)
         {
             if allowed {
-                self.allowed_domains.insert_str(&record.domain)
+                self.allowed_domains.insert(record.domain.clone())
             } else {
-                self.blocked_domains.insert_str(&record.domain)
+                self.blocked_domains.insert(record.domain.clone())
             };
         }
     }
@@ -507,7 +493,7 @@ impl DomainRecordHandler for FilterList {
 
 #[test]
 fn normal_is_ok() {
-    let builder = FilterListBuilder::new(Default::default());
+    let builder = FilterListBuilder::new();
     let filter_list = builder.to_filterlist();
     assert_eq!(filter_list.extracted_domains.len(), 0);
 }

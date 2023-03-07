@@ -3,11 +3,17 @@ use clap::Parser;
 use domain_list_builder::*;
 use futures::FutureExt;
 use futures::StreamExt;
-use rand::prelude::*;
+use mimalloc::MiMalloc;
 use serde::{Deserialize, Serialize};
-use std::iter::FromIterator;
+use std::collections::VecDeque;
 use std::str::FromStr;
+use std::sync::atomic::AtomicUsize;
+use std::sync::atomic::Ordering;
 use std::sync::Arc;
+use std::sync::Mutex;
+
+#[global_allocator]
+static GLOBAL: MiMalloc = MiMalloc;
 
 const LIST_CSV: &str = "filterlists.csv";
 
@@ -99,6 +105,10 @@ fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
     Ok(records)
 }
 
+#[derive(thiserror::Error, Debug)]
+#[error("Database Empty")]
+struct DatabaseEmptyError {}
+
 async fn generate(db: sled::Db, gen_opts: Generate) -> Result<(), anyhow::Error> {
     let client = reqwest::Client::new();
     if let Ok(records) = read_csv() {
@@ -122,6 +132,8 @@ async fn generate(db: sled::Db, gen_opts: Generate) -> Result<(), anyhow::Error>
             }
         }
 
+        let builder = FilterListBuilder::new();
+
         while let Some(result) = spawned.next().await {
             let (record, data) = result?;
             let data = data?;
@@ -129,7 +141,92 @@ async fn generate(db: sled::Db, gen_opts: Generate) -> Result<(), anyhow::Error>
             if let Some(task) = tasks.pop() {
                 spawned.push(tokio::spawn(task));
             }
+            builder.add_list(record.list_type, &data);
         }
+
+        println!("Parsed all domain lists");
+        let mut first_bytes = [0; 8];
+        let (first, _) = db.first()?.ok_or(DatabaseEmptyError {})?;
+        first_bytes[..first.len().min(8)].copy_from_slice(&first[..first.len().min(8)]);
+
+        let mut last_bytes = [u8::MAX; 8];
+        let (last, _) = db.last()?.ok_or(DatabaseEmptyError {})?;
+        last_bytes[..last.len().min(8)].copy_from_slice(&last[..last.len().min(8)]);
+
+        println!(
+            "first: {:?}, last: {:?}",
+            std::str::from_utf8(&first),
+            std::str::from_utf8(&last)
+        );
+
+        let mut ranges = VecDeque::new();
+        ranges.push_back((
+            u64::from_be_bytes(first_bytes),
+            u64::from_be_bytes(last_bytes),
+        ));
+        let ranges = Arc::new(Mutex::new(ranges));
+
+        let scanned_count = Arc::new(AtomicUsize::new(0));
+        let mut threads = Vec::<std::thread::JoinHandle<anyhow::Result<()>>>::new();
+        let buffer_size = num_cpus::get();
+        let batch_size = 1000;
+        for _ in 0..num_cpus::get() {
+            let scanned_count = scanned_count.clone();
+            let db = db.clone();
+
+            let ranges = ranges.clone();
+            let thread = std::thread::spawn(move || {
+                loop {
+                    let (start, end) = {
+                        let mut ranges = ranges.lock().unwrap();
+
+                        let Some((start, mut end)) = ranges.pop_front() else {break};
+                        while ranges.len() < buffer_size && end - start > 1 {
+                            let mid = start + (end - start) / 2;
+                            ranges.push_back((mid, end));
+                            end = mid;
+                        }
+                        (start, end)
+                    };
+
+                    let mut local_scanned_count = 0;
+                    let start_bytes = start.to_be_bytes();
+                    let min_next_start = (start + 1).to_be_bytes();
+                    let end_bytes = end.to_be_bytes();
+                    let mut last_item = None;
+                    for item in db.range(start_bytes..end_bytes) {
+                        let (domain, data) = item?;
+                        local_scanned_count += 1;
+                        if local_scanned_count >= batch_size && &domain[..] > &min_next_start[..] {
+                            last_item = Some(domain);
+                            break;
+                        }
+                    }
+
+                    if local_scanned_count == batch_size {
+                        if let Some(last_item) = last_item {
+                            let mut first_bytes = [0; 8];
+                            first_bytes[..last_item.len().min(8)]
+                                .copy_from_slice(&last_item[..last_item.len().min(8)]);
+                            let new_start = u64::from_be_bytes(first_bytes);
+                            ranges.lock().unwrap().push_back((new_start, end));
+                        }
+                    }
+
+                    if local_scanned_count != 0 {
+                        scanned_count.fetch_add(local_scanned_count, Ordering::SeqCst);
+                    }
+                }
+
+                Ok(())
+            });
+            threads.push(thread);
+        }
+        for thread in threads {
+            thread.join().unwrap()?;
+        }
+
+        println!("Scanned {} domains", scanned_count.load(Ordering::SeqCst));
 
         /*
 
@@ -174,7 +271,7 @@ struct QueryFilterListHandler {
 
 impl FilterListHandler for QueryFilterListHandler {
     fn handle_filter_list(&self, record: FilterListRecord, data: &str) {
-        let bc = FilterList::from(self.config.clone(), &[(record.list_type, &data)]);
+        let bc = FilterList::from(&[(record.list_type, &data)]);
         for (part, cnames, ips) in self.parts.iter() {
             if let Some(allowed) = bc.allowed(&part, &cnames, &ips) {
                 if allowed {
