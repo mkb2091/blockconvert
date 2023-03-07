@@ -169,7 +169,7 @@ async fn generate(db: sled::Db, gen_opts: Generate) -> Result<(), anyhow::Error>
         let scanned_count = Arc::new(AtomicUsize::new(0));
         let mut threads = Vec::<std::thread::JoinHandle<anyhow::Result<()>>>::new();
         let buffer_size = num_cpus::get();
-        let batch_size = 1000;
+        let batch_size = 10000;
         for _ in 0..num_cpus::get() {
             let scanned_count = scanned_count.clone();
             let db = db.clone();
@@ -222,11 +222,17 @@ async fn generate(db: sled::Db, gen_opts: Generate) -> Result<(), anyhow::Error>
             });
             threads.push(thread);
         }
+
+        let now = std::time::Instant::now();
         for thread in threads {
             thread.join().unwrap()?;
         }
 
-        println!("Scanned {} domains", scanned_count.load(Ordering::SeqCst));
+        println!(
+            "Scanned {} domains in {}",
+            scanned_count.load(Ordering::SeqCst),
+            now.elapsed().as_secs_f32()
+        );
 
         /*
 
