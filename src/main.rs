@@ -197,6 +197,9 @@ async fn generate(db: sled::Db, gen_opts: Generate) -> Result<(), anyhow::Error>
                     for item in db.range(start_bytes..end_bytes) {
                         let (domain, data) = item?;
                         local_scanned_count += 1;
+                        if let Ok(domain) = std::str::from_utf8(&domain) {
+                            //println!("{}", domain);
+                        }
                         if local_scanned_count >= batch_size && &domain[..] > &min_next_start[..] {
                             last_item = Some(domain);
                             break;

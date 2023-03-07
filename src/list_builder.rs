@@ -1,9 +1,8 @@
 use crate::dns_lookup::{DNSResultRecord, DomainRecordHandler};
 use crate::{
-    config, db, dns_lookup, ipnet, list_downloader::FilterListHandler, Domain, DomainSetShardedFX,
-    FilterListRecord, FilterListType, DOMAIN_REGEX, IP_REGEX,
+    db, dns_lookup, ipnet, list_downloader::FilterListHandler, Domain, DomainSetShardedFX,
+    FilterListRecord, FilterListType,
 };
-use futures::FutureExt;
 use parking_lot::Mutex;
 use std::sync::Arc;
 use tokio::io::AsyncWriteExt;
