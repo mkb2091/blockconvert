@@ -203,7 +203,7 @@ async fn generate(db: sled::Db, gen_opts: Generate) -> Result<(), anyhow::Error>
                         }
                     }
 
-                    if local_scanned_count == batch_size {
+                    if local_scanned_count >= batch_size {
                         if let Some(last_item) = last_item {
                             let mut first_bytes = [0; 8];
                             first_bytes[..last_item.len().min(8)]
