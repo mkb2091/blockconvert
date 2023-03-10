@@ -105,6 +105,40 @@ fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
     Ok(records)
 }
 
+#[derive(Default)]
+struct DnsRecord<'a> {
+    ipv4: Vec<std::net::Ipv4Addr>,
+    ipv6: Vec<std::net::Ipv6Addr>,
+    cnames: Vec<&'a str>,
+}
+impl<'a> DnsRecord<'a> {
+    fn empty() -> Self {
+        Self::default()
+    }
+    fn serialize(&self, buf: &mut Vec<u8>) {
+        buf.clear();
+        buf.extend((self.ipv4.len() as u16).to_be_bytes());
+        for ipv4 in self.ipv4.iter() {
+            buf.extend(ipv4.octets());
+        }
+        buf.extend((self.ipv6.len() as u16).to_be_bytes());
+        for ipv6 in self.ipv6.iter() {
+            buf.extend(ipv6.octets());
+        }
+        for cname in self.cnames.iter() {
+            buf.extend((cname.len() as u16).to_be_bytes());
+            buf.extend(cname.as_bytes());
+        }
+    }
+    fn deserialize_into<'b>(mut self, buf: &'b [u8]) -> DnsRecord<'b> {
+        self.ipv4.clear();
+        self.ipv6.clear();
+        self.cnames.clear();
+
+        todo!()
+    }
+}
+
 #[derive(thiserror::Error, Debug)]
 #[error("Database Empty")]
 struct DatabaseEmptyError {}
@@ -162,14 +196,14 @@ async fn generate(db: sled::Db, gen_opts: Generate) -> Result<(), anyhow::Error>
         let mut ranges = VecDeque::new();
         ranges.push_back((
             u64::from_be_bytes(first_bytes),
-            u64::from_be_bytes(last_bytes),
+            u64::from_be_bytes(last_bytes).saturating_add(1),
         ));
         let ranges = Arc::new(Mutex::new(ranges));
 
         let scanned_count = Arc::new(AtomicUsize::new(0));
         let mut threads = Vec::<std::thread::JoinHandle<anyhow::Result<()>>>::new();
         let buffer_size = num_cpus::get();
-        let batch_size = 10000;
+        let batch_size = 1000;
         for _ in 0..num_cpus::get() {
             let scanned_count = scanned_count.clone();
             let db = db.clone();
@@ -451,12 +485,11 @@ async fn find_domains(
     Ok(())
 }
 
-#[tokio::main]
-async fn main() -> Result<(), anyhow::Error> {
+fn main() -> Result<(), anyhow::Error> {
     let opts: Opts = Opts::parse();
     let db = sled::Config::default()
         .mode(sled::Mode::HighThroughput)
-        .path(opts.database)
+        .path(opts.database.clone())
         .open()?;
 
     let resolver_config = trust_dns_resolver::config::ResolverConfig::default();
@@ -465,13 +498,13 @@ async fn main() -> Result<(), anyhow::Error> {
     resolver_opts.preserve_intermediates = true;
     let resolver = trust_dns_resolver::TokioAsyncResolver::tokio(resolver_config, resolver_opts)?;
 
-    let result = match opts.mode {
-        Mode::Generate(g) => generate(db, g).await,
-        Mode::Query(q) => query(config::Config::open(opts.config.clone())?, q).await,
-        Mode::FindDomains(find_opts) => find_domains(find_opts, db, resolver).await,
-    };
-    if let Err(error) = &result {
-        println!("Failed with error: {:?}", error);
-    }
-    result
+    let rt = tokio::runtime::Runtime::new()?;
+
+    rt.block_on(async move {
+        match opts.mode {
+            Mode::Generate(g) => generate(db, g).await,
+            Mode::Query(q) => query(config::Config::open(opts.config.clone())?, q).await,
+            Mode::FindDomains(find_opts) => find_domains(find_opts, db, resolver).await,
+        }
+    })
 }
