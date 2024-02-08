@@ -1,7 +1,6 @@
 use crate::dns_lookup::{DNSResultRecord, DomainRecordHandler};
 use crate::{
-    db, dns_lookup, ipnet, list_downloader::FilterListHandler, Domain, DomainSetShardedFX,
-    FilterListRecord, FilterListType,
+    db, ipnet, list_downloader::FilterListHandler, Domain, FilterListRecord, FilterListType,
 };
 use parking_lot::Mutex;
 use std::sync::Arc;
@@ -197,10 +196,10 @@ impl FilterList {
         self.filter.allowed(domain, cnames, ips)
     }
 
-    pub async fn check_dns(&mut self, client: &reqwest::Client) {
+    pub async fn check_dns(&mut self, _client: &reqwest::Client) {
         self.extracted_domains.shrink_to_fit();
 
-        let extracted_domains = std::mem::replace(&mut self.extracted_domains, Default::default());
+        let _extracted_domains = std::mem::replace(&mut self.extracted_domains, Default::default());
         let mem_take_self = Arc::new(std::mem::take(self));
 
         // let _ =
@@ -218,7 +217,7 @@ impl FilterList {
         println!("Extracted domains: {:?}", self.extracted_domains.len());
     }
 
-    pub async fn write_all(mut self) -> Result<(), std::io::Error> {
+    pub async fn write_all(self) -> Result<(), std::io::Error> {
         async fn write_to_file<P: AsRef<std::path::Path>, T, F: Fn(&T) -> String>(
             data: Arc<Vec<T>>,
             header: String,

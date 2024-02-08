@@ -11,6 +11,7 @@ use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering;
 use std::sync::Arc;
 use std::sync::Mutex;
+use warp::Filter;
 
 #[global_allocator]
 static GLOBAL: MiMalloc = MiMalloc;
@@ -106,37 +107,11 @@ fn read_csv() -> Result<Vec<FilterListRecord>, csv::Error> {
 }
 
 #[derive(Default)]
-struct DnsRecord<'a> {
+struct DnsRecord {
     ipv4: Vec<std::net::Ipv4Addr>,
     ipv6: Vec<std::net::Ipv6Addr>,
-    cnames: Vec<&'a str>,
-}
-impl<'a> DnsRecord<'a> {
-    fn empty() -> Self {
-        Self::default()
-    }
-    fn serialize(&self, buf: &mut Vec<u8>) {
-        buf.clear();
-        buf.extend((self.ipv4.len() as u16).to_be_bytes());
-        for ipv4 in self.ipv4.iter() {
-            buf.extend(ipv4.octets());
-        }
-        buf.extend((self.ipv6.len() as u16).to_be_bytes());
-        for ipv6 in self.ipv6.iter() {
-            buf.extend(ipv6.octets());
-        }
-        for cname in self.cnames.iter() {
-            buf.extend((cname.len() as u16).to_be_bytes());
-            buf.extend(cname.as_bytes());
-        }
-    }
-    fn deserialize_into<'b>(mut self, buf: &'b [u8]) -> DnsRecord<'b> {
-        self.ipv4.clear();
-        self.ipv6.clear();
-        self.cnames.clear();
-
-        todo!()
-    }
+    cnames: Vec<String>,
+    last_change: (),
 }
 
 #[derive(thiserror::Error, Debug)]
@@ -214,7 +189,9 @@ async fn generate(db: sled::Db, gen_opts: Generate) -> Result<(), anyhow::Error>
                     let (start, end) = {
                         let mut ranges = ranges.lock().unwrap();
 
-                        let Some((start, mut end)) = ranges.pop_front() else {break};
+                        let Some((start, mut end)) = ranges.pop_front() else {
+                            break;
+                        };
                         while ranges.len() < buffer_size && end - start > 1 {
                             let mid = start + (end - start) / 2;
                             ranges.push_back((mid, end));
@@ -229,9 +206,9 @@ async fn generate(db: sled::Db, gen_opts: Generate) -> Result<(), anyhow::Error>
                     let end_bytes = end.to_be_bytes();
                     let mut last_item = None;
                     for item in db.range(start_bytes..end_bytes) {
-                        let (domain, data) = item?;
+                        let (domain, _data) = item?;
                         local_scanned_count += 1;
-                        if let Ok(domain) = std::str::from_utf8(&domain) {
+                        if let Ok(_domain) = std::str::from_utf8(&domain) {
                             //println!("{}", domain);
                         }
                         if local_scanned_count >= batch_size && &domain[..] > &min_next_start[..] {
@@ -327,7 +304,7 @@ impl FilterListHandler for QueryFilterListHandler {
     }
 }
 
-async fn query(mut config: config::Config, q: Query) -> Result<(), anyhow::Error> {
+async fn query(_config: config::Config, _q: Query) -> Result<(), anyhow::Error> {
     /*let mut headers = reqwest::header::HeaderMap::new();
     headers.insert(
         reqwest::header::ACCEPT,
@@ -485,8 +462,85 @@ async fn find_domains(
     Ok(())
 }
 
-fn main() -> Result<(), anyhow::Error> {
+fn main2() -> Result<(), anyhow::Error> {
     let opts: Opts = Opts::parse();
+
+    let gen_opts = {
+        if let Mode::Generate(gen_opts) = opts.mode {
+            gen_opts
+        } else {
+            panic!()
+        }
+    };
+
+    let client = reqwest::Client::new();
+    if let Ok(records) = read_csv() {
+        println!("Read CSV");
+
+        {
+            let tasks = list_downloader::download_all(
+                gen_opts
+                    .timeout
+                    .map(|timeout| std::time::Duration::from_secs_f32(timeout)),
+                client.clone(),
+                records.clone(),
+                get_internal_lists(),
+            );
+
+            let semaphore = tokio::sync::Semaphore::new(gen_opts.concurrent_downloads.into());
+            let _tasks = tasks.into_iter().map(|task| async {
+                let _ = semaphore.acquire().await?;
+
+                let (record, data) = tokio::spawn(task).await?;
+                let _data = data?;
+
+                let filter_list = ();
+
+                Ok::<_, anyhow::Error>((record, filter_list))
+            });
+        }
+
+        let mut tasks = list_downloader::download_all(
+            gen_opts
+                .timeout
+                .map(|timeout| std::time::Duration::from_secs_f32(timeout)),
+            client,
+            records,
+            get_internal_lists(),
+        );
+
+        println!("Started download with {} tasks", tasks.len());
+
+        let mut spawned = Vec::new();
+        for _ in 0..gen_opts.concurrent_downloads.into() {
+            let (_tx, _rx) = tokio::sync::mpsc::unbounded_channel::<()>();
+
+            if let Some(task) = tasks.pop() {
+                spawned.push(tokio::spawn(async {
+                    let (record, data) = task.await;
+
+                    (record, data)
+                }));
+            }
+        }
+
+        let builder = FilterListBuilder::new();
+        let _x = async {
+            while let Some(result) = spawned.pop() {
+                let result = result.await;
+                let (record, data) = result?;
+                let data = data?;
+
+                if let Some(task) = tasks.pop() {
+                    spawned.push(tokio::spawn(task));
+                }
+                builder.add_list(record.list_type, &data);
+            }
+            Ok::<(), Box<dyn std::error::Error>>(())
+        };
+    }
+    let opts: Opts = Opts::parse();
+
     let db = sled::Config::default()
         .mode(sled::Mode::HighThroughput)
         .path(opts.database.clone())
@@ -507,4 +561,34 @@ fn main() -> Result<(), anyhow::Error> {
             Mode::FindDomains(find_opts) => find_domains(find_opts, db, resolver).await,
         }
     })
+}
+
+#[tokio::main]
+async fn main() {
+    //parse args
+    //open db
+    //start certstream domains
+    //integrate pihole logs to find more domains
+    //web scraper?
+    //reverse dns lookup
+    //passive dns
+
+    //generate prometheus stats
+
+    let index = warp::path::end().and(warp::fs::file("index.html"));
+    let js = warp::path("frontend.js").and(warp::fs::file("frontend/pkg/frontend.js"));
+    let wasm = warp::path("frontend_bg.wasm").and(warp::fs::file("frontend/pkg/frontend_bg.wasm"));
+
+    let lists = warp::path("filter-lists").map(|| "TODO");
+
+    let unknown = warp::path::tail().map(|tail| {
+        log::info!("Unknown URL: {:?}", tail);
+        "404"
+    });
+    let site = index.or(js).or(wasm).or(lists).or(unknown);
+    //let site = site.with(warp::filters::compression::brotli());
+    //let site = site.with(warp::filters::compression::gzip());
+    //let site = site.with(warp::filters::compression::deflate());
+
+    warp::serve(site).run(([127, 0, 0, 1], 3030)).await;
 }

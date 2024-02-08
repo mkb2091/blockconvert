@@ -1,5 +1,5 @@
-use crate::{config, FilterListRecord};
-use std::sync::Arc;
+use crate::FilterListRecord;
+
 use tokio::fs::File;
 use tokio::io::AsyncWriteExt;
 use tokio_stream::StreamExt;
