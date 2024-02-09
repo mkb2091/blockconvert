@@ -563,8 +563,52 @@ fn main2() -> Result<(), anyhow::Error> {
     })
 }
 
+#[derive(Clone, Debug)]
+pub struct FilterListManager {
+    path: Box<std::path::Path>,
+    lists: tokio::sync::OnceCell<Vec<FilterListRecord>>,
+}
+
+impl FilterListManager {
+    pub fn new(path: &std::path::Path) -> Self {
+        Self {
+            path: path.to_owned().into_boxed_path(),
+            lists: tokio::sync::OnceCell::new(),
+        }
+    }
+
+    async fn load_lists(&self) -> Result<Vec<FilterListRecord>, anyhow::Error> {
+        let contents = tokio::fs::read_to_string(&self.path).await?;
+        let records = csv::Reader::from_reader(contents.as_bytes())
+            .deserialize::<FilterListRecord>()
+            .collect::<Result<Vec<FilterListRecord>, _>>()?;
+
+        Ok(records)
+    }
+
+    pub async fn get_lists(&self) -> Result<Vec<FilterListRecord>, anyhow::Error> {
+        let lists = self
+            .lists
+            .get_or_try_init(|| async { self.load_lists().await })
+            .await?;
+
+        Ok(lists.clone())
+    }
+}
+
+#[derive(Parser)]
+#[clap(version = "0.1")]
+struct AppOpts {
+    #[clap(short, long, default_value = "filterlists.csv")]
+    filter_lists: std::path::PathBuf,
+}
+
 #[tokio::main]
 async fn main() {
+    let opts = AppOpts::parse();
+
+    let list_manager = Arc::new(FilterListManager::new(&opts.filter_lists));
+
     //parse args
     //open db
     //start certstream domains
@@ -579,7 +623,15 @@ async fn main() {
     let js = warp::path("frontend.js").and(warp::fs::file("frontend/pkg/frontend.js"));
     let wasm = warp::path("frontend_bg.wasm").and(warp::fs::file("frontend/pkg/frontend_bg.wasm"));
 
-    let lists = warp::path("filter-lists").map(|| "TODO");
+    let lists = warp::path("filter-lists").and(warp::path("view").then(move || {
+        let list_manager = list_manager.clone();
+        async move {
+            let list_manager = list_manager.clone();
+            let lists = list_manager.get_lists().await.ok();
+            let encoded = bincode::serialize(&lists).unwrap();
+            encoded
+        }
+    }));
 
     let unknown = warp::path::tail().map(|tail| {
         log::info!("Unknown URL: {:?}", tail);
