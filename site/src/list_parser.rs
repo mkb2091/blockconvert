@@ -5,6 +5,12 @@ use std::sync::Arc;
 #[serde(transparent)]
 pub struct Domain(Arc<str>);
 
+impl AsRef<str> for Domain {
+    fn as_ref(&self) -> &str {
+        &self.0
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub enum DomainRule {
     #[serde(rename = "b")]

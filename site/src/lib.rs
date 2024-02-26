@@ -4,9 +4,15 @@ pub mod list_manager;
 pub mod list_parser;
 #[cfg(feature = "ssr")]
 pub mod server;
+#[cfg(feature = "ssr")]
+use mimalloc::MiMalloc;
 use serde::*;
 use std::convert::{From, Into};
 use std::sync::Arc;
+
+#[cfg(feature = "ssr")]
+#[global_allocator]
+static GLOBAL: MiMalloc = MiMalloc;
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct FilterListRecord {

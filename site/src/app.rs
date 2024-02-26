@@ -5,8 +5,6 @@ use crate::{
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
-#[cfg(feature = "ssr")]
-use std::collections::HashMap;
 use std::{str::FromStr, sync::Arc};
 
 #[component]
@@ -176,16 +174,10 @@ fn Contents(
     }
 }
 
-#[cfg(feature = "ssr")]
-#[derive(thiserror::Error, Debug)]
-enum ParseListError {
-    #[error("Missing ID")]
-    MissingIdError,
-}
-
 #[server]
 async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
     log::info!("Parsing {}", url.as_str());
+    let start = std::time::Instant::now();
     let pool = crate::server::get_db().await?;
     let mut tx = pool.begin().await?;
     let url_str = url.as_str();
@@ -196,30 +188,52 @@ async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
     .fetch_one(&mut *tx)
     .await?;
     let list_id = record.id;
-    let contents = record.contents;
-    let rules = crate::list_parser::parse_list(&contents, url.list_format);
+    let rules = {
+        let contents = record.contents;
+        crate::list_parser::parse_list(&contents, url.list_format)
+    };
+    let encoded_rules = rules
+        .iter()
+        .map(|rule| serde_json::to_string(rule.get_rule()))
+        .collect::<Result<Box<[_]>, _>>()?;
+    let source_rules = rules
+        .iter()
+        .map(|pair| pair.get_source().to_string())
+        .collect::<Box<[_]>>();
+    let (mut domain_block_src, mut domain_block) = (Vec::new(), Vec::new());
+    let (mut domain_allow_src, mut domain_allow) = (Vec::new(), Vec::new());
+    let mut other_rules = Vec::new();
+    for (encoded, rule) in encoded_rules.iter().cloned().zip(rules.iter()) {
+        match rule.get_rule() {
+            crate::list_parser::Rule::Domain(domain_rule) => match domain_rule {
+                crate::list_parser::DomainRule::Block(domain) => {
+                    domain_block_src.push(encoded);
+                    domain_block.push(domain.as_ref().to_owned());
+                }
+                crate::list_parser::DomainRule::Allow(domain) => {
+                    domain_allow_src.push(encoded);
+                    domain_allow.push(domain.as_ref().to_owned());
+                }
+            },
+            _ => {
+                other_rules.push(encoded);
+            }
+        }
+    }
     log::info!("Inserting {} rules", rules.len());
+    let now = std::time::Instant::now();
     sqlx::query! {"DELETE FROM list_rules WHERE list_id = $1", list_id}
         .execute(&mut *tx)
         .await?;
-    let encoded = rules
-        .iter()
-        .map(|rule_pair| {
-            let rule = rule_pair.get_rule();
-            let encoded_rule = serde_json::to_string(rule)?;
-            Ok::<_, serde_json::Error>(encoded_rule)
-        })
-        .collect::<Result<Arc<[String]>, serde_json::Error>>()?;
-    let sources = rules
-        .iter()
-        .map(|rule| rule.get_source().to_string())
-        .collect::<Arc<[_]>>();
-    let start = std::time::Instant::now();
+    sqlx::query!("DELETE FROM temp_rule_source")
+        .execute(&mut *tx)
+        .await?;
+    log::info!("Deleted old rules in {:?}", now.elapsed());
     sqlx::query!(
         "INSERT INTO temp_rule_source (rule, source)
-        SELECT * FROM UNNEST ($1::text[], $2::text[])",
-        &encoded[..],
-        &sources[..]
+            SELECT * FROM UNNEST ($1::text[], $2::text[])",
+        &encoded_rules[..],
+        &source_rules[..]
     )
     .execute(&mut *tx)
     .await?;
@@ -235,8 +249,8 @@ async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
         "INSERT INTO list_rules (list_id, rule_id, source_id)
         SELECT $1, Rules.id, rule_source.id
         FROM temp_rule_source
-        JOIN Rules ON Rules.rule = temp_rule_source.rule
-        JOIN rule_source ON rule_source.source = temp_rule_source.source",
+        INNER JOIN Rules ON Rules.rule = temp_rule_source.rule
+        INNER JOIN rule_source ON rule_source.source = temp_rule_source.source",
         list_id
     )
     .execute(&mut *tx)
@@ -244,6 +258,17 @@ async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
     sqlx::query!("DELETE FROM temp_rule_source")
         .execute(&mut *tx)
         .await?;
+    sqlx::query!(
+        "INSERT INTO domain_rules (domain, rule_id, block)
+        SELECT domain, Rules.id, true 
+        FROM UNNEST($1::text[], $2::text[]) AS t(domain, encoded)
+        INNER JOIN Rules ON Rules.rule = encoded",
+        &domain_block[..],
+        &domain_block_src[..]
+    )
+    .execute(&mut *tx)
+    .await?;
+
     tx.commit().await?;
     log::info!("Total time: {:?}", start.elapsed());
     Ok(())
