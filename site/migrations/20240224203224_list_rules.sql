@@ -1,6 +1,6 @@
 -- Add migration script here
 CREATE table list_rules (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id SERIAL PRIMARY KEY,
     list_id INTEGER NOT NULL,
     rule_id INTEGER NOT NULL,
     FOREIGN KEY (list_id) REFERENCES filterLists(id),

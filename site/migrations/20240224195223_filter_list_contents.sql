@@ -3,7 +3,7 @@
 ALTER TABLE filterLists RENAME TO OldFilterListContents;
 
 CREATE TABLE IF NOT EXISTS filterLists (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id SERIAL PRIMARY KEY,
     url TEXT NOT NULL UNIQUE,
     format TEXT NOT NULL,
     contents TEXT NOT NULL,

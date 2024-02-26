@@ -54,7 +54,7 @@ async fn get_last_version_data(
     let url_str = url.as_str();
     #[allow(non_camel_case_types)] 
     let last_version_data = sqlx::query!(
-        r#"SELECT lastUpdated as "last_updated: chrono::NaiveDateTime", etag FROM filterLists WHERE url = ?"#,
+        r#"SELECT lastUpdated as "last_updated: chrono::NaiveDateTime", etag FROM filterLists WHERE url = $1"#,
         url_str
     )
     .fetch_one(&pool)
@@ -72,6 +72,7 @@ pub async fn get_last_updated(url: crate::FilterListUrl) -> Result<Option<chrono
     get_last_version_data(&url).await.map(|data| data.map(|data| data.last_updated))
 }
 
+#[cfg(feature = "ssr")]
 #[derive(thiserror::Error, Debug)]
 enum UpdateListError {
     #[error("Failed to fetch list")]
@@ -109,7 +110,11 @@ pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError>
             let list_format = url.list_format.as_str();
             log::info!("Parsed {:#?}", url_str);
             sqlx::query!(
-                "REPLACE INTO filterLists (url, lastUpdated, contents, format, etag) VALUES (?, ?, ?, ?, ?)",
+                "DELETE FROM filterLists WHERE url = $1",
+                url_str
+            ).execute(&pool).await?;
+            sqlx::query!(
+                "INSERT INTO filterLists (url, lastUpdated, contents, format, etag) VALUES ($1, $2, $3, $4, $5)",
                 url_str,
                 new_last_updated,
                 body,

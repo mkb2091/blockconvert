@@ -5,6 +5,8 @@ use crate::{
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
+#[cfg(feature = "ssr")]
+use std::collections::HashMap;
 use std::{str::FromStr, sync::Arc};
 
 #[component]
@@ -68,19 +70,25 @@ async fn get_list(
 ) -> Result<Vec<crate::list_parser::RulePair>, ServerFnError> {
     let pool = crate::server::get_db().await?;
     let url_str = url.as_str();
-    let id = sqlx::query!("SELECT id FROM filterLists WHERE url = ?", url_str)
+    let id = sqlx::query!("SELECT id FROM filterLists WHERE url = $1", url_str)
         .fetch_one(&pool)
         .await?
         .id;
-    let records = sqlx::query!("SELECT rule, source FROM list_rules JOIN Rules ON list_rules.rule_id = Rules.id WHERE list_id = ?", id)
-        .fetch_all(&pool)
-        .await?;
+    let records = sqlx::query!(
+        "SELECT rule, source FROM list_rules
+    JOIN Rules ON list_rules.rule_id = Rules.id
+    JOIN rule_source ON list_rules.source_id = rule_source.id
+    WHERE list_id = $1",
+        id
+    )
+    .fetch_all(&pool)
+    .await?;
     let rules = records
         .iter()
         .map(|record| {
             let rule: crate::list_parser::Rule = serde_json::from_str(&record.rule)?;
-            let source = record.source.clone().unwrap();
-            Ok(crate::list_parser::RulePair::new(source, rule))
+            let source = record.source.clone();
+            Ok(crate::list_parser::RulePair::new(source.into(), rule))
         })
         .collect::<Result<Vec<crate::list_parser::RulePair>, serde_json::Error>>();
 
@@ -147,7 +155,7 @@ fn Contents(
                                     children=|pair| {
                                         view! {
                                             <tr>
-                                                <td>{pair.get_source()}</td>
+                                                <td>{pair.get_source().to_string()}</td>
                                                 <td>{format!("{:?}", pair.get_rule())}</td>
                                             </tr>
                                         }
@@ -164,13 +172,21 @@ fn Contents(
         </Transition>
     }
 }
+
+#[cfg(feature = "ssr")]
+#[derive(thiserror::Error, Debug)]
+enum ParseListError {
+    #[error("Missing ID")]
+    MissingIdError,
+}
+
 #[server]
 async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
     log::info!("Parsing {}", url.as_str());
     let pool = crate::server::get_db().await?;
     let url_str = url.as_str();
     let record = sqlx::query!(
-        "SELECT id, contents FROM filterLists WHERE url = ?",
+        "SELECT id, contents FROM filterLists WHERE url = $1",
         url_str
     )
     .fetch_one(&pool)
@@ -178,29 +194,81 @@ async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
     let list_id = record.id;
     let contents = record.contents;
     let rules = crate::list_parser::parse_list(&contents, url.list_format);
-    for rule in rules.iter() {
-        let source = rule.get_source();
-        let rule = rule.get_rule();
-        let encoded_rule = serde_json::to_string(rule)?;
-        sqlx::query!(
-            "INSERT OR IGNORE INTO Rules (rule) VALUES (?)",
-            encoded_rule
-        )
+    log::info!("Inserting {} rules", rules.len());
+    sqlx::query! {"DELETE FROM list_rules WHERE list_id = $1", list_id}
         .execute(&pool)
         .await?;
-        let rule_id = sqlx::query!("SELECT id FROM Rules WHERE rule = ?", encoded_rule)
-            .fetch_one(&pool)
-            .await?
-            .id;
-        sqlx::query!(
-            "INSERT INTO list_rules (list_id, rule_id, source) VALUES (?, ?, ?)",
-            list_id,
-            rule_id,
-            source
-        )
-        .execute(&pool)
-        .await?;
+    let encoded = rules
+        .iter()
+        .map(|rule_pair| {
+            let rule = rule_pair.get_rule();
+            let encoded_rule = serde_json::to_string(rule)?;
+            Ok::<_, serde_json::Error>(encoded_rule)
+        })
+        .collect::<Result<Vec<_>, serde_json::Error>>()?;
+    let now = std::time::Instant::now();
+    sqlx::query!(
+        "INSERT INTO Rules (rule) SELECT * FROM UNNEST ($1::text[]) ON CONFLICT DO NOTHING",
+        &encoded[..]
+    )
+    .execute(&pool)
+    .await?;
+
+    log::info!("Inserting rules took {:?}", now.elapsed());
+    let rule_id_lookup = sqlx::query!(
+        "SELECT rule, id FROM Rules WHERE rule = ANY($1::text[])",
+        &encoded[..]
+    )
+    .fetch_all(&pool)
+    .await?
+    .into_iter()
+    .map(|row| (row.rule, row.id))
+    .collect::<HashMap<_, _>>();
+
+    let sources = rules
+        .iter()
+        .map(|rule| rule.get_source().to_string())
+        .collect::<Vec<_>>();
+
+    sqlx::query!(
+        "INSERT INTO rule_source (source) SELECT UNNEST($1::text[]) ON CONFLICT DO NOTHING",
+        &sources[..]
+    )
+    .execute(&pool)
+    .await?;
+
+    let source_id_lookup = sqlx::query!(
+        "SELECT source, id FROM rule_source WHERE source = ANY($1::text[])",
+        &sources[..]
+    )
+    .fetch_all(&pool)
+    .await?
+    .into_iter()
+    .map(|row| (row.source, row.id))
+    .collect::<HashMap<_, _>>();
+
+    let mut rule_ids = Vec::new();
+    let mut rule_source_ids = Vec::new();
+    for (rule, encoded) in rules.iter().zip(encoded.iter()) {
+        let rule_id = rule_id_lookup
+            .get(encoded)
+            .ok_or(ParseListError::MissingIdError)?;
+        let source_id = source_id_lookup
+            .get(&rule.get_source().to_string())
+            .ok_or(ParseListError::MissingIdError)?;
+        rule_ids.push(*rule_id);
+        rule_source_ids.push(*source_id);
     }
+
+    let now = std::time::Instant::now();
+    sqlx::query!(
+        "INSERT INTO list_rules (list_id, rule_id, source_id) SELECT $1, UNNEST($2::int[]), UNNEST($3::int[])",
+        list_id,
+        &rule_ids[..],
+        &rule_source_ids[..]
+    ).execute(&pool).await?;
+
+    log::info!("Inserting list_rules took {:?}", now.elapsed());
     Ok(())
 }
 

@@ -7,35 +7,113 @@ pub struct Domain(Arc<str>);
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub enum DomainRule {
+    #[serde(rename = "b")]
     Block(Domain),
+    #[serde(rename = "a")]
     Allow(Domain),
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
+pub enum InvalidRule {
+    Domain,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub enum Rule {
     Domain(DomainRule),
-    Unknown(String),
+    Adblock(Arc<str>),
+    Unknown(Arc<str>),
+    Invalid(InvalidRule),
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
+#[serde(into = "(Arc<str>, Rule)")]
+#[serde(from = "(Arc<str>, Rule)")]
 pub struct RulePair {
-    source: String,
+    source: Arc<str>,
     rule: Rule,
 }
 
 impl RulePair {
-    pub fn new(source: String, rule: Rule) -> RulePair {
+    pub fn new(source: Arc<str>, rule: Rule) -> RulePair {
         RulePair { source, rule }
     }
     pub fn get_rule(&self) -> &Rule {
         &self.rule
     }
-    pub fn get_source(&self) -> &String {
+    pub fn get_source(&self) -> &Arc<str> {
         &self.source
+    }
+}
+impl Into<(Arc<str>, Rule)> for RulePair {
+    fn into(self) -> (Arc<str>, Rule) {
+        (self.source, self.rule)
+    }
+}
+impl From<(Arc<str>, Rule)> for RulePair {
+    fn from((source, rule): (Arc<str>, Rule)) -> Self {
+        Self { source, rule }
+    }
+}
+
+fn parse_lines(contents: &str, parser: &dyn Fn(&str) -> Option<Rule>) -> Vec<RulePair> {
+    let mut rules = vec![];
+    for line in contents.lines() {
+        let source = line;
+        if line.is_empty() {
+            continue;
+        }
+        if let Some(rule) = parser(line) {
+            rules.push(RulePair {
+                source: source.into(),
+                rule: rule,
+            });
+        }
+    }
+    rules
+}
+
+fn parse_domain_list_line(line: &str, block: bool) -> Option<Rule> {
+    let Some(line) = line.split('#').next() else {
+        return None;
+    };
+    if line.is_empty() {
+        return None;
+    }
+    let line = line.trim();
+    let mut segments = line.split_whitespace();
+    match (segments.next(), segments.next(), segments.next()) {
+        (Some(domain), None, None) => {
+            let domain = Domain(domain.into());
+            let domain_rule = if block {
+                DomainRule::Block(domain)
+            } else {
+                DomainRule::Allow(domain)
+            };
+            Some(Rule::Domain(domain_rule))
+        }
+        (Some("127.0.0.1"), Some(domain), None) => {
+            let domain = Domain(domain.into());
+            let domain_rule = DomainRule::Block(domain);
+            Some(Rule::Domain(domain_rule))
+        }
+        _ => Some(Rule::Invalid(InvalidRule::Domain)),
     }
 }
 
 fn parse_domain_list(contents: &str, block: bool) -> Vec<RulePair> {
+    parse_lines(contents, &|line| parse_domain_list_line(line, block))
+}
+
+fn parse_adblock_line(line: &str) -> Option<Rule> {
+    Some(Rule::Unknown(line.into()))
+}
+
+fn parse_adblock(contents: &str) -> Vec<RulePair> {
+    parse_lines(contents, &parse_adblock_line)
+}
+
+fn parse_unknown_lines(contents: &str) -> Vec<RulePair> {
     let mut rules = vec![];
     for line in contents.lines() {
         let source = line;
@@ -46,42 +124,9 @@ fn parse_domain_list(contents: &str, block: bool) -> Vec<RulePair> {
             continue;
         }
         let line = line.trim();
-        let domain = Domain(line.into());
-        let domain_rule = if block {
-            DomainRule::Block(domain)
-        } else {
-            DomainRule::Allow(domain)
-        };
         rules.push(RulePair {
-            source: source.to_string(),
-            rule: Rule::Domain(domain_rule),
-        });
-    }
-    rules
-}
-
-fn parse_hostfile(contents: &str) -> Vec<RulePair> {
-    let mut rules = vec![];
-    for line in contents.lines() {
-        let source = line;
-        let Some(line) = line.split('#').next() else {
-            continue;
-        };
-        if line.is_empty() {
-            continue;
-        }
-        let mut line = line.split_whitespace();
-        let (Some(ip), Some(domain), None) = (line.next(), line.next(), line.next()) else {
-            continue;
-        };
-        if ip != "127.0.0.1" {
-            continue;
-        }
-        let domain = Domain(domain.into());
-        let domain_rule = DomainRule::Block(domain);
-        rules.push(RulePair {
-            source: source.to_string(),
-            rule: Rule::Domain(domain_rule),
+            source: source.into(),
+            rule: Rule::Unknown(line.into()),
         });
     }
     rules
@@ -89,17 +134,17 @@ fn parse_hostfile(contents: &str) -> Vec<RulePair> {
 
 pub fn parse_list(contents: &str, list_format: crate::FilterListType) -> Vec<RulePair> {
     match list_format {
-        crate::FilterListType::Adblock => vec![],
+        crate::FilterListType::Adblock => parse_adblock(contents),
         crate::FilterListType::DomainBlocklist => parse_domain_list(contents, true),
         crate::FilterListType::DomainAllowlist => parse_domain_list(contents, false),
-        crate::FilterListType::IPBlocklist => vec![],
-        crate::FilterListType::IPAllowlist => vec![],
-        crate::FilterListType::IPNetBlocklist => vec![],
-        crate::FilterListType::DenyHosts => vec![],
-        crate::FilterListType::RegexAllowlist => vec![],
-        crate::FilterListType::RegexBlocklist => vec![],
-        crate::FilterListType::Hostfile => parse_hostfile(contents),
-        crate::FilterListType::DNSRPZ => vec![],
+        crate::FilterListType::IPBlocklist => parse_unknown_lines(contents),
+        crate::FilterListType::IPAllowlist => parse_unknown_lines(contents),
+        crate::FilterListType::IPNetBlocklist => parse_unknown_lines(contents),
+        crate::FilterListType::DenyHosts => parse_unknown_lines(contents),
+        crate::FilterListType::RegexAllowlist => parse_unknown_lines(contents),
+        crate::FilterListType::RegexBlocklist => parse_unknown_lines(contents),
+        crate::FilterListType::Hostfile => parse_domain_list(contents, true),
+        crate::FilterListType::DNSRPZ => parse_unknown_lines(contents),
         crate::FilterListType::PrivacyBadger => vec![],
     }
 }
