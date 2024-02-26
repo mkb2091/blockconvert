@@ -20,9 +20,13 @@ pub enum InvalidRule {
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub enum Rule {
+    #[serde(rename = "d")]
     Domain(DomainRule),
+    #[serde(rename = "a")]
     Adblock(Arc<str>),
+    #[serde(rename = "u")]
     Unknown(Arc<str>),
+    #[serde(rename = "i")]
     Invalid(InvalidRule),
 }
 
@@ -92,7 +96,7 @@ fn parse_domain_list_line(line: &str, block: bool) -> Option<Rule> {
             };
             Some(Rule::Domain(domain_rule))
         }
-        (Some("127.0.0.1"), Some(domain), None) => {
+        (Some("127.0.0.1") | Some("0.0.0.0"), Some(domain), None) => {
             let domain = Domain(domain.into());
             let domain_rule = DomainRule::Block(domain);
             Some(Rule::Domain(domain_rule))

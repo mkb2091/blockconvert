@@ -150,7 +150,10 @@ fn Contents(
                         <table class="table table-zebra">
                             <tbody>
                                 <For
-                                    each=move || { data.clone() }
+                                    each=move || {
+                                        data.clone().into_iter().take(1000).collect::<Vec<_>>()
+                                    }
+
                                     key=|pair| pair.clone()
                                     children=|pair| {
                                         view! {
@@ -184,19 +187,20 @@ enum ParseListError {
 async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
     log::info!("Parsing {}", url.as_str());
     let pool = crate::server::get_db().await?;
+    let mut tx = pool.begin().await?;
     let url_str = url.as_str();
     let record = sqlx::query!(
         "SELECT id, contents FROM filterLists WHERE url = $1",
         url_str
     )
-    .fetch_one(&pool)
+    .fetch_one(&mut *tx)
     .await?;
     let list_id = record.id;
     let contents = record.contents;
     let rules = crate::list_parser::parse_list(&contents, url.list_format);
     log::info!("Inserting {} rules", rules.len());
     sqlx::query! {"DELETE FROM list_rules WHERE list_id = $1", list_id}
-        .execute(&pool)
+        .execute(&mut *tx)
         .await?;
     let encoded = rules
         .iter()
@@ -205,70 +209,43 @@ async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
             let encoded_rule = serde_json::to_string(rule)?;
             Ok::<_, serde_json::Error>(encoded_rule)
         })
-        .collect::<Result<Vec<_>, serde_json::Error>>()?;
-    let now = std::time::Instant::now();
-    sqlx::query!(
-        "INSERT INTO Rules (rule) SELECT * FROM UNNEST ($1::text[]) ON CONFLICT DO NOTHING",
-        &encoded[..]
-    )
-    .execute(&pool)
-    .await?;
-
-    log::info!("Inserting rules took {:?}", now.elapsed());
-    let rule_id_lookup = sqlx::query!(
-        "SELECT rule, id FROM Rules WHERE rule = ANY($1::text[])",
-        &encoded[..]
-    )
-    .fetch_all(&pool)
-    .await?
-    .into_iter()
-    .map(|row| (row.rule, row.id))
-    .collect::<HashMap<_, _>>();
-
+        .collect::<Result<Arc<[String]>, serde_json::Error>>()?;
     let sources = rules
         .iter()
         .map(|rule| rule.get_source().to_string())
-        .collect::<Vec<_>>();
-
+        .collect::<Arc<[_]>>();
+    let start = std::time::Instant::now();
     sqlx::query!(
-        "INSERT INTO rule_source (source) SELECT UNNEST($1::text[]) ON CONFLICT DO NOTHING",
+        "INSERT INTO temp_rule_source (rule, source)
+        SELECT * FROM UNNEST ($1::text[], $2::text[])",
+        &encoded[..],
         &sources[..]
     )
-    .execute(&pool)
+    .execute(&mut *tx)
     .await?;
-
-    let source_id_lookup = sqlx::query!(
-        "SELECT source, id FROM rule_source WHERE source = ANY($1::text[])",
-        &sources[..]
-    )
-    .fetch_all(&pool)
-    .await?
-    .into_iter()
-    .map(|row| (row.source, row.id))
-    .collect::<HashMap<_, _>>();
-
-    let mut rule_ids = Vec::new();
-    let mut rule_source_ids = Vec::new();
-    for (rule, encoded) in rules.iter().zip(encoded.iter()) {
-        let rule_id = rule_id_lookup
-            .get(encoded)
-            .ok_or(ParseListError::MissingIdError)?;
-        let source_id = source_id_lookup
-            .get(&rule.get_source().to_string())
-            .ok_or(ParseListError::MissingIdError)?;
-        rule_ids.push(*rule_id);
-        rule_source_ids.push(*source_id);
-    }
-
-    let now = std::time::Instant::now();
     sqlx::query!(
-        "INSERT INTO list_rules (list_id, rule_id, source_id) SELECT $1, UNNEST($2::int[]), UNNEST($3::int[])",
-        list_id,
-        &rule_ids[..],
-        &rule_source_ids[..]
-    ).execute(&pool).await?;
-
-    log::info!("Inserting list_rules took {:?}", now.elapsed());
+        "INSERT INTO Rules (rule) SELECT rule FROM temp_rule_source ON CONFLICT DO NOTHING",
+    )
+    .execute(&mut *tx)
+    .await?;
+    sqlx::query!(
+        "INSERT INTO rule_source (source) SELECT source FROM temp_rule_source ON CONFLICT DO NOTHING",
+    ).execute(&mut *tx).await?;
+    sqlx::query!(
+        "INSERT INTO list_rules (list_id, rule_id, source_id)
+        SELECT $1, Rules.id, rule_source.id
+        FROM temp_rule_source
+        JOIN Rules ON Rules.rule = temp_rule_source.rule
+        JOIN rule_source ON rule_source.source = temp_rule_source.source",
+        list_id
+    )
+    .execute(&mut *tx)
+    .await?;
+    sqlx::query!("DELETE FROM temp_rule_source")
+        .execute(&mut *tx)
+        .await?;
+    tx.commit().await?;
+    log::info!("Total time: {:?}", start.elapsed());
     Ok(())
 }
 
@@ -450,7 +427,8 @@ fn FilterListSummary(url: crate::FilterListUrl, record: crate::FilterListRecord)
                 <LastUpdated last_updated=last_updated/>
             </td>
             <td>
-                <FilterListUpdate url=url.clone() set_updated=set_updated/>
+                <FilterListUpdate url=url.clone() set_updated=set_updated.clone()/>
+                <ParseList url=url.clone() set_updated=set_updated/>
             </td>
         </tr>
     }
