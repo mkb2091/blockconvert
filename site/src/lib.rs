@@ -2,8 +2,13 @@ pub mod app;
 pub mod error_template;
 pub mod list_manager;
 pub mod list_parser;
+pub mod rule_view;
+pub mod source_view;
+pub mod domain_view;
+pub mod domain_import_view;
 #[cfg(feature = "ssr")]
 pub mod server;
+
 #[cfg(feature = "ssr")]
 use mimalloc::MiMalloc;
 use serde::*;
@@ -13,6 +18,18 @@ use std::sync::Arc;
 #[cfg(feature = "ssr")]
 #[global_allocator]
 static GLOBAL: MiMalloc = MiMalloc;
+
+#[derive(Serialize, Deserialize, Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub struct RuleId(i32);
+
+#[derive(Serialize, Deserialize, Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub struct SourceId(i32);
+
+#[derive(Serialize, Deserialize, Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub struct ListId(i32);
+
+#[derive(Serialize, Deserialize, Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub struct DomainId(i64);
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct FilterListRecord {

@@ -15,7 +15,10 @@ leptos = { version = "0.6", features = ["nightly"] }
 leptos_axum = { version = "0.6", optional = true }
 leptos_meta = { version = "0.6", features = ["nightly"] }
 leptos_router = { version = "0.6", features = ["nightly"] }
-tokio = { version = "1", features = ["rt-multi-thread", "parking_lot"], optional = true }
+tokio = { version = "1", features = [
+    "rt-multi-thread",
+    "parking_lot",
+], optional = true }
 tower = { version = "0.4", optional = true }
 tower-http = { version = "0.5", features = ["fs"], optional = true }
 wasm-bindgen = "=0.2.91"
@@ -29,14 +32,24 @@ console_log = { version = "0.2", features = ["color"], optional = true }
 sqlx = { version = "0.7", features = [
     "runtime-tokio",
     "chrono",
-    "postgres"
+    "postgres",
+    "ipnetwork",
 ], optional = true }
 lazy_static = { version = "1.4.0", optional = true }
 reqwest = { version = "0.11.24", optional = true }
 chrono = { version = "0.4", features = ["serde"] }
 serde_json = "1.0.114"
-dotenv = {version = "0.15.0", optional = true}
-mimalloc = {version = "0.1.39", optional = true}
+dotenv = { version = "0.15.0", optional = true }
+mimalloc = { version = "0.1.39", optional = true }
+hickory-resolver = { version = "0.24.0", features = [
+    "tokio-runtime",
+], optional = true }
+addr = "0.15.6"
+ipnetwork = "0.20.0"
+tokio-tungstenite = {version = "0.21.0", features = ["native-tls"], optional = true}
+futures = "0.3.30"
+sct = {version = "0.7.1", optional = true}
+ct-logs = {version = "0.9.0", optional = true}
 
 
 [features]
@@ -64,6 +77,10 @@ ssr = [
     "dep:reqwest",
     "dep:dotenv",
     "dep:mimalloc",
+    "dep:hickory-resolver",
+    "dep:tokio-tungstenite",
+    "dep:sct",
+    "dep:ct-logs",
 ]
 default = ["ssr"]
 

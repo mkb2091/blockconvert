@@ -26,6 +26,12 @@ async fn main() {
 
     let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
     logging::log!("listening on http://{}", &addr);
+    tokio::spawn(async {
+        site::server::parse_missing_subdomains().await.unwrap();
+    });
+    tokio::spawn(async {
+        site::server::ct_find_domains().await.unwrap();
+    });
     axum::serve(listener, app.into_make_service())
         .await
         .unwrap();

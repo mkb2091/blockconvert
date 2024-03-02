@@ -108,13 +108,11 @@ pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError>
             log::info!("Fetched {:?}", url_str);
             let new_last_updated = chrono::Utc::now();
             let list_format = url.list_format.as_str();
-            log::info!("Parsed {:#?}", url_str);
+            log::info!("Updated {}", url_str);
             sqlx::query!(
-                "DELETE FROM filterLists WHERE url = $1",
-                url_str
-            ).execute(&pool).await?;
-            sqlx::query!(
-                "INSERT INTO filterLists (url, lastUpdated, contents, format, etag) VALUES ($1, $2, $3, $4, $5)",
+                "INSERT INTO filterLists (url, lastUpdated, contents, format, etag) VALUES ($1, $2, $3, $4, $5)
+                ON CONFLICT (url) DO UPDATE SET lastUpdated = $2, contents = $3, format = $4, etag = $5
+                ",
                 url_str,
                 new_last_updated,
                 body,
