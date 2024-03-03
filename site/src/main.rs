@@ -30,7 +30,7 @@ async fn main() {
         site::server::parse_missing_subdomains().await.unwrap();
     });
     tokio::spawn(async {
-        site::server::ct_find_domains().await.unwrap();
+        site::server::check_missing_dns().await.unwrap();
     });
     axum::serve(listener, app.into_make_service())
         .await

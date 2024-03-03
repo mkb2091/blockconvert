@@ -1,18 +1,19 @@
 pub mod app;
+pub mod domain_import_view;
+pub mod domain_view;
 pub mod error_template;
+pub mod ip_view;
 pub mod list_manager;
 pub mod list_parser;
 pub mod rule_view;
-pub mod source_view;
-pub mod domain_view;
-pub mod domain_import_view;
 #[cfg(feature = "ssr")]
 pub mod server;
+pub mod source_view;
 
 #[cfg(feature = "ssr")]
 use mimalloc::MiMalloc;
 use serde::*;
-use std::convert::{From, Into};
+use std::convert::{From};
 use std::sync::Arc;
 
 #[cfg(feature = "ssr")]
@@ -28,7 +29,7 @@ pub struct SourceId(i32);
 #[derive(Serialize, Deserialize, Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub struct ListId(i32);
 
-#[derive(Serialize, Deserialize, Debug, Copy, Clone, PartialEq, Eq, Hash)]
+#[derive(Serialize, Deserialize, Debug, Copy, Clone, PartialEq, Eq, Hash, PartialOrd, Ord)]
 pub struct DomainId(i64);
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
@@ -47,14 +48,15 @@ pub struct FilterListUrl {
     list_format: FilterListType,
 }
 
-impl Into<(Arc<url::Url>, FilterListType)> for FilterListUrl {
-    fn into(self) -> (Arc<url::Url>, FilterListType) {
-        (self.url, self.list_format)
-    }
-}
 impl From<(Arc<url::Url>, FilterListType)> for FilterListUrl {
     fn from((url, list_format): (Arc<url::Url>, FilterListType)) -> Self {
         Self { url, list_format }
+    }
+}
+
+impl From<FilterListUrl> for (Arc<url::Url>, FilterListType) {
+    fn from(val: FilterListUrl) -> (Arc<url::Url>, FilterListType) {
+        (val.url, val.list_format)
     }
 }
 
@@ -145,9 +147,10 @@ pub struct FilterListMap(
     pub std::collections::BTreeMap<FilterListUrl, FilterListRecord>,
     // Just so it is consistently ordered
 );
-impl std::convert::Into<Vec<(FilterListUrl, FilterListRecord)>> for FilterListMap {
-    fn into(self) -> Vec<(FilterListUrl, FilterListRecord)> {
-        self.0.into_iter().collect()
+
+impl std::convert::From<FilterListMap> for Vec<(FilterListUrl, FilterListRecord)> {
+    fn from(val: FilterListMap) -> Self {
+        val.0.into_iter().collect()
     }
 }
 impl std::convert::From<Vec<(FilterListUrl, FilterListRecord)>> for FilterListMap {

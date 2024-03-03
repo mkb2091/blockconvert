@@ -99,7 +99,7 @@ pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError>
     match response.status() {
         reqwest::StatusCode::NOT_MODIFIED => {
             log::info!("Not modified {:?}", url_str);
-            return Ok(());
+            Ok(())
         }
         reqwest::StatusCode::OK => {
             let headers = response.headers().clone();

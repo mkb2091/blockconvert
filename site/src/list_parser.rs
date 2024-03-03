@@ -89,9 +89,9 @@ impl RulePair {
         &self.source
     }
 }
-impl Into<(Arc<str>, Rule)> for RulePair {
-    fn into(self) -> (Arc<str>, Rule) {
-        (self.source, self.rule)
+impl From<RulePair> for (Arc<str>, Rule) {
+    fn from(val: RulePair) -> Self {
+        (val.source, val.rule)
     }
 }
 impl From<(Arc<str>, Rule)> for RulePair {
@@ -110,7 +110,7 @@ fn parse_lines(contents: &str, parser: &dyn Fn(&str) -> Option<Rule>) -> Vec<Rul
         if let Some(rule) = parser(line) {
             rules.push(RulePair {
                 source: source.into(),
-                rule: rule,
+                rule,
             });
         }
     }
@@ -118,9 +118,7 @@ fn parse_lines(contents: &str, parser: &dyn Fn(&str) -> Option<Rule>) -> Vec<Rul
 }
 
 fn parse_domain_list_line(line: &str, allow: bool, subdomain: bool) -> Option<Rule> {
-    let Some(line) = line.split('#').next() else {
-        return None;
-    };
+    let line = line.split('#').next()?;
     if line.is_empty() {
         return None;
     }
@@ -151,7 +149,7 @@ fn parse_domain_list(contents: &str, allow: bool, subdomain: bool) -> Vec<RulePa
 
 fn parse_adblock_line(line: &str) -> Option<Rule> {
     let rule = line;
-    if rule.starts_with("!") // Comment
+    if rule.starts_with('!') // Comment
         || rule.contains('#') // CSS selector
         || !rule.trim_matches('.').contains('.') // Not a domain
         || matches! {rule, "[Adblock Plus 2.0]" | "[Adblock Plus 1.1]"}

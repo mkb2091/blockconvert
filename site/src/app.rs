@@ -2,6 +2,7 @@ use crate::{
     domain_import_view::DomainImportView,
     domain_view::DomainViewPage,
     error_template::{AppError, ErrorTemplate},
+    ip_view::IpView,
     list_manager,
     rule_view::{DisplayRule, RuleData, RuleViewPage},
     source_view::SourceViewPage,
@@ -43,6 +44,7 @@ pub fn App() -> impl IntoView {
                     <Route path="rule/:id" view=RuleViewPage ssr=SsrMode::InOrder/>
                     <Route path="rule_source/:id" view=SourceViewPage ssr=SsrMode::InOrder/>
                     <Route path="domain/:domain" view=DomainViewPage ssr=SsrMode::InOrder/>
+                    <Route path="ip/:ip" view=IpView ssr=SsrMode::InOrder/>
                     <Route
                         path="import_domains"
                         view=DomainImportView
@@ -73,11 +75,11 @@ impl ViewListParams {
 #[derive(thiserror::Error, Debug)]
 enum ViewListError {
     #[error("Invalid URL")]
-    ParseError(#[from] url::ParseError),
+    ParseURL(#[from] url::ParseError),
     #[error("Invalid URL")]
-    ParamError(#[from] leptos_router::ParamsError),
+    ParseParam(#[from] leptos_router::ParamsError),
     #[error("Invalid FilterListType")]
-    InvalidFilterListTypeError(#[from] crate::InvalidFilterListTypeError),
+    InvalidFilterListType(#[from] crate::InvalidFilterListTypeError),
 }
 
 #[server]
@@ -131,7 +133,7 @@ async fn get_list_page(
         })
         .collect::<Result<Vec<(_, _, _)>, ServerFnError>>();
 
-    Ok(rules?)
+    rules
 }
 
 #[component]
@@ -167,13 +169,11 @@ fn LastUpdated(
     }
 }
 
+type GetListContents =
+    Resource<usize, Result<Vec<(RuleId, SourceId, crate::list_parser::RulePair)>, ServerFnError>>;
+
 #[component]
-fn Contents(
-    contents: Resource<
-        usize,
-        Result<Vec<(RuleId, SourceId, crate::list_parser::RulePair)>, ServerFnError>,
-    >,
-) -> impl IntoView {
+fn Contents(contents: GetListContents) -> impl IntoView {
     view! {
         <Transition fallback=move || {
             view! { <p>"Loading " <Loading/></p> }
@@ -668,6 +668,43 @@ fn SubdomainCount() -> impl IntoView {
     }
 }
 
+#[server]
+async fn get_dns_lookup_count() -> Result<usize, ServerFnError> {
+    let pool = crate::server::get_db().await?;
+    let count = sqlx::query!("SELECT COUNT(*) FROM domains WHERE last_checked_dns IS NOT NULL")
+        .fetch_one(&pool)
+        .await?
+        .count
+        .ok_or_else(|| ServerFnError::new("No count"))? as usize;
+    Ok(count)
+}
+
+#[component]
+fn DnsLookupCount() -> impl IntoView {
+    let dns_lookup_count = create_resource(|| (), |_| async move { get_dns_lookup_count().await });
+    view! {
+        <Transition fallback=move || {
+            view! {
+                "Loading "
+                <Loading/>
+            }
+        }>
+            {move || match dns_lookup_count.get() {
+                None => view! {}.into_view(),
+                Some(Err(err)) => {
+                    view! {
+                        "Error Loading "
+                        {format!("{:?}", err)}
+                    }
+                        .into_view()
+                }
+                Some(Ok(count)) => view! { {count} }.into_view(),
+            }}
+
+        </Transition>
+    }
+}
+
 /// Renders the home page of your application.
 #[component]
 fn HomePage() -> impl IntoView {
@@ -681,6 +718,7 @@ fn HomePage() -> impl IntoView {
         <p>"Total Rules: " <TotalRuleCount/></p>
         <p>"Total Domains: " <DomainCount/></p>
         <p>"Total Subdomains: " <SubdomainCount/></p>
+        <p>"Total DNS Lookups: " <DnsLookupCount/></p>
         <UpdateAll/>
         <ReparseAll/>
         <Transition fallback=move || {
