@@ -13,7 +13,7 @@ pub mod source_view;
 #[cfg(feature = "ssr")]
 use mimalloc::MiMalloc;
 use serde::*;
-use std::convert::{From};
+use std::convert::From;
 use std::sync::Arc;
 
 #[cfg(feature = "ssr")]
@@ -148,12 +148,12 @@ pub struct FilterListMap(
     // Just so it is consistently ordered
 );
 
-impl std::convert::From<FilterListMap> for Vec<(FilterListUrl, FilterListRecord)> {
+impl From<FilterListMap> for Vec<(FilterListUrl, FilterListRecord)> {
     fn from(val: FilterListMap) -> Self {
         val.0.into_iter().collect()
     }
 }
-impl std::convert::From<Vec<(FilterListUrl, FilterListRecord)>> for FilterListMap {
+impl From<Vec<(FilterListUrl, FilterListRecord)>> for FilterListMap {
     fn from(v: Vec<(FilterListUrl, FilterListRecord)>) -> Self {
         Self(v.into_iter().collect())
     }

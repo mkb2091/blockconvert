@@ -39,7 +39,7 @@ lazy_static = { version = "1.4.0", optional = true }
 reqwest = { version = "0.11.24", optional = true }
 chrono = { version = "0.4", features = ["serde"] }
 serde_json = "1.0.114"
-dotenv = { version = "0.15.0", optional = true }
+dotenvy = { version = "0.15.0", optional = true }
 mimalloc = { version = "0.1.39", optional = true }
 hickory-resolver = { version = "0.24.0", features = [
     "tokio-runtime",
@@ -75,7 +75,7 @@ ssr = [
     "dep:sqlx",
     "dep:lazy_static",
     "dep:reqwest",
-    "dep:dotenv",
+    "dep:dotenvy",
     "dep:mimalloc",
     "dep:hickory-resolver",
     "dep:tokio-tungstenite",

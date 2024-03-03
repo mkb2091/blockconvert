@@ -21,7 +21,7 @@ pub enum DbInitError {
 }
 
 pub async fn get_db() -> Result<sqlx::PgPool, DbInitError> {
-    let _ = dotenv::dotenv();
+    let _ = dotenvy::dotenv();
     let db_url = std::env::var("DATABASE_URL")?;
 
     Ok(SQLITE_POOL
