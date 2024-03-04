@@ -1,64 +1,177 @@
 [package]
-name = "domain_list_builder"
+name = "blockconvert"
 version = "0.1.0"
-authors = ["Alex Williams <hughaw64@gmail.com>"]
-edition = "2018"
+edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[workspace]
-members = [ "common","frontend"]
+[lib]
+crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-blockconvert = "^0.5.1"
+serde = { version = "1.0", features = ["derive", "rc"] }
+url = { version = "2.5.0", features = ["serde"] }
+axum = { version = "0.7", optional = true }
+console_error_panic_hook = { version = "0.1", optional = true }
+leptos = { version = "0.6", features = ["nightly"] }
+leptos_axum = { version = "0.6", optional = true }
+leptos_meta = { version = "0.6", features = ["nightly"] }
+leptos_router = { version = "0.6", features = ["nightly"] }
+tokio = { version = "1", features = [
+    "rt-multi-thread",
+    "parking_lot",
+], optional = true }
+tower = { version = "0.4", optional = true }
+tower-http = { version = "0.5", features = ["fs"], optional = true }
+wasm-bindgen = "=0.2.91"
+thiserror = "1"
+tracing = { version = "0.1", optional = true }
+http = "1"
+csv = { version = "1.3.0", optional = true }
+env_logger = { version = "0.11.2", optional = true }
+log = "0.4.21"
+console_log = { version = "1.0", features = ["color"], optional = true }
+sqlx = { version = "0.7", features = [
+    "runtime-tokio",
+    "chrono",
+    "postgres",
+    "ipnetwork",
+], optional = true }
+lazy_static = { version = "1.4.0", optional = true }
+reqwest = { version = "0.11.24", optional = true }
+chrono = { version = "0.4", features = ["serde"] }
+serde_json = "1.0.114"
+dotenvy = { version = "0.15.0", optional = true }
+mimalloc = { version = "0.1.39", optional = true }
+hickory-resolver = { version = "0.24.0", features = [
+    "tokio-runtime",
+], optional = true }
+addr = "0.15.6"
+ipnetwork = "0.20.0"
+tokio-tungstenite = { version = "0.21.0", features = [
+    "native-tls",
+], optional = true }
+futures = "0.3.30"
+sct = { version = "0.7.1", optional = true }
+ct-logs = { version = "0.9.0", optional = true }
+rand = { version = "0.8.5", optional = true }
+hickory-proto = { version = "0.24.0", default-features = false }
 
-reqwest = {version = "0.11", default-features = false, features = ["rustls-tls", "brotli", "gzip", "deflate"]}
-futures = {version = "0.3"}
-tokio = {version = "1", features = ["full"]}
-tokio-stream = {version = "0.1", features = ["fs"]}
 
-serde = {version = "1.0", features = ["derive"]}
-tokio-tungstenite = {version = "0.18", features = ["rustls-tls-webpki-roots"]}
+[features]
+hydrate = [
+    "leptos/hydrate",
+    "leptos_meta/hydrate",
+    "leptos_router/hydrate",
+    "dep:console_log",
+    "dep:console_error_panic_hook",
+]
+ssr = [
+    "dep:axum",
+    "dep:tokio",
+    "dep:tower",
+    "dep:tower-http",
+    "dep:leptos_axum",
+    "leptos/ssr",
+    "leptos_meta/ssr",
+    "leptos_router/ssr",
+    "dep:tracing",
+    "dep:csv",
+    "dep:env_logger",
+    "dep:sqlx",
+    "dep:lazy_static",
+    "dep:reqwest",
+    "dep:dotenvy",
+    "dep:mimalloc",
+    "dep:hickory-resolver",
+    "dep:tokio-tungstenite",
+    "dep:sct",
+    "dep:ct-logs",
+    "dep:rand",
+]
+default = ["ssr"]
 
-csv = "1.2"
-serde_json = "1.0"
-
-regex = {version = "1.7", features = ["std", "perf"]}
-
-chrono = "0.4"
-filetime = "0.2"
-
-clap = {version = "4", features = ["derive"]}
-toml = "0.7"
-serde_derive = "1"
-
-notify = "5"
-
-parking_lot = "0.12"
-fxhash = "0.2"
-
-sled = "0.34.7"
-zerocopy = "0.6.1"
-thiserror = "1.0.38"
-anyhow = "1.0"
-num_cpus = "1.15.0"
-dashmap = "5.4.0"
-trust-dns-resolver = {version = "0.22.0", default-features = false, features = ["tokio-runtime"]}
-bincode = "1.3.3"
-mimalloc = "0.1.34"
-log = {version = "0.4.17", default-features = false, features = ["max_level_off"]}
-warp = {version = "0.3.5", features = ["compression"]}
-
-[dev-dependencies]
-quickcheck = "1"
-quickcheck_macros = "1"
-
-[profile.release]
-debug = false
-lto = "thin"
-strip = true
+# Defines a size-optimized profile for the WASM bundle in release mode
+[profile.wasm-release]
+inherits = "release"
+opt-level = 'z'
+lto = true
+codegen-units = 1
+panic = "abort"
 
 
 [profile.dev.package."*"]
-debug-assertions = false
 opt-level = 3
+
+[package.metadata.leptos]
+# The name used by wasm-bindgen/cargo-leptos for the JS/WASM bundle. Defaults to the crate name
+output-name = "site"
+
+# The site root folder is where cargo-leptos generate all output. WARNING: all content of this folder will be erased on a rebuild. Use it in your server setup.
+site-root = "target/site"
+
+# The site-root relative folder where all compiled output (JS, WASM and CSS) is written
+# Defaults to pkg
+site-pkg-dir = "pkg"
+
+# [Optional] The source CSS file. If it ends with .sass or .scss then it will be compiled by dart-sass into CSS. The CSS is optimized by Lightning CSS before being written to <site-root>/<site-pkg>/app.css
+style-file = "style/main.scss"
+# Assets source dir. All files found here will be copied and synchronized to site-root.
+# The assets-dir cannot have a sub directory with the same name/path as site-pkg-dir.
+#
+# Optional. Env: LEPTOS_ASSETS_DIR.
+assets-dir = "public"
+
+# The IP and port (ex: 127.0.0.1:3000) where the server serves the content. Use it in your server setup.
+site-addr = "127.0.0.1:3000"
+
+# The port to use for automatic reload monitoring
+reload-port = 3001
+
+# [Optional] Command to use when running end2end tests. It will run in the end2end dir.
+#   [Windows] for non-WSL use "npx.cmd playwright test"
+#   This binary name can be checked in Powershell with Get-Command npx
+end2end-cmd = "npx playwright test"
+end2end-dir = "end2end"
+
+#  The browserlist query used for optimizing the CSS.
+browserquery = "defaults"
+
+# Set by cargo-leptos watch when building with that tool. Controls whether autoreload JS will be included in the head
+watch = false
+
+# The environment Leptos will run in, usually either "DEV" or "PROD"
+env = "DEV"
+
+# The features to use when compiling the bin target
+#
+# Optional. Can be over-ridden with the command line parameter --bin-features
+bin-features = ["ssr"]
+
+# If the --no-default-features flag should be used when compiling the bin target
+#
+# Optional. Defaults to false.
+bin-default-features = false
+
+# The features to use when compiling the lib target
+#
+# Optional. Can be over-ridden with the command line parameter --lib-features
+lib-features = ["hydrate"]
+
+# If the --no-default-features flag should be used when compiling the lib target
+#
+# Optional. Defaults to false.
+lib-default-features = false
+
+# The profile to use for the lib target when compiling for release
+#
+# Optional. Defaults to "release".
+lib-profile-release = "wasm-release"
+
+# The tailwind input file.
+#
+# Optional, Activates the tailwind build
+tailwind-input-file = "style/tailwind.css"
+# The tailwind config file.
+#
+# Optional, defaults to "tailwind.config.js" which if is not present
+# is generated for you
+tailwind-config-file = "tailwind.config.js"

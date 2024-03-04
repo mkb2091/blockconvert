@@ -14,7 +14,6 @@ Xiaomi DNS Blocklist,https://raw.githubusercontent.com/unknownFalleN/xiaomi-dns-
 WindowsSpyBlocker - Hosts spy rules,https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt,,MIT,86400,Hostfile
 Whitelist,https://raw.githubusercontent.com/ookangzheng/blahdns/master/hosts/whitelist.txt,ookangzheng,CC BY-NC-SA 4.0(I  received permission to add to this project),86400,DomainAllowlist
 Whitelist,https://raw.githubusercontent.com/NoExitTV/whitelist/master/domains/whitelist.txt,,MIT,604800,DomainAllowlist
-Useful Linux Shell Scripts Hosts,https://raw.githubusercontent.com/jackrabbit335/UsefulLinuxShellScripts/master/Hosts%20%26%20sourcelist/blacklist.txt,,GPL-3.0,864000,Hostfile
 Trackers,https://git.herrbischoff.com/trackers/plain/trackers.txt,,The Unlicense,864000,DomainBlocklist
 The Ultimate Hosts Blacklist whitelist,https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list,,MIT,86400,DomainAllowlist
 The Hosts File Project,https://hblock.molinero.dev/hosts,Héctor Molinero Fernández <hector@molinero.dev>,MIT,86400,Hostfile
@@ -64,7 +63,6 @@ EasyList,https://easylist.to/easylist/easylist.txt,,GPLv3,345600,Adblock
 Commonly white listed domains for Pi-Hole,https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt,,MIT,86400,DomainAllowlist
 CJX's Annoyance List,https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt,,LGPLv3,345600,Adblock
 CB-Malicious-Domains,https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_lists/domains_only.txt,,MIT,86400,DomainBlocklist
-Binary Defense Banlist,https://www.binarydefense.com/banlist.txt,,Public use only,86400,IPBlocklist
 Better content blocking rules,https://better.fyi/blockerList.txt,,CC-BY-SA-4.0,86400,Adblock
 Basic tracking list by Disconnect,https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt,,GPLv3,86400,DomainBlocklist
 BarbBlock,https://paulgb.github.io/BarbBlock/blacklists/hosts-file.txt,,MIT,86400,DomainBlocklist
@@ -77,7 +75,6 @@ AdguardDNS,https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDN
 AdguardApps,https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt,,GPLv3,86400,Hostfile
 Adblock List for Finland,https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/master/Finland_adb.txt,,The Unlicense,432000,Adblock
 AdGuard Simplified Domain Names filter,https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt,,GPLv3,86400,Adblock
-AdBlockID,https://raw.githubusercontent.com/realodix/AdBlockID/master/output/adblockid.txt,,GPLv3,345600,Adblock
 AdBlock Farsi,https://raw.githubusercontent.com/SlashArash/adblockfa/master/adblockfa.txt,,The Beer-Ware License,432000,Adblock
 AdAway default blocklist,https://adaway.org/hosts.txt,,CC-BY-3,86400,Hostfile
 Ad filter list by Disconnect,https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt,,GPLv3,86400,DomainBlocklist
@@ -87,14 +84,12 @@ ABPindo,https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/
 ,https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt,,GPLv3,86400,DomainBlocklist
 ,https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt,,GPLv3,86400,Hostfile
 ,https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list,Mitchell Krog,MIT,86400,DomainBlocklist
-,https://raw.githubusercontent.com/mitchellkrogza/Suspicious.Snooping.Sniffing.Hacking.IP.Addresses/master/ips.list,Mitchell Krog,MIT,86400,IPBlocklist
 ,https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt,,Public Domain,86400,DomainBlocklist
 ,https://raw.githubusercontent.com/ligyxy/Blocklist/master/BLOCKLIST,,MIT,86400,DomainBlocklist
 ,https://raw.githubusercontent.com/bjornstar/hosts/master/hosts,,The Unlicense,86400,Hostfile
 ,https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt,,GPLv3+,86400,DomainAllowlist
 ,https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json,,GPLv3,86400,PrivacyBadger
 ,https://raw.githubusercontent.com/EFForg/badger-sett/master/results.json,,GPLv3,86400,PrivacyBadger
-,https://filtri-dns.ga/filtri.txt,,GPLv3,86400,Hostfile
 ,https://blocklists.kitsapcreator.com/scam-spam.txt,,The Unlicense,86400,DomainBlocklist
 ,https://blocklists.kitsapcreator.com/malware-malicious.txt,,The Unlicense,86400,DomainBlocklist
 ,https://blocklists.kitsapcreator.com/general.txt,,The Unlicense,86400,DomainBlocklist

@@ -5,9 +5,9 @@ use std::sync::Arc;
 use crate::list_parser::Domain;
 use crate::DomainId;
 use futures::StreamExt;
-use hickory_resolver::config::NameServerConfigGroup;
 use hickory_resolver::error::ResolveError;
 use leptos::*;
+use rand::Rng;
 
 static SQLITE_POOL: tokio::sync::OnceCell<sqlx::PgPool> = tokio::sync::OnceCell::const_new();
 
@@ -21,11 +21,12 @@ pub enum DbInitError {
 }
 
 pub async fn get_db() -> Result<sqlx::PgPool, DbInitError> {
-    let _ = dotenvy::dotenv();
-    let db_url = std::env::var("DATABASE_URL")?;
-
     Ok(SQLITE_POOL
-        .get_or_try_init(|| sqlx::PgPool::connect(&db_url))
+        .get_or_try_init(|| {
+            let _ = dotenvy::dotenv();
+            let db_url = std::env::var("DATABASE_URL");
+            async { Ok::<_, DbInitError>(sqlx::PgPool::connect(&db_url?).await?) }
+        })
         .await
         .cloned()?)
 }
@@ -109,7 +110,7 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
 
 fn parse_lookup_result(
     result: Result<hickory_resolver::lookup_ip::LookupIp, ResolveError>,
-) -> Result<(Vec<ipnetwork::IpNetwork>, Vec<String>), ResolveError> {
+) -> Result<(Vec<ipnetwork::IpNetwork>, Vec<Domain>), ResolveError> {
     match result {
         Ok(result) => {
             let mut ips: Vec<ipnetwork::IpNetwork> = Vec::new();
@@ -123,63 +124,133 @@ fn parse_lookup_result(
                     let ip: IpAddr = aaaa.0.into();
                     ips.push(ip.into());
                 } else if let Some(cname) = record.as_cname() {
-                    cnames.push(cname.0.to_ascii());
+                    let mut cname = cname.0.to_ascii();
+                    if cname.ends_with('.') {
+                        cname.pop();
+                    }
+                    if let Ok(cname) = cname.as_str().try_into() {
+                        cnames.push(cname);
+                    } else {
+                        log::warn!("Invalid CNAME {}", cname);
+                    }
                 } else {
                     log::info!("Unknown record type {:?}", record.record_type());
                 }
             }
             Ok((ips, cnames))
         }
-        Err(err) => {
-            if let hickory_resolver::error::ResolveErrorKind::NoRecordsFound {
+        Err(err) => match err.kind() {
+            hickory_resolver::error::ResolveErrorKind::NoRecordsFound {
                 query: _,
                 soa: _,
                 negative_ttl: _,
                 response_code: _,
                 trusted: _,
-            } = err.kind()
-            {
-                Ok((vec![], vec![]))
-            } else {
-                Err(err)
-            }
-        }
+            } => Ok((vec![], vec![])),
+            hickory_resolver::error::ResolveErrorKind::Proto(_) => Ok((vec![], vec![])),
+            hickory_resolver::error::ResolveErrorKind::Timeout => Err(err),
+            _ => Err(err),
+        },
     }
 }
 
-pub async fn check_missing_dns() -> Result<(), ServerFnError> {
-    const LIMIT: i64 = 200;
-    const CONCURRENT_LOOKUPS: usize = 30;
-    let pool = get_db().await?;
-    let mut group = NameServerConfigGroup::google();
-    group.merge(NameServerConfigGroup::cloudflare());
-    group.merge(
-        hickory_resolver::config::NameServerConfigGroup::from_ips_clear(
-            &["9.9.9.10".parse().unwrap(), "149.112.112.10".parse().unwrap()],
-            53,
+type Resolver = Arc<
+    hickory_resolver::AsyncResolver<
+        hickory_resolver::name_server::GenericConnector<
+            hickory_resolver::name_server::TokioRuntimeProvider,
+        >,
+    >,
+>;
+
+fn get_resolvers() -> Result<Vec<(Arc<str>, Resolver)>, ServerFnError> {
+    let _ = dotenvy::dotenv()?;
+    let servers_str = std::env::var("DNS_SERVERS")?;
+    let mut resolvers = Vec::new();
+    for server in servers_str.split(',') {
+        let server: Arc<str> = server.into();
+        let (addr, port) = server
+            .split_once(':')
+            .ok_or_else(|| ServerFnError::new("Bad DNS_SERVER env"))?;
+        let server_conf = hickory_resolver::config::NameServerConfigGroup::from_ips_clear(
+            &[addr.parse()?],
+            port.parse()?,
             true,
-        ),
-    );
-    let config = hickory_resolver::config::ResolverConfig::from_parts(None, vec![], group);
-    let mut opts = hickory_resolver::config::ResolverOpts::default();
-    opts.ip_strategy = hickory_resolver::config::LookupIpStrategy::Ipv4AndIpv6;
-    opts.server_ordering_strategy =
-        hickory_resolver::config::ServerOrderingStrategy::QueryStatistics;
-    let resolver = Arc::new(hickory_resolver::AsyncResolver::tokio(config, opts));
+        );
+        let config =
+            hickory_resolver::config::ResolverConfig::from_parts(None, vec![], server_conf);
+        let mut opts = hickory_resolver::config::ResolverOpts::default();
+        opts.ip_strategy = hickory_resolver::config::LookupIpStrategy::Ipv4AndIpv6;
+        opts.cache_size = 32;
+        opts.attempts = 3;
+        opts.timeout = std::time::Duration::from_secs_f32(5.0);
+        let resolver = Arc::new(hickory_resolver::AsyncResolver::tokio(config, opts));
+        resolvers.push((server, resolver));
+    }
+
+    if resolvers.is_empty() {
+        return Err(ServerFnError::new("Empty DNS server list"));
+    }
+    Ok(resolvers)
+}
+
+pub async fn check_missing_dns() -> Result<(), ServerFnError> {
+    let _ = dotenvy::dotenv()?;
+    let pool: sqlx::Pool<sqlx::Postgres> = get_db().await?;
+    let read_limit: usize = std::env::var("READ_LIMIT")?.parse()?;
+    let concurrent_lookups = std::env::var("CONCURRENT_LOOKUPS")?.parse()?;
+    let write_frequency: u64 = std::env::var("WRITE_FREQUENCY")?.parse()?;
+    let resolvers = get_resolvers()?;
+    let size: Option<i64> =
+        sqlx::query!("SELECT COUNT(*) FROM domains WHERE last_checked_dns IS NULL")
+            .fetch_one(&pool)
+            .await?
+            .count;
+
+    let mut start = 0;
+    if let Some(size) = size {
+        if size as usize > read_limit {
+            start = rand::thread_rng().gen_range(0..size.saturating_sub(read_limit as i64));
+        }
+    }
     let mut failed_count = 100000;
 
+    let mut records = Vec::new();
+
     let mut tasks = futures::stream::futures_unordered::FuturesUnordered::new();
+    let mut last_wrote = std::time::Instant::now();
+    let lookup_domain = |(domain_id, mut domain): (DomainId, String)| {
+        if !domain.ends_with('.') {
+            domain.push('.'); // Make sure it's a FQDN
+        }
+        let (server_str, resolver) = resolvers[domain_id.0 as usize % resolvers.len()].clone();
+        tokio::spawn(async move {
+            let result = resolver.lookup_ip(domain.as_str()).await;
+            assert!(domain.ends_with('.'));
+            let _ = domain.pop();
+            (server_str, domain_id, domain, result)
+        })
+    };
+
+    let mut looked_up_domains = Vec::new();
+    let mut dns_ips_domain_ids = Vec::new();
+    let mut dns_ips_ips = Vec::new();
+    let mut dns_cnames_domain_ids = Vec::new();
+    let mut dns_cnames_cname = Vec::new();
+    let mut bad_domains = Vec::new();
     loop {
-        let mut records = sqlx::query!(
-            "SELECT id, domain from domains
+        if records.len() < read_limit {
+            let new_records = sqlx::query!(
+                "SELECT id, domain from domains
         WHERE last_checked_dns IS NULL
         ORDER BY (id) ASC
         LIMIT $1 OFFSET $2",
-            LIMIT,
-            failed_count + tasks.len() as i64
-        )
-        .fetch_all(&pool)
-        .await?;
+                read_limit as i64,
+                start + failed_count + tasks.len() as i64 + records.len() as i64
+            )
+            .fetch_all(&pool)
+            .await?;
+            records.extend(new_records);
+        }
         if records.is_empty() && tasks.is_empty() {
             if failed_count == 0 {
                 log::info!("No more records to process, sleeping");
@@ -188,55 +259,58 @@ pub async fn check_missing_dns() -> Result<(), ServerFnError> {
                 // Retry failed domains
                 failed_count = 0;
             }
+            start = 0;
             continue;
         }
-        let lookup_domain = |(domain_id, mut domain): (DomainId, String)| {
-            if !domain.ends_with('.') {
-                domain.push('.'); // Make sure it's a FQDN
-            }
-            let resolver = resolver.clone();
-            tokio::spawn(async move {
-                let result = resolver.lookup_ip(domain.as_str()).await;
-                (domain_id, domain, result)
-            })
-        };
-        while tasks.len() < CONCURRENT_LOOKUPS {
+
+        while tasks.len() < concurrent_lookups {
             if let Some(record) = records.pop() {
                 tasks.push(lookup_domain((DomainId(record.id), record.domain)));
             } else {
                 break;
             }
         }
-        let mut looked_up_domains = Vec::new();
-        let mut dns_ips_domain_ids = Vec::new();
-        let mut dns_ips_ips = Vec::new();
-        let mut dns_cnames_domain_ids = Vec::new();
-        let mut dns_cnames_cname = Vec::new();
+        looked_up_domains.clear();
+        dns_ips_domain_ids.clear();
+        dns_ips_ips.clear();
+        dns_cnames_domain_ids.clear();
+        dns_cnames_cname.clear();
+        bad_domains.clear();
         while let Some(result) = tasks.next().await {
-            let (domain_id, domain, result) = result?;
-
-            let (ips, cnames) = match parse_lookup_result(result) {
-                Ok((ips, cnames)) => (ips, cnames),
+            let (server_str, domain_id, domain, result) = result?;
+            match parse_lookup_result(result) {
+                Ok((ips, cnames)) => {
+                    looked_up_domains.push(domain_id.0);
+                    for ip in ips {
+                        dns_ips_domain_ids.push(domain_id.0);
+                        dns_ips_ips.push(ip);
+                    }
+                    for cname in cnames {
+                        dns_cnames_domain_ids.push(domain_id.0);
+                        dns_cnames_cname.push(cname.as_ref().into());
+                    }
+                }
                 Err(err) => {
-                    log::warn!("Error looking up domain {}: {}", domain, err);
-                    tokio::time::sleep(std::time::Duration::from_secs(5)).await;
+                    log::warn!(
+                        "Server:  {} Error looking up domain {}: {}",
+                        server_str,
+                        domain,
+                        err
+                    );
+                    let domain_parsed: Result<Domain, _> = domain.as_str().try_into();
+                    if domain_parsed.is_err() {
+                        log::warn!("Removing bad domain: {}", domain);
+                        bad_domains.push(domain_id.0);
+                    }
+                    looked_up_domains.push(domain_id.0); // Don't try again until rechecking
                     failed_count += 1;
                     continue;
                 }
             };
-            looked_up_domains.push(domain_id.0);
-            for ip in ips {
-                dns_ips_domain_ids.push(domain_id.0);
-                dns_ips_ips.push(ip);
-            }
-            for cname in cnames {
-                dns_cnames_domain_ids.push(domain_id.0);
-                dns_cnames_cname.push(cname);
-            }
             if let Some(record) = records.pop() {
                 tasks.push(lookup_domain((DomainId(record.id), record.domain)));
             }
-            if records.is_empty() {
+            if records.is_empty() || last_wrote.elapsed().as_secs() > write_frequency {
                 break;
             }
         }
@@ -246,7 +320,7 @@ pub async fn check_missing_dns() -> Result<(), ServerFnError> {
             dns_ips_domain_ids.len(),
             dns_cnames_domain_ids.len()
         );
-
+        last_wrote = std::time::Instant::now();
         let mut tx = pool.begin().await?;
         let total_cnames = dns_cnames_cname
             .iter()
@@ -286,6 +360,13 @@ pub async fn check_missing_dns() -> Result<(), ServerFnError> {
         SET last_checked_dns = now()
         WHERE id = ANY($1::bigint[])",
             &looked_up_domains[..]
+        )
+        .execute(&mut *tx)
+        .await?;
+        sqlx::query!(
+            "DELETE FROM domains
+    WHERE id = ANY($1::bigint[])",
+            &bad_domains[..]
         )
         .execute(&mut *tx)
         .await?;

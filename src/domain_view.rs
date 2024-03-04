@@ -52,35 +52,44 @@ fn DnsResultView(get_domain: Box<dyn Fn() -> Result<String, ParamsError>>) -> im
                 Some(Ok((ips, cnames))) => {
                     view! {
                         <div>
-                            "IP Addresses" <ul>
+                            "IP Addresses" <table class="table table-zebra">
                                 <For
                                     each=move || { ips.clone() }
                                     key=|ip| *ip
                                     children=|ip| {
                                         let href = format!("/ip/{}", ip);
                                         view! {
-                                            <li>
-                                                <A href=href class="link link-neutral">
-                                                    {ip.to_string()}
-                                                </A>
-                                            </li>
+                                            <tr>
+                                                <td>IP Address</td>
+                                                <td>
+                                                    <A href=href class="link link-neutral">
+                                                        {ip.to_string()}
+                                                    </A>
+                                                </td>
+                                            </tr>
                                         }
                                     }
                                 />
 
-                            </ul>
-                        </div>
-                        <div>
-                            "CNAMEs" <ul>
                                 <For
                                     each=move || { cnames.clone() }
                                     key=|(id, _cname)| *id
                                     children=|(_id, cname)| {
-                                        view! { <li>{cname}</li> }
+                                        let href = format!("/domain/{}", cname);
+                                        view! {
+                                            <tr>
+                                                <td>CNAME</td>
+                                                <td>
+                                                    <A href=href class="link link-neutral">
+                                                        {cname}
+                                                    </A>
+                                                </td>
+                                            </tr>
+                                        }
                                     }
                                 />
 
-                            </ul>
+                            </table>
                         </div>
                     }
                         .into_view()

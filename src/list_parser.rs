@@ -18,7 +18,11 @@ impl TryInto<Domain> for &str {
     type Error = DomainParseError;
     fn try_into(self) -> Result<Domain, Self::Error> {
         let domain = addr::parse_dns_name(self)?;
-        if !domain.has_known_suffix() || domain.root().is_none() {
+        if !domain.has_known_suffix() {
+            return Err(DomainParseError);
+        }
+        let name = hickory_proto::rr::Name::from_str_relaxed(domain.as_str())?;
+        if name.num_labels() < 2 {
             return Err(DomainParseError);
         }
         let domain_str: Arc<str> = domain.as_str().into();
@@ -26,8 +30,31 @@ impl TryInto<Domain> for &str {
             log::warn!("Invalid domain: {:?}", domain_str);
             return Err(DomainParseError);
         }
-        assert!(domain_str.contains('.'));
         Ok(Domain(domain_str))
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::list_parser::Domain;
+    #[test]
+    fn valid_domain() {
+        for domain in [
+            "amazonaws.com",
+            "s3-website.us-east-1.amazonaws.com",
+            "origin-mobile_mob.conduit.com",
+        ] {
+            let domain: Result<Domain, _> = domain.try_into();
+            assert!(domain.is_ok());
+        }
+    }
+
+    #[test]
+    fn invalid_domain() {
+        for domain_str in ["com", "@.amazonaws.com"] {
+            let domain: Result<Domain, _> = domain_str.try_into();
+            assert!(domain.is_err(), "{}", domain_str);
+        }
     }
 }
 
@@ -42,6 +69,12 @@ impl std::fmt::Display for DomainParseError {
 
 impl<'a> From<addr::error::Error<'a>> for DomainParseError {
     fn from(_: addr::error::Error) -> Self {
+        DomainParseError
+    }
+}
+
+impl From<hickory_proto::error::ProtoError> for DomainParseError {
+    fn from(_: hickory_proto::error::ProtoError) -> Self {
         DomainParseError
     }
 }

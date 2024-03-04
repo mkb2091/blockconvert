@@ -1,48 +1,82 @@
-pub mod certstream;
-pub mod config;
-pub mod db;
-pub mod dns_lookup;
-pub mod doh;
-mod list_builder;
-pub mod list_downloader;
-pub mod passive_dns;
+pub mod app;
+pub mod domain_import_view;
+pub mod domain_view;
+pub mod error_template;
+pub mod ip_view;
+pub mod list_manager;
+pub mod list_parser;
+pub mod rule_view;
+#[cfg(feature = "ssr")]
+pub mod server;
+pub mod source_view;
 
-pub use blockconvert::{ipnet, Domain, DomainSetSharded};
-pub use list_builder::{FilterList, FilterListBuilder};
+#[cfg(feature = "ssr")]
+use mimalloc::MiMalloc;
 use serde::*;
+use std::convert::From;
 use std::sync::Arc;
-use tokio::fs::OpenOptions;
-use tokio::io::AsyncBufReadExt;
-use tokio::io::AsyncWriteExt;
-use tokio::io::BufWriter;
-use tokio_stream::StreamExt;
 
-pub type DomainSetShardedFX = DomainSetSharded<fxhash::FxBuildHasher>;
+#[cfg(feature = "ssr")]
+#[global_allocator]
+static GLOBAL: MiMalloc = MiMalloc;
 
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord)]
+#[derive(Serialize, Deserialize, Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub struct RuleId(i32);
+
+#[derive(Serialize, Deserialize, Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub struct SourceId(i32);
+
+#[derive(Serialize, Deserialize, Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub struct ListId(i32);
+
+#[derive(Serialize, Deserialize, Debug, Copy, Clone, PartialEq, Eq, Hash, PartialOrd, Ord)]
+pub struct DomainId(i64);
+
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct FilterListRecord {
-    pub name: String,
-    pub url: String,
-    pub author: String,
-    pub license: String,
-    pub expires: u64,
-    pub list_type: FilterListType,
+    pub name: Arc<str>,
+    pub author: Arc<str>,
+    pub license: Arc<str>,
+    pub expires: std::time::Duration,
 }
 
-impl FilterListRecord {
-    pub fn from_type(list_type: FilterListType) -> Self {
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord, Hash)]
+#[serde(into = "(Arc<url::Url>, FilterListType)")]
+#[serde(from = "(Arc<url::Url>, FilterListType)")]
+pub struct FilterListUrl {
+    url: Arc<url::Url>,
+    list_format: FilterListType,
+}
+
+impl From<(Arc<url::Url>, FilterListType)> for FilterListUrl {
+    fn from((url, list_format): (Arc<url::Url>, FilterListType)) -> Self {
+        Self { url, list_format }
+    }
+}
+
+impl From<FilterListUrl> for (Arc<url::Url>, FilterListType) {
+    fn from(val: FilterListUrl) -> (Arc<url::Url>, FilterListType) {
+        (val.url, val.list_format)
+    }
+}
+
+impl std::ops::Deref for FilterListUrl {
+    type Target = url::Url;
+    fn deref(&self) -> &Self::Target {
+        self.url.as_ref()
+    }
+}
+
+impl FilterListUrl {
+    pub fn new(url: url::Url, list_format: FilterListType) -> Self {
         Self {
-            name: Default::default(),
-            url: Default::default(),
-            author: Default::default(),
-            license: Default::default(),
-            expires: Default::default(),
-            list_type,
+            url: Arc::new(url),
+            list_format,
         }
     }
 }
 
-#[derive(Copy, Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord)]
+#[derive(Copy, Clone, Debug, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub enum FilterListType {
     Adblock,
     DomainBlocklist,
@@ -58,107 +92,81 @@ pub enum FilterListType {
     PrivacyBadger,
 }
 
-pub trait DBReadHandler: Send + Sync {
-    fn handle_input(&self, data: &str);
-    fn finished_with_file(&self) {}
-}
-
-pub struct DirectoryDB {
-    path: std::path::PathBuf,
-    wtr: BufWriter<tokio::fs::File>,
-    max_age: u64,
-}
-
-impl DirectoryDB {
-    pub async fn new(path: &std::path::Path, max_age: u64) -> Result<Self, std::io::Error> {
-        let dir_path = std::path::PathBuf::from(path);
-        let _ = tokio::fs::create_dir_all(&dir_path).await;
-
-        let mut path = std::path::PathBuf::from(&dir_path);
-        path.push(std::path::PathBuf::from(
-            chrono::Utc::now().format("%Y-%m-%d %H-%M-%S").to_string(),
-        ));
-        let mut wtr = BufWriter::new(
-            OpenOptions::new()
-                .append(true)
-                .create(true)
-                .open(path)
-                .await?,
-        );
-        wtr.write_all(b"\n").await?;
-        Ok(Self {
-            path: dir_path,
-            wtr,
-            max_age,
-        })
-    }
-    pub async fn read<T: 'static + DBReadHandler>(
-        &self,
-        handle_input: Arc<T>,
-    ) -> Result<(), std::io::Error> {
-        let max_age = self.max_age;
-        let _ = tokio::fs::create_dir_all(&self.path).await;
-        let mut entries =
-            tokio_stream::wrappers::ReadDirStream::new(tokio::fs::read_dir(&self.path).await?);
-
-        let mut tasks: futures::stream::FuturesUnordered<_> =
-            futures::stream::FuturesUnordered::new();
-        println!("Started reading from files");
-        while let Some(entry) = entries.next().await {
-            let entry = entry?;
-            let metadata = entry.metadata().await?;
-            let path = entry.path();
-            let handle_input = handle_input.clone();
-            let task = tokio::task::spawn(async move {
-                let mut record_count: usize = 0;
-                if let Ok(modified) = metadata.modified().or_else(|_| metadata.created()) {
-                    let now = std::time::SystemTime::now();
-                    if let Ok(duration_since) = now.duration_since(modified) {
-                        if duration_since.as_secs() < max_age {
-                            if let Ok(file) = tokio::fs::File::open(&path).await {
-                                let mut file = tokio::io::BufReader::new(file);
-                                let mut line = String::new();
-                                while let Ok(len) = file.read_line(&mut line).await {
-                                    if len == 0 {
-                                        break;
-                                    }
-                                    handle_input.handle_input(&line);
-                                    line.clear();
-                                    record_count += 1;
-                                }
-                            } else {
-                                println!("Failed to read file: {:?}", &path);
-                            }
-                            if record_count != 0 {
-                                println!(
-                                    "Finished with file: {} with {} records",
-                                    path.to_string_lossy(),
-                                    record_count
-                                );
-                            }
-                            handle_input.finished_with_file();
-                            return;
-                        }
-                    }
-                }
-                println!("Removing expired record");
-                if std::fs::remove_file(&path).is_err() {
-                    println!("Failed to remove file: {:?}", path);
-                };
-            });
-            tasks.push(task);
+impl FilterListType {
+    pub fn as_str(&self) -> &'static str {
+        match self {
+            Self::Adblock => "Adblock",
+            Self::DomainBlocklist => "DomainBlocklist",
+            Self::DomainAllowlist => "DomainAllowlist",
+            Self::IPBlocklist => "IPBlocklist",
+            Self::IPAllowlist => "IPAllowlist",
+            Self::IPNetBlocklist => "IPNetBlocklist",
+            Self::DenyHosts => "DenyHosts",
+            Self::RegexAllowlist => "RegexAllowlist",
+            Self::RegexBlocklist => "RegexBlocklist",
+            Self::Hostfile => "Hostfile",
+            Self::DNSRPZ => "DNSRPZ",
+            Self::PrivacyBadger => "PrivacyBadger",
         }
-        while tasks.next().await.is_some() {}
-        Ok(())
     }
+}
+#[derive(Debug, thiserror::Error)]
+pub struct InvalidFilterListTypeError;
 
-    pub async fn write_line(&mut self, line: &[u8]) -> Result<(), std::io::Error> {
-        self.wtr.write_all(line).await?;
-        self.wtr.write_all(b"\n").await?;
-        Ok(())
+impl std::fmt::Display for InvalidFilterListTypeError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "Invalid FilterListType")
     }
-    pub async fn flush(&mut self) -> Result<(), std::io::Error> {
-        self.wtr.flush().await?;
-        Ok(())
+}
+
+impl std::str::FromStr for FilterListType {
+    type Err = InvalidFilterListTypeError;
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "Adblock" => Ok(Self::Adblock),
+            "DomainBlocklist" => Ok(Self::DomainBlocklist),
+            "DomainAllowlist" => Ok(Self::DomainAllowlist),
+            "IPBlocklist" => Ok(Self::IPBlocklist),
+            "IPAllowlist" => Ok(Self::IPAllowlist),
+            "IPNetBlocklist" => Ok(Self::IPNetBlocklist),
+            "DenyHosts" => Ok(Self::DenyHosts),
+            "RegexAllowlist" => Ok(Self::RegexAllowlist),
+            "RegexBlocklist" => Ok(Self::RegexBlocklist),
+            "Hostfile" => Ok(Self::Hostfile),
+            "DNSRPZ" => Ok(Self::DNSRPZ),
+            "PrivacyBadger" => Ok(Self::PrivacyBadger),
+            _ => Err(InvalidFilterListTypeError),
+        }
     }
+}
+
+#[derive(Clone, Debug, Serialize, Deserialize)]
+#[serde(into = "Vec<(FilterListUrl, FilterListRecord)>")]
+#[serde(from = "Vec<(FilterListUrl, FilterListRecord)>")]
+pub struct FilterListMap(
+    pub std::collections::BTreeMap<FilterListUrl, FilterListRecord>,
+    // Just so it is consistently ordered
+);
+
+impl From<FilterListMap> for Vec<(FilterListUrl, FilterListRecord)> {
+    fn from(val: FilterListMap) -> Self {
+        val.0.into_iter().collect()
+    }
+}
+impl From<Vec<(FilterListUrl, FilterListRecord)>> for FilterListMap {
+    fn from(v: Vec<(FilterListUrl, FilterListRecord)>) -> Self {
+        Self(v.into_iter().collect())
+    }
+}
+
+#[cfg(feature = "ssr")]
+pub mod fileserv;
+
+#[cfg(feature = "hydrate")]
+#[wasm_bindgen::prelude::wasm_bindgen]
+pub fn hydrate() {
+    use crate::app::*;
+    console_error_panic_hook::set_once();
+    let _ = console_log::init_with_level(log::Level::Debug);
+    leptos::mount_to_body(App);
 }
