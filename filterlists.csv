@@ -5,6 +5,7 @@ uBlock filters – Privacy,https://raw.githubusercontent.com/uBlockOrigin/uAsset
 uBlock filters – Badware risks,https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt,,GPLv3,345600,Adblock
 uBlock filters,https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt,,GPLv3,345600,Adblock
 mobiletrackers,https://raw.githubusercontent.com/craiu/mobiletrackers/master/list.txt,,GPLv3,604800,DomainBlocklist
+iOS Tracker Blocklist,https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/blocklist.txt,jakejarvis,MIT,864000,DomainBlocklist
 hostsVN,https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts,,MIT,86400,Hostfile
 abuse.ch URLhaus Response Policy Zones,https://urlhaus.abuse.ch/downloads/hostfile,,CC0,86400,Hostfile
 abuse.ch SSLBL Botnet C2 IP Blacklist,https://sslbl.abuse.ch/blacklist/sslipblacklist.txt,,CC0,86400,IPBlocklist
@@ -13,6 +14,8 @@ Xiaomi DNS Blocklist,https://raw.githubusercontent.com/unknownFalleN/xiaomi-dns-
 WindowsSpyBlocker - Hosts spy rules,https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt,,MIT,86400,Hostfile
 Whitelist,https://raw.githubusercontent.com/ookangzheng/blahdns/master/hosts/whitelist.txt,ookangzheng,CC BY-NC-SA 4.0(I  received permission to add to this project),86400,DomainAllowlist
 Whitelist,https://raw.githubusercontent.com/NoExitTV/whitelist/master/domains/whitelist.txt,,MIT,604800,DomainAllowlist
+Useful Linux Shell Scripts Hosts,https://raw.githubusercontent.com/jackrabbit335/UsefulLinuxShellScripts/master/Hosts%20%26%20sourcelist/blacklist.txt,,GPL-3.0,864000,Hostfile
+Trackers,https://git.herrbischoff.com/trackers/plain/trackers.txt,,The Unlicense,864000,DomainBlocklist
 The Ultimate Hosts Blacklist whitelist,https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list,,MIT,86400,DomainAllowlist
 The Hosts File Project,https://hblock.molinero.dev/hosts,Héctor Molinero Fernández <hector@molinero.dev>,MIT,86400,Hostfile
 The Block List Project Tracking,https://raw.githubusercontent.com/blocklistproject/Lists/master/tracking.txt,,The Unlicense,86400,Hostfile
