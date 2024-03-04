@@ -1,10 +1,44 @@
-use crate::{config, FilterListRecord};
-use std::sync::Arc;
+use crate::FilterListRecord;
+
 use tokio::fs::File;
 use tokio::io::AsyncWriteExt;
 use tokio_stream::StreamExt;
 
-fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, std::io::Error> {
+#[derive(thiserror::Error, Debug)]
+pub enum FilterListDownloadError {
+    #[error(transparent)]
+    PathCreationError(#[from] PathCreationError),
+    #[error(transparent)]
+    FileReadError(#[from] FileReadError),
+    #[error(transparent)]
+    FileWriteError(#[from] FileWriteError),
+}
+
+#[derive(thiserror::Error, Debug)]
+#[error("Failed to create directory `{directory}`")]
+pub struct PathCreationError {
+    directory: std::path::PathBuf,
+    #[source]
+    source: std::io::Error,
+}
+
+#[derive(thiserror::Error, Debug)]
+#[error("Failed to read file `{file}`")]
+pub struct FileReadError {
+    file: std::path::PathBuf,
+    #[source]
+    source: std::io::Error,
+}
+
+#[derive(thiserror::Error, Debug)]
+#[error("Failed to write to file `file`")]
+pub struct FileWriteError {
+    file: std::path::PathBuf,
+    #[source]
+    source: std::io::Error,
+}
+
+fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, PathCreationError> {
     let mut path = std::path::PathBuf::from("data");
     path.push(std::path::PathBuf::from(
         url.replace(':', "").replace('?', "").replace('=', ""),
@@ -14,7 +48,10 @@ fn get_path_for_url(url: &str) -> Result<std::path::PathBuf, std::io::Error> {
             .unwrap_or_else(|| std::ffi::OsStr::new("data.txt")),
     );
     if let Some(parent) = path.parent() {
-        std::fs::create_dir_all(parent)?
+        std::fs::create_dir_all(parent).map_err(|source| PathCreationError {
+            directory: parent.to_path_buf(),
+            source,
+        })?
     }
     Ok(path)
 }
@@ -41,7 +78,7 @@ async fn download_list_if_expired(
     timeout: Option<std::time::Duration>,
     client: reqwest::Client,
     record: &FilterListRecord,
-) -> Result<String, std::io::Error> {
+) -> Result<String, FilterListDownloadError> {
     let path = get_path_for_url(&record.url)?;
     let last_update = get_last_update(&path).await;
     if last_update
@@ -93,9 +130,21 @@ async fn download_list_if_expired(
                             Ok(bytes) => {
                                 println!("Downloaded: {:?}", record.url);
                                 let text = String::from_utf8_lossy(&bytes).to_string();
-                                let mut file = File::create(&path).await?;
-                                file.write_all(text.as_bytes()).await?;
-                                file.flush().await?;
+                                let mut file =
+                                    File::create(&path).await.map_err(|source| FileWriteError {
+                                        file: path.to_path_buf(),
+                                        source,
+                                    })?;
+                                file.write_all(text.as_bytes()).await.map_err(|source| {
+                                    FileWriteError {
+                                        file: path.to_path_buf(),
+                                        source,
+                                    }
+                                });
+                                file.flush().await.map_err(|source| FileWriteError {
+                                    file: path.to_path_buf(),
+                                    source,
+                                })?;
                                 drop(file);
                                 set_last_modified(&last_modified);
                                 return Ok(text);
@@ -119,58 +168,44 @@ async fn download_list_if_expired(
             println!("Failed to fetch {}", record.url)
         }
     }
-    Ok(tokio::fs::read_to_string(&path).await?)
+    Ok(tokio::fs::read_to_string(&path)
+        .await
+        .map_err(|source| FileReadError {
+            file: path.to_path_buf(),
+            source,
+        })?)
 }
 
 pub trait FilterListHandler: Send + Sync {
     fn handle_filter_list(&self, record: FilterListRecord, data: &str);
 }
 
-pub async fn download_all<T: 'static + FilterListHandler>(
-    mut config: config::Config,
+pub fn download_all(
+    timeout: Option<std::time::Duration>,
     client: reqwest::Client,
     records: Vec<FilterListRecord>,
     local_filters: Vec<(std::path::PathBuf, FilterListRecord)>,
-    handler: Arc<T>,
-) -> Result<(), Box<dyn std::error::Error>> {
-    let mut to_download = Vec::new();
-
-    for record in records {
-        let handler = handler.clone();
-        let client = client.clone();
-        let timeout = config.get_download_timeout();
-        let task = async move {
-            match download_list_if_expired(timeout, client, &record).await {
-                Ok(data) => handler.handle_filter_list(record, &data),
-                Err(error) => println!(
-                    "Failed to download filter list: {:?} with error {:?}",
-                    record, error
-                ),
+) -> Vec<
+    impl std::future::Future<Output = (FilterListRecord, Result<String, FilterListDownloadError>)>,
+> {
+    let local_filters = local_filters
+        .into_iter()
+        .map(|(path, record)| (Some(path), record));
+    let records = records.into_iter().map(|record| (None, record));
+    local_filters
+        .chain(records)
+        .map(|(path, record)| {
+            let client = client.clone();
+            async move {
+                let data = if let Some(path) = path {
+                    tokio::fs::read_to_string(&path)
+                        .await
+                        .map_err(|source| FileReadError { file: path, source }.into())
+                } else {
+                    download_list_if_expired(timeout, client, &record).await
+                };
+                (record, data)
             }
-        };
-        to_download.push(task);
-    }
-
-    let mut tasks: futures::stream::FuturesUnordered<_> = futures::stream::FuturesUnordered::new();
-
-    for (file_path, record) in local_filters.into_iter() {
-        let handler = handler.clone();
-        let task = async move {
-            match tokio::fs::read_to_string(&file_path).await {
-                Ok(data) => handler.handle_filter_list(record, &data),
-                Err(error) => println!("Failed to read list from disk with error: {:?}", error),
-            }
-        };
-        tasks.push(tokio::spawn(task));
-    }
-
-    while tasks.next().await.is_some() || !to_download.is_empty() {
-        if tasks.len() < config.get_concurrent_requests() {
-            if let Some(next) = to_download.pop() {
-                tasks.push(tokio::spawn(next));
-            }
-        }
-    }
-
-    Ok(())
+        })
+        .collect::<Vec<_>>()
 }

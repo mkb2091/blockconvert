@@ -1,15 +1,14 @@
 use crate::{config, db, DirectoryDB, Domain};
 use parking_lot::Mutex;
+use thiserror::Error;
 use tokio::fs::OpenOptions;
 use tokio::io::AsyncWriteExt;
 use tokio::io::BufWriter;
 
 const PASSIVE_DNS_RECORD_DIR: &str = "passive_dns_db";
 
-#[derive(Default, Debug)]
+#[derive(Default, Debug, Error)]
 pub struct InvalidResponseCode {}
-
-impl std::error::Error for InvalidResponseCode {}
 
 impl std::fmt::Display for InvalidResponseCode {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
@@ -118,7 +117,7 @@ impl PassiveDNS {
 pub async fn argus(
     ips: std::collections::HashSet<std::net::IpAddr>,
     config: config::Config,
-) -> Result<(), Box<dyn std::error::Error>> {
+) -> Result<(), anyhow::Error> {
     let mut pd = PassiveDNS::new(ips, "argus", 60.0 / 100.0, config).await?;
     // Unauthenticated users are limited to 100 requests per minute, and 1000 requests per day.
 
@@ -192,7 +191,7 @@ pub async fn argus(
             if errors_in_a_row > 10 {
                 println!("ARGUS: Exceeded max errors in a row");
                 pd.flush().await?;
-                return Err(Box::new(InvalidResponseCode::default()));
+                return Err(InvalidResponseCode::default().into());
             }
         } else {
             errors_in_a_row = errors_in_a_row.saturating_sub(1);
@@ -225,7 +224,7 @@ pub async fn argus(
 pub async fn threatminer(
     ips: std::collections::HashSet<std::net::IpAddr>,
     config: config::Config,
-) -> Result<(), Box<dyn std::error::Error>> {
+) -> Result<(), anyhow::Error> {
     let mut pd = PassiveDNS::new(ips, "threatminer", 6.0, config).await?;
 
     let client = reqwest::Client::new();
@@ -291,7 +290,7 @@ pub async fn threatminer(
             if errors_in_a_row > 10 {
                 println!("THREATMINER: Exceeded max errors in a row");
                 pd.flush().await?;
-                return Err(Box::new(InvalidResponseCode::default()));
+                return Err(InvalidResponseCode::default().into());
             }
         } else {
             errors_in_a_row = errors_in_a_row.saturating_sub(1);
@@ -335,11 +334,11 @@ impl std::error::Error for MissingKey {}
 pub async fn virus_total(
     ips: std::collections::HashSet<std::net::IpAddr>,
     mut config: config::Config,
-) -> Result<(), Box<dyn std::error::Error>> {
+) -> Result<(), anyhow::Error> {
     let key = if let Some(key) = config.get_virus_total_api().clone() {
         key
     } else {
-        return Err(Box::new(MissingKey {}));
+        return Err(MissingKey {}.into());
     };
     let mut pd = PassiveDNS::new(ips, "virustotal", 15.0, config).await?;
 
@@ -405,7 +404,7 @@ pub async fn virus_total(
             if errors_in_a_row > 10 {
                 println!("VIRUSTOTAL: Exceeded max errors in a row");
                 pd.flush().await?;
-                return Err(Box::new(InvalidResponseCode::default()));
+                return Err(InvalidResponseCode::default().into());
             }
         } else {
             errors_in_a_row = errors_in_a_row.saturating_sub(1);

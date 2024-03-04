@@ -1,0 +1,22 @@
+[package]
+name = "frontend"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+addr = "0.15.6"
+anyhow = "1.0.75"
+bincode = "1.3.3"
+console_log = "1.0.0"
+common = { version = "0.1.0", path = "../common" }
+log = "0.4.20"
+reqwest = "0.11.20"
+seed = "0.10.0"
+thiserror = "1.0.47"
+url = "2.5.0"
+serde = {version = "1.0", features = ["derive"]}

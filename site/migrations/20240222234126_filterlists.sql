@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS filterLists (
+    url TEXT PRIMARY KEY NOT NULL UNIQUE,
+    contents TEXT NOT NULL,
+    lastUpdated INTEGER NOT NULL
+);

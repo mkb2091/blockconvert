@@ -84,7 +84,6 @@ Ad filter list by Disconnect,https://s3.amazonaws.com/lists.disconnect.me/simple
 AZORult Tracker,https://azorult-tracker.net/api/list/domain?format=plain,,Open Database License,86400,DomainBlocklist
 ABPindo,https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt,,GPLv3,345600,Adblock
 ,https://zerodot1.gitlab.io/CoinBlockerLists/list_browser.txt,,GPLv3,86400,DomainBlocklist
-,https://v.firebog.net/hosts/BillStearns.txt,,GPLv3,86400,DomainBlocklist
 ,https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt,,GPLv3,86400,DomainBlocklist
 ,https://raw.githubusercontent.com/xxcriticxx/.pl-host-file/master/hosts.txt,,GPLv3,86400,Hostfile
 ,https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list,Mitchell Krog,MIT,86400,DomainBlocklist

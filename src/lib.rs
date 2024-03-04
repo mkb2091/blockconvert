@@ -1,6 +1,3 @@
-#[macro_use]
-extern crate lazy_static;
-
 pub mod certstream;
 pub mod config;
 pub mod db;
@@ -21,17 +18,6 @@ use tokio::io::BufWriter;
 use tokio_stream::StreamExt;
 
 pub type DomainSetShardedFX = DomainSetSharded<fxhash::FxBuildHasher>;
-
-lazy_static! {
-    static ref DOMAIN_REGEX: regex::Regex =
-        regex::Regex::new("(?:[0-9A-Za-z-]+[.])+[0-9A-Za-z-]+").unwrap();
-}
-
-lazy_static! {
-    static ref IP_REGEX: regex::Regex =
-        regex::Regex::new("[12]?[0-9]{0,2}[.][12]?[0-9]{0,2}[.][12]?[0-9]{0,2}[.][12]?[0-9]{0,2}")
-            .unwrap();
-}
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord)]
 pub struct FilterListRecord {

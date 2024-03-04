@@ -4,6 +4,7 @@ use std::sync::{
     atomic::{AtomicUsize, Ordering},
     Arc, Mutex,
 };
+use thiserror::Error;
 
 #[derive(Clone, Default, Debug, Deserialize)]
 pub struct OutputPaths {
@@ -37,7 +38,7 @@ struct InternalConfig {
     paths: Paths,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Error)]
 pub enum ReadConfigError {
     Io(std::io::Error),
     Parsing(toml::de::Error),
@@ -64,8 +65,6 @@ impl std::fmt::Display for ReadConfigError {
     }
 }
 
-impl std::error::Error for ReadConfigError {}
-
 type DnsServers = Box<[Arc<str>]>;
 
 #[derive(Clone, Default)]
@@ -85,7 +84,7 @@ pub struct Config {
 }
 
 impl Config {
-    pub fn open(path: String) -> Result<Self, Box<dyn std::error::Error>> {
+    pub fn open(path: std::path::PathBuf) -> Result<Self, ReadConfigError> {
         let config = Self::read_config(&path)?;
         let dns_servers = Self::create_dns_server_list(&config.dns_servers);
         let paths = Arc::new(config.paths.clone());
@@ -95,30 +94,29 @@ impl Config {
             paths.clone(),
         )));
         let id = Arc::new(AtomicUsize::new(0));
-
         {
+            let (tx, rx) = std::sync::mpsc::channel();
+
+            let mut watcher = notify::recommended_watcher(tx).unwrap();
+            watcher
+                .watch(&path, notify::RecursiveMode::NonRecursive)
+                .unwrap();
+
             let base = base.clone();
             let id = id.clone();
-            std::thread::spawn(move || {
-                let (tx, rx) = std::sync::mpsc::channel();
-                let mut watcher = notify::watcher(tx, std::time::Duration::from_secs(2)).unwrap();
-                watcher
-                    .watch(&path, notify::RecursiveMode::NonRecursive)
-                    .unwrap();
-                loop {
-                    if let Err(e) = rx.recv() {
-                        println!("watch error: {:?}", e)
+            std::thread::spawn(move || loop {
+                if let Err(e) = rx.recv() {
+                    println!("watch error: {:?}", e)
+                }
+                match Self::read_config(&path) {
+                    Ok(config) => {
+                        let dns_servers = Self::create_dns_server_list(&config.dns_servers);
+                        let paths = Arc::new(config.paths.clone());
+                        *base.lock().unwrap() = (config, dns_servers, paths);
+                        id.fetch_add(1, Ordering::Relaxed);
+                        println!("Reloaded config");
                     }
-                    match Self::read_config(&path) {
-                        Ok(config) => {
-                            let dns_servers = Self::create_dns_server_list(&config.dns_servers);
-                            let paths = Arc::new(config.paths.clone());
-                            *base.lock().unwrap() = (config, dns_servers, paths);
-                            id.fetch_add(1, Ordering::Relaxed);
-                            println!("Reloaded config");
-                        }
-                        Err(e) => println!("Failed to read config: {:?}", e),
-                    }
+                    Err(e) => println!("Failed to read config: {:?}", e),
                 }
             });
         }
@@ -139,7 +137,7 @@ impl Config {
         })
     }
 
-    fn read_config(path: &str) -> Result<InternalConfig, ReadConfigError> {
+    fn read_config(path: &std::path::Path) -> Result<InternalConfig, ReadConfigError> {
         Ok(toml::from_str(&std::fs::read_to_string(&path)?)?)
     }
 
