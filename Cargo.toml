@@ -36,7 +36,10 @@ sqlx = { version = "0.7", features = [
     "ipnetwork",
 ], optional = true }
 lazy_static = { version = "1.4.0", optional = true }
-reqwest = { version = "0.11.24", optional = true }
+reqwest = { version = "0.11.24", features = [
+    "rustls",
+    "brotli",
+], default-features = false, optional = true }
 chrono = { version = "0.4", features = ["serde"] }
 serde_json = "1.0.114"
 dotenvy = { version = "0.15.0", optional = true }
@@ -103,10 +106,10 @@ opt-level = 3
 
 [package.metadata.leptos]
 # The name used by wasm-bindgen/cargo-leptos for the JS/WASM bundle. Defaults to the crate name
-output-name = "site"
+output-name = "blockconvert"
 
 # The site root folder is where cargo-leptos generate all output. WARNING: all content of this folder will be erased on a rebuild. Use it in your server setup.
-site-root = "target/site"
+site-root = "target/blockconvert"
 
 # The site-root relative folder where all compiled output (JS, WASM and CSS) is written
 # Defaults to pkg

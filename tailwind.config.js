@@ -2,11 +2,11 @@
     module.exports = {
       content: {
         relative: true,
-        files: ["*.html", "./src/**/*.rs"],
+        files: ["*.html", "src/*", "./src/**/*.rs"],
       },
       theme: {
         extend: {},
       },
-      plugins: [],
+      plugins: [require("daisyui")],
     }
     

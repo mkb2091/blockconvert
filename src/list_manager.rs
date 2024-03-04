@@ -15,7 +15,7 @@ struct CsvRecord {
 #[server]
 pub async fn get_filter_map() -> Result<crate::FilterListMap, ServerFnError> {
     log::info!("Loading list");
-    let contents = tokio::fs::read_to_string("../filterlists.csv").await?;
+    let contents = tokio::fs::read_to_string("filterlists.csv").await?;
     let records = csv::Reader::from_reader(contents.as_bytes())
         .deserialize::<CsvRecord>()
         .collect::<Result<Vec<CsvRecord>, _>>()?;
