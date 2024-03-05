@@ -1,41 +1,116 @@
-use leptos::{server, ServerFnError};
+use std::str::FromStr;
 
+use leptos::{server, ServerFnError};
 use serde::*;
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 struct CsvRecord {
     pub name: String,
-    pub url: String,
+    pub url: url::Url,
     pub author: String,
     pub license: String,
     pub expires: u64,
     pub list_type: crate::FilterListType,
 }
+#[cfg(feature = "ssr")]
+const FILTERLISTS_PATH: &str = "filterlists.csv";
 
 #[server]
-pub async fn get_filter_map() -> Result<crate::FilterListMap, ServerFnError> {
-    log::info!("Loading list");
-    let contents = tokio::fs::read_to_string("filterlists.csv").await?;
+pub async fn load_filter_map() -> Result<(), ServerFnError> {
+    let contents = tokio::fs::read_to_string(FILTERLISTS_PATH).await?;
     let records = csv::Reader::from_reader(contents.as_bytes())
         .deserialize::<CsvRecord>()
         .collect::<Result<Vec<CsvRecord>, _>>()?;
-    let filter_list_map = records
-        .iter()
-        .map(|csv_record| {
-            let url = url::Url::parse(&csv_record.url)?;
-            let url = crate::FilterListUrl::new(url, csv_record.list_type);
-            let record = crate::FilterListRecord {
-                name: csv_record.name.clone().into(),
-                author: csv_record.author.clone().into(),
-                license: csv_record.license.clone().into(),
-                expires: std::time::Duration::from_secs(csv_record.expires),
-            };
-            Ok::<_, url::ParseError>((url, record))
-        })
-        .collect::<Result<
-            std::collections::BTreeMap<crate::FilterListUrl, crate::FilterListRecord>,
-            url::ParseError,
-        >>()?;
+    let mut urls = Vec::new();
+    let mut names = Vec::new();
+    let mut formats = Vec::new();
+    let mut expires_list = Vec::new();
+    let mut authors = Vec::new();
+    let mut licenses = Vec::new();
+
+    for csv_record in records.iter() {
+        let url = csv_record.url.as_str().to_string();
+        let name = csv_record.name.clone();
+        let format = csv_record.list_type.as_str().to_string();
+        let expires = csv_record.expires as i32;
+        let author = csv_record.author.clone();
+        let license = csv_record.license.clone();
+        urls.push(url);
+        names.push(name);
+        formats.push(format);
+        expires_list.push(expires);
+        authors.push(author);
+        licenses.push(license);
+    }
+
+    let pool = crate::server::get_db().await?;
+    sqlx::query!(
+        "INSERT INTO filterLists (url, name, format, expires, author, license)
+        SELECT * FROM UNNEST($1::text[], $2::text[], $3::text[], $4::int[], $5::text[], $6::text[])
+        ON CONFLICT (url) DO UPDATE
+        SET name = EXCLUDED.name, format = EXCLUDED.format, expires = EXCLUDED.expires, author = EXCLUDED.author, license = EXCLUDED.license
+        ",
+        &urls,
+        &names,
+        &formats,
+        &expires_list,
+        &authors,
+        &licenses
+    ).execute(&pool).await?;
+    write_filter_map().await?;
+    Ok(())
+}
+
+#[server]
+pub async fn write_filter_map() -> Result<(), ServerFnError> {
+    use csv::Writer;
+    let pool = crate::server::get_db().await?;
+    let rows = sqlx::query!(
+        "SELECT url, name, format, expires, author, license FROM filterLists"
+    )
+    .fetch_all(&pool)
+    .await?;
+    let mut records = Vec::new();
+    for record in rows {
+        records.push(CsvRecord {
+            name: record.name.unwrap_or("".to_string()),
+            url: url::Url::parse(&record.url.to_string())?,
+            author: record.author.unwrap_or("".to_string()),
+            license: record.license.unwrap_or("".to_string()),
+            expires: record.expires as u64,
+            list_type: crate::FilterListType::from_str(&record.format)?,
+        });
+    }
+    records.sort_by_key(|record| (record.name.clone(), record.url.clone()));
+    records.reverse();
+    let mut wtr = Writer::from_path(FILTERLISTS_PATH)?;
+    for record in records {
+        wtr.serialize(record)?;
+    }
+    Ok(())
+}
+
+#[server]
+pub async fn get_filter_map() -> Result<crate::FilterListMap, ServerFnError> {
+    let pool = crate::server::get_db().await?;
+    let rows = sqlx::query!(
+        "SELECT url, name, format, expires, author, license FROM filterLists"
+    )
+    .fetch_all(&pool)
+    .await?;
+
+    let mut filter_list_map = std::collections::BTreeMap::new();
+    for record in rows {
+        let url = url::Url::parse(&record.url)?;
+        let url = crate::FilterListUrl::new(url, crate::FilterListType::from_str(&record.format)?);
+        let record = crate::FilterListRecord {
+            name: record.name.unwrap_or("".to_string()).into(),
+            author: record.author.unwrap_or("".to_string()).into(),
+            license: record.license.unwrap_or("".to_string()).into(),
+            expires: std::time::Duration::from_secs(record.expires as u64),
+        };
+        filter_list_map.insert(url, record);
+    }
 
     Ok(crate::FilterListMap(filter_list_map))
 }
@@ -60,10 +135,10 @@ async fn get_last_version_data(
     .fetch_one(&pool)
     .await
     .ok();
-    let last_version_data = last_version_data.map(|row| LastVersionData {
-        last_updated: row.last_updated,
+    let last_version_data = last_version_data.and_then(|row| Some(LastVersionData {
+        last_updated: row.last_updated?,
         etag: row.etag,
-    });
+    }));
     Ok(last_version_data)
 }
 

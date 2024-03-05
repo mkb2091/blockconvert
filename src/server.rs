@@ -21,14 +21,14 @@ pub enum DbInitError {
 }
 
 pub async fn get_db() -> Result<sqlx::PgPool, DbInitError> {
-    Ok(SQLITE_POOL
+    SQLITE_POOL
         .get_or_try_init(|| {
             let _ = dotenvy::dotenv();
             let db_url = std::env::var("DATABASE_URL");
             async { Ok::<_, DbInitError>(sqlx::PgPool::connect(&db_url?).await?) }
         })
         .await
-        .cloned()?)
+        .cloned()
 }
 
 pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {

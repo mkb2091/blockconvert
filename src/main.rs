@@ -27,6 +27,9 @@ async fn main() {
     let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
     logging::log!("listening on http://{}", &addr);
     tokio::spawn(async {
+        blockconvert::list_manager::load_filter_map().await.unwrap();
+    });
+    tokio::spawn(async {
         blockconvert::server::parse_missing_subdomains().await.unwrap();
     });
     tokio::spawn(async {

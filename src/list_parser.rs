@@ -376,7 +376,9 @@ pub async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> 
     .await?;
     let list_id = record.id;
     let rules = {
-        let contents = record.contents;
+        let contents = record
+            .contents
+            .ok_or_else(|| ServerFnError::new("No contents for list"))?;
         parse_list_contents(&contents, url.list_format)
     };
     let (mut domain_src, mut domains, mut allow, mut subdomain) = (vec![], vec![], vec![], vec![]);
