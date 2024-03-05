@@ -72,21 +72,16 @@ pub async fn watch_filter_map() -> Result<(), ServerFnError> {
     let mut watcher = notify::recommended_watcher(move |_| {
         notify.notify_one();
     })?;
-    let task = async move {
-        tokio::task::spawn_blocking(move || {
-            Ok::<_, ServerFnError>(
-                watcher.watch(&filterlists_path, notify::RecursiveMode::NonRecursive)?,
-            )
-        })
-        .await?
-    };
-    let reloaded = async {
+
+    watcher.watch(&filterlists_path, notify::RecursiveMode::NonRecursive)?;
+    let mut last_updated = std::time::Instant::now();
+    loop {
         notify2.notified().await;
-        load_filter_map().await?;
-        Ok(())
-    };
-    tokio::try_join!(task, reloaded)?;
-    Ok(())
+        if last_updated.elapsed() > std::time::Duration::from_millis(200) {
+            load_filter_map().await?;
+            last_updated = std::time::Instant::now();
+        }
+    }
 }
 
 #[server]

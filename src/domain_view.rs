@@ -116,35 +116,20 @@ async fn get_blocked_by(
 > {
     let records = sqlx::query!(
         r#"
-        WITH matching_domain_rules AS (
-            SELECT domain_rules.id as domain_rule_id, domain_rules.domain_id, allow, subdomain
-            FROM domain_rules
-            INNER JOIN domains ON domain_rules.domain_id = domains.id
-            WHERE domains.domain = $1
-        ),
-        matching_subdomains_rules AS (
-            SELECT domain_rules.id as domain_rule_id, domain_rules.domain_id, allow, subdomain
-            FROM domain_rules
-            INNER JOIN subdomains ON domain_rules.domain_id = subdomains.parent_domain_id
-            INNER JOIN domains ON subdomains.domain_id = domains.id
-            WHERE domains.domain = $1 AND domain_rules.subdomain = true
-        ),
-        combined_matching_domain_rules AS (
-            SELECT domain_rule_id, domain_id, allow, subdomain FROM matching_domain_rules
-            UNION ALL
-            SELECT domain_rule_id, domain_id, allow, subdomain FROM matching_subdomains_rules
-        )
         SELECT Rules.id as rule_id,
-        domain as "domain: Option<String>", combined_matching_domain_rules.allow as "domain_allow: Option<bool>", subdomain as "subdomain: Option<bool>",
+        domain as "domain: Option<String>", domain_rules.allow as "domain_allow: Option<bool>", subdomain as "subdomain: Option<bool>",
         ip_rules.ip_network as "ip_network: Option<ipnetwork::IpNetwork>", ip_rules.allow as "ip_allow: Option<bool>",
         source_id, source, url
-        FROM combined_matching_domain_rules
-        INNER JOIN Rules ON combined_matching_domain_rules.domain_rule_id = rules.domain_rule_id
+        FROM domains
+        LEFT JOIN dns_cnames ON domains.id = dns_cnames.cname_domain_id
+        LEFT JOIN domain_rules ON domain_rules.domain_id = domains.id OR domain_rules.domain_id = dns_cnames.domain_id
+        LEFT JOIN subdomains ON domains.id = subdomains.parent_domain_id AND domain_rules.subdomain = true
+        INNER JOIN RUles on domain_rules.id = rules.domain_rule_id
         INNER JOIN rule_source ON rules.id = rule_source.rule_id
         INNER JOIN list_rules ON rule_source.id = list_rules.source_id
         INNER JOIN filterLists ON list_rules.list_id = filterLists.id
-        LEFT JOIN domains ON combined_matching_domain_rules.domain_id = domains.id
         LEFT JOIN ip_rules ON rules.ip_rule_id = ip_rules.id
+        WHERE domain = $1
         ORDER BY url
         "#r,
         domain
@@ -157,8 +142,8 @@ async fn get_blocked_by(
             let rule_data = RuleData {
                 rule_id: RuleId(record.rule_id),
                 domain: record.domain.clone(),
-                domain_allow: record.domain_allow.flatten(),
-                domain_subdomain: record.subdomain.flatten(),
+                domain_allow: record.domain_allow,
+                domain_subdomain: record.subdomain,
                 ip_network: record.ip_network,
                 ip_allow: record.ip_allow,
             };
