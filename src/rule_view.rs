@@ -194,11 +194,18 @@ fn RuleRawView(
 #[server]
 async fn get_rule_blocked_domains(id: RuleId) -> Result<Vec<(DomainId, String)>, ServerFnError> {
     let domains = sqlx::query!(
-        r#"SELECT DISTINCT domains.id, domain
+        r#"SELECT DISTINCT domains.id as "domain_id: Option<i64>", domain as "domain: Option<String>"
         FROM Rules
         LEFT JOIN domain_rules ON Rules.domain_rule_id = domain_rules.id
         LEFT JOIN subdomains ON domain_rules.domain_id = subdomains.parent_domain_id AND domain_rules.subdomain = true
-        LEFT JOIN domains ON domain_rules.domain_id = domains.id OR subdomains.domain_id = domains.id
+        LEFT JOIN ip_rules ON Rules.ip_rule_id = ip_rules.id
+        LEFT JOIN dns_ips ON ip_rules.ip_network = dns_ips.ip_address
+        LEFT JOIN dns_cnames ON dns_cnames.cname_domain_id = domain_rules.domain_id
+            OR dns_cnames.cname_domain_id = subdomains.domain_id
+        LEFT JOIN domains ON domain_rules.domain_id = domains.id
+            OR subdomains.domain_id = domains.id
+            OR dns_ips.domain_id = domains.id
+            OR dns_cnames.domain_id = domains.id
         WHERE Rules.id = $1"#r,
         id.0
     )
@@ -206,7 +213,7 @@ async fn get_rule_blocked_domains(id: RuleId) -> Result<Vec<(DomainId, String)>,
     .await?;
     Ok(domains
         .into_iter()
-        .map(|record| (DomainId(record.id), record.domain))
+        .filter_map(|record| Some((DomainId(record.domain_id?), record.domain?)))
         .collect())
 }
 

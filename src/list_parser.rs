@@ -157,7 +157,7 @@ fn parse_domain_list_line(line: &str, allow: bool, subdomain: bool) -> Option<Ru
     let line = line.trim();
     let mut segments = line.split_whitespace();
     match (segments.next(), segments.next(), segments.next()) {
-(Some("127.0.0.1" | "0.0.0.0"), Some(domain), None) => {
+        (Some(domain), None, None) | (Some("127.0.0.1" | "0.0.0.0"), Some(domain), None) => {
             if let Ok(domain) = domain.try_into() {
                 let domain_rule = DomainRule {
                     domain,
@@ -491,6 +491,7 @@ pub async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> 
     INNER JOIN Rules ON Rules.ip_rule_id = ip_rules.id
     INNER JOIN rule_source ON rule_source.rule_id = Rules.id
     WHERE rule_source.source = t.source
+    ON CONFLICT DO NOTHING
     ",
 list_id,
 &ip_source[..],
