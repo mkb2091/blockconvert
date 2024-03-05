@@ -28,7 +28,7 @@ pub async fn load_filter_map() -> Result<(), ServerFnError> {
     let mut authors = Vec::new();
     let mut licenses = Vec::new();
 
-    for csv_record in records.iter() {
+    for csv_record in &records {
         let url = csv_record.url.as_str().to_string();
         let name = csv_record.name.clone();
         let format = csv_record.list_type.as_str().to_string();
@@ -101,10 +101,10 @@ pub async fn write_filter_map() -> Result<(), ServerFnError> {
     let mut records = Vec::new();
     for record in rows {
         records.push(CsvRecord {
-            name: record.name.unwrap_or("".to_string()),
+            name: record.name.unwrap_or(String::new()),
             url: url::Url::parse(&record.url.to_string())?,
-            author: record.author.unwrap_or("".to_string()),
-            license: record.license.unwrap_or("".to_string()),
+            author: record.author.unwrap_or(String::new()),
+            license: record.license.unwrap_or(String::new()),
             expires: record.expires as u64,
             list_type: crate::FilterListType::from_str(&record.format)?,
         });
@@ -129,10 +129,10 @@ pub async fn get_filter_map() -> Result<crate::FilterListMap, ServerFnError> {
     for record in rows {
         let url = url::Url::parse(&record.url)?.into();
         let record = crate::FilterListRecord {
-            name: record.name.unwrap_or("".to_string()).into(),
+            name: record.name.unwrap_or(String::new()).into(),
             list_format: crate::FilterListType::from_str(&record.format)?,
-            author: record.author.unwrap_or("".to_string()).into(),
-            license: record.license.unwrap_or("".to_string()).into(),
+            author: record.author.unwrap_or(String::new()).into(),
+            license: record.license.unwrap_or(String::new()).into(),
             expires: std::time::Duration::from_secs(record.expires as u64),
         };
         filter_list_map.insert(url, record);

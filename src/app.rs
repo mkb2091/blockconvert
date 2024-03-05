@@ -138,7 +138,7 @@ fn TotalRuleCount() -> impl IntoView {
                 Some(Err(err)) => {
                     view! {
                         "Error Loading "
-                        {format!("{:?}", err)}
+                        {format!("{err:?}")}
                     }
                         .into_view()
                 }
@@ -262,7 +262,7 @@ fn SubdomainCount() -> impl IntoView {
                 Some(Err(err)) => {
                     view! {
                         "Error Loading "
-                        {format!("{:?}", err)}
+                        {format!("{err:?}")}
                     }
                         .into_view()
                 }
@@ -299,7 +299,7 @@ fn DnsLookupCount() -> impl IntoView {
                 Some(Err(err)) => {
                     view! {
                         "Error Loading "
-                        {format!("{:?}", err)}
+                        {format!("{err:?}")}
                     }
                         .into_view()
                 }
@@ -354,7 +354,7 @@ fn HomePage() -> impl IntoView {
             {move || match once.get() {
                 None => view! {}.into_view(),
                 Some(Err(err)) => {
-                    view! { <p>"Error Loading " {format!("{:?}", err)}</p> }.into_view()
+                    view! { <p>"Error Loading " {format!("{err:?}")}</p> }.into_view()
                 }
                 Some(Ok(data)) => {
                     log::info!("Displaying list");

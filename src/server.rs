@@ -61,7 +61,7 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
                 .map(|(i, _)| record.domain.split_at(i + 1).1)
                 .filter_map(|parent| parent.try_into().ok())
                 .map(|parent: Domain| parent.as_ref().to_string());
-            for parent in parents.into_iter() {
+            for parent in parents {
                 all_domains.push(record.domain.clone());
                 all_parents.push(parent);
             }
@@ -212,7 +212,7 @@ pub async fn check_missing_dns() -> Result<(), ServerFnError> {
             start = rand::thread_rng().gen_range(0..size.saturating_sub(read_limit as i64));
         }
     }
-    let mut failed_count = 100000;
+    let mut failed_count = 100_000;
 
     let mut records = Vec::new();
 

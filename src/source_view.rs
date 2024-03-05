@@ -95,7 +95,7 @@ fn SourceRawView(
                     }
                         .into_view()
                 }
-                Some(Err(err)) => view! { <p>"Error: " {format!("{}", err)}</p> }.into_view(),
+                Some(Err(err)) => view! { <p>"Error: " {format!("{err}")}</p> }.into_view(),
                 None => view! { "Invalid URL" }.into_view(),
             }}
 

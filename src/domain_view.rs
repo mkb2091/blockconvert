@@ -58,7 +58,7 @@ fn DnsResultView(get_domain: Box<dyn Fn() -> Result<String, ParamsError>>) -> im
                                     each=move || { ips.clone() }
                                     key=|ip| *ip
                                     children=|ip| {
-                                        let href = format!("/ip/{}", ip);
+                                        let href = format!("/ip/{ip}");
                                         view! {
                                             <tr>
                                                 <td>IP Address</td>
@@ -76,7 +76,7 @@ fn DnsResultView(get_domain: Box<dyn Fn() -> Result<String, ParamsError>>) -> im
                                     each=move || { cnames.clone() }
                                     key=|(id, _cname)| *id
                                     children=|(_id, cname)| {
-                                        let href = format!("/domain/{}", cname);
+                                        let href = format!("/domain/{cname}");
                                         view! {
                                             <tr>
                                                 <td>CNAME</td>
@@ -264,9 +264,9 @@ fn DisplaySubdomains(get_domain: Box<dyn Fn() -> Result<String, ParamsError>>) -
                         <table class="table table-zebra">
                             <For
                                 each=move || { subdomains.clone() }
-                                key=|subdomain| subdomain.clone()
+                                key=std::clone::Clone::clone
                                 children=|subdomain| {
-                                    let domain_href = format!("/domain/{}", subdomain);
+                                    let domain_href = format!("/domain/{subdomain}");
                                     view! {
                                         <tr>
                                             <td>

@@ -54,7 +54,7 @@ fn ListSize(size: Resource<usize, Result<Option<usize>, ServerFnError>>) -> impl
                 Some(Err(err)) => {
                     view! {
                         "Error Loading "
-                        {format!("{:?}", err)}
+                        {format!("{err:?}")}
                     }
                         .into_view()
                 }
@@ -136,12 +136,12 @@ pub fn LastUpdated(
                 Some(Err(err)) => {
                     view! {
                         "Error Loading "
-                        {format!("{:?}", err)}
+                        {format!("{err:?}")}
                     }
                         .into_view()
                 }
                 Some(Ok(None)) => view! { "Never" }.into_view(),
-                Some(Ok(Some(ts))) => view! { {format!("{}", ts)} }.into_view(),
+                Some(Ok(Some(ts))) => view! { {format!("{ts}")} }.into_view(),
             }}
 
         </Transition>
@@ -229,7 +229,7 @@ pub fn FilterListUpdate(url: crate::FilterListUrl, set_updated: Arc<dyn Fn()>) -
             }
             UpdateStatus::Updated => view! { "Updated" }.into_view(),
             UpdateStatus::FailedtoUpdate(err) => {
-                view! { {format!("Failed to Update: {:?}", err)} }.into_view()
+                view! { {format!("Failed to Update: {err:?}")} }.into_view()
             }
         }}
     }
@@ -433,7 +433,7 @@ pub fn FilterListPage() -> impl IntoView {
 
             {move || match get_url() {
                 None => view! { <p>"No URL"</p> }.into_view(),
-                Some(Err(err)) => view! { <p>"Error: " {format!("{}", err)}</p> }.into_view(),
+                Some(Err(err)) => view! { <p>"Error: " {format!("{err}")}</p> }.into_view(),
                 Some(Ok((url, page))) => view! { <FilterListInner url=url page=page/> }.into_view(),
             }}
 

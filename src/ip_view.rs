@@ -47,7 +47,7 @@ fn DomainsWhichResolveTo(get_ip: GetIp) -> impl IntoView {
                                     each=move || { domains.clone() }
                                     key=|(domain_id, _domain)| *domain_id
                                     children=|(_domain_id, domain)| {
-                                        let href = format!("/domain/{}", domain);
+                                        let href = format!("/domain/{domain}");
                                         view! {
                                             <li>
                                                 <A href=href class="link link-neutral">

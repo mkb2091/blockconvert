@@ -157,7 +157,7 @@ fn parse_domain_list_line(line: &str, allow: bool, subdomain: bool) -> Option<Ru
     let line = line.trim();
     let mut segments = line.split_whitespace();
     match (segments.next(), segments.next(), segments.next()) {
-        (Some(domain), None, None) | (Some("127.0.0.1") | Some("0.0.0.0"), Some(domain), None) => {
+(Some("127.0.0.1" | "0.0.0.0"), Some(domain), None) => {
             if let Ok(domain) = domain.try_into() {
                 let domain_rule = DomainRule {
                     domain,
@@ -224,7 +224,7 @@ fn parse_adblock_line(line: &str) -> Option<Rule> {
                 }
             }
         }
-        if has_specific_filters & !block_site {
+        if has_specific_filters && !block_site {
             return None;
         }
         if has_unknown_tag {
@@ -253,19 +253,16 @@ fn parse_adblock_line(line: &str) -> Option<Rule> {
     } else {
         let (rule, match_exact_start) = rule
             .strip_prefix('|')
-            .map(|rule| (rule, true))
-            .unwrap_or((rule, false));
+            .map_or((rule, false), |rule| (rule, true));
         (rule, false, match_exact_start)
     };
 
     let (rule, match_end_domain_exact) = rule
         .strip_suffix('|')
-        .map(|rule| (rule, true))
-        .unwrap_or((rule, false));
+        .map_or((rule, false), |rule| (rule, true));
     let (rule, match_end_domain) = rule
         .strip_suffix('^')
-        .map(|rule| (rule, true))
-        .unwrap_or((rule, match_end_domain));
+        .map_or((rule, match_end_domain), |rule| (rule, true));
     if rule.contains('/') {
         return None; // Path selector
     }
@@ -298,7 +295,7 @@ fn parse_regex_line(line: &str) -> Option<Rule> {
     if line.starts_with('#') {
         return None;
     }
-    if let Some(rule) = line.strip_prefix(r#"(^|\.)"#) {
+    if let Some(rule) = line.strip_prefix(r"(^|\.)") {
         if let Some(rule) = rule.strip_suffix('$') {
             let mut rule = rule.to_string();
             rule.retain(|c| c != '/');
@@ -385,7 +382,7 @@ pub async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> 
     let (mut domain_src, mut domains, mut allow, mut subdomain) = (vec![], vec![], vec![], vec![]);
     let (mut ip_source, mut ips, mut allow_ips) = (vec![], vec![], vec![]);
     let mut other_rules_src = vec![];
-    for rule in rules.iter() {
+    for rule in &rules {
         let source = rule.get_source().as_ref();
         let source = source[..source.len().min(2000)].to_string();
         match rule.get_rule() {

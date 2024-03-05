@@ -132,7 +132,7 @@ fn Sources(get_id: GetId) -> impl IntoView {
                     }
                         .into_view()
                 }
-                Some(Err(err)) => view! { <p>"Error: " {format!("{}", err)}</p> }.into_view(),
+                Some(Err(err)) => view! { <p>"Error: " {format!("{err}")}</p> }.into_view(),
                 None => view! { "Invalid URL" }.into_view(),
             }}
 
@@ -183,7 +183,7 @@ fn RuleRawView(
                     }
                         .into_view()
                 }
-                Some(Err(err)) => view! { <p>"Error: " {format!("{}", err)}</p> }.into_view(),
+                Some(Err(err)) => view! { <p>"Error: " {format!("{err}")}</p> }.into_view(),
                 None => view! { "Invalid URL" }.into_view(),
             }}
 
@@ -255,7 +255,7 @@ fn RuleBlockedDomainsView(get_id: Box<dyn Fn() -> Result<RuleId, ParamsError>>) 
                     }
                         .into_view()
                 }
-                Some(Err(err)) => view! { <p>"Error: " {format!("{}", err)}</p> }.into_view(),
+                Some(Err(err)) => view! { <p>"Error: " {format!("{err}")}</p> }.into_view(),
                 None => view! { "Invalid URL" }.into_view(),
             }}
 
