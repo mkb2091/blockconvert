@@ -5,6 +5,7 @@ pub mod error_template;
 pub mod ip_view;
 pub mod list_manager;
 pub mod list_parser;
+pub mod list_view;
 pub mod rule_view;
 #[cfg(feature = "ssr")]
 pub mod server;
@@ -56,9 +57,7 @@ impl std::ops::Deref for FilterListUrl {
 
 impl FilterListUrl {
     pub fn new(url: url::Url) -> Self {
-        Self {
-            url: Arc::new(url)
-        }
+        Self { url: Arc::new(url) }
     }
 }
 
