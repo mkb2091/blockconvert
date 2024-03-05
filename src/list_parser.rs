@@ -4,6 +4,8 @@ use serde::{Deserialize, Serialize};
 
 use std::sync::Arc;
 
+use crate::FilterListType;
+
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
 #[serde(transparent)]
 pub struct Domain(Arc<str>);
@@ -359,27 +361,25 @@ pub fn parse_list_contents(contents: &str, list_format: crate::FilterListType) -
 
 #[server]
 pub async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
-    log::info!(
-        "Parsing {} as format {}",
-        url.as_str(),
-        url.list_format.as_str()
-    );
     let start = std::time::Instant::now();
     let pool = crate::server::get_db().await?;
     let mut tx = pool.begin().await?;
     let url_str = url.as_str();
     let record = sqlx::query!(
-        "SELECT id, contents FROM filterLists WHERE url = $1",
+        "SELECT id, format, contents FROM filterLists WHERE url = $1",
         url_str
     )
     .fetch_one(&mut *tx)
     .await?;
+    let list_format: FilterListType = record.format.parse()?;
+
+    log::info!("Parsing {} as format {}", url.as_str(), list_format.as_str());
     let list_id = record.id;
     let rules = {
         let contents = record
             .contents
             .ok_or_else(|| ServerFnError::new("No contents for list"))?;
-        parse_list_contents(&contents, url.list_format)
+        parse_list_contents(&contents, list_format)
     };
     let (mut domain_src, mut domains, mut allow, mut subdomain) = (vec![], vec![], vec![], vec![]);
     let (mut ip_source, mut ips, mut allow_ips) = (vec![], vec![], vec![]);

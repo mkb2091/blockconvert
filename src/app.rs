@@ -60,15 +60,13 @@ pub fn App() -> impl IntoView {
 #[derive(Params, PartialEq, Debug)]
 struct ViewListParams {
     url: String,
-    list_format: String,
     page: Option<usize>,
 }
 
 impl ViewListParams {
     fn parse(&self) -> Result<crate::FilterListUrl, ViewListError> {
         let url = url::Url::parse(&self.url)?;
-        let list_format = crate::FilterListType::from_str(&self.list_format)?;
-        Ok(crate::FilterListUrl::new(url, list_format))
+        Ok(crate::FilterListUrl::new(url))
     }
 }
 
@@ -349,8 +347,7 @@ fn FilterListInner(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoV
             None | Some(0) => view! {}.into_view(),
             Some(page) => {
                 let params = params_map! {
-                    "url" => url.as_str(), "list_format" => url.list_format.as_str(), "page" =>
-                    (page.saturating_sub(PAGE_SIZE)).to_string()
+                    "url" => url.as_str(), "page" => (page.saturating_sub(PAGE_SIZE)).to_string()
                 };
                 let href = format!("/list{}", params.to_query_string());
                 view! {
@@ -363,8 +360,7 @@ fn FilterListInner(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoV
 
         {
             let params = params_map! {
-                "url" => url.as_str(), "list_format" => url.list_format.as_str(), "page" => (page
-                .unwrap_or(0) + PAGE_SIZE).to_string()
+                "url" => url.as_str(), "page" => (page.unwrap_or(0) + PAGE_SIZE).to_string()
             };
             let href = format!("/list{}", params.to_query_string());
             view! {
@@ -480,10 +476,13 @@ fn FilterListSummary(url: crate::FilterListUrl, record: crate::FilterListRecord)
                     } else {
                         record.name.to_string()
                     };
-                    let params = params_map! {
-                        "url" => url.as_str(), "list_format" => url.list_format.as_str(),
-                    };
-                    let href = format!("/list{}", params.to_query_string());
+                    let href = format!(
+                        "/list{}",
+                        params_map! {
+                            "url" => url.as_str(),
+                        }
+                            .to_query_string(),
+                    );
                     view! {
                         <A href=href class="link link-neutral">
                             {name}
@@ -495,7 +494,7 @@ fn FilterListSummary(url: crate::FilterListUrl, record: crate::FilterListRecord)
             <td class="max-w-20 break-normal break-words">{record.author.to_string()}</td>
             <td>{record.license.to_string()}</td>
             <td>{format!("{:?}", record.expires)}</td>
-            <td>{format!("{:?}", url.list_format)}</td>
+            <td>{format!("{:?}", record.list_format)}</td>
             <td>
                 <LastUpdated last_updated=last_updated/>
             </td>

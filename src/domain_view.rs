@@ -191,9 +191,20 @@ fn BlockedBy(get_domain: Box<dyn Fn() -> Result<String, ParamsError>>) -> impl I
                                     let rule = pair.get_rule().clone();
                                     let rule_href = format!("/rule/{}", rule_id.0);
                                     let source_href = format!("/rule_source/{}", source_id.0);
+                                    let url_href = format!(
+                                        "/list{}",
+                                        params_map! {
+                                            "url" => url.as_str(),
+                                        }
+                                            .to_query_string(),
+                                    );
                                     view! {
                                         <tr>
-                                            <td>{url}</td>
+                                            <td>
+                                                <A href=url_href class="link link-neutral">
+                                                    {url}
+                                                </A>
+                                            </td>
                                             <td>
                                                 <A href=source_href class="link link-neutral">
                                                     {source}

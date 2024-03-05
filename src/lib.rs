@@ -35,29 +35,16 @@ pub struct DomainId(i64);
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct FilterListRecord {
     pub name: Arc<str>,
+    pub list_format: FilterListType,
     pub author: Arc<str>,
     pub license: Arc<str>,
     pub expires: std::time::Duration,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord, Hash)]
-#[serde(into = "(Arc<url::Url>, FilterListType)")]
-#[serde(from = "(Arc<url::Url>, FilterListType)")]
+#[serde(transparent)]
 pub struct FilterListUrl {
     url: Arc<url::Url>,
-    list_format: FilterListType,
-}
-
-impl From<(Arc<url::Url>, FilterListType)> for FilterListUrl {
-    fn from((url, list_format): (Arc<url::Url>, FilterListType)) -> Self {
-        Self { url, list_format }
-    }
-}
-
-impl From<FilterListUrl> for (Arc<url::Url>, FilterListType) {
-    fn from(val: FilterListUrl) -> (Arc<url::Url>, FilterListType) {
-        (val.url, val.list_format)
-    }
 }
 
 impl std::ops::Deref for FilterListUrl {
@@ -68,10 +55,9 @@ impl std::ops::Deref for FilterListUrl {
 }
 
 impl FilterListUrl {
-    pub fn new(url: url::Url, list_format: FilterListType) -> Self {
+    pub fn new(url: url::Url) -> Self {
         Self {
-            url: Arc::new(url),
-            list_format,
+            url: Arc::new(url)
         }
     }
 }

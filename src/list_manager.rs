@@ -102,9 +102,10 @@ pub async fn get_filter_map() -> Result<crate::FilterListMap, ServerFnError> {
     let mut filter_list_map = std::collections::BTreeMap::new();
     for record in rows {
         let url = url::Url::parse(&record.url)?;
-        let url = crate::FilterListUrl::new(url, crate::FilterListType::from_str(&record.format)?);
+        let url = crate::FilterListUrl::new(url);
         let record = crate::FilterListRecord {
             name: record.name.unwrap_or("".to_string()).into(),
+            list_format: crate::FilterListType::from_str(&record.format)?,
             author: record.author.unwrap_or("".to_string()).into(),
             license: record.license.unwrap_or("".to_string()).into(),
             expires: std::time::Duration::from_secs(record.expires as u64),
@@ -182,16 +183,14 @@ pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError>
             let body = response.text().await?;
             log::info!("Fetched {:?}", url_str);
             let new_last_updated = chrono::Utc::now();
-            let list_format = url.list_format.as_str();
             log::info!("Updated {}", url_str);
             sqlx::query!(
-                "INSERT INTO filterLists (url, lastUpdated, contents, format, etag) VALUES ($1, $2, $3, $4, $5)
-                ON CONFLICT (url) DO UPDATE SET lastUpdated = $2, contents = $3, format = $4, etag = $5
+                "INSERT INTO filterLists (url, lastUpdated, contents, etag) VALUES ($1, $2, $3, $4)
+                ON CONFLICT (url) DO UPDATE SET lastUpdated = $2, contents = $3, etag = $4
                 ",
                 url_str,
                 new_last_updated,
                 body,
-                list_format,
                 etag
             )
             .execute(&pool)

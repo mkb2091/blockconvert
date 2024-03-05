@@ -106,6 +106,13 @@ fn Sources(get_id: GetId) -> impl IntoView {
                                         key=|(id, _, _, _)| *id
                                         children=|(source_id, source, _list_id, url)| {
                                             let source_href = format!("/rule_source/{}", source_id.0);
+                                            let url_href = format!(
+                                                "/list{}",
+                                                params_map! {
+                                                    "url" => url.as_str(),
+                                                }
+                                                    .to_query_string(),
+                                            );
                                             view! {
                                                 <tr>
                                                     <td>
@@ -113,7 +120,11 @@ fn Sources(get_id: GetId) -> impl IntoView {
                                                             {source}
                                                         </A>
                                                     </td>
-                                                    <td>{url}</td>
+                                                    <td>
+                                                        <A href=url_href class="link link-neutral">
+                                                            {url}
+                                                        </A>
+                                                    </td>
                                                 </tr>
                                             }
                                         }
