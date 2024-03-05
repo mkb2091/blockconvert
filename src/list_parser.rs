@@ -131,7 +131,7 @@ impl From<(Arc<str>, Rule)> for RulePair {
         Self { source, rule }
     }
 }
-
+#[cfg(feature = "ssr")]
 fn parse_lines(contents: &str, parser: &dyn Fn(&str) -> Option<Rule>) -> Vec<RulePair> {
     let mut rules = vec![];
     for line in contents.lines() {
@@ -149,6 +149,7 @@ fn parse_lines(contents: &str, parser: &dyn Fn(&str) -> Option<Rule>) -> Vec<Rul
     rules
 }
 
+#[cfg(feature = "ssr")]
 fn parse_domain_list_line(line: &str, allow: bool, subdomain: bool) -> Option<Rule> {
     let line = line.split('#').next()?;
     if line.is_empty() {
@@ -173,6 +174,7 @@ fn parse_domain_list_line(line: &str, allow: bool, subdomain: bool) -> Option<Ru
     }
 }
 
+#[cfg(feature = "ssr")]
 fn parse_domain_list(contents: &str, allow: bool, subdomain: bool) -> Vec<RulePair> {
     parse_lines(contents, &|line| {
         parse_domain_list_line(line, allow, subdomain)
@@ -287,10 +289,12 @@ fn parse_adblock_line(line: &str) -> Option<Rule> {
     Some(Rule::Unknown)
 }
 
+#[cfg(feature = "ssr")]
 fn parse_adblock(contents: &str) -> Vec<RulePair> {
     parse_lines(contents, &parse_adblock_line)
 }
 
+#[cfg(feature = "ssr")]
 fn parse_regex_line(line: &str) -> Option<Rule> {
     if line.starts_with('#') {
         return None;
@@ -312,6 +316,7 @@ fn parse_regex_line(line: &str) -> Option<Rule> {
     Some(Rule::Unknown)
 }
 
+#[cfg(feature = "ssr")]
 fn parse_ip_network_line(line: &str, allow: bool) -> Option<Rule> {
     let line = line.trim();
     if line.is_empty() || line.starts_with('#') {
@@ -324,18 +329,60 @@ fn parse_ip_network_line(line: &str, allow: bool) -> Option<Rule> {
     }
 }
 
+#[cfg(feature = "ssr")]
 fn parse_ip_network_list(contents: &str, allow: bool) -> Vec<RulePair> {
     parse_lines(contents, &|line| parse_ip_network_line(line, allow))
 }
 
+#[cfg(feature = "ssr")]
 fn parse_regex(contents: &str) -> Vec<RulePair> {
     parse_lines(contents, &parse_regex_line)
 }
 
+#[cfg(feature = "ssr")]
 fn parse_unknown_lines(contents: &str) -> Vec<RulePair> {
     parse_lines(contents, &|_| Some(Rule::Unknown))
 }
 
+#[cfg(feature = "ssr")]
+#[derive(Deserialize, Debug)]
+#[allow(non_snake_case)]
+struct PrivacyBadgerRule {
+    heuristicAction: String,
+}
+
+#[cfg(feature = "ssr")]
+#[derive(Deserialize, Debug)]
+struct PrivacyBadger {
+    action_map: std::collections::HashMap<String, PrivacyBadgerRule>,
+}
+
+#[cfg(feature = "ssr")]
+fn parse_privacy_badger(contents: &str) -> Vec<RulePair> {
+    let res = serde_json::from_str::<PrivacyBadger>(contents);
+    if let Ok(privacy_badger) = res {
+        privacy_badger
+            .action_map
+            .into_iter()
+            .filter_map(|(domain, rule)| {
+                if rule.heuristicAction == "block" {
+                    let domain_rule = DomainRule {
+                        domain: domain.parse().ok()?,
+                        allow: false,
+                        subdomain: true,
+                    };
+                    Some(RulePair::new(domain.into(), Rule::Domain(domain_rule)))
+                } else {
+                    None
+                }
+            })
+            .collect()
+    } else {
+        vec![]
+    }
+}
+
+#[cfg(feature = "ssr")]
 pub fn parse_list_contents(contents: &str, list_format: FilterListType) -> Vec<RulePair> {
     match list_format {
         FilterListType::Adblock => parse_adblock(contents),
@@ -348,8 +395,7 @@ pub fn parse_list_contents(contents: &str, list_format: FilterListType) -> Vec<R
         FilterListType::RegexAllowlist => parse_unknown_lines(contents),
         FilterListType::RegexBlocklist => parse_regex(contents),
         FilterListType::Hostfile => parse_domain_list(contents, false, true),
-        FilterListType::DNSRPZ => parse_unknown_lines(contents),
-        FilterListType::PrivacyBadger => vec![],
+        FilterListType::PrivacyBadger => parse_privacy_badger(contents),
     }
 }
 

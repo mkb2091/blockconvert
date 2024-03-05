@@ -53,6 +53,7 @@ rand = { version = "0.8.5", optional = true }
 hickory-proto = { version = "0.24.0", default-features = false }
 humantime = "2.1.0"
 notify = { version = "6.1.1", optional = true }
+serde_json = {version = "1.0.114", optional = true}
 
 
 [features]
@@ -84,6 +85,7 @@ ssr = [
     "dep:ct-logs",
     "dep:rand",
     "dep:notify",
+    "dep:serde_json",
 ]
 default = ["ssr"]
 

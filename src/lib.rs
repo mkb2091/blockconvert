@@ -81,7 +81,6 @@ pub enum FilterListType {
     RegexAllowlist,
     RegexBlocklist,
     Hostfile,
-    DNSRPZ,
     PrivacyBadger,
 }
 
@@ -98,7 +97,6 @@ impl FilterListType {
             Self::RegexAllowlist => "RegexAllowlist",
             Self::RegexBlocklist => "RegexBlocklist",
             Self::Hostfile => "Hostfile",
-            Self::DNSRPZ => "DNSRPZ",
             Self::PrivacyBadger => "PrivacyBadger",
         }
     }
@@ -126,7 +124,6 @@ impl std::str::FromStr for FilterListType {
             "RegexAllowlist" => Ok(Self::RegexAllowlist),
             "RegexBlocklist" => Ok(Self::RegexBlocklist),
             "Hostfile" => Ok(Self::Hostfile),
-            "DNSRPZ" => Ok(Self::DNSRPZ),
             "PrivacyBadger" => Ok(Self::PrivacyBadger),
             _ => Err(InvalidFilterListTypeError),
         }
