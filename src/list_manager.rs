@@ -72,7 +72,6 @@ pub async fn watch_filter_map() -> Result<(), ServerFnError> {
     let mut watcher = notify::recommended_watcher(move |_| {
         notify.notify_one();
     })?;
-
     watcher.watch(&filterlists_path, notify::RecursiveMode::NonRecursive)?;
     let mut last_updated = std::time::Instant::now();
     loop {
