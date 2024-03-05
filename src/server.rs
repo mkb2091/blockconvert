@@ -255,7 +255,6 @@ pub async fn check_missing_dns() -> Result<(), ServerFnError> {
         }
         if records.is_empty() && tasks.is_empty() {
             if failed_count == 0 {
-                log::info!("No more records to process, sleeping");
                 tokio::time::sleep(std::time::Duration::from_secs(30)).await;
             } else {
                 // Retry failed domains
