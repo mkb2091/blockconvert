@@ -1,7 +1,7 @@
 use crate::FilterListType;
 use leptos::*;
 use serde::{Deserialize, Serialize};
-use std::sync::Arc;
+use std::{str::FromStr, sync::Arc};
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
 #[serde(transparent)]
@@ -13,10 +13,10 @@ impl AsRef<str> for Domain {
     }
 }
 
-impl TryInto<Domain> for &str {
-    type Error = DomainParseError;
-    fn try_into(self) -> Result<Domain, Self::Error> {
-        let domain = addr::parse_dns_name(self)?;
+impl FromStr for Domain {
+    type Err = DomainParseError;
+    fn from_str(domain: &str) -> Result<Domain, Self::Err> {
+        let domain = addr::parse_dns_name(domain)?;
         if !domain.has_known_suffix() {
             return Err(DomainParseError);
         }
@@ -43,7 +43,7 @@ mod tests {
             "s3-website.us-east-1.amazonaws.com",
             "origin-mobile_mob.conduit.com",
         ] {
-            let domain: Result<Domain, _> = domain.try_into();
+            let domain: Result<Domain, _> = domain.parse();
             assert!(domain.is_ok());
         }
     }
@@ -51,7 +51,7 @@ mod tests {
     #[test]
     fn invalid_domain() {
         for domain_str in ["com", "@.amazonaws.com"] {
-            let domain: Result<Domain, _> = domain_str.try_into();
+            let domain: Result<Domain, _> = domain_str.parse();
             assert!(domain.is_err(), "{}", domain_str);
         }
     }
@@ -158,7 +158,7 @@ fn parse_domain_list_line(line: &str, allow: bool, subdomain: bool) -> Option<Ru
     let mut segments = line.split_whitespace();
     match (segments.next(), segments.next(), segments.next()) {
         (Some(domain), None, None) | (Some("127.0.0.1" | "0.0.0.0"), Some(domain), None) => {
-            if let Ok(domain) = domain.try_into() {
+            if let Ok(domain) = domain.parse() {
                 let domain_rule = DomainRule {
                     domain,
                     allow,
@@ -270,7 +270,7 @@ fn parse_adblock_line(line: &str) -> Option<Rule> {
         return Some(Rule::Unknown);
     }
     if match_start_domain && (match_end_domain | match_end_domain_exact) {
-        if let Ok(domain) = rule.try_into() {
+        if let Ok(domain) = rule.parse() {
             let domain_rule = DomainRule {
                 domain,
                 allow: exception,
@@ -299,7 +299,7 @@ fn parse_regex_line(line: &str) -> Option<Rule> {
         if let Some(rule) = rule.strip_suffix('$') {
             let mut rule = rule.to_string();
             rule.retain(|c| c != '/');
-            if let Ok(domain) = rule.as_str().try_into() {
+            if let Ok(domain) = rule.as_str().parse() {
                 let domain_rule = DomainRule {
                     domain,
                     allow: false,

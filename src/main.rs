@@ -39,6 +39,9 @@ async fn main() {
     tokio::spawn(async {
         blockconvert::server::check_missing_dns().await.unwrap();
     });
+    tokio::spawn(async {
+        blockconvert::server::import_pihole_logs().await.unwrap();
+    });
     axum::serve(listener, app.into_make_service())
         .await
         .unwrap();

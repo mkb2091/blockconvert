@@ -7,7 +7,7 @@ async fn import_domain_list(domains: String) -> Result<(), ServerFnError> {
     let domains = domains
         .lines()
         .filter_map(|line| {
-            let domain: Result<Domain, _> = (*line).try_into();
+            let domain: Result<Domain, _> = (*line).parse();
             domain.ok().map(|domain| domain.as_ref().to_string())
         })
         .collect::<Vec<_>>();

@@ -32,7 +32,7 @@ pub async fn get_rule(id: RuleId) -> Result<Rule, ServerFnError> {
         .fetch_one(&crate::server::get_db().await?)
         .await?;
         let domain_rule = DomainRule {
-            domain: record.domain.as_str().try_into()?,
+            domain: record.domain.as_str().parse()?,
             allow: record.allow,
             subdomain: record.subdomain,
         };
@@ -292,7 +292,7 @@ impl TryInto<Rule> for RuleData {
         ) {
             (Some(domain), Some(allow), Some(subdomain), None, None) => {
                 Ok(Rule::Domain(DomainRule {
-                    domain: domain.as_str().try_into()?,
+                    domain: domain.as_str().parse()?,
                     allow,
                     subdomain,
                 }))

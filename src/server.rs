@@ -7,7 +7,9 @@ use crate::DomainId;
 use futures::StreamExt;
 use hickory_resolver::error::ResolveError;
 use leptos::*;
+use notify::Watcher;
 use rand::Rng;
+use tokio::io::AsyncBufReadExt;
 
 static SQLITE_POOL: tokio::sync::OnceCell<sqlx::PgPool> = tokio::sync::OnceCell::const_new();
 
@@ -53,13 +55,13 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
         let mut all_domains = Vec::new();
         let mut all_parents = Vec::new();
 
-        for record in records{
+        for record in records {
             checked_domains.push(record.domain.clone());
             let parents = record
                 .domain
                 .match_indices('.')
                 .map(|(i, _)| record.domain.split_at(i + 1).1)
-                .filter_map(|parent| parent.try_into().ok())
+                .filter_map(|parent| parent.parse().ok())
                 .map(|parent: Domain| parent.as_ref().to_string());
             for parent in parents {
                 all_domains.push(record.domain.clone());
@@ -128,7 +130,7 @@ fn parse_lookup_result(
                     if cname.ends_with('.') {
                         cname.pop();
                     }
-                    if let Ok(cname) = cname.as_str().try_into() {
+                    if let Ok(cname) = cname.as_str().parse() {
                         cnames.push(cname);
                     } else {
                         log::warn!("Invalid CNAME {}", cname);
@@ -297,7 +299,7 @@ pub async fn check_missing_dns() -> Result<(), ServerFnError> {
                         domain,
                         err
                     );
-                    let domain_parsed: Result<Domain, _> = domain.as_str().try_into();
+                    let domain_parsed: Result<Domain, _> = domain.as_str().parse();
                     if domain_parsed.is_err() {
                         log::warn!("Removing bad domain: {}", domain);
                         bad_domains.push(domain_id.0);
@@ -372,4 +374,60 @@ pub async fn check_missing_dns() -> Result<(), ServerFnError> {
         .await?;
         tx.commit().await?;
     }
+}
+
+pub async fn import_pihole_logs() -> Result<(), ServerFnError> {
+    let _ = dotenvy::dotenv()?;
+    let Ok(log_path) = std::env::var("PIHOLE_LOG_PATH") else {
+        log::info!("No PIHOLE_LOG_PATH set, skipping");
+        return Ok(());
+    };
+    let log_path: std::path::PathBuf = log_path.parse()?;
+    let write_frequency: u64 = std::env::var("WRITE_FREQUENCY")?.parse()?;
+    let notify = std::sync::Arc::new(tokio::sync::Notify::new());
+    let notify2 = notify.clone();
+    let mut watcher = notify::recommended_watcher(move |_| {
+        notify.notify_one();
+    })?;
+    watcher.watch(&log_path, notify::RecursiveMode::NonRecursive)?;
+    let pool: sqlx::Pool<sqlx::Postgres> = get_db().await?;
+    let file = tokio::fs::File::open(log_path).await?;
+    let buf = tokio::io::BufReader::new(file);
+    let mut lines = buf.lines();
+    let mut domains = HashSet::new();
+    let mut last_wrote = std::time::Instant::now();
+    while let Ok(line) = lines.next_line().await {
+        if let Some(line) = line {
+            for segment in line.split_whitespace() {
+                if let Ok(domain) = segment.parse() {
+                    let domain: Domain = domain;
+                    domains.insert(domain);
+                }
+            }
+        } else {
+            notify2.notified().await;
+        }
+        if last_wrote.elapsed().as_secs() > write_frequency {
+            let domains_vec = domains
+                .drain()
+                .map(|domain| domain.as_ref().to_string())
+                .collect::<Vec<_>>();
+            let inserted = sqlx::query!(
+                "INSERT INTO domains (domain)
+            SELECT domain FROM UNNEST($1::text[]) as t(domain)
+            ON CONFLICT DO NOTHING
+            RETURNING *
+            ",
+                &domains_vec[..]
+            )
+            .fetch_all(&pool)
+            .await?;
+            if !inserted.is_empty() {
+                log::info!("Inserted {} domains", inserted.len());
+            }
+            last_wrote = std::time::Instant::now();
+        }
+    }
+
+    Ok(())
 }
