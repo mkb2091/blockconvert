@@ -53,7 +53,7 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
         let mut all_domains = Vec::new();
         let mut all_parents = Vec::new();
 
-        for record in records.into_iter() {
+        for record in records{
             checked_domains.push(record.domain.clone());
             let parents = record
                 .domain
@@ -70,7 +70,7 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
             .iter()
             .cloned()
             .collect::<std::collections::HashSet<_>>();
-        for domain in all_domains.iter() {
+        for domain in &all_domains {
             parent_set.remove(domain);
         }
         let parent_set = parent_set.into_iter().collect::<Vec<_>>();

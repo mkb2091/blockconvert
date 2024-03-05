@@ -70,7 +70,7 @@ fn Lists(get_id: GetId) -> impl IntoView {
                     }
                         .into_view()
                 }
-                Some(Err(err)) => view! { <p>"Error: " {format!("{:?}", err)}</p> }.into_view(),
+                Some(Err(err)) => view! { <p>"Error: " {format!("{}", err)}</p> }.into_view(),
                 None => view! { "Invalid URL" }.into_view(),
             }}
 
@@ -95,7 +95,7 @@ fn SourceRawView(
                     }
                         .into_view()
                 }
-                Some(Err(err)) => view! { <p>"Error: " {format!("{:?}", err)}</p> }.into_view(),
+                Some(Err(err)) => view! { <p>"Error: " {format!("{}", err)}</p> }.into_view(),
                 None => view! { "Invalid URL" }.into_view(),
             }}
 
@@ -119,13 +119,7 @@ pub fn SourceViewPage() -> impl IntoView {
         Ok::<_, ServerFnError>(rule)
     });
     view! {
-        {move || {
-            let id = get_id();
-            view! {
-                <p>"Id: " {format!("{:?}", id)}</p>
-                <SourceRawView source=source_resource/>
-                <Lists get_id=Box::new(get_id)/>
-            }
-        }}
+        <SourceRawView source=source_resource/>
+        <Lists get_id=Box::new(get_id)/>
     }
 }

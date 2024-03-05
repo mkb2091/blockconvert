@@ -15,6 +15,7 @@ pub mod source_view;
 use mimalloc::MiMalloc;
 use serde::*;
 use std::convert::From;
+use std::str::FromStr;
 use std::sync::Arc;
 
 #[cfg(feature = "ssr")]
@@ -55,9 +56,16 @@ impl std::ops::Deref for FilterListUrl {
     }
 }
 
-impl FilterListUrl {
-    pub fn new(url: url::Url) -> Self {
-        Self { url: Arc::new(url) }
+impl From<url::Url> for FilterListUrl {
+    fn from(url: url::Url) -> Self {
+        Self { url: url.into() }
+    }
+}
+
+impl FromStr for FilterListUrl {
+    type Err = url::ParseError;
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        Ok(url::Url::parse(s)?.into())
     }
 }
 

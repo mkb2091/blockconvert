@@ -1,7 +1,8 @@
 use crate::{
     app::Loading,
+    list_view::FilterListLink,
     rule_view::{DisplayRule, RuleData},
-    DomainId, RuleId, SourceId,
+    DomainId, FilterListUrl, RuleId, SourceId,
 };
 use leptos::*;
 use leptos_router::*;
@@ -104,7 +105,15 @@ fn DnsResultView(get_domain: Box<dyn Fn() -> Result<String, ParamsError>>) -> im
 #[server]
 async fn get_blocked_by(
     domain: String,
-) -> Result<Vec<(String, RuleId, SourceId, crate::list_parser::RulePair)>, ServerFnError> {
+) -> Result<
+    Vec<(
+        FilterListUrl,
+        RuleId,
+        SourceId,
+        crate::list_parser::RulePair,
+    )>,
+    ServerFnError,
+> {
     let records = sqlx::query!(
         r#"
         WITH matching_domain_rules AS (
@@ -158,7 +167,7 @@ async fn get_blocked_by(
             let pair = crate::list_parser::RulePair::new(source.into(), rule);
             let url = record.url.clone();
             Ok((
-                url,
+                url.parse()?,
                 RuleId(record.rule_id),
                 SourceId(record.source_id),
                 pair,
@@ -191,19 +200,10 @@ fn BlockedBy(get_domain: Box<dyn Fn() -> Result<String, ParamsError>>) -> impl I
                                     let rule = pair.get_rule().clone();
                                     let rule_href = format!("/rule/{}", rule_id.0);
                                     let source_href = format!("/rule_source/{}", source_id.0);
-                                    let url_href = format!(
-                                        "/list{}",
-                                        params_map! {
-                                            "url" => url.as_str(),
-                                        }
-                                            .to_query_string(),
-                                    );
                                     view! {
                                         <tr>
                                             <td>
-                                                <A href=url_href class="link link-neutral">
-                                                    {url}
-                                                </A>
+                                                <FilterListLink url=url/>
                                             </td>
                                             <td>
                                                 <A href=source_href class="link link-neutral">

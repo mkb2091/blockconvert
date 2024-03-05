@@ -1,10 +1,7 @@
-use leptos::*;
-
-use serde::{Deserialize, Serialize};
-
-use std::sync::Arc;
-
 use crate::FilterListType;
+use leptos::*;
+use serde::{Deserialize, Serialize};
+use std::sync::Arc;
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
 #[serde(transparent)]
@@ -342,20 +339,20 @@ fn parse_unknown_lines(contents: &str) -> Vec<RulePair> {
     parse_lines(contents, &|_| Some(Rule::Unknown))
 }
 
-pub fn parse_list_contents(contents: &str, list_format: crate::FilterListType) -> Vec<RulePair> {
+pub fn parse_list_contents(contents: &str, list_format: FilterListType) -> Vec<RulePair> {
     match list_format {
-        crate::FilterListType::Adblock => parse_adblock(contents),
-        crate::FilterListType::DomainBlocklist => parse_domain_list(contents, false, true),
-        crate::FilterListType::DomainAllowlist => parse_domain_list(contents, true, false),
-        crate::FilterListType::IPBlocklist => parse_ip_network_list(contents, false),
-        crate::FilterListType::IPAllowlist => parse_ip_network_list(contents, true),
-        crate::FilterListType::IPNetBlocklist => parse_ip_network_list(contents, false),
-        crate::FilterListType::DenyHosts => parse_unknown_lines(contents),
-        crate::FilterListType::RegexAllowlist => parse_unknown_lines(contents),
-        crate::FilterListType::RegexBlocklist => parse_regex(contents),
-        crate::FilterListType::Hostfile => parse_domain_list(contents, false, true),
-        crate::FilterListType::DNSRPZ => parse_unknown_lines(contents),
-        crate::FilterListType::PrivacyBadger => vec![],
+        FilterListType::Adblock => parse_adblock(contents),
+        FilterListType::DomainBlocklist => parse_domain_list(contents, false, true),
+        FilterListType::DomainAllowlist => parse_domain_list(contents, true, false),
+        FilterListType::IPBlocklist => parse_ip_network_list(contents, false),
+        FilterListType::IPAllowlist => parse_ip_network_list(contents, true),
+        FilterListType::IPNetBlocklist => parse_ip_network_list(contents, false),
+        FilterListType::DenyHosts => parse_unknown_lines(contents),
+        FilterListType::RegexAllowlist => parse_unknown_lines(contents),
+        FilterListType::RegexBlocklist => parse_regex(contents),
+        FilterListType::Hostfile => parse_domain_list(contents, false, true),
+        FilterListType::DNSRPZ => parse_unknown_lines(contents),
+        FilterListType::PrivacyBadger => vec![],
     }
 }
 
@@ -373,7 +370,11 @@ pub async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> 
     .await?;
     let list_format: FilterListType = record.format.parse()?;
 
-    log::info!("Parsing {} as format {}", url.as_str(), list_format.as_str());
+    log::info!(
+        "Parsing {} as format {}",
+        url.as_str(),
+        list_format.as_str()
+    );
     let list_id = record.id;
     let rules = {
         let contents = record

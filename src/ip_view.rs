@@ -88,7 +88,7 @@ pub fn IpView() -> impl IntoView {
             <h1 class="text-2xl">
                 "IP Address:"
                 {
-                    
+
                     get_ip
                 }
 

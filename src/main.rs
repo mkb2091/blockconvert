@@ -1,12 +1,12 @@
 #[cfg(feature = "ssr")]
 #[tokio::main]
 async fn main() {
-    env_logger::init();
     use axum::Router;
+    use blockconvert::app::App;
+    use blockconvert::fileserv::file_and_error_handler;
     use leptos::*;
     use leptos_axum::{generate_route_list, LeptosRoutes};
-    use blockconvert::app::*;
-    use blockconvert::fileserv::file_and_error_handler;
+    env_logger::init();
 
     // Setting get_configuration(None) means we'll be using cargo-leptos's env values
     // For deployment these variables are:
@@ -27,10 +27,14 @@ async fn main() {
     let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
     logging::log!("listening on http://{}", &addr);
     tokio::spawn(async {
-        blockconvert::list_manager::load_filter_map().await.unwrap();
+        blockconvert::list_manager::watch_filter_map()
+            .await
+            .unwrap();
     });
     tokio::spawn(async {
-        blockconvert::server::parse_missing_subdomains().await.unwrap();
+        blockconvert::server::parse_missing_subdomains()
+            .await
+            .unwrap();
     });
     tokio::spawn(async {
         blockconvert::server::check_missing_dns().await.unwrap();

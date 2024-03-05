@@ -98,8 +98,8 @@ fn FilterListSummary(url: crate::FilterListUrl, record: crate::FilterListRecord)
 
             </td>
             <td class="max-w-20 break-normal break-words">{record.author.to_string()}</td>
-            <td>{record.license.to_string()}</td>
-            <td>{format!("{:?}", record.expires)}</td>
+            <td class="max-w-xl break-normal break-words">{record.license.to_string()}</td>
+            <td>{humantime::format_duration(record.expires).to_string()}</td>
             <td>{format!("{:?}", record.list_format)}</td>
             <td>
                 <LastUpdated last_updated=last_updated/>
@@ -320,10 +320,32 @@ fn HomePage() -> impl IntoView {
 
     view! {
         <h1>"Welcome to Leptos!"</h1>
-        <p>"Total Rules: " <TotalRuleCount/></p>
-        <p>"Total Domains: " <DomainCount/></p>
-        <p>"Total Subdomains: " <SubdomainCount/></p>
-        <p>"Total DNS Lookups: " <DnsLookupCount/></p>
+        <table class="table max-w-fit">
+            <tr>
+                <td>"Total Rules"</td>
+                <td>
+                    <TotalRuleCount/>
+                </td>
+            </tr>
+            <tr>
+                <td>"Total Domains"</td>
+                <td>
+                    <DomainCount/>
+                </td>
+            </tr>
+            <tr>
+                <td>"Total Subdomains"</td>
+                <td>
+                    <SubdomainCount/>
+                </td>
+            </tr>
+            <tr>
+                <td>"Total DNS Lookups"</td>
+                <td>
+                    <DnsLookupCount/>
+                </td>
+            </tr>
+        </table>
         <UpdateAll/>
         <ReparseAll/>
         <Transition fallback=move || {
@@ -338,6 +360,14 @@ fn HomePage() -> impl IntoView {
                     log::info!("Displaying list");
                     view! {
                         <table class="table table-zebra">
+                            <thead>
+                                <td>"Name"</td>
+                                <td>"Author"</td>
+                                <td>"License"</td>
+                                <td>"Update frequency"</td>
+                                <td>"Format"</td>
+                                <td>"Last Updated"</td>
+                            </thead>
                             <tbody>
                                 <For
                                     each=move || { data.0.clone() }

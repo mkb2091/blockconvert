@@ -1,6 +1,8 @@
 use crate::app::Loading;
 use crate::list_parser::DomainRule;
 use crate::list_parser::Rule;
+use crate::list_view::FilterListLink;
+use crate::FilterListUrl;
 use crate::{DomainId, ListId, RuleId, SourceId};
 use leptos::*;
 use leptos_router::*;
@@ -54,7 +56,9 @@ pub async fn get_rule(id: RuleId) -> Result<Rule, ServerFnError> {
 type GetId = Box<dyn Fn() -> Result<RuleId, ParamsError>>;
 
 #[server]
-async fn get_sources(id: RuleId) -> Result<Vec<(SourceId, String, ListId, String)>, ServerFnError> {
+async fn get_sources(
+    id: RuleId,
+) -> Result<Vec<(SourceId, String, ListId, FilterListUrl)>, ServerFnError> {
     let sources = sqlx::query!(
         "SELECT rule_source.id as source_id, source, filterLists.id as list_id, filterLists.url FROM rule_source
         INNER JOIN list_rules ON rule_source.id = list_rules.source_id
@@ -66,17 +70,17 @@ async fn get_sources(id: RuleId) -> Result<Vec<(SourceId, String, ListId, String
     )
     .fetch_all(&crate::server::get_db().await?)
     .await?;
-    Ok(sources
+    sources
         .into_iter()
         .map(|record| {
-            (
+            Ok((
                 SourceId(record.source_id),
                 record.source,
                 ListId(record.list_id),
-                record.url,
-            )
+                record.url.parse()?,
+            ))
         })
-        .collect())
+        .collect()
 }
 
 #[component]
@@ -106,13 +110,6 @@ fn Sources(get_id: GetId) -> impl IntoView {
                                         key=|(id, _, _, _)| *id
                                         children=|(source_id, source, _list_id, url)| {
                                             let source_href = format!("/rule_source/{}", source_id.0);
-                                            let url_href = format!(
-                                                "/list{}",
-                                                params_map! {
-                                                    "url" => url.as_str(),
-                                                }
-                                                    .to_query_string(),
-                                            );
                                             view! {
                                                 <tr>
                                                     <td>
@@ -121,9 +118,7 @@ fn Sources(get_id: GetId) -> impl IntoView {
                                                         </A>
                                                     </td>
                                                     <td>
-                                                        <A href=url_href class="link link-neutral">
-                                                            {url}
-                                                        </A>
+                                                        <FilterListLink url=url/>
                                                     </td>
                                                 </tr>
                                             }
@@ -137,7 +132,7 @@ fn Sources(get_id: GetId) -> impl IntoView {
                     }
                         .into_view()
                 }
-                Some(Err(err)) => view! { <p>"Error: " {format!("{:?}", err)}</p> }.into_view(),
+                Some(Err(err)) => view! { <p>"Error: " {format!("{}", err)}</p> }.into_view(),
                 None => view! { "Invalid URL" }.into_view(),
             }}
 
@@ -188,7 +183,7 @@ fn RuleRawView(
                     }
                         .into_view()
                 }
-                Some(Err(err)) => view! { <p>"Error: " {format!("{:?}", err)}</p> }.into_view(),
+                Some(Err(err)) => view! { <p>"Error: " {format!("{}", err)}</p> }.into_view(),
                 None => view! { "Invalid URL" }.into_view(),
             }}
 
@@ -240,7 +235,7 @@ fn RuleBlockedDomainsView(get_id: Box<dyn Fn() -> Result<RuleId, ParamsError>>) 
                                         each=move || { domains.clone() }
                                         key=|(id, _)| *id
                                         children=|(_domain_id, domain)| {
-                                            let domain_href = format!("/domain/{}", domain);
+                                            let domain_href = format!("/domain/{domain}");
                                             view! {
                                                 <tr>
                                                     <td>
@@ -260,7 +255,7 @@ fn RuleBlockedDomainsView(get_id: Box<dyn Fn() -> Result<RuleId, ParamsError>>) 
                     }
                         .into_view()
                 }
-                Some(Err(err)) => view! { <p>"Error: " {format!("{:?}", err)}</p> }.into_view(),
+                Some(Err(err)) => view! { <p>"Error: " {format!("{}", err)}</p> }.into_view(),
                 None => view! { "Invalid URL" }.into_view(),
             }}
 
@@ -322,14 +317,8 @@ pub fn RuleViewPage() -> impl IntoView {
         Ok::<_, ServerFnError>(rule)
     });
     view! {
-        {move || {
-            let id = get_id();
-            view! {
-                <p>"Id: " {format!("{:?}", id)}</p>
-                <p>"Rule: " <RuleRawView rule=rule_resource/></p>
-                <Sources get_id=Box::new(get_id)/>
-                <RuleBlockedDomainsView get_id=Box::new(get_id)/>
-            }
-        }}
+        <p>"Rule: " <RuleRawView rule=rule_resource/></p>
+        <Sources get_id=Box::new(get_id)/>
+        <RuleBlockedDomainsView get_id=Box::new(get_id)/>
     }
 }

@@ -1,7 +1,24 @@
+#[cfg(feature = "ssr")]
 use self::rule_view::RuleData;
 use crate::{app::Loading, rule_view::DisplayRule, *};
 use leptos::*;
 use leptos_router::*;
+
+#[component]
+pub fn FilterListLink(url: crate::FilterListUrl) -> impl IntoView {
+    let href = format!(
+        "/list{}",
+        params_map! {
+            "url" => url.as_str(),
+        }
+        .to_query_string(),
+    );
+    view! {
+        <A href=href class="link link-neutral">
+            {url.as_str().to_string()}
+        </A>
+    }
+}
 
 #[server]
 async fn get_list_size(url: crate::FilterListUrl) -> Result<Option<usize>, ServerFnError> {
@@ -124,7 +141,7 @@ pub fn LastUpdated(
                         .into_view()
                 }
                 Some(Ok(None)) => view! { "Never" }.into_view(),
-                Some(Ok(Some(ts))) => view! { {format!("{:?}", ts)} }.into_view(),
+                Some(Ok(Some(ts))) => view! { {format!("{}", ts)} }.into_view(),
             }}
 
         </Transition>
@@ -312,6 +329,8 @@ fn FilterListInner(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoV
         <p>
             <ParseList url=url.clone() set_updated=set_updated/>
         </p>
+
+        <DeleteList url=url.clone()/>
         {if let Some(page) = page {
             view! { <p>"Page: " {page}</p> }
         } else {
@@ -367,15 +386,41 @@ enum ViewListError {
 
 impl ViewListParams {
     fn parse(&self) -> Result<crate::FilterListUrl, ViewListError> {
-        let url = url::Url::parse(&self.url)?;
-        Ok(crate::FilterListUrl::new(url))
+        Ok(url::Url::parse(&self.url)?.into())
+    }
+}
+
+#[component]
+fn DeleteList(url: FilterListUrl) -> impl IntoView {
+    let delete_list = create_action(move |url: &FilterListUrl| {
+        let url = url.clone();
+        async move {
+            log::info!("Deleting {}", url.as_str());
+            if let Err(err) = list_manager::delete_list(url).await {
+                log::error!("Error deleting list: {:?}", err);
+            }
+        }
+    });
+    view! {
+        <button
+            class="btn btn-danger"
+            on:click={
+                let url = url.clone();
+                move |_| {
+                    delete_list.dispatch(url.clone());
+                }
+            }
+        >
+
+            "Delete"
+        </button>
     }
 }
 
 #[component]
 pub fn FilterListPage() -> impl IntoView {
     let params = use_query::<ViewListParams>();
-    let url = move || {
+    let get_url = move || {
         params.with(|param| {
             param
                 .as_ref()
@@ -386,9 +431,9 @@ pub fn FilterListPage() -> impl IntoView {
     view! {
         <div>
 
-            {move || match url() {
+            {move || match get_url() {
                 None => view! { <p>"No URL"</p> }.into_view(),
-                Some(Err(err)) => view! { <p>"Error: " {format!("{:?}", err)}</p> }.into_view(),
+                Some(Err(err)) => view! { <p>"Error: " {format!("{}", err)}</p> }.into_view(),
                 Some(Ok((url, page))) => view! { <FilterListInner url=url page=page/> }.into_view(),
             }}
 
