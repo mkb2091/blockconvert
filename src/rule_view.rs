@@ -210,7 +210,7 @@ fn RuleBlockedDomainsView(get_id: Box<dyn Fn() -> Result<RuleId, ParamsError>>) 
                 Some(Ok(domains)) => {
                     view! {
                         <p>
-                            "Blocked Domains:" <table class="table table-zebra">
+                            "Matched Domains:" <table class="table table-zebra">
                                 <thead>
                                     <tr>
                                         <th>Domain</th>

@@ -1,12 +1,12 @@
-use std::str::FromStr;
-
+use crate::FilterListUrl;
 use leptos::{server, ServerFnError};
 use serde::*;
+use std::str::FromStr;
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 struct CsvRecord {
     pub name: String,
-    pub url: url::Url,
+    pub url: FilterListUrl,
     pub author: String,
     pub license: String,
     pub expires: u64,
@@ -96,7 +96,7 @@ pub async fn write_filter_map() -> Result<(), ServerFnError> {
     for record in rows {
         records.push(CsvRecord {
             name: record.name.unwrap_or(String::new()),
-            url: url::Url::parse(&record.url.to_string())?,
+            url: record.url.parse()?,
             author: record.author.unwrap_or(String::new()),
             license: record.license.unwrap_or(String::new()),
             expires: record.expires as u64,
@@ -121,7 +121,7 @@ pub async fn get_filter_map() -> Result<crate::FilterListMap, ServerFnError> {
 
     let mut filter_list_map = std::collections::BTreeMap::new();
     for record in rows {
-        let url = url::Url::parse(&record.url)?.into();
+        let url = record.url.parse()?;
         let record = crate::FilterListRecord {
             name: record.name.unwrap_or(String::new()).into(),
             list_format: crate::FilterListType::from_str(&record.format)?,
@@ -182,8 +182,24 @@ enum UpdateListError {
 
 #[server(UpdateList)]
 pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
-    log::info!("Updating {}", url.as_str());
     let pool = crate::server::get_db().await?;
+    if let Some(internal_path) = url.to_internal_path() {
+        let contents = tokio::fs::read_to_string(internal_path).await?;
+        let new_last_updated = chrono::Utc::now();
+        sqlx::query!(
+            "UPDATE filterLists
+            SET lastUpdated = $2, contents = $3
+            WHERE url = $1
+            ",
+            url.as_str(),
+            new_last_updated,
+            contents
+        )
+        .execute(&pool)
+        .await?;
+        return Ok(());
+    }
+    log::info!("Updating {}", url.as_str());
     let url_str = url.as_str();
     let last_updated = get_last_version_data(&url).await?;
     let mut req = reqwest::Client::new().get(url_str);

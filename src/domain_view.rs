@@ -309,7 +309,7 @@ pub fn DomainViewPage() -> impl IntoView {
                         view! {
                             <h1 class="text-3xl">"Domain: " {domain.as_ref().to_string()}</h1>
                             <DnsResultView domain=domain.clone()/>
-                            <p>"Blocked by"</p>
+                            <p>"Filtered by"</p>
                             <BlockedBy get_domain=Box::new(get_domain)/>
                             <p>"Subdomains"</p>
                             <DisplaySubdomains get_domain=Box::new(get_domain)/>

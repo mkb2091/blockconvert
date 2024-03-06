@@ -16,6 +16,9 @@ impl AsRef<str> for Domain {
 impl FromStr for Domain {
     type Err = DomainParseError;
     fn from_str(domain: &str) -> Result<Domain, Self::Err> {
+        if domain.starts_with('*') {
+            return Err(DomainParseError);
+        }
         if domain.ends_with('.') {
             return Err(DomainParseError);
         }
@@ -168,6 +171,10 @@ fn parse_domain_list_line(line: &str, allow: bool, subdomain: bool) -> Option<Ru
     let mut segments = line.split_whitespace();
     match (segments.next(), segments.next(), segments.next()) {
         (Some(domain), None, None) | (Some("127.0.0.1" | "0.0.0.0"), Some(domain), None) => {
+            let (subdomain, domain) = domain
+                .strip_prefix("*.")
+                .map(|domain| (true, domain))
+                .unwrap_or_else(|| (subdomain, domain));
             if let Ok(domain) = domain.parse() {
                 let domain_rule = DomainRule {
                     domain,

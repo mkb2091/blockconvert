@@ -63,6 +63,9 @@ EasyList,https://easylist.to/easylist/easylist.txt,,GPLv3,345600,Adblock
 Commonly white listed domains for Pi-Hole,https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt,,MIT,86400,DomainAllowlist
 CJX's Annoyance List,https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt,,LGPLv3,345600,Adblock
 CB-Malicious-Domains,https://raw.githubusercontent.com/cb-software/CB-Malicious-Domains/master/block_lists/domains_only.txt,,MIT,86400,DomainBlocklist
+BlockConvert Internal IP Blocklist,internal/block_ips.txt,mkb2091,MIT License,30,IPBlocklist
+BlockConvert Internal Blocklist,internal/blocklist.txt,mkb2091,MIT License,30,DomainBlocklist
+BlockConvert Internal Allowlist,internal/allowlist.txt,mkb2091,MIT License,30,DomainAllowlist
 Better content blocking rules,https://better.fyi/blockerList.txt,,CC-BY-SA-4.0,86400,Adblock
 Basic tracking list by Disconnect,https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt,,GPLv3,86400,DomainBlocklist
 BarbBlock,https://paulgb.github.io/BarbBlock/blacklists/hosts-file.txt,,MIT,86400,DomainBlocklist

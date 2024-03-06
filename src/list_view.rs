@@ -318,7 +318,7 @@ enum ViewListError {
 
 impl ViewListParams {
     fn parse(&self) -> Result<crate::FilterListUrl, ViewListError> {
-        Ok(url::Url::parse(&self.url)?.into())
+        Ok(self.url.parse()?)
     }
 }
 

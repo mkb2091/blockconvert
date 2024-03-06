@@ -47,26 +47,40 @@ pub struct FilterListRecord {
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord, Hash)]
 #[serde(transparent)]
 pub struct FilterListUrl {
-    url: Arc<url::Url>,
+    url: Arc<str>,
 }
 
-impl std::ops::Deref for FilterListUrl {
-    type Target = url::Url;
-    fn deref(&self) -> &Self::Target {
-        self.url.as_ref()
+impl FilterListUrl {
+    pub fn as_str(&self) -> &str {
+        self.as_ref()
+    }
+    pub fn to_internal_path(&self) -> Option<std::path::PathBuf> {
+        if self.as_str().starts_with("internal/") {
+            Some(std::path::PathBuf::from(self.as_str()))
+        } else {
+            None
+        }
     }
 }
 
-impl From<url::Url> for FilterListUrl {
-    fn from(url: url::Url) -> Self {
-        Self { url: url.into() }
+impl std::ops::Deref for FilterListUrl {
+    type Target = str;
+    fn deref(&self) -> &Self::Target {
+        self.url.as_ref()
     }
 }
 
 impl FromStr for FilterListUrl {
     type Err = url::ParseError;
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        Ok(url::Url::parse(s)?.into())
+        match s {
+            "internal/blocklist.txt" | "internal/block_ips.txt" | "internal/allowlist.txt" => {
+                Ok(Self { url: s.into() })
+            }
+            s => Ok(Self {
+                url: url::Url::parse(s)?.as_str().into(),
+            }),
+        }
     }
 }
 
