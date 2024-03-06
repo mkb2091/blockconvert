@@ -499,5 +499,75 @@ pub async fn import_pihole_logs() -> Result<(), ServerFnError> {
 }
 
 pub async fn find_rule_matches() -> Result<(), ServerFnError> {
-    Ok(())
+    dotenvy::dotenv()?;
+    let pool = get_db().await?;
+    let read_limit = std::env::var("READ_LIMIT")?.parse::<u32>()? as i64;
+    let interval: u64 = std::env::var("RULE_MATCH_CHECK_INTERVAL")?.parse()?;
+    let interval: std::time::Duration = std::time::Duration::from_secs(interval);
+    let mut interval = tokio::time::interval(interval);
+    loop {
+        interval.tick().await;
+        let mut tx = pool.begin().await?;
+        let records = sqlx::query!(
+            "SELECT id from Rules
+            ORDER BY last_checked_matches ASC NULLS FIRST
+            LIMIT $1",
+            read_limit
+        )
+        .fetch_all(&mut *tx)
+        .await?;
+
+        let rule_ids = records
+            .into_iter()
+            .map(|record| record.id)
+            .collect::<Vec<_>>();
+
+        sqlx::query!(
+            "DELETE FROM rule_matches WHERE rule_id = ANY($1::int[])",
+            &rule_ids[..]
+        )
+        .execute(&mut *tx)
+        .await?;
+        sqlx::query!("
+            INSERT INTO rule_matches(rule_id, domain_id)
+            SELECT Rules.id AS rule_id, domains.id AS domain_id
+            FROM Rules
+            LEFT JOIN domain_rules ON Rules.domain_rule_id = domain_rules.id
+            LEFT JOIN subdomains ON domain_rules.domain_id = subdomains.parent_domain_id AND domain_rules.subdomain = true
+            LEFT JOIN ip_rules ON Rules.ip_rule_id = ip_rules.id
+            LEFT JOIN dns_ips ON ip_rules.ip_network = dns_ips.ip_address
+            LEFT JOIN dns_cnames ON dns_cnames.cname_domain_id = domain_rules.domain_id
+                OR dns_cnames.cname_domain_id = subdomains.domain_id
+            INNER JOIN domains ON domain_rules.domain_id = domains.id
+                OR subdomains.domain_id = domains.id
+                OR dns_ips.domain_id = domains.id
+                OR dns_cnames.domain_id = domains.id
+            INNER JOIN dns_ips AS dns_check ON dns_check.domain_id = domains.id AND dns_check.ip_address IS NOT NULL
+            WHERE Rules.id = ANY($1::int[])
+            ON CONFLICT DO NOTHING
+            ",
+        &rule_ids[..]).execute(&mut *tx).await?;
+        let count = sqlx::query!(
+            "SELECT COUNT(*) FROM rule_matches WHERE rule_id = ANY($1::int[])",
+            &rule_ids[..]
+        )
+        .fetch_one(&mut *tx)
+        .await?
+        .count
+        .unwrap_or(0);
+        log::info!(
+            "Checked {} rules and found {} matches",
+            rule_ids.len(),
+            count
+        );
+        sqlx::query!(
+            "UPDATE rules
+        SET last_checked_matches = now()
+        WHERE id = ANY($1::int[])",
+            &rule_ids[..]
+        )
+        .execute(&mut *tx)
+        .await?;
+        tx.commit().await?;
+    }
 }

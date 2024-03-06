@@ -2,12 +2,12 @@ pub mod app;
 pub mod domain_import_view;
 pub mod domain_view;
 pub mod error_template;
+pub mod home_page;
 pub mod ip_view;
 pub mod list_manager;
 pub mod list_parser;
 pub mod list_view;
 pub mod rule_view;
-pub mod home_page;
 #[cfg(feature = "ssr")]
 pub mod server;
 pub mod stats_view;

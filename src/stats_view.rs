@@ -19,6 +19,31 @@ fn TotalRuleCount() -> impl IntoView {
                 Ok(count) => view! { {count} }.into_view(),
                 Err(err) => view! { {format!("{err:?}")} }.into_view(),
             }}
+
+        </Await>
+    }
+}
+
+#[server]
+async fn get_total_rule_matches() -> Result<usize, ServerFnError> {
+    let pool = crate::server::get_db().await?;
+    let count = sqlx::query!("SELECT COUNT(*) FROM rule_matches")
+        .fetch_one(&pool)
+        .await?
+        .count
+        .ok_or_else(|| ServerFnError::new("No count"))? as usize;
+    Ok(count)
+}
+
+#[component]
+fn TotalRuleMatches() -> impl IntoView {
+    view! {
+        <Await future=|| async { get_total_rule_matches().await } let:total_rule_matches>
+            {match total_rule_matches {
+                Ok(count) => view! { {count} }.into_view(),
+                Err(err) => view! { {format!("{err:?}")} }.into_view(),
+            }}
+
         </Await>
     }
 }
@@ -98,7 +123,7 @@ fn DnsLookupCount() -> impl IntoView {
 pub fn StatsView() -> impl IntoView {
     view! {
         <div>
-            <h1 class="text-4xl font-bold text-indigo-600 mt-5 mb-5 text-center">Stats</h1>
+            <h1 class="mt-5 mb-5 text-4xl font-bold text-center text-indigo-600">Stats</h1>
             <table class="table max-w-fit">
                 <tr>
                     <td>"Total Domains"</td>
@@ -122,6 +147,12 @@ pub fn StatsView() -> impl IntoView {
                     <td>"Total Rules"</td>
                     <td class="text-right">
                         <TotalRuleCount/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>"Total Rule Matches"</td>
+                    <td class="text-right">
+                        <TotalRuleMatches/>
                     </td>
                 </tr>
             </table>

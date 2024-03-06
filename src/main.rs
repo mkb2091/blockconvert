@@ -42,6 +42,9 @@ async fn main() {
     tokio::spawn(async {
         blockconvert::server::import_pihole_logs().await.unwrap();
     });
+    tokio::spawn(async {
+        blockconvert::server::find_rule_matches().await.unwrap();
+    });
     axum::serve(listener, app.into_make_service())
         .await
         .unwrap();

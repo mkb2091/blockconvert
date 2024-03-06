@@ -127,19 +127,19 @@ async fn get_blocked_by(
     let records = sqlx::query!(
         r#"
         SELECT Rules.id as rule_id,
-        domain as "domain: Option<String>", domain_rules.allow as "domain_allow: Option<bool>", subdomain as "subdomain: Option<bool>",
+        domain_rules_domain.domain as "domain: Option<String>", domain_rules.allow as "domain_allow: Option<bool>", subdomain as "subdomain: Option<bool>",
         ip_rules.ip_network as "ip_network: Option<ipnetwork::IpNetwork>", ip_rules.allow as "ip_allow: Option<bool>",
         source_id, source, url
         FROM domains
-        LEFT JOIN dns_cnames ON domains.id = dns_cnames.cname_domain_id
-        LEFT JOIN domain_rules ON domain_rules.domain_id = domains.id OR domain_rules.domain_id = dns_cnames.domain_id
-        LEFT JOIN subdomains ON domains.id = subdomains.parent_domain_id AND domain_rules.subdomain = true
-        INNER JOIN RUles on domain_rules.id = rules.domain_rule_id
+        INNER JOIN rule_matches ON domains.id = rule_matches.domain_id
+        INNER JOIN Rules on Rules.id = rule_matches.rule_id
         INNER JOIN rule_source ON rules.id = rule_source.rule_id
         INNER JOIN list_rules ON rule_source.id = list_rules.source_id
         INNER JOIN filterLists ON list_rules.list_id = filterLists.id
+        LEFT JOIN domain_rules ON rules.domain_rule_id = domain_rules.id
+        LEFT JOIN domains AS domain_rules_domain ON domain_rules_domain.id = domain_rules.domain_id
         LEFT JOIN ip_rules ON rules.ip_rule_id = ip_rules.id
-        WHERE domain = $1
+        WHERE domains.domain = $1
         ORDER BY url
         LIMIT 100
         "#r,
