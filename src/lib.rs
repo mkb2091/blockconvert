@@ -7,9 +7,10 @@ pub mod list_manager;
 pub mod list_parser;
 pub mod list_view;
 pub mod rule_view;
+pub mod home_page;
 #[cfg(feature = "ssr")]
 pub mod server;
-pub mod source_view;
+pub mod stats_view;
 
 #[cfg(feature = "ssr")]
 use mimalloc::MiMalloc;
@@ -158,5 +159,6 @@ pub fn hydrate() {
     use crate::app::*;
     console_error_panic_hook::set_once();
     let _ = console_log::init_with_level(log::Level::Debug);
-    leptos::mount_to_body(App);
+    // leptos::mount_to_body(App);
+    leptos::leptos_dom::HydrationCtx::stop_hydrating();
 }

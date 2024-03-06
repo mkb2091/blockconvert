@@ -180,7 +180,7 @@ enum UpdateListError {
     FailedToFetch,
 }
 
-#[server]
+#[server(UpdateList)]
 pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
     log::info!("Updating {}", url.as_str());
     let pool = crate::server::get_db().await?;

@@ -1,6 +1,6 @@
 #[cfg(feature = "ssr")]
 use self::rule_view::RuleData;
-use crate::{app::Loading, rule_view::DisplayRule, *};
+use crate::{app::Loading, list_manager::UpdateList, rule_view::DisplayRule, *};
 use leptos::*;
 use leptos_router::*;
 
@@ -23,46 +23,58 @@ pub fn FilterListLink(url: crate::FilterListUrl) -> impl IntoView {
 #[server]
 async fn get_list_size(url: crate::FilterListUrl) -> Result<Option<usize>, ServerFnError> {
     let pool = crate::server::get_db().await?;
-    let mut tx = pool.begin().await?;
     let url_str = url.as_str();
-    let list_id = sqlx::query!("SELECT id FROM filterLists WHERE url = $1", url_str)
-        .fetch_one(&mut *tx)
-        .await?
-        .id;
-    let count = sqlx::query!(
-        "SELECT COUNT(*) FROM list_rules WHERE list_id = $1",
-        list_id
+    let record = sqlx::query!(
+        "SELECT id, rule_count FROM filterLists WHERE url = $1",
+        url_str
     )
-    .fetch_one(&mut *tx)
-    .await?
-    .count
-    .map(|x| x as usize);
-    Ok(count)
+    .fetch_one(&pool)
+    .await?;
+    let list_id = record.id;
+    let count = record.rule_count;
+    if count == 0 {
+        let count = sqlx::query!(
+            "SELECT COUNT(*) FROM list_rules WHERE list_id = $1",
+            list_id
+        )
+        .fetch_one(&pool)
+        .await?
+        .count;
+        if let Some(count) = count {
+            sqlx::query!(
+                "UPDATE filterLists SET rule_count = $1 WHERE id = $2",
+                count as i32,
+                list_id
+            )
+            .execute(&pool)
+            .await?;
+            Ok(Some(count as usize))
+        } else {
+            Ok(None)
+        }
+    } else {
+        Ok(Some(count as usize))
+    }
 }
 
 #[component]
-fn ListSize(size: Resource<usize, Result<Option<usize>, ServerFnError>>) -> impl IntoView {
+pub fn ListSize(url: FilterListUrl) -> impl IntoView {
     view! {
-        <Transition fallback=move || {
-            view! {
-                "Loading "
-                <Loading/>
+        <Await
+            future=move || {
+                let url = url.clone();
+                async { get_list_size(url).await }
             }
-        }>
-            {move || match size.get() {
-                None => view! {}.into_view(),
-                Some(Err(err)) => {
-                    view! {
-                        "Error Loading "
-                        {format!("{err:?}")}
-                    }
-                        .into_view()
-                }
-                Some(Ok(None)) => view! { "Never" }.into_view(),
-                Some(Ok(Some(size))) => view! { {size} }.into_view(),
+
+            let:size
+        >
+            {match size {
+                Err(err) => view! { {format!("{err:?}")} }.into_view(),
+                Ok(None) => view! { "Never" }.into_view(),
+                Ok(Some(size)) => view! { {size} }.into_view(),
             }}
 
-        </Transition>
+        </Await>
     }
 }
 
@@ -121,117 +133,57 @@ async fn get_list_page(
 }
 
 #[component]
-pub fn LastUpdated(
-    last_updated: Resource<usize, Result<Option<chrono::NaiveDateTime>, ServerFnError>>,
-) -> impl IntoView {
+pub fn LastUpdated(url: FilterListUrl) -> impl IntoView {
     view! {
-        <Transition fallback=move || {
-            view! {
-                "Loading "
-                <Loading/>
-            }
-        }>
-            {move || match last_updated.get() {
-                None => view! {}.into_view(),
-                Some(Err(err)) => {
-                    view! {
-                        "Error Loading "
-                        {format!("{err:?}")}
+        <div class="flex">
+            <div>
+                <Await
+                    future={
+                        let url = url.clone();
+                        move || {
+                            let url = url.clone();
+                            async move { crate::list_manager::get_last_updated(url).await }
+                        }
                     }
-                        .into_view()
-                }
-                Some(Ok(None)) => view! { "Never" }.into_view(),
-                Some(Ok(Some(ts))) => view! { {format!("{ts}")} }.into_view(),
-            }}
 
-        </Transition>
+                    let:last_updated
+                >
+                    {match last_updated {
+                        Ok(None) => view! { "Never" }.into_view(),
+                        Ok(Some(ts)) => view! { {format!("{ts}")} }.into_view(),
+                        Err(err) => view! { {format!("{err:?}")} }.into_view(),
+                    }}
+
+                </Await>
+            </div>
+            <FilterListUpdate url=url.clone()/>
+        </div>
     }
 }
 
 #[component]
-pub fn ParseList(url: crate::FilterListUrl, set_updated: Arc<dyn Fn()>) -> impl IntoView {
-    let parse_list = create_action(move |url: &crate::FilterListUrl| {
-        let url = url.clone();
-        let set_updated = set_updated.clone();
-        async move {
-            log::info!("Parsing {}", url.as_str());
-            if let Err(err) = crate::list_parser::parse_list(url).await {
-                log::error!("Error parsing list: {:?}", err);
-            }
-            set_updated();
-        }
-    });
+pub fn ParseList(url: crate::FilterListUrl) -> impl IntoView {
+    let parse_list_action = create_server_action::<crate::list_parser::ParseList>();
     view! {
-        <button
-            on:click={
-                let url = url.clone();
-                move |_| {
-                    log::info!("Parsing {}", url.as_str());
-                    parse_list.dispatch(url.clone());
-                }
-            }
-
-            class="btn btn-primary"
-        >
-            "Re-parse"
-        </button>
+        <ActionForm action=parse_list_action>
+            <button class="btn btn-primary" type="submit">
+                <input type="hidden" placeholder="url" id="url" name="url" value=url.to_string()/>
+                "Parse"
+            </button>
+        </ActionForm>
     }
 }
 
 #[component]
-pub fn FilterListUpdate(url: crate::FilterListUrl, set_updated: Arc<dyn Fn()>) -> impl IntoView {
-    #[derive(Clone, PartialEq)]
-    enum UpdateStatus {
-        Ready,
-        Updating,
-        Updated,
-        FailedtoUpdate(ServerFnError),
-    }
-    let (updating_status, set_updating_status) = create_signal(UpdateStatus::Ready);
-    let update_list = leptos::create_action(move |url: &crate::FilterListUrl| {
-        let url = url.clone();
-        let set_updated = set_updated.clone();
-        async move {
-            log::info!("Updating {}", url.as_str());
-            set_updating_status.set(UpdateStatus::Updating);
-            if let Err(err) = list_manager::update_list(url).await {
-                log::error!("Error updating list: {:?}", err);
-                set_updating_status.set(UpdateStatus::FailedtoUpdate(err));
-            } else {
-                set_updating_status.set(UpdateStatus::Updated);
-            }
-            set_updated();
-        }
-    });
-
+pub fn FilterListUpdate(url: crate::FilterListUrl) -> impl IntoView {
+    let update_list_action = create_server_action::<UpdateList>();
     view! {
-        <button
-            on:click={
-                let url = url.clone();
-                move |_| {
-                    update_list.dispatch(url.clone());
-                }
-            }
-
-            class="btn btn-primary"
-        >
-            "Update"
-        </button>
-
-        {move || match updating_status.get() {
-            UpdateStatus::Ready => view! { "Ready" }.into_view(),
-            UpdateStatus::Updating => {
-                view! {
-                    "Updating"
-                    <Loading/>
-                }
-                    .into_view()
-            }
-            UpdateStatus::Updated => view! { "Updated" }.into_view(),
-            UpdateStatus::FailedtoUpdate(err) => {
-                view! { {format!("Failed to Update: {err:?}")} }.into_view()
-            }
-        }}
+        <ActionForm action=update_list_action>
+            <button class="btn btn-primary" type="submit">
+                <input type="hidden" placeholder="url" id="url" name="url" value=url.to_string()/>
+                "Update"
+            </button>
+        </ActionForm>
     }
 }
 
@@ -265,18 +217,13 @@ fn Contents(contents: GetListContents) -> impl IntoView {
                         }
 
                         key=|(rule_id, source_id, _)| (*rule_id, *source_id)
-                        children=|(rule_id, source_id, pair)| {
+                        children=|(rule_id, _source_id, pair)| {
                             let source = pair.get_source().to_string();
                             let rule = pair.get_rule().clone();
                             let rule_href = format!("/rule/{}", rule_id.0);
-                            let source_href = format!("/rule_source/{}", source_id.0);
                             view! {
                                 <tr>
-                                    <td>
-                                        <A href=source_href class="link link-neutral">
-                                            {source}
-                                        </A>
-                                    </td>
+                                    <td>{source}</td>
                                     <td>
                                         <A href=rule_href class="link link-neutral">
                                             <DisplayRule rule=rule/>
@@ -298,21 +245,6 @@ fn Contents(contents: GetListContents) -> impl IntoView {
 fn FilterListInner(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoView {
     const PAGE_SIZE: usize = 50;
     let (updated, set_updated) = create_signal(0_usize);
-    let set_updated = Arc::new(move || set_updated.update(|x| *x += 1));
-    let last_updated = create_resource(updated, {
-        let url = url.clone();
-        move |_| {
-            let url = url.clone();
-            async move { crate::list_manager::get_last_updated(url).await }
-        }
-    });
-    let list_size = create_resource(updated, {
-        let url = url.clone();
-        move |_| {
-            let url = url.clone();
-            async move { get_list_size(url).await }
-        }
-    });
     let contents = create_resource(updated, {
         let url = url.clone();
         move |_| {
@@ -323,11 +255,11 @@ fn FilterListInner(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoV
     view! {
         <h1>"Filter List"</h1>
         <p>"URL: " {url.to_string()}</p>
-        <p>"Last Updated: " <LastUpdated last_updated=last_updated/></p>
-        <p>"Rule count: " <ListSize size=list_size/></p>
-        <FilterListUpdate url=url.clone() set_updated=set_updated.clone()/>
+        <p>"Last Updated: " <LastUpdated url=url.clone()/></p>
+        <p>"Rule count: " <ListSize url=url.clone()/></p>
+        <FilterListUpdate url=url.clone()/>
         <p>
-            <ParseList url=url.clone() set_updated=set_updated/>
+            <ParseList url=url.clone()/>
         </p>
 
         <DeleteList url=url.clone()/>

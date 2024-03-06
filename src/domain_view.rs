@@ -1,5 +1,6 @@
 use crate::{
     app::Loading,
+    list_parser::Domain,
     list_view::FilterListLink,
     rule_view::{DisplayRule, RuleData},
     DomainId, FilterListUrl, RuleId, SourceId,
@@ -10,7 +11,7 @@ use std::{collections::BTreeSet, net::IpAddr};
 
 #[server]
 async fn get_dns_result(
-    domain: String,
+    domain: Domain,
 ) -> Result<(BTreeSet<IpAddr>, BTreeSet<(DomainId, String)>), ServerFnError> {
     let records = sqlx::query!(
         r#"SELECT dns_ips.ip_address as "ip_address: Option<ipnetwork::IpNetwork>",
@@ -22,7 +23,7 @@ async fn get_dns_result(
     LEFT JOIN domains AS cname_domains ON cname_domains.id=dns_cnames.cname_domain_id
     WHERE domains.domain = $1
     "#r,
-        domain
+        domain.as_ref().to_string()
     )
     .fetch_all(&crate::server::get_db().await?)
     .await?;
@@ -40,65 +41,74 @@ async fn get_dns_result(
 }
 
 #[component]
-fn DnsResultView(get_domain: Box<dyn Fn() -> Result<String, ParamsError>>) -> impl IntoView {
-    let dns_results = create_resource(get_domain, |domain| async move {
-        let results = get_dns_result(domain?).await?;
-        Ok::<_, ServerFnError>(results)
-    });
+fn DnsResultView(domain: Domain) -> impl IntoView {
     view! {
-        <Transition fallback=move || {
-            view! { <p>"Loading" <Loading/></p> }
-        }>
-            {move || match dns_results.get() {
-                Some(Ok((ips, cnames))) => {
-                    view! {
-                        <div>
-                            "IP Addresses" <table class="table table-zebra">
-                                <For
-                                    each=move || { ips.clone() }
-                                    key=|ip| *ip
-                                    children=|ip| {
-                                        let href = format!("/ip/{ip}");
-                                        view! {
-                                            <tr>
-                                                <td>IP Address</td>
-                                                <td>
-                                                    <A href=href class="link link-neutral">
-                                                        {ip.to_string()}
-                                                    </A>
-                                                </td>
-                                            </tr>
-                                        }
-                                    }
-                                />
+        <Await
+            future=move || {
+                let domain = domain.clone();
+                async move { get_dns_result(domain.clone()).await }
+            }
 
-                                <For
-                                    each=move || { cnames.clone() }
-                                    key=|(id, _cname)| *id
-                                    children=|(_id, cname)| {
-                                        let href = format!("/domain/{cname}");
-                                        view! {
-                                            <tr>
-                                                <td>CNAME</td>
-                                                <td>
-                                                    <A href=href class="link link-neutral">
-                                                        {cname}
-                                                    </A>
-                                                </td>
-                                            </tr>
-                                        }
-                                    }
-                                />
+            let:dns_results
+        >
 
-                            </table>
-                        </div>
+            {
+                let dns_results = dns_results.clone();
+                move || match dns_results.clone() {
+                    Ok((ips, cnames)) => {
+                        view! {
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <h2 class="mb-2 text-lg font-bold">IP Addresses</h2>
+                                    <ul>
+                                        <For
+                                            each=move || { ips.clone() }
+                                            key=|ip| *ip
+                                            children=|ip| {
+                                                let href = format!("/ip/{ip}");
+                                                view! {
+                                                    <li>
+                                                        <A href=href class="link link-neutral">
+                                                            {ip.to_string()}
+                                                        </A>
+                                                    </li>
+                                                }
+                                            }
+                                        />
+
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h2 class="mb-2 text-lg font-bold">CNAMEs</h2>
+                                    <ul>
+                                        <For
+                                            each=move || { cnames.clone() }
+                                            key=|(id, _cname)| *id
+                                            children=|(_id, cname)| {
+                                                let href = format!("/domain/{cname}");
+                                                view! {
+                                                    <li>
+                                                        <A href=href class="link link-neutral">
+                                                            {cname}
+                                                        </A>
+                                                    </li>
+                                                }
+                                            }
+                                        />
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        }
+                            .into_view()
                     }
-                        .into_view()
+                    _ => view! { <p>"Error"</p> }.into_view(),
                 }
-                _ => view! { <p>"Error"</p> }.into_view(),
-            }}
+            }
 
-        </Transition>
+        </Await>
     }
 }
 
@@ -131,6 +141,7 @@ async fn get_blocked_by(
         LEFT JOIN ip_rules ON rules.ip_rule_id = ip_rules.id
         WHERE domain = $1
         ORDER BY url
+        LIMIT 100
         "#r,
         domain
     )
@@ -180,21 +191,16 @@ fn BlockedBy(get_domain: Box<dyn Fn() -> Result<String, ParamsError>>) -> impl I
                             <For
                                 each=move || { rules.clone() }
                                 key=|(_url, rule_id, source_id, _pair)| (*rule_id, *source_id)
-                                children=|(url, rule_id, source_id, pair)| {
+                                children=|(url, rule_id, _source_id, pair)| {
                                     let source = pair.get_source().to_string();
                                     let rule = pair.get_rule().clone();
                                     let rule_href = format!("/rule/{}", rule_id.0);
-                                    let source_href = format!("/rule_source/{}", source_id.0);
                                     view! {
                                         <tr>
                                             <td>
                                                 <FilterListLink url=url/>
                                             </td>
-                                            <td>
-                                                <A href=source_href class="link link-neutral">
-                                                    {source}
-                                                </A>
-                                            </td>
+                                            <td>{source}</td>
                                             <td>
                                                 <A href=rule_href class="link link-neutral">
                                                     <DisplayRule rule=rule/>
@@ -291,17 +297,26 @@ pub fn DomainViewPage() -> impl IntoView {
                 .map_err(Clone::clone)
         })
     };
+    let get_domain_parsed = move || {
+        params.with(|param| Ok::<_, ServerFnError>(param.as_ref()?.domain.parse::<Domain>()?))
+    };
     view! {
         <div>
             {move || {
-                let domain = get_domain();
-                view! {
-                    <h1 class="text-3xl">"Domain: " {domain}</h1>
-                    <DnsResultView get_domain=Box::new(get_domain)/>
-                    <p>"Blocked by"</p>
-                    <BlockedBy get_domain=Box::new(get_domain)/>
-                    <p>"Subdomains"</p>
-                    <DisplaySubdomains get_domain=Box::new(get_domain)/>
+                let domain = get_domain_parsed();
+                match domain {
+                    Ok(domain) => {
+                        view! {
+                            <h1 class="text-3xl">"Domain: " {domain.as_ref().to_string()}</h1>
+                            <DnsResultView domain=domain.clone()/>
+                            <p>"Blocked by"</p>
+                            <BlockedBy get_domain=Box::new(get_domain)/>
+                            <p>"Subdomains"</p>
+                            <DisplaySubdomains get_domain=Box::new(get_domain)/>
+                        }
+                            .into_view()
+                    }
+                    Err(err) => view! { <p>"Error: " {format!("{err:?}")}</p> }.into_view(),
                 }
             }}
 

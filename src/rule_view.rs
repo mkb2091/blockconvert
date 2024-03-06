@@ -32,7 +32,7 @@ pub async fn get_rule(id: RuleId) -> Result<Rule, ServerFnError> {
         .fetch_one(&crate::server::get_db().await?)
         .await?;
         let domain_rule = DomainRule {
-            domain: record.domain.as_str().parse()?,
+            domain: record.domain.parse()?,
             allow: record.allow,
             subdomain: record.subdomain,
         };
@@ -107,16 +107,11 @@ fn Sources(get_id: GetId) -> impl IntoView {
                                 <tbody>
                                     <For
                                         each=move || { sources.clone() }
-                                        key=|(id, _, _, _)| *id
-                                        children=|(source_id, source, _list_id, url)| {
-                                            let source_href = format!("/rule_source/{}", source_id.0);
+                                        key=|(source_id, _, _, _)| *source_id
+                                        children=|(_, source, _list_id, url)| {
                                             view! {
                                                 <tr>
-                                                    <td>
-                                                        <A href=source_href class="link link-neutral">
-                                                            {source}
-                                                        </A>
-                                                    </td>
+                                                    <td>{source}</td>
                                                     <td>
                                                         <FilterListLink url=url/>
                                                     </td>
@@ -174,15 +169,7 @@ fn RuleRawView(
             view! { <p>"Loading" <Loading/></p> }
         }>
             {move || match rule.get() {
-                Some(Ok(rule)) => {
-                    view! {
-                        <p>
-                            <DisplayRule rule=rule/>
-
-                        </p>
-                    }
-                        .into_view()
-                }
+                Some(Ok(rule)) => view! { <DisplayRule rule=rule/> }.into_view(),
                 Some(Err(err)) => view! { <p>"Error: " {format!("{err}")}</p> }.into_view(),
                 None => view! { "Invalid URL" }.into_view(),
             }}
@@ -292,7 +279,7 @@ impl TryInto<Rule> for RuleData {
         ) {
             (Some(domain), Some(allow), Some(subdomain), None, None) => {
                 Ok(Rule::Domain(DomainRule {
-                    domain: domain.as_str().parse()?,
+                    domain: domain.parse()?,
                     allow,
                     subdomain,
                 }))

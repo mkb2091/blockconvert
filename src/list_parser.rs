@@ -16,6 +16,9 @@ impl AsRef<str> for Domain {
 impl FromStr for Domain {
     type Err = DomainParseError;
     fn from_str(domain: &str) -> Result<Domain, Self::Err> {
+        if domain.ends_with('.') {
+            return Err(DomainParseError);
+        }
         let domain = addr::parse_dns_name(domain)?;
         if !domain.has_known_suffix() {
             return Err(DomainParseError);
@@ -50,7 +53,13 @@ mod tests {
 
     #[test]
     fn invalid_domain() {
-        for domain_str in ["com", "@.amazonaws.com"] {
+        for domain_str in [
+            "com",
+            "@.amazonaws.com",
+            "1234",
+            "example.com,google.com",
+            "example.com.",
+        ] {
             let domain: Result<Domain, _> = domain_str.parse();
             assert!(domain.is_err(), "{}", domain_str);
         }
@@ -181,6 +190,7 @@ fn parse_domain_list(contents: &str, allow: bool, subdomain: bool) -> Vec<RulePa
     })
 }
 
+#[cfg(feature = "ssr")]
 fn parse_adblock_line(line: &str) -> Option<Rule> {
     let rule = line;
     if rule.starts_with('!') // Comment
@@ -303,7 +313,7 @@ fn parse_regex_line(line: &str) -> Option<Rule> {
         if let Some(rule) = rule.strip_suffix('$') {
             let mut rule = rule.to_string();
             rule.retain(|c| c != '/');
-            if let Ok(domain) = rule.as_str().parse() {
+            if let Ok(domain) = rule.parse() {
                 let domain_rule = DomainRule {
                     domain,
                     allow: false,
@@ -399,7 +409,7 @@ pub fn parse_list_contents(contents: &str, list_format: FilterListType) -> Vec<R
     }
 }
 
-#[server]
+#[server(ParseList)]
 pub async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
     let start = std::time::Instant::now();
     let pool = crate::server::get_db().await?;
@@ -591,6 +601,16 @@ list_id,
     )
     .execute(&mut *tx)
     .await?;
+
+    sqlx::query!(
+        "UPDATE filterLists SET rule_count=$2
+    WHERE id = $1",
+        list_id,
+        rules.len() as i32
+    )
+    .execute(&mut *tx)
+    .await?;
+
     log::info!("Inserted list rules");
 
     tx.commit().await?;

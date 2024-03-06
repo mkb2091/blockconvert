@@ -37,7 +37,7 @@ async fn main() {
             .unwrap();
     });
     tokio::spawn(async {
-        blockconvert::server::check_missing_dns().await.unwrap();
+        blockconvert::server::check_dns().await.unwrap();
     });
     tokio::spawn(async {
         blockconvert::server::import_pihole_logs().await.unwrap();

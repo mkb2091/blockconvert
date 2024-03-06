@@ -31,26 +31,28 @@ fn DomainsWhichResolveTo(get_ip: GetIp) -> impl IntoView {
     let domain_results = create_resource(get_ip, |ip| async move {
         let ip = ip?;
         let results = get_domans_which_resolve_to_ip(ip).await?;
-        Ok::<_, ServerFnError>((ip, results))
+        Ok::<_, ServerFnError>(results)
     });
     view! {
         <Transition fallback=move || {
             view! { <p>"Loading" <Loading/></p> }
         }>
             {move || match domain_results.get() {
-                Some(Ok((ip, domains))) => {
+                Some(Ok(domains)) => {
                     view! {
                         <div>
-                            <p>"Domains which resolve to " {ip}</p>
-                            <ul class="list-none list-inside">
+                            <p>"Domains which resolve to this IP Address"</p>
+                            <ul class="grid grid-cols-2 gap-2">
                                 <For
                                     each=move || { domains.clone() }
                                     key=|(domain_id, _domain)| *domain_id
                                     children=|(_domain_id, domain)| {
-                                        let href = format!("/domain/{domain}");
                                         view! {
                                             <li>
-                                                <A href=href class="link link-neutral">
+                                                <A
+                                                    href=format!("/domain/{domain}")
+                                                    class="link link-neutral"
+                                                >
                                                     {domain}
                                                 </A>
                                             </li>
@@ -59,7 +61,6 @@ fn DomainsWhichResolveTo(get_ip: GetIp) -> impl IntoView {
                                 />
 
                             </ul>
-
                         </div>
                     }
                         .into_view()
@@ -85,14 +86,7 @@ pub fn IpView() -> impl IntoView {
         move || params.with(|param| param.as_ref().map(|param| param.ip).map_err(Clone::clone));
     view! {
         <div>
-            <h1 class="text-2xl">
-                "IP Address:"
-                {
-
-                    get_ip
-                }
-
-            </h1>
+            <h1 class="text-2xl font-bold text-gray-800">{"IP Address: "} {get_ip}</h1>
             <DomainsWhichResolveTo get_ip=Box::new(get_ip)/>
         </div>
     }
