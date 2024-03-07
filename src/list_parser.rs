@@ -173,8 +173,7 @@ fn parse_domain_list_line(line: &str, allow: bool, subdomain: bool) -> Option<Ru
         (Some(domain), None, None) | (Some("127.0.0.1" | "0.0.0.0"), Some(domain), None) => {
             let (subdomain, domain) = domain
                 .strip_prefix("*.")
-                .map(|domain| (true, domain))
-                .unwrap_or_else(|| (subdomain, domain));
+                .map_or((subdomain, domain), |domain| (true, domain));
             if let Ok(domain) = domain.parse() {
                 let domain_rule = DomainRule {
                     domain,
@@ -266,20 +265,20 @@ fn parse_adblock_line(line: &str) -> Option<Rule> {
     } else {
         (rule, false)
     };
-    let (rule, match_start_domain, match_exact_start) = if let Some(rule) = rule.strip_prefix("||")
-    {
-        (rule, true, false)
-    } else {
-        let (rule, match_exact_start) = rule
-            .strip_prefix('|')
-            .map_or((rule, false), |rule| (rule, true));
-        (rule, false, match_exact_start)
-    };
+    let (rule, mut match_start_domain, match_exact_start) =
+        if let Some(rule) = rule.strip_prefix("||") {
+            (rule, true, false)
+        } else {
+            let (rule, match_exact_start) = rule
+                .strip_prefix('|')
+                .map_or((rule, false), |rule| (rule, true));
+            (rule, false, match_exact_start)
+        };
 
     let (rule, match_end_domain_exact) = rule
         .strip_suffix('|')
         .map_or((rule, false), |rule| (rule, true));
-    let (rule, match_end_domain) = rule
+    let (mut rule, match_end_domain) = rule
         .strip_suffix('^')
         .map_or((rule, match_end_domain), |rule| (rule, true));
     if rule.contains('/') {
@@ -287,6 +286,12 @@ fn parse_adblock_line(line: &str) -> Option<Rule> {
     }
     if rule.contains('*') {
         return Some(Rule::Unknown);
+    }
+    if !match_start_domain {
+        (match_start_domain, rule) = rule
+            .strip_prefix('.')
+            .or_else(|| rule.strip_prefix("*."))
+            .map_or((false, rule), |rule| (true, rule));
     }
     if match_start_domain && (match_end_domain | match_end_domain_exact) {
         if let Ok(domain) = rule.parse() {
