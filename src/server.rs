@@ -3,6 +3,7 @@ use crate::DomainId;
 use axum::error_handling::future;
 use futures::StreamExt;
 use hickory_resolver::error::ResolveError;
+use leptos::server_fn::ServerFn;
 use leptos::*;
 use notify::Watcher;
 use rand::seq::SliceRandom;
@@ -570,4 +571,48 @@ pub async fn find_rule_matches() -> Result<(), ServerFnError> {
         .await?;
         tx.commit().await?;
     }
+}
+
+pub async fn build_list() -> Result<(), ServerFnError> {
+    dotenvy::dotenv()?;
+    let read_limit: i64 = std::env::var("READ_LIMIT")?.parse()?;
+    let pool = get_db().await?;
+    let mut tx = pool.begin().await?;
+    sqlx::query!("DELETE FROM allow_domains")
+        .execute(&mut *tx)
+        .await?;
+    let allow_count = sqlx::query!(
+        "SELECT COUNT(*) from rule_matches
+    INNER JOIN rules ON rule_matches.rule_id = rules.id
+    LEFT JOIN domain_rules ON rules.domain_rule_id = domain_rules.id
+    LEFT JOIN ip_rules ON rules.ip_rule_id = ip_rules.id
+    WHERE domain_rules.allow = true OR ip_rules.allow = true"
+    )
+    .fetch_one(&mut *tx)
+    .await?
+    .count
+    .unwrap_or(0);
+    log::info!("Allow count: {}", allow_count);
+    for offset in (0..allow_count).step_by(read_limit as usize) {
+        let records = sqlx::query!(
+            "INSERT INTO allow_domains(domain_id)
+            SELECT rule_matches.domain_id from rule_matches
+            INNER JOIN rules ON rule_matches.rule_id = rules.id
+            LEFT JOIN domain_rules ON rules.domain_rule_id = domain_rules.id
+            LEFT JOIN ip_rules ON rules.ip_rule_id = ip_rules.id
+            WHERE domain_rules.allow = true OR ip_rules.allow = true
+            ORDER BY rule_matches.domain_id
+            LIMIT $1
+            OFFSET $2
+            ON CONFLICT DO NOTHING
+            RETURNING domain_id
+        ",
+            read_limit,
+            offset,
+        )
+        .fetch_all(&mut *tx)
+        .await?;
+        log::info!("Inserted {} allow domains", records.len());
+    }
+    Ok(())
 }

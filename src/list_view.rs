@@ -1,6 +1,11 @@
 #[cfg(feature = "ssr")]
 use self::rule_view::RuleData;
-use crate::{app::Loading, list_manager::UpdateList, rule_view::DisplayRule, *};
+use crate::{
+    app::Loading,
+    list_manager::{DeleteList, UpdateList},
+    rule_view::DisplayRule,
+    *,
+};
 use leptos::*;
 use leptos_router::*;
 
@@ -262,7 +267,7 @@ fn FilterListInner(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoV
             <ParseList url=url.clone()/>
         </p>
 
-        <DeleteList url=url.clone()/>
+        <DeleteListButton url=url.clone()/>
         {if let Some(page) = page {
             view! { <p>"Page: " {page}</p> }
         } else {
@@ -323,29 +328,15 @@ impl ViewListParams {
 }
 
 #[component]
-fn DeleteList(url: FilterListUrl) -> impl IntoView {
-    let delete_list = create_action(move |url: &FilterListUrl| {
-        let url = url.clone();
-        async move {
-            log::info!("Deleting {}", url.as_str());
-            if let Err(err) = list_manager::delete_list(url).await {
-                log::error!("Error deleting list: {:?}", err);
-            }
-        }
-    });
+fn DeleteListButton(url: FilterListUrl) -> impl IntoView {
+    let delete_list_action = create_server_action::<DeleteList>();
     view! {
-        <button
-            class="btn btn-danger"
-            on:click={
-                let url = url.clone();
-                move |_| {
-                    delete_list.dispatch(url.clone());
-                }
-            }
-        >
-
-            "Delete"
-        </button>
+        <ActionForm action=delete_list_action>
+            <button class="btn btn-danger" type="submit">
+                <input type="hidden" placeholder="url" id="url" name="url" value=url.to_string()/>
+                "Delete"
+            </button>
+        </ActionForm>
     }
 }
 

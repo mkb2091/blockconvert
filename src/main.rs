@@ -44,6 +44,9 @@ async fn main() {
     tokio::spawn(async {
         blockconvert::server::find_rule_matches().await.unwrap();
     });
+    tokio::spawn(async {
+        blockconvert::server::build_list().await.unwrap();
+    });
     axum::serve(listener, app.into_make_service())
         .await
         .unwrap();

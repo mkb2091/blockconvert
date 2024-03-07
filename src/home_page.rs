@@ -39,7 +39,7 @@ fn FilterListSummary(url: crate::FilterListUrl, record: crate::FilterListRecord)
             <td>
                 <LastUpdated url=url.clone()/>
             </td>
-            <td>
+            <td class="text-right">
                 <ListSize url=url.clone()/>
             </td>
             <td>

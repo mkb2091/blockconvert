@@ -248,7 +248,7 @@ pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError>
     }
 }
 
-#[server]
+#[server(DeleteList)]
 pub async fn delete_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
     let pool = crate::server::get_db().await?;
     let url_str = url.as_str();

@@ -227,12 +227,13 @@ fn parse_adblock_line(line: &str) -> Option<Rule> {
                 }
             } else {
                 match tag {
-                    "3p" | "third-party" | "doc" | "document" | "all" => {
+                    "3p" | "doc" | "document" | "all" => {
                         match_end_domain = true;
                         block_site = true;
                     }
                     "popup" | "ghide" | "generichide" | "genericblock" | "image" | "script"
-                    | "xmlhttprequest" | "stylesheet" | "subdocument" | "media" | "csp" => {
+                    | "third-party" | "xmlhttprequest" | "stylesheet" | "subdocument" | "media"
+                    | "csp" => {
                         has_specific_filters = true;
                     }
                     "important" => {}
@@ -366,43 +367,6 @@ fn parse_unknown_lines(contents: &str) -> Vec<RulePair> {
     parse_lines(contents, &|_| Some(Rule::Unknown))
 }
 
-#[cfg(feature = "ssr")]
-#[derive(Deserialize, Debug)]
-#[allow(non_snake_case)]
-struct PrivacyBadgerRule {
-    heuristicAction: String,
-}
-
-#[cfg(feature = "ssr")]
-#[derive(Deserialize, Debug)]
-struct PrivacyBadger {
-    action_map: std::collections::HashMap<String, PrivacyBadgerRule>,
-}
-
-#[cfg(feature = "ssr")]
-fn parse_privacy_badger(contents: &str) -> Vec<RulePair> {
-    let res = serde_json::from_str::<PrivacyBadger>(contents);
-    if let Ok(privacy_badger) = res {
-        privacy_badger
-            .action_map
-            .into_iter()
-            .filter_map(|(domain, rule)| {
-                if rule.heuristicAction == "block" {
-                    let domain_rule = DomainRule {
-                        domain: domain.parse().ok()?,
-                        allow: false,
-                        subdomain: true,
-                    };
-                    Some(RulePair::new(domain.into(), Rule::Domain(domain_rule)))
-                } else {
-                    None
-                }
-            })
-            .collect()
-    } else {
-        vec![]
-    }
-}
 
 #[cfg(feature = "ssr")]
 pub fn parse_list_contents(contents: &str, list_format: FilterListType) -> Vec<RulePair> {
@@ -417,7 +381,6 @@ pub fn parse_list_contents(contents: &str, list_format: FilterListType) -> Vec<R
         FilterListType::RegexAllowlist => parse_unknown_lines(contents),
         FilterListType::RegexBlocklist => parse_regex(contents),
         FilterListType::Hostfile => parse_domain_list(contents, false, true),
-        FilterListType::PrivacyBadger => parse_privacy_badger(contents),
     }
 }
 

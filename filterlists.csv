@@ -91,8 +91,6 @@ ABPindo,https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/
 ,https://raw.githubusercontent.com/ligyxy/Blocklist/master/BLOCKLIST,,MIT,86400,DomainBlocklist
 ,https://raw.githubusercontent.com/bjornstar/hosts/master/hosts,,The Unlicense,86400,Hostfile
 ,https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt,,GPLv3+,86400,DomainAllowlist
-,https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/seed.json,,GPLv3,86400,PrivacyBadger
-,https://raw.githubusercontent.com/EFForg/badger-sett/master/results.json,,GPLv3,86400,PrivacyBadger
 ,https://cdn.jsdelivr.net/gh/realodix/AdBlockID@master/dist/adblockid.adfl.txt,,,86400,Adblock
 ,https://blocklists.kitsapcreator.com/scam-spam.txt,,The Unlicense,86400,DomainBlocklist
 ,https://blocklists.kitsapcreator.com/malware-malicious.txt,,The Unlicense,86400,DomainBlocklist
