@@ -154,8 +154,8 @@ pub fn DisplayRule(rule: Rule) -> impl IntoView {
                 }
                     .into_view()
             }
-            Rule::Unknown => view! { "Unknown" }.into_view(),
-            Rule::Invalid => view! { "Invalid Rule" }.into_view(),
+            Rule::Unknown => "Unknown".into_view(),
+            Rule::Invalid => "Invalid Rule".into_view(),
         }}
     }
 }
@@ -242,7 +242,7 @@ fn RuleBlockedDomainsView(get_id: Box<dyn Fn() -> Result<RuleId, ParamsError>>) 
                         .into_view()
                 }
                 Some(Err(err)) => view! { <p>"Error: " {format!("{err}")}</p> }.into_view(),
-                None => view! { "Invalid URL" }.into_view(),
+                None => "Invalid URL".into_view(),
             }}
 
         </Transition>

@@ -9,6 +9,8 @@ use crate::{
 use leptos::*;
 use leptos_router::*;
 
+const PAGE_SIZE: usize = 50;
+
 #[component]
 pub fn FilterListLink(url: crate::FilterListUrl) -> impl IntoView {
     let href = format!(
@@ -63,7 +65,12 @@ async fn get_list_size(url: crate::FilterListUrl) -> Result<Option<usize>, Serve
 }
 
 #[component]
-pub fn ListSize(url: FilterListUrl) -> impl IntoView {
+pub fn ListSize(url: FilterListUrl, list_size: Option<usize>) -> impl IntoView {
+    if let Some(size) = list_size {
+        if size > 0 {
+            return size.into_view();
+        }
+    }
     view! {
         <Await
             future=move || {
@@ -74,13 +81,14 @@ pub fn ListSize(url: FilterListUrl) -> impl IntoView {
             let:size
         >
             {match size {
-                Err(err) => view! { {format!("{err:?}")} }.into_view(),
-                Ok(None) => view! { "Never" }.into_view(),
-                Ok(Some(size)) => view! { {size} }.into_view(),
+                Err(err) => format!("{err:?}").into_view(),
+                Ok(None) => "Never".into_view(),
+                Ok(Some(size)) => size.into_view(),
             }}
 
         </Await>
     }
+    .into_view()
 }
 
 #[server]
@@ -95,7 +103,7 @@ async fn get_list_page(
         .fetch_one(&pool)
         .await?
         .id;
-    let start = page.unwrap_or(0);
+    let start = page.unwrap_or(0) * page_size;
     let records = sqlx::query!(
         r#"SELECT Rules.id AS rule_id, rule_source.id AS source_id, rule_source.source,
         domain as "domain: Option<String>" , domain_rules.allow as "domain_allow: Option<bool>", subdomain as "subdomain: Option<bool>",
@@ -107,11 +115,11 @@ async fn get_list_page(
         LEFT JOIN domains ON domains.id = domain_rules.domain_id
         LEFT JOIN ip_rules ON ip_rules.id = Rules.ip_rule_id
         WHERE list_id = $1
-        ORDER BY (domain_rules.id, ip_rules.id) DESC NULLS FIRST 
+        ORDER BY list_rules.source_id
         LIMIT $2 OFFSET $3
     "#r,
         id,
-        page_size as i64,
+        page_size as i64 ,
         start as i64
     )
     .fetch_all(&pool)
@@ -138,31 +146,56 @@ async fn get_list_page(
 }
 
 #[component]
-pub fn LastUpdated(url: FilterListUrl) -> impl IntoView {
+fn LastUpdatedInner(last_updated: Option<chrono::DateTime<chrono::Utc>>) -> impl IntoView {
     view! {
-        <div class="flex">
-            <div>
-                <Await
-                    future={
-                        let url = url.clone();
-                        move || {
+        {match last_updated {
+            Some(last_updated) => {
+                view! { <div>{format!("{last_updated}")}</div> }
+            }
+            None => {
+                view! { <div>"Never"</div> }
+            }
+        }}
+    }
+}
+
+#[component]
+pub fn LastUpdated(url: FilterListUrl, record: Option<FilterListRecord>) -> impl IntoView {
+    view! {
+        {match record.clone() {
+            Some(record) => {
+                let last_updated = record.last_updated;
+                view! { <LastUpdatedInner last_updated=last_updated/> }
+            }
+            None => {
+                view! {
+                    <Await
+                        future={
                             let url = url.clone();
-                            async move { crate::list_manager::get_last_updated(url).await }
+                            move || {
+                                let url = url.clone();
+                                async move {
+                                    crate::list_manager::get_last_updated(url.clone()).await
+                                }
+                            }
                         }
-                    }
 
-                    let:last_updated
-                >
-                    {match last_updated {
-                        Ok(None) => view! { "Never" }.into_view(),
-                        Ok(Some(ts)) => view! { {format!("{ts}")} }.into_view(),
-                        Err(err) => view! { {format!("{err:?}")} }.into_view(),
-                    }}
+                        let:last_version_data
+                    >
+                        {match last_version_data {
+                            Ok(last_updated) => {
+                                view! { <LastUpdatedInner last_updated=last_updated.clone()/> }
+                                    .into_view()
+                            }
+                            Err(err) => view! { {format!("{err:?}")} }.into_view(),
+                        }}
 
-                </Await>
-            </div>
-            <FilterListUpdate url=url.clone()/>
-        </div>
+                    </Await>
+                }
+            }
+        }}
+
+        <FilterListUpdate url=url.clone()/>
     }
 }
 
@@ -192,76 +225,76 @@ pub fn FilterListUpdate(url: crate::FilterListUrl) -> impl IntoView {
     }
 }
 
-type GetListContents =
-    Resource<usize, Result<Vec<(RuleId, SourceId, crate::list_parser::RulePair)>, ServerFnError>>;
-
 #[component]
-fn Contents(contents: GetListContents) -> impl IntoView {
+fn Contents(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoView {
     view! {
-        <Transition fallback=move || {
-            view! { <p>"Loading " <Loading/></p> }
-        }>
-            <table class="table table-zebra">
-                <thead>
-                    <tr>
-                        <th>Source</th>
-                        <th>Rule</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <For
-                        each=move || {
-                            contents
-                                .get()
-                                .clone()
-                                .iter()
-                                .flatten()
-                                .flatten()
-                                .cloned()
-                                .collect::<Vec<_>>()
-                        }
+        <table class="table table-zebra">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Rule</th>
+                </tr>
+            </thead>
+            <Await
+                future=move || {
+                    let url = url.clone();
+                    async move { get_list_page(url, page, PAGE_SIZE).await }
+                }
 
-                        key=|(rule_id, source_id, _)| (*rule_id, *source_id)
-                        children=|(rule_id, _source_id, pair)| {
-                            let source = pair.get_source().to_string();
-                            let rule = pair.get_rule().clone();
-                            let rule_href = format!("/rule/{}", rule_id.0);
+                let:contents
+            >
+
+                {
+                    let contents = contents.clone();
+                    move || match contents.clone() {
+                        Ok(contents) => {
+                            let contents = contents.clone();
                             view! {
-                                <tr>
-                                    <td>{source}</td>
-                                    <td>
-                                        <A href=rule_href class="link link-neutral">
-                                            <DisplayRule rule=rule/>
-                                        </A>
-                                    </td>
-                                </tr>
+                                <tbody>
+                                    <For
+                                        each=move || {
+                                            contents.clone().iter().cloned().collect::<Vec<_>>()
+                                        }
+
+                                        key=|(rule_id, source_id, _)| (*rule_id, *source_id)
+                                        children=|(rule_id, _source_id, pair)| {
+                                            let source = pair.get_source().to_string();
+                                            let rule = pair.get_rule().clone();
+                                            let rule_href = format!("/rule/{}", rule_id.0);
+                                            view! {
+                                                <tr>
+                                                    <td>{source}</td>
+                                                    <td>
+                                                        <A href=rule_href class="link link-neutral">
+                                                        <DisplayRule rule=rule/>
+                                                    </A>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                    />
+
+                                </tbody>
                             }
+                                .into_view()
                         }
-                    />
+                        Err(err) => format!("{err:?}").into_view(),
+                    }
+                }
 
-                </tbody>
-            </table>
+            </Await>
 
-        </Transition>
+        </table>
     }
 }
 
 #[component]
 fn FilterListInner(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoView {
-    const PAGE_SIZE: usize = 50;
-    let (updated, set_updated) = create_signal(0_usize);
-    let contents = create_resource(updated, {
-        let url = url.clone();
-        move |_| {
-            let url = url.clone();
-            async move { get_list_page(url, page, PAGE_SIZE).await }
-        }
-    });
     view! {
         <h1>"Filter List"</h1>
         <p>"URL: " {url.to_string()}</p>
-        <p>"Last Updated: " <LastUpdated url=url.clone()/></p>
-        <p>"Rule count: " <ListSize url=url.clone()/></p>
+        <p>"Last Updated: " <LastUpdated url=url.clone() record=None/></p>
+        <p>"Rule count: " <ListSize url=url.clone() list_size=None/></p>
         <FilterListUpdate url=url.clone()/>
         <p>
             <ParseList url=url.clone()/>
@@ -278,7 +311,7 @@ fn FilterListInner(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoV
             None | Some(0) => view! {}.into_view(),
             Some(page) => {
                 let params = params_map! {
-                    "url" => url.as_str(), "page" => (page.saturating_sub(PAGE_SIZE)).to_string()
+                    "url" => url.as_str(), "page" => (page.saturating_sub(1)).to_string()
                 };
                 let href = format!("/list{}", params.to_query_string());
                 view! {
@@ -291,7 +324,7 @@ fn FilterListInner(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoV
 
         {
             let params = params_map! {
-                "url" => url.as_str(), "page" => (page.unwrap_or(0) + PAGE_SIZE).to_string()
+                "url" => url.as_str(), "page" => (page.unwrap_or(0) + 1).to_string()
             };
             let href = format!("/list{}", params.to_query_string());
             view! {
@@ -301,7 +334,7 @@ fn FilterListInner(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoV
             }
         }
 
-        <p>"Contents: " <Contents contents=contents/></p>
+        <p>"Contents: " <Contents url=url.clone() page=page/></p>
     }
 }
 

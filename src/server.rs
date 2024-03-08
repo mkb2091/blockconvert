@@ -1,18 +1,14 @@
 use crate::list_parser::Domain;
-use crate::DomainId;
-use axum::error_handling::future;
+use crate::{DomainId, FilterListUrl};
 use futures::StreamExt;
 use hickory_resolver::error::ResolveError;
-use leptos::server_fn::ServerFn;
 use leptos::*;
 use notify::Watcher;
-use rand::seq::SliceRandom;
-use rand::Rng;
 use std::collections::HashSet;
 use std::net::IpAddr;
 use std::sync::atomic::{AtomicUsize, Ordering};
-use std::sync::{Arc, Mutex, RwLock};
-use tokio::io::AsyncBufReadExt;
+use std::sync::{Arc, Mutex};
+use tokio::io::{AsyncBufReadExt, AsyncWriteExt};
 
 static SQLITE_POOL: tokio::sync::OnceCell<sqlx::PgPool> = tokio::sync::OnceCell::const_new();
 
@@ -535,10 +531,10 @@ pub async fn find_rule_matches() -> Result<(), ServerFnError> {
             FROM Rules
             LEFT JOIN domain_rules ON Rules.domain_rule_id = domain_rules.id
             LEFT JOIN subdomains ON domain_rules.domain_id = subdomains.parent_domain_id AND domain_rules.subdomain = true
-            LEFT JOIN ip_rules ON Rules.ip_rule_id = ip_rules.id
+            LEFT JOIN ip_rules ON Rules.ip_rule_id = ip_rules.id AND ip_rules.allow=false
             LEFT JOIN dns_ips ON ip_rules.ip_network = dns_ips.ip_address
-            LEFT JOIN dns_cnames ON dns_cnames.cname_domain_id = domain_rules.domain_id
-                OR dns_cnames.cname_domain_id = subdomains.domain_id
+            LEFT JOIN dns_cnames ON (dns_cnames.cname_domain_id = domain_rules.domain_id
+                OR dns_cnames.cname_domain_id = subdomains.domain_id) AND domain_rules.allow=false
             INNER JOIN domains ON domain_rules.domain_id = domains.id
                 OR subdomains.domain_id = domains.id
                 OR dns_ips.domain_id = domains.id
@@ -573,46 +569,77 @@ pub async fn find_rule_matches() -> Result<(), ServerFnError> {
     }
 }
 
+pub async fn update_expired_lists() -> Result<(), ServerFnError> {
+    let pool = get_db().await?;
+    loop {
+        let record = sqlx::query!(
+            r#"SELECT url, lastupdated+expires * INTERVAL '1 seconds' AS nextupdate
+            FROM filterLists ORDER BY nextupdate NULLS FIRST
+            LIMIT 1"#r
+        )
+        .fetch_one(&pool)
+        .await?;
+        if let Some(next_update) = record.nextupdate {
+            let next_update = next_update - chrono::Utc::now();
+            if let Ok(next_update) = next_update.to_std() {
+                tokio::time::sleep(next_update).await;
+            }
+        }
+        let url: FilterListUrl = record.url.parse()?;
+        if let Err(err) = crate::list_manager::update_list(url.clone()).await {
+            log::warn!("Error updating list {}: {:?}", url.as_str(), err);
+        }
+    }
+}
+
 pub async fn build_list() -> Result<(), ServerFnError> {
+    // return Ok(());
     dotenvy::dotenv()?;
-    let read_limit: i64 = std::env::var("READ_LIMIT")?.parse()?;
     let pool = get_db().await?;
     let mut tx = pool.begin().await?;
     sqlx::query!("DELETE FROM allow_domains")
         .execute(&mut *tx)
         .await?;
-    let allow_count = sqlx::query!(
-        "SELECT COUNT(*) from rule_matches
-    INNER JOIN rules ON rule_matches.rule_id = rules.id
-    LEFT JOIN domain_rules ON rules.domain_rule_id = domain_rules.id
-    LEFT JOIN ip_rules ON rules.ip_rule_id = ip_rules.id
-    WHERE domain_rules.allow = true OR ip_rules.allow = true"
-    )
-    .fetch_one(&mut *tx)
-    .await?
-    .count
-    .unwrap_or(0);
-    log::info!("Allow count: {}", allow_count);
-    for offset in (0..allow_count).step_by(read_limit as usize) {
-        let records = sqlx::query!(
-            "INSERT INTO allow_domains(domain_id)
-            SELECT rule_matches.domain_id from rule_matches
-            INNER JOIN rules ON rule_matches.rule_id = rules.id
-            LEFT JOIN domain_rules ON rules.domain_rule_id = domain_rules.id
-            LEFT JOIN ip_rules ON rules.ip_rule_id = ip_rules.id
-            WHERE domain_rules.allow = true OR ip_rules.allow = true
-            ORDER BY rule_matches.domain_id
-            LIMIT $1
-            OFFSET $2
-            ON CONFLICT DO NOTHING
-            RETURNING domain_id
-        ",
-            read_limit,
-            offset,
-        )
-        .fetch_all(&mut *tx)
+    sqlx::query!("DELETE FROM block_domains")
+        .execute(&mut *tx)
         .await?;
-        log::info!("Inserted {} allow domains", records.len());
+    let allow_record = sqlx::query!(
+        "INSERT INTO allow_domains(domain_id)
+        SELECT rule_matches.domain_id from rule_matches
+        INNER JOIN rules ON rule_matches.rule_id = rules.id
+        LEFT JOIN domain_rules ON rules.domain_rule_id = domain_rules.id
+        LEFT JOIN ip_rules ON rules.ip_rule_id = ip_rules.id
+        WHERE domain_rules.allow = true OR ip_rules.allow = true
+        ON CONFLICT DO NOTHING",
+    )
+    .execute(&mut *tx)
+    .await?;
+    log::info!("Inserted {} allow rules", allow_record.rows_affected());
+    let record = sqlx::query!(
+        "INSERT INTO block_domains(domain_id)
+        SELECT rule_matches.domain_id from rule_matches
+        INNER JOIN rules ON rule_matches.rule_id = rules.id
+        LEFT JOIN domain_rules ON rules.domain_rule_id = domain_rules.id
+        LEFT JOIN ip_rules ON rules.ip_rule_id = ip_rules.id
+        WHERE domain_rules.allow = false OR ip_rules.allow = false
+        ON CONFLICT DO NOTHING",
+    )
+    .execute(&mut *tx)
+    .await?;
+    log::info!("Inserted {} block rules", record.rows_affected());
+    tx.commit().await?;
+    let records = sqlx::query!("select domain from block_domains
+    INNER JOIN domains ON block_domains.domain_id = domains.id
+    where not exists(select 1 from allow_domains where allow_domains.domain_id=block_domains.domain_id)
+    ORDER BY domain").fetch_all(&pool).await?;
+    log::info!("Built list: {} domains", records.len());
+    let file = tokio::fs::File::create("output/domains.txt").await?;
+    let mut buf = tokio::io::BufWriter::new(file);
+    for record in records {
+        buf.write_all(record.domain.as_bytes()).await?;
+        buf.write_all(b"\n").await?;
     }
+    buf.flush().await?;
+    log::info!("Wrote list to output/domains.txt");
     Ok(())
 }

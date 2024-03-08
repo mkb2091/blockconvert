@@ -64,7 +64,7 @@ pub fn App() -> impl IntoView {
             </header>
             <main>
                 <Routes>
-                    <Route path="" view=HomePage ssr=SsrMode::InOrder/>
+                    <Route path="" view=HomePage ssr=SsrMode::Async/>
                     <Route path="stats" view=StatsView ssr=SsrMode::InOrder/>
                     <Route path="list" view=FilterListPage ssr=SsrMode::InOrder/>
                     <Route path="rule/:id" view=RuleViewPage ssr=SsrMode::InOrder/>

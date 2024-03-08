@@ -115,11 +115,12 @@ pub async fn write_filter_map() -> Result<(), ServerFnError> {
 #[server]
 pub async fn get_filter_map() -> Result<crate::FilterListMap, ServerFnError> {
     let pool = crate::server::get_db().await?;
-    let rows = sqlx::query!("SELECT url, name, format, expires, author, license FROM filterLists")
+    let rows = sqlx::query!("SELECT url, name, format, expires, author, license, lastupdated, rule_count
+    FROM filterLists")
         .fetch_all(&pool)
         .await?;
 
-    let mut filter_list_map = std::collections::BTreeMap::new();
+    let mut filter_list_map = Vec::new();
     for record in rows {
         let url = record.url.parse()?;
         let record = crate::FilterListRecord {
@@ -128,8 +129,10 @@ pub async fn get_filter_map() -> Result<crate::FilterListMap, ServerFnError> {
             author: record.author.unwrap_or(String::new()).into(),
             license: record.license.unwrap_or(String::new()).into(),
             expires: std::time::Duration::from_secs(record.expires as u64),
+            last_updated: record.lastupdated,
+            list_size: record.rule_count as usize,
         };
-        filter_list_map.insert(url, record);
+        filter_list_map.push((url, record));
     }
 
     Ok(crate::FilterListMap(filter_list_map))
@@ -137,7 +140,7 @@ pub async fn get_filter_map() -> Result<crate::FilterListMap, ServerFnError> {
 
 #[cfg(feature = "ssr")]
 struct LastVersionData {
-    last_updated: chrono::NaiveDateTime,
+    last_updated: chrono::DateTime<chrono::Utc>,
     etag: Option<String>,
 }
 
@@ -149,7 +152,7 @@ async fn get_last_version_data(
     let url_str = url.as_str();
     #[allow(non_camel_case_types)]
     let last_version_data = sqlx::query!(
-        r#"SELECT lastUpdated as "last_updated: chrono::NaiveDateTime", etag FROM filterLists WHERE url = $1"#,
+        r#"SELECT lastUpdated as "last_updated: chrono::DateTime<chrono::Utc>", etag FROM filterLists WHERE url = $1"#,
         url_str
     )
     .fetch_one(&pool)
@@ -167,7 +170,7 @@ async fn get_last_version_data(
 #[server]
 pub async fn get_last_updated(
     url: crate::FilterListUrl,
-) -> Result<Option<chrono::NaiveDateTime>, ServerFnError> {
+) -> Result<Option<chrono::DateTime<chrono::Utc>>, ServerFnError> {
     get_last_version_data(&url)
         .await
         .map(|data| data.map(|data| data.last_updated))
@@ -183,6 +186,13 @@ enum UpdateListError {
 #[server(UpdateList)]
 pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> {
     let pool = crate::server::get_db().await?;
+    let old_contents = sqlx::query!(
+        "SELECT contents FROM filterLists WHERE url = $1",
+        url.as_str()
+    )
+    .fetch_one(&pool)
+    .await?
+    .contents;
     if let Some(internal_path) = url.to_internal_path() {
         let contents = tokio::fs::read_to_string(internal_path).await?;
         let new_last_updated = chrono::Utc::now();
@@ -197,6 +207,11 @@ pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError>
         )
         .execute(&pool)
         .await?;
+        if old_contents != Some(contents) {
+            crate::list_parser::parse_list(url).await?;
+        } else {
+            log::info!("No change in contents for {}", url.as_str());
+        }
         return Ok(());
     }
     log::info!("Updating {}", url.as_str());
@@ -219,26 +234,38 @@ pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError>
     match response.status() {
         reqwest::StatusCode::NOT_MODIFIED => {
             log::info!("Not modified {:?}", url_str);
+            sqlx::query!(
+                "UPDATE filterLists
+                SET lastUpdated = NOW()
+                WHERE url = $1
+                ",
+                url_str
+            )
+            .execute(&pool)
+            .await?;
             Ok(())
         }
         reqwest::StatusCode::OK => {
             let headers = response.headers().clone();
             let etag = headers.get("etag").and_then(|item| item.to_str().ok());
             let body = response.text().await?;
-            let new_last_updated = chrono::Utc::now();
             log::info!("Updated {} size ({})", url_str, body.len());
             sqlx::query!(
                 "UPDATE filterLists
-                SET lastUpdated = $2, contents = $3, etag = $4
+                SET lastUpdated = NOW(), contents = $2, etag = $3
                 WHERE url = $1
                 ",
                 url_str,
-                new_last_updated,
                 body,
                 etag
             )
             .execute(&pool)
             .await?;
+            if Some(body) != old_contents {
+                crate::list_parser::parse_list(url).await?;
+            } else {
+                log::info!("No change in contents for {}", url_str);
+            }
             Ok(())
         }
         status => {

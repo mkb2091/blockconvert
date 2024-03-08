@@ -34,17 +34,16 @@ async fn import_domains_from_url(url: String) -> Result<(), ServerFnError> {
     let body = req.text().await?;
     let domains = body
         .split(|c: char| !(c.is_ascii_alphanumeric() || c == '.'))
-        .filter(|domain| domain.parse::<Domain>().is_ok())
-        .map(|domain| domain.to_string())
+        .filter_map(|domain| domain.parse::<Domain>().ok())
+        .map(|domain| domain.as_ref().to_string())
         .collect::<Vec<_>>();
-    log::info!("Sample: {:?}", &domains[..100]);
     log::info!("Importing {} domains", domains.len());
     for i in (0..domains.len()).step_by(batch_size) {
         sqlx::query!(
             "INSERT INTO domains (domain, processed_subdomains)
         SELECT domain, false FROM UNNEST($1::text[]) as t(domain)
         ON CONFLICT DO NOTHING",
-            &domains[i..i + batch_size]
+            &domains[i..(i + batch_size).min(domains.len())]
         )
         .execute(&pool)
         .await?;
@@ -75,7 +74,7 @@ pub fn DomainImportView() -> impl IntoView {
                 <label>
                     <p>"Domains: "</p>
                     <textarea
-                        class="textarea textarea-bordered w-full sm:max-w-3xl"
+                        class="w-full textarea textarea-bordered sm:max-w-3xl"
                         placeholder="domains"
                         id="domains"
                         name="domains"

@@ -3,11 +3,15 @@ use leptos::*;
 #[server]
 async fn count_total_rules() -> Result<usize, ServerFnError> {
     let pool = crate::server::get_db().await?;
-    let count = sqlx::query!("SELECT COUNT(*) FROM Rules")
-        .fetch_one(&pool)
-        .await?
-        .count
-        .ok_or_else(|| ServerFnError::new("No count"))? as usize;
+    let count = sqlx::query!(
+        "SELECT reltuples::bigint AS count
+    FROM pg_catalog.pg_class
+    WHERE relname = 'rules'"
+    )
+    .fetch_one(&pool)
+    .await?
+    .count
+    .ok_or_else(|| ServerFnError::new("No count"))? as usize;
     Ok(count)
 }
 
@@ -27,11 +31,15 @@ fn TotalRuleCount() -> impl IntoView {
 #[server]
 async fn get_total_rule_matches() -> Result<usize, ServerFnError> {
     let pool = crate::server::get_db().await?;
-    let count = sqlx::query!("SELECT COUNT(*) FROM rule_matches")
-        .fetch_one(&pool)
-        .await?
-        .count
-        .ok_or_else(|| ServerFnError::new("No count"))? as usize;
+    let count = sqlx::query!(
+        "SELECT reltuples::bigint AS count
+    FROM pg_catalog.pg_class
+    WHERE relname = 'rule_matches'"
+    )
+    .fetch_one(&pool)
+    .await?
+    .count
+    .ok_or_else(|| ServerFnError::new("No count"))? as usize;
     Ok(count)
 }
 
@@ -51,11 +59,15 @@ fn TotalRuleMatches() -> impl IntoView {
 #[server]
 async fn get_domain_count() -> Result<usize, ServerFnError> {
     let pool = crate::server::get_db().await?;
-    let count = sqlx::query!("SELECT COUNT(*) FROM domains")
-        .fetch_one(&pool)
-        .await?
-        .count
-        .ok_or_else(|| ServerFnError::new("No count"))? as usize;
+    let count = sqlx::query!(
+        "SELECT reltuples::bigint AS count
+        FROM pg_catalog.pg_class
+        WHERE relname = 'domains'"
+    )
+    .fetch_one(&pool)
+    .await?
+    .count
+    .ok_or_else(|| ServerFnError::new("No count"))? as usize;
     Ok(count)
 }
 
@@ -74,11 +86,15 @@ fn DomainCount() -> impl IntoView {
 #[server]
 async fn get_subdomains_count() -> Result<usize, ServerFnError> {
     let pool = crate::server::get_db().await?;
-    let count = sqlx::query!("SELECT COUNT(*) FROM subdomains")
-        .fetch_one(&pool)
-        .await?
-        .count
-        .ok_or_else(|| ServerFnError::new("No count"))? as usize;
+    let count = sqlx::query!(
+        "SELECT reltuples::bigint AS count
+        FROM pg_catalog.pg_class
+        WHERE relname = 'subdomains'"
+    )
+    .fetch_one(&pool)
+    .await?
+    .count
+    .ok_or_else(|| ServerFnError::new("No count"))? as usize;
     Ok(count)
 }
 
@@ -96,21 +112,53 @@ fn SubdomainCount() -> impl IntoView {
 }
 
 #[server]
-async fn get_dns_lookup_count() -> Result<usize, ServerFnError> {
+async fn get_dns_ip_count() -> Result<usize, ServerFnError> {
     let pool = crate::server::get_db().await?;
-    let count = sqlx::query!("SELECT COUNT(*) FROM domains WHERE last_checked_dns IS NOT NULL")
-        .fetch_one(&pool)
-        .await?
-        .count
-        .ok_or_else(|| ServerFnError::new("No count"))? as usize;
+    let count = sqlx::query!(
+        "SELECT reltuples::bigint AS count
+            FROM pg_catalog.pg_class
+            WHERE relname = 'dns_ips'"
+    )
+    .fetch_one(&pool)
+    .await?
+    .count
+    .ok_or_else(|| ServerFnError::new("No count"))? as usize;
     Ok(count)
 }
 
 #[component]
-fn DnsLookupCount() -> impl IntoView {
+fn DnsIpCount() -> impl IntoView {
     view! {
-        <Await future=|| async { get_dns_lookup_count().await } let:dns_lookup_count>
-            {match dns_lookup_count {
+        <Await future=|| async { get_dns_ip_count().await } let:dns_ip_count>
+            {match dns_ip_count {
+                Ok(count) => view! { {count} }.into_view(),
+                Err(err) => view! { {format!("{err:?}")} }.into_view(),
+            }}
+
+        </Await>
+    }
+}
+
+#[server]
+async fn get_dns_cname_count() -> Result<usize, ServerFnError> {
+    let pool = crate::server::get_db().await?;
+    let count = sqlx::query!(
+        "SELECT reltuples::bigint AS count
+            FROM pg_catalog.pg_class
+            WHERE relname = 'dns_cnames'"
+    )
+    .fetch_one(&pool)
+    .await?
+    .count
+    .ok_or_else(|| ServerFnError::new("No count"))? as usize;
+    Ok(count)
+}
+
+#[component]
+fn DnsCnameCount() -> impl IntoView {
+    view! {
+        <Await future=|| async { get_dns_cname_count().await } let:dns_ip_count>
+            {match dns_ip_count {
                 Ok(count) => view! { {count} }.into_view(),
                 Err(err) => view! { {format!("{err:?}")} }.into_view(),
             }}
@@ -132,9 +180,15 @@ pub fn StatsView() -> impl IntoView {
                     </td>
                 </tr>
                 <tr>
-                    <td>"Total DNS Lookups"</td>
+                    <td>"Total DNS IPs"</td>
                     <td class="text-right">
-                        <DnsLookupCount/>
+                        <DnsIpCount/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>"Total DNS CNAMES"</td>
+                    <td class="text-right">
+                        <DnsCnameCount/>
                     </td>
                 </tr>
                 <tr>

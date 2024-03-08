@@ -682,3 +682,11 @@ zerodot1.gitlab.io
 zerohedge.com
 zeustracker.abuse.ch
 zoho.com
+tracker2.itzmx.com # https://github.com/mkb2091/blockconvert/issues/124
+download.visualware.com # https://github.com/mkb2091/blockconvert/issues/123
+blogs.sch.gr # https://github.com/mkb2091/blockconvert/issues/117
+dim-aigeir.ach.sch.gr # https://github.com/mkb2091/blockconvert/issues/117
+33dim-trikal.tri.sch.gr https://github.com/mkb2091/blockconvert/issues/117
+pushbullet.com # https://github.com/mkb2091/blockconvert/issues/115
+www.pushbullet.com # https://github.com/mkb2091/blockconvert/issues/115
+gpticketshop.com # https://github.com/mkb2091/blockconvert/issues/111

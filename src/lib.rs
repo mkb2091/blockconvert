@@ -42,6 +42,8 @@ pub struct FilterListRecord {
     pub author: Arc<str>,
     pub license: Arc<str>,
     pub expires: std::time::Duration,
+    pub last_updated: Option<chrono::DateTime<chrono::Utc>>,
+    pub list_size: usize,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, PartialOrd, Eq, Ord, Hash)]
@@ -143,23 +145,10 @@ impl std::str::FromStr for FilterListType {
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
-#[serde(into = "Vec<(FilterListUrl, FilterListRecord)>")]
-#[serde(from = "Vec<(FilterListUrl, FilterListRecord)>")]
 pub struct FilterListMap(
-    pub std::collections::BTreeMap<FilterListUrl, FilterListRecord>,
+    pub Vec<(FilterListUrl, FilterListRecord)>,
     // Just so it is consistently ordered
 );
-
-impl From<FilterListMap> for Vec<(FilterListUrl, FilterListRecord)> {
-    fn from(val: FilterListMap) -> Self {
-        val.0.into_iter().collect()
-    }
-}
-impl From<Vec<(FilterListUrl, FilterListRecord)>> for FilterListMap {
-    fn from(v: Vec<(FilterListUrl, FilterListRecord)>) -> Self {
-        Self(v.into_iter().collect())
-    }
-}
 
 #[cfg(feature = "ssr")]
 pub mod fileserv;

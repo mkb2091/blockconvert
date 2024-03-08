@@ -37,84 +37,25 @@ fn FilterListSummary(url: crate::FilterListUrl, record: crate::FilterListRecord)
             <td>{humantime::format_duration(record.expires).to_string()}</td>
             <td>{format!("{:?}", record.list_format)}</td>
             <td>
-                <LastUpdated url=url.clone()/>
+                <LastUpdated url=url.clone() record=Some(record.clone())/>
             </td>
             <td class="text-right">
-                <ListSize url=url.clone()/>
-            </td>
-            <td>
-                <FilterListUpdate url=url.clone()/>
-                <ParseList url=url.clone()/>
+                <ListSize url=url.clone() list_size=Some(record.list_size)/>
             </td>
         </tr>
     }
 }
 
-#[component]
-fn ReparseAll() -> impl IntoView {
-    let reparse_all = leptos::create_action(|_| async move {
-        log::info!("Re-parsing all lists");
-        let map = crate::list_manager::get_filter_map().await?;
-        for (url, _) in map.0 {
-            let out = crate::list_parser::parse_list(url.clone()).await;
-            log::info!("Re-parsing {:?}: {:?}", url, out);
-        }
-        Ok::<_, ServerFnError>(())
-    });
-    view! {
-        <button
-            on:click=move |_| {
-                reparse_all.dispatch(());
-            }
-
-            class="btn btn-primary"
-        >
-            "Re-parse All"
-        </button>
-    }
-}
-#[component]
-fn UpdateAll() -> impl IntoView {
-    let update_all = leptos::create_action(|_| async move {
-        log::info!("Updating all lists");
-        let map = crate::list_manager::get_filter_map().await?;
-        for (url, _) in map.0 {
-            let out = crate::list_manager::update_list(url.clone()).await;
-            log::info!("Updating {:?}: {:?}", url, out);
-        }
-        Ok::<_, ServerFnError>(())
-    });
-    view! {
-        <button
-            on:click=move |_| {
-                update_all.dispatch(());
-            }
-
-            class="btn btn-primary"
-        >
-            "Update All"
-        </button>
-    }
-}
 /// Renders the home page of your application.
 #[component]
 pub fn HomePage() -> impl IntoView {
-    let once = create_resource(
-        || (),
-        |_| async move { crate::list_manager::get_filter_map().await },
-    );
-
     view! {
-        <UpdateAll/>
-        <ReparseAll/>
-        <Transition fallback=move || {
-            view! { <p>"Loading" <Loading/></p> }
-        }>
-            {move || match once.get() {
-                None => view! {}.into_view(),
-                Some(Err(err)) => view! { <p>"Error Loading " {format!("{err:?}")}</p> }.into_view(),
-                Some(Ok(data)) => {
-                    log::info!("Displaying list");
+        <Await
+            future=|| async move { crate::list_manager::get_filter_map().await }
+            let:filterlist_map
+        >
+            {match filterlist_map.clone() {
+                Ok(data) => {
                     view! {
                         <table class="table table-zebra">
                             <thead>
@@ -128,7 +69,14 @@ pub fn HomePage() -> impl IntoView {
                             </thead>
                             <tbody>
                                 <For
-                                    each=move || { data.0.clone() }
+                                    each=move || {
+                                        let mut data = data.0.clone();
+                                        data.sort_unstable_by(|a, b| {
+                                            b.1.last_updated.cmp(&a.1.last_updated)
+                                        });
+                                        data
+                                    }
+
                                     key=|(url, _)| url.as_str().to_string()
                                     children=|(url, record)| {
                                         view! {
@@ -142,8 +90,9 @@ pub fn HomePage() -> impl IntoView {
                     }
                         .into_view()
                 }
+                Err(err) => view! { <p>"Error Loading " {format!("{err:?}")}</p> }.into_view(),
             }}
 
-        </Transition>
+        </Await>
     }
 }
