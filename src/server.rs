@@ -627,19 +627,78 @@ pub async fn build_list() -> Result<(), ServerFnError> {
     .execute(&mut *tx)
     .await?;
     log::info!("Inserted {} block rules", record.rows_affected());
-    tx.commit().await?;
-    let records = sqlx::query!("select domain from block_domains
+
+    {
+        let mut records = sqlx::query!("select domain from block_domains
     INNER JOIN domains ON block_domains.domain_id = domains.id
     where not exists(select 1 from allow_domains where allow_domains.domain_id=block_domains.domain_id)
-    ORDER BY domain").fetch_all(&pool).await?;
-    log::info!("Built list: {} domains", records.len());
-    let file = tokio::fs::File::create("output/domains.txt").await?;
-    let mut buf = tokio::io::BufWriter::new(file);
-    for record in records {
-        buf.write_all(record.domain.as_bytes()).await?;
-        buf.write_all(b"\n").await?;
+    ORDER BY domain").fetch(&mut *tx);
+        let file = tokio::fs::File::create("output/domains.txt").await?;
+        let mut buf = tokio::io::BufWriter::new(file);
+        let mut count = 0;
+        while let Some(record) = records.next().await {
+            let record = record?;
+            buf.write_all(record.domain.as_bytes()).await?;
+            buf.write_all(b"\n").await?;
+            count += 1;
+        }
+        buf.flush().await?;
+        log::info!("Wrote {} rules to output/domains.txt", count);
     }
-    buf.flush().await?;
-    log::info!("Wrote list to output/domains.txt");
+    tx.rollback().await?;
     Ok(())
+}
+
+async fn garbage_collect_rule_source(pool: &sqlx::PgPool) -> Result<u64, ServerFnError> {
+    let record = sqlx::query!(
+        "delete from rule_source where not exists
+    (select 1 from list_rules where source_id=rule_source.id)"
+    )
+    .execute(pool)
+    .await?;
+    Ok(record.rows_affected())
+}
+
+async fn garbage_collect_rules(pool: &sqlx::PgPool) -> Result<u64, ServerFnError> {
+    let record = sqlx::query!(
+        "delete from Rules where not exists
+    (select 1 from rule_source where Rules.id=rule_source.rule_id)"
+    )
+    .execute(pool)
+    .await?;
+    Ok(record.rows_affected())
+}
+
+async fn garbage_collect_rule_matches(pool: &sqlx::PgPool) -> Result<u64, ServerFnError> {
+    let record = sqlx::query!(
+        "delete from rule_matches where not exists
+    (select 1 from rules where Rules.id=rule_matches.rule_id)"
+    )
+    .execute(pool)
+    .await?;
+    Ok(record.rows_affected())
+}
+
+pub async fn garbage_collect() -> Result<(), ServerFnError> {
+    let pool = get_db().await?;
+    let gc_interval = std::env::var("GC_INTERVAL")?.parse::<u64>()?;
+    let mut interval = tokio::time::interval(std::time::Duration::from_secs(gc_interval));
+    interval.tick().await;
+    loop {
+        interval.tick().await;
+        let rows = garbage_collect_rule_source(&pool).await?;
+        if rows > 0 {
+            log::info!("Garbage collected {} rule sources", rows);
+        }
+        interval.tick().await;
+        let rows = garbage_collect_rules(&pool).await?;
+        if rows > 0 {
+            log::info!("Garbage collected {} rules", rows);
+        }
+        interval.tick().await;
+        let rows = garbage_collect_rule_matches(&pool).await?;
+        if rows > 0 {
+            log::info!("Garbage collected {} rule matches", rows);
+        }
+    }
 }

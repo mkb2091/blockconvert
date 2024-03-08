@@ -1,7 +1,6 @@
 #[cfg(feature = "ssr")]
 use self::rule_view::RuleData;
 use crate::{
-    app::Loading,
     list_manager::{DeleteList, UpdateList},
     rule_view::DisplayRule,
     *,

@@ -50,6 +50,9 @@ async fn main() {
     tokio::spawn(async {
         blockconvert::server::update_expired_lists().await.unwrap();
     });
+    tokio::spawn(async {
+        blockconvert::server::garbage_collect().await.unwrap();
+    });
     axum::serve(listener, app.into_make_service())
         .await
         .unwrap();

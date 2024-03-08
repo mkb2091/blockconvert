@@ -1,7 +1,4 @@
-use crate::{
-    app::Loading,
-    list_view::{FilterListUpdate, LastUpdated, ListSize, ParseList},
-};
+use crate::list_view::{LastUpdated, ListSize};
 use leptos::*;
 use leptos_router::*;
 

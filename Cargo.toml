@@ -110,6 +110,7 @@ panic = "abort"
 
 [profile.server-dev]
 inherits = "dev"
+opt-level = 3
 
 [profile.dev.package."*"]
 opt-level = 3
