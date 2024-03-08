@@ -36,6 +36,7 @@ async fn main() {
     tasks.push(tokio::spawn(server::build_list()));
     tasks.push(tokio::spawn(server::update_expired_lists()));
     tasks.push(tokio::spawn(server::garbage_collect()));
+    tasks.push(tokio::spawn(server::run_cmd()));
     tasks.push(tokio::spawn(async move {
         logging::log!("listening on http://{}", &addr);
         axum::serve(listener, app.into_make_service()).await?;

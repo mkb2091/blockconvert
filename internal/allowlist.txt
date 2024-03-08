@@ -1,21 +1,56 @@
-1drv.ms
+*.a-msedge.net
+*.adafruit.com
+*.b.akamaiedge.net
+*.bitcoin.it
+*.burst-alliance.org
+*.c-msedge.net
+*.cloudflare-dns.com # Cloudflare dns server
+*.coingeek.com
+*.delivery.mp.microsoft.com
+*.dl.delivery.mp.microsoft.com
+*.dsx.mp.microsoft.com
+*.e-msedge.net
+*.g.akamai.net
+*.g.akamaiedge.net
+*.gab.com
+*.md.mp.microsoft.com.*
+*.mp.microsoft.com
+*.prod.do.dsp.mp.microsoft.com
+*.s-msedge.net
+*.safelinks.protection.outlook.com
+*.search.msn.com
+*.simply.com
+*.skype.com
+*.smartscreen.microsoft.com
+*.splunk.com
+*.storage.live.com
+*.telecommand.telemetry.microsoft.com.akadns.net
+*.tlu.dl.delivery.mp.microsoft.com
+*.ugc.bazaarvoice.com
+*.update.microsoft.com
+*.vk.com
+*.windowsupdate.com
+*.wns.windows.com
 1.www.s81c.com
+1drv.ms
 2-01-2c3e-003d.cdx.cedexis.net # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-783295583 Breaks LinkedIn.com
 24timezones.com
+33dim-trikal.tri.sch.gr https://github.com/mkb2091/blockconvert/issues/117
 3p.ampproject.net
 79423.analytics.edgekey.net
 91-cdn.com
 91mobiles.com
+a-msedge.net
+a.espncdn.com # https://github.com/mkb2091/blockconvert/issues/58 Breaks ESPN
 a248.e.akamai.net
 aaa.com
 aax-us-east.amazon-adsystem.com
 accounts.eu1.gigya.com
 accounts.us1.gigya.com # Needed for iRobot app https://github.com/mkb2091/blockconvert/issues/3#issuecomment-683157232
-activation.sls.microsoft.com
 activation-v2.sls.microsoft.com
-*.adafruit.com
-adapools.org # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-809546196 Crypto staking
+activation.sls.microsoft.com
 ada.support # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-772293993 Breaks Cricket cell phone customer support
+adapools.org # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-809546196 Crypto staking
 adaway.org
 adblock.ee
 add0n.com
@@ -25,7 +60,6 @@ adguard.com # Adblocking tool
 adguardteam.github.io
 adl.windows.com # https://github.com/mkb2091/blockconvert/issues/92 Breaks Windows Update
 aeriagames.com
-a.espncdn.com # https://github.com/mkb2091/blockconvert/issues/58 Breaks ESPN
 aetna.com # blocks www.aetna.com which is a health website
 aftership.com
 aka.ms
@@ -35,8 +69,6 @@ aliexpress.com
 alive.github.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-867284255
 allure.com
 amazon.com
-*.a-msedge.net
-a-msedge.net
 androidauthority.com
 answers.com
 answers.microsoft.com
@@ -68,10 +100,10 @@ awin1.com
 ay.gy
 az416426.vo.msecnd.net # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-744499191 Breaks Airplus Mastercard software
 azorult-tracker.net
+b-graph.facebook.com
+b.akamaiedge.net
 badges.twitch.tv # https://github.com/mkb2091/blockconvert/issues/94 Breaks Twitch TV badges
 baidu.com
-*.b.akamaiedge.net
-b.akamaiedge.net
 battle.net
 bbci.co.uk
 behance.net # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-703781874 Not malware
@@ -80,13 +112,11 @@ bestbuy.ca
 betfair.com
 better.fyi
 bgp.he.net # https://github.com/mkb2091/blockconvert/issues/86 Part of Hurricane Electric's Internet Toolkit
-b-graph.facebook.com
 bilder.bild.de # https://github.com/mkb2091/blockconvert/issues/57 Breaks images on https://www.bild.de/
 binarydefense.com
 bing.com
 bitbucket.org
 bitcoin.com
-*.bitcoin.it
 bitcoin.it
 bitlord.com
 bitly.com
@@ -94,24 +124,26 @@ blackhatworld.com
 blob.weather.microsoft.com
 blog.hubspot.com
 blog.tube8.com
+blogs.sch.gr # https://github.com/mkb2091/blockconvert/issues/117
 bountysource.com
 brightcove.map.fastly.net # https://github.com/mkb2091/blockconvert/issues/78 Breaks Brightcove video
 browser.pipe.aria.microsoft.com
-*.burst-alliance.org
+c-msedge.net
+c.footprint.net # https://github.com/mkb2091/blockconvert/issues/88 Blocks https://www.24ur.com/ on certain systems
+c.paypal.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-939979052 Breaks PayPal on some websites
 candycrushsoda.king.com
-cdn2.editmysite.com
 cdn.ampproject.org # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-687829847 CDN for AMP
 cdn.content.prod.cms.msn.com # Needed for Windows 10 News Images https://github.com/mkb2091/blockconvert/issues/3#issuecomment-687662575
-cdnjs.cloudflare.com
 cdn.onenote.net
+cdn.privacy-mgmt.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-701373707 Breaks closing of a popup
+cdn2.editmysite.com
+cdnjs.cloudflare.com
 cdnp0.stackassets.com # https://github.com/mkb2091/blockconvert/issues/64 Static assets for stacksocial.com
 cdnp1.stackassets.com # https://github.com/mkb2091/blockconvert/issues/64 Static assets for stacksocial.com
 cdnp2.stackassets.com # https://github.com/mkb2091/blockconvert/issues/64 Static assets for stacksocial.com
 cdnp3.stackassets.com # https://github.com/mkb2091/blockconvert/issues/64 Static assets for stacksocial.com
-cdn.privacy-mgmt.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-701373707 Breaks closing of a popup
 ce1.uicdn.net # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-769915219 Breaks login for many www.ionos.de and www.1und1.de services
 cesanta.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-819106039 Not malware
-c.footprint.net # https://github.com/mkb2091/blockconvert/issues/88 Blocks https://www.24ur.com/ on certain systems
 change.org
 checkappexec.microsoft.com
 chng.it
@@ -122,20 +154,16 @@ clickondetroit.com # https://github.com/mkb2091/blockconvert/issues/82 News site
 client-office365-tas.msedge.net
 client-s.gateway.messenger.live.com
 cloudflare-dns.com
-*.cloudflare-dns.com # Cloudflare dns server
 cloudfront.net
 cmail19.com
 cmail20.com
-*.c-msedge.net
-c-msedge.net
-cnet.com
 cn-geo1.uber.com # https://github.com/mkb2091/blockconvert/issues/71 Breaks Uber geolocation
-codeberg.org
+cnet.com
 code.jquery.com
 code.tidio.co
 code.visualstudio.com
+codeberg.org
 cognito-identity.us-east-1.amazonaws.com # https://github.com/mkb2091/blockconvert/issues/101 Breaks AWS app login
-*.coingeek.com
 coinpot.co
 cointraffic.io
 completion.amazon.com
@@ -143,12 +171,11 @@ config.edge.skype.com
 confirmit.com
 content.invisioncic.com
 countryflags.io
-c.paypal.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-939979052 Breaks PayPal on some websites
 credit.finance.intuit.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-788266121 Breaks checking credit score on Mint Mobile App
 cricket.att.ada.support # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-772293993 Breaks Cricket cell phone customer support
 crunchyroll.com
-ctldl.windowsupdate.com
 ct.sendgrid.net
+ctldl.windowsupdate.com
 cv.rdtcdn.com
 cy2.displaycatalog.md.mp.microsoft.com.akadns.net
 cy2.licensing.md.mp.microsoft.com.akadns.net
@@ -160,20 +187,19 @@ d2gatte9o95jao.cloudfront.net
 dailymail.co.uk # Blocked by PrivacyBadger
 datadoghq-browser-agent.com
 dege.freeweb.hu # https://github.com/mkb2091/blockconvert/issues/81 Site that hosts tools for running old games
-*.delivery.mp.microsoft.com
 delivery.mp.microsoft.com
 desktop.google.com
-developer.spotify.com # Breaks Spotify
 dev.maxmind.com # Used for MaxMind developer guide
+developer.spotify.com # Breaks Spotify
 digicert.com
 digitalriver.com
+dim-aigeir.ach.sch.gr # https://github.com/mkb2091/blockconvert/issues/117
 discord.com
 discuss.newrelic.com
 displaycatalog.mp.microsoft.com
 disq.us
 distilnetworks.com
 djvbdz1obemzo.cloudfront.net
-*.dl.delivery.mp.microsoft.com
 dl.delivery.mp.microsoft.com
 dlsrc.getmonero.org
 dm3p.wns.notify.windows.com.akadns.net
@@ -187,18 +213,19 @@ download.db-ip.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomme
 download.electrum.org
 download.maxmind.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-749884660 Used to download MaxMind GeoIP files
 download.newrelic.com
-downloads.getmonero.org
+download.visualware.com # https://github.com/mkb2091/blockconvert/issues/123
 download.windowsupdate.com
 download.windowsupdate.com.c.footprint.net
+downloads.getmonero.org
 dpreview.com
-drh1.img.digitalriver.com
 drh.img.digitalriver.com
+drh1.img.digitalriver.com
 drudgereport.com
-*.dsx.mp.microsoft.com
 dsx.mp.microsoft.com
 duckdns.org
 duckduckgo.com
 duken.nl # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-869051876 A forum, not malware
+e-msedge.net
 e785s8hz.micpn.com
 easylist-downloads.adblockplus.org
 easylist.to
@@ -209,16 +236,15 @@ elinkeu.clickdimensions.com
 eloqua.com
 embed.spotify.com # Breaks Spotify
 emdl.ws.microsoft.com
-*.e-msedge.net
-e-msedge.net
 encrypted-tbn1.gstatic.com
 encrypted-tbn2.gstatic.com
 encrypted-tbn3.gstatic.com
 entireweb.com
 eu-central-1.protection.sophos.com # https://github.com/mkb2091/blockconvert/issues/93 Its a cloud security platform
+ev.rdtcdn.com
 everest.castbox.fm
 evoke-windowsservices-tas.msedge.net
-ev.rdtcdn.com
+f.chtah.com
 f1.media.brightcove.com # https://github.com/mkb2091/blockconvert/issues/78 Breaks Brightcove video
 faast.schibsted.io
 facebook.com
@@ -226,7 +252,6 @@ fandom.wikia.com
 fast.fonts.net
 fast.wistia.net
 faucethub.io
-f.chtah.com
 fe2.update.microsoft.com
 fe2.update.microsoft.com.akadns.net
 fe3.delivery.dsp.mp.microsoft.com.nsatc.net
@@ -234,10 +259,10 @@ fe3.delivery.mp.microsoft.com
 feodotracker.abuse.ch
 fiddle.jshell.net
 fide.com
-files2.freedownloadmanager.org
 files.catbox.moe
 files.freedownloadmanager.org
 files.slack.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-771638966 Breaks user uploaded content on Slack
+files2.freedownloadmanager.org
 filterlists.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-787428332 Website with list of filterlists
 filtri-dns.ga
 firebaseremoteconfig.googleapis.com # Breaks android applications internally updating
@@ -252,12 +277,11 @@ freedownloadmanager.org
 fs.microsoft.com
 ftpcontent.worldnow.com
 funk.eu
-*.gab.com
-gadgetsnow.com
-*.g.akamaiedge.net
-g.akamaiedge.net
-*.g.akamai.net
 g.akamai.net
+g.akamaiedge.net
+g.live.com
+g.msn.com.nsatc.net
+gadgetsnow.com
 gameofbitcoins.com
 gamespot.com
 gannettdigital.com
@@ -271,24 +295,23 @@ github.com
 github.developerdan.com
 gitlab.com
 gleam.io # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-772293993
-g.live.com
 global.edge.bamgrid.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-687908780 Blocks access to Disney Plus
 global.ssl.fastly.net
-g.msn.com.nsatc.net
-go2cloud.org
 go.microsoft.com
+go2cloud.org
 google.*
 google.co.*
 google.com.*
 googletagmanager.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-780859152 Breaks setting up Google 2FA
+gpticketshop.com # https://github.com/mkb2091/blockconvert/issues/111
 gs-loc.apple.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-695044303 Needed for Apple geolocation
 gsp-ssl-geomap.ls-apple.com.akadns.net # Breaks Apple Maps
-gsp-ssl.ls.apple.com # Break Apple Maps
 gsp-ssl.ls-apple.com.akadns.net # Breaks Apple Maps
+gsp-ssl.ls.apple.com # Break Apple Maps
 guce.advertising.com
 guce.huffpost.com
-hblock.molinero.dev
 h-ebay.online-metrix.net # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-772293993 Breaks EBay external logins
+hblock.molinero.dev
 help.mint.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-772293993 Breaks Mint help
 heureka.cz
 highcharts.com
@@ -298,10 +321,10 @@ howtogeek.com
 hubpages.com
 hwcdn.net
 i-am3p-cor003.api.p001.1drv.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-772293993 Breaks OneDrive/OutLook file storage
+i.ibb.co
 ibm.com
 ign.com
 ignorelist.com
-i.ibb.co
 image.prntscr.com
 images.gounlimited.to
 imagizer.imageshack.com
@@ -318,13 +341,13 @@ insights.eu.newrelic.com
 instagram.com
 int.whiteboard.microsoft.com
 io9.com
-ip107307705.ahcdn.com # https://github.com/mkb2091/blockconvert/issues/75 Breaks videos on streaming XXX site
-ip107316446.ahcdn.com # https://github.com/mkb2091/blockconvert/issues/75 Breaks videos on streaming XXX site
 ip-adress.com
 ip-tracker.org
+ip107307705.ahcdn.com # https://github.com/mkb2091/blockconvert/issues/75 Breaks videos on streaming XXX site
+ip107316446.ahcdn.com # https://github.com/mkb2091/blockconvert/issues/75 Breaks videos on streaming XXX site
 ipv4.login.msa.akadns6.net
-itch.io
 it.toolbox.com
+itch.io
 jaleco.com # Breaks download link for GIMP
 jarv.is
 joblo.com
@@ -345,30 +368,30 @@ livejasmin.com
 livejournal.com
 location-inference-westus.cloudapp.net
 location.services.mozilla.com
-logincdn.msauth.net
 login.live.com
 login.msa.akadns6.net
 login.windows.net
+logincdn.msauth.net
 lowendbox.com
-mailchi.mp
+m.me
+m.stripe.network
 mail.com
 mail.getmonero.org
 mail.google.com
+mailchi.mp
 malwaredomainlist.com
 manager-magazin-de.manager-magazin.de # https://github.com/mkb2091/blockconvert/issues/60 Breaks accepting cookie banner
 manifest.prod.boltdns.net # https://github.com/mkb2091/blockconvert/issues/66 Breaks BrightCove player
 maps.windows.com
 mbl.is
-*.md.mp.microsoft.com.*
 md.mp.microsoft.com.*
-mediafire.com
 media.pearsoncmg.com
+mediafire.com
 mediaredirect.microsoft.com
 mine.nu
 miro.medium.com # https://github.com/mkb2091/blockconvert/issues/77 and https://github.com/mkb2091/blockconvert/issues/3#issuecomment-748449378, Breaks images on medium.com
 mirror.co.uk
 mirrorservice.org # Breaks VLC update download
-m.me
 mobile.tube8.com
 mobile.twitter.com
 modern.watson.data.microsoft.com.akadns.net
@@ -376,13 +399,11 @@ monero.org
 moonbit.co.in
 motherboard.vice.com
 movable-ink-397.com
-*.mp.microsoft.com
 mp.microsoft.com
 mscrl.microsoft.com
 msedge.api.cdp.microsoft.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-729147310 Needed for Microsoft Edge to check for updates
 msedge.net
 msftconnecttest.com
-m.stripe.network
 mvaali1.ws.byteoversea.net
 mw1.wsj.net # https://github.com/mkb2091/blockconvert/issues/50
 my.matterport.com # https://github.com/mkb2091/blockconvert/issues/72 Breaks a 3D space capture platform
@@ -436,13 +457,13 @@ pornhub.com
 post.spmailtechnol.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-772293993 Used for links in email
 powr.io
 privateinternetaccess.com
-*.prod.do.dsp.mp.microsoft.com
 prod.do.dsp.mp.microsoft.com
 prod.telemetry.ros.rockstargames.com
 proofpoint.com
 pti.store.microsoft.com
 purchase.mp.microsoft.com
 push.prod.netflix.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-809546196 Breaks Netflix DRM
+pushbullet.com # https://github.com/mkb2091/blockconvert/issues/115
 qq.com
 query.prod.cms.rt.microsoft.com
 quickenloans.com
@@ -461,59 +482,54 @@ refinery29.com # Blog website
 report-uri.com
 rest-prde.immedia-semi.com
 returnpath.com
+ris-prod-atm.trafficmanager.net
 ris.api.iris.microsoft.com
 ris.api.iris.microsoft.com.akadns.net
-ris-prod-atm.trafficmanager.net
 router.utorrent.com
 rumble.com # https://github.com/mkb2091/blockconvert/issues/76 Video Streaming Platform
+s-media-cache-ak0.pinimg.com
+s-msedge.net
+s.imgur.com
+s.ndemiccreations.com
+s.tradingview.com # https://github.com/mkb2091/blockconvert/issues/49
 s0.ipstatp.com # https://github.com/mkb2091/blockconvert/issues/83 Breaks Captcha
-s3.amazonaws.com
 s3-ap-southeast-1.amazonaws.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-793400847 Breaks AWS S3 in SEA
 s3-eu-west-1.amazonaws.com
-s3.tradingview.com # https://github.com/mkb2091/blockconvert/issues/49
 s3-us-west-1.amazonaws.com
+s3.amazonaws.com
+s3.tradingview.com # https://github.com/mkb2091/blockconvert/issues/49
 s7.orientaltrading.com
 safebrowsing-cache.google.com
 safebrowsing.google.com
-*.safelinks.protection.outlook.com
 sat1.us1-1.nanorep.co # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-772293993 Breaks Mint help
 scrapinghub.com
 sdks.shopifycdn.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-707148021 Needed for webshops
-searchenginejournal.com
-*.search.msn.com
 search.msn.com
+searchenginejournal.com
 secure.indeed.com # https://github.com/mkb2091/blockconvert/issues/84 Breaks login page for indeed.com
 secure.mbl.is
 semrush.com
 sendgrid.com # https://github.com/mkb2091/blockconvert/issues/70 Base domain is not used for tracking
 serial.alcohol-soft.com # https://github.com/mkb2091/blockconvert/issues/80 CD and DVD burning software
 service.weather.microsoft.com
-settings.data.microsoft.com
 settings-win.data.microsoft.com
+settings.data.microsoft.com
 sfdataservice.microsoft.com # Blocks Microsoft store payments
+sh.st
 shop.app # https://github.com/mkb2091/blockconvert/issues/98#issue-940336845 URL shortener for shopify
 shop.gadgetsnow.com
-sh.st
 si6ling.incestflix.com # https://github.com/mkb2091/blockconvert/issues/65 Static Assets
-s.imgur.com
 similarweb.com
-*.simply.com
 sina.com.cn
 sinaimg.cn # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-758476709 Breaks images on Chinese social media Weibo
 sj14.mktossl.com # CNAME for safe.riskiq.com
-*.skype.com
 skype.com
 skypeecs-prod-usw-0-b.cloudapp.net
 sls.update.microsoft.com
 sls.update.microsoft.com.akadns.net
 smallseotools.com
-*.smartscreen.microsoft.com
-smartscreen.microsoft.com
 smartscreen-sn3p.smartscreen.microsoft.com
-s-media-cache-ak0.pinimg.com
-*.s-msedge.net
-s-msedge.net
-s.ndemiccreations.com
+smartscreen.microsoft.com
 socialize.us1.gigya.com # Needed for iRobot app https://github.com/mkb2091/blockconvert/issues/3#issuecomment-683157232
 software.informer.com
 sohu.com
@@ -523,42 +539,39 @@ sourceforge.net
 spcweb.ch # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-808365475 Breaks swiss parcel tracking
 speedcurve.com
 spiegel-de.spiegel.de # https://github.com/mkb2091/blockconvert/issues/61
-*.splunk.com
 spotify.com # Breaks Spotify
 squidblacklist.org
 src.ebay-us.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-772293993 Breaks EBay external logins
 ssl.bblck.me
-sslbl.abuse.ch
 ssl.marfeelcdn.com
+sslbl.abuse.ch
 stacksocial.com
 staging-discuss.newrelic.com
 star-mini.c10r.facebook.com
-static.bbci.co.uk
 static-dot-virustotalcloud.appspot.com
 static-exp1.licdn.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-783295583 Breaks LinkedIn.com
+static.bbci.co.uk
 static.getmonero.org
 static.matterport.com # https://github.com/mkb2091/blockconvert/issues/72 Breaks a 3D space capture platform
-statics.streamable.com
 static.tacdn.com # https://github.com/mkb2091/blockconvert/issues/52
 static.tidiochat.com
 static.wikia.nocookie.net # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-744090132 Breaks images on fandom.com wikis
 static.zdassets.com
-statsfe2.update.microsoft.com.akadns.net
+statics.streamable.com
 stats.foldingathome.org # https://github.com/mkb2091/blockconvert/issues/74 Regex False Positive
 stats.govt.nz # # https://github.com/mkb2091/blockconvert/issues/99 Government of New Zealand Statistics site
 stats.pingdom.com
 stats.stackexchange.com
-statuscake.com
-statuscake-email.com
+statsfe2.update.microsoft.com.akadns.net
 status.newrelic.com
 status.roll20.net
-*.storage.live.com
+statuscake-email.com
+statuscake.com
 storage.live.com # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-772293993 Breaks OneDrive/OutLook file storage
-storecatalogrevocation.storequality.microsoft.com
-storeedgefd.dsx.mp.microsoft.com
 store-images.microsoft.com
 store-images.s-microsoft.com
-s.tradingview.com # https://github.com/mkb2091/blockconvert/issues/49
+storecatalogrevocation.storequality.microsoft.com
+storeedgefd.dsx.mp.microsoft.com
 stripecdn.map.fastly.net
 substrate.ms-acdc.office.com # CNAME for outlook.office.com
 substrate.office.com # CNAME for outlook.office.com
@@ -569,7 +582,6 @@ survey.pearsoncmg.com
 techradar.com
 tecmint.com
 teespring.com
-*.telecommand.telemetry.microsoft.com.akadns.net
 telecommand.telemetry.microsoft.com.akadns.net
 texashomebase.com
 thebot.net
@@ -579,12 +591,12 @@ tiktok.com # Causes adblock to block www.tiktok.com
 tile-service.weather.microsoft.com
 time.samsungcloudsolution.com # Issues #3, blocks services like Plex, YouTube and Amazon Video on Samsung TV
 time.windows.com
-*.tlu.dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 tmx.td.com # https://github.com/mkb2091/blockconvert/issues/102 Breaks Canadian finance website
 to-do.microsoft.com
 toptenreviews.com
 tracker.tvnihon.com
+tracker2.itzmx.com # https://github.com/mkb2091/blockconvert/issues/124
 tracking.epicgames.com
 transfer.sh
 travelocity.com
@@ -592,19 +604,18 @@ trial.alcohol-soft.com # https://github.com/mkb2091/blockconvert/issues/80 CD an
 trk.klclick1.com
 tsfe.trafficshaping.dsp.mp.microsoft.com
 tube8.com
-*.ugc.bazaarvoice.com
 uk.com
 umich.qualtrics.com
 unitedstates.smartscreen-prod.microsoft.com
-*.update.microsoft.com
 update.microsoft.com
 urldefense.proofpoint.com
 urlhaus.abuse.ch
-us.configsvc1.live.com.akadns.net
 us-east-1-a.route.herokuapp.com
+us.configsvc1.live.com.akadns.net
+use.typekit.net
 users.telenet.be
 uservoice.com
-use.typekit.net
+v.firebog.net
 v10.events.data.microsoft.com
 v10.vortex-win.data.microsoft.com
 v20.events.data.microsoft.com
@@ -612,7 +623,6 @@ validation-v2.sls.microsoft.com
 vanilla.futurecdn.net
 vanityfair.com
 version.hybrid.api.here.com # Needed for "Here We Go" map download https://github.com/mkb2091/blockconvert/issues/3#issuecomment-687661883
-v.firebog.net
 vgwort.de
 videos.oovvuu.com
 vignette.wikia.nocookie.net
@@ -620,53 +630,51 @@ vip5.afdorigin-prod-am02.afdogw.com
 vip5.afdorigin-prod-ch02.afdogw.com
 virustotalcloud.appspot.com
 vivo.com.br
-*.vk.com
 vmn.net
 vortex.accuweather.com
 vxvault.net
+w.soundcloud.com # https://github.com/mkb2091/blockconvert/issues/51
 wac.phicdn.net
 wallet.microsoft.com
 watchdog-basic.energized.pro # Used to check if user is using Energized Protection
 watchdog-blu.energized.pro # Used to check if user is using Energized Protection
 watchdog-blugo.energized.pro # Used to check if user is using Energized Protection
 watchdog-dns.energized.pro # Used to check if user is using Energized Protection
-watchdog.energized.pro # Used to check if user is using Energized Protection
 watchdog-ext.energized.pro # Used to check if user is using Energized Protection
 watchdog-porn.energized.pro # Used to check if user is using Energized Protection
 watchdog-spark.energized.pro # Used to check if user is using Energized Protection
 watchdog-ultimate.energized.pro # Used to check if user is using Energized Protection
 watchdog-unified.energized.pro # Used to check if user is using Energized Protection
+watchdog.energized.pro # Used to check if user is using Energized Protection
 watson.telemetry.microsoft.com
 wbd.ms
-wdcp.microsoft.*
-wdcp.microsoft.com
 wd-prod-cp-us-west-1-fe.westus.cloudapp.azure.com
 wd-prod-ss.trafficmanager.net
+wdcp.microsoft.*
+wdcp.microsoft.com
 web.getmonero.org
+web.tresorit.com
 webmasters.stackexchange.com
 webmd.com
-web.tresorit.com
 whiteboard.microsoft.com
 whiteboard.ms
-widgetdata.tradingview.com # https://github.com/mkb2091/blockconvert/issues/49
 widget-mediator.zopim.com
+widgetdata.tradingview.com # https://github.com/mkb2091/blockconvert/issues/49
 wikidot.com
 wildcard.twimg.com
-*.windowsupdate.com
 windowsupdate.com
 wl.spotify.com # Breaks spotify account confirmation
-*.wns.windows.com
 wns.windows.com
 worldstream.nl
 wrapper-api.sp-prod.net
+wscont.apps.microsoft.com
 wscont1.apps.microsoft.com
 wscont2.apps.microsoft.com
-wscont.apps.microsoft.com
 wsj.com
-w.soundcloud.com # https://github.com/mkb2091/blockconvert/issues/51
-ww2.sinaimg.cn # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-758476709 Breaks images on Chinese social media Weibo
-wwww.youporn.com
 ww.youporn.com
+ww2.sinaimg.cn # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-758476709 Breaks images on Chinese social media Weibo
+www.pushbullet.com # https://github.com/mkb2091/blockconvert/issues/115
+wwww.youporn.com
 wx2.sinaimg.cn # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-758476709 Breaks images on Chinese social media Weibo
 wx3.sinaimg.cn # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-758476709 Breaks images on Chinese social media Weibo
 wx4.sinaimg.cn # https://github.com/mkb2091/blockconvert/issues/3#issuecomment-758476709 Breaks images on Chinese social media Weibo
@@ -682,11 +690,3 @@ zerodot1.gitlab.io
 zerohedge.com
 zeustracker.abuse.ch
 zoho.com
-tracker2.itzmx.com # https://github.com/mkb2091/blockconvert/issues/124
-download.visualware.com # https://github.com/mkb2091/blockconvert/issues/123
-blogs.sch.gr # https://github.com/mkb2091/blockconvert/issues/117
-dim-aigeir.ach.sch.gr # https://github.com/mkb2091/blockconvert/issues/117
-33dim-trikal.tri.sch.gr https://github.com/mkb2091/blockconvert/issues/117
-pushbullet.com # https://github.com/mkb2091/blockconvert/issues/115
-www.pushbullet.com # https://github.com/mkb2091/blockconvert/issues/115
-gpticketshop.com # https://github.com/mkb2091/blockconvert/issues/111

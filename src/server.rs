@@ -629,15 +629,14 @@ pub async fn build_list() -> Result<(), ServerFnError> {
     log::info!("Inserted {} block rules", record.rows_affected());
 
     {
-        let mut records = sqlx::query!("select domain from block_domains
+        let records = sqlx::query!("select domain from block_domains
     INNER JOIN domains ON block_domains.domain_id = domains.id
     where not exists(select 1 from allow_domains where allow_domains.domain_id=block_domains.domain_id)
-    ORDER BY domain").fetch(&mut *tx);
+    ORDER BY domain").fetch_all(&mut *tx).await?;
         let file = tokio::fs::File::create("output/domains.txt").await?;
         let mut buf = tokio::io::BufWriter::new(file);
         let mut count = 0;
-        while let Some(record) = records.next().await {
-            let record = record?;
+        for record in records {
             buf.write_all(record.domain.as_bytes()).await?;
             buf.write_all(b"\n").await?;
             count += 1;
@@ -699,6 +698,21 @@ pub async fn garbage_collect() -> Result<(), ServerFnError> {
         let rows = garbage_collect_rule_matches(&pool).await?;
         if rows > 0 {
             log::info!("Garbage collected {} rule matches", rows);
+        }
+    }
+}
+
+pub async fn run_cmd() -> Result<(), ServerFnError> {
+    dotenvy::dotenv()?;
+    let cmd = std::env::var("TASK_CMD")?;
+    let mut interval = tokio::time::interval(std::time::Duration::from_secs(300));
+    loop {
+        interval.tick().await;
+        let output = tokio::process::Command::new(&cmd)
+            .output()
+            .await;
+        if let Err(err) = output {
+            log::warn!("Error running command: {:?}", err);
         }
     }
 }

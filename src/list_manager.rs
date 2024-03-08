@@ -194,7 +194,12 @@ pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError>
     .await?
     .contents;
     if let Some(internal_path) = url.to_internal_path() {
-        let contents = tokio::fs::read_to_string(internal_path).await?;
+        let contents = tokio::fs::read_to_string(&internal_path).await?;
+        let mut lines = contents.lines().collect::<Vec<_>>();
+        lines.sort_unstable();
+        lines.dedup();
+        let sorted_contents = lines.join("\n");
+        tokio::fs::write(internal_path, &sorted_contents).await?;
         let new_last_updated = chrono::Utc::now();
         sqlx::query!(
             "UPDATE filterLists
