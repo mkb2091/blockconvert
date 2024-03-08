@@ -20,4 +20,5 @@
         "strings": true
     },
     "css.validate": false,
+    "editor.fontWeight": "normal",
 }

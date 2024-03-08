@@ -475,18 +475,17 @@ pub async fn import_pihole_logs() -> Result<(), ServerFnError> {
                 .drain()
                 .map(|domain| domain.as_ref().to_string())
                 .collect::<Vec<_>>();
-            let inserted = sqlx::query!(
+            let record = sqlx::query!(
                 "INSERT INTO domains (domain)
             SELECT domain FROM UNNEST($1::text[]) as t(domain)
-            ON CONFLICT DO NOTHING
-            RETURNING *
-            ",
+            ON CONFLICT DO NOTHING",
                 &domains_vec[..]
             )
-            .fetch_all(&pool)
+            .execute(&pool)
             .await?;
-            if !inserted.is_empty() {
-                log::info!("Inserted {} domains", inserted.len());
+            let inserted = record.rows_affected();
+            if inserted != 0 {
+                log::info!("Inserted {} domains", inserted);
             }
             last_wrote = std::time::Instant::now();
         }
@@ -708,9 +707,7 @@ pub async fn run_cmd() -> Result<(), ServerFnError> {
     let mut interval = tokio::time::interval(std::time::Duration::from_secs(300));
     loop {
         interval.tick().await;
-        let output = tokio::process::Command::new(&cmd)
-            .output()
-            .await;
+        let output = tokio::process::Command::new(&cmd).output().await;
         if let Err(err) = output {
             log::warn!("Error running command: {:?}", err);
         }
