@@ -4,6 +4,8 @@ async fn main() {
     use axum::Router;
     use blockconvert::app::App;
     use blockconvert::fileserv::file_and_error_handler;
+    use blockconvert::{list_manager, server};
+    use futures::StreamExt;
     use leptos::*;
     use leptos_axum::{generate_route_list, LeptosRoutes};
     env_logger::init();
@@ -25,37 +27,29 @@ async fn main() {
         .with_state(leptos_options);
 
     let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
-    logging::log!("listening on http://{}", &addr);
-    tokio::spawn(async {
-        log::warn!("Exited: {:?}", blockconvert::list_manager::watch_filter_map()
-            .await);
-    });
-    tokio::spawn(async {
-        blockconvert::server::parse_missing_subdomains()
-            .await
-            .unwrap();
-    });
-    tokio::spawn(async {
-        blockconvert::server::check_dns().await.unwrap();
-    });
-    tokio::spawn(async {
-        blockconvert::server::import_pihole_logs().await.unwrap();
-    });
-    tokio::spawn(async {
-        blockconvert::server::find_rule_matches().await.unwrap();
-    });
-    tokio::spawn(async {
-        blockconvert::server::build_list().await.unwrap();
-    });
-    tokio::spawn(async {
-        blockconvert::server::update_expired_lists().await.unwrap();
-    });
-    tokio::spawn(async {
-        blockconvert::server::garbage_collect().await.unwrap();
-    });
-    axum::serve(listener, app.into_make_service())
-        .await
-        .unwrap();
+    let mut tasks = futures::stream::FuturesUnordered::new();
+    tasks.push(tokio::spawn(list_manager::watch_filter_map()));
+    tasks.push(tokio::spawn(server::parse_missing_subdomains()));
+    tasks.push(tokio::spawn(server::check_dns()));
+    tasks.push(tokio::spawn(server::import_pihole_logs()));
+    tasks.push(tokio::spawn(server::find_rule_matches()));
+    tasks.push(tokio::spawn(server::build_list()));
+    tasks.push(tokio::spawn(server::update_expired_lists()));
+    tasks.push(tokio::spawn(server::garbage_collect()));
+    tasks.push(tokio::spawn(async move {
+        logging::log!("listening on http://{}", &addr);
+        axum::serve(listener, app.into_make_service()).await?;
+        Ok(())
+    }));
+
+    while let Some(task) = tasks.next().await {
+        if let Err(e) = task.unwrap() {
+            logging::log!("Error: {:?}", e);
+            return;
+        } else {
+            logging::log!("Task completed");
+        }
+    }
 }
 
 #[cfg(not(feature = "ssr"))]
