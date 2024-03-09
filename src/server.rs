@@ -673,16 +673,25 @@ pub async fn build_list() -> Result<(), ServerFnError> {
     INNER JOIN domains ON block_domains.domain_id = domains.id
     where not exists(select 1 from allow_domains where allow_domains.domain_id=block_domains.domain_id)
     ORDER BY domain").fetch_all(&pool).await?;
-        let file = tokio::fs::File::create("output/domains.txt").await?;
-        let mut buf = tokio::io::BufWriter::new(file);
+        let domain_file = tokio::fs::File::create("output/domains.txt").await?;
+        let mut domain_buf = tokio::io::BufWriter::new(domain_file);
+        let adblock_file = tokio::fs::File::create("output/adblock.txt").await?;
+        let mut adblock_buf = tokio::io::BufWriter::new(adblock_file);
         let mut count = 0;
         for record in records {
-            buf.write_all(record.domain.as_bytes()).await?;
-            buf.write_all(b"\n").await?;
+            domain_buf.write_all(record.domain.as_bytes()).await?;
+            domain_buf.write_all(b"\n").await?;
+
+            adblock_buf.write_all(b"||").await?;
+            adblock_buf.write_all(record.domain.as_bytes()).await?;
+            adblock_buf.write_all(b"^\n").await?;
+
             count += 1;
         }
-        buf.flush().await?;
+        domain_buf.flush().await?;
         log::info!("Wrote {} rules to output/domains.txt", count);
+        adblock_buf.flush().await?;
+        log::info!("Wrote {} rules to output/adblock.txt", count);
     }
     sqlx::query!("DELETE FROM allow_domains")
         .execute(&pool)

@@ -5,7 +5,7 @@ uBlock filters – Privacy,https://raw.githubusercontent.com/uBlockOrigin/uAsset
 uBlock filters – Badware risks,https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt,,GPLv3,345600,Adblock
 uBlock filters,https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt,,GPLv3,345600,Adblock
 mobiletrackers,https://raw.githubusercontent.com/craiu/mobiletrackers/master/list.txt,,GPLv3,604800,DomainBlocklist
-iOS Tracker Blocklist,https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/blocklist.txt,jakejarvis,MIT,864000,DomainBlocklist
+iOS Tracker Blocklist,https://raw.githubusercontent.com/jakejarvis/ios-trackers/master/blocklist.txt,jakejarvis,MIT,864000,DomainBlocklistWithoutSubdomains
 hostsVN,https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts,,MIT,86400,Hostfile
 abuse.ch URLhaus Response Policy Zones,https://urlhaus.abuse.ch/downloads/hostfile,,CC0,86400,Hostfile
 abuse.ch SSLBL Botnet C2 IP Blacklist,https://sslbl.abuse.ch/blacklist/sslipblacklist.txt,,CC0,86400,IPBlocklist
