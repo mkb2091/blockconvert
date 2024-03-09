@@ -90,6 +90,7 @@ impl FromStr for FilterListUrl {
 pub enum FilterListType {
     Adblock,
     DomainBlocklist,
+    DomainBlocklistWithoutSubdomains,
     DomainAllowlist,
     IPBlocklist,
     IPAllowlist,
@@ -105,6 +106,7 @@ impl FilterListType {
         match self {
             Self::Adblock => "Adblock",
             Self::DomainBlocklist => "DomainBlocklist",
+            Self::DomainBlocklistWithoutSubdomains => "DomainBlocklistWithoutSubdomains",
             Self::DomainAllowlist => "DomainAllowlist",
             Self::IPBlocklist => "IPBlocklist",
             Self::IPAllowlist => "IPAllowlist",
@@ -131,6 +133,7 @@ impl std::str::FromStr for FilterListType {
         match s {
             "Adblock" => Ok(Self::Adblock),
             "DomainBlocklist" => Ok(Self::DomainBlocklist),
+            "DomainBlocklistWithoutSubdomains" => Ok(Self::DomainBlocklistWithoutSubdomains),
             "DomainAllowlist" => Ok(Self::DomainAllowlist),
             "IPBlocklist" => Ok(Self::IPBlocklist),
             "IPAllowlist" => Ok(Self::IPAllowlist),
@@ -150,13 +153,33 @@ pub struct FilterListMap(
     // Just so it is consistently ordered
 );
 
+#[derive(thiserror::Error, Debug)]
+pub enum DbInitError {
+    #[error("Sqlx error {0}")]
+    SqlxError(String),
+    #[error("Missing DATABASE_URL")]
+    MissingDatabaseUrl(String),
+}
+#[cfg(feature = "ssr")]
+impl From<sqlx::Error> for DbInitError {
+    fn from(e: sqlx::Error) -> Self {
+        Self::SqlxError(e.to_string())
+    }
+}
+
+#[cfg(feature = "ssr")]
+impl From<std::env::VarError> for DbInitError {
+    fn from(e: std::env::VarError) -> Self {
+        Self::MissingDatabaseUrl(e.to_string())
+    }
+}
+
 #[cfg(feature = "ssr")]
 pub mod fileserv;
 
 #[cfg(feature = "hydrate")]
 #[wasm_bindgen::prelude::wasm_bindgen]
 pub fn hydrate() {
-    use crate::app::*;
     console_error_panic_hook::set_once();
     let _ = console_log::init_with_level(log::Level::Debug);
     // leptos::mount_to_body(App);

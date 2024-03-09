@@ -1,4 +1,4 @@
-#[unstable]
-#codegen-backend = true
-#[profile.server-dev]
-#codegen-backend = "cranelift"
+# [unstable]
+# codegen-backend = true
+# [profile.server-dev]
+# codegen-backend = "cranelift"

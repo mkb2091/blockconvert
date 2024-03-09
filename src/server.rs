@@ -1,25 +1,17 @@
 use crate::list_parser::Domain;
-use crate::{DomainId, FilterListUrl};
+use crate::{DbInitError, DomainId, FilterListUrl};
 use futures::StreamExt;
 use hickory_resolver::error::ResolveError;
 use leptos::*;
 use notify::Watcher;
 use std::collections::HashSet;
 use std::net::IpAddr;
-use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::{Arc, Mutex};
+use std::time::Duration;
 use tokio::io::{AsyncBufReadExt, AsyncWriteExt};
+use tokio_util::sync::CancellationToken;
 
 static SQLITE_POOL: tokio::sync::OnceCell<sqlx::PgPool> = tokio::sync::OnceCell::const_new();
-
-#[derive(thiserror::Error, Debug)]
-pub enum DbInitError {
-    #[cfg(feature = "ssr")]
-    #[error("Sqlx error {0}")]
-    SqlxError(#[from] sqlx::Error),
-    #[error("Missing DATABASE_URL")]
-    MissingDatabaseUrl(#[from] std::env::VarError),
-}
 
 pub async fn get_db() -> Result<sqlx::PgPool, DbInitError> {
     SQLITE_POOL
@@ -46,7 +38,7 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
         .fetch_all(&mut *tx)
         .await?;
         if records.is_empty() {
-            tokio::time::sleep(std::time::Duration::from_secs(30)).await;
+            tokio::time::sleep(Duration::from_secs(30)).await;
             continue;
         }
         let mut checked_domains = Vec::new();
@@ -171,15 +163,16 @@ struct DomainResolver {
     tx: async_channel::Sender<Task>,
     rx: async_channel::Receiver<Task>,
     read_limit: i64,
-    failed_domains: Arc<AtomicUsize>,
+    started_and_failed_cache_size: usize,
     bad_domains: Arc<Mutex<Vec<i64>>>,
     looked_up_domains: Arc<Mutex<Vec<i64>>>,
     dns_ips: Arc<Mutex<(Vec<i64>, Vec<ipnetwork::IpNetwork>)>>,
     dns_cnames: Arc<Mutex<(Vec<i64>, Vec<String>)>>,
+    token: CancellationToken,
 }
 
 impl DomainResolver {
-    fn new() -> Result<Self, ServerFnError> {
+    fn new(token: CancellationToken) -> Result<Self, ServerFnError> {
         let _ = dotenvy::dotenv()?;
         let servers_str = std::env::var("DNS_SERVERS")?;
 
@@ -201,7 +194,7 @@ impl DomainResolver {
             opts.ip_strategy = hickory_resolver::config::LookupIpStrategy::Ipv4AndIpv6;
             opts.cache_size = 32;
             opts.attempts = 3;
-            opts.timeout = std::time::Duration::from_secs_f32(5.0);
+            opts.timeout = Duration::from_secs_f32(5.0);
             let resolver = Arc::new(hickory_resolver::AsyncResolver::tokio(config, opts));
             resolvers.push((server, resolver));
         }
@@ -212,6 +205,8 @@ impl DomainResolver {
         let (tx, rx) = async_channel::bounded(read_limit as usize);
 
         let bad_domains = Arc::new(Mutex::new(Vec::new()));
+        let started_and_failed_cache_size =
+            std::env::var("STARTED_AND_FAILED_CACHE_SIZE")?.parse()?;
 
         Ok(Self {
             resolvers,
@@ -219,10 +214,11 @@ impl DomainResolver {
             tx,
             rx,
             read_limit,
-            failed_domains: Arc::new(AtomicUsize::new(0)),
+            started_and_failed_cache_size,
             looked_up_domains: Arc::new(Mutex::new(Vec::new())),
             dns_ips: Default::default(),
             dns_cnames: Default::default(),
+            token,
         })
     }
 
@@ -237,28 +233,32 @@ impl DomainResolver {
                 let resolver_str = resolver.0.clone();
                 let resolver = resolver.1.clone();
                 let resolver_self = self.clone();
-                let task =
-                    tokio::spawn(
-                        async move { resolver_self.run_task(resolver_str, resolver).await },
-                    );
+                let task = tokio::spawn(async move {
+                    let token = resolver_self.token.clone();
+                    tokio::select! {
+                    _ = token.cancelled() => {
+                        log::info!("Shutting down DNS resolver");
+                        Ok(())},
+                    res =
+                    resolver_self.run_task(resolver_str, resolver) => res}
+                });
                 tasks.push(task);
             }
         }
         let selector = self.clone();
-        let selector_task = tokio::spawn(async move { selector.domain_selector().await });
+        let selector_task = tokio::spawn(async move {
+            let token = selector.token.clone();
+            tokio::select! {
+            _ = token.cancelled() => {
+                log::info!("Shutting down DNS selector");
+                return Ok(());}
+            res = selector.domain_selector() => res
+            }
+        });
         tasks.push(selector_task);
         let writer = self.clone();
         let writer_task = tokio::spawn(async move { writer.write_to_db().await });
         tasks.push(writer_task);
-        let failure_reset = self.clone();
-        let _ = tokio::spawn(async move {
-            let mut interval = tokio::time::interval(std::time::Duration::from_secs(60));
-            interval.tick().await;
-            loop {
-                interval.tick().await;
-                failure_reset.failed_domains.store(0, Ordering::SeqCst);
-            }
-        });
         while let Some(result) = tasks.next().await {
             let _ = result?;
         }
@@ -267,33 +267,64 @@ impl DomainResolver {
 
     async fn domain_selector(&self) -> Result<(), ServerFnError> {
         let pool = get_db().await?;
+        let mut started_domains =
+            std::collections::VecDeque::with_capacity(self.started_and_failed_cache_size);
         loop {
-            let records = sqlx::query!(
-                "SElECT id, domain
+            let (started_1, started_2) = started_domains.as_slices();
+            let mut records = sqlx::query!(
+                "SELECT id, domain
             FROM Domains
-            ORDER BY last_checked_dns ASC NULLS FIRST
-            LIMIT $1
-            OFFSET $2
-            ",
+            WHERE last_checked_dns IS NULL
+            AND ($3 OR id != ANY($2::bigint[])) AND ($5 OR id != ANY($4::bigint[]))
+            ORDER BY id DESC NULLS FIRST
+            LIMIT $1",
                 self.read_limit,
-                (self.rx.len()
-                    + self.bad_domains.lock()?.len()
-                    + self.looked_up_domains.lock()?.len()) as i64
+                &started_1[..],
+                started_1.is_empty(),
+                &started_2[..],
+                started_2.is_empty(),
             )
             .fetch_all(&pool)
-            .await?;
+            .await?
+            .into_iter()
+            .map(|record| (record.id, record.domain))
+            .collect::<Vec<_>>();
+            if records.len() < self.read_limit as usize {
+                log::info!("No more unchecked domains, rechecking old domains");
+                let new_records = sqlx::query!(
+                    "SELECT id, domain
+                FROM Domains
+                WHERE ($3 OR id != ANY($2::bigint[])) AND ($5 OR id != ANY($4::bigint[]))
+                ORDER BY last_checked_dns ASC NULLS FIRST
+                LIMIT $1",
+                    self.read_limit,
+                    &started_1[..],
+                    started_1.is_empty(),
+                    &started_2[..],
+                    started_2.is_empty(),
+                )
+                .fetch_all(&pool)
+                .await?
+                .into_iter()
+                .map(|record| (record.id, record.domain));
+                records.extend(new_records);
+            }
             if records.is_empty() {
                 log::warn!("No records to check");
-                tokio::time::sleep(std::time::Duration::from_secs(30)).await;
+                tokio::time::sleep(Duration::from_secs(30)).await;
                 continue;
             }
 
-            for record in records {
-                if let Ok(domain) = record.domain.parse::<Domain>() {
-                    self.tx.send((DomainId(record.id), domain)).await?;
+            for (domain_id, domain) in records {
+                if started_domains.len() >= self.started_and_failed_cache_size {
+                    started_domains.pop_front();
+                }
+                started_domains.push_back(domain_id);
+                if let Ok(domain) = domain.parse::<Domain>() {
+                    self.tx.send((DomainId(domain_id), domain)).await?;
                 } else {
-                    log::warn!("Invalid domain: {}", record.domain);
-                    self.bad_domains.lock()?.push(record.id);
+                    log::warn!("Invalid domain: {}", domain);
+                    self.bad_domains.lock()?.push(domain_id);
                 }
             }
         }
@@ -335,7 +366,6 @@ impl DomainResolver {
                         domain.as_ref(),
                         err
                     );
-                    self.failed_domains.fetch_add(1, Ordering::SeqCst);
                 }
             }
         }
@@ -345,11 +375,17 @@ impl DomainResolver {
     async fn write_to_db(&self) -> Result<(), ServerFnError> {
         let pool = get_db().await?;
         let write_frequency: u64 = std::env::var("WRITE_FREQUENCY")?.parse()?;
-        let mut interval = tokio::time::interval(std::time::Duration::from_secs(write_frequency));
+        let mut interval = tokio::time::interval(Duration::from_secs(write_frequency));
         interval.set_missed_tick_behavior(tokio::time::MissedTickBehavior::Delay);
         interval.tick().await;
         loop {
-            interval.tick().await;
+            tokio::select! {
+                _ = interval.tick() => {},
+                _ = self.token.cancelled() => {
+                    log::info!("Shutting down DNS writer");
+                    return Ok(());
+                }
+            }
             let looked_up_domains = std::mem::take(&mut *self.looked_up_domains.lock()?);
             let dns_ips = std::mem::take(&mut *self.dns_ips.lock()?);
             let dns_ips_domain_ids = &dns_ips.0;
@@ -358,12 +394,6 @@ impl DomainResolver {
             let dns_cnames_domain_ids = &dns_cnames.0;
             let dns_cnames_cname = &dns_cnames.1;
             let bad_domains = std::mem::take(&mut *self.bad_domains.lock()?);
-            log::info!(
-                "Looked up {} domains, got {} ips, {} cnames",
-                looked_up_domains.len(),
-                dns_ips_domain_ids.len(),
-                dns_cnames_domain_ids.len()
-            );
             let mut tx = pool.begin().await?;
             let total_cnames = dns_cnames_cname
                 .iter()
@@ -371,14 +401,15 @@ impl DomainResolver {
                 .into_iter()
                 .cloned()
                 .collect::<Vec<String>>();
-            sqlx::query!(
+            let new_domains_from_cnames = sqlx::query!(
                 "INSERT INTO domains(domain)
                     SELECT domain FROM UNNEST($1::text[]) as t(domain)
                     ON CONFLICT DO NOTHING",
                 &total_cnames[..]
             )
             .execute(&mut *tx)
-            .await?;
+            .await?
+            .rows_affected();
             sqlx::query!(
                 "DELETE FROM dns_ips WHERE domain_id = ANY($1::bigint[])",
                 &looked_up_domains[..]
@@ -429,12 +460,23 @@ impl DomainResolver {
                 .await?;
             }
             tx.commit().await?;
+
+            log::info!(
+                "Looked up {} domains, got {} ips, {} cnames ({} new)",
+                looked_up_domains.len(),
+                dns_ips_domain_ids.len(),
+                dns_cnames_domain_ids.len(),
+                new_domains_from_cnames
+            );
+            if self.token.is_cancelled() {
+                return Ok(());
+            }
         }
     }
 }
 
-pub async fn check_dns() -> Result<(), ServerFnError> {
-    let resolver = DomainResolver::new()?;
+pub async fn check_dns(token: CancellationToken) -> Result<(), ServerFnError> {
+    let resolver = DomainResolver::new(token)?;
     resolver.run().await?;
     Ok(())
 }
@@ -499,7 +541,7 @@ pub async fn find_rule_matches() -> Result<(), ServerFnError> {
     let pool = get_db().await?;
     let read_limit = std::env::var("READ_LIMIT")?.parse::<u32>()? as i64;
     let interval: u64 = std::env::var("RULE_MATCH_CHECK_INTERVAL")?.parse()?;
-    let interval: std::time::Duration = std::time::Duration::from_secs(interval);
+    let interval: Duration = Duration::from_secs(interval);
     let mut interval = tokio::time::interval(interval);
     loop {
         interval.tick().await;
@@ -595,12 +637,11 @@ pub async fn build_list() -> Result<(), ServerFnError> {
     // return Ok(());
     dotenvy::dotenv()?;
     let pool = get_db().await?;
-    let mut tx = pool.begin().await?;
     sqlx::query!("DELETE FROM allow_domains")
-        .execute(&mut *tx)
+        .execute(&pool)
         .await?;
     sqlx::query!("DELETE FROM block_domains")
-        .execute(&mut *tx)
+        .execute(&pool)
         .await?;
     let allow_record = sqlx::query!(
         "INSERT INTO allow_domains(domain_id)
@@ -611,7 +652,7 @@ pub async fn build_list() -> Result<(), ServerFnError> {
         WHERE domain_rules.allow = true OR ip_rules.allow = true
         ON CONFLICT DO NOTHING",
     )
-    .execute(&mut *tx)
+    .execute(&pool)
     .await?;
     log::info!("Inserted {} allow rules", allow_record.rows_affected());
     let record = sqlx::query!(
@@ -623,7 +664,7 @@ pub async fn build_list() -> Result<(), ServerFnError> {
         WHERE domain_rules.allow = false OR ip_rules.allow = false
         ON CONFLICT DO NOTHING",
     )
-    .execute(&mut *tx)
+    .execute(&pool)
     .await?;
     log::info!("Inserted {} block rules", record.rows_affected());
 
@@ -631,7 +672,7 @@ pub async fn build_list() -> Result<(), ServerFnError> {
         let records = sqlx::query!("select domain from block_domains
     INNER JOIN domains ON block_domains.domain_id = domains.id
     where not exists(select 1 from allow_domains where allow_domains.domain_id=block_domains.domain_id)
-    ORDER BY domain").fetch_all(&mut *tx).await?;
+    ORDER BY domain").fetch_all(&pool).await?;
         let file = tokio::fs::File::create("output/domains.txt").await?;
         let mut buf = tokio::io::BufWriter::new(file);
         let mut count = 0;
@@ -643,7 +684,12 @@ pub async fn build_list() -> Result<(), ServerFnError> {
         buf.flush().await?;
         log::info!("Wrote {} rules to output/domains.txt", count);
     }
-    tx.rollback().await?;
+    sqlx::query!("DELETE FROM allow_domains")
+        .execute(&pool)
+        .await?;
+    sqlx::query!("DELETE FROM block_domains")
+        .execute(&pool)
+        .await?;
     Ok(())
 }
 
@@ -680,7 +726,7 @@ async fn garbage_collect_rule_matches(pool: &sqlx::PgPool) -> Result<u64, Server
 pub async fn garbage_collect() -> Result<(), ServerFnError> {
     let pool = get_db().await?;
     let gc_interval = std::env::var("GC_INTERVAL")?.parse::<u64>()?;
-    let mut interval = tokio::time::interval(std::time::Duration::from_secs(gc_interval));
+    let mut interval = tokio::time::interval(Duration::from_secs(gc_interval));
     interval.tick().await;
     loop {
         interval.tick().await;
@@ -701,15 +747,97 @@ pub async fn garbage_collect() -> Result<(), ServerFnError> {
     }
 }
 
-pub async fn run_cmd() -> Result<(), ServerFnError> {
+pub async fn run_cmd(token: CancellationToken) -> Result<(), ServerFnError> {
     dotenvy::dotenv()?;
     let cmd = std::env::var("TASK_CMD")?;
-    let mut interval = tokio::time::interval(std::time::Duration::from_secs(300));
+    let mut interval = tokio::time::interval(Duration::from_secs(300));
     loop {
-        interval.tick().await;
+        tokio::select! {
+        _ = token.cancelled() => {
+            log::info!("Shutting down run_cmd");
+            return Ok(());},
+            _ = interval.tick() => {}}
         let output = tokio::process::Command::new(&cmd).output().await;
         if let Err(err) = output {
             log::warn!("Error running command: {:?}", err);
         }
     }
+}
+
+const CERTSTREAM_URL: &str = "wss://certstream.calidog.io/domains-only";
+
+#[derive(serde::Deserialize)]
+struct CertStreamMessage {
+    data: Vec<String>,
+}
+
+async fn stream_certstream(
+    domains: tokio::sync::mpsc::UnboundedSender<Domain>,
+) -> Result<(), ServerFnError> {
+    let (mut client, _) = tokio_tungstenite::connect_async(CERTSTREAM_URL).await?;
+    while let Some(Ok(msg)) = client.next().await {
+        if let tokio_tungstenite::tungstenite::protocol::Message::Text(msg) = msg {
+            let msg: CertStreamMessage = serde_json::from_str(&msg)?;
+            for domain in msg.data {
+                let Ok(domain) = domain.parse::<Domain>() else {
+                    continue;
+                };
+                domains.send(domain)?;
+            }
+        }
+    }
+    Ok(())
+}
+
+async fn write_certstream(
+    mut rx: tokio::sync::mpsc::UnboundedReceiver<Domain>,
+    token: CancellationToken,
+) -> Result<(), ServerFnError> {
+    dotenvy::dotenv()?;
+    let pool = get_db().await?;
+    let interval = std::env::var("WRITE_FREQUENCY")?.parse::<u64>()?;
+    let mut interval = tokio::time::interval(Duration::from_secs(interval));
+    interval.tick().await;
+    loop {
+        tokio::select! {_ = interval.tick() => {},
+            _ = token.cancelled() => log::info!("Shutting down certstream writer")
+        }
+        let mut domains = Vec::new();
+        while let Ok(domain) = rx.try_recv() {
+            domains.push(domain.as_ref().to_string());
+        }
+        if domains.is_empty() {
+            continue;
+        }
+        let record = sqlx::query!(
+            "INSERT INTO domains(domain)
+            SELECT domain FROM UNNEST($1::text[]) as t(domain)
+            ON CONFLICT DO NOTHING",
+            &domains[..]
+        )
+        .execute(&pool)
+        .await?;
+        log::info!(
+            "Certstream inserted {} new domains (out of {} found)",
+            record.rows_affected(),
+            domains.len()
+        );
+        if token.is_cancelled() {
+            return Ok(());
+        }
+    }
+}
+
+pub async fn certstream(token: CancellationToken) -> Result<(), ServerFnError> {
+    let (tx, rx) = tokio::sync::mpsc::unbounded_channel();
+    let _ = tokio::spawn(async move {
+        loop {
+            if let Err(err) = stream_certstream(tx.clone()).await {
+                log::warn!("Error streaming certstream: {:?}", err);
+                tokio::time::sleep(Duration::from_secs(10)).await;
+            }
+        }
+    });
+    write_certstream(rx, token).await?;
+    Ok(())
 }

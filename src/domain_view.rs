@@ -60,7 +60,7 @@ fn DnsResultView(domain: Domain) -> impl IntoView {
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <h2 class="mb-2 text-lg font-bold">IP Addresses</h2>
-                                    <ul>
+                                    <ul class="grid grid-cols-2">
                                         <For
                                             each=move || { ips.clone() }
                                             key=|ip| *ip

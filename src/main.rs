@@ -5,7 +5,6 @@ async fn main() {
     use blockconvert::app::App;
     use blockconvert::fileserv::file_and_error_handler;
     use blockconvert::{list_manager, server};
-    use futures::StreamExt;
     use leptos::*;
     use leptos_axum::{generate_route_list, LeptosRoutes};
     env_logger::init();
@@ -25,32 +24,63 @@ async fn main() {
         .leptos_routes(&leptos_options, routes, App)
         .fallback(file_and_error_handler)
         .with_state(leptos_options);
+    let token = tokio_util::sync::CancellationToken::new();
+    let mut tasks = tokio::task::JoinSet::new();
+    tasks.spawn(list_manager::watch_filter_map());
+    tasks.spawn(server::parse_missing_subdomains());
+    tasks.spawn(server::check_dns(token.clone()));
+    tasks.spawn(server::import_pihole_logs());
+    tasks.spawn(server::find_rule_matches());
+    tasks.spawn(server::build_list());
+    tasks.spawn(server::update_expired_lists());
+    tasks.spawn(server::garbage_collect());
+    tasks.spawn(server::run_cmd(token.clone()));
+    tasks.spawn(server::certstream(token.clone()));
 
     let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
-    let mut tasks = futures::stream::FuturesUnordered::new();
-    tasks.push(tokio::spawn(list_manager::watch_filter_map()));
-    tasks.push(tokio::spawn(server::parse_missing_subdomains()));
-    tasks.push(tokio::spawn(server::check_dns()));
-    tasks.push(tokio::spawn(server::import_pihole_logs()));
-    tasks.push(tokio::spawn(server::find_rule_matches()));
-    tasks.push(tokio::spawn(server::build_list()));
-    tasks.push(tokio::spawn(server::update_expired_lists()));
-    tasks.push(tokio::spawn(server::garbage_collect()));
-    tasks.push(tokio::spawn(server::run_cmd()));
-    tasks.push(tokio::spawn(async move {
+    tasks.spawn(async move {
         logging::log!("listening on http://{}", &addr);
         axum::serve(listener, app.into_make_service()).await?;
         Ok(())
-    }));
+    });
+    {
+        let token = token.clone();
+        tasks.spawn(async move {
+            let mut interrupt =
+                tokio::signal::unix::signal(tokio::signal::unix::SignalKind::interrupt()).unwrap();
+            let mut hangup =
+                tokio::signal::unix::signal(tokio::signal::unix::SignalKind::hangup()).unwrap();
+            let mut terminate =
+                tokio::signal::unix::signal(tokio::signal::unix::SignalKind::terminate()).unwrap();
+            tokio::select! {
+                _ = tokio::signal::ctrl_c() =>
+                    logging::log!("Ctrl-C received, shutting down"),
+                _ = interrupt.recv() =>
+                    logging::log!("Interrupt received, shutting down"),
+                _ = hangup.recv() =>
+                    logging::log!("Hangup received, shutting down"),
+                _ = terminate.recv() =>
+                    logging::log!("Terminate received, shutting down"),
+            }
+            token.cancel();
+            Ok(())
+        });
+    }
 
-    while let Some(task) = tasks.next().await {
+    while let Some(task) = tasks.join_next().await {
         if let Err(e) = task.unwrap() {
             logging::log!("Error: {:?}", e);
             return;
         } else {
             logging::log!("Task completed");
         }
+        if token.is_cancelled() {
+            logging::log!("Shutting down");
+            tokio::time::sleep(std::time::Duration::from_secs(5)).await;
+            break;
+        }
     }
+    logging::log!("Exiting");
 }
 
 #[cfg(not(feature = "ssr"))]

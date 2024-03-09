@@ -115,10 +115,12 @@ pub async fn write_filter_map() -> Result<(), ServerFnError> {
 #[server]
 pub async fn get_filter_map() -> Result<crate::FilterListMap, ServerFnError> {
     let pool = crate::server::get_db().await?;
-    let rows = sqlx::query!("SELECT url, name, format, expires, author, license, lastupdated, rule_count
-    FROM filterLists")
-        .fetch_all(&pool)
-        .await?;
+    let rows = sqlx::query!(
+        "SELECT url, name, format, expires, author, license, lastupdated, rule_count
+    FROM filterLists"
+    )
+    .fetch_all(&pool)
+    .await?;
 
     let mut filter_list_map = Vec::new();
     for record in rows {
@@ -208,14 +210,12 @@ pub async fn update_list(url: crate::FilterListUrl) -> Result<(), ServerFnError>
             ",
             url.as_str(),
             new_last_updated,
-            contents
+            sorted_contents
         )
         .execute(&pool)
         .await?;
-        if old_contents != Some(contents) {
+        if old_contents != Some(sorted_contents) {
             crate::list_parser::parse_list(url).await?;
-        } else {
-            log::info!("No change in contents for {}", url.as_str());
         }
         return Ok(());
     }

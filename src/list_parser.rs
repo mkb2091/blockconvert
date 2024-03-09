@@ -367,12 +367,12 @@ fn parse_unknown_lines(contents: &str) -> Vec<RulePair> {
     parse_lines(contents, &|_| Some(Rule::Unknown))
 }
 
-
 #[cfg(feature = "ssr")]
 pub fn parse_list_contents(contents: &str, list_format: FilterListType) -> Vec<RulePair> {
     match list_format {
         FilterListType::Adblock => parse_adblock(contents),
         FilterListType::DomainBlocklist => parse_domain_list(contents, false, true),
+        FilterListType::DomainBlocklistWithoutSubdomains => parse_domain_list(contents, false, false),
         FilterListType::DomainAllowlist => parse_domain_list(contents, true, false),
         FilterListType::IPBlocklist => parse_ip_network_list(contents, false),
         FilterListType::IPAllowlist => parse_ip_network_list(contents, true),
