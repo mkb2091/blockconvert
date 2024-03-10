@@ -1,6 +1,5 @@
 use crate::list_parser::Domain;
 use crate::{DbInitError, DomainId, FilterListUrl};
-use futures::StreamExt;
 use hickory_resolver::error::ResolveError;
 use leptos::*;
 use notify::Watcher;
@@ -28,14 +27,13 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
     const LIMIT: i64 = 1000;
     let pool = get_db().await?;
     loop {
-        let mut tx = pool.begin().await?;
         let records = sqlx::query!(
             "SELECT domain from domains
         WHERE processed_subdomains = false
         LIMIT $1",
             LIMIT
         )
-        .fetch_all(&mut *tx)
+        .fetch_all(&pool)
         .await?;
         if records.is_empty() {
             tokio::time::sleep(Duration::from_secs(30)).await;
@@ -48,14 +46,16 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
 
         for record in records {
             checked_domains.push(record.domain.clone());
-            let parents = record
-                .domain
+            let Ok(domain) = record.domain.parse::<Domain>() else {
+                continue;
+            };
+            let parents = domain
+                .as_ref()
                 .match_indices('.')
                 .map(|(i, _)| record.domain.split_at(i + 1).1)
-                .filter_map(|parent| parent.parse().ok())
-                .map(|parent: Domain| parent.as_ref().to_string());
+                .filter_map(|parent| parent.parse::<Domain>().ok());
             for parent in parents {
-                all_domains.push(record.domain.clone());
+                all_domains.push(domain.clone());
                 all_parents.push(parent);
             }
         }
@@ -71,10 +71,12 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
             "INSERT INTO domains (domain)
             SELECT domain FROM UNNEST($1::text[]) as t(domain)
             ON CONFLICT DO NOTHING",
-            &parent_set[..]
+            &parent_set[..] as _
         )
         .execute(&pool)
         .await?;
+
+        let mut tx = pool.begin().await?;
         sqlx::query!(
             "INSERT INTO subdomains (domain_id, parent_domain_id)
             SELECT domains_with_parents.id, parents.id
@@ -82,8 +84,8 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
             INNER JOIN domains AS domains_with_parents ON domains_with_parents.domain = t.domain
             INNER JOIN domains AS parents ON parents.domain = t.parent
             ON CONFLICT DO NOTHING",
-            &all_domains[..],
-            &all_parents[..],
+            &all_domains[..] as _,
+            &all_parents[..] as _,
         )
         .execute(&mut *tx)
         .await?;
@@ -163,11 +165,13 @@ struct DomainResolver {
     tx: async_channel::Sender<Task>,
     rx: async_channel::Receiver<Task>,
     read_limit: i64,
-    started_and_failed_cache_size: usize,
+    failed_cache_size: usize,
+    failed_domains: Arc<Mutex<Vec<i64>>>,
+    written_domains: Arc<Mutex<Vec<i64>>>,
     bad_domains: Arc<Mutex<Vec<i64>>>,
     looked_up_domains: Arc<Mutex<Vec<i64>>>,
     dns_ips: Arc<Mutex<(Vec<i64>, Vec<ipnetwork::IpNetwork>)>>,
-    dns_cnames: Arc<Mutex<(Vec<i64>, Vec<String>)>>,
+    dns_cnames: Arc<Mutex<(Vec<i64>, Vec<Domain>)>>,
     token: CancellationToken,
 }
 
@@ -205,8 +209,7 @@ impl DomainResolver {
         let (tx, rx) = async_channel::bounded(read_limit as usize);
 
         let bad_domains = Arc::new(Mutex::new(Vec::new()));
-        let started_and_failed_cache_size =
-            std::env::var("STARTED_AND_FAILED_CACHE_SIZE")?.parse()?;
+        let failed_cache_size = std::env::var("FAILED_CACHE_SIZE")?.parse()?;
 
         Ok(Self {
             resolvers,
@@ -214,7 +217,9 @@ impl DomainResolver {
             tx,
             rx,
             read_limit,
-            started_and_failed_cache_size,
+            failed_cache_size,
+            failed_domains: Arc::new(Mutex::new(Vec::new())),
+            written_domains: Arc::new(Mutex::new(Vec::new())),
             looked_up_domains: Arc::new(Mutex::new(Vec::new())),
             dns_ips: Default::default(),
             dns_cnames: Default::default(),
@@ -226,14 +231,14 @@ impl DomainResolver {
         dotenvy::dotenv()?;
         let concurrent_lookups: usize = std::env::var("CONCURRENT_LOOKUPS")?.parse()?;
 
-        let mut tasks = futures::stream::futures_unordered::FuturesUnordered::new();
+        let mut tasks = tokio::task::JoinSet::new();
 
         for resolver in &self.resolvers {
             for _ in 0..concurrent_lookups {
                 let resolver_str = resolver.0.clone();
                 let resolver = resolver.1.clone();
                 let resolver_self = self.clone();
-                let task = tokio::spawn(async move {
+                let task = async move {
                     let token = resolver_self.token.clone();
                     tokio::select! {
                     _ = token.cancelled() => {
@@ -241,12 +246,12 @@ impl DomainResolver {
                         Ok(())},
                     res =
                     resolver_self.run_task(resolver_str, resolver) => res}
-                });
-                tasks.push(task);
+                };
+                tasks.spawn(task);
             }
         }
         let selector = self.clone();
-        let selector_task = tokio::spawn(async move {
+        tasks.spawn(async move {
             let token = selector.token.clone();
             tokio::select! {
             _ = token.cancelled() => {
@@ -255,11 +260,9 @@ impl DomainResolver {
             res = selector.domain_selector() => res
             }
         });
-        tasks.push(selector_task);
         let writer = self.clone();
-        let writer_task = tokio::spawn(async move { writer.write_to_db().await });
-        tasks.push(writer_task);
-        while let Some(result) = tasks.next().await {
+        tasks.spawn(async move { writer.write_to_db().await });
+        while let Some(result) = tasks.join_next().await {
             let _ = result?;
         }
         Ok(())
@@ -267,65 +270,68 @@ impl DomainResolver {
 
     async fn domain_selector(&self) -> Result<(), ServerFnError> {
         let pool = get_db().await?;
-        let mut started_domains =
-            std::collections::VecDeque::with_capacity(self.started_and_failed_cache_size);
+        let mut started_domains = HashSet::new();
+        let mut failed_domains = std::collections::VecDeque::<i64>::new();
         loop {
-            let (started_1, started_2) = started_domains.as_slices();
-            let mut records = sqlx::query!(
+            {
+                failed_domains.extend(std::mem::take(&mut *self.failed_domains.lock()?));
+            }
+            while failed_domains.len() > self.failed_cache_size {
+                if let Some(failed) = failed_domains.pop_front() {
+                    started_domains.remove(&failed);
+                }
+            }
+            let written_domains = std::mem::take(&mut *self.written_domains.lock()?);
+            for domain_id in written_domains {
+                started_domains.remove(&domain_id);
+            }
+            let limit = self.read_limit + started_domains.len() as i64;
+            let records = sqlx::query!(
                 "SELECT id, domain
-            FROM Domains
-            WHERE last_checked_dns IS NULL
-            AND ($3 OR id != ANY($2::bigint[])) AND ($5 OR id != ANY($4::bigint[]))
-            ORDER BY id DESC NULLS FIRST
-            LIMIT $1",
-                self.read_limit,
-                &started_1[..],
-                started_1.is_empty(),
-                &started_2[..],
-                started_2.is_empty(),
+                        FROM Domains
+                        WHERE last_checked_dns IS NULL
+                        ORDER BY id DESC NULLS FIRST
+                        LIMIT $1",
+                limit
             )
             .fetch_all(&pool)
-            .await?
-            .into_iter()
-            .map(|record| (record.id, record.domain))
-            .collect::<Vec<_>>();
-            if records.len() < self.read_limit as usize {
-                log::info!("No more unchecked domains, rechecking old domains");
-                let new_records = sqlx::query!(
+            .await?;
+            let recheck_domains = if records.len() < limit as usize {
+                sqlx::query!(
                     "SELECT id, domain
-                FROM Domains
-                WHERE ($3 OR id != ANY($2::bigint[])) AND ($5 OR id != ANY($4::bigint[]))
-                ORDER BY last_checked_dns ASC NULLS FIRST
-                LIMIT $1",
-                    self.read_limit,
-                    &started_1[..],
-                    started_1.is_empty(),
-                    &started_2[..],
-                    started_2.is_empty(),
+                            FROM Domains
+                            ORDER BY last_checked_dns ASC NULLS FIRST
+                            LIMIT $1",
+                    limit
                 )
                 .fetch_all(&pool)
                 .await?
+            } else {
+                vec![]
+            };
+
+            let records = records.into_iter().map(|record| (record.id, record.domain));
+            let recheck_domains = recheck_domains
                 .into_iter()
                 .map(|record| (record.id, record.domain));
-                records.extend(new_records);
+            let mut has_domains = false;
+            for (domain_id, domain_str) in records.chain(recheck_domains) {
+                has_domains = true;
+                if !started_domains.insert(domain_id) {
+                    continue;
+                }
+                if let Ok(domain) = domain_str.parse::<Domain>() {
+                    if domain_str == domain.as_ref() {
+                        self.tx.send((DomainId(domain_id), domain)).await?;
+                        continue;
+                    }
+                }
+                log::warn!("Invalid domain: {}", domain_str);
+                self.bad_domains.lock()?.push(domain_id);
             }
-            if records.is_empty() {
-                log::warn!("No records to check");
+            if !has_domains {
+                log::info!("No domains to check, sleeping");
                 tokio::time::sleep(Duration::from_secs(30)).await;
-                continue;
-            }
-
-            for (domain_id, domain) in records {
-                if started_domains.len() >= self.started_and_failed_cache_size {
-                    started_domains.pop_front();
-                }
-                started_domains.push_back(domain_id);
-                if let Ok(domain) = domain.parse::<Domain>() {
-                    self.tx.send((DomainId(domain_id), domain)).await?;
-                } else {
-                    log::warn!("Invalid domain: {}", domain);
-                    self.bad_domains.lock()?.push(domain_id);
-                }
             }
         }
     }
@@ -355,7 +361,7 @@ impl DomainResolver {
                         let mut dns_cnames = self.dns_cnames.lock()?;
                         for cname in cnames {
                             dns_cnames.0.push(domain_id.0);
-                            dns_cnames.1.push(cname.as_ref().into());
+                            dns_cnames.1.push(cname);
                         }
                     }
                 }
@@ -366,6 +372,7 @@ impl DomainResolver {
                         domain.as_ref(),
                         err
                     );
+                    self.failed_domains.lock()?.push(domain_id.0);
                 }
             }
         }
@@ -382,11 +389,13 @@ impl DomainResolver {
             tokio::select! {
                 _ = interval.tick() => {},
                 _ = self.token.cancelled() => {
-                    log::info!("Shutting down DNS writer");
-                    return Ok(());
+                    log::info!("Shutting down DNS writer")
                 }
             }
             let looked_up_domains = std::mem::take(&mut *self.looked_up_domains.lock()?);
+            let looked_up_domains_deduped =
+                looked_up_domains.iter().cloned().collect::<HashSet<_>>();
+            assert_eq!(looked_up_domains.len(), looked_up_domains_deduped.len());
             let dns_ips = std::mem::take(&mut *self.dns_ips.lock()?);
             let dns_ips_domain_ids = &dns_ips.0;
             let dns_ips_ips = &dns_ips.1;
@@ -394,22 +403,23 @@ impl DomainResolver {
             let dns_cnames_domain_ids = &dns_cnames.0;
             let dns_cnames_cname = &dns_cnames.1;
             let bad_domains = std::mem::take(&mut *self.bad_domains.lock()?);
-            let mut tx = pool.begin().await?;
             let total_cnames = dns_cnames_cname
                 .iter()
                 .collect::<HashSet<_>>()
                 .into_iter()
                 .cloned()
-                .collect::<Vec<String>>();
+                .collect::<Vec<Domain>>();
             let new_domains_from_cnames = sqlx::query!(
                 "INSERT INTO domains(domain)
                     SELECT domain FROM UNNEST($1::text[]) as t(domain)
                     ON CONFLICT DO NOTHING",
-                &total_cnames[..]
+                &total_cnames[..] as _
             )
-            .execute(&mut *tx)
+            .execute(&pool)
             .await?
             .rows_affected();
+
+            let mut tx = pool.begin().await?;
             sqlx::query!(
                 "DELETE FROM dns_ips WHERE domain_id = ANY($1::bigint[])",
                 &looked_up_domains[..]
@@ -436,19 +446,25 @@ impl DomainResolver {
                     INNER JOIN domains AS cname_domains ON cname_domains.domain = t.cname
                     ",
                         &dns_cnames_domain_ids[..],
-                        &dns_cnames_cname[..]
+                        &dns_cnames_cname[..] as _
                     )
                     .execute(&mut *tx)
                     .await?;
 
-            sqlx::query!(
+            let updated_domains = sqlx::query!(
                 "UPDATE domains
                     SET last_checked_dns = now()
                     WHERE id = ANY($1::bigint[])",
                 &looked_up_domains[..]
             )
             .execute(&mut *tx)
-            .await?;
+            .await?
+            .rows_affected();
+            assert_eq!(updated_domains, looked_up_domains.len() as u64);
+
+            tx.commit().await?;
+            self.written_domains.lock()?.extend(&looked_up_domains);
+
             if !bad_domains.is_empty() {
                 log::info!("Removing {} bad domains", bad_domains.len());
                 sqlx::query!(
@@ -456,10 +472,11 @@ impl DomainResolver {
                     WHERE id = ANY($1::bigint[])",
                     &bad_domains[..]
                 )
-                .execute(&mut *tx)
+                .execute(&pool)
                 .await?;
             }
-            tx.commit().await?;
+
+            self.written_domains.lock()?.extend(&bad_domains);
 
             log::info!(
                 "Looked up {} domains, got {} ips, {} cnames ({} new)",
@@ -513,15 +530,12 @@ pub async fn import_pihole_logs() -> Result<(), ServerFnError> {
             notify2.notified().await;
         }
         if last_wrote.elapsed().as_secs() > write_frequency {
-            let domains_vec = domains
-                .drain()
-                .map(|domain| domain.as_ref().to_string())
-                .collect::<Vec<_>>();
+            let domains_vec = domains.drain().collect::<Vec<_>>();
             let record = sqlx::query!(
                 "INSERT INTO domains (domain)
             SELECT domain FROM UNNEST($1::text[]) as t(domain)
             ON CONFLICT DO NOTHING",
-                &domains_vec[..]
+                &domains_vec[..] as _
             )
             .execute(&pool)
             .await?;
@@ -543,6 +557,7 @@ pub async fn find_rule_matches() -> Result<(), ServerFnError> {
     let interval: u64 = std::env::var("RULE_MATCH_CHECK_INTERVAL")?.parse()?;
     let interval: Duration = Duration::from_secs(interval);
     let mut interval = tokio::time::interval(interval);
+    interval.set_missed_tick_behavior(tokio::time::MissedTickBehavior::Delay);
     loop {
         interval.tick().await;
         let mut tx = pool.begin().await?;
@@ -783,6 +798,7 @@ struct CertStreamMessage {
 async fn stream_certstream(
     domains: tokio::sync::mpsc::UnboundedSender<Domain>,
 ) -> Result<(), ServerFnError> {
+    use futures::StreamExt;
     let (mut client, _) = tokio_tungstenite::connect_async(CERTSTREAM_URL).await?;
     while let Some(Ok(msg)) = client.next().await {
         if let tokio_tungstenite::tungstenite::protocol::Message::Text(msg) = msg {

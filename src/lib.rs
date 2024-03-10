@@ -8,6 +8,7 @@ pub mod list_manager;
 pub mod list_parser;
 pub mod list_view;
 pub mod rule_view;
+pub mod tasks;
 #[cfg(feature = "ssr")]
 pub mod server;
 pub mod stats_view;
@@ -182,6 +183,8 @@ pub mod fileserv;
 pub fn hydrate() {
     console_error_panic_hook::set_once();
     let _ = console_log::init_with_level(log::Level::Debug);
-    // leptos::mount_to_body(App);
-    leptos::leptos_dom::HydrationCtx::stop_hydrating();
+    log::info!("Hydrating");
+    leptos::mount_to_body(crate::app::App);
+    log::info!("Mounted");
+    // leptos::leptos_dom::HydrationCtx::stop_hydrating();
 }

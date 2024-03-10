@@ -2,93 +2,11 @@ use crate::FilterListType;
 use leptos::*;
 use serde::{Deserialize, Serialize};
 use std::{str::FromStr, sync::Arc};
+pub use crate::domain_view::Domain;
 
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
-#[serde(transparent)]
-pub struct Domain(Arc<str>);
 
-impl AsRef<str> for Domain {
-    fn as_ref(&self) -> &str {
-        &self.0
-    }
-}
 
-impl FromStr for Domain {
-    type Err = DomainParseError;
-    fn from_str(domain: &str) -> Result<Domain, Self::Err> {
-        if domain.starts_with('*') {
-            return Err(DomainParseError);
-        }
-        if domain.ends_with('.') {
-            return Err(DomainParseError);
-        }
-        let domain = addr::parse_dns_name(domain)?;
-        if !domain.has_known_suffix() {
-            return Err(DomainParseError);
-        }
-        let name = hickory_proto::rr::Name::from_str_relaxed(domain.as_str())?;
-        if name.num_labels() < 2 {
-            return Err(DomainParseError);
-        }
-        let domain_str: Arc<str> = domain.as_str().into();
-        if domain_str.contains('/') {
-            log::warn!("Invalid domain: {:?}", domain_str);
-            return Err(DomainParseError);
-        }
-        Ok(Domain(domain_str))
-    }
-}
 
-#[cfg(test)]
-mod tests {
-    use crate::list_parser::Domain;
-    #[test]
-    fn valid_domain() {
-        for domain in [
-            "amazonaws.com",
-            "s3-website.us-east-1.amazonaws.com",
-            "origin-mobile_mob.conduit.com",
-        ] {
-            let domain: Result<Domain, _> = domain.parse();
-            assert!(domain.is_ok());
-        }
-    }
-
-    #[test]
-    fn invalid_domain() {
-        for domain_str in [
-            "com",
-            "@.amazonaws.com",
-            "1234",
-            "example.com,google.com",
-            "example.com.",
-        ] {
-            let domain: Result<Domain, _> = domain_str.parse();
-            assert!(domain.is_err(), "{}", domain_str);
-        }
-    }
-}
-
-#[derive(Debug, Clone, thiserror::Error)]
-pub struct DomainParseError;
-
-impl std::fmt::Display for DomainParseError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "Invalid domain")
-    }
-}
-
-impl<'a> From<addr::error::Error<'a>> for DomainParseError {
-    fn from(_: addr::error::Error) -> Self {
-        DomainParseError
-    }
-}
-
-impl From<hickory_proto::error::ProtoError> for DomainParseError {
-    fn from(_: hickory_proto::error::ProtoError) -> Self {
-        DomainParseError
-    }
-}
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct DomainRule {
@@ -372,7 +290,9 @@ pub fn parse_list_contents(contents: &str, list_format: FilterListType) -> Vec<R
     match list_format {
         FilterListType::Adblock => parse_adblock(contents),
         FilterListType::DomainBlocklist => parse_domain_list(contents, false, true),
-        FilterListType::DomainBlocklistWithoutSubdomains => parse_domain_list(contents, false, false),
+        FilterListType::DomainBlocklistWithoutSubdomains => {
+            parse_domain_list(contents, false, false)
+        }
         FilterListType::DomainAllowlist => parse_domain_list(contents, true, false),
         FilterListType::IPBlocklist => parse_ip_network_list(contents, false),
         FilterListType::IPAllowlist => parse_ip_network_list(contents, true),
@@ -419,7 +339,7 @@ pub async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> 
         match rule.get_rule() {
             crate::list_parser::Rule::Domain(domain_rule) => {
                 domain_src.push(source);
-                domains.push(domain_rule.domain.as_ref().to_string());
+                domains.push(domain_rule.domain.clone());
                 allow.push(domain_rule.allow);
                 subdomain.push(domain_rule.subdomain);
             }
@@ -446,7 +366,7 @@ pub async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> 
     sqlx::query!(
         "INSERT INTO domains (domain)
     SELECT domain FROM UNNEST($1::text[]) AS t(domain) ON CONFLICT DO NOTHING",
-        &domains[..]
+        &domains[..] as _
     )
     .execute(&mut *tx)
     .await?;
@@ -455,7 +375,7 @@ pub async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> 
     SELECT domains.id, allow, subdomain FROM UNNEST($1::text[], $2::bool[], $3::bool[]) AS t(domain, allow, subdomain)
     INNER JOIN domains ON domains.domain = t.domain
     ON CONFLICT DO NOTHING",
-    &domains[..],
+    &domains[..] as _,
     &allow[..],
     &subdomain[..]
     ).execute(&mut *tx).await?;
@@ -465,7 +385,7 @@ pub async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> 
     INNER JOIN domains ON domains.domain = t.domain
     INNER JOIN domain_rules ON domain_rules.domain_id = domains.id AND domain_rules.allow = t.allow AND domain_rules.subdomain = t.subdomain
     ON CONFLICT DO NOTHING",
-    &domains[..],
+    &domains[..] as _,
     &allow[..],
     &subdomain[..]
     ).execute(&mut *tx).await?;
@@ -477,7 +397,7 @@ pub async fn parse_list(url: crate::FilterListUrl) -> Result<(), ServerFnError> 
     INNER JOIN Rules ON Rules.domain_rule_id = domain_rules.id
     ON CONFLICT DO NOTHING",
     &domain_src[..],
-    &domains[..],
+    &domains[..] as _,
     &allow[..],
     &subdomain[..]
     ).execute(&mut *tx).await?;
@@ -558,7 +478,7 @@ list_id,
     ON CONFLICT DO NOTHING",
         list_id,
         &domain_src[..],
-        &domains[..],
+        &domains[..] as _,
         &allow[..],
         &subdomain[..]
     ).execute(&mut *tx).await?;

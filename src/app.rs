@@ -47,6 +47,9 @@ pub fn App() -> impl IntoView {
                         Home
                     </A>
                     <div class="space-x-4">
+                        <A href="/tasks" class="hover:text-indigo-300">
+                            Tasks
+                        </A>
                         <A href="/stats" class="hover:text-indigo-300">
                             Stats
                         </A>
@@ -65,6 +68,7 @@ pub fn App() -> impl IntoView {
             <main>
                 <Routes>
                     <Route path="" view=HomePage ssr=SsrMode::Async/>
+                    <Route path="tasks" view=crate::tasks::TaskView ssr=SsrMode::Async/>
                     <Route path="stats" view=StatsView ssr=SsrMode::InOrder/>
                     <Route path="list" view=FilterListPage ssr=SsrMode::InOrder/>
                     <Route path="rule/:id" view=RuleViewPage ssr=SsrMode::InOrder/>

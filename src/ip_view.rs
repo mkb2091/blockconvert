@@ -76,14 +76,21 @@ type GetIp = Box<dyn Fn() -> Result<IpAddr, ParamsError>>;
 
 #[derive(Params, PartialEq)]
 struct IpParam {
-    ip: IpAddr,
+    ip: Option<IpAddr>,
 }
 
 #[component]
 pub fn IpView() -> impl IntoView {
     let params = use_params::<IpParam>();
-    let get_ip =
-        move || params.with(|param| param.as_ref().map(|param| param.ip).map_err(Clone::clone));
+    let get_ip = move || {
+        params.with(|param| {
+            param.as_ref().map_err(Clone::clone).and_then(|param| {
+                param
+                    .ip
+                    .ok_or_else(|| ParamsError::MissingParam("No domain".into()))
+            })
+        })
+    };
     view! {
         <div>
             <h1 class="text-2xl font-bold text-gray-800">{"IP Address: "} {get_ip}</h1>

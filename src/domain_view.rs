@@ -1,13 +1,138 @@
 use crate::{
     app::Loading,
-    list_parser::Domain,
     list_view::FilterListLink,
     rule_view::{DisplayRule, RuleData},
     DomainId, FilterListUrl, RuleId, SourceId,
 };
 use leptos::*;
 use leptos_router::*;
-use std::{collections::BTreeSet, net::IpAddr};
+use serde::{Deserialize, Serialize};
+use std::{collections::BTreeSet, net::IpAddr, str::FromStr, sync::Arc};
+
+#[derive(Debug, Clone, thiserror::Error)]
+pub enum DomainParseError {
+    Addr,
+    HickoryProto,
+    Custom,
+}
+
+impl std::fmt::Display for DomainParseError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "Invalid domain")
+    }
+}
+
+impl<'a> From<addr::error::Error<'a>> for DomainParseError {
+    fn from(_: addr::error::Error) -> Self {
+        DomainParseError::Addr
+    }
+}
+
+impl From<hickory_proto::error::ProtoError> for DomainParseError {
+    fn from(_: hickory_proto::error::ProtoError) -> Self {
+        DomainParseError::HickoryProto
+    }
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord, Hash)]
+#[serde(transparent)]
+pub struct Domain(Arc<str>);
+
+#[cfg(feature = "ssr")]
+impl sqlx::Type<sqlx::Postgres> for Domain {
+    fn type_info() -> sqlx::postgres::PgTypeInfo {
+        <&str as sqlx::Type<sqlx::Postgres>>::type_info()
+    }
+
+    fn compatible(ty: &sqlx::postgres::PgTypeInfo) -> bool {
+        <&str as sqlx::Type<sqlx::Postgres>>::compatible(ty)
+    }
+}
+#[cfg(feature = "ssr")]
+impl sqlx::postgres::PgHasArrayType for Domain {
+    fn array_type_info() -> sqlx::postgres::PgTypeInfo {
+        <&str as sqlx::postgres::PgHasArrayType>::array_type_info()
+    }
+
+    fn array_compatible(ty: &sqlx::postgres::PgTypeInfo) -> bool {
+        <&str as sqlx::postgres::PgHasArrayType>::array_compatible(ty)
+    }
+}
+#[cfg(feature = "ssr")]
+impl sqlx::Encode<'_, sqlx::Postgres> for Domain {
+    fn encode_by_ref(&self, buf: &mut sqlx::postgres::PgArgumentBuffer) -> sqlx::encode::IsNull {
+        <&str as sqlx::Encode<sqlx::Postgres>>::encode(self.as_ref(), buf)
+    }
+}
+
+impl AsRef<str> for Domain {
+    fn as_ref(&self) -> &str {
+        &self.0
+    }
+}
+
+impl FromStr for Domain {
+    type Err = DomainParseError;
+    fn from_str(domain: &str) -> Result<Domain, Self::Err> {
+        if domain.len() > 253 {
+            return Err(DomainParseError::Custom);
+        }
+        let mut domain: Arc<str> = domain.into();
+        Arc::get_mut(&mut domain).unwrap().make_ascii_lowercase();
+
+        if domain.starts_with('*') || domain.ends_with('.') {
+            return Err(DomainParseError::Custom);
+        }
+        if !addr::parse_dns_name(&domain)?.has_known_suffix() {
+            return Err(DomainParseError::Addr);
+        }
+        let name = hickory_proto::rr::Name::from_str_relaxed(&domain)?;
+        if name.num_labels() < 2 {
+            return Err(DomainParseError::Custom);
+        }
+
+        if domain.contains('/') {
+            log::warn!("Invalid domain: {:?}", domain);
+            return Err(DomainParseError::Custom);
+        }
+        Ok(Domain(domain))
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::domain_view::Domain;
+    #[test]
+    fn valid_domain() {
+        for domain in [
+            "amazonaws.com",
+            "s3-website.us-east-1.amazonaws.com",
+            "origin-mobile_mob.conduit.com",
+        ] {
+            let domain: Result<Domain, _> = domain.parse();
+            assert!(domain.is_ok());
+        }
+    }
+
+    #[test]
+    fn invalid_domain() {
+        for domain_str in [
+            "com",
+            "@.amazonaws.com",
+            "1234",
+            "example.com,google.com",
+            "example.com.",
+        ] {
+            let domain: Result<Domain, _> = domain_str.parse();
+            assert!(domain.is_err(), "{}", domain_str);
+        }
+    }
+    #[test]
+    fn makes_lowercase() {
+        let domain: Domain = "EXAMPLE.COM".parse().unwrap();
+        assert_eq!(domain.as_ref(), "example.com");
+    }
+}
 
 #[server]
 async fn get_dns_result(
@@ -283,7 +408,7 @@ fn DisplaySubdomains(get_domain: Box<dyn Fn() -> Result<String, ParamsError>>) -
 
 #[derive(Params, PartialEq)]
 struct DomainParam {
-    domain: String,
+    domain: Option<String>,
 }
 
 #[component]
@@ -291,14 +416,25 @@ pub fn DomainViewPage() -> impl IntoView {
     let params = use_params::<DomainParam>();
     let get_domain = move || {
         params.with(|param| {
-            param
-                .as_ref()
-                .map(|param| param.domain.clone())
-                .map_err(Clone::clone)
+            param.as_ref().map_err(Clone::clone).and_then(|param| {
+                param
+                    .domain
+                    .clone()
+                    .ok_or_else(|| ParamsError::MissingParam("No domain".into()))
+            })
         })
     };
     let get_domain_parsed = move || {
-        params.with(|param| Ok::<_, ServerFnError>(param.as_ref()?.domain.parse::<Domain>()?))
+        params.with(|param| {
+            Ok::<_, ServerFnError>(
+                param
+                    .as_ref()?
+                    .domain
+                    .as_ref()
+                    .ok_or_else(|| ParamsError::MissingParam("No domain".into()))?
+                    .parse::<Domain>()?,
+            )
+        })
     };
     view! {
         <div>

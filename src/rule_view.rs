@@ -10,7 +10,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Params, PartialEq)]
 struct RuleParam {
-    id: i32,
+    id: Option<i32>,
 }
 
 #[server]
@@ -292,10 +292,11 @@ pub fn RuleViewPage() -> impl IntoView {
     let params = use_params::<RuleParam>();
     let get_id = move || {
         params.with(|param| {
-            param
-                .as_ref()
-                .map(|param| RuleId(param.id))
-                .map_err(Clone::clone)
+            param.as_ref().map_err(Clone::clone).and_then(|param| {
+                Ok(RuleId(param.id.ok_or_else(|| {
+                    ParamsError::MissingParam("No id".into())
+                })?))
+            })
         })
     };
     let rule_resource = create_resource(get_id, |id| async move {

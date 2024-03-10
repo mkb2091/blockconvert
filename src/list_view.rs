@@ -265,8 +265,8 @@ fn Contents(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoView {
                                                     <td>{source}</td>
                                                     <td>
                                                         <A href=rule_href class="link link-neutral">
-                                                        <DisplayRule rule=rule/>
-                                                    </A>
+                                                            <DisplayRule rule=rule/>
+                                                        </A>
                                                     </td>
                                                 </tr>
                                             }
@@ -339,7 +339,7 @@ fn FilterListInner(url: crate::FilterListUrl, page: Option<usize>) -> impl IntoV
 
 #[derive(Params, PartialEq, Debug)]
 struct ViewListParams {
-    url: String,
+    url: Option<String>,
     page: Option<usize>,
 }
 
@@ -355,7 +355,10 @@ enum ViewListError {
 
 impl ViewListParams {
     fn parse(&self) -> Result<crate::FilterListUrl, ViewListError> {
-        Ok(self.url.parse()?)
+        Ok(self
+            .url.as_ref()
+            .ok_or_else(|| ParamsError::MissingParam("Missing Param".into()))?
+            .parse()?)
     }
 }
 

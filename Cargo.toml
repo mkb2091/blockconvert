@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [lib]
-crate-type = ["cdylib", "rlib"]
+crate-type = ["cdylib", "lib"]
 
 [dependencies]
 serde = { version = "1.0", features = ["derive", "rc"] }
@@ -12,19 +12,14 @@ url = { version = "2.5.0", features = ["serde"] }
 axum = { version = "0.7", optional = true }
 console_error_panic_hook = { version = "0.1", optional = true }
 leptos = { git = "https://github.com/leptos-rs/leptos", version = "0.6", features = [
-    "nightly",
-    "experimental-islands",
     "nonce",
 ] }
 leptos_axum = { git = "https://github.com/leptos-rs/leptos", version = "0.6", features = [
-    "experimental-islands",
     "nonce",
 ], optional = true }
 leptos_meta = { git = "https://github.com/leptos-rs/leptos", version = "0.6", features = [
-    "nightly",
 ] }
 leptos_router = { git = "https://github.com/leptos-rs/leptos", version = "0.6", features = [
-    "nightly",
 ] }
 tokio = { version = "1", features = [
     "rt-multi-thread",
@@ -54,21 +49,25 @@ reqwest = { version = "0.11.25", features = [
 ], default-features = false, optional = true }
 chrono = { version = "0.4", features = ["serde"] }
 dotenvy = { version = "0.15.7", optional = true }
-mimalloc = { version = "0.1.39", optional = true }
+mimalloc = { version = "0.1.39", default-features = false, optional = true }
 hickory-resolver = { version = "0.24.0", features = [
     "tokio-runtime",
 ], optional = true }
 addr = "0.15.6"
 ipnetwork = "0.20.0"
-futures = "0.3.30"
+futures = { version = "0.3.30", optional = true }
 hickory-proto = { version = "0.24.0", default-features = false }
 humantime = "2.1.0"
 notify = { version = "6.1.1", optional = true }
 async-channel = { version = "2.2.0", optional = true }
-tokio-tungstenite = { version = "0.17.2", features = [
+tokio-tungstenite = { version = "0.21.0", features = [
     "native-tls",
 ], optional = true }
-
+serde_json = { version = "1.0.114", optional = true }
+metrics = { version = "0.22", optional = true }
+metrics-exporter-prometheus = { version = "0.13.1", default-features = false, features = [
+    "push-gateway",
+], optional = true }
 
 [features]
 hydrate = [
@@ -99,6 +98,10 @@ ssr = [
     "dep:notify",
     "dep:async-channel",
     "dep:tokio-tungstenite",
+    "dep:serde_json",
+    "dep:futures",
+    "dep:metrics",
+    "dep:metrics-exporter-prometheus",
 ]
 default = ["ssr"]
 
@@ -110,9 +113,18 @@ lto = true
 codegen-units = 1
 panic = "abort"
 
+[profile.wasm-dev]
+inherits = "dev"
+debug = 0
+
+[profile.wasm-dev.package."*"]
+opt-level = 's'
+
 [profile.server-dev]
 inherits = "dev"
-opt-level = 3
+opt-level = 1
+debug = 0
+lto = "off"
 
 [profile.dev.package."*"]
 opt-level = 3
@@ -184,6 +196,7 @@ lib-default-features = false
 #
 # Optional. Defaults to "release".
 lib-profile-release = "wasm-release"
+lib-profile-dev = "wasm-dev"
 
 # The tailwind input file.
 #
