@@ -1,8 +1,11 @@
 #[cfg(feature = "ssr")]
 use crate::rule::RuleData;
 use crate::{
-    app::Loading, filterlist::{FilterListLink, FilterListUrl}, rule::DisplayRule,
-    rule::RuleId, source::SourceId,
+    app::Loading,
+    filterlist::{FilterListLink, FilterListUrl},
+    rule::DisplayRule,
+    rule::RuleId,
+    source::SourceId,
 };
 use leptos::*;
 use leptos_router::*;
@@ -648,15 +651,7 @@ fn DnsResultView(domain: Domain) -> impl IntoView {
 #[server]
 async fn get_blocked_by(
     domain: String,
-) -> Result<
-    Vec<(
-        FilterListUrl,
-        RuleId,
-        SourceId,
-        crate::filterlist::RulePair,
-    )>,
-    ServerFnError,
-> {
+) -> Result<Vec<(FilterListUrl, RuleId, SourceId, crate::filterlist::RulePair)>, ServerFnError> {
     let records = sqlx::query!(
         r#"
         SELECT Rules.id as "rule_id: RuleId",
@@ -695,12 +690,7 @@ async fn get_blocked_by(
             let source = record.source.clone();
             let pair = crate::filterlist::RulePair::new(source.into(), rule);
             let url = record.url.clone();
-            Ok((
-                url.parse()?,
-                record.rule_id,
-                record.source_id,
-                pair,
-            ))
+            Ok((url.parse()?, record.rule_id, record.source_id, pair))
         })
         .collect::<Result<Vec<_>, ServerFnError>>()?;
 

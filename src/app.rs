@@ -1,10 +1,10 @@
 use crate::{
-    domain_import_view::DomainImportView,
     domain::DomainViewPage,
+    domain_import_view::DomainImportView,
     error_template::{AppError, ErrorTemplate},
+    filterlist::FilterListPage,
     home_page::HomePage,
     ip_view::IpView,
-    filterlist::FilterListPage,
     rule::RuleViewPage,
     stats_view::StatsView,
 };

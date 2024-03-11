@@ -1,5 +1,5 @@
-use crate::{domain::Domain, filterlist::FilterListUrl};
 use crate::DbInitError;
+use crate::{domain::Domain, filterlist::FilterListUrl};
 
 use leptos::*;
 use notify::Watcher;
@@ -75,8 +75,6 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
         )
         .execute(&pool)
         .await?;
-
-        let mut tx = pool.begin().await?;
         sqlx::query!(
             "INSERT INTO subdomains (domain_id, parent_domain_id)
             SELECT domains_with_parents.id, parents.id
@@ -87,7 +85,7 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
             &all_domains[..] as _,
             &all_parents[..] as _,
         )
-        .execute(&mut *tx)
+        .execute(&pool)
         .await?;
         sqlx::query!(
             "INSERT INTO domains (domain)
@@ -96,10 +94,8 @@ pub async fn parse_missing_subdomains() -> Result<(), ServerFnError> {
     DO UPDATE SET processed_subdomains = true",
             &checked_domains[..]
         )
-        .execute(&mut *tx)
+        .execute(&pool)
         .await?;
-
-        tx.commit().await?;
     }
 }
 

@@ -31,14 +31,13 @@ pub async fn find_rule_matches() -> Result<(), ServerFnError> {
     interval.set_missed_tick_behavior(tokio::time::MissedTickBehavior::Delay);
     loop {
         interval.tick().await;
-        let mut tx = pool.begin().await?;
         let records = sqlx::query!(
             "SELECT id from Rules
             ORDER BY last_checked_matches ASC NULLS FIRST
             LIMIT $1",
             read_limit
         )
-        .fetch_all(&mut *tx)
+        .fetch_all(&pool)
         .await?;
 
         let rule_ids = records
@@ -46,6 +45,7 @@ pub async fn find_rule_matches() -> Result<(), ServerFnError> {
             .map(|record| record.id)
             .collect::<Vec<_>>();
 
+        let mut tx = pool.begin().await?;
         sqlx::query!(
             "DELETE FROM rule_matches WHERE rule_id = ANY($1::int[])",
             &rule_ids[..]
@@ -68,8 +68,7 @@ pub async fn find_rule_matches() -> Result<(), ServerFnError> {
                 OR dns_cnames.domain_id = domains.id
             INNER JOIN dns_ips AS dns_check ON dns_check.domain_id = domains.id AND dns_check.ip_address IS NOT NULL
             WHERE Rules.id = ANY($1::int[])
-            ON CONFLICT DO NOTHING
-            ",
+            ON CONFLICT DO NOTHING",
         &rule_ids[..]).execute(&mut *tx).await?;
         let count = sqlx::query!(
             "SELECT COUNT(*) FROM rule_matches WHERE rule_id = ANY($1::int[])",

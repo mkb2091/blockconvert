@@ -436,13 +436,12 @@ pub fn parse_list_contents(contents: &str, list_format: FilterListType) -> Vec<R
 pub async fn parse_list(url: FilterListUrl) -> Result<(), ServerFnError> {
     let start = std::time::Instant::now();
     let pool = crate::server::get_db().await?;
-    let mut tx = pool.begin().await?;
     let url_str = url.as_str();
     let record = sqlx::query!(
         "SELECT id, format, contents FROM filterLists WHERE url = $1",
         url_str
     )
-    .fetch_one(&mut *tx)
+    .fetch_one(&pool)
     .await?;
     let list_format: FilterListType = record.format.parse()?;
 
@@ -488,16 +487,19 @@ pub async fn parse_list(url: FilterListUrl) -> Result<(), ServerFnError> {
         ip_source.len(),
         other_rules_src.len()
     );
-    sqlx::query! {"DELETE FROM list_rules WHERE list_id = $1", list_id}
-        .execute(&mut *tx)
-        .await?;
+
     sqlx::query!(
         "INSERT INTO domains (domain)
     SELECT domain FROM UNNEST($1::text[]) AS t(domain) ON CONFLICT DO NOTHING",
         &domains[..] as _
     )
-    .execute(&mut *tx)
+    .execute(&pool)
     .await?;
+
+    let mut tx = pool.begin().await?;
+    sqlx::query! {"DELETE FROM list_rules WHERE list_id = $1", list_id}
+        .execute(&mut *tx)
+        .await?;
 
     sqlx::query!("INSERT INTO domain_rules (domain_id, allow, subdomain)
     SELECT domains.id, allow, subdomain FROM UNNEST($1::text[], $2::bool[], $3::bool[]) AS t(domain, allow, subdomain)
@@ -544,8 +546,7 @@ pub async fn parse_list(url: FilterListUrl) -> Result<(), ServerFnError> {
         "INSERT INTO Rules (ip_rule_id)
     SELECT ip_rules.id FROM UNNEST($1::inet[], $2::bool[]) AS t(ip, allow)
     INNER JOIN ip_rules ON ip_rules.ip_network = t.ip AND ip_rules.allow = t.allow
-    ON CONFLICT DO NOTHING
-    ",
+    ON CONFLICT DO NOTHING",
         &ips[..],
         &allow_ips[..]
     )
@@ -570,13 +571,12 @@ pub async fn parse_list(url: FilterListUrl) -> Result<(), ServerFnError> {
     INNER JOIN Rules ON Rules.ip_rule_id = ip_rules.id
     INNER JOIN rule_source ON rule_source.rule_id = Rules.id
     WHERE rule_source.source = t.source
-    ON CONFLICT DO NOTHING
-    ",
-list_id,
-&ip_source[..],
-&ips[..],
-&allow_ips[..]
-).execute(&mut *tx).await?;
+    ON CONFLICT DO NOTHING",
+    list_id,
+    &ip_source[..],
+    &ips[..],
+    &allow_ips[..]
+    ).execute(&mut *tx).await?;
 
     sqlx::query!(
         "INSERT INTO Rules (domain_rule_id, ip_rule_id) VALUES (NULL, NULL)
@@ -617,8 +617,7 @@ list_id,
         INNER JOIN Rules ON Rules.domain_rule_id IS NULL AND Rules.ip_rule_id IS NULL
         INNER JOIN rule_source ON rule_source.rule_id = Rules.id
         WHERE rule_source.source = t.source
-        ON CONFLICT DO NOTHING
-        ",
+        ON CONFLICT DO NOTHING",
         list_id,
         &other_rules_src[..],
     )
