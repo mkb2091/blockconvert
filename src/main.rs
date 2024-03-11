@@ -4,7 +4,7 @@ async fn main() {
     use axum::Router;
     use blockconvert::app::App;
     use blockconvert::fileserv::file_and_error_handler;
-    use blockconvert::{list_manager, server};
+    use blockconvert::{filterlist, server};
     use leptos::*;
     use leptos_axum::{generate_route_list, LeptosRoutes};
     env_logger::init();
@@ -26,11 +26,11 @@ async fn main() {
         .with_state(leptos_options);
     let token = tokio_util::sync::CancellationToken::new();
     let mut tasks = tokio::task::JoinSet::new();
-    tasks.spawn(list_manager::watch_filter_map());
+    tasks.spawn(filterlist::watch_filter_map());
     tasks.spawn(server::parse_missing_subdomains());
     tasks.spawn(server::check_dns(token.clone()));
     tasks.spawn(server::import_pihole_logs());
-    tasks.spawn(server::find_rule_matches());
+    tasks.spawn(blockconvert::rule::find_rule_matches());
     tasks.spawn(server::build_list());
     tasks.spawn(server::update_expired_lists());
     tasks.spawn(server::garbage_collect());
@@ -71,9 +71,8 @@ async fn main() {
         if let Err(e) = task.unwrap() {
             logging::log!("Error: {:?}", e);
             return;
-        } else {
-            logging::log!("Task completed");
         }
+        logging::log!("Task completed");
         if token.is_cancelled() {
             logging::log!("Shutting down");
             tokio::time::sleep(std::time::Duration::from_secs(5)).await;

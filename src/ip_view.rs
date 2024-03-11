@@ -2,7 +2,7 @@ use leptos::*;
 use leptos_router::*;
 use std::{collections::BTreeSet, net::IpAddr};
 
-use crate::{app::Loading, DomainId};
+use crate::{app::Loading, domain::DomainId};
 
 #[server]
 async fn get_domans_which_resolve_to_ip(
@@ -10,18 +10,17 @@ async fn get_domans_which_resolve_to_ip(
 ) -> Result<BTreeSet<(DomainId, String)>, ServerFnError> {
     let ip: ipnetwork::IpNetwork = ip.into();
     let records = sqlx::query!(
-        "SELECT domains.id as domain_id, domain
+        r#"SELECT domains.id as "domain_id: DomainId", domain
     from dns_ips
     INNER JOIN domains ON dns_ips.domain_id = domains.id
-    WHERE dns_ips.ip_address = $1
-    ",
+    WHERE dns_ips.ip_address = $1"#r,
         ip
     )
     .fetch_all(&crate::server::get_db().await?)
     .await?;
     let domains = records
         .into_iter()
-        .map(|record| (DomainId(record.domain_id), record.domain))
+        .map(|record| (record.domain_id, record.domain))
         .collect::<BTreeSet<_>>();
     Ok(domains)
 }

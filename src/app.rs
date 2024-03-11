@@ -1,11 +1,11 @@
 use crate::{
     domain_import_view::DomainImportView,
-    domain_view::DomainViewPage,
+    domain::DomainViewPage,
     error_template::{AppError, ErrorTemplate},
     home_page::HomePage,
     ip_view::IpView,
-    list_view::FilterListPage,
-    rule_view::RuleViewPage,
+    filterlist::FilterListPage,
+    rule::RuleViewPage,
     stats_view::StatsView,
 };
 use leptos::*;

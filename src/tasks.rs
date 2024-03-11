@@ -31,8 +31,8 @@ impl Task for GarbageCollectRuleSource {
 }
 
 #[cfg(feature = "ssr")]
-async fn register_task<T: Task>(task: T) {
-    let pool = crate::server::get_db().await.unwrap();
+async fn register_task<T: Task>(_task: T) {
+    let _pool = crate::server::get_db().await.unwrap();
 }
 
 #[component]

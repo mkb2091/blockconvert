@@ -1,9 +1,9 @@
-use crate::list_view::{LastUpdated, ListSize};
+use crate::filterlist::{FilterListRecord, FilterListUrl, LastUpdated, ListSize};
 use leptos::*;
 use leptos_router::*;
 
 #[component]
-fn FilterListSummary(url: crate::FilterListUrl, record: crate::FilterListRecord) -> impl IntoView {
+fn FilterListSummary(url: FilterListUrl, record: FilterListRecord) -> impl IntoView {
     view! {
         <tr>
             <td class="break-normal break-words max-w-20">
@@ -48,7 +48,7 @@ fn FilterListSummary(url: crate::FilterListUrl, record: crate::FilterListRecord)
 pub fn HomePage() -> impl IntoView {
     view! {
         <Await
-            future=|| async move { crate::list_manager::get_filter_map().await }
+            future=|| async move { crate::filterlist::get_filter_map().await }
             let:filterlist_map
         >
             {match filterlist_map.clone() {

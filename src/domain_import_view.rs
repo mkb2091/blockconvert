@@ -1,4 +1,5 @@
-use crate::list_parser::Domain;
+#[cfg(feature = "ssr")]
+use crate::domain::Domain;
 use leptos::*;
 use leptos_router::*;
 
