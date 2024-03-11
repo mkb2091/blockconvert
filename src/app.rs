@@ -1,6 +1,5 @@
 use crate::{
     domain::DomainViewPage,
-    domain_import_view::DomainImportView,
     error_template::{AppError, ErrorTemplate},
     filterlist::FilterListPage,
     home_page::HomePage,
@@ -53,9 +52,6 @@ pub fn App() -> impl IntoView {
                         <A href="/stats" class="hover:text-indigo-300">
                             Stats
                         </A>
-                        <A href="/import-domains" class="hover:text-indigo-300">
-                            Import Domains
-                        </A>
                         <A
                             href="/login"
                             class="px-4 py-2 text-indigo-600 bg-white rounded hover:bg-indigo-200"
@@ -74,12 +70,6 @@ pub fn App() -> impl IntoView {
                     <Route path="rule/:id" view=RuleViewPage ssr=SsrMode::InOrder/>
                     <Route path="domain/:domain" view=DomainViewPage ssr=SsrMode::InOrder/>
                     <Route path="ip/:ip" view=IpView ssr=SsrMode::InOrder/>
-                    <Route
-                        path="import-domains"
-                        view=DomainImportView
-                        methods=&[Method::Get, Method::Post]
-                        ssr=SsrMode::InOrder
-                    />
                 </Routes>
             </main>
         </Router>

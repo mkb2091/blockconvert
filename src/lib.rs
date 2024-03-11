@@ -1,6 +1,5 @@
 pub mod app;
 pub mod domain;
-pub mod domain_import_view;
 pub mod error_template;
 pub mod filterlist;
 pub mod home_page;
