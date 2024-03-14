@@ -87,7 +87,6 @@ ABPindo,https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/
 ,https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list,Mitchell Krog,MIT,86400,DomainBlocklist
 ,https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt,,Public Domain,86400,DomainBlocklist
 ,https://raw.githubusercontent.com/ligyxy/Blocklist/master/BLOCKLIST,,MIT,86400,DomainBlocklist
-,https://raw.githubusercontent.com/bjornstar/hosts/master/hosts,,The Unlicense,86400,Hostfile
 ,https://raw.githubusercontent.com/EFForg/privacybadger/master/src/data/yellowlist.txt,,GPLv3+,86400,DomainAllowlist
 ,https://cdn.jsdelivr.net/gh/realodix/AdBlockID@master/dist/adblockid.adfl.txt,,,86400,Adblock
 ,https://blocklists.kitsapcreator.com/scam-spam.txt,,The Unlicense,86400,DomainBlocklist

@@ -1,0 +1,9 @@
+listen_port = 3000
+
+[[peers]]
+url = "http://localhost:3000/"
+get_dns_results = false
+
+[[peers]]
+url = "http://localhost:3000/"
+get_dns_results = false

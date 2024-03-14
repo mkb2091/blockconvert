@@ -1,10 +1,16 @@
 use crate::DbInitError;
 use crate::{domain::Domain, filterlist::FilterListUrl};
 
+use addr::domain;
+use axum::body::Bytes;
+use axum::extract::{Path, State};
 use leptos::*;
 use notify::Watcher;
 use std::collections::HashSet;
+use tokio::task::JoinSet;
+use tower_http::decompression::DecompressionLayer;
 
+use std::sync::{Arc, Mutex, RwLock};
 use std::time::Duration;
 use tokio::io::{AsyncBufReadExt, AsyncWriteExt};
 use tokio_util::sync::CancellationToken;
@@ -397,4 +403,47 @@ pub async fn certstream(token: CancellationToken) -> Result<(), ServerFnError> {
     });
     write_certstream(rx, token).await?;
     Ok(())
+}
+
+async fn dns_results(State(peer_state): State<PeerState>) {}
+
+#[derive(Clone, Debug, serde::Deserialize, serde::Serialize)]
+pub struct Peer {
+    url: url::Url,
+    get_dns_results: bool,
+}
+
+impl Default for Peer {
+    fn default() -> Self {
+        Self {
+            url: "http://localhost:3000/".parse().unwrap(),
+            get_dns_results: false,
+        }
+    }
+}
+
+#[derive(Clone)]
+pub struct PeerState {
+    peers: Arc<[Peer]>,
+}
+#[derive(Debug, thiserror::Error)]
+enum PeerError {
+    #[error("URL error: {0}")]
+    Url(#[from] url::ParseError),
+    #[error("Request error: {0}")]
+    Request(#[from] reqwest::Error),
+    #[error("Multiple errors: {0:?}")]
+    Multiple(Vec<PeerError>),
+}
+
+impl PeerState {
+    pub fn new(peers: &[Peer]) -> Self {
+        Self { peers: peers.into() }
+    }
+}
+
+pub fn get_peer_router(peer_state: PeerState) -> axum::Router<LeptosOptions> {
+    axum::Router::new()
+        .route("/dns-results", axum::routing::get(dns_results))
+        .with_state(peer_state)
 }
